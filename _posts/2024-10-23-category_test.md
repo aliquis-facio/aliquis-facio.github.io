@@ -4,7 +4,7 @@ title: "category test"
 date: 2024-10-24
 excerpt: ""
 tags: [Post, Test]
-category: [test]
+categories: [test]
 comments: true
 ---
 
