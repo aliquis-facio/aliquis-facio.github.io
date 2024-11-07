@@ -283,8 +283,13 @@ kbd {
     margin-bottom: 10px;
 }
 
-.board {
+.sidebar {
     position: sticky;
-    top: 0;
-    left: 0;
+    top: 8rem;
+    left: 1rem;
+    width: 25%;
+    background: white;
+    padding: 2em;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba($color_shark, 0.2);
 }
