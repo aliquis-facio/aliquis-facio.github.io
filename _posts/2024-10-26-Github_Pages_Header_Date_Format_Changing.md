@@ -42,6 +42,7 @@ group :jekyll_plugins do
   gem "jekyll-last-modified-at"
 end
 ```
+
 1. _config.yml  
 ```
 plugins:
@@ -52,6 +53,7 @@ plugins:
 last-modified-at:
 ​    date-format: '%d-%b-%y' #(like "04-Jan-14").
 ```
+
 1. post.html  
 `<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
 -> 
@@ -63,10 +65,11 @@ Updated:
 나는 last_modified_at 부분이 있다하면 둘이 같이 나오는 거고
 없으면 작성 날짜만 있는거고
 
-post.html
-수정
+1. post.html
 `<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
+
 ->
+
 ```
 {%- if page.last_modified_at -%}
 	<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>
