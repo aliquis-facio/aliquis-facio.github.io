@@ -9,54 +9,40 @@ title: "[GITHUB PAGES] Date Format 변경하기"
 excerpt: ""
 
 date: 2024-10-26
-last_modified_at:
+last_modified_at: 2025-02-25
 
 tags: [BLOG]
 ---
 
 # 1. date 문구 추적
-scripts.html
-compress.html
-post.html
-3군데에서 date랑 관련된 부분이 나옴
+`scripts.html`, `compress.html`, `post.html` 3군데에서 date랑 관련된 부분이 나옴
 
-`git push --set-upstream origin header`
+~~`git push --set-upstream origin header`~~
 
 # 2. scripts.html 추적
-home.html
-page.html
-post-list.html
-post.html
-project.html
-5군데에서 나옴
+`home.html`, `page.html`, `post-list.html`, `post.html`, `project.html` 5군데에서 나옴
 
 # 3. post.html
-블로그 글이랑 가장 직접적인 연관이 많은 post.html 먼저 수정해보기로 함.
-date 관련된 code
-원본: `<h4>Date: {{ page.date | date_to_string }}</h4>`
+블로그 글이랑 가장 직접적인 연관이 많은 post.html 먼저 수정해보기로 함.  
+date 관련된 code 원본: `<h4>Date: {{ page.date | date_to_string }}</h4>`
+1. `<h4>Date: {{ page.date | %Y.%m.%d }}</h4>`
+-> Date: 2024-10-17 00:00:00 +0000
+1. `<h4>Date: {{ page.date | "%Y.%m.%d" }}</h4>`
+-> Date: 2024-10-17 00:00:00 +0000
+1. `<h4>Date: {{ page.date | %Y %m %d %a }}</h4>`
+-> Date: 2024-10-17 00:00:00 +0000
+1. `<h4>Date: {{ page.date | date: "%Y %m %d %a" }}</h4>`
+-> Date: 2024 10 17 Thu
 
--> `<h4>Date: {{ page.date | %Y.%m.%d }}</h4>`
-결과: Date: 2024-10-17 00:00:00 +0000
-
--> `<h4>Date: {{ page.date | "%Y.%m.%d" }}</h4>`
-결과: Date: 2024-10-17 00:00:00 +0000
-
--> `<h4>Date: {{ page.date | %Y %m %d %a }}</h4>`
-결과: Date: 2024-10-17 00:00:00 +0000
-
--> `<h4>Date: {{ page.date | date: "%Y %m %d %a" }}</h4>`
-결과: Date: 2024 10 17 Thu
-
-# 4. 지금 있는 건 created date니까 updated date를 추가하기로 함
--1. 각각의 파일에 코드 추가
-Gemfile
+# 4. 'updated date' 추가
+각각의 파일에 코드 추가  
+1. Gemfile  
 ```
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
 end
 ```
-
-_config.yml
+1. _config.yml  
 ```
 plugins:
   - jekyll-last-modified-at
@@ -66,13 +52,13 @@ plugins:
 last-modified-at:
 ​    date-format: '%d-%b-%y' #(like "04-Jan-14").
 ```
-
-post.html
+1. post.html  
 `<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
-
-결과
+-> 
+```
 Created: 2024.10.17 Thu
 Updated:
+```
 
 나는 last_modified_at 부분이 있다하면 둘이 같이 나오는 거고
 없으면 작성 날짜만 있는거고
@@ -95,7 +81,8 @@ post.html
 Created: 2024.10.17 Thu
 Updated: 2024.10.24 Thu
 
-# 5. created date랑 updated date랑 가로로 배치하고 싶다
+# 5. CSS 수정
+목표: created date랑 updated date랑 가로로 배치하고 싶다
 post.html
 바로 밑에 reading time 있는데 요거 css 쫓아가보겠습니다
 `p class="reading-time"`
@@ -145,20 +132,20 @@ _layout 파일에 있던 post.html에서 코드를 변경하고 있었기 때문
 html 코드를 올리면 죽네
 
 # 참고
-https://learn.customer.io/personalization/easy-date-formatting-with-liquid
-https://shopify.github.io/liquid/filters/date/
-https://moeun2.github.io/blog/jekyll-last-modified-at
-https://tomkadwill.com/adding-last-modified-date-to-jekyll
-https://hianna.tistory.com/865
-https://hackernoon.com/lang/ko/2023%EB%85%84%EC%9D%B4%EC%A7%80%EB%A7%8C-%EC%97%AC%EC%A0%84%ED%9E%88-CSS%EC%9D%98-%EC%A4%91%EC%B2%A9-%EC%8A%A4%ED%83%80%EC%9D%BC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%B4%EC%95%BC-%ED%95%A9%EB%8B%88%EB%8B%A4.
-https://zinna.tistory.com/4
-https://velog.io/@mjieun/SCSS-%EC%A1%B0%EA%B1%B4%EB%AC%B8
-https://www.biew.co.kr/entry/Sass%E3%86%8DSCSS-SASS-%EB%AC%B8%EB%B2%95-3%ED%8E%B8-%EC%A1%B0%EA%B1%B4%EB%AC%B8if-%EB%B0%98%EB%B3%B5%EB%AC%B8for
-https://velog.io/@bami/SCSS-SCSS-%EB%AC%B8%EB%B2%955-mixin-inclue
-https://blog.naver.com/youngchanmm/221901012095
-https://mine-it-record.tistory.com/607
-https://codingeverybody.kr/css-nth-of-type-%EA%B0%80%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95/
-https://minzcode.tistory.com/entry/CSS%EC%97%90%EC%84%9C-%ED%95%98%EC%9C%84-%EC%9A%94%EC%86%8C-%EC%A1%B0%EA%B1%B4%EC%97%90-%EB%94%B0%EB%A5%B8-%EC%9A%94%EC%86%8C-%EC%84%A0%ED%83%9D-has-%EC%84%A0%ED%83%9D%EC%9E%90
-https://stackoverflow.com/questions/18482718/using-css-to-detect-if-child-exists
-https://sehooni.github.io/blog/github_blog_not_shown/
-https://roadtos7.github.io/android/2021/06/10/Jekyll-FixBuildError.html
+* [https://learn.customer.io/personalization/easy-date-formatting-with-liquid](Easy date formatting with Liquid)
+* [https://shopify.github.io/liquid/filters/date/](Liquid Date Format)
+* [https://moeun2.github.io/blog/jekyll-last-modified-at](jekyll 깃허브 블로그에 파일의 마지막 수정 날짜 자동으로 넣는 방법)
+* [https://tomkadwill.com/adding-last-modified-date-to-jekyll](Adding last modified date to Jekyll)
+* [https://hianna.tistory.com/865]([HTML/CSS] div 가로로 나란히 정렬하는 4가지 방법)
+* [https://hackernoon.com/lang/ko/2023%EB%85%84%EC%9D%B4%EC%A7%80%EB%A7%8C-%EC%97%AC%EC%A0%84%ED%9E%88-CSS%EC%9D%98-%EC%A4%91%EC%B2%A9-%EC%8A%A4%ED%83%80%EC%9D%BC%EC%97%90-%EB%8C%80%ED%95%B4-%EC%9D%B4%EC%95%BC%EA%B8%B0%ED%95%B4%EC%95%BC-%ED%95%A9%EB%8B%88%EB%8B%A4.](2023년이지만 여전히 CSS의 중첩 스타일에 대해 이야기해야 합니다)
+* [https://zinna.tistory.com/4]([CSS] length > 0 해당 요소가 있을 때만 동작하는 코드 만들기)
+* [https://velog.io/@mjieun/SCSS-%EC%A1%B0%EA%B1%B4%EB%AC%B8]([SCSS] 조건문 if, 다중조건문 @if, @else if, @else)
+* [https://www.biew.co.kr/entry/Sass%E3%86%8DSCSS-SASS-%EB%AC%B8%EB%B2%95-3%ED%8E%B8-%EC%A1%B0%EA%B1%B4%EB%AC%B8if-%EB%B0%98%EB%B3%B5%EB%AC%B8for]([SassㆍSCSS] SASS 문법 4편 - 조건문(@if), 반복문(@for))
+* [https://velog.io/@bami/SCSS-SCSS-%EB%AC%B8%EB%B2%955-mixin-inclue]([SCSS] SCSS 문법5 - @mixin & @include)
+* [https://blog.naver.com/youngchanmm/221901012095](scss if)
+* [https://mine-it-record.tistory.com/607]([SCSS] 조건문 (@if / @else if / @else))
+* [https://codingeverybody.kr/css-nth-of-type-%EA%B0%80%EC%83%81-%ED%81%B4%EB%9E%98%EC%8A%A4-%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95/](CSS :nth-of-type() 가상 클래스 선택자 사용 방법)
+* [https://minzcode.tistory.com/entry/CSS%EC%97%90%EC%84%9C-%ED%95%98%EC%9C%84-%EC%9A%94%EC%86%8C-%EC%A1%B0%EA%B1%B4%EC%97%90-%EB%94%B0%EB%A5%B8-%EC%9A%94%EC%86%8C-%EC%84%A0%ED%83%9D-has-%EC%84%A0%ED%83%9D%EC%9E%90](CSS에서 하위 요소 조건에 따른 요소 선택 :has() 선택자)
+* [https://stackoverflow.com/questions/18482718/using-css-to-detect-if-child-exists](Using CSS to detect if child exists)
+* [https://sehooni.github.io/blog/github_blog_not_shown/]([Blog] github 블로그 포스팅 게시 안되는 오류 해결)
+* [https://roadtos7.github.io/android/2021/06/10/Jekyll-FixBuildError.html](Github 블로그 page build error 해결 후기)
