@@ -14,15 +14,16 @@ last_modified_at:
 tags: [TIL, WEB, SECURITY]
 ---
 
-# File Upload
+# File Upload 취약점
 
 ## 정의
-공격자가 원하는 임의의 파일을 업로드할 수 있는 공격
--> Web Shell 공격: 서버 측에서 실행 가능한 파일을 업로드할 수 있는 공격
+공격자가 원하는 임의의 파일을 서버측에 업로드할 수 있는 취약점이다.
+주로 Web Shell을 올려 공격: 서버 측에서 실행 가능한 파일을 업로드할 수 있는 공격
+
+Web Shell: 악의적인 스크립트
 
 ## 발생 원인
-* 파일을 업로드 받을 때
-* 검증, 검사를 안 한다
+서버측에서 파일을 업로드 받을 때 파일에 대한 검증, 검사가 부족할 경우 발생할 수 있다.
 
 ## 발생 위치
 파일을 업로드할 수 있는 곳
@@ -146,6 +147,3 @@ double extension (이중확장자)
 * [Content Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)
 * [헥스에디터 ( Hex Editor 핵사 에디터 ) 의 사용법](https://blog.naver.com/PostView.nhn?blogId=kjg5345&logNo=150098304449)
 * [Apache HTTP Server Tutorial: .htaccess files](https://httpd.apache.org/docs/2.4/en/howto/htaccess.html)
-* []()
-* []()
-* []()
