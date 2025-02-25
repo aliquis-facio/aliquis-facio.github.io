@@ -1,3 +1,19 @@
+---
+layout: post
+comments: true
+sitemap:
+    changefreq: daily
+    priority: 0.5
+
+title: "[WEB HACKING] SQL Injection Tip"
+excerpt: "모의해킹 취업반 스터디 7기 8주차"
+
+date: 2024-12-04
+last_modified_at: 
+
+tags: [TIL, WEB]
+---
+
 공격기법을 공부할 때는 시나리오를 생각해봐라
 
 ---

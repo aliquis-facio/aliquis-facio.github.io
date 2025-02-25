@@ -30,7 +30,7 @@ tags: [TIL, WEB, SECURITY]
 * [13. 불충분한 인증](#13-불충분한-인증insufficient-authentication-ia)
 * [14. 취약한 패스워드 복구](#14-취약한-패스워드-복구password-recorvery-pr)
 * [15. 크로스사이트 리퀘스트 변조](#15-크로스사이트-리퀘스트-변조csrf-cf)
-* [16. 세션 예측](#16-세션-예측-se)
+* [16. 세션 예측](#16-세션-예측session-prediction-se)
 * [17. 불충분한 인가](#17-불충분한-인가insufficient-authorization-in)
 * [18. 불충분한 세션 만료](#18-불충분한-세션-만료insufficient-session-close-sc)
 * [19. 세션 고정](#19-세션-고정session-fixation-sf)
