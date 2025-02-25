@@ -62,16 +62,10 @@ Updated:
 
 `last_modified_at` 값이 존재할 때만 블로그 글에 created_date와 modified_date가 함께 보이길 바란다.
 
-1. post.html
-`<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
-
+1. post.html  
+<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-6.png?raw=true">
 ->
-
-```
-{%- if page.last_modified_at -%}
-	<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>
-{%- endif -%}
-```
+<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-7.png?raw=true">
 
 # 5. CSS 수정
 목표: created date랑 updated date랑 가로로 배치하고 싶다
@@ -91,13 +85,13 @@ post.html
 elements.scss
 추가
 <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-3.png?raw=true">
-결과: Created: 2024.10.17 Thu           Updated: 2024.10.24 Thu
+결과: `Created: 2024.10.17 Thu           Updated: 2024.10.24 Thu`
 가로로 배치 성공했는데 위치가 살짝 맘에 안 들어서
 정렬을 바꿔봅시다
 
 # 6. 궁금한 거
-post 작성할 때
-last_modified_at 부분을 작성하고 날짜만 기입하지 않는다면? updated date 안 생김
+post 작성할 때 last_modified_at 부분을 작성하고 날짜만 기입하지 않는다면?  
+-> updated date 안 생김
 
 # 7. updated date 생성 안 했을 때 grid 없애기
 <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-4.png?raw=true">
@@ -105,10 +99,10 @@ last_modified_at 부분을 작성하고 날짜만 기입하지 않는다면? upd
 
 # 7. home 버튼을 눌렀는데 home/index.html이 아니라 2024-10-23.md가 왜 불러와지는거죠??
 github.io 홈에 들어가면 정상적으로 홈으로 가는 게 아니라 가장 최근에 포스팅한 포스트로 연결이 되는 것이 문제였다.
-_layout 파일에 있던 post.html에서 코드를 변경하고 있었기 때문에 그쪽을 건드려서 뭔가 발생하는 건가 생각했다.
+_layout 파일에 있던 `post.html`에서 코드를 변경하고 있었기 때문에 그쪽을 건드려서 뭔가 발생하는 건가 생각했다.
 
-아직 포스팅을 완벽하게 작성해놓은 게 아니여서 2024-10-23-.md으로 저장해놓고 있었다.
-포스트 이름을 완벽하게 채웠더니 homepage가 원상 복귀했다.
+아직 포스팅을 완벽하게 작성해놓은 게 아니여서 `2024-10-23-.md`으로 저장해놓고 있었다.
+포스트 이름을 완벽하게 채웠더니 블로그 리스트 페이지가 원상 복귀했다.
 
 그러면 이름을 완벽하게 안 적어놨을 때마다 발생하려나??
 나중에 한 번 확인해봐야겠다.
