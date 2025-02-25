@@ -60,8 +60,7 @@ Created: 2024.10.17 Thu
 Updated:
 ```
 
-나는 last_modified_at 부분이 있다하면 둘이 같이 나오는 거고
-없으면 작성 날짜만 있는거고
+`last_modified_at` 값이 존재할 때만 블로그 글에 created_date와 modified_date가 함께 보이길 바란다.
 
 1. post.html
 `<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
@@ -73,14 +72,6 @@ Updated:
 	<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>
 {%- endif -%}
 ```
-
-2024-10-23.md
-추가
-`last_modified_at: 2024-10-24`
-
-결과
-Created: 2024.10.17 Thu
-Updated: 2024.10.24 Thu
 
 # 5. CSS 수정
 목표: created date랑 updated date랑 가로로 배치하고 싶다
