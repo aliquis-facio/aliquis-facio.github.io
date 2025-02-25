@@ -59,8 +59,8 @@ tags: [TIL, WEB, SECURITY]
 * 버퍼 오버플로우를 점검하는 웹 스캐닝 툴을 이용하여 주기적으로 점검검
 
 ### 참고
-* <https://onecoin-life.com/31>
-* <https://namu.wiki/w/%EB%B2%84%ED%8D%BC%20%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C>
+* [버퍼 오버플로우 공격(Buffer Overfloaw Attack) 원리와 개념](https://onecoin-life.com/31)
+* [버퍼 오버플로](https://namu.wiki/w/%EB%B2%84%ED%8D%BC%20%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C)
 
 ## 2. 포맷스트링(Format String), FS
 ### 점검내용
@@ -75,7 +75,7 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 * 웹 사이트에서 사용자가 입력한 파라미터 값 처리 중에 발생한 경우 사용자 입력 값의 유효성에 대한 검증 로직을 구현
 
 ### 참고
-* <https://m.blog.naver.com/wnrjsxo/221267600469>
+* [버퍼 오버플로우 공격 - 포맷 스트링 공격](https://m.blog.naver.com/wnrjsxo/221267600469)
 
 ## 3. <abbr title="Lightweight Directory Access Protocol">LDAP</abbr> 인젝션(<abbr title="Lightweight Directory Access Protocol">LDAP</abbr> Injection), LI
 ### 점검내용
@@ -151,8 +151,8 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 * 웹 방화벽에 LDAP 관련 특수문자를 필터링하도록 룰셋 적용
 
 ### 참고
-* <https://portswigger.net/kb/issues/00100500_ldap-injection>
-* <https://ldap.com/ldap-dns-and-rdns/>
+* [LDAP injection](https://portswigger.net/kb/issues/00100500_ldap-injection)
+* [LDAP DNs and RDNs](https://ldap.com/ldap-dns-and-rdns/)
 
 ## 4. 운영체제 명령 실행(OS Command Execution), OC
 ### 점검내용
@@ -165,16 +165,16 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 * 웹 방화벽에 모든 사용자 입력 값을 대상으로 악용될 수 있는 특수문자, 특수 구문 등을 필터링 할 수 있도록 규칙 적용
 * 애플리케이션은 운영체제로부터 명령어를 직접적으로 호출하지 않도록 구현
 * 명령어를 직접 호출하는 것이 필요한 경우에는, 데이터가 OS의 명령어 해석기에 전달되기 전에 입력 값을 검증/확인하도록 구현
-* 입력 값에 대한 파라미터 데이터의 "&", "|", ";", "`" 문자에 대한 필터링 처리
+* 입력 값에 대한 파라미터 데이터의 "&", "\|", ";", "`" 문자에 대한 필터링 처리
     * &: 윈도우 명령어 해석기에서 첫 번째 명령이 성공했을 경우만 두 번째 명령어를 실행
-    * |: 첫 번째 명령어가 성공하는지에 상관없이 두 번째 명령어를 실행
+    * \|: 첫 번째 명령어가 성공하는지에 상관없이 두 번째 명령어를 실행
     * \`: 쉘 해석기가 명령어를 해석하다 역 작은따옴표(\`) 내에 포함된 명령어를 만나면 기존 명령어를 계속 실행하기 전에 역 작은따옴표로 둘러싸인 명령어를 먼저 실행
 * 웹 서버 및 웹 애플리케이션 서버는 공개적으로 알려진 취약점이 제거된 상위 버전으로 업데이트해야 함
 * 클라이언트에서 전송되는 요청(Request) 값에 대한 엄격한 필터링 적용 및 OGNL(Object Graph Navigation Language) 표현식 사용을 금지하여 원격에서 임의의 명령어가 실행되지 않도록 구현해야 함
 
 ### 참고
-* <https://cve.mitre.org/cve/search_cve_list.html>
-* <https://nvd.nist.gov/vuln/search>
+* [Search CVE List](https://cve.mitre.org/cve/search_cve_list.html)
+* [Search Vulnerability Database](https://nvd.nist.gov/vuln/search)
 
 ## 5. <abbr title="Structured Query Language">SQL</abbr> 인젝션(<abbr title="Structured Query Language">SQL</abbr> Injection), SI
 ### 점검내용
