@@ -186,19 +186,21 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 ### 보안설정방법
 * SQL 쿼리에 사용되는 문자열의 유효성을 검증하는 로직 구현
 * 아래와 같은 특수문자를 사용자 입력 값으로 지정 금지
+
 | 문자 | 설명 |
 | --- | --- |
 | ' | 문자 데이터 구분기호 |
 | ; | 쿼리 구분 기호 |
 | --, # | 해당라인 주석 구분 기호 |
 | /* */ | * 와 */ 사이 구문 주석 |
+
 * Dynamic SQL 구문 사용을 지양하며 파라미터에 문자열 검사 필수적용
 * 시스템에서 제공하는 에러 메시지 및 DBMS에서 제공하는 에러 코드가 노출되지 않도록 예외처리
 * 웹 방화벽에 인젝션 공격 관련
 * 문자열 유효성 검증 로직 구현
 
 ### 참고
-* <https://velog.io/@bcl0206/JSP-PHP-ASP>
+* [JSP, PHP, ASP 개념 / 장단점 / 비교](https://velog.io/@bcl0206/JSP-PHP-ASP)
 
 ## 6. <abbr title="Server Side Includes">SSI</abbr> 인젝션(<abbr title="Server Side Includes">SSI</abbr> Injection), SS
 ### 점검내용
