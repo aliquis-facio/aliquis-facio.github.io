@@ -47,9 +47,7 @@ end
 ```
 plugins:
   - jekyll-last-modified-at
-
 # Optional. The default date format, used if none is specified in the tag.
-
 last-modified-at:
 ​    date-format: '%d-%b-%y' #(like "04-Jan-14").
 ```
@@ -86,11 +84,8 @@ Updated: 2024.10.24 Thu
 
 # 5. CSS 수정
 목표: created date랑 updated date랑 가로로 배치하고 싶다
-post.html
-바로 밑에 reading time 있는데 요거 css 쫓아가보겠습니다
-`p class="reading-time"`
-elements.scss
-print.scss
+`post.html` 바로 밑에 `p class="reading-time"` 있는데 요거 css 쫓아가보겠습니다
+-> `elements.scss`, `print.scss`
 
 h4 태그로 감싸져있기 때문에
 -1. h4를 다른 태그로 바꾼다
