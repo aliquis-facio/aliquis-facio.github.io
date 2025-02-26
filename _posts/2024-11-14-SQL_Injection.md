@@ -14,7 +14,7 @@ last_modified_at: 2024-12-21
 tags: [TIL, WEB, DATABASE, SECURITY]
 ---
 
-# SQL Injection(주입)
+# SQL(Structured Query Language) Injection
 ## 개요
 설계된 쿼리문에 의도하지 않은 미상의 쿼리를 임의로 삽입하려 악의적인 SQL 구문을 실행하는 공격이다.
 공격자는 데이터베이스에 직접적으로 접근해 중요 정보를 조회, 탈취할 수 있다.
@@ -63,7 +63,7 @@ or와 and 연산자
 [Error Based SQL Injection](./Error_Based_SQL_Injection.md)
 
 ### Blind SQL Injection
-[Blind SQL Injection]()
+[Blind SQL Injection](./Blind_SQL_Injection.md)
 
 # sqli
 ## SQL Injection Exploit
