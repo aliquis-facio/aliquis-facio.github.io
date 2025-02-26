@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HTTP"
+title: "[WEB] HTTP"
 date: 2024-10-23
 last_modified_at: 2024-11-01
 excerpt: "모의해킹 취업반 스터디 7기 2주차"
