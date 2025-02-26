@@ -5,7 +5,7 @@ sitemap:
     changefreq: daily
     priority: 0.5
 
-title: "[PHP] mysqli real escape string"
+title: "[PHP] mysqli real escape string 함수"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"
 
 date: 2024-11-03
@@ -14,7 +14,7 @@ last_modified_at:
 tags: [WEB, PHP]
 ---
 
-# mysqli real escape string
+# mysqli real escape string 함수
 mysql과 connection할 때 string -> escape string으로 만들어준다
 
 ## Object-oriented style

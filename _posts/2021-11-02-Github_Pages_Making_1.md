@@ -9,7 +9,7 @@ title: "[GITHUB PAGES] github.io 만들기 1"
 excerpt: "항상 느낍니다. 왜 안되는거냐?"
 
 date: 2021-11-02
-last_modified_at: 2025-01-18
+last_modified_at: 2025-02-26
 
 tags: [BLOG]
 ---
@@ -37,10 +37,10 @@ ruby 설치 링크: <https://www.ruby-lang.org/ko/documentation/installation/>
 
 # jekyll theme 고르기
 jekyll theme site: <http://jekyllthemes.org/>  
-내가 고른 것 -> http://jekyllthemes.org/themes/dark-poole/  
+내가 고른 것 -> <http://jekyllthemes.org/themes/dark-poole/>  
 내 취향의 themes
-    http://jekyllthemes.org/themes/agency/
-    http://jekyllthemes.org/themes/frisco/
+    * <http://jekyllthemes.org/themes/agency/>
+    * <http://jekyllthemes.org/themes/frisco/>
 
 # jekyll 적용하기
 1. 원하는 Jekyll Theme를 다운로드(.zip)한다.
@@ -153,22 +153,26 @@ _includes 폴더 내에 head.html의 위쪽에 아래 내용을 추가
 GitHub Pages에 .github.io 블로그를 만드는 방법은 단순히 ‘[github 사용자명].github.io’라는 이름의 원격 저장소(Repository)를 만들면 된다.
 
 # .gitignore 설정하기
-~/blog/[github 사용자명].github.io$ vi .gitignore
-/* 수정 목록
-_site/
-.sass-cache/
-.jekyll-metadata
-.jekyll
-Gemfile
-Gemfile.lock
-*/
+`~/blog/[github 사용자명].github.io$ vi .gitignore`  
+수정 목록
+* _site/
+* .sass-cache/
+* .jekyll-metadata
+* .jekyll
+* Gemfile
+* Gemfile.lock
 
 # .github.io 블로그의 로컬 저장소와 github 저장소를 연결하기
 [블로그](https://gmlwjd9405.github.io/2017/10/06/Jekyll-github.io-blog-3.html)를 참조해 만들었기 때문에 'jekyll new [github 사용자명].github.io'를 이용하여 Jekyll 블로그를 로컬에서 실행시킨 사용자이다. 고로 단순히 git의 remote 저장소와 연결해주는 작업만 하면 된다.  
+
 ~/blog/[github 사용자명].github.io 로 이동하여 아래의 명령어를 입력하면 앞으로 git은 해당 디렉터리의 변화를 감지하여 track할 수 있고 로컬에서 작성한 블로그를 GitHub에 호스팅할 수 있다. (git init 명령을 실행한 디렉터리를 working directory라고 부른다.)  
+
 `git init` // 해당 디렉터리 안에 .git이라는 하위 디렉토리를 만든다.  
+
 `git remote add origin [원격 저장소 URL]` // git의 remote 저장소와 연결한다.  
+
 Git이 파일을 관리하게 하려면 저장소에 파일을 추가하고 커밋해야 한다. 아래의 명령으로 파일을 추가하고 커밋한다.  
+
 `git add .`  
 `git commit -m "Initial commit"`  
 `git push origin master` // 원격 저장소에 변경 내용을 올린다.  
