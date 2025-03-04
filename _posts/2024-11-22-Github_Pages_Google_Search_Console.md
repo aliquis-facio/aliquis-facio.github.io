@@ -91,3 +91,4 @@ tags: [BLOG]
 * [구글 서치 콘솔 사이트맵 가져올 수 없음](https://yi-sang.github.io/blog/Blog-GoogleSearchConsoleSitemap)
 * [Google Search Console의 사이트맵을 가져올 수 없음 문제를 해결한 과정](https://present.kim/posts/blog/sitemap-issue)
 * [[github.io] 블로그 구글 검색 등록하기(SEO 설정)](https://blog.jagaldol.com/blog/blog-google-seo-setting/)
+* [구글 서치콘솔 사이트맵 등록이 안 될 때 가져올 수 없음 상태 해결 방법 알려드립니다.](https://gh96.tistory.com/59)
