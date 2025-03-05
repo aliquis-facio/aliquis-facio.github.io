@@ -16,20 +16,20 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 # 1.1. Data Communications
 ## Data Communications
-우리가 서로 소통을 할 때, information 또는 data를 공유한다.
-이 공유는 지역적이거나 원격적일 수 있다.
-Telecommunication: 거리를 두고 하는 소통
-Data communication: 특정한 형태의 전송매체를 통한 두 개의 기기간의 data 교환 
+우리가 서로 소통을 할 때, information 또는 data를 공유한다.  
+이 공유는 지역적이거나 원격적일 수 있다.  
+* Telecommunication: 거리를 두고 하는 소통
+* Data communication: 특정한 형태의 전송매체를 통한 두 개의 기기간의 data 교환 
 
 ## Data communication 4가지 특징
 1. Delivery(전달): 정확한 목적지에 data를 전달해야 한다.
 1. Accuracy(정확성): data를 distortion(왜곡)이나 corruption(부패) 없이 정확하게 전달해야 한다.
-1. Timeless()
+1. Timeless(시간 손해 없이)
     * data를 시기적절하게 전달해야 한다.
     * data의 전송이 늦으면 의미가 없다.
     * 영상이나 음성 data에 경우, 시기적절하게 전달한다는 것은 유의미한 delay 없이 data를 생성된 순서대로 전달한다는 것이다.
     * 이러한 종류의 전달은 real-time transmission(실시간 전송)
-1. Jitter()
+1. Jitter(흐트러짐)
     * packet 도착 시간의 진동을 의미한다
     * 영상이나 음성 packet들의 전송에서 even(균등)하지 않은 delay
     * 예를 들면, 영상 packet들이 매 30초마다 전송된다고 해보자. 그 packet들 중 일부는 30ms 후에, 나머지는 40ms 후에 도착하는 상황인 것이다. 그렇게 되면 영상의 질은 even하지 못 하다.
