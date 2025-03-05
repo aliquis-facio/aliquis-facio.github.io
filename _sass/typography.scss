@@ -18,16 +18,6 @@
 	>ol>li>* {
 		text-decoration-line: none;
 	}
-
-	// 제목 깨지는 거 자름
-	// >h1,
-	// h2,
-	// h3,
-	// h4,
-	// h5,
-	// h6 {
-	// 	word-break: break-all;
-	// }
 }
 
 // titles
@@ -148,7 +138,6 @@ pre,
 code {
 	font-family: $font2;
 	overflow-x: auto;
-	// word-break: break-all;
 }
 
 p code,
@@ -179,7 +168,6 @@ td {
 }
 
 td {
-	// word-break: break-all;
 	text-align: left;
 	/*left, center, right*/
 	vertical-align: middle;
@@ -201,7 +189,3 @@ td {
 dt {
 	font-weight: bolder;
 }
-
-// p>a {
-	// word-break: break-all;
-// }
