@@ -15,7 +15,9 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 
 1. 원소 배열 하나하나 돌면서 첫번째 최댓값, 두번째 최댓값, ..., n번째 최댓값을 비교해서 최종 최댓값 하나를 구하려고 했다.
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-05-7.png?raw=true">
+
+![그림 1](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-05-7.png?raw=true)
+
 ```python
 import sys
 from typing import *
@@ -48,12 +50,16 @@ for i in range(n):
 
 print(total_max)
 ```
+
 그러자 당연하게도 결과는 시간 초과
 
 O(n)만에 끝낼 수 있다는 말을 듣고 그게 가능하다고 하면서 생각한 것은
+
 1. 누적합 값이 현재 최댓값보다 크면 최댓값을 현재 누적합 값으로 바꾸고,  
 누적합 값이 0보다 작다면 0으로 초기화하는 것이었다.
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-05-8.png?raw=true">
+
+![그림 2](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-05-8.png?raw=true)
+
 ```python
 import sys
 from typing import *
@@ -77,6 +83,7 @@ print(curr_max)
 ```
 
 1. 누적합 값이 0보다 작다면 0으로 초기화하는 것을 현재 원소값으로 초기화하는 것으로 바꿨다.
+
 ```python
 import sys
 from typing import *
@@ -100,6 +107,7 @@ print(curr_max)
 ```
 
 1. 누적합이 음수가 됐을 때 lst[i + 1]로 초기화하고, 다음 for문 돌 때 중복값을 더하지 않게 바꿨다.
+
 ```python
 import sys
 from typing import *
@@ -134,6 +142,7 @@ print(curr_max)
 ```
 
 1. 누적합값이 현재 원소값보다 작을 수 있음을 깨달았음.
+
 ```python
 import sys
 from typing import *
@@ -171,6 +180,7 @@ for i in range(1, n): # 1 ~ n-1까지 반복
 
 print(curr_max)
 ```
+
 case가
 3
 -3 2 1
