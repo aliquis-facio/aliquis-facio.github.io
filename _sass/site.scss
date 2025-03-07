@@ -144,6 +144,10 @@ body {
 }
 
 .side_bar {
+    position: fixed;
+    top: 8rem;
+    left: 1rem;
+    
     width: 25%;
     max-width: 220px;
     margin: 4rem auto;
