@@ -64,9 +64,7 @@ background }}{% endcapture %}{% endunless %}
     body {
         background-image:url({{ background }});
 
-            {
-            % unless site.tiled_bg %
-        }
+            {% unless site.tiled_bg %}
 
         background-repeat: no-repeat;
         background-size: cover;
