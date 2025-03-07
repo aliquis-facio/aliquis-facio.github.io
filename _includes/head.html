@@ -3,9 +3,7 @@
 <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
 
 <title>
-{% if page.title %}
-{{ page.title }} &#8211;
-{% endif %}
+{% if page.title %}{{ page.title }} &#8211; {% endif %}
 {{ site.title }}
 </title>
 <meta name="description"
@@ -16,13 +14,9 @@ content="{% if page.description %}{{ page.description }}{% else %}{{ site.descri
 
 <!-- Twitter Cards -->
 {% if page.feature %}
-{% capture feature %}
-{{ page.feature }}
-{% endcapture %}
+{% capture feature %}{{ page.feature }}{% endcapture %}
 {% unless feature contains 'http://' or feature contains 'https://' %}
-{% capture feature %}
-{{ site.url }}/{{ feature }}
-{% endcapture %}
+{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}
 {% endunless %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ feature }}">
@@ -89,13 +83,9 @@ content="{% if page.description %}{{ page.description }}{% else %}{{ site.descri
 
 <!-- Background Image -->
 {% if site.background %}
-{% capture background %}
-{{ site.background }}
-{% endcapture %}
+{% capture background %}{{ site.background }}{% endcapture %}
 {% unless background contains 'http://' or background contains 'https://' %}
-{% capture background %}
-{{ site.url }}/{{background }}
-{% endcapture %}
+{% capture background %}{{ site.url }}/{{background }}{% endcapture %}
 {% endunless %}
 <style type="text/css">
     body {
@@ -110,13 +100,9 @@ content="{% if page.description %}{{ page.description }}{% else %}{{ site.descri
 
 <!-- Post Feature Image -->
 {% if page.feature %}
-{% capture feature %}
-{{ page.feature }}
-{% endcapture %}
+{% capture feature %}{{ page.feature }}{% endcapture %}
 {% unless feature contains 'http://' or feature contains 'https://' %}
-{% capture feature %}
-{{ site.url }}/{{ feature}}
-{% endcapture %}
+{% capture feature %}{{ site.url }}/{{ feature}}{% endcapture %}
 {% endunless %}
 <style type="text/css">
     .feature {
