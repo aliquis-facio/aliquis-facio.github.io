@@ -11,6 +11,7 @@ excerpt: "항상 느낍니다. 왜 안되는거냐?"
 date: 2021-11-30
 last_modified_at: 
 
+categories: [BLOG]
 tags: [BLOG]
 ---
 
