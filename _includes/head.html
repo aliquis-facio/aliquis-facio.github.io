@@ -4,8 +4,11 @@
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 <meta name="description"
     content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
 {% if page.tags %}
-<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+{% endif %}
+
 <!-- Twitter Cards -->
 {% if page.feature %}{% capture feature %}{{ page.feature }}{% endcapture %}{% unless feature contains 'http://' or
 feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
@@ -21,6 +24,7 @@ feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{
 {% if site.twitter %}
 <meta name="twitter:site" content="@{{ site.twitter }}">
 <meta name="twitter:creator" content="@{{ site.twitter }}">{% endif %}
+
 <!-- Open Graph -->
 <meta property="og:locale" content="{{ site.locale }}">
 <meta property="og:type" content="article">
@@ -32,6 +36,7 @@ feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:image" content="{{ site.url }}/{{ site.logo }}">
 {% if site.google.verify %}
+
 <!-- Webmaster Tools verfication -->
 <meta name="google-site-verification" content="{{ site.google.verify }}">{% endif %}
 {% if site.bing-verify %}
@@ -40,14 +45,18 @@ feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{
 remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
 <link rel="canonical" href="{{ canonical }}">
 <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
 <!-- Handheld -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!-- CSS -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+
 <!-- JS -->
 <script src="{{ site.url }}/assets/js/modernizr-3.3.1.custom.min.js"></script>
+
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="{{ site.url }}/assets/img/favicons/apple-icon-precomposed.png">
 <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/assets/img/favicons/apple-icon-72x72.png">
@@ -55,6 +64,7 @@ remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
 <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/assets/img/favicons/apple-icon-144x144.png">
 <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png" />
 <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" />
+
 <!-- Background Image -->
 {% if site.background %}
 {% capture background %}{{ site.background }}{% endcapture %}
@@ -77,6 +87,7 @@ background }}{% endcapture %}{% endunless %}
     }
 </style>
 {% endif %}
+
 <!-- Post Feature Image -->
 {% if page.feature %}
 {% capture feature %}{{ page.feature }}{% endcapture %}
