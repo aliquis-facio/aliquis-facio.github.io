@@ -18,5 +18,8 @@ tags: [ABOUT]
 ## Me
 
 ## Blog
-Python, Java, Git, Linux, English, etc  
-아마 앞으로 컴퓨터 관련 공부 정리는 이쪽 블로그에서 할 듯 합니다.  
+'aliquis' means anything  
+'facio' means accomplish, create, do, make  
+I will do something or create something.  
+I just want all this writing to make me better.  
+
