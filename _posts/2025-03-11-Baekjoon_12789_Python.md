@@ -26,14 +26,14 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
     1. 같다면 stack의 마지막 수를 빼주고 p를 1증가시키고 다음 마지막 수와 비교한다
     1. 다르다면 반복을 종료한다
 
-1. ![그림1](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-2.png?raw=true)
-1. ![그림2](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-3.png?raw=true)
-1. ![그림3](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-4.png?raw=true)
-1. ![그림4](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-5.png?raw=true)
-1. ![그림5](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-6.png?raw=true)
-1. ![그림6](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-7.png?raw=true)
-1. ![그림7](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-8.png?raw=true)
-1. ![그림8](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-9.png?raw=true)
+1. ![그림1](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-2.jpg?raw=true)
+1. ![그림2](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-3.jpg?raw=true)
+1. ![그림3](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-4.jpg?raw=true)
+1. ![그림4](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-5.jpg?raw=true)
+1. ![그림5](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-6.jpg?raw=true)
+1. ![그림6](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-7.jpg?raw=true)
+1. ![그림7](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-8.jpg?raw=true)
+1. ![그림8](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-9.jpg?raw=true)
 
 ## 최종 정답
 ``` python
