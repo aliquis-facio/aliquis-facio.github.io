@@ -11,6 +11,7 @@ excerpt: "리눅스 부트로더 - 부트로더인 LILO, GRUB"
 date: 2022-02-18
 last_modified_at: 2024-12-27
 
+categories: [LINUX]
 tags: [LINUX]
 ---
 

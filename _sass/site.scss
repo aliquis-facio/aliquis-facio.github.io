@@ -126,8 +126,30 @@ body {
 }
 
 .wrapper {
-    width: 75%;
+    width: 70%;
     max-width: 850px;
+    margin: 4rem auto;
+    background: $white;
+    color: $color_tuatara;
+    padding: 2em;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba($color_shark, 0.3);
+    @include transition(0.5s);
+
+    @media #{$small} {
+        width: 90%;
+        padding: 2em 0;
+        box-shadow: none;
+    }
+}
+
+.side_bar {
+    position: fixed;
+    top: 8rem;
+    left: 1rem;
+    
+    width: 25%;
+    max-width: 220px;
     margin: 4rem auto;
     background: $white;
     color: $color_tuatara;

@@ -11,6 +11,7 @@ excerpt: "Image Test"
 date: 2021-11-30
 last_modified_at: 2024-12-27
 
+categories: [BLOG]
 tags: [BLOG]
 ---
 

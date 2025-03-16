@@ -11,6 +11,7 @@ excerpt: "리눅스 배포판 정의와 종류, 리눅스의 디렉토리 구조
 date: 2022-02-15
 last_modified_at: 
 
+categories: [LINUX]
 tags: [LINUX]
 ---
 

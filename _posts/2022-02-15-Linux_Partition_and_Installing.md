@@ -11,6 +11,7 @@ excerpt: "리눅스 파티션, 파일 시스템 개념 및 종류, 리눅스 설
 date: 2022-02-15
 last_modified_at: 
 
+categories: [LINUX]
 tags: [LINUX]
 ---
 
