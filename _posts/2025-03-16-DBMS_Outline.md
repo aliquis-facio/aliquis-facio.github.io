@@ -16,7 +16,13 @@ tags: [DATABASE, TIL]
 ---
 
 # 목차
-* []()
+* [1. DBMS의 발전 배경: 파일 시스템(File System)](#1-dbms의-발전-배경-파일-시스템file-system)
+    * [1.1. 파일 시스템의 문제점](#11-파일-시스템의-문제점)
+* [2. DBMS(Database Management System)](#2-dbmsdatabase-management-system)
+* [3. 데이터 독립성(Data Independency)](#3-데이터-독립성data-independency)
+    * [3.1. 데이터 구조 간의 사상과 데이터 독립성](#31-데이터-구조-간의-사상과-데이터-독립성)
+* [4. DBMS의 필수 기능](#4-dbms의-필수-기능)
+* [5. DBMS의 장단점](#5-dbms의-장단점)
 
 # DBMS(Database Management System)
 ## 1. DBMS의 발전 배경: 파일 시스템(File System)
@@ -30,7 +36,7 @@ tags: [DATABASE, TIL]
     * **일관성(Consistency)**: 다수 사용자가 특정 데이터를 동시에 변경할 때 데이터의 일관성 유지  
 -> 일반적으로, 무결성은 위의 무결성 및 일관성 모두 포함한 개념이다.
 
-## 2. DBMS
+## 2. DBMS(Database Management System)
 데이터의 종속성과 중복성의 문제 해결  
 관련 데이터를 통합하여, 데이터를 공용할 수 있도록 관리하는 소프트웨어
 ![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-4.jpg?raw=true)  
@@ -39,7 +45,7 @@ tags: [DATABASE, TIL]
 * **논리적** 데이터 독립성(Logical Data Independency): 응용 프로그램에 영향을 주지 않고, 데이터베이스의 논리적 구조를 변경시킬 수 있는 능력
 * **물리적** 데이터 독립성(Physical Data Independency): 데이터베이스의 논리적 구조에 영향을 주지 않고, 데이터의 물리적 구조를 변경시킬 수 있는 능력
 
-### 데이터 구조 간의 사상과 데이터 독립성
+### 3.1. 데이터 구조 간의 사상과 데이터 독립성
 ![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-5.jpg?raw=true)  
 
 ## 4. DBMS의 필수 기능
@@ -83,3 +89,6 @@ tags: [DATABASE, TIL]
 : 자료 처리의 복잡화
 : 복잡한 백업(backup)과 복구(recovery)
 : 시스템의 취약성
+
+# 참고
+* [파일 시스템](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC_%EC%8B%9C%EC%8A%A4%ED%85%9C)
