@@ -5,11 +5,11 @@ sitemap:
     changefreq: daily
     priority: 0.5
 
-title: "[MySQL] DATABASE란? 간단한 SQL Query문"
+title: "[MySQL] 간단한 SQL Query문"
 excerpt: "모의해킹 취업반 스터디 7기 2주차"
 
 date: 2024-10-23
-last_modified_at: 2024-12-11
+last_modified_at: 2025-03-17
 
 categories: [DATABASE]
 tags: [WEB, DATABASE]

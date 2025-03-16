@@ -27,7 +27,8 @@ tags: [DATABASE, TIL]
 # DBMS(Database Management System)
 ## 1. DBMS의 발전 배경: 파일 시스템(File System)
 **파일 시스템(File System)**: 데이터의 입출력을 전담하는 별도의 시스템. 데이터의 공용이 가능하지만 데이터 파일의 내용을 제어하지 않았음.
-![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-3.jpg?raw=true)  
+![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-17-1.jpg?raw=true)  
+![alt text](image.png)
 
 ### 1.1. 파일 시스템의 문제점
 * **데이터 종속성(Data Dependency)**: 응용 프로그램과 데이터 사이의 의존관계로 인해 데이터의 포맷, 접근 방법 변경 시에 관련된 응용 프로그램 또한 변경해야 함.
