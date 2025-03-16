@@ -24,18 +24,18 @@ tags: [DATABASE, TIL]
 # DB(Database)
 ## 1. Database의 정의
 Database: 한 조직의 여러 응용 시스템들이 공용(shared)하기 위해, 통합(integrated), 저장(stored)한 운영(operational) 데이터의 집합이다.
-* 공용 데이터(shared data): Database는 한 조직의 여러 응용 프로그램이 공동으로 소유, 유지, 사용하는 데이터이다.
-* 통합 데이터(integrated data): Database는 중복된 데이터 제거
-    * 최소의 중복(minimal redundancy)
-    * 통제된 중복(controlled redundancy)
-* 저장 데이터(stored data): Database는 컴퓨터가 접근 가능한 저장 매체(e.g. 테이프, 디스크 등)에 저장한다.
-* 운영 데이터(operational data): Database는 한 조직의 고유 기능을 수행하기 위해 필요한 데이터이다.
+* **공용 데이터(Shared Data)**: Database는 한 조직의 여러 응용 프로그램이 공동으로 소유, 유지, 사용하는 데이터이다.
+* **통합 데이터(Integrated Data)**: Database는 중복된 데이터 제거
+    * 최소의 중복(Minimal Redundancy)
+    * 통제된 중복(Controlled Redundancy)
+* **저장 데이터(Stored Data)**: Database는 컴퓨터가 접근 가능한 저장 매체(e.g. 테이프, 디스크 등)에 저장한다.
+* **운영 데이터(Operational Data)**: Database는 한 조직의 고유 기능을 수행하기 위해 필요한 데이터이다.
 
 ## 2. Database의 특성
-* 실시간 접근성(real-time accessibilities): 질의에 대한 실시간 처리 및 응답
-* 계속적인 변화(continuous evolution): 갱신(삽입, 삭제, 수정) - 동적 특성
-* 동시 사용(concurrent sharing): 여러 사용자가 동시에 사용
-* 내용에 의한 참조(content reference): 위치나 주소가 아닌 값에 따라 참조
+* **실시간 접근성(Real-time Accessibilities)**: 질의에 대한 실시간 처리 및 응답
+* **계속적인 변화(Continuous Evolution)**: 갱신(삽입, 삭제, 수정) - 동적 특성
+* **동시 사용(Concurrent Sharing)**: 여러 사용자가 동시에 사용
+* **내용에 의한 참조(Content Reference)**: 위치나 주소가 아닌 값에 따라 참조
 
 ## 3. Database의 구조
 * (관계형) 데이터베이스
