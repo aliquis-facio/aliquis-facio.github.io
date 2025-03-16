@@ -16,13 +16,13 @@ tags: [DATABASE, TIL]
 ---
 
 # 목차
-1. [1. DBMS의 발전 배경: 파일 시스템(File System)](#1-dbms의-발전-배경-파일-시스템file-system)
-    1. [1.1. 파일 시스템의 문제점](#11-파일-시스템의-문제점)
-1. [2. DBMS(Database Management System)](#2-dbmsdatabase-management-system)
-1. [3. 데이터 독립성(Data Independency)](#3-데이터-독립성data-independency)
-    1. [3.1. 데이터 구조 간의 사상과 데이터 독립성](#31-데이터-구조-간의-사상과-데이터-독립성)
-1. [4. DBMS의 필수 기능](#4-dbms의-필수-기능)
-1. [5. DBMS의 장단점](#5-dbms의-장단점)
+1. [DBMS의 발전 배경: 파일 시스템(File System)](#1-dbms의-발전-배경-파일-시스템file-system)
+    1. [파일 시스템의 문제점](#11-파일-시스템의-문제점)
+1. [DBMS(Database Management System)](#2-dbmsdatabase-management-system)
+1. [데이터 독립성(Data Independency)](#3-데이터-독립성data-independency)
+    1. [데이터 구조 간의 사상과 데이터 독립성](#31-데이터-구조-간의-사상과-데이터-독립성)
+1. [DBMS의 필수 기능](#4-dbms의-필수-기능)
+1. [DBMS의 장단점](#5-dbms의-장단점)
 
 # DBMS(Database Management System)
 ## 1. DBMS의 발전 배경: 파일 시스템(File System)
