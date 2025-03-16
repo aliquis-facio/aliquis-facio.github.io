@@ -20,14 +20,14 @@ tags: [DATABASE, TIL]
 
 # DBMS(Database Management System)
 ## 1. DBMS의 발전 배경: 파일 시스템(File System)
-파일 시스템(File System): 데이터의 입출력을 전담하는 별도의 시스템. 데이터의 공용이 가능하지만 데이터 파일의 내용을 제어하지 않았음.
+**파일 시스템(File System)**: 데이터의 입출력을 전담하는 별도의 시스템. 데이터의 공용이 가능하지만 데이터 파일의 내용을 제어하지 않았음.
 ![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-3.jpg?raw=true)  
 
 ### 1.1. 파일 시스템의 문제점
-* 데이터 종속성(Data Dependency): 응용 프로그램과 데이터 사이의 의존관계로 인해 데이터의 포맷, 접근 방법 변경 시에 관련된 응용 프로그램 또한 변경해야 함.
-* 데이터 중복성(Data Redundancy): 한 시스템 내에 내용이 같은 데이터가 중복되게 저장, 관리 되는 것.
-    * 무결성(Integrity): 저장된 데이터 간의 관계에서 모순이 없도록 정확성 유지
-    * 일관성(Consistency): 다수 사용자가 특정 데이터를 동시에 변경할 때 데이터의 일관성 유지
+* **데이터 종속성(Data Dependency)**: 응용 프로그램과 데이터 사이의 의존관계로 인해 데이터의 포맷, 접근 방법 변경 시에 관련된 응용 프로그램 또한 변경해야 함.
+* **데이터 중복성(Data Redundancy)**: 한 시스템 내에 내용이 같은 데이터가 중복되게 저장, 관리 되는 것.
+    * **무결성(Integrity)**: 저장된 데이터 간의 관계에서 모순이 없도록 정확성 유지
+    * **일관성(Consistency)**: 다수 사용자가 특정 데이터를 동시에 변경할 때 데이터의 일관성 유지  
 -> 일반적으로, 무결성은 위의 무결성 및 일관성 모두 포함한 개념이다.
 
 ## 2. DBMS
@@ -36,8 +36,8 @@ tags: [DATABASE, TIL]
 ![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-4.jpg?raw=true)  
 
 ## 3. 데이터 독립성(Data Independency)
-* 논리적 데이터 독립성(Logical Data Independency): 응용 프로그램에 영향을 주지 않고, 데이터베이스의 논리적 구조를 변경시킬 수 있는 능력
-* 물리적 데이터 독립성(Physical Data Independency): 데이터베이스의 논리적 구조에 영향을 주지 않고, 데이터의 물리적 구조를 변경시킬 수 있는 능력
+* **논리적** 데이터 독립성(Logical Data Independency): 응용 프로그램에 영향을 주지 않고, 데이터베이스의 논리적 구조를 변경시킬 수 있는 능력
+* **물리적** 데이터 독립성(Physical Data Independency): 데이터베이스의 논리적 구조에 영향을 주지 않고, 데이터의 물리적 구조를 변경시킬 수 있는 능력
 
 ### 데이터 구조 간의 사상과 데이터 독립성
 ![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-5.jpg?raw=true)  
@@ -71,14 +71,15 @@ tags: [DATABASE, TIL]
     * 병행 수행 제어(Concurrency Control)
 
 ## 5. DBMS의 장단점
-### 장점
-* 데이터 통합을 통한 데이터 중복의 최소화
-* 데이터의 공용
-* 데이터의 무결성 유지
-* 데이터의 보안 보장
-* 전체 데이터 요구의 조정, 표준화
-### 단점
-* 운영비 증대
-* 자료 처리의 복잡화
-* 복잡한 백업(backup)과 복구(recovery)
-* 시스템의 취약성
+장점
+: 데이터 통합을 통한 데이터 중복의 최소화
+: 데이터의 공용
+: 데이터의 무결성 유지
+: 데이터의 보안 보장
+: 전체 데이터 요구의 조정, 표준화
+
+단점
+: 운영비 증대
+: 자료 처리의 복잡화
+: 복잡한 백업(backup)과 복구(recovery)
+: 시스템의 취약성
