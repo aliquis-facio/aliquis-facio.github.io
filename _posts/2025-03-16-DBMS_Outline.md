@@ -37,16 +37,17 @@ tags: [DATABASE, TIL]
 -> 일반적으로, 무결성은 위의 무결성 및 일관성 모두 포함한 개념이다.
 
 ## 2. DBMS(Database Management System)
-데이터의 종속성과 중복성의 문제 해결  
-관련 데이터를 통합하여, 데이터를 공용할 수 있도록 관리하는 소프트웨어
-![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-4.jpg?raw=true)  
+DBMS(Data Base Management System): 관련 데이터를 통합하여, 데이터를 공용할 수 있도록 관리하는 소프트웨어로, 파일 시스템의 데이터 종속성과 중복성 문제를 해결했다.  
+데이터베이스를 운영 및 관리. 계층형, 망형, 관계형 등 다양한 종류의 DBMS가 존재하며 대부분 관계형 DBMS(RDMBS)의 형태로 사용되고 있다. RDBMS의 데이터베이스는 하나 이상의 행(row)과 열(column)로 이루어진 테이블 형식을 데이터를 제공한다.  
+-> DBMS는 엑셀 프로그램 그 자체로 예를 들 수 있겠다.
+아래는 데이터베이스 테이블 구조 예시
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-12-10-1.png?raw=true)  
 
 ## 3. 데이터 독립성(Data Independency)
 * **논리적** 데이터 독립성(Logical Data Independency): 응용 프로그램에 영향을 주지 않고, 데이터베이스의 논리적 구조를 변경시킬 수 있는 능력
 * **물리적** 데이터 독립성(Physical Data Independency): 데이터베이스의 논리적 구조에 영향을 주지 않고, 데이터의 물리적 구조를 변경시킬 수 있는 능력
 
-### 3.1. 데이터 구조 간의 사상과 데이터 독립성
-![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-16-5.jpg?raw=true)  
+![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-17-2.png?raw=true)  
 
 ## 4. DBMS의 필수 기능
 데이터 정의(Data Definition) 기능
@@ -92,3 +93,4 @@ tags: [DATABASE, TIL]
 
 # 참고
 * [파일 시스템](https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC_%EC%8B%9C%EC%8A%A4%ED%85%9C)
+* [[데이터베이스 기본] 외부/개념/내부 스키마와 데이터 독립성](https://blog.naver.com/jvioonpe/220353582460)
