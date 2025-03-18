@@ -19,7 +19,7 @@ tags: [BLOG]
 1. []()
 
 # Github.io 만들기 2
-## Setup Guide 따라가기 1
+## 1. Setup Guide 따라가기 1
 Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 
 ~~(2025.03.18 기준으로는 아래처럼 작성되어있다.)~~  
@@ -30,12 +30,12 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 1. Change repo name to `YourUserName.github.io`  
 -> 나눔고딕 폰트 적용까지 성공해서 한글 입력까지 가능했지만 댓글 기능에서 막혀서 레포지토리 지움.  
 
-## Setup Guide 따라가기 2
+## 2. Setup Guide 따라가기 2
 똑같이 setup guide를 따라해서 댓글 기능부터 추가했음.  
 -> 나눔고딕 폰트에 관한 코드를 똑같은 위치에 입력함.  
 -> 로컬 레포지토리를 변경해도 github.io에 변경이 늦게되는 듯함.  
 
-## Image
+## 3. Image
 1. favicon image 변경  
 2. 둥글고 어두운 분위기를 생각하다가 이상한 나라의 앨리스에서 나오는 체셔캣이 생각남.  
 3. 검정톤 깔끔한 분위기의 이미지로 고름.  
@@ -44,8 +44,8 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 6. 실제로 적용시키니까 맘에 들지 않아서 다른 체셔캣 이미지로 바꾸면서 시도하는 중.  
 7. 뒤에 깔리는 이미지 변경 중.  
 
-## GOOGLE ANALYTICS
-### google analytics 추가하기
+## 4. GOOGLE ANALYTICS
+### 1) google analytics 추가하기
 1. google analytics 추가
 1. google analytics 가입하기
 1. `_config.yml`에 tracking id 추가하기  
@@ -54,7 +54,7 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
     analytics: tracking_id"
 ```
 
-#### 기존에 있던 구글 애널리틱스에 관한 코드를 변경함.  
+#### 2) 기존에 있던 구글 애널리틱스에 관한 코드를 변경함.  
 * 변경 전  
 ```html
 <!-- Asynchronous Google Analytics snippet -->
@@ -84,10 +84,10 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 
 -> 기존에 있던 코드일 때는 구글 애널리틱스 보고서에서 사용자가 counting되지 않았는데, 구글 애널리틱스에서 제공하는 코드로 변경하고 나서는 사용자가 잘 counting되는 모습을 보여줌.
 
-## RUBY
+## 5. RUBY
 bigdecimal과 관련된 오류가 계속 발생함. 호환성 문제라고 판단. ruby를 재설치하려 함.
 
-### ruby 삭제
+### 1) ruby 삭제
 아래 코드는 ruby를 삭제하는 코드임.
 ```
 sudo rm -rf /usr/local/lib/ruby
@@ -100,49 +100,48 @@ sudo rm -f /usr/local/bin/gem
 sudo rm -f /usr/bin/gem
 ```
 
-### ruby 설치
+### 2) ruby 설치
 Ruby 설치 가이드: <https://www.ruby-lang.org/ko/documentation/installation/#apt>
 
 apt (Debian이나 Ubuntu) 설치 명령어: `$ sudo apt-get install ruby-full`  
 오류 발생: `cannot load such file -- rubygems.rb (LoadError)`
 
-### rvm 설치
+### 3) rvm 설치
 설치 명령어
 `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`  
 `\curl -sSL https://get.rvm.io | bash -s stable`  
 
-오류 발생
+#### 발생한 오류 목록
+1. 
 ```
 Can't check signature: No public key
 GPG signature verification failed for '/home/tester/.rvm/archives/rvm-1.29.12.tgz' - 'https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc'! Try to install GPG v2 and then fetch the public key:
-```
-
-##### 1트
+```  
 `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`  
-결과 -> `gpg: keyserver receive failed: No name`
 
-##### 2트
+1. 
+`gpg: keyserver receive failed: No name`
 `\curl -sSL https://rvm.io/mpapis.asc | gpg --import -`  
--> `sudo \curl -sSL https://rvm.io/mpapis.asc | gpg --import -`  
+`sudo \curl -sSL https://rvm.io/mpapis.asc | gpg --import -`  
+
+1. 
 ```
 gpg: key 3804BB82D39DC0E3: 47 signatures not checked due to missing keys
 gpg: key 3804BB82D39DC0E3: public key "Michal Papis (RVM signing) <mpapis@gmail.com>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1
 gpg: no ultimately trusted keys found
-```
-
-##### 3트
+```  
 `\curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -`  
+
+1. 
 ```
 gpg: key 105BD0E739499BDB: public key "Piotr Kuczynski <piotr.kuczynski@gmail.com>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1
 ```
 
-#### 오류 해결
-리눅스에서 ruby 재설치를 하기보다는 윈도우에서 ruby를 새롭게 설치하고 깃허브 블로그를 다시 설정하기로 함. 멀티 OS를 나누는 과정에서 파티션을 나누었으니 윈도우에서는 ruby를 새롭게 설치할 것이라 예상.
-깃허브 블로그 관련 문서를 클라우드에 올리고 윈도우에서 시작함.
+-> 익숙하지 않은 리눅스보다 윈도우에서 다시 시작하기로 함.
 
 #### 4트 - 윈도우에서 시작
 루비를 다운받고 파워쉘에서 `gem install jekyll` -> 오류발생
