@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[DISCRETE MATHEMATICS] 이산수학 논리"
 excerpt: ""
@@ -11,6 +11,7 @@ excerpt: ""
 date: 2022-10-07
 last_modified_at: 
 
+categories: [MATHEMATICS]
 tags: [DISCRETE MATHEMATICS]
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[NETWORK] 네트워크 개요"
 excerpt: "네트워크 1"
@@ -11,6 +11,7 @@ excerpt: "네트워크 1"
 date: 2023-01-25
 last_modified_at: 
 
+categories: [NETWORK]
 tags: [NETWORK]
 ---
 

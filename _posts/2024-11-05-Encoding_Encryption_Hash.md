@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[CRYPTOGRAPHY] 인코딩과 암호화, 해시"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"
@@ -11,6 +11,7 @@ excerpt: "모의해킹 취업반 스터디 7기 3주차"
 date: 2024-11-05
 last_modified_at: 2024-11-08
 
+categories: [SECURITY]
 tags: [CRYPTOGRAPHY]
 ---
 

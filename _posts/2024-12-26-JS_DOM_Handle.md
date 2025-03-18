@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[JS] JS로 DOM 객체 접근하기"
 excerpt: "모의해킹 취업반 스터디 7기 11주차"
@@ -11,7 +11,8 @@ excerpt: "모의해킹 취업반 스터디 7기 11주차"
 date: 2024-12-26
 last_modified_at: 2024-12-27
 
-tags: [JS]
+categories: [WEB]
+tags: [TIL, WEB, JS]
 ---
 
 # 목차

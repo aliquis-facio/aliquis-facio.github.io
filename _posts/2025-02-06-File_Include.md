@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[WEB HACKING] File Include 취약점"
 excerpt: "모의해킹 취업반 스터디 7기 15주차"
@@ -11,6 +11,7 @@ excerpt: "모의해킹 취업반 스터디 7기 15주차"
 date: 2025-02-06
 last_modified_at: 
 
+categories: [SECURITY]
 tags: [TIL, WEB, SECURITY]
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[GITHUB PAGES] Google Search 등록하기"
 excerpt: ""
@@ -11,15 +11,16 @@ excerpt: ""
 date: 2024-11-22
 last_modified_at: 2024-12-19
 
+categories: [BLOG]
 tags: [BLOG]
 ---
 
 # 1. sitemap.xml 생성하기
 1. github.io 루트 디렉토리에 sitemap.xml 생성  
--> 이미 존재해서 패스  
+![사진 넣기](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/.png?raw=true)  
 2. sitemap.xml에 코드 작성하기  
--> 이미 존재해서 패스  
-![코드가 인식되니 사진으로 바꿀 수 밖에](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-2.png?raw=true)  
+![사진 넣기](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/.png?raw=true)  
+![pre가 무시되니 사진으로 바꿀 수 밖에](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-2.png?raw=true)  
 -> 블록 코드 형식으로 xml 코드를 붙여놨더니 렌더링되는 과정에서 xml 코드로 인식돼버려서 마크다운이 꼬였다.  
 ![요렇게 말이다](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-1.png?raw=true "이렇게 보였다")  
 3. `https://[blog url]/sitemap.xml`로 접속해보기  

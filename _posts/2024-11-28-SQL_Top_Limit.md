@@ -2,16 +2,17 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
-title: "[MySQL] 특정 개수의 값 출력 "
+title: "[MySQL] 특정 개수의 값 출력"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
 
 date: 2024-11-28
 last_modified_at: 
 
-tags: [TIL, WEB]
+categories: [DATABASE]
+tags: [TIL, DATABASE, SQL]
 ---
 
 # TOP

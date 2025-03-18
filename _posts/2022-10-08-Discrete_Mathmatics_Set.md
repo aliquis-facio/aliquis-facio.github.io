@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[DISCRETE MATHEMATICS] 이산수학 집합"
 excerpt: "집합"
@@ -11,6 +11,7 @@ excerpt: "집합"
 date: 2022-10-08
 last_modified_at: 
 
+categories: [MATEHMATICS]
 tags: [DISCRETE MATHEMATICS]
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[GIT] GitHub 명령어 정리"
 excerpt: ""
@@ -11,6 +11,7 @@ excerpt: ""
 date: 2022-02-27
 last_modified_at: 2024-12-27
 
+categories: [GIT]
 tags: [GIT]
 ---
 

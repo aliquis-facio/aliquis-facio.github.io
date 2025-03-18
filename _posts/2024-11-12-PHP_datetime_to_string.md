@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[PHP] DateTime to String"
 excerpt: "모의해킹 취업반 스터디 7기 4주차"
@@ -11,7 +11,8 @@ excerpt: "모의해킹 취업반 스터디 7기 4주차"
 date: 2024-11-13
 last_modified_at: 2024-11-22
 
-tags: [PHP]
+categories: [WEB]
+tags: [WEB, PHP]
 ---
 
 # 회고

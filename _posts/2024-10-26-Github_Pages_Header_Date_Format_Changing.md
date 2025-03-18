@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[GITHUB PAGES] Date Format 변경하기"
 excerpt: ""
@@ -11,6 +11,7 @@ excerpt: ""
 date: 2024-10-26
 last_modified_at: 2025-02-25
 
+categories: [BLOG]
 tags: [BLOG]
 ---
 

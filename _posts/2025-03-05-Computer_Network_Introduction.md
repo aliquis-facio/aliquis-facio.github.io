@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[COMPUTER NETWORK] Data Communications란?"
 excerpt: "Data Communication 의미, 특징과 요소"
@@ -11,6 +11,7 @@ excerpt: "Data Communication 의미, 특징과 요소"
 date: 2025-03-05
 last_modified_at: 
 
+categories: [NETWORK]
 tags: [COMPUTER NETWORK, NETWORK, TIL]
 ---
 

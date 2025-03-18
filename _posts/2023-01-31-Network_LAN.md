@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[NETWORK] 네트워크 근거리 통신 기술"
 excerpt: "네트워크 2"
@@ -11,6 +11,7 @@ excerpt: "네트워크 2"
 date: 2023-01-31
 last_modified_at: 
 
+categories: [NETWORK]
 tags: [NETWORK]
 ---
 <style>

@@ -2,15 +2,16 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[DATA SCIENCE] 데이터과학 정리"
-excerpt: "중간고사 정리"
+excerpt: "w.Python matplotlib"
 
 date: 2022-10-24
 last_modified_at: 2024-11-08
 
+categories: [DATE SCIENCE]
 tags: [DATA SCIENCE]
 ---
 

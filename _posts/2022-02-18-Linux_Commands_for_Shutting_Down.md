@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[LINUX] 리눅스 시스템 종료를 위한 명령어"
 excerpt: "기본 명령어 - 디렉토리 관련명령: 리눅스 시스템 종료 및 재시동을 위한 명령어 및 디렉토리 조작을 위한 명령어"

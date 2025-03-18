@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[GITHUB PAGES] Github Blog 포스트 리스트 레이아웃 깨짐"
 excerpt: ""
@@ -11,6 +11,7 @@ excerpt: ""
 date: 2024-11-22
 last_modified_at: 2024-12-19
 
+categories: [BLOG]
 tags: [BLOG]
 ---
 

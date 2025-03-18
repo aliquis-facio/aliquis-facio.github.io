@@ -1,11 +1,18 @@
 ---
 layout: post
+comments: true
+sitemap:
+    changefreq:
+    priority:
+
 title: "[WEB] 로그인 로직"
+excerpt: "모의해킹 취업반 스터디 7기 3주차"
+
 date: 2024-11-03
 last_modified_at: 2024-11-05
-excerpt: "모의해킹 취업반 스터디 7기 3주차"
+
+categories: [WEB]
 tags: [WEB, PHP]
-comments: true
 ---
 
 # 목차

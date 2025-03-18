@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[APPLICATION STATISTICS] 응용통계학 정리"
 excerpt: "중간고사 정리"
@@ -11,6 +11,7 @@ excerpt: "중간고사 정리"
 date: 2022-10-23
 last_modified_at: 2024-11-08
 
+categories: [METHEMATICS]
 tags: [APPLICATION STATISTICS]
 ---
 

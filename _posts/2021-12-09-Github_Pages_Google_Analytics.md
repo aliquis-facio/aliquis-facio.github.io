@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[GITHUB PAGES] 구글 애널리틱스 적용하기"
 excerpt: "구글 애널리틱스 적용"

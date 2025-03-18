@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[BAEKJOON] 백준 12789 도키도키 간식드리미 문제 풀이"
 excerpt: "w. Python"
@@ -11,6 +11,7 @@ excerpt: "w. Python"
 date: 2025-03-05
 last_modified_at: 
 
+categoreis: [ALGORITHM]
 tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 

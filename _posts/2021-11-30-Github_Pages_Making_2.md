@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[GITHUB PAGES] github.io 만들기 2"
 excerpt: "오류 멈춰!"

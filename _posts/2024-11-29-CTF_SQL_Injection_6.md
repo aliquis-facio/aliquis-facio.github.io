@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[CTF] CTF 문제 풀이: Blind SQL Injection"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
@@ -11,7 +11,8 @@ excerpt: "모의해킹 취업반 스터디 7기 7주차"
 date: 2024-11-28
 last_modified_at: 
 
-tags: [TIL, WEB]
+categories: [CTF]
+tags: [TIL, DATABASE, CTF]
 ---
 
 # 목차

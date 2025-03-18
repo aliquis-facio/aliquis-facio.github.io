@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[WEB HACKING] WEB 취약점"
 excerpt: "모의해킹 취업반 스터디 7기 17주차"
@@ -11,6 +11,7 @@ excerpt: "모의해킹 취업반 스터디 7기 17주차"
 date: 2025-02-21
 last_modified_at: 2025-02-25
 
+categories: [SECURITY]
 tags: [TIL, WEB, SECURITY]
 ---
 

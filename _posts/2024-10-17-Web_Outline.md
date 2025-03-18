@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[WEB] 웹 개요"
 excerpt: "모의해킹 취업반 스터디 7기 1주차"
@@ -11,6 +11,7 @@ excerpt: "모의해킹 취업반 스터디 7기 1주차"
 date: 2024-10-17
 last_modified_at: 
 
+categories: [WEB]
 tags: [WEB]
 ---
 

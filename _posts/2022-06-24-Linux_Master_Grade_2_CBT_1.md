@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[LINUX] 리눅스 마스터 2급 기출 문제"
 excerpt: "오답노트 1"
@@ -11,6 +11,7 @@ excerpt: "오답노트 1"
 date: 2022-06-24
 last_modified_at: 
 
+categories: [LINUX]
 tags: [LINUX, LICENSE]
 ---
 

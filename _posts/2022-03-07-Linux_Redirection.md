@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[LINUX] Redirection"
 excerpt: "파일관련 명령어 2: 검색조건에 맞는 파일 검색 및 리다이렉션, 파이프 명령어"
@@ -11,6 +11,7 @@ excerpt: "파일관련 명령어 2: 검색조건에 맞는 파일 검색 및 리
 date: 2022-03-07
 last_modified_at: 2022-03-09
 
+categories: [LINUX]
 tags: [LINUX]
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
+    changefreq:
+    priority:
 
 title: "[LINUX] 디렉토리 조작명령어 설명 및 실습"
 excerpt: "디렉토리 조작명령어 설명 및 실습"
@@ -11,6 +11,7 @@ excerpt: "디렉토리 조작명령어 설명 및 실습"
 date: 2022-02-27
 last_modified_at: 
 
+categories: [LINUX]
 tags: [LINUX]
 ---
 
