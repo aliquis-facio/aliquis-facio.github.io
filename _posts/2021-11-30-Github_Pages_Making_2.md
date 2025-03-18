@@ -19,17 +19,23 @@ tags: [BLOG]
 1. []()
 
 # Github.io 만들기 2
-## 두 번째 도전
-~~<https://taylantatli.github.io/Moon/about/>~~(<a style="text-decoration: underline" href="https://github.com/TolgaTatli/Moonrise/">이 주소</a>를 참조하시면 됩니다.)
-에 나와있는 setup guide를 따라 함.  
+## Setup Guide 따라가기 1
+Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
+
+~~(2025.03.18 기준으로는 아래처럼 작성되어있다.)~~  
+1. Fork the Moonrise repo
+1. Edit `_config.yml` file
+1. Remove sample posts from `_posts` folder and add yours
+1. Edit `index.md` file in `about` folder
+1. Change repo name to `YourUserName.github.io`  
 -> 나눔고딕 폰트 적용까지 성공해서 한글 입력까지 가능했지만 댓글 기능에서 막혀서 레포지토리 지움.  
 
-## 세 번재 도전
+## Setup Guide 따라가기 2
 똑같이 setup guide를 따라해서 댓글 기능부터 추가했음.  
 -> 나눔고딕 폰트에 관한 코드를 똑같은 위치에 입력함.  
 -> 로컬 레포지토리를 변경해도 github.io에 변경이 늦게되는 듯함.  
 
-## 네번째 도전
+## Image
 1. favicon image 변경  
 2. 둥글고 어두운 분위기를 생각하다가 이상한 나라의 앨리스에서 나오는 체셔캣이 생각남.  
 3. 검정톤 깔끔한 분위기의 이미지로 고름.  
@@ -38,17 +44,18 @@ tags: [BLOG]
 6. 실제로 적용시키니까 맘에 들지 않아서 다른 체셔캣 이미지로 바꾸면서 시도하는 중.  
 7. 뒤에 깔리는 이미지 변경 중.  
 
-## 다섯번째 도전
+## GOOGLE ANALYTICS
+### google analytics 추가하기
 1. google analytics 추가
-2. google analytics 가입 후 tracking id 챙겨서 config.yml에
+1. google analytics 가입하기
+1. `_config.yml`에 tracking id 추가하기  
 ```
 "google:
     analytics: tracking_id"
 ```
-tracking_id 부분에 추가함.
 
-3. 기존에 있던 구글 애널리틱스에 관한 코드를 변경함.  
-#### 전
+#### 기존에 있던 구글 애널리틱스에 관한 코드를 변경함.  
+* 변경 전  
 ```html
 <!-- Asynchronous Google Analytics snippet -->
 <script>
@@ -62,7 +69,7 @@ tracking_id 부분에 추가함.
 </script>
 ```
 
-#### 후
+* 변경 후  
 ```html
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE0BFF2TLD"></script>
@@ -75,12 +82,13 @@ tracking_id 부분에 추가함.
 </script>
 ```
 
-4. 기존에 있던 코드일 때는 구글 애널리틱스 보고서에서 사용자가 counting되지 않았는데, 구글 애널리틱스에서 제공하는 코드로 변경하고 나서는 사용자가 잘 counting되는 모습을 보여줌.
+-> 기존에 있던 코드일 때는 구글 애널리틱스 보고서에서 사용자가 counting되지 않았는데, 구글 애널리틱스에서 제공하는 코드로 변경하고 나서는 사용자가 잘 counting되는 모습을 보여줌.
 
-## 여섯번째 도전
-1. 다섯번째 도전 중 bigdecimal과 관련된 오류가 계속 발생함. 호환성 문제라고 판단. ruby를 재설치하려 함.
+## RUBY
+bigdecimal과 관련된 오류가 계속 발생함. 호환성 문제라고 판단. ruby를 재설치하려 함.
 
-ruby 삭제 하는 명령어라고 함.
+### ruby 삭제
+아래 코드는 ruby를 삭제하는 코드임.
 ```
 sudo rm -rf /usr/local/lib/ruby
 sudo rm -rf /usr/lib/ruby
@@ -92,18 +100,18 @@ sudo rm -f /usr/local/bin/gem
 sudo rm -f /usr/bin/gem
 ```
 
-2. ruby 다시 설치 중  
-<https://www.ruby-lang.org/ko/documentation/installation/#apt>
+### ruby 설치
+Ruby 설치 가이드: <https://www.ruby-lang.org/ko/documentation/installation/#apt>
 
-3. 삭제하고 다시 설치하려니
-`cannot load such file -- rubygems.rb (LoadError)`
-이런 오류가 발생
+apt (Debian이나 Ubuntu) 설치 명령어: `$ sudo apt-get install ruby-full`  
+오류 발생: `cannot load such file -- rubygems.rb (LoadError)`
 
-4. rvm 설치 중
+### rvm 설치
+설치 명령어
 `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`  
 `\curl -sSL https://get.rvm.io | bash -s stable`  
 
-- 오류 발생 -
+오류 발생
 ```
 Can't check signature: No public key
 GPG signature verification failed for '/home/tester/.rvm/archives/rvm-1.29.12.tgz' - 'https://github.com/rvm/rvm/releases/download/1.29.12/1.29.12.tar.gz.asc'! Try to install GPG v2 and then fetch the public key:
