@@ -17,7 +17,7 @@ tags: [BLOG]
 
 # 목차
 1. [RUBY](#1-ruby)
-    1. [설치치](#1-ruby-설치)
+    1. [설치](#1-ruby-설치)
 1. [JEKYLL](#2-jekyll)
     1. [설치](#1-jekyll-설치)
     1. [실행](#2-jekyll-실행)
@@ -53,7 +53,7 @@ ruby 설치 링크: <https://www.ruby-lang.org/ko/documentation/installation/>
 ### 4) jekyll 서버 접속 (확인)
 `~/blog/github_username.github.io$ jekyll serve` -> 실행됨  
 브라우저에 127.0.0.1:4000 또는 localhost:4000 입력  
--> 기본테마 블로그
+-> 기본테마 블로그가 보인다.
 
 ### 5) jekyll theme 고르기
 jekyll theme site: <http://jekyllthemes.org/>  

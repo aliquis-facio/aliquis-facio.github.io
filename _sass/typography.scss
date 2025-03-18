@@ -15,7 +15,8 @@
 
 	// 목차, 참고 링크 밑줄 없앰
 	>ul>li *,
-	>ol>li * {
+	>ol>li *,
+	>p>a {
 		text-decoration-line: none;
 	}
 }
