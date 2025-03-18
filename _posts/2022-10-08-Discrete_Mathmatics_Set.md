@@ -11,7 +11,7 @@ excerpt: "집합"
 date: 2022-10-08
 last_modified_at: 
 
-categories: [MATEHMATICS]
+categories: [MATHEMATICS]
 tags: [DISCRETE MATHEMATICS]
 ---
 

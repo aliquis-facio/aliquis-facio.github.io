@@ -11,7 +11,7 @@ excerpt: "중간고사 정리"
 date: 2022-10-23
 last_modified_at: 2024-11-08
 
-categories: [METHEMATICS]
+categories: [MATHEMATICS]
 tags: [APPLICATION STATISTICS]
 ---
 
