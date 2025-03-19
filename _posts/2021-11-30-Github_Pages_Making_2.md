@@ -28,6 +28,7 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 1. Remove sample posts from `_posts` folder and add yours
 1. Edit `index.md` file in `about` folder
 1. Change repo name to `YourUserName.github.io`  
+
 -> 나눔고딕 폰트 적용까지 성공해서 한글 입력까지 가능했지만 댓글 기능에서 막혀서 레포지토리 지움.  
 
 ## 2. Setup Guide 따라가기 2

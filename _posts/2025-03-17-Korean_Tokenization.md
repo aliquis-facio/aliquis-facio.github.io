@@ -90,6 +90,7 @@ e.g. 못(명사): 망치를 사용해 목재 따위를 고정하는 물건
 KoNLPy를 통해서 사용할 수 있는 형태소 분석기: Okt(Open Korea Text), Mecab, Komoran, Hannanum, KKma(꼬꼬마)
 
 1. okt 형태소 분석기
+
 ```python
 from konlpy.tag import Okt
 
@@ -106,6 +107,7 @@ print('OKT 명사 추출 :',okt.nouns("열심히 코딩한 당신, 연휴에는 
 3) nouns: 명사 추출  
 
 2. KKma(꼬꼬마) 형태소 분석기
+
 ```python
 from konlpy.tag import Kkma
 
@@ -122,3 +124,4 @@ print('꼬꼬마 명사 추출 :',kkma.nouns("열심히 코딩한 당신, 연휴
 * [KoNLPy tag Package](https://konlpy.org/en/latest/api/konlpy.tag/)
 * [텍스트 전처리(Text preprocessing)](https://wikidocs.net/21694)
 * [정규표현식(Regular Expression) with 파이썬](https://jh2021.tistory.com/8)
+* [](https://github.com/storidient/KoBookNLP)
