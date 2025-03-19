@@ -52,7 +52,6 @@ tags: [DATE SCIENCE, TIL]
 KSS를 통해서 문장 토큰화 진행하기
 ```python
 import kss
-
 text = '~'
 result = kss.split_sentences(text)
 ```
@@ -93,10 +92,8 @@ KoNLPy를 통해서 사용할 수 있는 형태소 분석기: Okt(Open Korea Tex
 
 ```python
 from konlpy.tag import Okt
-
 okt = Okt()
 kkma = Kkma()
-
 print('OKT 형태소 분석 :',okt.morphs("열심히 코딩한 당신, 연휴에는 여행을 가봐요"))
 print('OKT 품사 태깅 :',okt.pos("열심히 코딩한 당신, 연휴에는 여행을 가봐요"))
 print('OKT 명사 추출 :',okt.nouns("열심히 코딩한 당신, 연휴에는 여행을 가봐요"))
@@ -110,7 +107,6 @@ print('OKT 명사 추출 :',okt.nouns("열심히 코딩한 당신, 연휴에는 
 
 ```python
 from konlpy.tag import Kkma
-
 print('꼬꼬마 형태소 분석 :',kkma.morphs("열심히 코딩한 당신, 연휴에는 여행을 가봐요"))
 print('꼬꼬마 품사 태깅 :',kkma.pos("열심히 코딩한 당신, 연휴에는 여행을 가봐요"))
 print('꼬꼬마 명사 추출 :',kkma.nouns("열심히 코딩한 당신, 연휴에는 여행을 가봐요"))
