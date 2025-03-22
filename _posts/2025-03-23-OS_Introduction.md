@@ -213,6 +213,19 @@ Final value : 137298
 ### 1.3. 영속성(Persistence)
 #### 예제 코드
 
+## 2. 디자인 목표
+* 추상화: Make the system convenient and easy to use
+* 높은 성능
+    * Minimize the overhead of the OS
+    * OS must strive to providde virtualization without excessive overhead
+* Protection between applications
+    * Isolation: Bad behavior of one does not harm other and the OS itself.
+* High degree of reliability: The OS must also run non-stop.
+* 기타
+    * 에너지 효율성
+    * 보안성
+    * Mobility
+
 # 참고
 * [[운영체제] 운영체제(OS)란?](https://jerryjerryjerry.tistory.com/171)
 * [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
