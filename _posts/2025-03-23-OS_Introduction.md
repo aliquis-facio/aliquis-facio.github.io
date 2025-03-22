@@ -219,8 +219,8 @@ Final value : 137298
 
 ### 1.3. 영속성(Persistence)
 DRAM과 같은 장치는 휘발성 값을 저장한다.  
-하드웨어와 소프트웨어는 데이터를 영구적으로 저장하는 것이 필요하다.  
-    * 하드웨어: 하드 드라이브, SSD와 같은 입출력 장치
+하드웨어와 소프트웨어는 데이터를 영구적으로 저장하는 것이 필요하다.
+    * 하드웨어: 하드 드라이브, SSD와 같은 입출력 장치  
     * 소프트웨어: 파일 시스템은 디스크를 관리한다. 또한, 유저가 만든 어떤 파일들을 저장하는 것을 책임진다.
 
 #### 예제 코드
@@ -228,7 +228,7 @@ DRAM과 같은 장치는 휘발성 값을 저장한다.
 #include <stdio.h>
 #include <unistd.h>
 #include <assert.h>
-#include <fcntl.h>
+#include <fcntl.h> // file control
 #include <sys/types.h>
 
 int main(int argc, char *argv[]) {
@@ -240,6 +240,37 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
+open(): 파일을 열거나 생성 후 열어준다.  
+`int open(const char *filepath, int flag, mode_t mode);`  
+: const char *filepath: 열고자 하는 파일의 경로
+: int flag: 파일 열 때 사용할 옵션
+    O_RDONLY : 읽기 모드 (Read Only)
+    O_WRONLY : 쓰기 모드 (Write Only) - 읽지 않고 쓰기만 하는 경우는 크게 많지 않음
+    O_RDWR : 읽기/쓰기 모드
+    O_CREAT : 파일 생성
+    O_APPEND : 파일을 쓰되 기존 파일의 맨 끝부터 이어 쓰는 기능
+    O_TRUNC : 파일을 초기화
+    O_EXCL : O_CREAT 와 함께 사용되며, 이미 파일이 존재한다면 에러를 리턴
+: mode_t mode: O_CREAT 옵션을 쓸 때 필수적으로 사용해야하는 옵션으로, 파일의 접근 권한을 명시
+    * 기본 값
+    파일 : 0666
+    디렉토리 : 0777
+
+    * 아래 옵션들은 bitwise 연산으로 여러개를 동시에 사용가능함
+    S_IRWXU : 유저 읽기, 쓰기, 실행 권한 (Read, Write, Execute User)
+    S_IRUSR : 유저 읽기 권한 (Read User)
+    S_IWUSR : 유저 쓰기 권한 (Write User)
+    S_IXUSR : 유저 실행 권한 (Execute User)
+    S_IRWXG : 그룹 읽기, 쓰기, 실행 권한 (Read, Write, Execute Group)
+    S_IRGRP : 그룹 읽기 권한
+    S_IWGRP : 그룹 쓰기 권한
+    S_IXGRP : 그룹 실행 권한
+    S_IRWXO : 기타 사용자 읽기, 쓰기, 실행 권한 (Read, Write, Execute Other)
+    S_IROTH : 기타 사용자 읽기 권한
+    S_IWOTH : 기타 사용자 쓰기 권한
+    S_IXOTH : 기타 사용자 실행 권한
+: 반환 값: 성공 시 0, 실패 시 -1 을 리턴하고 errno 설정
+
 open, write, close <- system call: 운영체제가 제공하는 기능
 
 ## 2. 디자인 목표
