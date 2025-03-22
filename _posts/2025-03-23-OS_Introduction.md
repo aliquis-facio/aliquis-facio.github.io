@@ -26,10 +26,10 @@ tags: [OS, TIL]
 
 -> OS는 시스템이 사용하기 쉬운 방식으로 정확하고 효율적이게 동작하게 만드는 역할을 담당한다.
 
-## 운영체제 동작 방식
+## 1. 운영체제 동작 방식
 폰 노이만의 컴퓨터 모델을 따르면 OS가 동작하는 것을 3가지로 나누고 있다. 가상화, 동시성, 영속성 이렇게 3가지이다.
 
-### 가상화(Virtualization)
+### 1.1. 가상화(Virtualization)
 OS는 물리적 자원(e.g. 프로세서, 메모리, 디스크 등)을 사용한다. 그리고 좀 더 일반적이고 강력하고 가상화 형태로 사용하기 쉽게 변환한다. 그래서 우리는 운영체제를 가상머신이라 부르기도 한다.
 * System Calls: OS는 가상머신의 기능(프로그램 실행, 메모리를 할당, 파일 접근 등)을 활용할 수 있도록 하기 위해 사용자가 호출할 수 있는 몇 가지 인터페이스(APIs)를 제공한다.  
 * OS는 자원(CPU, 메모리(memory), 디스크(disk))을 관리한다.  
@@ -129,7 +129,12 @@ prompt> ./mem & ./mem &
 ...
 ```
 
-### Concurrency
+각각의 프로세스는 자기 자신의 독립된 가상 주소 공간(메모리 가상화)에 접근한다.
+OS는 주소 공간을 물리적인 메모리에 연결한다.
+메모리는 프로그램이 동작하는 동안에 참조하는 것은 또 다른 프로세스의 주소 공간에 영향을 미치지 않는다.
+물리적인 메모리는 OS에 의해 관리되는 공유된 자원이다.
+
+### 1.2. 동시성(Concurrency)
 #### Concurrency 예제 코드
 ```c
 #include <stdio.h>
@@ -166,18 +171,18 @@ int main(int argc, char *argv[]) {
 ```
 
 ptherad: POSIX thread, 유닉스 계열 POSIX 시스템에서 병렬적으로 작동하는 소프트웨어를 작동하기 위해 제공하는 API
-
+  
 pthread_create(): thread를 생성하는 함수이다.
-`int pthread_create(pthread_t*thread, const pthread_attr_t*attr, void*(*start_routine)(void *), void *arg);`
-pthread_t*thread: 스레드 식별자이다. 생성된 스레드를 구별하기 위한 id
-const pthread_attr_t*attr: 스레드 특성을 지정한다. 보통은 NULL을 입력한다.
-void*(*start_routine)(void *): thread가 실행되었을 때 시작할 스레드 함수이름이다.
-void *arg: 스레드가 분기할 함수에 보낼 입력 파라미터이다.
-
+: `int pthread_create(pthread_t*thread, const pthread_attr_t*attr, void*(*start_routine)(void *), void *arg);`
+: * pthread_t*thread: 스레드 식별자이다. 생성된 스레드를 구별하기 위한 id
+: * const pthread_attr_t*attr: 스레드 특성을 지정한다. 보통은 NULL을 입력한다.
+: * void*(*start_routine)(void *): thread가 실행되었을 때 시작할 스레드 함수이름이다.
+: * void *arg: 스레드가 분기할 함수에 보낼 입력 파라미터이다.
+  
 pthread_join(): main을 도는 스레드가 자신이 분기시킨 스레드들이 종료되기를 기다리는 함수이다.
-`int pthread_join(pthread_t th, void **thread_return);`
-pthread_t th: 스레드의 식별자이다. pthread_create의 pthread_t*thread와 동일하다.
-void **thread_return: 리턴값이다.
+: `int pthread_join(pthread_t th, void **thread_return);`
+: * pthread_t th: 스레드의 식별자이다. pthread_create의 pthread_t*thread와 동일하다.
+: * void **thread_return: 리턴값이다.
 
 Execution Stack
 
