@@ -172,15 +172,15 @@ int main(int argc, char *argv[]) {
 
 ptherad: POSIX thread, 유닉스 계열 POSIX 시스템에서 병렬적으로 작동하는 소프트웨어를 작동하기 위해 제공하는 API
   
-pthread_create(): thread를 생성하는 함수이다.
-: `int pthread_create(pthread_t*thread, const pthread_attr_t*attr, void*(*start_routine)(void *), void *arg);`
+pthread_create(): thread를 생성하는 함수이다.  
+`int pthread_create(pthread_t*thread, const pthread_attr_t*attr, void*(*start_routine)(void *), void *arg);`
 : * pthread_t*thread: 스레드 식별자이다. 생성된 스레드를 구별하기 위한 id
 : * const pthread_attr_t*attr: 스레드 특성을 지정한다. 보통은 NULL을 입력한다.
 : * void*(*start_routine)(void *): thread가 실행되었을 때 시작할 스레드 함수이름이다.
 : * void *arg: 스레드가 분기할 함수에 보낼 입력 파라미터이다.
   
-pthread_join(): main을 도는 스레드가 자신이 분기시킨 스레드들이 종료되기를 기다리는 함수이다.
-: `int pthread_join(pthread_t th, void **thread_return);`
+pthread_join(): main을 도는 스레드가 자신이 분기시킨 스레드들이 종료되기를 기다리는 함수이다.  
+`int pthread_join(pthread_t th, void **thread_return);`
 : * pthread_t th: 스레드의 식별자이다. pthread_create의 pthread_t*thread와 동일하다.
 : * void **thread_return: 리턴값이다.
 
