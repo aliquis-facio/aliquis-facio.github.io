@@ -49,7 +49,8 @@ int main(int argc, char *argv[]) {
     // int argc: main 함수에 전달되는 정보의 갯수
     // char* argv[]: main 함수에 전달되는 실질적인 정보, 문자열의 배열. 첫번째 문자열은 프로그램의 실행경로로 항상 고정이 되어 있음.
     if (argc != 2) { // input 값이 2개가 아니라면
-        fprintf(stderr, "usage: cpu <string>\n"); // input 값을 새롭게 입력 받음.
+        fprintf(stderr, "usage: cpu <string>\n");
+        // input 값을 새롭게 입력 받음.
         exit(1); // 종료
     }
     char *str = argv[1];
@@ -211,7 +212,29 @@ Final value : 137298
 세 명령어가 한번에(atomically) 실행되지 않고, 개별적으로 실행된다. -> 즉, 중간중간 무엇인가에 방해를 받는다.
 
 ### 1.3. 영속성(Persistence)
+DRAM과 같은 장치는 휘발성 값을 저장한다.
+하드웨어와 소프트웨어는 데이터를 영구적으로 저장하는 것이 필요하다.
+하드웨어: 하드 드라이브, SSD와 같은 입출력 장치
+소프트웨어: 파일 시스템은 디스크를 관리한다. 또한, 유저가 만든 어떤 파일들을 저장하는 것을 책임진다.
+
 #### 예제 코드
+```c
+#include <stdio.h>
+#include <unistd.h>
+#include <assert.h>
+#include <fcntl.h>
+#include <sys/types.h>
+
+int main(int argc, char *argv[]) {
+    int fd = open("/tmp/file", O_WRONLY|O_CREAT|O_TRUNC, S_IRWXU); // 사람이 식별하는 파일의 이름을 시스템이 이해할 수 있는 file descrypter로 변환시켜주는 역할
+    assert(fd > -1);
+    int rc = write(fd, "hello world\n", 13);
+    assert(rc == 13);
+    close(fd);
+    return 0;
+}
+```
+open, write, close <- system call: 운영체제가 제공하는 기능
 
 ## 2. 디자인 목표
 * 추상화: Make the system convenient and easy to use
