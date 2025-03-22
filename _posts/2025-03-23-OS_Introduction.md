@@ -271,6 +271,13 @@ open(): 파일을 열거나 생성 후 열어준다.
     S_IXOTH : 기타 사용자 실행 권한  
 : 반환 값: 성공 시 0, 실패 시 -1 을 리턴하고 errno 설정
 
+write():   
+`ssize_t write(int fd, const void *buf, size_t count);`  
+: int fd : file descriptor이다. open의 반환 값이나 stdin, stdout, stderr 에 해당하는 0,1,2를 넣어주면 된다.
+: const void* buf : write 할 값이 담긴 buffer이다.
+: size_t count : write할 내용의 길이이다.
+: 반환 값: write에 성공한 byte의 수이다. write에 실패한 경우 -1을 반환하고 errno를 설정한다.
+
 open, write, close <- system call: 운영체제가 제공하는 기능
 
 ## 2. 디자인 목표
@@ -295,3 +302,4 @@ open, write, close <- system call: 운영체제가 제공하는 기능
 * [c언어의 volatile 키워드](https://m.blog.naver.com/eslectures/80143556699)
 * [[C] pthread란? pthread 예제](https://m.blog.naver.com/whtie5500/221692793640)
 * [C/C++ open 함수 - 파일 생성 / 읽기 / 쓰기](https://bubble-dev.tistory.com/entry/CC-open-%ED%95%A8%EC%88%98-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EC%9D%BD%EA%B8%B0-%EC%93%B0%EA%B8%B0)
+* [open, read, write, close 사용하기](https://tempdev.tistory.com/44)
