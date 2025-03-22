@@ -37,7 +37,7 @@ OS는 물리적 자원(e.g. 프로세서, 메모리, 디스크 등)을 사용한
     * 메모리(memory): 많은 프로그램들이 동시에 자신의 명령어(코드)와 데이터에 접근할 수 있게 한다.
     * 디스크(disk): 많은 프로그램들이 장치에 접근할 수 있게 한다.
 
-#### CPU Virtualization 예제 코드
+#### 예제 코드: CPU Virtualization
 ```c
 #include <stdio.h> // standard input output
 #include <stdlib.h> // standard library
@@ -85,7 +85,7 @@ A
 
 -> CPU 가상화: CPU가 물리적으로는 적은 수로 구성되어 있지만, 가상화를 통해 시스템이 많은 수의 가상 CPU를 가진 것처럼(여러 프로그램이 한 번에 실행되는 것처럼) 보이게 한다.
 
-#### Memory Virtualization 예제 코드
+#### 예제 코드: Memory Virtualization
 ```c
 #include <unistd.h> // POSIX 운영체제 API에 대한 엑세스 제공
 #include <stdio.h>
@@ -135,7 +135,7 @@ OS는 주소 공간을 물리적인 메모리에 연결한다.
 물리적인 메모리는 OS에 의해 관리되는 공유된 자원이다.
 
 ### 1.2. 동시성(Concurrency)
-#### Concurrency 예제 코드
+#### 예제 코드
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -148,7 +148,8 @@ int loops; // BSS 영역에 정의됨.
 void *worker(void *arg) {
     int i;
     for (i = 0; i < loops; i++) {
-        counter++;
+        counter++; // counter를 증가시키는 operation이 atomic하지 않아서 밑의 결과가 발생하게 됨. 경쟁 조건이 존재함.
+        // load -> add -> store
     }
     return NULL;
 }
@@ -201,6 +202,16 @@ Final value : 137298
 # 실행한 결과값이 다르다.
 # 비결정적이다.
 ```
+
+공유하는 counter를 증가시키는 것은 3가지 명령어를 사용한다.
+1. 메모리에서 counter의 값을 가져온다.
+1. 증가시킨다.
+1. 메모리에 다시 저장한다.
+
+세 명령어가 한번에(atomically) 실행되지 않고, 개별적으로 실행된다. -> 즉, 중간중간 무엇인가에 방해를 받는다.
+
+### 1.3. 영속성(Persistence)
+#### 예제 코드
 
 # 참고
 * [[운영체제] 운영체제(OS)란?](https://jerryjerryjerry.tistory.com/171)
