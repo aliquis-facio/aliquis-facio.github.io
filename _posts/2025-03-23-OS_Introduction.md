@@ -271,7 +271,7 @@ open(): 파일을 열거나 생성 후 열어준다.
         * S_IXOTH : 기타 사용자 실행 권한  
 : 반환 값: 성공 시 0, 실패 시 -1 을 리턴하고 errno 설정
 
-write():   
+write(): 파일에 내용을 작성한다.  
 `ssize_t write(int fd, const void *buf, size_t count);`  
 : int fd : file descriptor이다. open의 반환 값이나 stdin, stdout, stderr 에 해당하는 0,1,2를 넣어주면 된다.
 : const void* buf : write 할 값이 담긴 buffer이다.
