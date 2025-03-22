@@ -20,7 +20,7 @@ tags: [OS, TIL]
     1. [운영체제 동작 방식](#1-운영체제-동작-방식)
         1. [가상화(Virtualization)](#11-가상화virtualization)
         1. [동시성(Concurrency)](#12-동시성concurrency)
-        1. [1.3. 영속성(Persistence)](#13-영속성persistence)
+        1. [영속성(Persistence)](#13-영속성persistence)
     1. [디자인 목표](#2-디자인-목표)
 
 # 운영체제(OS, Operating System)란?
