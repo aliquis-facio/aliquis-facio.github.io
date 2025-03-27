@@ -15,6 +15,7 @@ categories: [BLOG]
 tags: [BLOG]
 ---
 
+# Github Blog Image Test
 ~~**favicon 이미지 변경 과정과 뒷배경 이미지 변경 과정에 대한 기록을 남기면 될 듯함.**~~  
 
 <figure>
