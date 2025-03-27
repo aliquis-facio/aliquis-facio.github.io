@@ -18,6 +18,79 @@ tags: [DATE SCIENCE, NLP, TIL]
 # 목차
 
 # 한글 텍스트 자연어 처리 실습(Korean NLP Practice)
+## 목표
+한글 소설 속 등장인물의 감정 변화를 분석하겠다.
+
+수행과제
+NER
+감정 분석
+감정 변화 시각화
+
+## 활용 데이터셋 소개
+
+## 환경 설정 (with. Google Colab)
+```
+!git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
+%cd ./mecab-python-0.996
+!python3 setup.py build
+!python3 setup.py install
+%cd /content
+
+!pip install mecab-python3
+# !pip install unidic-lite
+!pip install mecab-ko-dic
+!pip install konlpy
+!pip install konlp
+!pip install kss
+```
+
+```python
+# import module
+
+from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization module
+from mecab import MeCab
+import mecab_ko_dic
+import kss # sentence tokenization module
+import re # regular expression module
+from IPython.display import display
+from typing import * # python type hint module
+from time import time
+from random import randint
+import os
+```
+
+```python
+def file_search(file_path: str):
+  file_lst:List[str] = []
+  files:List[str] = os.listdir(file_path)
+
+  try:
+    for file in files:
+      file_full_path = os.path.join(file_path, file)
+
+      if os.path.isdir(file_full_path):
+        file_search(file_full_path)
+      else:
+        file_lst.append(file_full_path)
+  except PermissionError:
+    pass
+
+  return file_lst
+```
+
+```python
+# Read Korean Text Data Set
+
+file_path:str = "/content"
+
+file_lst:List[str] = sorted(file_search(file_path))
+display(file_lst)
+
+with open(file_lst[0], "r", encoding='utf-8') as f:
+  texts:str = f.read()
+
+display(texts.split('\n')[:20])
+```
 ## 텍스트 전처리
 1. 문장 단위 토큰화
 1. 토큰화: 텍스트를 단어, 문장, 구와 같은 더 작은 단위로 나눈다.
@@ -28,8 +101,13 @@ tags: [DATE SCIENCE, NLP, TIL]
 ## 특징 추출
 Bag of Words
 TF-IDF
-워드 임베딩: Word2Vec, GloVe
+워드 임베딩: **Word2Vec**, GloVe
 문장 임베딩: BERT, GPT
+
+Deep Transformer
+
+Tag Decoder Architectures
+conditional random fields
 
 ## 텍스트 분석
 * 품사(POS) 태깅: 단어의 문법적 역할을 식별한다.
@@ -41,10 +119,28 @@ TF-IDF
 
 ## 모델 학습
 
+## 평가
+Precision(정밀도) = TP / (TP + FP)
+특정 Entity라고 예측한 경우 중에서 실제 특정 Entity로 판명되어 예측이 일치한 비율
+Recall(재현률) = TP / (TP + FN)
+전체 특정 Entity 중에서 실제 특정 Entity라고 정답을 맞춘 비율
+F-score = Presision * Recall / (Precision + Recall)
+정밀도와 재현률로부터 조화 평균을 구한 것
+![alt text](image.png)
+
 # 참고
-* [git: KoBookNLP](https://github.com/storidient/KoBookNLP)
 * [KoBERT를 활용한 감정분류 모델 구현 with Colab](https://bbarry-lee.github.io/ai-tech/KoBERT%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%ED%98%84.html)
 * [감정분류(한국어)- 리뷰데이터 학습, 평가, 예측까지](https://wonhwa.tistory.com/35)
 * [텍스트 정보 추출 모델 (with. 개체명 인식(NER))](https://chocochip125.tistory.com/220)
+
+* [git: KoBookNLP](https://github.com/storidient/KoBookNLP)
 * [git: KoBERT](https://github.com/SKTBrain/KoBERT)
 * [git: Korean NER based BERT+CRF](https://github.com/eagle705/pytorch-bert-crf-ner)
+* [git: 개체명 형태소 말뭉치](https://github.com/kmounlp/NER)
+* [git: NER Model Baseline for NSML](https://github.com/naver/nlp-challenge/tree/master/missions/ner)
+* [git: Naver Sentiment Movie Corpus v1.0](https://github.com/e9t/nsmc)
+* [git: KoSentenceBERT-SKT](https://github.com/BM-K/KoSentenceBERT-SKT)
+
+* [youtube: 2021 자연어 처리 - NER](https://www.youtube.com/watch?v=XETjf2CX4xU&list=PL7ZVZgsnLwEEoHQAElEPg7l7T6nt25I3N&index=14)
+
+* [속성기반 감정분석 데이터, AI HUB](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71603)
