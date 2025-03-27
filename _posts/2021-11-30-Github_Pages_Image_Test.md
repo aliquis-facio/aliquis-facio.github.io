@@ -15,14 +15,7 @@ categories: [BLOG]
 tags: [BLOG]
 ---
 
-**favicon 이미지 변경 과정과 뒷배경 이미지 변경 과정에 대한 기록을 남기면 될 듯함.**  
-
-### 참고
-	1. <https://raw.githubusercontent.com/TaylanTatli/Moon/master/_posts/2016-03-20-markdown-syntax.md>
-	2. <https://github.com/TaylanTatli/Moon/blob/master/_posts/2013-05-22-sample-post-images.md>
-	3. <http://taewan.kim/post/markdown/#comment>
-	4. <https://hyeonjiwon.github.io/blog/markdown_img/>
-	5. <https://blog.jaeyoon.io/2017/12/jekyll-image.html>
+~~**favicon 이미지 변경 과정과 뒷배경 이미지 변경 과정에 대한 기록을 남기면 될 듯함.**~~  
 
 <figure>
 	<a href="https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2021-12-01-screenshot-error.png?raw=true"><img src="https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2021-12-01-screenshot-error.png?raw=true"></a>
@@ -50,4 +43,11 @@ tags: [BLOG]
 ![1st-wallpaper](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2021-12-01-chess_negative.png?raw=true)
 
 cdn 이용하기
-<https://cdn.jsdelivr.net/gh/github_user_name/repo_url@branch_name/file_path>
+`https://cdn.jsdelivr.net/gh/github_user_name/repo_url@branch_name/file_path`
+
+# 참고
+* [github blog raw code](https://raw.githubusercontent.com/TaylanTatli/Moon/master/_posts/2016-03-20-markdown-syntax.md)
+* [git: 2013-05-22-sample-post-images.md](https://github.com/TaylanTatli/Moon/blob/master/_posts/2013-05-22-sample-post-images.md)
+* [마크다운 사용법 - Quick Start](http://taewan.kim/post/markdown/#comment)
+* [[Blog] GitHub Pages 블로그 이미지 업로드](https://hyeonjiwon.github.io/blog/markdown_img/)
+* [지킬(Jekyll) 포스팅에 이미지 첨부하는 방법 총체적 정리](https://blog.jaeyoon.io/2017/12/jekyll-image.html)
