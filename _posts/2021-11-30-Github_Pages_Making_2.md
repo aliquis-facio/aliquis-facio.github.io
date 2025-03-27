@@ -16,7 +16,20 @@ tags: [BLOG]
 ---
 
 # 목차
-1. []()
+1. [Setup Guide 따라가기 1](#1-setup-guide-따라가기-1)
+1. [Setup Guide 따라가기 2](#2-setup-guide-따라가기-2)
+1. [Image 바꾸기](#3-image)
+1. [GOOGLE ANALYTICS](#4-google-analytics)
+  1. [google analytics 추가하기](#41-google-analytics-추가하기)
+  1. [google analytics 코드 수정하기](#42-google-analytics-코드-수정하기)
+1. [RUBY](#5-ruby)
+  1. [ruby 삭제](#51-ruby-삭제)
+  1. [ruby 설치](#52-ruby-설치)
+  1. [rvm 설치](#53-rvm-설치)
+    1. [발생한 오류 목록](#531-발생한-오류-목록)
+  1. [윈도우에서 재시작](#54-윈도우에서-재시작)
+  1. [2021.12.10 이어서](#55-20211210-이어서)
+1. [참고](#참고)
 
 # Github.io 만들기 2
 ## 1. Setup Guide 따라가기 1
@@ -36,7 +49,7 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 -> 나눔고딕 폰트에 관한 코드를 똑같은 위치에 입력함.  
 -> 로컬 레포지토리를 변경해도 github.io에 변경이 늦게되는 듯함.  
 
-## 3. Image
+## 3. Image 바꾸기기
 1. favicon image 변경  
 2. 둥글고 어두운 분위기를 생각하다가 이상한 나라의 앨리스에서 나오는 체셔캣이 생각남.  
 3. 검정톤 깔끔한 분위기의 이미지로 고름.  
@@ -46,7 +59,7 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 7. 뒤에 깔리는 이미지 변경 중.  
 
 ## 4. GOOGLE ANALYTICS
-### 1) google analytics 추가하기
+### 4.1. google analytics 추가하기
 1. google analytics 추가
 1. google analytics 가입하기
 1. `_config.yml`에 tracking id 추가하기  
@@ -55,7 +68,7 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
     analytics: tracking_id"
 ```
 
-#### 2) 기존에 있던 구글 애널리틱스에 관한 코드를 변경함.  
+### 4.2. google analytics 코드 수정하기
 * 변경 전  
 ```html
 <!-- Asynchronous Google Analytics snippet -->
@@ -88,7 +101,7 @@ Jekyll Moon Theme Setup Guide: <https://github.com/TolgaTatli/Moonrise/>
 ## 5. RUBY
 bigdecimal과 관련된 오류가 계속 발생함. 호환성 문제라고 판단. ruby를 재설치하려 함.
 
-### 1) ruby 삭제
+### 5.1. ruby 삭제
 아래 코드는 ruby를 삭제하는 코드임.
 ```
 sudo rm -rf /usr/local/lib/ruby
@@ -101,18 +114,18 @@ sudo rm -f /usr/local/bin/gem
 sudo rm -f /usr/bin/gem
 ```
 
-### 2) ruby 설치
+### 5.2. ruby 설치
 Ruby 설치 가이드: <https://www.ruby-lang.org/ko/documentation/installation/#apt>
 
 apt (Debian이나 Ubuntu) 설치 명령어: `$ sudo apt-get install ruby-full`  
 오류 발생: `cannot load such file -- rubygems.rb (LoadError)`
 
-### 3) rvm 설치
+### 5.3. rvm 설치
 설치 명령어
 `gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3`  
 `\curl -sSL https://get.rvm.io | bash -s stable`  
 
-#### 발생한 오류 목록
+#### 5.3.1. 발생한 오류 목록
 1. 
 ```
 Can't check signature: No public key
@@ -144,14 +157,14 @@ gpg:               imported: 1
 
 -> 익숙하지 않은 리눅스보다 윈도우에서 다시 시작하기로 함.
 
-#### 4트 - 윈도우에서 시작
+### 5.4. 윈도우에서 재시작
 루비를 다운받고 파워쉘에서 `gem install jekyll` -> 오류발생
 `gcc.exe: fatal error: cannot execute 'cc1': CreateProcess: No such file or directory`
 파워쉘이 아닌  start command prompt with ruby에서 실행하는 것이었음.
 
 윈도우에서는 gem이 호환이 안 되는 것이 많다고 함.
 
-#### 5트 - 2021.12.10 이어서
+### 5.5 2021.12.10 이어서
 망함을 느낀 나는 포맷을 하기로 함.
 그래서 윈도우와 리눅스 멀티 부팅한 노트북을 싹 밀고 리눅스를 설치함.
 이후 다시 시도
