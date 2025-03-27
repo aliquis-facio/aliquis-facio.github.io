@@ -15,16 +15,7 @@ categories: [BLOG]
 tags: [BLOG]
 ---
 
-### 참고
-    1. <https://inasie.github.io/it%EC%9D%BC%EB%B0%98/1/>
-    2. <https://atgane.tistory.com/14>
-    3. <https://devinlife.com/howto%20github%20pages/google-search-console-and-analytics/>
-    4. <https://velog.io/@eona1301/Github-Blog-%EB%B0%A9%EB%AC%B8%EC%9E%90-%ED%86%B5%EA%B3%84Analytics%ED%95%98%EA%B8%B0>
-    5. <https://mingnol2.tistory.com/70>
-    6. <https://atgane.tistory.com/14>
-    7. <https://chinsun9.github.io/2020/11/20/github-blog-page-google-analytics%EB%A1%9C-%EC%B8%A1%EC%A0%95%ED%95%98%EA%B8%B0/>
-
-**참고 사이트를 따라서**
+# Google Analytics 적용하기
 1. google-analytics 가입함.
 2. google-analytics에서 속성 만들기
     웹사이트: aliquis-facio.github.io
@@ -79,3 +70,12 @@ analytics:        내 트랙 아이디
   
 물론 지금은 확실히 확인이 되었다.
 ![google-analytics](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2021-12-09-Screenshot.png?raw=true "2 People - One is me, and the other is my freind I think")
+
+# 참고
+* [github page 와 google analytics 연동](https://inasie.github.io/it%EC%9D%BC%EB%B0%98/1/)
+* [Google 검색 엔진과 애널리틱스 등록하기](https://devinlife.com/howto%20github%20pages/google-search-console-and-analytics/)
+* [[Github Blog] 방문자 통계(Analytics)하기](https://velog.io/@eona1301/Github-Blog-%EB%B0%A9%EB%AC%B8%EC%9E%90-%ED%86%B5%EA%B3%84Analytics%ED%95%98%EA%B8%B0)
+* [깃블로그(jekyll)에 구글 애널리틱스(Google Analytics) 적용법!](https://mingnol2.tistory.com/70)
+* [github blog, page google analytics로 측정하기](https://chinsun9.github.io/2020/11/20/github-blog-page-google-analytics%EB%A1%9C-%EC%B8%A1%EC%A0%95%ED%95%98%EA%B8%B0/)
+* [404 Not Found](https://atgane.tistory.com/14)
+* [404 Not Found](https://atgane.tistory.com/14)
