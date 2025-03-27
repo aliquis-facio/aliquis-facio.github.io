@@ -16,10 +16,10 @@ tags: [DATABASE, TIL]
 ---
 
 # 목차
-* [1. Database의 정의](#1-database의-정의)
-* [2. Database의 특성](#2-database의-특성)
-* [3. Database의 구조](#3-database의-구조)
-* [4. Database의 구성요소](#4-database의-구성요소)
+1. [Database의 정의](#1-database의-정의)
+1. [Database의 특성](#2-database의-특성)
+1. [Database의 구조](#3-database의-구조)
+1. [Database의 구성요소](#4-database의-구성요소)
 
 # DB(Database)
 ## 1. Database의 정의
