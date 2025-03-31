@@ -20,6 +20,7 @@ tags: [DATE SCIENCE, NLP, TIL]
 # 한글 텍스트 자연어 처리 실습 1
 ## 활용 데이터셋 소개
 소설 <해리포터>
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-11.png?raw=true)
 
 ## 환경설정 (Google Colab)
 ### 환경설정 진행
@@ -105,7 +106,6 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
   texts = f.read()
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-2.png?raw=true.png)
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-8.png?raw=true.png)
 
 ### 데이터 전처리하기
@@ -119,7 +119,6 @@ texts = re.sub(r'제\s*\d+\s*장\s*[^\n]*\n?', '', texts)
 texts:List[str] = kss.split_sentences(texts)
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-3.png?raw=true.png)
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-9.png?raw=true.png)
 
 ~~챕터별로 나눌까?~~
@@ -211,8 +210,8 @@ plt.show()
 
 mecab의 형태소 분석 결과 중 일부이다.
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-5.png?raw=true.png)
--> 이름과 같은 고유 명사가 분리되어 있는 경우를 몇몇 발견했다. e.g. 프리벳가, 더즐리, 덤블도어, 해그리드, 그리핀도르 등
--> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.
+-> 이름과 같은 고유 명사가 분리되어 있는 경우를 몇몇 발견했다. e.g. 프리벳가, 더즐리, 덤블도어, 해그리드, 그리핀도르 등  
+-> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.  
 
 ```python
 import pandas as pd
@@ -264,19 +263,13 @@ plt.draw()
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
 
-```python
-
-```
-
-```python
-
-```
-
-## 
-NER
-이진 감정 분석
-다중 감정 분석
-NER + 다중 감정 분석
+## 차후 진행 과제
+- [] mecab user dictionary 추가
+- [] 등장인물 구분(NER)
+- [] 대화문과 서술문 구분
+- [] 대화문에서의 이진 감정 분석
+- [] 대화문에서의 다중 감정 분석
+- [] 등장인물 구분(NER) + 대화문에서의 다중 감정 분석
 
 # 참고
 ## 1
