@@ -19,7 +19,7 @@ tags: [DATE SCIENCE, NLP, TIL]
 
 # 한글 텍스트 자연어 처리 실습 1
 ## 활용 데이터셋 소개
-소설 <해리포터>
+소설 「해리 포터」 시리즈
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-11.png?raw=true)
 
 ## 환경설정 (Google Colab)
