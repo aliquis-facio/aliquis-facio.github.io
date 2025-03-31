@@ -17,8 +17,6 @@ tags: [DATE SCIENCE, NLP, TIL]
 
 # 목차
 
-# 전체 코드
-
 # 한글 텍스트 자연어 처리 실습 1
 ## 활용 데이터셋 소개
 소설 <해리포터>
@@ -215,6 +213,11 @@ mecab의 형태소 분석 결과 중 일부이다.
 -> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.
 
 ```python
+import pandas as pd
+from collections import Counter
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
+
 tf = CountVectorizer()
 
 # 코퍼스로부터 각 단어의 빈도수를 기록
@@ -230,9 +233,17 @@ tfidf_df = pd.DataFrame(tfidf_arr, columns=tfidf_dict)
 tfidf_vocab = tfidf.vocabulary_
 ```
 
-```python
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-6.png?raw=true.png)
 
+```python
+from sklearn.manifold import TSNE
+
+# 차원 축소
+tsne = TSNE(n_components=2, n_iter=10000, verbose=1)
+Z = tsne.fit_transform(tfidf_arr.T)
 ```
+
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-7.png?raw=true.png)
 
 ```python
 
