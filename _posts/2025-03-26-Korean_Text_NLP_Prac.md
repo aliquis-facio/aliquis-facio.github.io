@@ -31,8 +31,6 @@ tags: [DATA SCIENCE, NLP, TIL]
 소설 「해리 포터」 시리즈
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-11.png?raw=true)
 
-[Korean_Stopwords.txt](https://mr-doosun.tistory.com/24)
-
 ## 2. 환경설정 (Google Colab)
 ### 2.1. 환경설정 진행
 ```bash
