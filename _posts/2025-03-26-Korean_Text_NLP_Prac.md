@@ -285,12 +285,12 @@ plt.draw()
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
 
 ## 3. 차후 진행 과제
-- [] mecab user dictionary 추가
-- [] 등장인물 구분(NER)
-- [] 대화문과 서술문 구분
-- [] 대화문에서의 이진 감정 분석
-- [] 대화문에서의 다중 감정 분석
-- [] 등장인물 구분(NER) + 대화문에서의 다중 감정 분석
+- [ ] mecab user dictionary 추가
+- [ ] 등장인물 구분(NER)
+- [ ] 대화문과 서술문 구분
+- [ ] 대화문에서의 이진 감정 분석
+- [ ] 대화문에서의 다중 감정 분석
+- [ ] 등장인물 구분(NER) + 대화문에서의 다중 감정 분석
 
 ## 4. 어려운 점
 * Google Colab에서 KoBERT 버전 호환성 맞추기
