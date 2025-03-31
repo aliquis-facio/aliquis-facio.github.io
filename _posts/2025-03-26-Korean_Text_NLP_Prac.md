@@ -49,19 +49,31 @@ from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization m
 from mecab import MeCab
 import mecab_ko_dic
 import kss # sentence tokenization module
+
 import torch
 from torch import nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
-# import gluonnlp as nlp
+
 import numpy as np
 from tqdm import tqdm, tqdm_notebook
+import pandas as pd
+import matplotlib.font_manager as fm
+import matplotlib.pyplot as plt
+from future.utils import iteritems
+from collections import Counter
+
+from sklearn.manifold import TSNE
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 ```
 
 ### 해리포터 불러오기
 
 ```python
+import os
+
 def file_search(file_path: str):
   file_lst:List[str] = []
   files:List[str] = os.listdir(file_path)
@@ -86,13 +98,10 @@ file_path:str = "/content"
 file_lst:List[str] = sorted(file_search(file_path))
 ```
 
-```python
-display(file_lst)
-```
-
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-1.png?raw=true)
 
-우선 해리포터 1권, <해리 포터와 마법사의 돌>로 시작하겠습니다.
+우선 해리포터 1권, 「해리 포터와 마법사의 돌」로 시작하겠습니다.
+
 ```python
 with open(file_lst[0], "r", encoding='utf-8') as f:
   texts = f.read()
@@ -102,8 +111,13 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
 
 ### 데이터 전처리하기
 ```python
-texts = re.sub(r'제\s*\d+\s*장\s*[^\n]*\n?', '', texts)  # '제1장 버려진 아이' 같은 목차 삭제
-texts:List[str] = kss.split_sentences(texts) # korean sentence tokenization
+import re # regular expression module
+import kss # sentence tokenization module
+
+# '제1장 버려진 아이' 같은 목차 삭제
+texts = re.sub(r'제\s*\d+\s*장\s*[^\n]*\n?', '', texts)
+# korean sentence tokenization -> 문장 기준 토큰화
+texts:List[str] = kss.split_sentences(texts)
 ```
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-3.png?raw=true.png)
@@ -111,6 +125,12 @@ texts:List[str] = kss.split_sentences(texts) # korean sentence tokenization
 ~~챕터별로 나눌까?~~
 
 ```python
+from typing import * # python type hint module
+import re # regular expression module
+from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization module
+from mecab import MeCab
+import mecab_ko_dic
+
 def tokenizer(module:object, texts:List[str]) -> Dict[Any, Any]:
   tokens:List[str] = [] # 형태소 단위 token
   tokenized_texts:List[str] = []
@@ -143,6 +163,10 @@ def tokenizer(module:object, texts:List[str]) -> Dict[Any, Any]:
 
 KoNLPy 형태소 분석 비교
 ```python
+from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization module
+from mecab import MeCab
+import mecab_ko_dic
+
 okt = Okt()
 tokenizer(okt, texts)
 
@@ -161,7 +185,7 @@ tokenizer(hannanum, texts)
 
 ```python
 import matplotlib.pyplot as plt
-# 각 KoNLPy의 형태소 분석 시간 분석 -> chart
+# 각 KoNLPy의 형태소 분석 시간 분석 -> 막대 그래프
 
 exec_tool:List[str] = ['okt', 'kkma', 'mecab', 'komoran', 'hannanum']
 exec_time_lst:List[float] = [okt_res['exec_time'], kkma_res['exec_time'],
@@ -185,8 +209,25 @@ plt.show()
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-4.png?raw=true.png)
 -> mecab의 속도가 압도적으로 빠르다
 
-```python
+mecab의 형태소 분석 결과 중 일부이다.
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-5.png?raw=true.png)
+-> 이름과 같은 고유 명사가 분리되어 있는 경우를 몇몇 발견했다. e.g. 프리벳가, 더즐리, 덤블도어, 해그리드, 그리핀도르 등
+-> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.
 
+```python
+tf = CountVectorizer()
+
+# 코퍼스로부터 각 단어의 빈도수를 기록
+tf.fit_transform(texts).toarray()
+
+# 각 단어와 맵핑된 인덱스 출력
+tf.vocabulary_
+
+tfidf = TfidfVectorizer().fit(texts)
+tfidf_arr = tfidf.transform(texts).toarray()
+tfidf_dict = tfidf.get_feature_names_out()
+tfidf_df = pd.DataFrame(tfidf_arr, columns=tfidf_dict)
+tfidf_vocab = tfidf.vocabulary_
 ```
 
 ```python
