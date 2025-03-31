@@ -106,6 +106,7 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
 ```
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-2.png?raw=true.png)
+![alt text](image.png)
 
 ### 데이터 전처리하기
 ```python
@@ -119,6 +120,7 @@ texts:List[str] = kss.split_sentences(texts)
 ```
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-3.png?raw=true.png)
+![alt text](image-1.png)
 
 ~~챕터별로 나눌까?~~
 
@@ -246,8 +248,21 @@ Z = tsne.fit_transform(tfidf_arr.T)
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-7.png?raw=true.png)
 
 ```python
+plt.figure(figsize=(10,10))
+plt.scatter(Z[:,0], Z[:,1])
 
+center = []
+for i in range(len(tfidf_dict)):
+  if -100 < Z[i,0] < 100 and -100 < Z[i,1] < 100:
+    plt.annotate('', xy=(Z[i,0], Z[i,1]), c='red')
+    center.append(tfidf_dict[i])
+  else:
+    plt.annotate('', xy=(Z[i,0], Z[i,1]))
+
+plt.draw()
 ```
+
+![alt text](image-2.png)
 
 ```python
 
