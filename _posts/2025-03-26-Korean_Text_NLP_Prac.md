@@ -31,7 +31,7 @@ tags: [DATE SCIENCE, NLP, TIL]
 소설 「해리 포터」 시리즈
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-11.png?raw=true)
 
-[Korean_Stopwords.txt](Korean_Stopwords.txt)
+[Korean_Stopwords.txt](https://mr-doosun.tistory.com/24)
 
 ## 2. 환경설정 (Google Colab)
 ### 2.1. 환경설정 진행
@@ -120,7 +120,7 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-8.png?raw=true.png)
 
 ### 2.4. 데이터 전처리하기
-목차 삭제 및 문장 단위 토큰화
+#### 목차 삭제 및 문장 단위 토큰화
 
 ```python
 import re # regular expression module
@@ -136,7 +136,7 @@ texts:List[str] = kss.split_sentences(texts)
 
 ~~챕터별로 나눌까?~~
 
-형태소 단위 토큰화
+#### 형태소 단위 토큰화
 ```python
 from typing import * # python type hint module
 import re # regular expression module
@@ -174,7 +174,7 @@ def tokenizer(module:object, texts:List[str]) -> Dict[Any, Any]:
   return res
 ```
 
-KoNLPy 형태소 분석 비교
+#### KoNLPy 형태소 분석 비교
 ```python
 from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization module
 from mecab import MeCab
@@ -228,7 +228,7 @@ mecab의 형태소 분석 결과 중 일부이다.
 -> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.  
 
 ### 2.5. 문서 벡터
-TF-IDF
+#### TF-IDF
 
 ```python
 import pandas as pd
@@ -253,7 +253,7 @@ tfidf_vocab = tfidf.vocabulary_
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-6.png?raw=true.png)
 
-차원 축소
+#### 차원 축소
 
 ```python
 from sklearn.manifold import TSNE
@@ -265,7 +265,7 @@ Z = tsne.fit_transform(tfidf_arr.T)
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-7.png?raw=true.png)
 
-시각화
+#### 시각화
 
 ```python
 plt.figure(figsize=(10,10))
