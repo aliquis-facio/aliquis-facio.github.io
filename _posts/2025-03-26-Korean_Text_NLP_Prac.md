@@ -106,7 +106,7 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
 ```
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-2.png?raw=true.png)
-![alt text](image.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-8.png?raw=true.png)
 
 ### 데이터 전처리하기
 ```python
@@ -120,7 +120,7 @@ texts:List[str] = kss.split_sentences(texts)
 ```
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-3.png?raw=true.png)
-![alt text](image-1.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-9.png?raw=true.png)
 
 ~~챕터별로 나눌까?~~
 
@@ -262,7 +262,7 @@ for i in range(len(tfidf_dict)):
 plt.draw()
 ```
 
-![alt text](image-2.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
 
 ```python
 
