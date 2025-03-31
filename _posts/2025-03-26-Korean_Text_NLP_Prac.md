@@ -272,7 +272,7 @@ plt.draw()
 - [] 등장인물 구분(NER) + 대화문에서의 다중 감정 분석
 
 # 참고
-## 1
+## Information
 * [KoBERT를 활용한 감정분류 모델 구현 with Colab](https://bbarry-lee.github.io/ai-tech/KoBERT%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%ED%98%84.html)
 * [감정분류(한국어)- 리뷰데이터 학습, 평가, 예측까지](https://wonhwa.tistory.com/35)
 * [텍스트 정보 추출 모델 (with. 개체명 인식(NER))](https://chocochip125.tistory.com/220)
@@ -285,8 +285,13 @@ plt.draw()
 * [TF-IDF를 통한 변수선택과 t-SNE를 활용한 시각화](https://donghwa-kim.github.io/TFIDF.html)
 * [시각화: t-SNE (t-Stochastic Neighbor Embedding)](https://velog.io/@pppanghyun/%EC%8B%9C%EA%B0%81%ED%99%94-t-SNE-t-Stochastic-Neighbor-Embedding)
 * [t-SNE란? (차원축소, 시각화)](https://jaylala.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-with-Python-t-SNE%EB%9E%80-%EC%B0%A8%EC%9B%90%EC%B6%95%EC%86%8C-%EC%8B%9C%EA%B0%81%ED%99%94)
+* [youtube: 2021 자연어 처리 - NER](https://www.youtube.com/watch?v=XETjf2CX4xU&list=PL7ZVZgsnLwEEoHQAElEPg7l7T6nt25I3N&index=14)
+* [속성기반 감정분석 데이터, AI HUB](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71603)
+* [Installing previous versions of PyTorch](https://pytorch.org/get-started/previous-versions/)
+* [python-mecab-ko: Dictionary](https://python-mecab-ko.readthedocs.io/en/stable/usage/dictionary/)
+* [python-mecab-ko: Custom Vocabulary](https://python-mecab-ko.readthedocs.io/en/stable/usage/custom-vocabulary/)
 
-## 2
+## Github
 * [git: KoBookNLP](https://github.com/storidient/KoBookNLP)
 * [git: KoBERT](https://github.com/SKTBrain/KoBERT)
 * [**git: KoBERT-Transformers**](https://github.com/monologg/KoBERT-Transformers)
@@ -299,10 +304,3 @@ plt.draw()
 * [git: A 사전 모델 학습: 한국어 감정 정보가 포함된 단발성 대화 데이터셋.py](https://github.com/backeung/KoBERT-multi-classification-model/blob/main/A%20%EC%82%AC%EC%A0%84%20%EB%AA%A8%EB%8D%B8%20%ED%95%99%EC%8A%B5%3A%20%ED%95%9C%EA%B5%AD%EC%96%B4%20%EA%B0%90%EC%A0%95%20%EC%A0%95%EB%B3%B4%EA%B0%80%20%ED%8F%AC%ED%95%A8%EB%90%9C%20%EB%8B%A8%EB%B0%9C%EC%84%B1%20%EB%8C%80%ED%99%94%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B.py)
 * [git: Fine tuning BERT](https://github.com/ukairia777/tensorflow-nlp-tutorial/tree/main/18.%20Fine-tuning%20BERT%20(Cls%2C%20NER%2C%20NLI))
 * [git: KorNLI and KorSTS](https://github.com/kakaobrain/kor-nlu-datasets)
-
-## 3
-* [youtube: 2021 자연어 처리 - NER](https://www.youtube.com/watch?v=XETjf2CX4xU&list=PL7ZVZgsnLwEEoHQAElEPg7l7T6nt25I3N&index=14)
-* [속성기반 감정분석 데이터, AI HUB](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71603)
-* [Installing previous versions of PyTorch](https://pytorch.org/get-started/previous-versions/)
-* [python-mecab-ko: Dictionary](https://python-mecab-ko.readthedocs.io/en/stable/usage/dictionary/)
-* [python-mecab-ko: Custom Vocabulary](https://python-mecab-ko.readthedocs.io/en/stable/usage/custom-vocabulary/)
