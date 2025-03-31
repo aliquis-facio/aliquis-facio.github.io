@@ -16,14 +16,25 @@ tags: [DATE SCIENCE, NLP, TIL]
 ---
 
 # 목차
+1. [활용 데이터셋 소개](#1-활용-데이터셋-소개)
+1. [환경설정 (Google Colab)](#2-환경설정-google-colab)
+  1. [환경설정 진행](#21-환경설정-진행)
+  1. [라이브러리 import](#22-라이브러리-import)
+  1. [해리포터 불러오기](#23-해리포터-불러오기)
+  1. [데이터 전처리하기](#24-데이터-전처리하기)
+  1. [문서 벡터](#25-문서-벡터)
+1. [차후 진행 과제](#3-차후-진행-과제)
+1. [참고](#참고)
 
 # 한글 텍스트 자연어 처리 실습 1
-## 활용 데이터셋 소개
+## 1. 활용 데이터셋 소개
 소설 「해리 포터」 시리즈
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-11.png?raw=true)
 
-## 환경설정 (Google Colab)
-### 환경설정 진행
+[Korean_Stopwords.txt](Korean_Stopwords.txt)
+
+## 2. 환경설정 (Google Colab)
+### 2.1. 환경설정 진행
 ```bash
 !pip install mecab-ko-dic
 !curl -s https://raw.githubusercontent.com/teddylee777/machine-learning/master/99-Misc/01-Colab/mecab-colab.sh | bash
@@ -32,7 +43,7 @@ tags: [DATE SCIENCE, NLP, TIL]
 !pip install kss # KSS: Korean String processing Suite
 ```
 
-### 라이브러리 import
+### 2.2. 라이브러리 import
 
 ```python
 # import module
@@ -68,7 +79,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 ```
 
-### 해리포터 불러오기
+### 2.3. 해리포터 불러오기
 
 ```python
 import os
@@ -108,7 +119,9 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-8.png?raw=true.png)
 
-### 데이터 전처리하기
+### 2.4. 데이터 전처리하기
+목차 삭제 및 문장 단위 토큰화
+
 ```python
 import re # regular expression module
 import kss # sentence tokenization module
@@ -123,6 +136,7 @@ texts:List[str] = kss.split_sentences(texts)
 
 ~~챕터별로 나눌까?~~
 
+형태소 단위 토큰화
 ```python
 from typing import * # python type hint module
 import re # regular expression module
@@ -213,6 +227,9 @@ mecab의 형태소 분석 결과 중 일부이다.
 -> 이름과 같은 고유 명사가 분리되어 있는 경우를 몇몇 발견했다. e.g. 프리벳가, 더즐리, 덤블도어, 해그리드, 그리핀도르 등  
 -> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.  
 
+### 2.5. 문서 벡터
+TF-IDF
+
 ```python
 import pandas as pd
 from collections import Counter
@@ -236,6 +253,8 @@ tfidf_vocab = tfidf.vocabulary_
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-6.png?raw=true.png)
 
+차원 축소
+
 ```python
 from sklearn.manifold import TSNE
 
@@ -245,6 +264,8 @@ Z = tsne.fit_transform(tfidf_arr.T)
 ```
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-7.png?raw=true.png)
+
+시각화
 
 ```python
 plt.figure(figsize=(10,10))
@@ -263,13 +284,17 @@ plt.draw()
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
 
-## 차후 진행 과제
+## 3. 차후 진행 과제
 - [] mecab user dictionary 추가
 - [] 등장인물 구분(NER)
 - [] 대화문과 서술문 구분
 - [] 대화문에서의 이진 감정 분석
 - [] 대화문에서의 다중 감정 분석
 - [] 등장인물 구분(NER) + 대화문에서의 다중 감정 분석
+
+## 4. 어려운 점
+* Google Colab에서 KoBERT 버전 호환성 맞추기
+* 등장인물 구분(NER)을 어떻게 진행해야 할 지
 
 # 참고
 ## Information
@@ -290,17 +315,32 @@ plt.draw()
 * [Installing previous versions of PyTorch](https://pytorch.org/get-started/previous-versions/)
 * [python-mecab-ko: Dictionary](https://python-mecab-ko.readthedocs.io/en/stable/usage/dictionary/)
 * [python-mecab-ko: Custom Vocabulary](https://python-mecab-ko.readthedocs.io/en/stable/usage/custom-vocabulary/)
+* [KoNLPy tag Package](https://konlpy.org/en/latest/api/konlpy.tag/)
+* [텍스트 전처리(Text preprocessing)](https://wikidocs.net/21694)
+* [정규표현식(Regular Expression) with 파이썬](https://jh2021.tistory.com/8)
+* [BERT를 이용한 한국어 개체명 인식(NER)](https://mvje.tistory.com/105)
+* [NER task for Naver NLP Challenge 2018 (3rd Place)](https://github.com/monologg/naver-nlp-challenge-2018?tab=readme-ov-file)
+* [plt 선, 바 그래프 위에 숫자, 값 표시하기](https://jimmy-ai.tistory.com/24)  
+* [형태소 분석기의 모호성 해소 성능을 평가해보자](https://bab2min.tistory.com/672)
+* [보편적으로 선택할 수 있는 한국어 불용어 리스트](https://www.ranks.nl/stopwords/korean)
+* [한글 품사 태깅에 대한 세 가지 접근 방법](https://inpubapp.tistory.com/20)
+* [한국어/영어 불용어 제거하기 + 한국어 불용어 리스트](https://mr-doosun.tistory.com/24)
+* [정수 인코딩(Integer Encoding)](https://mr-doosun.tistory.com/25)
+* [품사 태깅(Part-of-Speech Tagging)이란?](https://katenam32.tistory.com/43)
 
 ## Github
-* [git: KoBookNLP](https://github.com/storidient/KoBookNLP)
-* [git: KoBERT](https://github.com/SKTBrain/KoBERT)
-* [**git: KoBERT-Transformers**](https://github.com/monologg/KoBERT-Transformers)
-* [git: Korean NER based BERT+CRF](https://github.com/eagle705/pytorch-bert-crf-ner)
-* [git: 개체명 형태소 말뭉치](https://github.com/kmounlp/NER)
-* [git: NER Model Baseline for NSML](https://github.com/naver/nlp-challenge/tree/master/missions/ner)
-* [git: Naver Sentiment Movie Corpus v1.0](https://github.com/e9t/nsmc)
-* [git: KoSentenceBERT-SKT](https://github.com/BM-K/KoSentenceBERT-SKT)
-* [git: HiGRU - Hierarchical Gated Recurrent Units for Utterance-level Emotion Recognition](https://github.com/wxjiao/HiGRUs)
-* [git: A 사전 모델 학습: 한국어 감정 정보가 포함된 단발성 대화 데이터셋.py](https://github.com/backeung/KoBERT-multi-classification-model/blob/main/A%20%EC%82%AC%EC%A0%84%20%EB%AA%A8%EB%8D%B8%20%ED%95%99%EC%8A%B5%3A%20%ED%95%9C%EA%B5%AD%EC%96%B4%20%EA%B0%90%EC%A0%95%20%EC%A0%95%EB%B3%B4%EA%B0%80%20%ED%8F%AC%ED%95%A8%EB%90%9C%20%EB%8B%A8%EB%B0%9C%EC%84%B1%20%EB%8C%80%ED%99%94%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B.py)
-* [git: Fine tuning BERT](https://github.com/ukairia777/tensorflow-nlp-tutorial/tree/main/18.%20Fine-tuning%20BERT%20(Cls%2C%20NER%2C%20NLI))
-* [git: KorNLI and KorSTS](https://github.com/kakaobrain/kor-nlu-datasets)
+* [KoBookNLP](https://github.com/storidient/KoBookNLP)
+* [KoBERT](https://github.com/SKTBrain/KoBERT)
+* [**KoBERT-Transformers**](https://github.com/monologg/KoBERT-Transformers)
+* [Korean NER based BERT+CRF](https://github.com/eagle705/pytorch-bert-crf-ner)
+* [개체명 형태소 말뭉치](https://github.com/kmounlp/NER)
+* [NER Model Baseline for NSML](https://github.com/naver/nlp-challenge/tree/master/missions/ner)
+* [Naver Sentiment Movie Corpus v1.0](https://github.com/e9t/nsmc)
+* [KoSentenceBERT-SKT](https://github.com/BM-K/KoSentenceBERT-SKT)
+* [HiGRU - Hierarchical Gated Recurrent Units for Utterance-level Emotion Recognition](https://github.com/wxjiao/HiGRUs)
+* [A 사전 모델 학습: 한국어 감정 정보가 포함된 단발성 대화 데이터셋.py](https://github.com/backeung/KoBERT-multi-classification-model/blob/main/A%20%EC%82%AC%EC%A0%84%20%EB%AA%A8%EB%8D%B8%20%ED%95%99%EC%8A%B5%3A%20%ED%95%9C%EA%B5%AD%EC%96%B4%20%EA%B0%90%EC%A0%95%20%EC%A0%95%EB%B3%B4%EA%B0%80%20%ED%8F%AC%ED%95%A8%EB%90%9C%20%EB%8B%A8%EB%B0%9C%EC%84%B1%20%EB%8C%80%ED%99%94%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B.py)
+* [Fine tuning BERT](https://github.com/ukairia777/tensorflow-nlp-tutorial/tree/main/18.%20Fine-tuning%20BERT%20(Cls%2C%20NER%2C%20NLI))
+* [KorNLI and KorSTS](https://github.com/kakaobrain/kor-nlu-datasets)
+* [okt](https://github.com/open-korean-text/open-korean-text)
+* [mecab](https://github.com/LuminosoInsight/mecab-ko-dic)
+* [언어모델 기반 개체명 인식 기술을 활용한 119 신고 접수 도움 서비스](https://github.com/dimup/119NER)
