@@ -17,47 +17,49 @@ tags: [DATE SCIENCE, NLP, TIL]
 
 # 목차
 
-# 한글 텍스트 자연어 처리 실습(Korean NLP Practice)
-## 목표
-한글 소설 속 등장인물의 감정 변화를 분석하겠다.
+# 전체 코드
 
-수행과제
-NER
-감정 분석
-감정 변화 시각화
-
+# 한글 텍스트 자연어 처리 실습 1
 ## 활용 데이터셋 소개
+소설 <해리포터>
 
-## 환경 설정 (with. Google Colab)
-```
-!git clone https://bitbucket.org/eunjeon/mecab-python-0.996.git
-%cd ./mecab-python-0.996
-!python3 setup.py build
-!python3 setup.py install
-%cd /content
-
-!pip install mecab-python3
-# !pip install unidic-lite
+## 환경설정 (Google Colab)
+### 환경설정 진행
+```bash
 !pip install mecab-ko-dic
-!pip install konlpy
-!pip install konlp
-!pip install kss
+!curl -s https://raw.githubusercontent.com/teddylee777/machine-learning/master/99-Misc/01-Colab/mecab-colab.sh | bash
+
+!pip install konlpy # KoNLPy: Korean NLP in Python
+!pip install kss # KSS: Korean String processing Suite
 ```
+
+### 라이브러리 import
 
 ```python
 # import module
 
-from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization module
-from mecab import MeCab
-import mecab_ko_dic
-import kss # sentence tokenization module
 import re # regular expression module
 from IPython.display import display
 from typing import * # python type hint module
 from time import time
 from random import randint
 import os
+
+from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization module
+from mecab import MeCab
+import mecab_ko_dic
+import kss # sentence tokenization module
+import torch
+from torch import nn
+import torch.nn.functional as F
+import torch.optim as optim
+from torch.utils.data import Dataset, DataLoader
+# import gluonnlp as nlp
+import numpy as np
+from tqdm import tqdm, tqdm_notebook
 ```
+
+### 해리포터 불러오기
 
 ```python
 def file_search(file_path: str):
@@ -80,67 +82,163 @@ def file_search(file_path: str):
 
 ```python
 # Read Korean Text Data Set
-
 file_path:str = "/content"
-
 file_lst:List[str] = sorted(file_search(file_path))
-display(file_lst)
-
-with open(file_lst[0], "r", encoding='utf-8') as f:
-  texts:str = f.read()
-
-display(texts.split('\n')[:20])
 ```
-## 텍스트 전처리
-1. 문장 단위 토큰화
-1. 토큰화: 텍스트를 단어, 문장, 구와 같은 더 작은 단위로 나눈다.
-1. 불용어 제거: 'is' 또는 'the'같이 자주 사용되지만 텍스트에 큰 의미를 더하지 않는 단어를 필터링하여 제거한다.
-1. 형태소 분석: '달리기'를 '달리다'로 바꾸는 것처럼 단어를 어근 형태로 줄이고 동일한 단어의 다양한 형태를 그룹화하여 언어를 더 쉽게 분석할 수 있게 만든다.
-1. 정규표현: 구두점, 특수 문자, 숫자 등 분석을 복잡하게 만들 수 있는 원치 않는 요소를 제거한다.
 
-## 특징 추출
-Bag of Words
-TF-IDF
-워드 임베딩: **Word2Vec**, GloVe
-문장 임베딩: BERT, GPT
+```python
+display(file_lst)
+```
 
-Deep Transformer
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-1.png?raw=true)
 
-Tag Decoder Architectures
-conditional random fields
+우선 해리포터 1권, <해리 포터와 마법사의 돌>로 시작하겠습니다.
+```python
+with open(file_lst[0], "r", encoding='utf-8') as f:
+  texts = f.read()
+```
 
-## 텍스트 분석
-* 품사(POS) 태깅: 단어의 문법적 역할을 식별한다.
-* 명명된 엔티티 인식(NER): 이름, 위치, 날짜 등의 특정 엔티티를 감지한다.
-* 종속성 구문 분석: 단어 간의 문법적 관계를 분석하여 문장 구조를 이해한다.
-* 감정 분석: 텍스트의 감정적 어조를 결정하고 텍스트가 긍정적, 부정적 또는 중립적인지 평가한다.
-* 주제 모델링: 텍스트 내에서 또는 문서 말뭉치 전체에서 기본 테마 또는 주제를 식별한다.
-* 자연어 이해(NLU): 문장의 숨겨진 의미를 분석, NLU를 사용하여 다른 문장에서 유사한 의미를 찾거나 다른 의미를 가진 단어를 처리할 수 있다.
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-2.png?raw=true.png)
 
-## 모델 학습
+### 데이터 전처리하기
+```python
+texts = re.sub(r'제\s*\d+\s*장\s*[^\n]*\n?', '', texts)  # '제1장 버려진 아이' 같은 목차 삭제
+texts:List[str] = kss.split_sentences(texts) # korean sentence tokenization
+```
 
-## 평가
-Precision(정밀도) = TP / (TP + FP)
-특정 Entity라고 예측한 경우 중에서 실제 특정 Entity로 판명되어 예측이 일치한 비율
-Recall(재현률) = TP / (TP + FN)
-전체 특정 Entity 중에서 실제 특정 Entity라고 정답을 맞춘 비율
-F-score = Presision * Recall / (Precision + Recall)
-정밀도와 재현률로부터 조화 평균을 구한 것
-![alt text](image.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-3.png?raw=true.png)
+
+~~챕터별로 나눌까?~~
+
+```python
+def tokenizer(module:object, texts:List[str]) -> Dict[Any, Any]:
+  tokens:List[str] = [] # 형태소 단위 token
+  tokenized_texts:List[str] = []
+  max_seq_length:int = 0
+  exec_time:float = 0
+
+  start_time:float = time()
+  for text in texts:
+    tokenized_text:List[str] = module.morphs(text) # 형태소 단위 token 추출
+
+    for token in tokenized_text:
+      if token.strip() and not re.match(r'[^a-zA-Z0-9가-힣\s]', token.strip()): # 공백 문자, 특수 문자로만 구성된 token은 제거
+        tokens.append(token)
+
+    max_seq_length = max(max_seq_length, len(tokenized_text)) # sequence(형태소 단위로 구분된 문장) 최대 길이
+    # sequence: 순서가 있는 항목의 모음, 순차 데이터
+    tokenized_text:str = " ".join(tokenized_text)
+    tokenized_texts.append(tokenized_text)
+  end_time:float = time()
+
+  exec_time = end_time - start_time
+
+  res:Dict = {'tokens': tokens,
+              'tokenized_texts': tokenized_texts,
+              'max_seq_length': max_seq_length,
+              'exec_time': exec_time}
+
+  return res
+```
+
+KoNLPy 형태소 분석 비교
+```python
+okt = Okt()
+tokenizer(okt, texts)
+
+kkma = Kkma()
+tokenizer(kkma, texts)
+
+mecab = MeCab()
+tokenizer(mecab, texts)
+
+komoran = Komoran()
+tokenizer(komoran, texts)
+
+hannanum = Hannanum()
+tokenizer(hannanum, texts)
+```
+
+```python
+import matplotlib.pyplot as plt
+# 각 KoNLPy의 형태소 분석 시간 분석 -> chart
+
+exec_tool:List[str] = ['okt', 'kkma', 'mecab', 'komoran', 'hannanum']
+exec_time_lst:List[float] = [okt_res['exec_time'], kkma_res['exec_time'],
+                             mecab_res['exec_time'], komoran_res['exec_time'],
+                             hannanum_res['exec_time'],]
+bar_colors = ['red', 'orange', 'yellow', 'green', 'blue']
+
+fig, ax = plt.subplots()
+bar = ax.bar(exec_tool, exec_time_lst, color=bar_colors)
+
+for rect in bar:
+  height = rect.get_height()
+  plt.text(rect.get_x() + rect.get_width()/2, height, f'%0.1f'%height, ha='center', va='bottom', size=12)
+
+ax.set_ylabel('time(sec)')
+ax.set_title('execution time')
+
+plt.show()
+```
+
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-4.png?raw=true.png)
+-> mecab의 속도가 압도적으로 빠르다
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+```python
+
+```
+
+## 
 
 # 참고
+## 1
 * [KoBERT를 활용한 감정분류 모델 구현 with Colab](https://bbarry-lee.github.io/ai-tech/KoBERT%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%ED%98%84.html)
 * [감정분류(한국어)- 리뷰데이터 학습, 평가, 예측까지](https://wonhwa.tistory.com/35)
 * [텍스트 정보 추출 모델 (with. 개체명 인식(NER))](https://chocochip125.tistory.com/220)
+* [파이썬 KoBERT 패키지 설치 및 onnxruntime 설치오류](https://hufs4programming.tistory.com/56)
+* [session Crashing: while installing python version 3.7 and transformers version 4.6.0 in Google Colab](https://stackoverflow.com/questions/78422944/session-crashing-while-installing-python-version-3-7-and-transformers-version-4)
+* [KoNLPY - okt 사용자 사전 편집 방법](https://brtech.tistory.com/151)
+* [자연어 분석의 4단계 및 기계학습에의 적용 방식](https://marketingscribbler.tistory.com/4#2._%EA%B5%AC%EB%AC%B8_%EB%B6%84%EC%84%9D_(Syntax_Analysis))
+* [[Python, KoBERT] 7가지 감정의 다중감성분류모델 구현하기](https://velog.io/@fhflwhwl5/Python-KoBERT-7%EA%B0%80%EC%A7%80-%EA%B0%90%EC%A0%95%EC%9D%98-%EB%8B%A4%EC%A4%91%EA%B0%90%EC%84%B1%EB%B6%84%EB%A5%98%EB%AA%A8%EB%8D%B8-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
+* [형태소 분석기 정리, 사용자 사전 추가 feat. Pororo, Okt, Mecab, Soynlp, Kiwi](https://hipster4020.tistory.com/184)
+* [TF-IDF를 통한 변수선택과 t-SNE를 활용한 시각화](https://donghwa-kim.github.io/TFIDF.html)
+* [시각화: t-SNE (t-Stochastic Neighbor Embedding)](https://velog.io/@pppanghyun/%EC%8B%9C%EA%B0%81%ED%99%94-t-SNE-t-Stochastic-Neighbor-Embedding)
+* [t-SNE란? (차원축소, 시각화)](https://jaylala.tistory.com/entry/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-with-Python-t-SNE%EB%9E%80-%EC%B0%A8%EC%9B%90%EC%B6%95%EC%86%8C-%EC%8B%9C%EA%B0%81%ED%99%94)
 
+## 2
 * [git: KoBookNLP](https://github.com/storidient/KoBookNLP)
 * [git: KoBERT](https://github.com/SKTBrain/KoBERT)
+* [**git: KoBERT-Transformers**](https://github.com/monologg/KoBERT-Transformers)
 * [git: Korean NER based BERT+CRF](https://github.com/eagle705/pytorch-bert-crf-ner)
 * [git: 개체명 형태소 말뭉치](https://github.com/kmounlp/NER)
 * [git: NER Model Baseline for NSML](https://github.com/naver/nlp-challenge/tree/master/missions/ner)
 * [git: Naver Sentiment Movie Corpus v1.0](https://github.com/e9t/nsmc)
 * [git: KoSentenceBERT-SKT](https://github.com/BM-K/KoSentenceBERT-SKT)
+* [git: HiGRU - Hierarchical Gated Recurrent Units for Utterance-level Emotion Recognition](https://github.com/wxjiao/HiGRUs)
+* [git: A 사전 모델 학습: 한국어 감정 정보가 포함된 단발성 대화 데이터셋.py](https://github.com/backeung/KoBERT-multi-classification-model/blob/main/A%20%EC%82%AC%EC%A0%84%20%EB%AA%A8%EB%8D%B8%20%ED%95%99%EC%8A%B5%3A%20%ED%95%9C%EA%B5%AD%EC%96%B4%20%EA%B0%90%EC%A0%95%20%EC%A0%95%EB%B3%B4%EA%B0%80%20%ED%8F%AC%ED%95%A8%EB%90%9C%20%EB%8B%A8%EB%B0%9C%EC%84%B1%20%EB%8C%80%ED%99%94%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%85%8B.py)
+* [git: Fine tuning BERT](https://github.com/ukairia777/tensorflow-nlp-tutorial/tree/main/18.%20Fine-tuning%20BERT%20(Cls%2C%20NER%2C%20NLI))
+* [git: KorNLI and KorSTS](https://github.com/kakaobrain/kor-nlu-datasets)
 
+## 3
 * [youtube: 2021 자연어 처리 - NER](https://www.youtube.com/watch?v=XETjf2CX4xU&list=PL7ZVZgsnLwEEoHQAElEPg7l7T6nt25I3N&index=14)
-
 * [속성기반 감정분석 데이터, AI HUB](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71603)
+* [Installing previous versions of PyTorch](https://pytorch.org/get-started/previous-versions/)
+* [python-mecab-ko: Dictionary](https://python-mecab-ko.readthedocs.io/en/stable/usage/dictionary/)
+* [python-mecab-ko: Custom Vocabulary](https://python-mecab-ko.readthedocs.io/en/stable/usage/custom-vocabulary/)
