@@ -8,7 +8,7 @@ sitemap:
 title: "[NETWORK] Protocol이란?"
 excerpt: "Protocol의 의미와 인터넷 모델"
 
-date: 2025-04-03
+date: 2025-04-02
 last_modified_at: 
 
 categories: [NETWORK]
