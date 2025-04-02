@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+published: true
 sitemap:
     changefreq:
     priority:
@@ -67,7 +68,7 @@ L1. 물리계층: 전기적, 기계적 연결 정의, 실제 Data bit 전송. Bi
             <td></td> -->
         </tr>
         <tr>
-            <td></td>
+            <td>Session</td>
             <!-- <td></td>
             <td></td> -->
         </tr>
