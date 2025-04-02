@@ -5,7 +5,7 @@ sitemap:
     changefreq:
     priority:
 
-title: "[COMPUTER NETWORK] Data Communications란?"
+title: "[NETWORK] Data Communications란?"
 excerpt: "Data Communication 의미, 특징과 요소"
 
 date: 2025-03-05

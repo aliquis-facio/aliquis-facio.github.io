@@ -5,11 +5,11 @@ sitemap:
     changefreq:
     priority:
 
-title: "[COMPUTER NETWORK] Protocol이란?"
-excerpt: "Protocol"
+title: "[NETWORK] Data Communications2란?"
+excerpt: "Data Communication 의미, 특징과 요소"
 
-date: 2025-04-03
-last_modified_at: 
+date: 2025-03-05
+last_modified_at: 2025-03-28
 
 categories: [NETWORK]
 tags: [COMPUTER NETWORK, NETWORK, TIL]
