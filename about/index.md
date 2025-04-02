@@ -28,3 +28,4 @@ I just want all this writing to make me better.
 1. 특정 장소 리뷰 연관성 분석 요약
 1. Ankidroid 카드 자동 추가 & 웹 서버 공유
 1. 특정 장소 자동 GSheet 추가
+1. 
