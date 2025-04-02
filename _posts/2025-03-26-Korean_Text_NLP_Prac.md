@@ -325,6 +325,8 @@ plt.draw()
 * [한국어/영어 불용어 제거하기 + 한국어 불용어 리스트](https://mr-doosun.tistory.com/24)
 * [정수 인코딩(Integer Encoding)](https://mr-doosun.tistory.com/25)
 * [품사 태깅(Part-of-Speech Tagging)이란?](https://katenam32.tistory.com/43)
+* [t-SNE 이란?](https://devhwi.tistory.com/20)
+* [t-SNE 개념과 사용법](https://gaussian37.github.io/ml-concept-t_sne/)
 
 ## Github
 * [KoBookNLP](https://github.com/storidient/KoBookNLP)

@@ -25,12 +25,10 @@ DBS: 기업 혹은 조직이 DBMS를 사용해 개발한 응용 프로그램을 
 데이터 스키마(Data Schema), 데이터 언어(Data Language), 사용자(User), 데이터베이스 관리시스템(DBMS), 데이터베이스 관리자(DBA)로 구성되어 있다.
 
 ### 2.1. 데이터 스키마(Data Schema)
-스키마(Schema): 데이터베이스의 구조(테이블의 포맷)와 제약조건의 명세한다.
+<b>스키마(Schema)</b>: 데이터베이스의 구조(테이블의 포맷)와 제약조건의 명세를 <abbr title="기록하여 서술하다">기술</abbr>한 것이다.
+e.g. <abbr title="개체의 특성">속성(Attribute)</abbr>, <abbr title="속성들의 집합">개체(Entity)</abbr>, <abbr title="개체 사이에 존재하는">관계(Relation)</abbr>, <abbr title="속성, 개체, 관계가 유지해야 하는">제약조건</abbr>
 
-데이터 스키마의 종류 - 3단계 스키마
-* 개념 스키마(Conceptual -)
-* 외부 스키마(External -)
-* 내부 스키마(Internal -)
+스키마는 사용자의 관점에 따라 **개념(Conceptual)**, **외부(External)**, **내부(Internal)** 스키마로 구분된다.
 
 개념 스키마
 : 기관 전체의 데이터베이스 정의한다.
@@ -160,3 +158,6 @@ DBA의 업무
 행정 및 불평 해결
     데이터의 표현과 시스템의 문서화에 있어서 표준 설정
     사용자의 요구 및 불평 해결
+
+# 참고
+* [스키마란? (개념스키마, 내부스키마, 외부스키마)](https://jwprogramming.tistory.com/47)
