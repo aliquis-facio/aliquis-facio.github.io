@@ -16,37 +16,37 @@ tags: [NETWORK]
 ---
 
 # 목차
-1. [회선 교환 및 패킷 교환](#3-회선-교환-및-패킷-교환)
-    1. [회선 교환](#31-회선-교환circuit-switching)
-        1. [개념](#311-개념)
-        1. [특징](#312-특징)
-        1. [장단점](#313-장단점)
-    1. [패킷 교환](#32-패킷-교환packet-switching)
-        1. [개념](#321-개념)
-        1. [특징](#322-특징)
-        1. [장단점](#323-장단점)
-    1. [데이터그램과 가상회선](#33-데이터그램과-가상회선)
-        1. [동작 원리](#331-동작-원리)
-        1. [차이점](#332-차이점)
-    1. [메시지 교환](#34-메시지-교환message-switching)
-        1. [개념](#341-개념)
-        1. [방식](#342-방식)
+1. [회선 교환](#1-회선-교환circuit-switching)
+    1. [개념](#11-개념)
+    1. [특징](#12-특징)
+    1. [장단점](#13-장단점)
+1. [패킷 교환](#2-패킷-교환packet-switching)
+    1. [개념](#21-개념)
+    1. [특징](#22-특징)
+    1. [장단점](#23-장단점)
+1. [데이터그램과 가상회선](#3-데이터그램과-가상회선)
+    1. [동작 원리](#31-동작-원리)
+    1. [차이점](#32-차이점)
+1. [메시지 교환](#4-메시지-교환message-switching)
+    1. [개념](#41-개념)
+    1. [방식](#42-방식)
+1. [참고](#참고)
 
-# 3. 회선 교환 및 패킷 교환
-## 3.1. 회선 교환(Circuit Switching)
-### 3.1.1. 개념
-회선 교환은 <a href="https://ko.wikipedia.org/wiki/%EC%A0%90%EB%8C%80%EC%A0%90_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C">Point to Point</a> 방식으로 연결(Connection)을 확립하고 안정적으로 통신할 수 있는 방법이다.  
+# 회선 교환 및 패킷 교환
+## 1. 회선 교환(Circuit Switching)
+### 1.1. 개념
+**회선 교환**: Point to Point 방식으로 연결(Connection)을 확립하고 안정적으로 통신할 수 있는 방법이다.  
 연결이 이뤄진다 = 선로를 독점해 사용한다 -> 자원을 많이 사용 & 다중 통신이 어려움.
-* QoS(Quality of Service): 네트워크 품질 평가 지표. QoS가 가장 우수한 네트워크 = 회선 교환.
+* **QoS(Quality of Service)**: 네트워크 품질 평가 지표. QoS가 가장 우수한 네트워크 = 회선 교환.
 
-### 3.1.2. 특징
+### 1.2. 특징
 * 교환기를 통해 통신 회선을 설정해 직접 데이터를 교환하는 방식임.
 * 직접 교환 방식으로 음성 전화 시스템에 활용함.
 * 송신자의 메시지는 같은 경로로 전송됨.
 * 실시간 처리 가능 & 안정적 통신 가능.
 * Point to Point 방식 사용.
 
-### 3.1.3. 장단점
+### 1.3. 장단점
 <table>
     <thead>
         <tr>
@@ -58,7 +58,7 @@ tags: [NETWORK]
         <tr>
             <td>장점</td>
             <td>1. 대용량의 데이터를 고속 전송 시 좋음.<br>
-            2. 고정적인 <a href="https://velog.io/@ragnarok_code/%EB%8C%80%EC%97%AD%ED%8F%AD-bandwidth%EB%9E%80">대역폭(Bandwidth)</a>을 사용함.<br>
+            2. 고정적인 대역폭(Bandwidth)을 사용함.<br>
             3. 접속에는 긴 시간이 소요되나, 접속 이후에는 접속이 항상 유지되어 전송 지연이 없으며, 데이터 전송률이 일정함.<br>
             4. 아날로그나 디지털 데이터로 직접 전달함.<br>
             5. 연속적인 전송에 적합함.</td>
@@ -74,16 +74,16 @@ tags: [NETWORK]
     </tbody>
 </table>
 
-## 3.2. 패킷 교환(Packet Switching)
-### 3.2.1. 개념
-* 패킷 교환은 송신 측에서 <span style="color: #FF8869;">모든 메시지를 일정한 크기의 <a href="https://namu.wiki/w/%ED%8C%A8%ED%82%B7">패킷</a>으로 분해해서 전송</span>하고, 수신 측에서 이를 원래의 메시지로 조립하는 것임.
+## 2. 패킷 교환(Packet Switching)
+### 2.1. 개념
+* 패킷 교환은 송신 측에서 <span style="color: #FF8869;">모든 메시지를 일정한 크기의 패킷으로 분해해서 전송</span>하고, 수신 측에서 이를 원래의 메시지로 조립하는 것임.
 * IP(Internet Protocol) 주소가 붙은 패킷을 데이터그램(Datagram)이라 함.
 * 라우터(Router): 데이터를 최적의 전송 경로를 결정하는 장비
 * 패킷 교환망(Packet Switching Network): 송신자가 전송할 테이터를 일정한 크기의 패킷(Packet)이라는 길이로 분류해 데이터를 전송하면, 수신 측은 전송된 패킷을 다시 조립해 원래 메시지를 만듦.
 * 패킷 교환은 전송 패킷에 대해 우선 순위가 같은 것을 표시해 중요한 패킷을 식별 가능하게 함.
 * 패킷 교환 네트워크는 공중 교환 데이터망(Public Switched Data Network)에서 사용됨.
 
-### 3.2.2. 특징
+### 2.2. 특징
 <table>
     <thead>
         <tr>
@@ -119,7 +119,7 @@ tags: [NETWORK]
     </tbody>
 </table>
 
-### 3.2.3. 장단점
+### 2.3. 장단점
 <table>
     <thead>
         <tr>
@@ -145,13 +145,13 @@ tags: [NETWORK]
     </tbody>
 </table>
 
-## 3.3. 데이터그램과 가상회선
-### 3.3.1. 동작 원리
+## 3. 데이터그램과 가상회선
+### 3.1. 동작 원리
 데이터그램(Datagram) 네트워크: 패킷 교환 방식으로 동작하면서 IP 주소를 사용하는 인터넷을 의미함.
 가상회선: 회선 교환 방식과 데이터그램 방식의 장점을 결합한 통신 기술. 처음 패킷으로 최적의 경로를 고정하고 경로가 고정하면 그 다음은 패킷으로 나누어 고속으로 전송하는 기술임.
-* EX) <a href="https://ko.wikipedia.org/wiki/%EB%B9%84%EB%8F%99%EA%B8%B0_%EC%A0%84%EC%86%A1_%EB%B0%A9%EC%8B%9D">ATM(Asynchronous Transfer Mode)</a>
+* e.g. ATM(Asynchronous Transfer Mode)
 
-### 3.3.2. 차이점
+### 3.2. 차이점
 <table>
     <thead>
         <tr>
@@ -183,13 +183,13 @@ tags: [NETWORK]
     </tbody>
 </table>
 
-## 3.4. 메시지 교환(Message Switching)
-### 3.4.1. 개념
-* 메시지 교환망(Message Switching Network): 송신된 메시지를 중앙에서 축적해 처리하는 방법 = <span style="color: #FF8869;">[축적 교환 방식](#footnote_1)<sup>1</sup></span>
+## 4. 메시지 교환(Message Switching)
+### 4.1. 개념
+* 메시지 교환망(Message Switching Network): 송신된 메시지를 중앙에서 축적해 처리하는 방법 = <span style="color: #FF8869;"><abbr title="송신자가 메시지를 전송하면 전송한 메시지를 일정한 단위로 나누어서 버퍼(Buffer)에 저장한 후에 저장이 완료되면 다시 그것을 읽어들여서 전송 경로를 결정하는 전송">축적 교환 방식</abbr></span>
 * 메시지를 메모리에 저장하고 여러 수신자에게 데이터를 전송 가능.
 * 전자우편에서 사용함.
 
-### 3.4.2. 방식
+### 4.2. 방식
 1. 메시지를 공유해 데이터 전송 가능.
 2. 메시지 별로 우선순위 부여함.
 3. 에러 제어 제공함.
@@ -198,4 +198,8 @@ tags: [NETWORK]
 
 ***
 
-<a name="footnote_1">[1]</a> 축적 교환: 송신자가 메시지를 전송하면 <span style="color: #FF8869;">전송한 메시지를 일정한 단위로 나누어서 버퍼(Buffer)에 저장</span>한 후에 저장이 완료되면 다시 그것을 읽어들여서 전송 경로를 결정하는 전송을 의미함.
+# 참고
+* [wikipedia: point-to-point](https://ko.wikipedia.org/wiki/%EC%A0%90%EB%8C%80%EC%A0%90_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)
+* [대역폭, bandwidth란 ?](https://velog.io/@ragnarok_code/%EB%8C%80%EC%97%AD%ED%8F%AD-bandwidth%EB%9E%80)
+* [나무위키: 패킷](https://namu.wiki/w/%ED%8C%A8%ED%82%B7)
+* [wikimedia: atm](https://ko.wikipedia.org/wiki/%EB%B9%84%EB%8F%99%EA%B8%B0_%EC%A0%84%EC%86%A1_%EB%B0%A9%EC%8B%9D)
