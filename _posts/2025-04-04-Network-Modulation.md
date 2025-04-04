@@ -25,6 +25,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 부호화(Encoding): 신호를 현재 정보나 신호가 아닌 다른 형태로 변환하는 것이다.
 
 * 변조 방식
+
+```mermaid
 flowchart TB
 subgraph "디지털"
 디지털 데이터 --> 아날로그 부호화
@@ -34,7 +36,14 @@ subgraph "아날로그"
 아날로그 데이터 --> 아날로그 부호화
 아날로그 데이터 --> 디지털 부호화
 end
+```
 
+## 디지털 변조
+디지털 변조: 디지털 신호를 아날로그 신호로 변조하는 것으로 진폭 편이 변조(ASK: Amplitude Shift Keying), 주파수 편이 변조(FSK: Frequency Shift Keying), 위상 편이 변조(PSK: Phase Shift Keying) 등이 있다.
+
+### 진폭 편이 변조(ASK, Amplitude Shift Keying)
+
+### 아날로그 변조
 # 참고
 
 <script>
