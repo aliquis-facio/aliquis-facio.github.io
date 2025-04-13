@@ -282,8 +282,31 @@ plt.draw()
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
 
-## 3. 차후 진행 과제
-- [ ] mecab user dictionary 추가
+## 3. 진행 과제
+- [x] 전처리(Text Preprocessing)
+    - [x] 해리포터 1 ~ 9권 합본
+    - [x] 문장 구분
+    - [x] 띄어쓰기
+    - ~~[ ] 문법 검사~~
+    - [x] 정규표현식(Regular Expression)
+- [x] 형태소 분석
+    - [x] 형태소 분석기 비교
+    - [x] Word Segmentation(단어 분리)
+    - [x] Morphological Analysis(형태소 분석)
+    - [x] PoS Tagging(품사 태깅)
+- [ ] Word Embedding
+    - [ ] FastText VS Word2Vec
+- [ ] 구문 분석
+    - [ ] Phrase Chunking(문장 구분)
+    - [ ] Dependency Parsing(구문 분석)
+- [ ] 의미 분석
+    - [ ] WSD, Word Sense Disambiguation
+    - [ ] SRL, Semantic Role Labeling
+    - [ ] Semantic Parsing
+    - [ ] Textual Entailment
+- [ ] 화용 분석
+    - [ ] Co-reference/Anaphora Resolution(대명사 지시 대상)
+    - [ ] Ellipsis Resolution
 - [ ] 등장인물 구분(NER)
 - [ ] 대화문과 서술문 구분
 - [ ] 대화문에서의 이진 감정 분석
@@ -327,6 +350,14 @@ plt.draw()
 * [품사 태깅(Part-of-Speech Tagging)이란?](https://katenam32.tistory.com/43)
 * [t-SNE 이란?](https://devhwi.tistory.com/20)
 * [t-SNE 개념과 사용법](https://gaussian37.github.io/ml-concept-t_sne/)
+* [Module kiwipiepy](https://bab2min.github.io/kiwipiepy/v0.8.0/kr/)
+* [[NLP] 자연어처리 - 한국어 전처리를 위한 기법들](https://ebbnflow.tistory.com/246)
+* [한국어 위키피디아로 Word2Vec 학습하기](https://wikidocs.net/152606)
+* [나무위키: 해리포터 등장인물](https://namu.wiki/w/%EC%9C%84%EC%A0%80%EB%94%A9%20%EC%9B%94%EB%93%9C/%EB%93%B1%EC%9E%A5%EC%9D%B8%EB%AC%BC)
+* [품사표 (PoS Table)](https://docs.komoran.kr/firststep/postypes.html)
+* [전이학습(Transfer learning)과 파인튜닝(Fine tuning)](https://hi-ai0913.tistory.com/32)
+* [](https://hoit1302.tistory.com/159)
+* [](https://nowolver.tistory.com/13)
 
 ## Github
 * [KoBookNLP](https://github.com/storidient/KoBookNLP)
