@@ -24,7 +24,7 @@ tags: [OS, TIL]
     1. [디자인 목표](#2-디자인-목표)
 
 # 운영체제(OS, Operating System)란?
-운영체제(OS, Operating System)는 컴퓨터 시스템의 핵심 소프트웨어로, 컴퓨터 하드웨어와 응용 프로그램 간의 상호작용을 관리하고 제어하는 역할을 한다.
+**운영체제(OS, Operating System)**: 컴퓨터 시스템의 핵심 소프트웨어로, <mark>컴퓨터 하드웨어와 응용 프로그램 간의 상호작용을 관리하고 제어하는 역할</mark>을 한다.
 
 1. 프로그램들이 쉽게 동작하도록 한다
 1. 프로그램들이 메모리를 공유할 수 있도록 한다
@@ -33,7 +33,7 @@ tags: [OS, TIL]
 -> OS는 시스템이 사용하기 쉬운 방식으로 정확하고 효율적이게 동작하게 만드는 역할을 담당한다.
 
 ## 1. 운영체제 동작 방식
-폰 노이만의 컴퓨터 모델을 따르면 OS가 동작하는 것을 3가지로 나누고 있다. 가상화, 동시성, 영속성 이렇게 3가지이다.
+폰 노이만의 컴퓨터 모델을 따르면 OS가 동작하는 것을 3가지로 나누고 있다. <mark>가상화</mark>, <mark>동시성</mark>, <mark>영속성</mark> 이렇게 3가지이다.
 
 ### 1.1. 가상화(Virtualization)
 OS는 물리적 자원(e.g. 프로세서, 메모리, 디스크 등)을 사용한다. 그리고 좀 더 일반적이고 강력하고 가상화 형태로 사용하기 쉽게 변환한다. 그래서 우리는 운영체제를 가상머신이라 부르기도 한다.
@@ -90,7 +90,7 @@ A
 ...
 ```
 
--> CPU 가상화: CPU가 물리적으로는 적은 수로 구성되어 있지만, 가상화를 통해 시스템이 많은 수의 가상 CPU를 가진 것처럼(여러 프로그램이 한 번에 실행되는 것처럼) 보이게 한다.
+-> **CPU 가상화**: CPU가 물리적으로는 적은 수로 구성되어 있지만, 가상화를 통해 시스템이 많은 수의 가상 CPU를 가진 것처럼(여러 프로그램이 한 번에 실행되는 것처럼) 보이게 한다.
 
 #### 예제 코드: Memory Virtualization
 ```c
@@ -136,7 +136,7 @@ prompt> ./mem & ./mem &
 ...
 ```
 
-각각의 프로세스는 자기 자신의 독립된 가상 주소 공간(메모리 가상화)에 접근한다.
+<mark>각각의 프로세스는 자기 자신의 독립된 가상 주소 공간(메모리 가상화)에 접근한다.</mark>
 OS는 주소 공간을 물리적인 메모리에 연결한다.
 메모리는 프로그램이 동작하는 동안에 참조하는 것은 또 다른 프로세스의 주소 공간에 영향을 미치지 않는다.
 물리적인 메모리는 OS에 의해 관리되는 공유된 자원이다.
@@ -178,19 +178,19 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-ptherad: POSIX thread, 유닉스 계열 POSIX 시스템에서 병렬적으로 작동하는 소프트웨어를 작동하기 위해 제공하는 API
+**ptherad**: POSIX thread, 유닉스 계열 POSIX 시스템에서 병렬적으로 작동하는 소프트웨어를 작동하기 위해 제공하는 API
   
-pthread_create(): thread를 생성하는 함수이다.  
-`int pthread_create(pthread_t*thread, const pthread_attr_t*attr, void*(*start_routine)(void *), void *arg);`
-: * pthread_t*thread: 스레드 식별자이다. 생성된 스레드를 구별하기 위한 id
-: * const pthread_attr_t*attr: 스레드 특성을 지정한다. 보통은 NULL을 입력한다.
-: * void*(*start_routine)(void *): thread가 실행되었을 때 시작할 스레드 함수이름이다.
-: * void *arg: 스레드가 분기할 함수에 보낼 입력 파라미터이다.
+`pthread_create()`: thread를 생성하는 함수이다.  
+`int pthread_create(pthread_t*thread, const pthread_attr_t*attr, void*(*start_routine)(void *), void *arg);`  
+* pthread_t*thread: 스레드 식별자이다. 생성된 스레드를 구별하기 위한 id
+* const pthread_attr_t*attr: 스레드 특성을 지정한다. 보통은 NULL을 입력한다.
+* void*(*start_routine)(void *): thread가 실행되었을 때 시작할 스레드 함수이름이다.
+* void *arg: 스레드가 분기할 함수에 보낼 입력 파라미터이다.
   
-pthread_join(): main을 도는 스레드가 자신이 분기시킨 스레드들이 종료되기를 기다리는 함수이다.  
-`int pthread_join(pthread_t th, void **thread_return);`
-: * pthread_t th: 스레드의 식별자이다. pthread_create의 pthread_t*thread와 동일하다.
-: * void **thread_return: 리턴값이다.
+`pthread_join()`: main을 도는 스레드가 자신이 분기시킨 스레드들이 종료되기를 기다리는 함수이다.  
+`int pthread_join(pthread_t th, void **thread_return);`  
+* pthread_t th: 스레드의 식별자이다. pthread_create의 pthread_t*thread와 동일하다.
+* void **thread_return: 리턴값이다.
 
 Execution Stack
 
@@ -220,8 +220,8 @@ Final value : 137298
 ### 1.3. 영속성(Persistence)
 DRAM과 같은 장치는 휘발성 값을 저장한다.  
 하드웨어와 소프트웨어는 데이터를 영구적으로 저장하는 것이 필요하다.
-    * 하드웨어: 하드 드라이브, SSD와 같은 입출력 장치  
-    * 소프트웨어: 파일 시스템은 디스크를 관리한다. 또한, 유저가 만든 어떤 파일들을 저장하는 것을 책임진다.
+* **하드웨어**: 하드 드라이브, SSD와 같은 입출력 장치  
+* **소프트웨어**: 파일 시스템은 디스크를 관리한다. 또한, 유저가 만든 어떤 파일들을 저장하는 것을 책임진다.
 
 #### 예제 코드
 ```c
@@ -240,10 +240,10 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
-open(): 파일을 열거나 생성 후 열어준다.  
+`open()`: 파일을 열거나 생성 후 열어준다.  
 `int open(const char *filepath, int flag, mode_t mode);`  
-: const char *filepath: 열고자 하는 파일의 경로
-: int flag: 파일 열 때 사용할 옵션  
+* const char *filepath: 열고자 하는 파일의 경로
+* int flag: 파일 열 때 사용할 옵션  
     * O_RDONLY : 읽기 모드 (Read Only)  
     * O_WRONLY : 쓰기 모드 (Write Only) - 읽지 않고 쓰기만 하는 경우는 크게 많지 않음  
     * O_RDWR : 읽기/쓰기 모드  
@@ -251,7 +251,7 @@ open(): 파일을 열거나 생성 후 열어준다.
     * O_APPEND : 파일을 쓰되 기존 파일의 맨 끝부터 이어 쓰는 기능  
     * O_TRUNC : 파일을 초기화  
     * O_EXCL : O_CREAT 와 함께 사용되며, 이미 파일이 존재한다면 에러를 리턴  
-: mode_t mode: O_CREAT 옵션을 쓸 때 필수적으로 사용해야하는 옵션으로, 파일의 접근 권한을 명시  
+* mode_t mode: O_CREAT 옵션을 쓸 때 필수적으로 사용해야하는 옵션으로, 파일의 접근 권한을 명시  
     * 기본 값  
         * 파일 : 0666  
         * 디렉토리 : 0777  
@@ -269,23 +269,23 @@ open(): 파일을 열거나 생성 후 열어준다.
         * S_IROTH : 기타 사용자 읽기 권한  
         * S_IWOTH : 기타 사용자 쓰기 권한  
         * S_IXOTH : 기타 사용자 실행 권한  
-: 반환 값: 성공 시 0, 실패 시 -1 을 리턴하고 errno 설정
+* 반환 값: 성공 시 0, 실패 시 -1 을 리턴하고 errno 설정
 
-write(): 파일에 내용을 작성한다.  
+`write()`: 파일에 내용을 작성한다.  
 `ssize_t write(int fd, const void *buf, size_t count);`  
-: int fd : file descriptor이다. open의 반환 값이나 stdin, stdout, stderr 에 해당하는 0,1,2를 넣어주면 된다.
-: const void* buf : write 할 값이 담긴 buffer이다.
-: size_t count : write할 내용의 길이이다.
-: 반환 값: write에 성공한 byte의 수이다. write에 실패한 경우 -1을 반환하고 errno를 설정한다.
+* int fd : file descriptor이다. open의 반환 값이나 stdin, stdout, stderr 에 해당하는 0,1,2를 넣어주면 된다.
+* const void* buf : write 할 값이 담긴 buffer이다.
+* size_t count : write할 내용의 길이이다.
+* 반환 값: write에 성공한 byte의 수이다. write에 실패한 경우 -1을 반환하고 errno를 설정한다.
 
 open, write, close <- system call: 운영체제가 제공하는 기능
 
 ## 2. 디자인 목표
-* 추상화: Make the system convenient and easy to use
-* 높은 성능
+* **추상화**: Make the system convenient and easy to use
+* **높은 성능**
     * Minimize the overhead of the OS
     * OS must strive to providde virtualization without excessive overhead
-* Protection between applications
+* **Protection** between applications
     * Isolation: Bad behavior of one does not harm other and the OS itself.
 * High degree of reliability: The OS must also run non-stop.
 * 기타
