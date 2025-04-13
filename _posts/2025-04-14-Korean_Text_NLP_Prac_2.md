@@ -16,22 +16,21 @@ tags: [DATA SCIENCE, NLP, TIL]
 ---
 
 # 목차
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
-1. []()
+1. [활용 데이터셋 소개](#1-활용-데이터셋-소개)
+1. [환경설정 (Google Colab)](#2-환경설정-google-colab)
+    1. [환경설정 진행](#21-환경설정-진행)
+    1. [라이브러리 import](#22-라이브러리-import)
+1. [데이터 전처리하기](#3-데이터-전처리하기)
+    1. [데이터 로드 및 전처리](#31-데이터-로드-및-전처리)
+    1. [감정 label 인코딩](#32-감정-label-인코딩)
+1. [모델 학습 준비하기](#4-모델-학습-준비하기)
+    1. [tokenizer 및 모델 불러오기](#41-tokenizer-및-모델-불러오기)
+    1. [Dataset 클래서 정의하기](#42-dataset-클래서-정의하기)
+    1. [train/validation 분할 및 DataLoader 준비하기](#43-trainvalidation-분할-및-dataloader-준비하기)
+    1. [분류기 모델 정의하기](#44-분류기-모델-정의하기)
+1. [모델 학습하기](#5-모델-학습하기)
+1. [모델 저장하기](#6-모델-저장하기)
+1. [참고](#참고)
 
 # 한글 텍스트 자연어 처리 실습 1
 ## 1. 활용 데이터셋 소개
@@ -91,10 +90,12 @@ with open(data_path, "r", encoding="utf-8") as f:
 df = pd.DataFrame(data, columns=["id", "text", "label"])
 ```
 
-![alt text](image.png)
+전처리 된 데이터
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-14-1.png?raw=true.png)
+
+### 3.2. 감정 label 인코딩
 
 ```python
-# ✅ 4. 감정 레이블 인코딩
 label_map = {
     'joy': 0,
     'sadness': 1,
@@ -162,7 +163,7 @@ train_loader = DataLoader(sampled_dataset, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=32)
 ```
 
-### 4.4. 분류기 모델 정의
+### 4.4. 분류기 모델 정의하기
 
 ```python
 class KoBERTClassifier(nn.Module):
@@ -181,7 +182,7 @@ class KoBERTClassifier(nn.Module):
         return self.classifier(pooled)
 ```
 
-## 4. 모델 학습하기
+## 5. 모델 학습하기
 
 ```python
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # GPU 있으면 GPU 사용함.
@@ -223,14 +224,14 @@ for epoch in range(start_epoch, start_epoch + EPOCHS):
     print(f"[Epoch {epoch}] Loss: {avg_loss:.4f}")
 ```
 
-## 4. 모델 저장하기
+## 6. 모델 저장하기
 
 ```python
 from google.colab import files
 
 # ✅ 에폭별 모델 저장
-model_path = f"kobert_emotion_epoch{epoch+1}.pt"
-drive_path = f"/content/drive/MyDrive/Colab Notebooks/NLP/models/{model_path}"
+model_path = f"/kobert_emotion_epoch{epoch+1}.pt"
+drive_path = f"/{model_path}"
 
 # 로컬에 저장
 torch.save(model.state_dict(), model_path)
@@ -240,10 +241,12 @@ files.download(model_path)
 
 # Google Drive로 복사
 !cp {model_path} {drive_path}
-print(f"✅ 모델 저장 완료: {drive_path}")
+print(f"모델 저장 완료: {drive_path}")
 ```
 
 # 참고
 * [전이학습(Transfer learning)과 파인튜닝(Fine tuning)](https://hi-ai0913.tistory.com/32)
-* [](https://hoit1302.tistory.com/159)
-* [](https://nowolver.tistory.com/13)
+* [[Python, KoBERT] 다중 감정 분류 모델 구현하기 (huggingface로 이전 방법 O)](https://hoit1302.tistory.com/159)
+* [[KoBERT] SKTBrain의 KoBERT 공부하기](https://nowolver.tistory.com/13)
+* [1.허깅페이스란?](https://jaeyoon-95.tistory.com/222)
+* [Hugging Face: KoBERT](https://huggingface.co/monologg/kobert)
