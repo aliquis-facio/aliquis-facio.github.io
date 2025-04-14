@@ -28,6 +28,7 @@
 - [ ] pagination 적용
 - [ ] ~~last_modified_at을 xml과 동일하게 last_mod로 바꾸기~~
 - [ ] post 정렬 순서 설정: CREATED_TIME -> POST FILE NAME
+- [ ] tag와 category의 기능 구분
 
 ## Design
 - [ ] POST LIST: LOAD 애니메이션 수정

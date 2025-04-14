@@ -194,15 +194,15 @@ model = KoBERTClassifier(base_model).to(device)
 optimizer = torch.optim.AdamW(model.parameters(), lr=2e-5)
 loss_fn = nn.CrossEntropyLoss()
 
-# ✅ 2. 저장된 모델 가중치 불러오기
+# 저장된 모델 가중치 불러오기
 model.load_state_dict(torch.load("/kobert_emotion_epoch4.pt", map_location=device))  # 파일명 확인
-print("✅ 모델 가중치 불러오기 완료")
+print("모델 가중치 불러오기 완료")
 
-# ✅ 3. Optimizer, Loss 재설정
+# Optimizer, Loss 재설정
 optimizer = torch.optim.AdamW(model.parameters(), lr=2e-5)
 loss_fn = nn.CrossEntropyLoss()
 
-# ✅ 4. 이어서 학습
+# 이어서 학습
 EPOCHS = 1  # 추가로 학습할 에폭 수
 start_epoch = 4  # 이어서 시작할 에폭 번호
 
@@ -232,7 +232,7 @@ for epoch in range(start_epoch, start_epoch + EPOCHS):
 ```python
 from google.colab import files
 
-# ✅ 에폭별 모델 저장
+# 에폭별 모델 저장
 model_path = f"/kobert_emotion_epoch{epoch+1}.pt"
 drive_path = f"/{model_path}"
 
