@@ -35,22 +35,25 @@ tags: [DATA SCIENCE, NLP, TIL]
 # 한글 텍스트 자연어 처리 실습 1
 ## 1. 활용 데이터셋 소개
 emotion_korTran.data  
-출처: <https://cafe.naver.com/nlpk/335>  
+출처: [Naver Cafe - nlp study: 감정분석과 감정분석 말뭉치](https://cafe.naver.com/nlpk/335)
 
 ## 2. 환경설정 (Google Colab)
 ### 2.1. 환경설정 진행
 
 ```bash
-# ✅ 1. KoBERT 환경 설정 (Colab에서 실행 시)
+# 단일 데이터셋을 다루기 위한 클래스
 !pip install -q datasets
+# 한글 문장 분리기
 !pip install -q kss
-!pip install -q pandas
-!pip install -q matplotlib
-!pip install -q transformers
+!pip install -q pandas # 데이터 분석
+!pip install -q matplotlib # 데이터 시각화
+!pip install -q transformers # transformer 모델
 !pip install -q gluonnlp==0.10.0
+# 진행 상황 표시 모듈
 !pip install -q tqdm
 !pip install -q torch
 !pip install -q sentencepiece
+# Open Neural Network Exchange, 플랫폼 간의 모델을 교환해 사용할 수 있게 하는 모듈
 !pip install -q onnxruntime
 ```
 
@@ -245,6 +248,8 @@ print(f"모델 저장 완료: {drive_path}")
 ```
 
 # 참고
+* [Dataset.map](https://velog.io/@gsgh3016/Dataset.map)
+* [[RN] ONNX(Open Neural Network Exchange) 이해하기 -1: React Native 활용](https://adjh54.tistory.com/203)
 * [전이학습(Transfer learning)과 파인튜닝(Fine tuning)](https://hi-ai0913.tistory.com/32)
 * [[Python, KoBERT] 다중 감정 분류 모델 구현하기 (huggingface로 이전 방법 O)](https://hoit1302.tistory.com/159)
 * [[KoBERT] SKTBrain의 KoBERT 공부하기](https://nowolver.tistory.com/13)
