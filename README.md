@@ -12,7 +12,9 @@
 1. [포스트 만든 날짜, 수정 날짜 구분해서 올리고 싶음](/Github_Pages_Header_Date_Format_Changing)
 1. [github.io 블로그 구글 검색에 개시하기](/github_google_search_등록)
 1. [sitemap 수정하고 나서 post-list에서 이상하게 보임](/github_blog_post_list_layout_fix)
-1. Google Search Console에 적용이 끝나면 모든 포스트에다가 sitemap 적용시켜줘야 함
+1. category
+1. pagination
+1. ~~Google Search Console에 적용이 끝나면 모든 포스트에다가 sitemap 적용시켜줘야 함~~
 
 # Update List
 ## Functional
