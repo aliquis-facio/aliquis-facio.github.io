@@ -282,41 +282,6 @@ plt.draw()
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
 
-## 3. 진행 과제
-- [x] 전처리(Text Preprocessing)
-    - [x] 해리포터 1 ~ 9권 합본
-    - [x] 문장 구분
-    - [x] 띄어쓰기
-    - ~~[ ] 문법 검사~~
-    - [x] 정규표현식(Regular Expression)
-- [x] 형태소 분석
-    - [x] 형태소 분석기 비교
-    - [x] Word Segmentation(단어 분리)
-    - [x] Morphological Analysis(형태소 분석)
-    - [x] PoS Tagging(품사 태깅)
-- [ ] Word Embedding
-    - [ ] FastText VS Word2Vec
-- [ ] 구문 분석
-    - [ ] Phrase Chunking(문장 구분)
-    - [ ] Dependency Parsing(구문 분석)
-- [ ] 의미 분석
-    - [ ] WSD, Word Sense Disambiguation
-    - [ ] SRL, Semantic Role Labeling
-    - [ ] Semantic Parsing
-    - [ ] Textual Entailment
-- [ ] 화용 분석
-    - [ ] Co-reference/Anaphora Resolution(대명사 지시 대상)
-    - [ ] Ellipsis Resolution
-- [ ] 등장인물 구분(NER)
-- [ ] 대화문과 서술문 구분
-- [ ] 대화문에서의 이진 감정 분석
-- [ ] 대화문에서의 다중 감정 분석
-- [ ] 등장인물 구분(NER) + 대화문에서의 다중 감정 분석
-
-## 4. 어려운 점
-* Google Colab에서 KoBERT 버전 호환성 맞추기
-* 등장인물 구분(NER)을 어떻게 진행해야 할 지
-
 # 참고
 ## Information
 * [KoBERT를 활용한 감정분류 모델 구현 with Colab](https://bbarry-lee.github.io/ai-tech/KoBERT%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%ED%98%84.html)

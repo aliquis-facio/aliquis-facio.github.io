@@ -32,7 +32,7 @@ tags: [DATA SCIENCE, NLP, TIL]
 1. [모델 저장하기](#6-모델-저장하기)
 1. [참고](#참고)
 
-# 한글 텍스트 자연어 처리 실습 1
+# 한글 텍스트 자연어 처리 실습 2
 ## 1. 활용 데이터셋 소개
 emotion_korTran.data  
 출처: [Naver Cafe - nlp study: 감정분석과 감정분석 말뭉치](https://cafe.naver.com/nlpk/335)
@@ -228,6 +228,7 @@ for epoch in range(start_epoch, start_epoch + EPOCHS):
 ```
 
 ## 6. 모델 저장하기
+colab은 12시간마다 런타임이 끊기기 때문에 epoch별로 학습된 모델을 저장해줬다.
 
 ```python
 from google.colab import files
@@ -247,6 +248,315 @@ files.download(model_path)
 print(f"모델 저장 완료: {drive_path}")
 ```
 
+## 7. 모델 평가하기
+
+```python
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# 1. 모델 구조 다시 정의 (기존과 동일하게)
+model = KoBERTClassifier(base_model).to(device)
+
+# 2. 저장된 가중치 불러오기
+model_path = "/content/drive/MyDrive/Colab Notebooks/NLP/models/kobert_emotion_epoch8.pt"
+model.load_state_dict(torch.load(model_path, map_location=device))
+
+# 3. 평가 모드로 전환
+model.eval()
+```
+
+```python
+from sklearn.metrics import accuracy_score
+
+def evaluate_accuracy(model, dataloader, tokenizer, sample_texts=None):
+    model.eval()
+    preds = []
+    true_labels = []
+    sample_outputs = []
+
+    with torch.no_grad():
+        for batch in tqdm(dataloader):
+            input_ids = batch['input_ids'].to(device)
+            attention_mask = batch['attention_mask'].to(device)
+            token_type_ids = batch['token_type_ids'].to(device)
+            labels = batch['labels'].to(device)
+
+            outputs = model(input_ids, attention_mask, token_type_ids)
+            predictions = torch.argmax(outputs, dim=1)
+
+            preds.extend(predictions.cpu().numpy())
+            true_labels.extend(labels.cpu().numpy())
+
+            # 샘플 출력용 텍스트 복원
+            if sample_texts and len(sample_outputs) < 10:
+                texts = sample_texts[len(sample_outputs):len(sample_outputs)+len(predictions)]
+                for text, pred, true in zip(texts, predictions, labels):
+                    sample_outputs.append((text, pred.item(), true.item()))
+                    if len(sample_outputs) == 10:
+                        break
+
+    acc = accuracy_score(true_labels, preds)
+    print(f"✅ Validation Accuracy: {acc * 100:.2f}%\n")
+```
+
+```python
+evaluate_accuracy(model, val_loader, tokenizer)
+```
+
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-1.png?raw=true.png)
+
+## 8. 해리포터 소설에 감정 분석 모델 적용하기
+
+```python
+# 해리포터 소설 불러오기
+with open("해리포터_통합본_전처리.txt", "r", encoding="utf-8") as f:
+    texts = f.read().split('\n')
+
+# 해리포터 전권을 챕터별로 구분
+chapters = []
+chapter_titles = []
+chapter = []
+chapter_length = []
+cnt = 0
+
+chapter_titles.append(texts[0])
+for i in range(1, len(texts)):
+    if texts[i].strip():
+        if re.match(r'제\s*\d+\s*장\s*[^\n]*\n?', texts[i]):
+            chapter_titles.append(texts[i])
+            chapters.append(chapter)
+            chapter = []
+            chapter_length.append(cnt)
+            cnt = 0
+        else:
+            chapter.append(texts[i])
+            cnt += 1
+```
+
+```python
+def predict_emotion(sentence, model, tokenizer):
+    model.eval() # 평가 모드로 변경
+
+    encoding = tokenizer(
+        sentence,
+        return_tensors='pt',
+        padding='max_length',
+        truncation=True,
+        max_length=64
+    )
+
+    input_ids = encoding['input_ids'].to(device)
+    attention_mask = encoding['attention_mask'].to(device)
+    token_type_ids = encoding.get('token_type_ids', torch.zeros_like(input_ids)).to(device)
+
+    with torch.no_grad():
+        output = model(input_ids, attention_mask, token_type_ids)
+        prediction = torch.argmax(output, dim=1).item()
+
+    label_map_reverse = {
+        0: '기쁨', 1: '슬픔', 2: '분노', 3: '불안', 4: '사랑', 5: '놀람'
+    }
+
+    return label_map_reverse[prediction]
+```
+
+```python
+import pandas as pd
+from tqdm import tqdm
+
+for i, chapter in enumerate(zip(chapter_titles, chapters)):
+    title = chapter[0]
+    sentences = chapter[1]
+    results = []
+
+    for sentence in tqdm(sentences, desc=f"'{title}' 감정 분석 중"):
+        emotion = predict_emotion(sentence, model, tokenizer)
+        results.append({
+            "sentence": sentence,
+            "emotion": emotion
+        })
+
+    # DataFrame으로 변환
+    df = pd.DataFrame(results)
+
+    # CSV 파일로 저장 (예: chapter_01.csv)
+    filename = f"{title}.csv"
+    df.to_csv(filename, index=False, encoding='utf-8-sig')  # 윈도우 한글 호환
+    print(f"✅ 저장 완료: {filename}")
+```
+
+## 9. 감정 분석 결과 시각화
+
+```python
+# 사용할 감정 라벨
+emotion_labels = ['기쁨', '슬픔', '분노', '불안', '놀람', '사랑']
+
+# 각 감정의 극성 점수 (valence)
+emotion_score = {
+    '기쁨': 3, '사랑': 2, '놀람': 1,
+    '불안': -1, '슬픔': -2, '분노': -3
+}
+```
+
+평균값은 (감정 극성값 * 빈도수)의 합 / 전체 문장 수
+```python
+# 감정 극성 평균값을 기반으로 흐름만 시각화
+def emotion_avg_score_flow(emotion_df):
+    plt.figure(figsize=(12, 6))
+
+    x = [f'{i+1}장' for i in range(len(emotion_df))]
+    y = emotion_df['avg_emotion_score']
+
+    plt.plot(x, y, marker='o', color='darkblue', label='평균 감정 점수')
+
+    plt.title("감정 극성 점수의 평균치 흐름")
+    plt.xlabel("챕터")
+    plt.ylabel("평균 감정 점수")
+    plt.axhline(0, color='gray', linestyle='--', linewidth=1)
+    plt.xticks(rotation=45)
+
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+```
+
+```python
+# 평균 감정 점수의 분포를 히스토그램으로 시각화
+def emotion_score_histogram(emotion_df):
+    plt.figure(figsize=(12, 6))
+
+    plt.hist(emotion_df['avg_emotion_score'], bins=10, color='steelblue', edgecolor='black')
+
+    plt.title("평균 감정 점수 분포")
+    plt.xlabel("평균 감정 점수")
+    plt.ylabel("챕터 갯수")
+    plt.axvline(0, color='gray', linestyle='--', linewidth=1)
+
+    plt.tight_layout()
+    plt.show()
+```
+
+```python
+def emotion_frequency_flow(emotion_df):
+    # 3. 감정 흐름 시각화
+    plt.figure(figsize=(12, 6))
+
+    for label in emotion_labels:
+        x = [f'{i+1}장' for i in range(len(emotion_df))]
+        y = emotion_df[label]
+        plt.plot(x, y, marker='o', label=label)
+
+    plt.title("챕터별 감정 빈도수")
+    plt.xlabel("챕터")
+    plt.ylabel("감정별 문장 갯수")
+    plt.xticks(rotation=45)
+
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+```
+
+```python
+def emotion_focus_chapter(emotion_df):
+    # 감정별 집중 챕터 TOP 3 추출
+    top_chapters_by_emotion = {}
+    for label in emotion_labels:
+        top_chapters = emotion_df[['chapter', label]].sort_values(by=label, ascending=False).head(3)
+        top_chapters_by_emotion[label] = top_chapters.reset_index(drop=True)
+    
+    return top_chapters_by_emotion
+```
+
+```python
+def analyze_emotion_structure(folder_path):
+    chapter_emotions = []
+
+    # 각 챕터 파일에서 감정 통계 집계
+    for filename in sorted(os.listdir(folder_path)):
+        if filename.endswith(".csv"):
+            filepath = os.path.join(folder_path, filename)
+            df = pd.read_csv(filepath)
+            chapter_name = filename.replace(".csv", "")
+
+            # 감정 빈도 수 계산
+            emotion_counts = df['emotion'].value_counts().to_dict()
+            row = {'chapter': chapter_name}
+            total = 0
+            score_sum = 0
+
+            for label in emotion_labels:
+                count = emotion_counts.get(label, 0)
+                row[label] = count
+                total += count
+                score_sum += emotion_score.get(label, 0) * count
+
+            row['total'] = total
+            row['avg_emotion_score'] = score_sum / total if total > 0 else 0
+            chapter_emotions.append(row)
+
+    # 데이터프레임 생성
+    emotion_df = pd.DataFrame(chapter_emotions)
+    emotion_df = emotion_df.sort_values('chapter').reset_index(drop=True)
+    emotion_df.fillna(0, inplace=True)
+
+    # 그래프 시각화
+    emotion_avg_score_flow(emotion_df)
+    emotion_frequency_flow(emotion_df)
+    emotion_score_histogram(emotion_df)
+
+    # 특정 감정 많은 챕터 추출
+    top_chapters_by_emotion = emotion_focus_chapter(emotion_df)
+
+    return emotion_df, top_chapters_by_emotion
+```
+
+```python
+for (path, dirs, files) in os.walk('/content/drive/MyDrive/Colab Notebooks/NLP/data_set/emotion_predict'):
+  for dir in sorted(dirs):
+    folder_path = path + '/' + dir  # 각 챕터 감정 CSV 폴더 경로
+    emotion_df, top_chapters_by_emotion = analyze_emotion_structure(folder_path)
+    # 감정 구조 분석 결과
+    print(emotion_df.head())
+    # 예: '분노' 감정이 집중된 챕터 Top 3
+    print(top_chapters_by_emotion['분노'])
+  break
+```
+
+## 10. 결과
+### 1권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-2.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-3.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-4.png?raw=true.png)
+
+### 2권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-5.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-6.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-7.png?raw=true.png)
+
+### 3권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-8.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-9.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-10.png?raw=true.png)
+
+### 4권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-11.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-12.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-13.png?raw=true.png)
+
+### 5권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-14.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-15.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-16.png?raw=true.png)
+
+### 6권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-17.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-18.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-19.png?raw=true.png)
+
+### 7권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-20.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-21.png?raw=true.png)
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-22.png?raw=true.png)
+
 # 참고
 * [Dataset.map](https://velog.io/@gsgh3016/Dataset.map)
 * [[RN] ONNX(Open Neural Network Exchange) 이해하기 -1: React Native 활용](https://adjh54.tistory.com/203)
@@ -255,3 +565,5 @@ print(f"모델 저장 완료: {drive_path}")
 * [[KoBERT] SKTBrain의 KoBERT 공부하기](https://nowolver.tistory.com/13)
 * [1.허깅페이스란?](https://jaeyoon-95.tistory.com/222)
 * [Hugging Face: KoBERT](https://huggingface.co/monologg/kobert)
+* [[인지과학] 사람의 감정을 어떻게 정의할 수 있을까?](https://steemit.com/kr-science/@man-in-the-moon/5sboad)
+* [[Python] 히트맵 그리기 (Heatmap by python matplotlib, seaborn, pandas)](https://rfriend.tistory.com/419)
