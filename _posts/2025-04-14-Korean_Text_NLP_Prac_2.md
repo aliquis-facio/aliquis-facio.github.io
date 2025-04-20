@@ -242,10 +242,6 @@ torch.save(model.state_dict(), model_path)
 
 # model 다운로드
 files.download(model_path)
-
-# Google Drive로 복사
-!cp {model_path} {drive_path}
-print(f"모델 저장 완료: {drive_path}")
 ```
 
 ## 7. 모델 평가하기
@@ -253,14 +249,14 @@ print(f"모델 저장 완료: {drive_path}")
 ```python
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# 1. 모델 구조 다시 정의 (기존과 동일하게)
+# 모델 구조 다시 정의 (기존과 동일하게)
 model = KoBERTClassifier(base_model).to(device)
 
-# 2. 저장된 가중치 불러오기
+# 저장된 가중치 불러오기
 model_path = "/content/drive/MyDrive/Colab Notebooks/NLP/models/kobert_emotion_epoch8.pt"
 model.load_state_dict(torch.load(model_path, map_location=device))
 
-# 3. 평가 모드로 전환
+# 평가 모드로 전환
 model.eval()
 ```
 
@@ -295,7 +291,7 @@ def evaluate_accuracy(model, dataloader, tokenizer, sample_texts=None):
                         break
 
     acc = accuracy_score(true_labels, preds)
-    print(f"✅ Validation Accuracy: {acc * 100:.2f}%\n")
+    print(f"Validation Accuracy: {acc * 100:.2f}%\n")
 ```
 
 ```python
@@ -378,10 +374,10 @@ for i, chapter in enumerate(zip(chapter_titles, chapters)):
     # DataFrame으로 변환
     df = pd.DataFrame(results)
 
-    # CSV 파일로 저장 (예: chapter_01.csv)
+    # CSV 파일로 저장
     filename = f"{title}.csv"
     df.to_csv(filename, index=False, encoding='utf-8-sig')  # 윈도우 한글 호환
-    print(f"✅ 저장 완료: {filename}")
+    print(f"저장 완료: {filename}")
 ```
 
 ## 9. 감정 분석 결과 시각화
@@ -437,7 +433,7 @@ def emotion_score_histogram(emotion_df):
 
 ```python
 def emotion_frequency_flow(emotion_df):
-    # 3. 감정 흐름 시각화
+    # 감정 흐름 시각화
     plt.figure(figsize=(12, 6))
 
     for label in emotion_labels:
@@ -456,14 +452,26 @@ def emotion_frequency_flow(emotion_df):
 ```
 
 ```python
-def emotion_focus_chapter(emotion_df):
-    # 감정별 집중 챕터 TOP 3 추출
-    top_chapters_by_emotion = {}
-    for label in emotion_labels:
-        top_chapters = emotion_df[['chapter', label]].sort_values(by=label, ascending=False).head(3)
-        top_chapters_by_emotion[label] = top_chapters.reset_index(drop=True)
-    
-    return top_chapters_by_emotion
+# 감정별로 가장 우세한 챕터 상위 3개를 dictionary 형태로 반환
+
+def get_chapter_dominance_by_emotion_dict(emotion_df, top_n=3):
+    emotion_labels = ['기쁨', '슬픔', '분노', '불안', '놀람', '사랑']
+    emotion_totals = {emotion: emotion_df[emotion].sum() for emotion in emotion_labels}
+
+    dominance_dict = {}
+
+    for emotion in emotion_labels:
+        dominance_rows = []
+        for _, row in emotion_df.iterrows():
+            chapter = row['chapter']
+            value = row[emotion]
+            dominance_ratio = value / emotion_totals[emotion] if emotion_totals[emotion] > 0 else 0
+            dominance_rows.append((chapter, round(dominance_ratio, 3)))
+
+        top_chapters = sorted(dominance_rows, key=lambda x: x[1], reverse=True)[:top_n]
+        dominance_dict[emotion] = top_chapters
+
+    return dominance_dict
 ```
 
 ```python
@@ -504,21 +512,24 @@ def analyze_emotion_structure(folder_path):
     emotion_score_histogram(emotion_df)
 
     # 특정 감정 많은 챕터 추출
-    top_chapters_by_emotion = emotion_focus_chapter(emotion_df)
+    top_chapters_by_emotion = get_chapter_dominance_by_emotion_dict(emotion_df)
 
     return emotion_df, top_chapters_by_emotion
 ```
 
 ```python
-for (path, dirs, files) in os.walk('/content/drive/MyDrive/Colab Notebooks/NLP/data_set/emotion_predict'):
-  for dir in sorted(dirs):
-    folder_path = path + '/' + dir  # 각 챕터 감정 CSV 폴더 경로
-    emotion_df, top_chapters_by_emotion = analyze_emotion_structure(folder_path)
-    # 감정 구조 분석 결과
-    print(emotion_df.head())
-    # 예: '분노' 감정이 집중된 챕터 Top 3
-    print(top_chapters_by_emotion['분노'])
-  break
+for (path, dirs, files) in os.walk(root_path):
+    for dir in sorted(dirs):
+        folder_path = path + '/' + dir  # 각 챕터 감정 CSV 폴더 경로
+        emotion_df, top_chapters_by_emotion = analyze_emotion_structure(folder_path)
+        # 감정 구조 분석 결과
+        print(emotion_df.head())
+        for label in emotion_labels:
+            print(f"{label} 감정이 집중된 챕터 Top 3:")
+            for k, v in top_chapters_by_emotion[label]:
+                print(f"{k} 챕터: {v}")
+            print()
+    break
 ```
 
 ## 10. 결과
