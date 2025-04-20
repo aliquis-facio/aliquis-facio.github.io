@@ -199,6 +199,8 @@ class KoBERTClassifier(nn.Module):
 ```
 
 ## 5. 모델 학습하기
+### 5.1. 모델 학습하기
+colab은 12시간마다 런타임이 끊기기 때문에 학습데이터를 쪼개어서 진행했고, epoch별로 학습된 모델을 저장해줬다.
 
 ```python
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # GPU 있으면 GPU 사용함.
@@ -240,8 +242,7 @@ for epoch in range(start_epoch, start_epoch + EPOCHS):
     print(f"[Epoch {epoch}] Loss: {avg_loss:.4f}")
 ```
 
-## 6. 모델 저장하기
-colab은 12시간마다 런타임이 끊기기 때문에 epoch별로 학습된 모델을 저장해줬다.
+### 5.2. 모델 저장하기
 
 ```python
 from google.colab import files
