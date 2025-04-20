@@ -549,10 +549,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ## 10. 결과
 ### 1권
-<!-- ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-2.png?raw=true.png) -->
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-2.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-3.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-4.png?raw=true.png)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-5.png?raw=true.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -608,9 +607,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 
 ### 2권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-5.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-6.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-7.png?raw=true.png)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-8.png?raw=true.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -662,9 +661,9 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 3권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-8.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-9.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-10.png?raw=true.png)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-11.png?raw=true.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -716,9 +715,9 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 4권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-11.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-12.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-13.png?raw=true.png)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-14.png?raw=true.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -770,9 +769,9 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 5권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-14.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-15.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-16.png?raw=true.png)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-17.png?raw=true.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -824,9 +823,9 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 6권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-17.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-18.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-19.png?raw=true.png)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-20.png?raw=true.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -878,9 +877,9 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 7권
+![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-20.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-21.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-22.png?raw=true.png)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-04-20-23.png?raw=true.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
