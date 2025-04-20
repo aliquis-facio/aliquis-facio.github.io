@@ -136,13 +136,14 @@ base_model = AutoModel.from_pretrained("monologg/kobert")
 class EmotionDataset(Dataset):
     def __init__(self, texts, labels, tokenizer, max_len=64):
         self.texts = texts
-        self.labels = labels
-        self.tokenizer = tokenizer
-        self.max_len = max_len
+        self.labels = labels # 감정 분류를 위한 감정 라벨
+        self.tokenizer = tokenizer # BERT 모델 입력을 위해 토큰화 수행
+        self.max_len = max_len # 입력 시퀀스를 고정 길이로 맞추기
 
     def __len__(self):
         return len(self.texts)
 
+    # 모델이 학습 시 한 문장씩 꺼낼 수 있게 함
     def __getitem__(self, idx):
         encoding = self.tokenizer(
             self.texts[idx],
@@ -180,14 +181,15 @@ val_loader = DataLoader(val_dataset, batch_size=32)
 ### 4.4. 분류기 모델 정의하기
 
 ```python
+# KoBERT Customizing -> PyTorch Model
 class KoBERTClassifier(nn.Module):
     def __init__(self, bert, num_classes=6):
         super(KoBERTClassifier, self).__init__()
-        self.bert = bert
-        self.classifier = nn.Linear(bert.config.hidden_size, num_classes)
+        self.bert = bert # 사전학습된 KoBERT
+        self.classifier = nn.Linear(bert.config.hidden_size, num_classes) # BERT 출력 -> 감정 분류 클래스 수로 줄이는 선형 layer
 
     def forward(self, input_ids, attention_mask=None, token_type_ids=None):
-        outputs = self.bert(
+        outputs = self.bert( # KoBERT에 입력 tensor를 넣음
             input_ids=input_ids,
             attention_mask=attention_mask,
             token_type_ids=token_type_ids
@@ -215,7 +217,7 @@ loss_fn = nn.CrossEntropyLoss()
 
 # 이어서 학습
 EPOCHS = 1  # 추가로 학습할 에폭 수
-start_epoch = 4  # 이어서 시작할 에폭 번호
+start_epoch = 8  # 이어서 시작할 에폭 번호
 
 for epoch in range(start_epoch, start_epoch + EPOCHS):
     model.train()
