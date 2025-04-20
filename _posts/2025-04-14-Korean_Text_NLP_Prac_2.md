@@ -408,6 +408,26 @@ emotion_score = {
 }
 ```
 
+```python
+def emotion_frequency_flow(emotion_df):
+    # 감정 흐름 시각화
+    plt.figure(figsize=(12, 6))
+
+    for label in emotion_labels:
+        x = [f'{i+1}장' for i in range(len(emotion_df))]
+        y = emotion_df[label]
+        plt.plot(x, y, marker='o', label=label)
+
+    plt.title("챕터별 감정 빈도수")
+    plt.xlabel("챕터")
+    plt.ylabel("감정별 문장 갯수")
+    plt.xticks(rotation=45)
+
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+```
+
 평균값은 (감정 극성값 * 빈도수)의 합 / 전체 문장 수
 ```python
 # 감정 극성 평균값을 기반으로 흐름만 시각화
@@ -442,26 +462,6 @@ def emotion_score_histogram(emotion_df):
     plt.ylabel("챕터 갯수")
     plt.axvline(0, color='gray', linestyle='--', linewidth=1)
 
-    plt.tight_layout()
-    plt.show()
-```
-
-```python
-def emotion_frequency_flow(emotion_df):
-    # 감정 흐름 시각화
-    plt.figure(figsize=(12, 6))
-
-    for label in emotion_labels:
-        x = [f'{i+1}장' for i in range(len(emotion_df))]
-        y = emotion_df[label]
-        plt.plot(x, y, marker='o', label=label)
-
-    plt.title("챕터별 감정 빈도수")
-    plt.xlabel("챕터")
-    plt.ylabel("감정별 문장 갯수")
-    plt.xticks(rotation=45)
-
-    plt.legend()
     plt.tight_layout()
     plt.show()
 ```
