@@ -6,13 +6,13 @@ sitemap:
     priority:
 
 title: "[OS] OS(Operating System)란?"
-excerpt: "Intro"
+excerpt: "Operating System: Three Easy Pieces 정리"
 
 date: 2025-03-16
-last_modified_at: 
+last_modified_at: 2025-04-22
 
 categories: [OS]
-tags: [OS, TIL]
+tags: [OS, C/C++, TIL]
 ---
 
 # 목차
@@ -24,13 +24,13 @@ tags: [OS, TIL]
     1. [디자인 목표](#2-디자인-목표)
 
 # 운영체제(OS, Operating System)란?
-**운영체제(OS, Operating System)**: 컴퓨터 시스템의 핵심 소프트웨어로, <mark>컴퓨터 하드웨어와 응용 프로그램 간의 상호작용을 관리하고 제어하는 역할</mark>을 한다.
+**자원 추상화(Resource Abstraction)**: 운영체제는 CPU, 메모리, 디스크, 네트워크 등 복잡한 하드웨어를 사용자에게 편리한 인터페이스(프로세스, 가상 메모리, 파일 등)로 추상화해 제공합니다.
+
+**자원 관리자(Resource Manager)**: OS는 여러 프로세스나 애플리케이션이 경쟁하는 자원을 할당·회수하고, 충돌을 방지하며, 전체 시스템 효율을 극대화합니다.
 
 1. 프로그램들이 쉽게 동작하도록 한다
 1. 프로그램들이 메모리를 공유할 수 있도록 한다
 1. 프로그램들이 devices와 상호작용할 수 있도록 만든다
-
--> OS는 시스템이 사용하기 쉬운 방식으로 정확하고 효율적이게 동작하게 만드는 역할을 담당한다.
 
 ## 1. 운영체제 동작 방식
 폰 노이만의 컴퓨터 모델을 따르면 OS가 동작하는 것을 3가지로 나누고 있다. <mark>가상화</mark>, <mark>동시성</mark>, <mark>영속성</mark> 이렇게 3가지이다.
@@ -43,7 +43,10 @@ OS는 물리적 자원(e.g. 프로세서, 메모리, 디스크 등)을 사용한
     * 메모리(memory): 많은 프로그램들이 동시에 자신의 명령어(코드)와 데이터에 접근할 수 있게 한다.
     * 디스크(disk): 많은 프로그램들이 장치에 접근할 수 있게 한다.
 
-#### 예제 코드: CPU Virtualization
+#### CPU Virtualization
+**CPU 가상화**: 한정된 물리 CPU를 시간 분할로 나눠 “무한” 가상 CPU처럼 사용하게 함
+
+예제 코드
 ```c
 #include <stdio.h> // standard input output
 #include <stdlib.h> // standard library
@@ -56,24 +59,28 @@ int main(int argc, char *argv[]) {
     // char* argv[]: main 함수에 전달되는 실질적인 정보, 문자열의 배열. 첫번째 문자열은 프로그램의 실행경로로 항상 고정이 되어 있음.
     if (argc != 2) { // input 값이 2개가 아니라면
         fprintf(stderr, "usage: cpu <string>\n");
-        // input 값을 새롭게 입력 받음.
+        // input 값을 새롭게 입력 받음
         exit(1); // 종료
     }
-    char *str = argv[1];
+
+    char *str = argv[1]; // 출력할 문자열 저장
+
     while (1) { // 무한 루프
-        Spin(1); // 1초마다 Spin 함수가 실행. 내부적으로 sleep 함수가 있다고 가정.
-        printf("%s\n", str); // str을 출력함함
+        // Spin(n): common.h에 정의된 busy‑wait 함수로 내부적으로 gettimeofday()를 반복 호출해 정확히 ‘n’초가 흐를 때까지 CPU를 점유한 뒤 복귀
+        Spin(1);
+        printf("%s\n", str); // str을 출력함
     }
-    return 0;
+
+    return 0; // (실제로는 도달하지 않음)
 }
 ```
 
 실행 결과
 ``` bash
-prompt> gcc-o cpu cpu.c-Wall
 # gcc로 cpu.c(소스 코드)를 cpu(실행 파일)로 컴파일한다.
-prompt> ./cpu A & ./cpu B & ./cpu C & ./cpu D &
+prompt> gcc-o cpu cpu.c-Wall
 # &: 각각의 명령어를 백그라운드에서 실행한다. -> 백그라운드에서 4개의 명령어를 동시에 실행시킴
+prompt> ./cpu A & ./cpu B & ./cpu C & ./cpu D &
 [1] 7353 # -> Process 1, PID: 7353
 [2] 7354 # -> Process 2, PID: 7354
 [3] 7355 # -> Process 3, PID: 7355
@@ -90,9 +97,15 @@ A
 ...
 ```
 
--> **CPU 가상화**: CPU가 물리적으로는 적은 수로 구성되어 있지만, 가상화를 통해 시스템이 많은 수의 가상 CPU를 가진 것처럼(여러 프로그램이 한 번에 실행되는 것처럼) 보이게 한다.
+#### Memory Virtualization
+**메모리 가상화**: 각 프로세스에 독립된 가상 주소 공간을 제공해 격리·보호
 
-#### 예제 코드: Memory Virtualization
+<mark>각각의 프로세스는 자기 자신의 독립된 가상 주소 공간(메모리 가상화)에 접근한다.</mark>
+OS는 주소 공간을 물리적인 메모리에 연결한다.
+메모리는 프로그램이 동작하는 동안에 참조하는 것은 또 다른 프로세스의 주소 공간에 영향을 미치지 않는다.
+물리적인 메모리는 OS에 의해 관리되는 공유된 자원이다.
+
+예제 코드
 ```c
 #include <unistd.h> // POSIX 운영체제 API에 대한 엑세스 제공
 #include <stdio.h>
@@ -100,29 +113,41 @@ A
 #include "common.h"
 
 int main(int argc, char *argv[]) {
-    int *p = malloc(sizeof(int)); // a1
-    // 포인터 p에 int(4 bytes)의 크기만큼의 메모리를 할당해 그 주소를 저장하겠다.
+    // a1: *p를 heap의 int 크기(4B)만큼 메모리 할당
+    int *p = malloc(sizeof(int));
     assert(p != NULL); // p가 NULL이 아니면 경고
-    printf("(%d) address pointed to by p: %p\n", getpid(), p); // a2
-    *p = 0; // a3
+
+    // a2: 할당된 주소 출력
+    printf("(%d) address pointed to by p: %p\n", getpid(), p);
+
+    // a3: *p 초기값을 0으로 설정
+    *p = 0;
+
+    // a4: 1초씩 대기 후 값을 증가시키고 출력하는 무한 루프
     while (1) {
-        Spin(1);
-        *p = *p + 1;
-        printf("(%d) p: %d\n", getpid(), *p); // a4
+        Spin(1); // common.h 의 busy‑wait: n초간 CPU 점유
+        *p = *p + 1; // 힙에 할당된 정수 값을 1 증가
+        printf("(%d) p: %d\n", getpid(), *p);
     }
+
     return 0;
 }
 ```
 
 실행 결과
 ``` bash
-prompt> ./mem & ./mem &
 # mem이라는 실행파일이 생성되었다고 가정.
+prompt> ./mem & ./mem &
+
 [1] 24113 # 프로세스 1 생성
 [2] 24114 # 프로세스 2 생성
+
+# 두 프로세스의 p 주소값이 같음.
 (24113) address pointed to by p: 0x200000
 (24114) address pointed to by p: 0x200000
-# 두 프로세스의 p 주소값이 같음.
+
+# 두 프로세스의 p값이 독립적으로 증가하고 있음.
+# -> 메모리가 프로세스별로 독립된 공간을 제공받는다.
 (24113) p: 1
 (24114) p: 1
 (24114) p: 2
@@ -131,18 +156,16 @@ prompt> ./mem & ./mem &
 (24114) p: 3
 (24113) p: 4
 (24114) p: 4
-# 두 프로세스의 p값이 독립적으로 증가하고 있음.
-# 메모리가 프로세스별로 독립된 공간을 제공받는다.
 ...
 ```
 
-<mark>각각의 프로세스는 자기 자신의 독립된 가상 주소 공간(메모리 가상화)에 접근한다.</mark>
-OS는 주소 공간을 물리적인 메모리에 연결한다.
-메모리는 프로그램이 동작하는 동안에 참조하는 것은 또 다른 프로세스의 주소 공간에 영향을 미치지 않는다.
-물리적인 메모리는 OS에 의해 관리되는 공유된 자원이다.
+#### I/O Virtualiation
+**I/O 가상화**: 디스크, 네트워크 등의 장치를 추상화해 표준화된 인터페이스로 관리
 
 ### 1.2. 동시성(Concurrency)
-#### 예제 코드
+* **프로세스/스레드 관리**: 생성(fork/exec), 소멸(exit), 동기화(mutex, semaphore) 지원
+
+예제 코드
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -166,13 +189,18 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "usage: threads <value>\n"); // 값 2개를 받음: threads, values(string)
         exit(1);
     }
+
     loops = atoi(argv[1]); // atoi: ascii to integer
     pthread_t p1, p2;
     printf("Initial value : %d\n", counter);
     Pthread_create(&p1, NULL, worker, NULL); // p1 스레드 생성
     Pthread_create(&p2, NULL, worker, NULL); // p2 스레드 생성
+
+    // 생성한 스레드가 종료될 때까지 대기
     Pthread_join(p1, NULL); 
     Pthread_join(p2, NULL);
+
+    // 모든 자식 스레드 종료 후 메인 스레드 종료 알림
     printf("Final value : %d\n", counter);
     return 0;
 }
@@ -192,13 +220,13 @@ int main(int argc, char *argv[]) {
 * pthread_t th: 스레드의 식별자이다. pthread_create의 pthread_t*thread와 동일하다.
 * void **thread_return: 리턴값이다.
 
-Execution Stack
-
+실행 결과
 ```bash
 # 1번째
 prompt> gcc-o threads threads.c-Wall-pthread prompt> ./threads 1000
 Initial value : 0
 Final value : 2000
+
 # 2번째
 prompt> ./threads 100000
 Initial value : 0
@@ -217,13 +245,28 @@ Final value : 137298
 
 세 명령어가 한번에(atomically) 실행되지 않고, 개별적으로 실행된다. -> 즉, 중간중간 무엇인가에 방해를 받는다.
 
+**Race Condition(경쟁 상태)**: 두 개 이상의 실행 흐름(스레드나 프로세스)이 공유 자원(메모리, 파일, I/O 장치 등)에 동시에 접근하면서, 그 접근 순서와 타이밍에 따라 결과가 달라지는 상황을 말한다.
+
 ### 1.3. 영속성(Persistence)
 DRAM과 같은 장치는 휘발성 값을 저장한다.  
 하드웨어와 소프트웨어는 데이터를 영구적으로 저장하는 것이 필요하다.
 * **하드웨어**: 하드 드라이브, SSD와 같은 입출력 장치  
 * **소프트웨어**: 파일 시스템은 디스크를 관리한다. 또한, 유저가 만든 어떤 파일들을 저장하는 것을 책임진다.
 
-#### 예제 코드
+**파일 시스템(File System)**: 디스크에 데이터를 조직·저장·조회하고, 시스템 장애 후 복구 기능(저널링, COW 등) 제공
+
+**블록 디바이스 관리**: 디스크 블록 할당, 캐싱, I/O 스케줄링을 통해 성능과 신뢰성 보장
+
+#### 보호 및 격리(Protection & Isolation)
+**메모리 보호**: 가상 주소 기반 접근 제어로 프로세스 간 간섭 방지  
+**권한 관리**: 사용자/그룹별 접근 제어, 시그널(signal)로 프로세스 제어  
+**보안(Security)**: 커널 모드와 사용자 모드 분리로 악의적 코드 실행 차단
+
+#### 인터페이스 및 API
+**시스템 콜(System Call)**: open(), read(), write(), fork(), exec() 등 라이브러리와 하드웨어 제어의 경계  
+**라이브러리 지원**: 표준 C 라이브러리, POSIX 스레드, 파일 처리 등 편리한 프로그래밍 인터페이스 제공
+
+예제 코드
 ```c
 #include <stdio.h>
 #include <unistd.h>
@@ -240,6 +283,7 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 ```
+
 `open()`: 파일을 열거나 생성 후 열어준다.  
 `int open(const char *filepath, int flag, mode_t mode);`  
 * const char *filepath: 열고자 하는 파일의 경로
@@ -277,8 +321,6 @@ int main(int argc, char *argv[]) {
 * const void* buf : write 할 값이 담긴 buffer이다.
 * size_t count : write할 내용의 길이이다.
 * 반환 값: write에 성공한 byte의 수이다. write에 실패한 경우 -1을 반환하고 errno를 설정한다.
-
-open, write, close <- system call: 운영체제가 제공하는 기능
 
 ## 2. 디자인 목표
 * **추상화**: Make the system convenient and easy to use
