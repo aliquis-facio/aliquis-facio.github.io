@@ -33,13 +33,13 @@ Media Access Control Sublayer:
 
 데이터 통신 방식:
 
-![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-04-24-1.png?raw=true)
+![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-04-24-1.jpg?raw=true)
 
 * Point to Point Link: 송신자는 하나의 통신 회선을 통해서 1대 1로 연결해 데이터를 전송한다. -> MAC protocol이 필요없다
 * Multi Point/Broadcast/Shared Link: 한 개의 회선을 통해서 여러 명의 사용자에게 데이터를 전송한다.
 한 번에 하나의 쌍(Sender, Reciever)만 그 회선을 독점적으로 사용할 수 있다. -> MAC protocol이 필요하다
 
-![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-04-24-2.png?raw=true)
+![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-04-24-2.jpg?raw=true)
 
 ## Media Access Control (MAC) 개념
 MAC: 네트워크 내 여러 장치가 동일한 통신 매체를 사용할 때 어떤 방식으로 전송 권한을 부여할 것인지를 정의하는 프로토콜이다. MAC 계층은 물리 계층 위에 위치하며, 어떤 장치가 언제 데이터를 전송할 수 있는지를 결정합니다.
