@@ -18,39 +18,32 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 # 목차
 
 # Media Access Control
-## 들어가면서
-데이터링크 계층의 기능을 더 이해하기 위해서 2개의 소계층으로 나눌 수 있다.
-* Data Link Control Sublayer
-* Media Access Control Sublayer
+MAC: 네트워크 내 여러 장치가 동일한 통신 매체를 사용할 때 어떤 방식으로 전송 권한을 부여할 것인지를 정의하는 프로토콜이다. MAC 계층은 물리 계층 위에 위치하며, 어떤 장치가 언제 데이터를 전송할 수 있는지를 결정합니다.
 
-Data Link Control Sublayer:
-* Framing
-* Error Control
-* Flow Control
+## 1. 들어가면서
+데이터 링크 계층을 이해하기 위해, 다음 두 소계층으로 나눌 수 있다
 
-Media Access Control Sublayer:
-* Media Access Control
+| 소계층 | 주요 기능 |
+| --- | --- |
+| Data Link Control Sublayer | Framing, Error Control, Flow Control |
+| Media Access Control Sublayer | 매체 접근 제어 (MAC) |
 
 데이터 통신 방식:
 
 ![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-04-24-1.jpg?raw=true)
 
-* Point to Point Link: 송신자는 하나의 통신 회선을 통해서 1대 1로 연결해 데이터를 전송한다. -> MAC protocol이 필요없다
-* Multi Point/Broadcast/Shared Link: 한 개의 회선을 통해서 여러 명의 사용자에게 데이터를 전송한다.
-한 번에 하나의 쌍(Sender, Reciever)만 그 회선을 독점적으로 사용할 수 있다. -> MAC protocol이 필요하다
+* Point-to-Point Link: 1:1 전용 회선 → MAC 프로토콜 불필요
+* Multi-Point/Broadcast/Shared Link: 다수 공유 회선 → MAC 프로토콜 필요
 
 ![그림](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-04-24-2.jpg?raw=true)
 
-## Media Access Control (MAC) 개념
-MAC: 네트워크 내 여러 장치가 동일한 통신 매체를 사용할 때 어떤 방식으로 전송 권한을 부여할 것인지를 정의하는 프로토콜이다. MAC 계층은 물리 계층 위에 위치하며, 어떤 장치가 언제 데이터를 전송할 수 있는지를 결정합니다.
+## 2. MAC의 주요 issues
+* 매체 접근 시점 결정: medium(매체)에 언제 접근할거냐?
+* 매체 상태 처리: medium(매체)가 바쁘면 뭐할거냐?
+* 전송 성공/실패 판단: 전송이 성공했는지 실패했는지 어떻게 알아낼거냐?
+* 충돌 처리: 만약에 전송 실패(충돌)했다면 뭐할거냐?
 
-## MAC의 주요 issues
-* medium(매체)에 언제 접근할거냐?
-* medium(매체)가 바쁘면 뭐할거냐?
-* 전송이 성공했는지 실패했는지 어떻게 알아낼거냐?
-* 만약에 전송 실패(충돌)했다면 뭐할거냐?
-
-## MAC의 주요 과제
+## 3. MAC의 주요 과제
 다수의 장치 간의 매체 공유:
 여러 장치가 같은 전송 매체를 사용할 때, 어떤 장치가 데이터를 보낼지 결정하는 규칙을 정해야 합니다.
 예를 들어, 이더넷 네트워크에서는 여러 컴퓨터가 동일한 유선 네트워크를 공유합니다.
@@ -61,7 +54,7 @@ MAC: 네트워크 내 여러 장치가 동일한 통신 매체를 사용할 때 
 공정성 유지:
 여러 장치가 공평하게 매체를 사용할 수 있도록 전송 우선순위와 전송 기회를 공정하게 배분해야 합니다.
 
-## MAC 프로토콜 종류
+## 4. MAC 프로토콜 종류
 MAC 프로토콜은 크게 채널 접근 방식을 제어하는 규칙에 따라 나뉩니다. 여기서는 중요한 MAC 프로토콜과 그들의 작동 원리를 정리해 보겠습니다.
 
 MAC Protocol
