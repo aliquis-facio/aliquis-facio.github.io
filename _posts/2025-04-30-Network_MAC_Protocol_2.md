@@ -21,18 +21,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 **MAC 프로토콜**: 네트워크 내 여러 장치가 동일한 통신 매체를 사용할 때 어떤 방식으로 전송 권한을 부여할 것인지를 정의한다.
 
 1. Random Access Protocol
-    * ALOHA
-    * CSMA(Carrier Sense Multiple Access)
-    * CSMA/CD(CSMA/Collision Detection)
-    * CSMA/CA(CSMA/Collision Avoidance)
 1. <mark>Controlled Access Protocol</mark>
-    * Reservation
-    * Polling
-    * Token Passing
 1. Channelization Protocol
-    * FDMA(Frequency Division Multiple Access)
-    * TDMA(Time DMA)
-    * CDMA(Code DMA)
 
 ## Controlled Access Protocol
 ### Token Passing
