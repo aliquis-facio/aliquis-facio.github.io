@@ -5,7 +5,7 @@ sitemap:
     changefreq:
     priority:
 
-title: "[NETWORK] MAC Protocol"
+title: "[NETWORK] MAC Protocol 2"
 excerpt: "Controlled Access Protocol"
 
 date: 2025-04-30
