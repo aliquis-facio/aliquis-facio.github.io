@@ -21,20 +21,19 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 **MAC 프로토콜**: 네트워크 내 여러 장치가 동일한 통신 매체를 사용할 때 어떤 방식으로 전송 권한을 부여할 것인지를 정의한다.
 
 1. <mark>Random Access Protocol</mark>
-    * ALOHA
-    * CSMA(Carrier Sense Multiple Access)
-    * CSMA/CD(CSMA/Collision Detection)
-    * CSMA/CA(CSMA/Collision Avoidance)
 1. Controlled Access Protocol
-    * Reservation
-    * Polling
-    * Token Passing
 1. Channelization Protocol
-    * FDMA(Frequency Division Multiple Access)
-    * TDMA(Time DMA)
-    * CDMA(Code DMA)
 
-## Random Access(무작위 접근)/Contention Based(경쟁 기반) 방식
+# Random Access(무작위 접근)/Contention Based(경쟁 기반) 방식
+Random Access는 매체를 여러 장치가 동시에 공유하는 방식으로, 각 장치가 전송을 자유롭게 시도합니다. 이 방식에서는 충돌이 발생할 수 있지만, 충돌이 발생하면 이를 해결하는 규칙을 사용하여 재전송을 통해 데이터 전송을 지속합니다.
+
+작동 원리:
+장치들이 동일한 매체를 사용하고, 전송을 시도할 때 동시에 충돌이 발생할 수 있습니다.
+
+전송이 충돌하면, 각 장치는 충돌을 감지하고 랜덤한 시간을 기다린 후 재전송을 시도합니다.
+
+장치들은 전송을 시도할 때 시간 동기화나 전송 순서를 따로 정의하지 않으므로, 무작위로 전송을 시도하고, 충돌을 처리하는 규칙이 필요합니다.
+
 * 모든 노드가 평등하다: 중앙국에 의한 제어가 없다
 * 소음에 강함
 * 비계획적 전송: 노드가 데이터를 전송할 시간이 미리 정해져 있지 않다.
@@ -46,59 +45,73 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 한 개 이상의 노드가 전송하려고 할 경우, 전송 데이터가 파괴되거나 변형될 수 있다
 
 장점:
-* 단순성: 구현이 간단하고, 별도의 동기화나 시간 분할 없이 자유롭게 전송할 수 있습니다.
-* 자원 효율성: 사용 가능한 대역폭을 동적으로 공유할 수 있어, 사용자 수가 적을 때 효율적입니다.
-* 유연성: 네트워크에 새로운 장치가 추가될 때, 동적으로 매체를 사용할 수 있습니다.
+* **단순성**: 구현이 간단하고, 별도의 동기화나 시간 분할 없이 자유롭게 전송할 수 있습니다.
+* **자원 효율성**: 사용 가능한 대역폭을 동적으로 공유할 수 있어, 사용자 수가 적을 때 효율적입니다.
+* **유연성**: 네트워크에 새로운 장치가 추가될 때, 동적으로 매체를 사용할 수 있습니다.
 
 단점:
-* 충돌 발생: 충돌이 자주 발생할 수 있으며, 충돌이 발생하면 재전송을 해야 하므로 전송 효율이 떨어질 수 있습니다.
-* 스케일 문제: 사용자 수가 많을수록 충돌 확률이 높아져, 네트워크가 비효율적으로 변할 수 있습니다.
-* 성능 저하: 네트워크 트래픽이 많아지면, Throughput이 급격히 감소할 수 있습니다.
+* **충돌 발생**: 충돌이 자주 발생할 수 있으며, 충돌이 발생하면 재전송을 해야 하므로 전송 효율이 떨어질 수 있습니다.
+* **스케일 문제**: 사용자 수가 많을수록 충돌 확률이 높아져, 네트워크가 비효율적으로 변할 수 있습니다.
+* **성능 저하**: 네트워크 트래픽이 많아지면, Throughput이 급격히 감소할 수 있습니다.
 
-### 2.1. ALOHA
+## 1. ALOHA
 ALOHA는 가장 기본적인 Random Access 방식 중 하나로, 장치가 자유롭게 전송을 시도하며 충돌이 발생하면 재전송하는 방식입니다.
 
-Pure ALOHA (순수 ALOHA):
+### Pure ALOHA (순수 ALOHA):
 작동 원리: 장치는 언제든지 전송을 시도할 수 있으며, 전송 중에 충돌이 발생하면, 랜덤 시간 후에 재전송을 시도합니다.
 
 문제점: 충돌이 자주 발생할 수 있으며, 트래픽이 많으면 전송 효율성이 낮아집니다.
 
 Throughput: 최대 **18.4%**의 효율성을 가집니다. (효율성 = 18.4%가 최적의 상태)
 
-Slotted ALOHA (슬롯형 ALOHA):
+특징: 전송을 시도하는 시점을 지정하지 않기 때문에 충돌 확률이 높습니다.
+
+### Slotted ALOHA (슬롯형 ALOHA):
 작동 원리: 전송을 시간 슬롯에 맞춰 시도합니다. 각 장치는 정해진 슬롯에 전송을 시도하고, 충돌이 발생하면 랜덤한 슬롯 후에 재전송을 시도합니다.
 
 장점: Pure ALOHA보다 충돌 확률이 낮아지고, 효율성이 **37%**로 증가합니다.
 
 Throughput: 최대 **37%**의 효율성을 가집니다.
 
-### 2.2. CSMA (Carrier Sense Multiple Access)
+특징: 시간 슬롯을 사용하여 충돌 가능성을 줄이고, 전송 효율을 높입니다.
+
+## 2. CSMA (Carrier Sense Multiple Access)
 CSMA는 장치가 채널을 감지하고 빈 채널에서만 전송하는 방식입니다. 즉, 전송 전에 채널을 감지하고 채널이 비어있을 때만 데이터를 전송합니다.
 
-1-persistent CSMA:
+### 1-persistent CSMA:
 작동 원리: 채널을 감지한 후, 채널이 비어 있으면 바로 전송을 시작합니다. 만약 채널이 사용 중이면, 계속 감지하다가 채널이 비면 바로 전송합니다.
 
 문제점: 채널이 비어 있을 때만 전송하므로, 여러 장치가 동시에 전송을 시도할 경우 충돌이 발생할 수 있습니다.
 
-Non-persistent CSMA:
+### Non-persistent CSMA:
 작동 원리: 채널을 감지하고 채널이 비어 있을 때만 전송하지만, 채널이 사용 중이면 랜덤 시간 후 다시 시도합니다.
 
 장점: 충돌 확률이 낮아지고, 비효율적인 채널 사용을 방지할 수 있습니다.
 
-p-persistent CSMA:
+### p-persistent CSMA:
 작동 원리: 슬롯 방식으로 채널이 비어 있을 때, 전송 시도를 확률적으로 결정합니다. 전송 시도 확률이 p로 주어집니다.
 
 예를 들어, 확률 p에 따라 전송 시도를 하고, **확률 (1-p)**에 따라 다시 기다린다는 방식입니다.
 
-### 2.3. CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+## 3. CSMA/CD (CSMA with Collision Detection)
 CSMA/CD는 충돌 감지를 통해 충돌 발생 시 재전송하는 방식입니다. 이는 이더넷과 같은 유선 네트워크에서 사용됩니다.
 
 작동 원리: 장치는 채널을 감지하고, 채널이 비어 있을 때만 전송합니다. 충돌이 발생하면, 충돌 감지 후 전송을 중지하고, 랜덤 시간 후 재전송합니다.
+
+필요한 최소 프레임 크기: Tfr ≥ 2 × Tp, 여기서 Tp는 전파 시간입니다.
 
 장점: 충돌을 감지하여 빠르게 재전송을 시도함으로써 전송 효율을 높입니다.
 
 단점: 충돌이 자주 발생하면 효율이 떨어지고, 재전송 시간이 비효율적일 수 있습니다.
 
+## 4. CSMA/CA(CSMA with Collision Avoidance)
+CSMA/CA는 충돌 회피를 위한 프로토콜로, 주로 무선 LAN에서 사용됩니다. 충돌 발생 전 예방을 목표로 합니다.
+
+작동 원리:
+
+**RTS/CTS (Request to Send / Clear to Send)**를 사용하여 충돌을 미리 방지합니다.
+
+**IFS (Interframe Space)**와 Contention Window 등을 사용하여 충돌 가능성을 줄이고 네트워크의 혼잡을 피합니다.
 
 # 참고
 * *Data Communications and Networking with TCP/IP Protocol Suite, Sixth Edition* - Behrouz A, Forouzan
