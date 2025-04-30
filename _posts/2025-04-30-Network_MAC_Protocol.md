@@ -20,7 +20,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 # Media Access Control
 **MAC 프로토콜**: 네트워크 내 여러 장치가 동일한 통신 매체를 사용할 때 어떤 방식으로 전송 권한을 부여할 것인지를 정의한다.
 
-1. Random Access Protocol
+1. <mark>Random Access Protocol</mark>
     * ALOHA
     * CSMA(Carrier Sense Multiple Access)
     * CSMA/CD(CSMA/Collision Detection)

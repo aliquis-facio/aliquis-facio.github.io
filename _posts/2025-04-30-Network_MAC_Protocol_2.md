@@ -6,7 +6,7 @@ sitemap:
     priority:
 
 title: "[NETWORK] MAC Protocol"
-excerpt: "Random Access Protocol"
+excerpt: "Controlled Access Protocol"
 
 date: 2025-04-30
 last_modified_at: 
@@ -25,7 +25,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
     * CSMA(Carrier Sense Multiple Access)
     * CSMA/CD(CSMA/Collision Detection)
     * CSMA/CA(CSMA/Collision Avoidance)
-1. Controlled Access Protocol
+1. <mark>Controlled Access Protocol</mark>
     * Reservation
     * Polling
     * Token Passing
