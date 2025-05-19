@@ -23,7 +23,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 * **매체 접근 시점 결정**: 각 노드는 우선순위 없이 전송을 자유롭게 시도한다
 * **매체 상태 대응**: 신경 쓰지 않는다 ~~상남자 메타~~
 * **전송 성공/실패 판단**: 평상시보다 에너지 레벨이 2배가 된다
-![Detect a collision](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-19-1.jpg?raw=true)
+![Detect a collision](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-19-1.png?raw=true)
 * **충돌 처리**: 각 장치는 충돌을 감지하고 랜덤한 시간을 기다린 후 재전송을 시도한다
 
 ## Random Access 특징
@@ -54,6 +54,15 @@ time-out 시간 내에 ACK를 받지 못한 경우, 송신자는 frame이 파괴
 timeout 시간이 지난 후에, 각 노드들은 재전송을 하기 전에 랜덤한 시간을 기다린다.  
 이 랜덤한 시간을 random backoff time T<sub>b</sub>이라 한다.  
 재전송으로 인한 채널의 congesting을 막기 위해, 재전송 최대 시도 횟수 K<sub>max</sub>을 시도한 후, 노드들은 전송을 포기하고 나중에 다시 시도한다.
+
+T<sub>p</sub>: 최대 전송 지연 시간(Maximum Propagation Delay)
+Time-out period: 2 * T<sub>p</sub>, S -> R, R -> S 총 2번의 데이터 전송을 고려
+R: 랜덤값
+0 <= R <= 2<sup>K</sup>-1
+K: 전송 실패 횟수
+K<sub>max</sub>: 보통 15
+T<sub>fr</sub>: 평균 frame 전송 시간
+Backoff time - T<sub>B</sub>: T<sub>B = R * T<sub>p</sub> or T<sub>B = R * T<sub>fr</sub>
 
 ### Slotted ALOHA (슬롯형 ALOHA):
 작동 원리: 전송을 시간 슬롯에 맞춰 시도합니다. 각 장치는 정해진 슬롯에 전송을 시도하고, 충돌이 발생하면 랜덤한 슬롯 후에 재전송을 시도합니다.
