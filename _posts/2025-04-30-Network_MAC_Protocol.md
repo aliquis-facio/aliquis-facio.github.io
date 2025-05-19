@@ -55,8 +55,9 @@ Main Idea
 * **K**: 전송 실패 횟수
 * <b>K<sub>max</sub></b>: 보통 15
 * <b>T<sub>fr</sub></b>: 평균 frame 전송 시간
-* <b>Backoff time - T<sub>B</sub></b>: 
-$$T_B = R \times {T_p}$$ or $$T_B = R \times {T_{fr}}$$
+* <b>Backoff time - T<sub>B</sub></b>
+    * $$T_B = R \times {T_p}$$
+    * $$T_B = R \times {T_{fr}}$$
 
 문제점
 ![Pure_ALOHA_Problem](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
