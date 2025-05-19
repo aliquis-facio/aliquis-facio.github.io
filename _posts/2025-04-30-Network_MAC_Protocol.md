@@ -21,7 +21,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 복수의 사용자들이 하나의 채널(공유 매체)을 두고 서로 경쟁하며 나누어쓰는 방식이다.
 
 * **매체 접근 시점 결정**: 각 노드는 우선순위 없이 전송을 자유롭게 시도한다
-* **매체 상태 대응**: 신경 쓰지 않는다 ~~상남자 메타~~
+* **매체 상태 대응**: 신경 쓰지 않는다.  
+~~상남자 메타~~
 * **전송 성공/실패 판단**: 평상시보다 에너지 레벨이 2배가 된다
 ![Detect a collision](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-19-1.png?raw=true)
 * **충돌 처리**: 각 장치는 충돌을 감지하고 랜덤한 시간을 기다린 후 재전송을 시도한다
@@ -49,12 +50,12 @@ Main Idea
 1. timeout 시간 내에 ACK를 받지 못한 경우, 송신자는 frame이 파괴-충돌된 것이라고 보고, 재송신한다.
 
 * $$T_p$$: 최대 전송 지연 시간(Maximum Propagation Delay)
-* Time-out period: 2 * T<sub>p</sub>, S -> R, R -> S 총 2번의 데이터 전송을 고려
-* R: 랜덤값, 0 <= R <= 2<sup>K</sup>-1
-* K: 전송 실패 횟수
-* K<sub>max</sub>: 보통 15
-* T<sub>fr</sub>: 평균 frame 전송 시간
-* Backoff time - T<sub>B</sub>: T<sub>B = R * T<sub>p</sub> or T<sub>B = R * T<sub>fr</sub>
+* $$Time-out period$$: $$2 \times {T_p}$$, S -> R, R -> S 총 2번의 데이터 전송을 고려
+* $$R$$: 랜덤값, $$0 <= R <= 2^K-1$$
+* $$K$$: 전송 실패 횟수
+* $$K_{max}$$: 보통 15
+* $$T_{fr}$$: 평균 frame 전송 시간
+* $$Backoff time$$ - $$T_B$$: $$T_B = R \times {T_p}$$ or $$T_B = R \times {T_{fr}}
 
 문제점
 ![Pure_ALOHA_Problem](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
@@ -68,7 +69,7 @@ Main Idea
 Vulnerable time
 ![Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
 충돌 가능성이 큰 기간
-Pure ALOHA의 vulnerable time: 2 * T<sub>fr</sub>
+Pure ALOHA의 vulnerable time: $$2 \times {T_{fr}}$$
 
 Throughput
 
