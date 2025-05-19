@@ -49,13 +49,14 @@ Main Idea
 1. 수신자로부터 ACK를 받았다면 성공적으로 통신을 끝낸다.  
 1. timeout 시간 내에 ACK를 받지 못한 경우, 송신자는 frame이 파괴-충돌된 것이라고 보고, 재송신한다.
 
-* $$T_p$$: 최대 전송 지연 시간(Maximum Propagation Delay)
-* $$Time-out period$$: $$2 \times {T_p}$$, S -> R, R -> S 총 2번의 데이터 전송을 고려
-* $$R$$: 랜덤값, $$0 <= R <= 2^K-1$$
-* $$K$$: 전송 실패 횟수
-* $$K_{max}$$: 보통 15
-* $$T_{fr}$$: 평균 frame 전송 시간
-* $$Backoff time$$ - $$T_B$$: $$T_B = R \times {T_p}$$ or $$T_B = R \times {T_{fr}}
+* <b>T<sub>p</sub></b>: 최대 전송 지연 시간(Maximum Propagation Delay)
+* **Time-out period**: $$2 \times {T_p}$$, S -> R, R -> S 총 2번의 데이터 전송을 고려
+* **R**: 랜덤값, $$0 <= R <= 2^K-1$$
+* **K**: 전송 실패 횟수
+* <b>K<sub>max</sub></b>: 보통 15
+* <b>T<sub>fr</sub></b>: 평균 frame 전송 시간
+* <b>Backoff time - T<sub>B</sub></b>: 
+$$T_B = R \times {T_p}$$ or $$T_B = R \times {T_{fr}}
 
 문제점
 ![Pure_ALOHA_Problem](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
