@@ -48,6 +48,14 @@ Main Idea
 1. 수신자로부터 ACK를 받았다면 성공적으로 통신을 끝낸다.  
 1. timeout 시간 내에 ACK를 받지 못한 경우, 송신자는 frame이 파괴-충돌된 것이라고 보고, 재송신한다.
 
+* $$T_p$$: 최대 전송 지연 시간(Maximum Propagation Delay)
+* Time-out period: 2 * T<sub>p</sub>, S -> R, R -> S 총 2번의 데이터 전송을 고려
+* R: 랜덤값, 0 <= R <= 2<sup>K</sup>-1
+* K: 전송 실패 횟수
+* K<sub>max</sub>: 보통 15
+* T<sub>fr</sub>: 평균 frame 전송 시간
+* Backoff time - T<sub>B</sub>: T<sub>B = R * T<sub>p</sub> or T<sub>B = R * T<sub>fr</sub>
+
 문제점
 ![Pure_ALOHA_Problem](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
 * 2개 이상의 노드에서 보낸 데이터가 충돌했을 때, 이 모든 노드들이 timeout 시간 후에 재전송을 하게 되면 또 다시 frame이 충돌하게 된다.
@@ -57,24 +65,18 @@ Main Idea
 1. 이 랜덤한 시간을 random backoff time T<sub>b</sub>이라 한다.  
 1. 재전송으로 인한 채널의 congesting을 막기 위해, 재전송 최대 시도 횟수 K<sub>max</sub>을 시도한 후, 노드들은 전송을 포기하고 나중에 다시 시도한다.
 
-* T<sub>p</sub>: 최대 전송 지연 시간(Maximum Propagation Delay)
-* Time-out period: 2 * T<sub>p</sub>, S -> R, R -> S 총 2번의 데이터 전송을 고려
-* R: 랜덤값, 0 <= R <= 2<sup>K</sup>-1
-* K: 전송 실패 횟수
-* K<sub>max</sub>: 보통 15
-* T<sub>fr</sub>: 평균 frame 전송 시간
-* Backoff time - T<sub>B</sub>: T<sub>B = R * T<sub>p</sub> or T<sub>B = R * T<sub>fr</sub>
-
 Vulnerable time
 ![Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
 충돌 가능성이 큰 기간
 Pure ALOHA의 vulnerable time: 2 * T<sub>fr</sub>
 
 Throughput
+
 $$
 S = G \times {e^{-2G}}
 $$
-S: throughput, 성공적인 전송률
+
+S: throughput, 성공적인 전송률  
 G: 트래픽 강도(Traffic Intensity), 초당 평균 전송 시도 횟수
 
 ### Slotted ALOHA (슬롯형 ALOHA):
