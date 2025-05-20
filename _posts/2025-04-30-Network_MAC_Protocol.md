@@ -91,7 +91,7 @@ S_{max} = 0.184 \; when \; G = 1/2$$
 전송을 시간 슬롯에 맞춰 시도한다. 각 장치는 정해진 슬롯에 전송을 시도하고, 충돌이 발생하면 랜덤한 슬롯 후에 재전송을 시도한다.
 
 #### 1.2.1. Vulnerable time
-![Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-.jpg?raw=true)
+![Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-1.jpg?raw=true)
 
 Slotted ALOHA vulnerable time: $${T_{fr}}$$
 
@@ -103,22 +103,81 @@ S_{max} = 0.368 when G = 1
 $$
 
 ## 2. CSMA (Carrier Sense Multiple Access)
-CSMA는 장치가 채널을 감지하고 빈 채널에서만 전송하는 방식입니다. 즉, 전송 전에 채널을 감지하고 채널이 비어있을 때만 데이터를 전송합니다.
+CSMA: <mark>채널 감지 다중 접속</mark> 방식이다. <mark>송신 전 매체를 먼저 감지(carrier sense)</mark>하고, 비어 있으면 전송, 사용 중이면 기다리는 것이다.
 
-### 1-persistent CSMA:
-작동 원리: 채널을 감지한 후, 채널이 비어 있으면 바로 전송을 시작합니다. 만약 채널이 사용 중이면, 계속 감지하다가 채널이 비면 바로 전송합니다.
+### 동작 흐름
+![CSMA_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-2.jpg?raw=true)
+1. Station은 전송하려는 데이터가 생기면,
+1. 매체가 사용 중인지 먼저 감지한다 (Carrier Sense).
+1. 매체가 idle(비어 있으면) 즉시 or 일정 규칙에 따라 전송한다.
+1. 매체가 busy(사용 중)이면 대기하거나 재시도한다.
 
-문제점: 채널이 비어 있을 때만 전송하므로, 여러 장치가 동시에 전송을 시도할 경우 충돌이 발생할 수 있습니다.
+![CSMA_Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-3.jpg?raw=true)
+Vulnerable time: propagation time T<sub>p</sub>
 
-### Non-persistent CSMA:
-작동 원리: 채널을 감지하고 채널이 비어 있을 때만 전송하지만, 채널이 사용 중이면 랜덤 시간 후 다시 시도합니다.
+### Persistence Methods
+채널이 busy할 때 어떻게 할 것인가?
+1. 1-Persistent
+1. Nonpersistent
+1. p-Persistent
 
-장점: 충돌 확률이 낮아지고, 비효율적인 채널 사용을 방지할 수 있습니다.
+<table>
+    <thead>
+        <tr>
+            <th>유형</th>
+            <th>동작 방식</th>
+            <th>특징</th>
+            <th>충돌 가능성</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><mark>1-persistent CSMA</mark></td>
+            <td>매체가 비면 <mark>즉시 전송</mark></td>
+            <td>가장 단순하지만 충돌 위험 ↑</td>
+            <td><mark>높음</mark></td>
+        </tr>
+        <tr>
+            <td><mark>non-persistent CSMA</mark></td>
+            <td>매체가 사용 중이면 <mark>랜덤 시간 대기 후 재시도</mark></td>
+            <td>혼잡 회피 효과 있음</td>
+            <td><mark>중간</mark></td>
+        </tr>
+        <tr>
+            <td><mark>p-persistent CSMA</mark> (슬롯 기반)</td>
+            <td>매체가 비면 <mark>확률 p로 전송</mark>, (1-p)면 대기</td>
+            <td>주로 <mark>슬롯 기반 네트워크</mark>에서 사용</td>
+            <td><mark>낮음</mark></td>
+        </tr>
+    </tbody>
+</table>
 
-### p-persistent CSMA:
-작동 원리: 슬롯 방식으로 채널이 비어 있을 때, 전송 시도를 확률적으로 결정합니다. 전송 시도 확률이 p로 주어집니다.
+#### 1-Persistent
+![1-Persistent_Behavior](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-4.jpg?raw=true)
+![1-Persistent_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-5.jpg?raw=true)
+1. idle할 때, (확률 1로) 바로 보낸다
 
-예를 들어, 확률 p에 따라 전송 시도를 하고, **확률 (1-p)**에 따라 다시 기다린다는 방식입니다.
+#### Nonpersistent
+![Nonpersistent_Behavior](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-6.jpg?raw=true)
+![Nonpersistent_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-7.jpg?raw=true)
+
+1. 전송하려는 장치가 먼저 채널을 감지한다.
+1. idle하면, 즉시 전송한다.
+1. busy하면, 랜덤한 시간만큼 기다린 뒤 다시 감지를 반복한다.
+    * 즉시 재시도하지 않는다(non-persistent)
+    * 혼잡이 완화될 때까지 무작위 대기한다
+
+#### p-Persistent
+![p-Persistent_Behavior](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-8.jpg?raw=true)
+![p-Persistent_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-9.jpg?raw=true)
+
+1. 스테이션이 데이터를 전송하려고 할 때, 먼저 매체가 비어 있는지 감지한다.
+1. idle할 때,
+    * 확률 p로 전송한다
+    * 확률 **(1 − p)**로 전송을 슬롯 시간만큼 지연하고 다시 1번 단계로 돌아간다
+1. busy할 때, 채널이 비어질 때까지 기다린다
+
+p값이 작을수록 더 기다리고, 증가할수록 즉시 전송하게 된다
 
 ## 3. CSMA/CD (CSMA with Collision Detection)
 CSMA/CD는 충돌 감지를 통해 충돌 발생 시 재전송하는 방식입니다. 이는 이더넷과 같은 유선 네트워크에서 사용됩니다.
