@@ -5,7 +5,7 @@ sitemap:
     changefreq:
     priority:
 
-title: "[NETWORK]"
+title: "[NETWORK] "
 excerpt: ""
 
 date: 2025-05-27
@@ -17,19 +17,20 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 # 목차
 
-📘 Chapter 3.4: Link-Layer Addressing (링크 계층 주소 지정)
-✅ 왜 링크 계층 주소가 필요한가?
-IP 주소는 종단 간 주소지만, 실제 데이터 전송은 **링크 단위(hop-by-hop)**로 이루어짐
+# 왜 링크 계층 주소가 필요한가?
+IP 주소는 종단 간 주소지만, 실제 데이터 전송은 **링크 단위(hop-by-hop)**로 이루어진다.
 
-라우터는 매 홉마다 프레임을 새로 구성하며, 해당 홉의 출발지/도착지 **링크 계층 주소(MAC)**를 사용
+라우터는 매 홉마다 프레임을 새로 구성하며, 해당 홉의 출발지/도착지 **링크 계층 주소(MAC)**를 사용한다.
 
 🔁 즉, **네트워크 계층(IP)**은 출발지~목적지 전체 경로,
-**데이터링크 계층(MAC)**은 링크 단위의 다음 홉 경로를 위한 주소 지정
+**데이터링크 계층(MAC)**은 링크 단위의 다음 홉 경로를 위한 주소 지정한다.
 
-🧩 MAC 주소란?
-48비트(6바이트): A3:34:45:11:92:CC처럼 16진수 12자리
+# MAC 주소란?
+48비트(6바이트): 16진수 12자리
+A3:34:45:11:92:CC
 
 NIC(Network Interface Card)에 전역적으로 고유하게 할당
+-> locally unique하다
 
 다른 이름: Link-layer address, Physical address
 
@@ -37,11 +38,32 @@ NIC(Network Interface Card)에 전역적으로 고유하게 할당
 
 Windows: ipconfig /all, getmac -v
 
-🧭 MAC 주소의 세 가지 유형
-유형	설명
-Unicast	1:1 통신 (특정 수신자 MAC 주소 사용)
-Multicast	1:다 통신 (MAC 주소의 첫 바이트의 LSB가 1인 경우) 예: 01:00:5E:...
-Broadcast	1:모두 통신 (모든 비트가 1인 주소) 예: FF:FF:FF:FF:FF:FF
+# MAC 주소의 세 가지 유형
+<table>
+    <thead>
+        <tr>
+            <th>유형</th>
+            <th>설명</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Unicast</td>
+            <td>1:1 통신 (특정 수신자 MAC 주소 사용)</td>
+        </tr>
+        <tr>
+            <td>Multicast</td>
+            <td>1:다 통신 (MAC 주소의 첫 바이트의 LSB가 1인 경우)
+            <br>e.g. 01:00:5E:01:02:03</td>
+        </tr>
+        <tr>
+            <td>Broadcast</td>
+            <td>1:모두 통신 (모든 비트가 1인 주소)
+            <br>e.g. FF:FF:FF:FF:FF:FF</td>
+        </tr>
+    </tbody>
+</table>
+
 
 🔄 MAC 주소와 IP 주소의 연결: ARP (Address Resolution Protocol)
 📌 ARP란?
