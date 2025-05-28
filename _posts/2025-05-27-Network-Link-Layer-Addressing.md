@@ -22,20 +22,19 @@ IP 주소는 종단 간 주소지만, 실제 데이터 전송은 **링크 단위
 
 라우터는 매 홉마다 프레임을 새로 구성하며, 해당 홉의 출발지/도착지 **링크 계층 주소(MAC)**를 사용한다.
 
-🔁 즉, **네트워크 계층(IP)**은 출발지~목적지 전체 경로,
+즉, **네트워크 계층(IP)**은 출발지~목적지 전체 경로,
 **데이터링크 계층(MAC)**은 링크 단위의 다음 홉 경로를 위한 주소 지정한다.
 
 # MAC 주소란?
-48비트(6바이트): 16진수 12자리
-A3:34:45:11:92:CC
+![PDU](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-6.jpg?raw=true)
 
-NIC(Network Interface Card)에 전역적으로 고유하게 할당
+NIC(Network Interface Card)에 전역적으로 고유하게 할당되어있는 주소이다. 총 48비트(6바이트), 16진수 12자리로 구성되어있다.
 -> locally unique하다
+e.g. A3:34:45:11:92:CC
 
 다른 이름: Link-layer address, Physical address
 
-📌 확인 명령어:
-
+확인 명령어:
 Windows: ipconfig /all, getmac -v
 
 # MAC 주소의 세 가지 유형
@@ -64,14 +63,12 @@ Windows: ipconfig /all, getmac -v
     </tbody>
 </table>
 
+# ARP (Address Resolution Protocol)
+![ARP](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-5.jpg?raw=true)
 
-🔄 MAC 주소와 IP 주소의 연결: ARP (Address Resolution Protocol)
-📌 ARP란?
-IP 주소 → MAC 주소로 변환하는 프로토콜
+ARP: IP 주소 → MAC 주소로 변환하는 프로토콜이다. 네트워크 계층과 링크 계층 간의 주소 변환 다리 역할을 한다.
 
-네트워크 계층과 링크 계층 간의 주소 변환 다리 역할
-
-동작 위치: TCP/IP 모델상 네트워크 계층, 그러나 MAC 주소를 다루므로 cross-layer 프로토콜
+동작 위치: TCP/IP 모델상 네트워크 계층, 그러나 MAC 주소를 다루므로 <mark>cross-layer</mark> 프로토콜
 
 📑 ARP 동작 과정
 송신자 A는 수신자 B의 IP 주소는 알지만 MAC 주소는 모름
