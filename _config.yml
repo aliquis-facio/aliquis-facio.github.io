@@ -27,7 +27,8 @@ paginate:         5
                     # Or '/blog/page:num' if you want to move your index pages
 
 # Jekyll
-permalink:        /:year/:month/:day/:title.html
+# permalink:        /:year/:month/:day/:title.html
+permalink:        /:title/
 markdown:         kramdown
 highlighter:      rouge
 kramdown:
