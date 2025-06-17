@@ -25,6 +25,7 @@ tags: [BLOG]
 
 # 3. post.html
 블로그 글이랑 가장 직접적인 연관이 많은 post.html 먼저 수정해보기로 함.  
+```html
 date 관련된 code 원본: `<h4>Date: {{ page.date | date_to_string }}</h4>`
 1. `<h4>Date: {{ page.date | %Y.%m.%d }}</h4>`
 -> Date: 2024-10-17 00:00:00 +0000
@@ -34,6 +35,7 @@ date 관련된 code 원본: `<h4>Date: {{ page.date | date_to_string }}</h4>`
 -> Date: 2024-10-17 00:00:00 +0000
 1. `<h4>Date: {{ page.date | date: "%Y %m %d %a" }}</h4>`
 -> Date: 2024 10 17 Thu
+```
 
 # 4. 'updated date' 추가
 각각의 파일에 코드 추가  
@@ -45,7 +47,7 @@ end
 ```
 
 1. _config.yml  
-```
+```yml
 plugins:
   - jekyll-last-modified-at
 # Optional. The default date format, used if none is specified in the tag.
@@ -54,7 +56,9 @@ last-modified-at:
 ```
 
 1. post.html  
+```
 `<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
+```
 -> 
 ```
 Created: 2024.10.17 Thu
