@@ -6,7 +6,7 @@ sitemap:
     priority:
 
 title: "[NETWORK] "
-excerpt: ""
+excerpt: "L2 - Datalink Layer"
 
 date: 2025-05-27
 last_modified_at: 

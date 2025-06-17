@@ -5,14 +5,14 @@ sitemap:
     changefreq:
     priority:
 
-title: "[DATE SCIENCE] 한글 텍스트 데이터 토큰화(Tokenization)"
+title: "[DATA SCIENCE] 한글 텍스트 데이터 토큰화(Tokenization)"
 excerpt: "토큰화와 한글 텍스트 데이터 토큰화 실습"
 
 date: 2025-03-16
 last_modified_at: 
 
-categories: [DATE SCIENCE]
-tags: [DATE SCIENCE, TIL]
+categories: [DATA SCIENCE]
+tags: [DATA SCIENCE, TIL]
 ---
 
 # 토큰화(Tokenization)
