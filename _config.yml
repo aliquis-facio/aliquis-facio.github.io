@@ -7,7 +7,7 @@ title:            Blog
 tagline:          ''
 description:      ''
 url:              https://aliquis-facio.github.io
-baseurl:          '/hydeout'
+baseurl:          '/aliquis-facio.github.io'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
@@ -15,8 +15,8 @@ baseurl:          '/hydeout'
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:           ''
+  url:            
 
 paginate:         5
 # paginate_path:    '/page:num'
@@ -54,12 +54,12 @@ sidebar_home_link:  true
                                 # to enable a separate blog link.
 
 disqus:
-  shortname:      hydeout
+  shortname:      
 
-google_analytics: UA-100461102-1
+google_analytics: 
 
 # Used for Hydeout's own Github page. Feel free to remove for your
 # own fork.
 hydeout:
-  version:          5.0.2
-  repo:             https://github.com/fongandrew/hydeout
+  version:          
+  repo:             
