@@ -1,44 +1,207 @@
-# Created
-1. [Github Pages 만들기 1](/Github_Pages_Making_1)
-1. [Github Pages 만들기 2](/Github_Pages_Making_2)
-1. [Github Pages 만들기 3](/Github_Pages_Making_3)
-1. [Google Analytics 등록하기](/Github_Pages_Google_Analytics)
-1. [Post 작성하기 위한 Markdown 문법 공부 일지](/Markdown_Syntax)
-1. [Post 작성하기 위한 Image 등록 테스트](/Github_Pages_Image_Test)
+# Hydeout
 
-# Modified
-1. ~~2022-10-23-응용통계학 정리 클릭하면 2022-10-31-응용통계학 기댓값, 분산, 표준편차 포스트로 이동함.~~  
-    -> 파일 제목이 같으면 가장 최신 파일 쪽으로 이동하는 듯.
-1. [포스트 만든 날짜, 수정 날짜 구분해서 올리고 싶음](/Github_Pages_Header_Date_Format_Changing)
-1. [github.io 블로그 구글 검색에 개시하기](/github_google_search_등록)
-1. [sitemap 수정하고 나서 post-list에서 이상하게 보임](/github_blog_post_list_layout_fix)
-1. category
-1. pagination
-1. ~~Google Search Console에 적용이 끝나면 모든 포스트에다가 sitemap 적용시켜줘야 함~~
+Hydeout updates the original [Hyde](https://github.com/poole/hyde)
+theme for [Jekyll](http://jekyllrb.com) 3.x and 4.x and adds new functionality.
 
-# Update List
-## Functional
-- [ ] 카테고리 기능
-    - [ ] 카테고리 메뉴바 디자인
-    - [ ] 2단계 카테고리
-    - [X] 1단계 카테고리
-- [ ] 조회수 표시
-    - [ ] hits
-    - [ ] 구글 애널리틱스
-- [ ] pagination 적용
-- [ ] ~~last_modified_at을 xml과 동일하게 last_mod로 바꾸기~~
-- [ ] post 정렬 순서 설정: CREATED_TIME -> POST FILE NAME
-- [ ] tag와 category의 기능 구분
+![Desktop](/_screenshots/1.png?raw=true)
+<img alt="Mobile home page" src="/_screenshots/2.png?raw=true" width="300px" />
+<img alt="Mobile post page" src="/_screenshots/3.png?raw=true" width="300px" />
 
-## Design
-- [ ] POST LIST: LOAD 애니메이션 수정
-- [ ] 글씨 보여지는 곳, 가운데 화면이차지하는 부분이 너무 적음. 양 옆 여백이 너무 넓음.
-- [ ] 포스트 만든 날짜, 수정 날짜가 창의 width가 줄어들면 updated date가 두 줄로 변하는 데 차라리 글씨 크기가 줄어들거나 created랑 updated가 가로로 나열되는 게 아니라 세로로 나열되게끔 바꾸고 싶음.
+## ✅ Jekyll 4.x Branch
+
+**You're viewing the Jekyll 4.x compatible branch (recommended for all new projects).**
+
+This branch includes:
+- Full Jekyll 4.x compatibilityTha
+- GitHub Pages deployment support
+- Modern Sass modules
+- Updated dependencies
+- Performance improvements
+- Bug fixes
+
+## Usage
+
+Hydeout is available as the `jekyll-theme-hydeout` Ruby Gem.
+Add `gem "jekyll-theme-hydeout", "~> 5.0"` to your Gemfile and run
+`bundle install`.
+
+### GitHub Pages Support
+
+**Important:** Jekyll 4.x requires GitHub Actions for GitHub Pages deployment, as the default GitHub Pages builder only supports Jekyll 3.x.
+
+To use this theme with GitHub Pages, set up a GitHub Actions deployment:
+- Use our [workflow file](https://github.com/fongandrew/hydeout/blob/jekyll-v4/.github/workflows/jekyll-build.yml) as a template.
+- Update the branch name in the workflow to match your main branch
+- Enable GitHub Pages in your repository settings with the source set to "GitHub Actions"
+
+See https://jekyllrb.com/docs/continuous-integration/github-actions/ for more information.
+
+### Pagination Setup
+
+Hydeout uses pagination, so if you have an `index.md`, you'll need to swap
+it with an `index.html` that uses the `index` layout:
+
 ```
-width < x:
-    created, updated -> 세로로 나열
-    or
-    created, updated -> 폰트 사이즈 줄이기
+---
+layout: index
+title: Home
+---
 ```
-- [ ] h1 ... h6 태그 글자 최소 크기 설정하기
-- [ ] pre 태그 내부는 글씨체를 \\(역슬래시)가 한국통화로 안 나오게 바꿔야겠다.
+
+You'll also need to add a setting to `_config.yml` telling Jekyll how many posts
+to include per page (e.g. `paginate: 5`).
+
+### Keep It Simple
+
+In keeping with the original Hyde theme, Hydeout aims to keep the overall
+design lightweight and plugin-free. JavaScript is currently limited only
+to Disqus and Google Analytics (and is only loaded if you provide configuration
+variables).
+
+Hydeout makes heavy use of Flexbox in its CSS. If Flexbox is not available,
+the CSS degrades into a single column layout.
+
+### Customization
+
+Hydeout replaces Hyde's class-based theming with the use
+of the following SASS variables:
+
+```scss
+$sidebar-bg-color: #202020 !default;
+$sidebar-fg-color: white !default;
+$sidebar-sticky: true !default;
+$layout-reverse: false !default;
+$link-color: #268bd2 !default;
+```
+
+To override these variables, define your own variables inside a SASS file
+in the `assets/css/` directory.
+Then `@use` that file in your own `assets/css/main.scss` file, like so:
+
+```scss
+---
+# Jekyll needs front matter for SCSS files
+---
+
+@use "colours";
+@use "hydeout/variables" with (
+  $body-bg:           colours.$grey,
+  $body-color:        white,
+  $heading-color:     colours.$light-pink,
+  $link-color:        colours.$green,
+  $sidebar-bg-color:  colours.$dark-pink,
+  $sidebar-sticky:    false,
+  );
+@use "hydeout";
+```
+
+Example content of `assets/css/colours.scss`:
+
+```scss
+$green:       #61c200;
+$grey:        #363636;
+$dark-pink:   #9f0647;
+$light-pink:  #f0a2c3;
+```
+
+See the [_variables](_sass/hydeout/_variables.scss) file for other variables
+you can override.
+
+**Pay attention to the namespace of the variables you intend to override, otherwise, you will probably experience errors.**
+
+You can see the full set of partials you can replace in the
+[`_includes`](_includes) folder, but there are a few worth noting:
+
+* `_includes/copyright.html` - Insert your own copyright here.
+
+* `_includes/custom-head.html` - Insert custom head tags (e.g. to load your
+  own stylesheets)
+
+* `_includes/custom-foot.html` - Insert custom elements at the end of the
+  body (e.g. for custom JS)
+
+* `_includes/custom-nav-links.html` - Additional nav links to insert at the
+  end of the list of links in the sidebar.
+
+  Pro-tip: The `nav`s in the sidebar are flexboxes. Use the `order` property
+  to order your links.
+
+* `_includes/custom-icon-links.html`- Additional icon links to insert at the
+  end of the icon links at the bottom of the sidebar. You can use the `order`
+  property to re-order.
+
+* `_includes/favicons.html` - Replace references to `favicon.ico` and
+  `favicon.png` with your own favicons references.
+
+* `_includes/font-includes.html` - The Abril Fatface font used for the site
+  title is loaded here. If you're overriding that font in the CSS, be sure
+  to also remove the font load reference here.
+
+### New Features
+
+* Hydeout adds a new tags page (accessible in the sidebar). Just create a
+  new page with the tags layout:
+
+  ```
+  ---
+  layout: tags
+  title: Tags
+  ---
+  ```
+
+* Hydeout adds a new "category" layout for dedicated category pages.
+  Category pages are automatically added to the sidebar. All other pages
+  must have `sidebar_link: true` in their front matter to show up in
+  the sidebar. To create a category page, use the `category` layout"
+
+  ```
+  ---
+  layout: category
+  title: My Category
+  ---
+
+  Description of "My Category"
+  ```
+
+* You can control how pages are sorted by using the `sidebar_sort_order`
+  parameter in the front matter. This works for both category and non-category
+  pages, although non-category pages will always come first. Take a look at
+  [`_includes/sidebar-nav-links.html`](./_includes/sidebar-nav-links.html) if
+  you want to customize this behavior.
+
+  ```
+  ---
+  layout: page
+  title: My page
+  sidebar_sort_order: 123
+  ---
+
+  Some content.
+  ```
+
+* A simple redirect-to-Google search is available. Just create a page with
+  the `search` layout.
+
+  ```
+  ---
+  layout: search
+  title: Google Search
+  ---
+  ```
+
+* Disqus integration is ready out of the box. Just add the following to
+  your config file:
+
+  ```yaml
+  disqus:
+    shortname: my-disqus-shortname
+  ```
+
+  If you don't want Disqus or want to use something else, override
+  `comments.html`.
+
+* For Google Analytics support, define a `google_analytics` variable with
+  your property ID in your config file.
+
+There's also a bunch of minor tweaks and adjustments throughout the
+theme. Hope this works for you!
