@@ -12,6 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,10 +24,13 @@ jobs:
           bundler: '2.6.9'
           bundler-cache: true
 
-      - name: Build Jekyll site
+      - name: Install dependencies
         run: |
+          gem install bundler
           bundle install
-          bundle exec jekyll build
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
