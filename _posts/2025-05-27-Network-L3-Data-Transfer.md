@@ -16,7 +16,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 ---
 
 # 목차
-# Chapter 07 – Network Layer: Data Transfer
+
+# Network Layer: Data Transfer
 네트워크 계층은 데이터를 출발지 호스트에서 목적지 호스트까지 경로를 설정하고 포워딩하는 기능을 수행한다.
 
 # 7.1 Services – 네트워크 계층의 주요 서비스
@@ -160,7 +161,8 @@ destination이 source에게 confirmation packet을 전송한다
 _MPLS 같은 네트워크에서 활용_
 
 # 7.3 Network Performance – 네트워크 성능
-① Delay (지연)
+
+## Delay (지연)
 종류	설명
 Transmission Delay	프레임을 전송하는 데 걸리는 시간
 Propagation Delay	신호가 매체를 따라 전파되는 시간
@@ -169,8 +171,8 @@ Queueing Delay	큐에서 대기하는 시간
 
 전체 지연 = (n+1)(전송 + 전파 + 처리 지연) + n(큐 지연)
 (n: 경유하는 라우터 수)
-
-② Throughput (처리량)
+x
+## Throughput (처리량)
 단위 시간당 전달되는 데이터 비트 수
 
 경로상 **가장 느린 링크의 속도(bottleneck)**에 의해 결정됨
@@ -178,12 +180,12 @@ Queueing Delay	큐에서 대기하는 시간
 Throughput = min(𝑇𝑅1,𝑇𝑅2,...,𝑇𝑅𝑛)
 Throughput=min(TR 1​ ,TR 2​ ,...,TR n )
 
-③ Packet Loss
+## Packet Loss
 라우터 버퍼가 가득 차면 패킷 드롭
 
 재전송이 혼잡 유발 → 악순환
 
-④ Congestion Control (혼잡 제어)
+## Congestion Control (혼잡 제어)
 네트워크 계층 자체는 혼잡 제어 기능 미흡
 
 **전송 계층(TCP)**에서 본격적으로 제어하나, 혼잡 원인을 네트워크 계층에서 이해하는 것도 중요

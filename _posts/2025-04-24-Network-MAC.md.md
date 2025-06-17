@@ -84,6 +84,5 @@ MAC 프로토콜은 크게 채널 접근 방식을 제어하는 규칙에 따라
 # 참고
 * [CSU - 정보통신용어사전](https://terms.tta.or.kr/dictionary/dictionaryView.do?subject=%EC%B1%84%EB%84%90+%EC%84%9C%EB%B9%84%EC%8A%A4+%EC%9E%A5%EC%B9%98)
 * [CSU/DSU (Channel Service Unit/Digital Service Unit)](https://blog.naver.com/jjws666/57133035)
-* []()
 * [데이터 링크 계층의 역할과 이더넷](https://velog.io/@kimmainsain/%EB%AA%A8%EB%91%90%EC%9D%98-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A0%95%EB%A6%AC-4)
 * *Data Communications and Networking with TCP/IP Protocol Suite, Sixth Edition* - Behrouz A, Forouzan
