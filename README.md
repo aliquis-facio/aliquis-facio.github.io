@@ -42,3 +42,19 @@ width < x:
 ```
 - [ ] h1 ... h6 태그 글자 최소 크기 설정하기
 - [ ] pre 태그 내부는 글씨체를 \\(역슬래시)가 한국통화로 안 나오게 바꿔야겠다.
+
+1. Jekyll download
+https://jekyllrb.com/docs/installation/
+밑에 있는 guides를 따라서 -> windows
+
+1.1. installing ruby and Jekyll
+installation via rubyinstaller
+https://rubyinstaller.org/downloads/
+-> Ruby+Devkit 3.4.4-2 (x64) 다운로드
+
+ruby 3.4.4-2
+Jekyll 4.4.1
+bundler 2.6.9
+
+https://github.com/fongandrew/hydeout/tree/master
+https://wikidocs.net/278188
