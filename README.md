@@ -52,9 +52,9 @@ installation via rubyinstaller
 https://rubyinstaller.org/downloads/
 -> Ruby+Devkit 3.4.4-2 (x64) 다운로드
 
-ruby 3.4.4-2
-Jekyll 4.4.1
-bundler 2.6.9
+* ruby 3.4.4-2
+* Jekyll 4.4.1
+* bundler 2.6.9
 
-https://github.com/fongandrew/hydeout/tree/master
-https://wikidocs.net/278188
+[https://github.com/fongandrew/hydeout/tree/master]
+[https://wikidocs.net/278188]
