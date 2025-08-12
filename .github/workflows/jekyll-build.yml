@@ -2,7 +2,7 @@ name: Build Jekyll Site
 
 on:
   push:
-    branches: [new_design]
+    branches: [jekyll-v4]
 
 permissions:
   contents: read
@@ -12,7 +12,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -20,17 +19,14 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4'
-          bundler: '2.6.9'
+          ruby-version: '3.2'
+          bundler: '2.6.8'
           bundler-cache: true
 
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-
       - name: Build Jekyll site
-        run: bundle exec jekyll build
+        run: |
+          bundle install
+          bundle exec jekyll build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
