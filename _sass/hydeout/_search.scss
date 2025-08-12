@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .search-row {
   border: 1px solid $border-color;
   border-radius: $border-radius;

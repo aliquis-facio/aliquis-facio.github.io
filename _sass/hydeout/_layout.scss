@@ -23,17 +23,17 @@
 */
 
 @use "sass:color";
-@use "variables" as vars;
+@use "variables" as *;
 
 body {
   background-attachment: fixed;
-  background-color: vars.$sidebar-bg-color;
+  background-color: $sidebar-bg-color;
   background-image: linear-gradient(
     to bottom,
-    color.adjust(vars.$sidebar-bg-color, $lightness: 7%),
-    color.adjust(vars.$sidebar-bg-color, $lightness: -7%)
+    color.adjust($sidebar-bg-color, $lightness: 7%),
+    color.adjust($sidebar-bg-color, $lightness: -7%)
   );
-  color: vars.$sidebar-text-color;
+  color: $sidebar-text-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
