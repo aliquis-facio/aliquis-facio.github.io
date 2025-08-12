@@ -22,11 +22,18 @@
   we want the sidebar or header to stretch.
 */
 
+@use "sass:color";
+@use "variables" as vars;
+
 body {
   background-attachment: fixed;
-  background-color: $sidebar-bg-color;
-  background-image: linear-gradient(to bottom, lighten($sidebar-bg-color, 7%), darken($sidebar-bg-color, 7%));
-  color: $sidebar-text-color;
+  background-color: vars.$sidebar-bg-color;
+  background-image: linear-gradient(
+    to bottom,
+    color.adjust(vars.$sidebar-bg-color, $lightness: 7%),
+    color.adjust(vars.$sidebar-bg-color, $lightness: -7%)
+  );
+  color: vars.$sidebar-text-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
