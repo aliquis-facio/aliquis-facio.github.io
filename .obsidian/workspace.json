@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "_posts/2025-07-04-Baekjoon-1966-Java.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "2025-07-04-Baekjoon-1966-Java"
             }
           }
         ]
@@ -194,7 +194,18 @@
   },
   "active": "3e4bb0afc1128209",
   "lastOpenFiles": [
+    "_image/2025-07-04-3.png",
+    "_image/2025-07-04-2.png",
+    "_image/2025-07-04-1.png",
     "_posts/2025-07-04-Baekjoon-1966-Java.md",
+    "_posts/2025-04-30-Network-MAC-Protocol.md",
+    "_posts/2025-04-30-Network-MAC-Protocol-2.md",
+    "_posts/2025-05-25-ESW.md",
+    "_posts/2025-05-25-ESW-2.md",
+    "_posts/2025-05-27-Network-L3-Data-Transfer.md",
+    "_posts/2025-05-27-Network-Link-Layer-Addressing.md",
+    "_posts/2025-06-25-CTF.md",
+    "README.md",
     "_posts/2025-01-11-CTF-CSRF-1.md",
     "_posts/2025-08-13-test.md",
     "_image/2025-05-28-9.jpg",
@@ -205,13 +216,10 @@
     "_image/2025-05-28-5.jpg",
     "_image/2025-05-28-3.jpg",
     "_image/2025-05-28-10.jpg",
-    "_image/2025-05-28-2.jpg",
-    "_image/2025-05-28-1.jpg",
     "_image",
     "_data/navigation.yml",
     "_data",
     "robots.txt",
-    "README.md",
     "LICENSE",
     "index.html",
     "Gemfile.lock",
@@ -231,15 +239,7 @@
     "categories/DATA SCIENCE.md",
     "categories/CTF.md",
     "about/index.md",
-    "_posts/2025-06-25-CTF.md",
-    "_posts/2025-05-27-Network-Link-Layer-Addressing.md",
-    "_posts/2025-05-27-Network-L3-Data-Transfer.md",
-    "_posts/2025-05-25-ESW.md",
-    "_posts/2025-04-30-Network-MAC-Protocol.md",
-    "_posts/2025-05-25-ESW-2.md",
-    "_posts/2025-04-30-Network-MAC-Protocol-2.md",
     "_posts/2025-04-24-Network-MAC.md.md",
-    "_posts/2025-04-22-OS-Process.md",
     "무제.canvas"
   ]
 }

@@ -58,5 +58,3 @@ https://rubyinstaller.org/downloads/
 
 * [https://github.com/fongandrew/hydeout/tree/master]
 * [https://wikidocs.net/278188]
-
-hello
