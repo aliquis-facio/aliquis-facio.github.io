@@ -48,11 +48,11 @@ sass:
 # =========================
 # Comments / Analytics
 # =========================
-# disqus:
-#   shortname:      github-io-wql9y9o0sz
+disqus:
+  shortname:      github-io-wql9y9o0sz
 
-# google:
-#   analytics:        G-6DVR5DH0EY
+google:
+  analytics:        G-6DVR5DH0EY
 
 # =========================
 # Social
