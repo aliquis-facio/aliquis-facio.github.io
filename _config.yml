@@ -80,17 +80,17 @@ plugins:
 # =========================
 # Exclude (빌드 가속/깨끗한 배포)
 # =========================
-# exclude:
-#   - README.md
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - package.json
-#   - package-lock.json
-#   - gulpfile.js
-#   - _site
-#   - vendor
-#   - CNAME
-#   - LICENSE
-#   - Rakefile
-#   # - src
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - vendor
+  - CNAME
+  - LICENSE
+  - Rakefile
+  # - _site
+  # - src
