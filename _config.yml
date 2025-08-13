@@ -16,18 +16,81 @@ author:
 
 # Sidebar link settings
 sidebar_home_link:  true
-# sidebar_blog_link:  /blog
+# sidebar_blog_link:  /blog # 블로그를 /blog로 쓰고 싶을 때 해제
+
+reading_time:     true
+words_per_minute: 200
+locale:           ko_KR
 
 # =========================
 # Jekyll core
 # =========================
 markdown:         kramdown
 highlighter:      rouge
+# permalink:        /:title/ # 고정링크
+# timezone:         Asia/Seoul # 빌드 타임존 명시
+
+# kramdown:
+#   auto_ids:       true # 제목 자동 앵커
+#   footnote_nr:    1
+#   entity_output:  as_char
+#   toc_levels:     1..6
+#   enable_coderay: false
+
+# # 수식
+# mathjax:          true
+
+# # SCSS 빌드
+# sass:
+#   sass_dir:       _sass
+#   style:          compressed
+
+# =========================
+# Comments / Analytics
+# =========================
+# disqus:
+#   shortname:      github-io-wql9y9o0sz
+
+# google:
+#   analytics:        G-6DVR5DH0EY
+
+# =========================
+# Social
+# =========================
+# github-url:       aliquis-facio
+# email:
+# twitter:
+# linkedin:
+# instagram:
 
 # =========================
 # Plugins (GitHub Pages 호환)
 # =========================
 plugins:
-  - jekyll-feed
+  - jekyll-feed # RSS 피드
   - jekyll-gist
   - jekyll-paginate
+  # - jekyll-sitemap # sitempa.xml 자동 생성
+  # - jekyll-seo-tag # SEO/OG 메타 태그 자동 생성
+  # - jekyll-mentions # @user -> github 링크 생성
+
+# jekyll-mentions:
+# base_url:         https://github.com
+
+# =========================
+# Exclude (빌드 가속/깨끗한 배포)
+# =========================
+# exclude:
+#   - README.md
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - package.json
+#   - package-lock.json
+#   - gulpfile.js
+#   - _site
+#   - vendor
+#   - CNAME
+#   - LICENSE
+#   - Rakefile
+#   # - src
