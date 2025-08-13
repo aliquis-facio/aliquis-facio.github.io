@@ -56,5 +56,5 @@ https://rubyinstaller.org/downloads/
 * Jekyll 4.4.1
 * bundler 2.6.9
 
-[https://github.com/fongandrew/hydeout/tree/master]
-[https://wikidocs.net/278188]
+* [https://github.com/fongandrew/hydeout/tree/master]
+* [https://wikidocs.net/278188]
