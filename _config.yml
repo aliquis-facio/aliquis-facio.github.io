@@ -1,94 +1,96 @@
+# =========================
 # Site
-title:              PI
-bio:                "Was is a cat I saw?"
-description:        "Beginner's Blog"
-reading_time:       true
-words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/chess_negative.png'
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             ko_KR
-url:                https://aliquis-facio.github.io
+# =========================
+title:            aliquis-facio
+tagline:          ""
+description:      ""
+url:              "https://aliquis-facio.github.io"
+baseurl:          ""
+future:           true # 미래 날짜 포스트도 공개
+paginate:         5
+paginate_path:    /page:num
 
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
+author:
+  name:           
+  url:            
+
+# Sidebar link settings
+sidebar_home_link:  true
+# sidebar_blog_link:  /blog # 블로그를 /blog로 쓰고 싶을 때 해제
+
+reading_time:     true
+words_per_minute: 200
+locale:           ko_KR
+
+# =========================
+# Jekyll core
+# =========================
+markdown:         kramdown
+highlighter:      rouge
+permalink:        /:title/ # 고정링크
+timezone:         Asia/Seoul # 빌드 타임존 명시
+
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
+  auto_ids:       true # 제목 자동 앵커
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  enable_coderay: false
+
+# 수식
+mathjax:          true
+
+# SCSS 빌드
 sass:
-  sass_dir:         _sass
-  style:            compressed
+  sass_dir:       _sass
+  style:          compressed
 
-# Comments
-disqus_shortname:   github-io-wql9y9o0sz
+# =========================
+# Comments / Analytics
+# =========================
+disqus:
+  shortname:      github-io-wql9y9o0sz
 
-# Social
-# if you don't have any of social below, comment the line.
 google:
-  #plus:            #username
   analytics:        G-6DVR5DH0EY
-  #verify:
-  #ad-client:
-  #ad-slot:
-#bing-verify:
-# email: 
-# twitter:            username
-# facebook:           username
-github-url:         aliquis-facio
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
-#xing:              username
-#instagram:         username
-#lastfm:            username
-#tumblr:            username
-#medium:            '@username'
-#pinterest:         username
-#foursquare:        username
-#steam:             username
-#dribbble:          username
-#youtube:           username
-#youtube-channel:   channel
-#soundcloud:        username
-#weibo:             username
-#flickr:            username
-#codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
 
-# Plugins
+# =========================
+# Social
+# =========================
+github-url:       aliquis-facio
+# email:
+# twitter:
+# linkedin:
+# instagram:
+
+# =========================
+# Plugins (GitHub Pages 호환)
+# =========================
 plugins:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
+  - jekyll-feed # RSS 피드
   - jekyll-gist
-  - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-include-cache
+  # - jekyll-sitemap # sitempa.xml 자동 생성
+  # - jekyll-seo-tag # SEO/OG 메타 태그 자동 생성
+  # - jekyll-mentions # @user -> github 링크 생성
 
-jekyll-mentions:
-    base_url: https://github.com
+# jekyll-mentions:
+# base_url:         https://github.com
 
-# Optional. The default date format, used if none is specified in the tag.
-
-# Exclude list
-exclude: [
-  README.md,
-  Gemfile,
-  Gemfile.lock,
-  node_modules,
-  gulpfile.js,
-  package.json,
-  _site,
-  src,
-  vendor,
-  CNAME,
-  LICENSE,
-  Rakefile
-]
+# =========================
+# Exclude (빌드 가속/깨끗한 배포)
+# =========================
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - vendor
+  - CNAME
+  - LICENSE
+  - Rakefile
+  # - _site
+  # - src
