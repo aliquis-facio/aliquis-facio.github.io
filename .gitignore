@@ -1,0 +1,14 @@
+_site
+_ignore
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# obsidian
+_template
+.makemd
+.obsidian
+.space
+.trash
+Vault.md
