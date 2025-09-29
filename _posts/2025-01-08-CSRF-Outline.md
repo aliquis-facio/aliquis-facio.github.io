@@ -18,7 +18,7 @@ tags: [TIL, WEB, SECURITY]
 # CSRF란?
 ## 1. 개요
 **CRSF(Cross Site Request Forgery)**: 
--> 피해자가 서버로 공격자가 원하는 요청을 하게 만드는 것
+-> 공격자가 원하는 요청을 피해자가 하게 만든다!
 웹 애플리케이션 취약점 중 하나로 사용자가 자신의 의지와 무관하게 공격자가 의도한 행동을 하여 특정 웹페이지를 보안에 취약하게 한다거나 수정, 삭제 등의 작업을 하게 만드는 공격방법을 의미한다. 유명 경매 사이트 옥션의 개인정보 유출 사건에 사용된 공격 방식이다.
 
 ## 취약점
@@ -36,11 +36,11 @@ form tag를 삽입해야 한다 -> XSS로부터 무결해야 한다
 <iframe style="display:none" name="frame"></iframe>
 
 <form method="POST" action="link" id="test" target="frame">
-<input type="hidden" name="email" value="test@example.com"/>
+	<input type="hidden" name="email" value="test@example.com"/>
 </form>
 
 <script>
-document.getElementById('test').submit();
+	document.getElementById('test').submit();
 </script>
 ```
 
@@ -51,12 +51,12 @@ document.getElementById('test').submit();
 
 ## 대응방안
 ### CSRF Token
-csrf 공격을 막기 위해 만든 random한 token
-마이페이지에 접근할 때 토큰 발행
+CSRF 공격을 막기 위해 만든 난수값 토큰 발행
+e.g. 마이페이지에 접근할 때 토큰 발행
 
 ```html
 <form>
-<input type="hidden" name="csrfToken" value="random_value">
+	<input type="hidden" name="csrfToken" value="random_value">
 </form>
 ```
 
@@ -64,7 +64,7 @@ csrf 공격을 막기 위해 만든 random한 token
 csrf 토큰도 탈취해야 하는구나?
 사용자의 form 태그가 있는 페이지에 접근할 때 csrf 토큰이 발행된다
 
-### referrer check
+### Referrer Check
 확장성이 떨어질 수 있다
 개발자가 예외처리를 했을 경우
 -> `<meta name='referrer' content='no-referrer'>`
@@ -88,7 +88,7 @@ csrf 토큰도 탈취해야 하는구나?
 ACAO Header, Access Controll Allow Origin
 -> 응답에 들어감
 
-acao header에 요청이 존재하냐
+ACAO Header에 요청이 존재하냐
 자원을 허용할 도메인을 등록해두는 것이다
 
 ```html
@@ -122,3 +122,10 @@ CORS 정책이 잘 적용되어 있지 않다 -> 공격자 서버 만들어서 �
 # 참고
 * [CSRF 공격과 방어 기법](https://velog.io/@gwanuuoo/CSRF-%EA%B3%B5%EA%B2%A9%EA%B3%BC-%EB%B0%A9%EC%96%B4-%EA%B8%B0%EB%B2%95)
 * [Spring Security_CSRF Token의 개념과 사용 방법](https://codevang.tistory.com/282)
+* [CSRF(Cross Site Request Forgery)란?](https://tibetsandfox.tistory.com/11)
+* [CSRF(Cross Site Request Forgery) 공격, 사례, 방어 방법](https://stir.tistory.com/265)
+* [[아이프레임(iframe)이란?](https://okayoon.tistory.com/entry/%EC%95%84%EC%9D%B4%ED%94%84%EB%A0%88%EC%9E%84iframe)](https://okayoon.tistory.com/entry/%EC%95%84%EC%9D%B4%ED%94%84%EB%A0%88%EC%9E%84iframe)
+* [나무위키: XSS](https://namu.wiki/w/XSS)
+* [웹 취약점 공격 방법인 XSS, CSRF에 대하여 간단하게 알아보기](https://falsy.me/%EC%9B%B9-%EC%B7%A8%EC%95%BD%EC%A0%90-%EA%B3%B5%EA%B2%A9-%EB%B0%A9%EB%B2%95%EC%9D%B8-xss-csrf%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EA%B0%84%EB%8B%A8%ED%95%98%EA%B2%8C-%EC%95%8C%EC%95%84%EB%B3%B4/)
+* [XSS JavaScript 활용 (DOM 객체) 11-1](https://blog.naver.com/leem8419/223493830500)
+* 

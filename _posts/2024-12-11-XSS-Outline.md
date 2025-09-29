@@ -196,3 +196,4 @@ burp, param check, response에 같은 값 있나?
 * [Request Capture like requestbin PHP](https://stackoverflow.com/questions/42685368/request-capture-like-requestbin-php)
 * [PHP-Micro-RequestBin](https://github.com/vinhch/PHP-Micro-RequestBin)
 * [HTML Entities](https://www.w3schools.com/html/html_entities.asp)
+* [브라우저 XSS 필터 우회의 모든 것](https://blog.rubiya.kr/index.php/2019/03/28/browsers-xss-filter-bypass-cheat-sheet/)

@@ -2,21 +2,19 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
-
+  changefreq:
+  priority:
 title: "[GITHUB PAGES] Image Test"
-excerpt: "Image Test"
-
+excerpt: Image Test
 date: 2021-11-30
-last_modified_at: 2024-12-27
-
-categories: [BLOG]
-tags: [BLOG]
+last_modified_at: 2025-09-23
+categories:
+  - BLOG
+tags:
+  - BLOG
 ---
 
 # Github Blog Image Test
-~~**favicon 이미지 변경 과정과 뒷배경 이미지 변경 과정에 대한 기록을 남기면 될 듯함.**~~  
 
 <figure>
 	<a href="https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2021-12-01-screenshot-error.png?raw=true"><img src="https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2021-12-01-screenshot-error.png?raw=true"></a>
