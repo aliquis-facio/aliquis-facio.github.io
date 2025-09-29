@@ -80,7 +80,7 @@ e.g. LLM은 공격자가 더욱 개인화되고 정교한 피싱 공격을 만�
 	1. 확장성: 대규모의 복잡한 IT 환경을 보호하도록 확장할 수 있다. 또한 SIEM(보안 정보 및 이벤트 관리) 플랫폼과 같은 기존 사이버 보안 도구 및 인프라와 통합해 네트워크의 실시간 위협 인텔리전스 및 자동화된 대응 기능을 강화한다.
 
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-09-27-1.png?raw=true)  
+![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-09-27-1.png)  
 > 그림 1. AI 보안 자동화의 주요 이점
 
 
