@@ -92,6 +92,6 @@ exclude:
   - CNAME
   - LICENSE
   - Rakefile
-  - _unstaged
+  - _unstaged/*
   # - _site
   # - src
