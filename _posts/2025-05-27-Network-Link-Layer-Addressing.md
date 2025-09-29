@@ -5,7 +5,7 @@ sitemap:
     changefreq:
     priority:
 
-title: "[NETWORK] "
+title: "[NETWORK] 링크 계층 주소"
 excerpt: "L2 - Datalink Layer"
 
 date: 2025-05-27
