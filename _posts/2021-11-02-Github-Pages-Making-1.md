@@ -9,7 +9,7 @@ title: "[GITHUB PAGES] github.io 만들기 1"
 excerpt: "항상 느낍니다. 왜 안되는거냐?"
 
 date: 2021-11-02
-last_modified_at: 2025-03-18
+last_modified_at: 2025-10-02
 
 categories: [BLOG]
 tags: [BLOG]
@@ -31,45 +31,47 @@ tags: [BLOG]
     1. [로컬 브랜치와 원격 브랜치와 연결하기](#3-githubio-블로그의-로컬-저장소와-github-저장소를-연결하기)
     1. [블로그 확인하기](#4-githubio-블로그-확인하기)
 
+---
+
 # Github.io 만들기 1
 ## 1. RUBY
-### 1) ruby 설치
+### 1.1. ruby 설치
 ruby 설치 링크: <https://www.ruby-lang.org/ko/documentation/installation/>  
 설치 명령어: `sudo apt-get install ruby-full`
 
 ## 2. JEKYLL
-### 1) jekyll 설치
+### 2.1. jekyll 설치
 `sudo gem install jekyll`
 
-### 2) jekyll 실행
+### 2.2. jekyll 실행
 `~/blog$ jekyll new github_username.github.io`  
 명령어 실행 후 github 패스워드를 입력해야 함
 
-### 3) jekyll 서버 실행
+### 2.3. jekyll 서버 실행
 `~/blog/github_username.github.io$ jekyll serve`  
 오류: _Could not find gem 'minima (~> 2.5)' in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)'_  
 `sudo gem install minima` -> minima 설치
 
-### 4) jekyll 서버 접속 (확인)
+### 2.4. jekyll 서버 접속 (확인)
 `~/blog/github_username.github.io$ jekyll serve` -> 실행됨  
 브라우저에 127.0.0.1:4000 또는 localhost:4000 입력  
 -> 기본테마 블로그가 보인다.
 
-### 5) jekyll theme 고르기
+### 2.5. jekyll theme 고르기
 jekyll theme site: <http://jekyllthemes.org/>  
 내가 고른 것 -> <http://jekyllthemes.org/themes/dark-poole/>  
 내 취향의 themes  
 * <http://jekyllthemes.org/themes/agency/>
 * <http://jekyllthemes.org/themes/frisco/>
 
-### 6) jekyll 적용하기
+### 2.6. jekyll 적용하기
 1. 원하는 Jekyll Theme를 다운로드(.zip)한다.
     Jekyll 사이트에서 직접 다운로드한다. 혹은 연결된 GitHub에서 Clone or download -> Download ZIP 을 통해 다운로드한다.
 1. 압축을 푼다.
 1. Jekyll 블로그를 저장한 로컬 디렉터리에 압축 푼 내용을 모두 복사하여 넣는다.
 1. Gemfile, Gemfile.lock은 삭제한다.
 
-#### 발생한 오류 목록
+#### 2.6.1. 발생한 오류 목록
 `~/blog/github_username.github.io$ jekyll serve`
 1. _Dependency Error: Yikes! It looks like you don't have jekyll-gist or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. If you've run Jekyll with `bundle exec`, ensure that you have included the jekyll-gist gem in your Gemfile as well. The full error message from Ruby is: 'cannot load such file -- jekyll-gist' If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!_
 
@@ -170,10 +172,10 @@ _includes 폴더 내에 head.html의 위쪽에 아래 내용을 추가
 -> 정상적으로 theme이 바뀜
 
 ## 3. GITHUB
-### 1) github에 저장소(repository) 생성하기
+### 3.1. github에 저장소(repository) 생성하기
 GitHub Pages에 .github.io 블로그를 만드는 방법은 단순히 ‘[github 사용자명].github.io’라는 이름의 원격 저장소(Repository)를 만들면 된다.
 
-### 2) .gitignore 설정하기
+### 3.2. .gitignore 설정하기
 `~/blog/[github 사용자명].github.io$ vi .gitignore`  
 수정 목록  
 ```
@@ -185,7 +187,7 @@ Gemfile
 Gemfile.lock
 ```
 
-### 3) .github.io 블로그의 로컬 저장소와 github 저장소를 연결하기
+### 3.3. .github.io 블로그의 로컬 저장소와 github 저장소를 연결하기
 <a style="text-decoration: underline" href="https://gmlwjd9405.github.io/2017/10/06/Jekyll-github.io-blog-3.html">블로그</a>를 참조해 만들었기 때문에 'jekyll new [github 사용자명].github.io'를 이용하여 Jekyll 블로그를 로컬에서 실행시킨 사용자이다. 고로 단순히 git의 remote 저장소와 연결해주는 작업만 하면 된다.  
 
 *~/blog/[github 사용자명].github.io*로 이동하여 아래의 명령어를 입력하면 앞으로 git은 해당 디렉터리의 변화를 감지하여 track할 수 있고 로컬에서 작성한 블로그를 GitHub에 호스팅할 수 있다. (git init 명령을 실행한 디렉터리를 working directory라고 부른다.)  
@@ -200,13 +202,15 @@ Git이 파일을 관리하게 하려면 저장소에 파일을 추가하고 커�
 `git commit -m "Initial commit"`  
 `git push origin master` // 원격 저장소에 변경 내용을 올린다.  
 
-### 4) .github.io 블로그 확인하기
+### 3.4. .github.io 블로그 확인하기
 브라우저에서 ‘[github 사용자명].github.io’라고 주소를 입력  
 -> 404 not found...  
 -> 왜 안되는지 잘 모르겠음  
 -> 새로운 방법으로 다시 만들기로 함.
 
 [다음 블로그에서 계속...](/Github-Pages-Making-2/)
+
+---
 
 # 참고
 * [Jekyll을 이용한 .github.io 블로그 만들기[1]](https://gmlwjd9405.github.io/2017/10/06/Jekyll-github.io-blog-1.html)
