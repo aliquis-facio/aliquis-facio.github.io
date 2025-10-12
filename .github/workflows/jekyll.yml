@@ -1,4 +1,3 @@
-# .github/workflows/jekyll.yml
 name: Deploy Jekyll site to Pages
 
 on:
