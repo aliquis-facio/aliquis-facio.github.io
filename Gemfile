@@ -7,5 +7,7 @@ gem "jekyll-feed", "~> 0.17"
 gem "webrick", "~> 1.8", group: :development
 gem "faraday-retry", "~> 2.3"
 gem "github-pages", group: :jekyll_plugins
+gem "jekyll-remote-theme"
+gem "jekyll-sitemap"
 
 gemspec
