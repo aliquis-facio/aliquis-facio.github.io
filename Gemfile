@@ -15,8 +15,6 @@ gem "jekyll-sass-converter", "~> 3.1"
 gem "sass-embedded", "~> 1.89"
 
 # Local server
-group :development do
-  gem "webrick", "~> 1.8"
-end
+gem "webrick", "~> 1.8", group :development
 
 gemspec
