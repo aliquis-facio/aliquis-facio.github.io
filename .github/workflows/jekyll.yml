@@ -1,43 +1,131 @@
-name: Deploy Jekyll (custom bundler)
+name: Deploy Jekyll site to Pages
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: ruby/setup-ruby@v1
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        # v1의 최신 릴리스 태그 사용
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-          bundler-cache: true
-      - name: Install deps
-        run: |
-          bundle lock --add-platform x86_64-linux || true
-          bundle install --without development test
+          bundler-cache: true # bundle install + 캐시 자동
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
+        # configure-pages가 제공하는 base_path를 baseurl에 반영
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-        run: bundle exec jekyll build --baseurl "${{ steps.configure-pages.outputs.base_path }}"
-      - uses: actions/upload-pages-artifact@v3
+
+      # sitemap/robots 자동 생성 단계
+      - name: Generate sitemap.xml (Ruby)
+        env:
+          SITE_BASE_URL: https://aliquis-facio.github.io   # ← 본인 도메인으로 유지
+        run: |
+          ruby - <<'RUBY'
+          require 'time'
+          base = ENV['SITE_BASE_URL'] || 'https://example.github.io'
+          Dir.chdir('_site')
+
+          # 제외 규칙(불필요한 목록/검색/페이지네이션 등)
+          SKIP_DIRS = [
+            %r{^assets/}, %r{^css/}, %r{^js/}, %r{^images?/}, %r{^fonts?/}, %r{^vendor/},
+            %r{^tags?/}, %r{^categories?/}, %r{^category/}, %r{^search/}, %r{^page\d+/}
+          ]
+          SKIP_FILES = [
+            %r{^404\.html$}, %r{^feed\.xml$}, %r{^atom\.xml$}, %r{^sitemap\.xml$}
+          ]
+
+          urls = []
+          Dir.glob('**/*', File::FNM_DOTMATCH).each do |path|
+            next if File.directory?(path)
+            next if SKIP_DIRS.any? { |re| path.match?(re) }
+            next if SKIP_FILES.any? { |re| path.match?(re) }
+
+            # HTML을 canonical URL(슬래시)로, index.html은 디렉터리로 변환
+            if File.basename(path) == 'index.html'
+              loc = path == 'index.html' ? '/' : "/#{File.dirname(path)}/"
+              loc = loc.gsub(%r{//+}, '/')
+              loc = base + loc
+            elsif File.extname(path) == '.html'
+              loc = base + '/' + path.sub(/\.html$/, '/').gsub(%r{//+}, '/')
+            else
+              # .xml(검증파일 등)이나 기타 공개 파일도 허용
+              loc = base + '/' + path.gsub(%r{//+}, '/')
+            end
+
+            lastmod = File.mtime(path).utc.iso8601
+            urls << [loc, lastmod]
+          end
+
+          urls.uniq!
+          File.open('sitemap.xml', 'w') do |f|
+            f.puts %(<?xml version="1.0" encoding="UTF-8"?>)
+            f.puts %(<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">)
+            urls.sort_by! { |loc, _| loc }
+            urls.each do |loc, mtime|
+              f.puts "  <url>"
+              f.puts "    <loc>#{loc}</loc>"
+              f.puts "    <lastmod>#{mtime}</lastmod>"
+              f.puts "  </url>"
+            end
+            f.puts %(</urlset>)
+          end
+          puts "Generated _site/sitemap.xml with #{urls.size} urls"
+          RUBY
+
+      - name: Ensure robots.txt has Sitemap
+        env:
+          SITE_BASE_URL: https://aliquis-facio.github.io
+        run: |
+          set -e
+          cd _site
+          if [ -f robots.txt ]; then
+            grep -q "^Sitemap: ${SITE_BASE_URL}/sitemap.xml$" robots.txt || \
+              printf "\nSitemap: %s/sitemap.xml\n" "${SITE_BASE_URL}" >> robots.txt
+          else
+            printf "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n" "${SITE_BASE_URL}" > robots.txt
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
   deploy:
     runs-on: ubuntu-latest
+
     needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
