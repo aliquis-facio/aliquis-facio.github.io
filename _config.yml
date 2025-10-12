@@ -12,6 +12,15 @@ author:
   name:           
   url:            
 
+# front matter defaults
+defaults:
+  - scope: { path: "search" }
+    values: { sitemap: false }
+  - scope: { path: "tags" }
+    values: { sitemap: false }
+  - scope: { path: "category" }
+    values: { sitemap: false }
+
 # Sidebar link settings
 sidebar_home_link:  true
 # sidebar_blog_link:  /blog # 블로그를 /blog로 쓰고 싶을 때 해제
