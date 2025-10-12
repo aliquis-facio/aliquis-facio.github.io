@@ -1,4 +1,4 @@
-name: Deploy Jekyll site to Pages
+name: Deploy Jekyll (custom bundler)
 
 on:
   push:
@@ -10,23 +10,27 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - uses: actions/jekyll-build-pages@v1
+      - uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '3.1'
+          bundler-cache: true
+      - name: Install deps
+        run: |
+          bundle lock --add-platform x86_64-linux || true
+          bundle install --without development test
+      - name: Build with Jekyll
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --baseurl "${{ steps.configure-pages.outputs.base_path }}"
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: _site
 
   deploy:
     runs-on: ubuntu-latest
