@@ -40,7 +40,7 @@ validation-report.json
 # Folders to ignore
 node_modules
 .sass-cache
-_unstaged
+# _unstaged
 
 # Dev stuff
 Makefile
