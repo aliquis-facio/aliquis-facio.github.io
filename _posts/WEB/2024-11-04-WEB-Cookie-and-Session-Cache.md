@@ -47,7 +47,7 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 * Http Only 여부(HttpOnly)
 
 ## 쿠키 동작 방식
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-11-08-4.jpg?raw=true" title = "쿠키 동작">
+<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-11-08-4.jpg?raw=true" title = "쿠키 동작">
 
 # 2. 세션(Session)
 * **쿠키를 기반**으로 하지만 **사용자 정보 파일을 서버 측에서 관리**한다
@@ -57,7 +57,7 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 ~~세션id에 Hash를 여러번 먹이면 되지 않을까?~~
 
 ## 세션 동작 방식
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-11-08-5.jpg?raw=true" title = "세션 동작">
+<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-11-08-5.jpg?raw=true" title = "세션 동작">
 
 # 3. 쿠키(Cookie) vs. 세션(Session)
 <table>

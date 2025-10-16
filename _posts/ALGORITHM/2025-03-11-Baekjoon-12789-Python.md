@@ -16,10 +16,12 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 
 # 12789 도키도키 간식드리미
+
 **출처: <https://www.acmicpc.net/problem/12789>**  
 ![문제](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-1.png?raw=true)
 
 ## 문제 이해
+
 1. numbers를 앞에서부터 하나씩 본다.
 1. 현재 number가 가장 작은 수 p인지 확인한다
 1. 같다면 p를 1 증가시키고 다음 number를 확인한다
@@ -36,7 +38,8 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
 1. ![그림7](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-8.jpg?raw=true)
 1. ![그림8](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-03-11-9.jpg?raw=true)
 
-## 최종 정답
+## 풀이
+
 ``` python
 import sys
 from typing import *

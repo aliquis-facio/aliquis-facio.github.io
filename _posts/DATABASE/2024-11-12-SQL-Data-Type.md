@@ -17,8 +17,17 @@ tags: [DATABASE]
 
 # 목차
 
+1. [숫자형](#1-숫자형)
+    1. [정수형](#11-정수형)
+    1. [실수형(고정 소수점)](#12-실수형고정-소수점)
+    1. [BIT형](#14-bit형)
+1. [문자형](#2-문자형)
+1. [날짜형](#3-날짜형)
+1. [참고](#참고)
+
 # 1. 숫자형
 ## 1.1. 정수형
+
 <table>
     <thead>
         <tr>
@@ -73,6 +82,7 @@ tags: [DATABASE]
 </table>
 
 ## 1.2. 실수형(고정 소수점)
+
 <table>
     <thead>
         <tr>
@@ -99,6 +109,7 @@ tags: [DATABASE]
 </table>
 
 ## 1.3. 실수형(부동 소수점)
+
 <table>
     <thead>
         <tr>
@@ -127,6 +138,7 @@ tags: [DATABASE]
 FLOAT, DOUBLE 등의 부동 소수점 유형은 MySQL 8.0.17 이후 버전부터 사용되지 않는다.
 
 # 1.4. BIT형
+
 <table>
     <thead>
         <tr>
@@ -146,6 +158,7 @@ FLOAT, DOUBLE 등의 부동 소수점 유형은 MySQL 8.0.17 이후 버전부터
 </table>
 
 # 2. 문자형
+
 <table>
     <thead>
         <tr>
@@ -204,6 +217,7 @@ FLOAT, DOUBLE 등의 부동 소수점 유형은 MySQL 8.0.17 이후 버전부터
 </table>
 
 # 3. 날짜형
+
 <table>
     <thead>
         <tr>
@@ -250,5 +264,6 @@ YEAR(4) 와 같이 명시적인 길이를 표기한 데이터 유형은 MySQL 8.
 YEAR(2) 와 같이 두 자리로 표기하는 데이터 유형은 MySQL 5.7 이후 버전부터 지원하지 않습니다.
 
 # 참고
+
 * [MySQL 자료형 종류 정리 1](https://devdhjo.github.io/mysql/2020/01/30/database-mysql-003.html)
 * [MySQL 자료형 종류 정리 2](https://inpa.tistory.com/entry/MYSQL-%F0%9F%93%9A-%EC%9E%90%EB%A3%8C%ED%98%95-%ED%83%80%EC%9E%85-%EC%A2%85%EB%A5%98-%EC%A0%95%EB%A6%AC)

@@ -16,6 +16,7 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 
 # 연속합
+
 **출처: <https://www.acmicpc.net/problem/1912>**  
 ![문제](../../_image/2025-03-07-1.png?raw=true)
 
@@ -201,7 +202,7 @@ case가
 
 일 때 틀리길래 최댓값은 바꿔줬는데 뭐가 안 바뀌었을까 생각하니 현재 연속합 값을 안 바꿔줬었다.
 
-## 최종 정답
+## 풀이
 
 ``` python
 import sys

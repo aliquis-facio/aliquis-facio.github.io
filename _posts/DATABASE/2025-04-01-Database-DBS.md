@@ -9,7 +9,7 @@ title: "[DATABASE] DBS(DataBase System)란?"
 excerpt: "DBS(DataBase System)"
 
 date: 2025-04-01
-last_modified_at: 
+last_modified_at: 2025-10-17
 
 categories: [DATABASE]
 tags: [DATABASE, TIL]
@@ -17,14 +17,35 @@ tags: [DATABASE, TIL]
 
 # 목차
 
+1. [DBS(Database System)](#dbsdatabase-system)
+    1. [DBS란?](#1-dbs란)
+    1. [DBS의 구성요소](#2-dbs의-구성요소)
+        1. [데이터 스키마(Data Schema)](#21-데이터-스키마data-schema)
+            1. [개념 스키마](#211-개념-스키마)
+            1. [외부 스키마](#212-외부-스키마)
+            1. [내부 스키마](#213-내부-스키마)
+            1. [3단계 스키마의 도입 이유](#214-3단계-스키마의-도입-이유)
+        1. [데이터 언어(Data Language)](#22-데이터-언어data-language)
+            1. [데이터 정의어(DDL, Data Definition Language)](#221-데이터-정의어ddl-data-definition-language)
+            1. [데이터 조작어(DML, Data Manipulation Language)](#222-데이터-조작어dml-data-manipulation-language)
+            1. [데이터 제어어(DCL, Data Control Language)](#223-데이터-제어어dcl-data-control-language)
+        1. [사용자(User)](#23-사용자user)
+        1. [데이터베이스 관리시스템(DBMS)](#24-데이터베이스-관리시스템dbms)
+        1. [데이터베이스 관리자(DBA)](#25-데이터베이스-관리자dba)
+1. [참고](#참고)
+
+
 # DBS(Database System)
 ## 1. DBS란?
+
 **DBS**: 기업 혹은 조직이 DBMS를 사용해 개발한 응용 프로그램을 통해 관련 <mark>데이터를 관리하는 시스템</mark>이다.
 
 ## 2. DBS의 구성요소
+
 데이터 스키마(Data Schema), 데이터 언어(Data Language), 사용자(User), 데이터베이스 관리시스템(DBMS), 데이터베이스 관리자(DBA)로 구성되어 있다.
 
 ### 2.1. 데이터 스키마(Data Schema)
+
 <b>스키마(Schema)</b>: 데이터베이스의 구조(테이블의 포맷)와 제약조건의 명세를 <abbr title="기록하여 서술하다">기술</abbr>한 것이다.  
 e.g. <abbr title="개체의 특성">속성(Attribute)</abbr>, <abbr title="속성들의 집합">개체(Entity)</abbr>, <abbr title="개체 사이에 존재하는">관계(Relation)</abbr>, <abbr title="속성, 개체, 관계가 유지해야 하는">제약조건</abbr>
 
@@ -40,21 +61,25 @@ e.g. <abbr title="개체의 특성">속성(Attribute)</abbr>, <abbr title="속�
 -> 일반적으로 스키마는 개념 스키마를 지칭한다.
 
 #### 2.1.1. 개념 스키마
+
 기관 전체의 데이터베이스 정의한다.  
 기관의 모든 응용에 대한 통합된 데이터 구조를 나타낸다.  
 schema  
 
 #### 2.1.2. 외부 스키마
+
 개개 부서의 데이터베이스 정의한다.  
 개념 스키마의 부분 집합이다.  
 전체 데이터베이스의 논리적인 부분이다.  
 subschema  
 
 #### 2.1.3. 내부 스키마
+
 저장 장치 관점에서 표현한다.  
 개념 스키마의 저장 구조를 정의한다.  
 
-#### 3단계 스키마의 도입 이유
+#### 2.1.4. 3단계 스키마의 도입 이유
+
 DBMS에서 데이터 독립성(Data Independency)의 구현 방법을 제공한다.  
 3단계 스키마 사이의 사상(Mapping)을 통해 <mark>데이터 독립성을 제공</mark>한다.  
 
@@ -71,6 +96,7 @@ DBMS에서 데이터 독립성(Data Independency)의 구현 방법을 제공한�
 저장구조를 바꿔도 개념스키마를 바꾸지 않아도 된다.
 
 ### 2.2. 데이터 언어(Data Language)
+
 **DBMS의 필수 기능**: 데이터 <mark>정의(Definition)</mark>, 데이터 <mark>조작(Manipulation)</mark>, 데이터 <mark>제어(Control)</mark>
 
 **데이터 언어(Data Language)**: 데이터베이스의 정의, 조작, 제어를 위한 언어이다.
@@ -78,6 +104,7 @@ DBMS에서 데이터 독립성(Data Independency)의 구현 방법을 제공한�
 **데이터 언어의 종류**: 데이터 <mark>정의어</mark>(DDL, Data Definition Language), 데이터 <mark>조작어</mark>(DML, Data Manipulation Language), 데이터 <mark>제어어</mark>(DCL, Data Control Language)
 
 #### 2.2.1. 데이터 정의어(DDL, Data Definition Language)
+
 **데이터 정의어(DDL)**: 데이터베이스(테이블)의 정의 및 수정
 
 요소
@@ -89,6 +116,7 @@ Subschema DDL, Schema DDL
 데이터 저장 정의어(DSDL, Data Storage Definition Language)  
 
 #### 2.2.2. 데이터 조작어(DML, Data Manipulation Language)
+
 **데이터 조작어(DML)**: 사용자(응용 프로그램)와 DBMS 사이의 통신 수단, 데이터 처리 연산(데이터의 검색과 갱신(삽입, 삭제, 수정) 연산) 수행
 
 특징  
@@ -113,12 +141,14 @@ Subschema DDL, Schema DDL
 : 병행 수행(Concurrency)
 
 ### 2.3. 사용자(User)
+
 * **일반 사용자(End User)**: DML을 통해서 데이터베이스를 접근한다. 실제로는 menu, form, graphics 등을 통해 DML을 간접적으로 사용한다.
 * **응용 프로그래머(Application Programmer)**: 호스트 언어(Java/Python 등) + DML을 사용하여 응용 프로그램을 작성한다. -> DSL을 통해서 데이터베이스에 접근한다.
 * **데이터베이스 설계자**: DDL을 통해 DB 스키마를 정의하는 사람이다.
 * **데이터베이스 관리자(DBA)**: DCL을 통해 DBMS를 운영하고 제어하는 사람이다.
 
 ### 2.4. 데이터베이스 관리시스템(DBMS)
+
 데이터베이스(DB)에 대한 모든 접근을 처리하는 소프트웨어이다.
 1. 사용자의 접근 요구를 접수한다.
 1. 시스템이 수행할 수 있는 형태로 변환한다.
@@ -129,6 +159,7 @@ Subschema DDL, Schema DDL
 [DBS 구성도]() -->
 
 ### 2.5. 데이터베이스 관리자(DBA)
+
 **데이터베이스 관리자(DBA)**: 데이터베이스 시스템(DBS)의 전체적인 관리 운영에 대한 모든 책임을 지는 사람의 집단이다.
 
 **DBA의 업무**  
@@ -150,4 +181,5 @@ DBMS 성능 개선(tuning)
 사용자의 요구 및 불평 해결  
 
 # 참고
+
 * [스키마란? (개념스키마, 내부스키마, 외부스키마)](https://jwprogramming.tistory.com/47)
