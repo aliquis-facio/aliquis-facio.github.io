@@ -52,9 +52,12 @@ _config.dev.yml
 # obsidian
 _template
 .makemd
-.obsidian
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json
+.obsidian/app.json
 .space
-.trash
+.trash/
+.DS_Store
 Tags
 .stylelintrc.json
 Vault.md
