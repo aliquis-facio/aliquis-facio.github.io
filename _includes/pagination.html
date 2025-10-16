@@ -1,0 +1,40 @@
+{% if paginator and paginator.total_pages > 1 %}
+<nav class="pagination" role="navigation" aria-label="Pagination">
+  {%- comment -%} 처음 «« {%- endcomment -%}
+  {% if paginator.page > 1 %}
+    <a class="page first" href="{{ paginator.first_page_path | default: page.url | relative_url }}" aria-label="First">&laquo;&laquo;</a>
+  {% else %}
+    <span class="page disabled" aria-hidden="true">&laquo;&laquo;</span>
+  {% endif %}
+
+  {%- comment -%} 이전 « {%- endcomment -%}
+  {% if paginator.previous_page %}
+    <a class="page prev" href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous">&laquo;</a>
+  {% else %}
+    <span class="page disabled" aria-hidden="true">&laquo;</span>
+  {% endif %}
+
+  {%- comment -%} 숫자 트레일 1 2 3 4 5 {%- endcomment -%}
+  {% for trail in paginator.page_trail %}
+    {% if trail.num == paginator.page %}
+      <span class="page current" aria-current="page">{{ trail.num }}</span>
+    {% else %}
+      <a class="page number" href="{{ trail.path | relative_url }}">{{ trail.num }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {%- comment -%} 다음 » {%- endcomment -%}
+  {% if paginator.next_page %}
+    <a class="page next" href="{{ paginator.next_page_path | relative_url }}" aria-label="Next">&raquo;</a>
+  {% else %}
+    <span class="page disabled" aria-hidden="true">&raquo;</span>
+  {% endif %}
+
+  {%- comment -%} 마지막 »» {%- endcomment -%}
+  {% if paginator.page < paginator.total_pages %}
+    <a class="page last" href="{{ paginator.last_page_path | relative_url }}" aria-label="Last">&raquo;&raquo;</a>
+  {% else %}
+    <span class="page disabled" aria-hidden="true">&raquo;&raquo;</span>
+  {% endif %}
+</nav>
+{% endif %}

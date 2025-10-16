@@ -5,6 +5,7 @@ gem "jekyll", "~> 4.4.1"
 gem "jekyll-sitemap"
 gem "jekyll-feed", "~> 0.17"
 gem "jekyll-seo-tag"
+gem "jekyll-paginate-v2", "~> 3.0"
 
 # Gist
 gem "faraday", "~> 2.9"

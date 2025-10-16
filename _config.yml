@@ -5,8 +5,16 @@ description:      ""
 url:              "https://aliquis-facio.github.io"
 baseurl:          ""
 future:           true # 미래 날짜 포스트도 공개
-paginate:         5
-paginate_path:    /page:num
+
+pagination:
+  enabled: true
+  per_page: 10                # 페이지당 포스트 수
+  permalink: "/page/:num/"    # /page/2/ 같은 경로
+  sort_field: "date"
+  sort_reverse: true
+  trail:
+    before: 2                 # 현재 앞쪽으로 2개
+    after: 2                  # 현재 뒤쪽으로 2개
 
 author:
   name:           
@@ -70,7 +78,7 @@ plugins:
   - jekyll-feed # RSS 피드
   - jekyll-seo-tag # SEO/OG 메타 태그 자동 생성
   - jekyll-gist
-  - jekyll-paginate
+  - jekyll-paginate-v2
   # - jekyll-mentions # @user -> github 링크 생성
 
 # jekyll-mentions:
