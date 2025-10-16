@@ -52,7 +52,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 * **매체 상태 대응**: 신경 쓰지 않는다.  
 ~~상남자 메타~~
 * **전송 성공/실패 판단**: 평상시보다 에너지 레벨이 2배가 된다
-![Detect a collision|323x24](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-19-1.png?raw=true)
+![Detect a collision|323x24](../../_image/2025-05-19-1.png?raw=true)
 * **충돌 처리**: 각 장치는 충돌을 감지하고 랜덤한 시간을 기다린 후 재전송을 시도한다
 
 ## 1. Random Access 특징
@@ -70,7 +70,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 각각의 노드는 보낼 데이터가 있을 경우, 언제든지 전송을 시도한다. 하나의 채널을 공유하기 때문에, 데이터가 충돌이 발생할 수 있다.
 
 #### 2.1.1. Main Idea
-![Pure_ALOHA_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-1.jpg?raw=true)
+![Pure_ALOHA_Algorithm](../../_image/2025-05-20-1.jpg?raw=true)
 1. 각각의 노드는 보낼 데이터가 있을 경우, 언제든지 전송을 시도한다. 그리고 수신자가 ACK를 돌려줄 것을 기다린다.
 1. 수신자로부터 ACK를 받았다면 성공적으로 통신을 끝낸다.  
 1. timeout 시간 내에 ACK를 받지 못한 경우, 송신자는 frame이 파괴-충돌된 것이라고 보고, 재전송한다.
@@ -91,7 +91,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 따라서, T<sub>p</sub> ≠ T<sub>fr</sub>
 
 #### 2.1.2. 문제점
-![Pure_ALOHA_Problem](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
+![Pure_ALOHA_Problem](../../_image/2025-05-20-2.jpg?raw=true)
 
 2개 이상의 노드에서 보낸 데이터가 충돌했을 때, 이 모든 노드들이 timeout 시간 후에 재전송을 하게 되면 또 다시 frame이 충돌하게 된다.
 
@@ -100,7 +100,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 1. 재전송으로 인한 채널의 congesting을 막기 위해, 재전송 최대 시도 횟수 K<sub>max</sub>을 시도한 후, 노드들은 전송을 포기하고 나중에 다시 시도한다.
 
 #### 2.1.4. Vulnerable time
-![Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-20-2.jpg?raw=true)
+![Vulnerable_Time](../../_image/2025-05-20-2.jpg?raw=true)
 Vulnerable time: 충돌 가능성이 큰 기간  
 Pure ALOHA의 vulnerable time: $$2 \times {T_{fr}}$$
 
@@ -117,7 +117,7 @@ S_{max} = 0.184 \; when \; G = 1/2$$
 전송을 시간 슬롯에 맞춰 시도한다. 각 장치는 정해진 슬롯에 전송을 시도하고, 충돌이 발생하면 랜덤한 슬롯 후에 재전송을 시도한다.
 
 #### 2.2.1. Vulnerable time
-![Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-1.jpg?raw=true)
+![Vulnerable_Time](../../_image/2025-05-21-1.jpg?raw=true)
 
 Slotted ALOHA vulnerable time: ${T_{fr}}$
 
@@ -132,13 +132,13 @@ $$
 <b>CSMA</b>: <mark>채널 감지 다중 접속</mark> 방식이다. <mark>송신 전 매체를 먼저 감지(carrier sense)</mark>하고, 비어 있으면 전송, 사용 중이면 기다리는 것이다.
 
 ### 3.1. 동작 흐름
-![CSMA_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-2.jpg?raw=true)
+![CSMA_Algorithm](../../_image/2025-05-21-2.jpg?raw=true)
 1. Station은 전송하려는 데이터가 생기면,
 1. 매체가 사용 중인지 먼저 감지한다 (Carrier Sense).
 1. 매체가 idle(비어 있으면) 즉시 or 일정 규칙에 따라 전송한다.
 1. 매체가 busy(사용 중)이면 대기하거나 재시도한다.
 
-![CSMA_Vulnerable_Time](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-3.jpg?raw=true)
+![CSMA_Vulnerable_Time](../../_image/2025-05-21-3.jpg?raw=true)
 Vulnerable time: propagation time $T_p$
 
 ### 3.2. Persistence Methods
@@ -179,13 +179,13 @@ Vulnerable time: propagation time $T_p$
 </table>
 
 #### 3.2.1. 1-Persistent
-![1-Persistent_Behavior](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-4.jpg?raw=true)
-![1-Persistent_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-5.jpg?raw=true)
+![1-Persistent_Behavior](../../_image/2025-05-21-4.jpg?raw=true)
+![1-Persistent_Algorithm](../../_image/2025-05-21-5.jpg?raw=true)
 1. idle할 때, (확률 1로) 바로 보낸다
 
 #### 3.2.2. Nonpersistent
-![Nonpersistent_Behavior](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-6.jpg?raw=true)
-![Nonpersistent_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-7.jpg?raw=true)
+![Nonpersistent_Behavior](../../_image/2025-05-21-6.jpg?raw=true)
+![Nonpersistent_Algorithm](../../_image/2025-05-21-7.jpg?raw=true)
 
 1. 전송하려는 장치가 먼저 채널을 감지한다.
 1. idle하면, 즉시 전송한다.
@@ -194,8 +194,8 @@ Vulnerable time: propagation time $T_p$
     * 혼잡이 완화될 때까지 무작위 대기한다
 
 #### 3.2.3. p-Persistent
-![p-Persistent_Behavior](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-8.jpg?raw=true)
-![p-Persistent_Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-21-9.jpg?raw=true)
+![p-Persistent_Behavior](../../_image/2025-05-21-8.jpg?raw=true)
+![p-Persistent_Algorithm](../../_image/2025-05-21-9.jpg?raw=true)
 
 1. 스테이션이 데이터를 전송하려고 할 때, 먼저 매체가 비어 있는지 감지한다.
 1. idle할 때,
@@ -215,11 +215,11 @@ CSMA/CD는 **유선 이더넷(Ethernet)** 에서 사용되는 충돌 감지형 �
 CSMA + 충돌 감지(Collision Detection) 메커니즘
 
 ### 4.1. 동작 원리 (전송 절차)
-![CSMA/CD Algorithm](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-1.jpg?raw=true)
+![CSMA/CD Algorithm](../../_image/2025-05-28-1.jpg?raw=true)
 1. 매체 감지: 전송 전 채널이 비어 있는지 확인 (Carrier Sense)
 1. 전송 시도: 채널이 idle이면 데이터 전송 시작
 1. 전송 중 감지: 전송 중 충돌 발생 여부를 실시간으로 감지
-![Detect a collision|323x24](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-19-1.png?raw=true)
+![Detect a collision|323x24](../../_image/2025-05-19-1.png?raw=true)
 2. 충돌 감지: 전압 변화 등을 통해 충돌이 발생했음을 판단한다. normal 상태의 에너지 레벨의 2배가 된다.
 3. 충돌 후 처리:
     * 즉시 전송 중단
