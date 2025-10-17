@@ -18,6 +18,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 # 목차
 
 # 전송 매체
+
 전송 매체: 실제 데이터를 보내기 위해서 보내는 물리적인 매체로 유선과 무선으로 구분할 수 있다.
 
 ## 1. 유선 매체(Guided/Wired)

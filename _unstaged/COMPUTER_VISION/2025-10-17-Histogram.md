@@ -1,3 +1,19 @@
+---
+layout: post
+comments: true
+sitemap:
+  changefreq:
+  priority:
+title: "[COMPUTER VISION] "
+excerpt: 
+date: 2025-10-17
+last_modified_at: 2025-10-17
+categories:
+  - COMPUTER VISION
+tags:
+  - COMPUTER_VISION
+---
+
 # 4. 히스토그램
 
 ## 4.1 히스토그램

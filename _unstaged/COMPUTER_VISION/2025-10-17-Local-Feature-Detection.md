@@ -1,3 +1,33 @@
+---
+layout: post
+comments: true
+sitemap:
+  changefreq:
+  priority:
+title: "[COMPUTER VISION] 지역 특징 검출"
+excerpt: 지역 특징, 코너
+date: 2025-10-17
+last_modified_at: 2025-10-17
+categories:
+  - COMPUTER VISION
+tags:
+  - COMPUTER_VISION
+---
+
+# 목차
+
+1. [지역 특징 검출, Local Feature Detection](#9-지역-특징-검출-local-feature-detection)
+	1. [대응점 찾기](#91-대응점-찾기)
+	2. [지역 특징](#92-지역-특징)
+	3. [Corner Detection](#93-corner-detection)
+		1. [모라벡(Moravec) 알고리즘](#931-모라벡moravec-알고리즘)
+		2. [해리스(Harris) 코너](#932-해리스harris-코너)
+		3. [헤시안 행렬식(Hessian determinant)](#933-헤시안-행렬식hessian-determinant)
+		4. [LoG (Laplacian of Gaussian)](#934-log-laplacian-of-gaussian)
+		5. [슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘](#935-슈산smallest-uni-value-segment-assimilating-nucleus-susan-알고리즘)
+		6. [위치 선정](#936-위치-선정)
+2. [참고](#참고)
+
 # 9. 지역 특징 검출, Local Feature Detection
 
 ## 9.1. 대응점 찾기
@@ -31,6 +61,14 @@
 ## 9.3. Corner Detection
 
 작은 윈도우를 여러 방향으로 조금씩 이동했을 때 **모든 방향에서 밝기 변화가 크면 코너**, 한 방향만 크면 **에지**, 전반적으로 작으면 **평탄** 영역
+
+| 방법          | 핵심 측정                                                                                                                   | 장점                    | 한계/주석                            |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------- |
+| **모라벡**     | 이산 방향 SSD의 **최소값**                                                                                                      | 간단·빠름                 | 1픽셀/소수 방향,<br>**노이즈 취약**         |
+| **해리스**     | $\begin{align} R &= \det(M) \alpha \mathrm{trace}^2 \\ &= \lambda_1 \lambda_2 - k(\lambda_1 + \lambda_2)^2 \end{align}$ | 고유값 해석 기반, **견고**     | $\alpha$·윈도우 설정 필요,<br>스케일 불변 아님 |
+| **헤시안 행렬식** | $\det(H)=I_{xx}I_{yy}-I_{xy}^2$                                                                                         | 교차/첨두 구조 검출           | 2차 미분의 **노이즈 민감성**,<br>스케일 의존    |
+| **LoG**     | $\nabla^2(G*I)$                                                                                                         | 스무딩+2차미분 일관,<br>블롭 강함 | 스케일 고정 시 한계<br>→ 스케일 공간 필요       |
+| **SUSAN**   | **USAN 크기**                                                                                                             | 비미분·노이즈 견고            | 임계 $t$ 민감,<br>질감 많은 영역 과검출 가능    |
 
 ### 9.3.1. 모라벡(Moravec) 알고리즘
 
@@ -93,7 +131,7 @@
 
 ---
 
-### 9.3.3. 헤시안 행렬식(Hessian determinant) 기반
+### 9.3.3. 헤시안 행렬식(Hessian determinant)
 
 - **핵심:** **2차 미분**으로 곡률을 직접 평가. **가우시안 포함 헤시안** $H_\sigma$ 사용(노이즈 완화).
 - **지표:** $$C = \det(H)=I_{xx}I_{yy}-I_{xy}^2$$ 
@@ -101,7 +139,7 @@
 
 ---
 
-### 4) LoG (Laplacian of Gaussian)
+### 9.3.4. LoG (Laplacian of Gaussian)
 
 - **정의:**  스무딩(가우시안) 뒤 **라플라시안(2차 미분)** 으로 **블롭/코너성 응답**을 얻음(스케일마다 응답 극값/영교차 활용)
 	- $$\mathrm{LoG}_\sigma = \nabla^2 (G_\sigma * I) = (\nabla^2 G_\sigma) * I$$
@@ -111,7 +149,7 @@
 
 ---
 
-### 9.3.5. Smallest Uni-value Segment Assimilating Nucleus, SUSAN(슈산) 알고리즘
+### 9.3.5. 슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘
 
 - ![](2025-10-15-8.jpg)
 - **원리:** 중심 화소와 이웃 화소 간 **밝기 유사도**로 **USAN(유사 영역) 크기**를 계산, **USAN이 작을수록 코너성 강함**(에지는 중간, 평탄은 큼).
@@ -138,14 +176,6 @@
 - **스케일 이슈:** **스케일 변화에는 취약**(연산자 크기 고정) → 이후 장(스케일 공간)에서 보완.
 
 ---
-
-|방법|핵심 측정|장점|한계/주석|
-|---|---|---|---|
-|**모라벡**|이산 방향 SSD의 **최소값**|간단·빠름|1픽셀/소수 방향, **노이즈 취약**|
-|**해리스**|(R=\det(M)-\alpha \mathrm{trace}^2)|고유값 해석 기반, **견고**|(\alpha)·윈도우 설정 필요, 스케일 불변 아님|
-|**헤시안 행렬식**|(\det(H))|교차/첨두 구조 검출|2차 미분의 **노이즈 민감성**, 스케일 의존|
-|**LoG**|(\nabla^2(G*I))|스무딩+2차미분 일관, 블롭 강함|스케일 고정 시 한계 → 스케일 공간 필요|
-|**SUSAN**|**USAN 크기**|비미분·노이즈 견고|임계 (t) 민감, 질감 많은 영역 과검출 가능|
 
 # 참고
 

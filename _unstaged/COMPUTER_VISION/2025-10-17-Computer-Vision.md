@@ -1,3 +1,19 @@
+---
+layout: post
+comments: true
+sitemap:
+  changefreq:
+  priority:
+title: "[COMPUTER VISION] "
+excerpt: 
+date: 2025-10-17
+last_modified_at: 2025-10-17
+categories:
+  - COMPUTER VISION
+tags:
+  - COMPUTER_VISION
+---
+
 # 1. 컴퓨터 비전
 
 디지털 표현의 기본: 센서→ADC를 거쳐 명암을 8비트(0–255)로 양자화해 “디지털 영상”으로 저장한다
