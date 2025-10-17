@@ -50,5 +50,37 @@
       ],
       "key": "2"
     }
+  ],
+  "editing-toolbar:header3-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "3"
+    }
+  ],
+  "editing-toolbar:header4-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "4"
+    }
+  ],
+  "editing-toolbar:header5-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "5"
+    }
+  ],
+  "editing-toolbar:header6-text": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "6"
+    }
   ]
 }
