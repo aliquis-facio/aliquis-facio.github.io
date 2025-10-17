@@ -4,8 +4,8 @@ comments: true
 sitemap:
   changefreq:
   priority:
-title: "[COMPUTER VISION] "
-excerpt: 
+title: "[COMPUTER VISION] Histogram"
+excerpt:
 date: 2025-10-17
 last_modified_at: 2025-10-17
 categories:
@@ -15,24 +15,13 @@ tags:
 ---
 
 # 4. 히스토그램
-
 ## 4.1 히스토그램
 
 - 정의: $[0, \, L-1]$ 사이의 명암값이 각각 영상 등장 빈도 계산, 밝기(또는 색상) 값의 **분포**를 세는 함수
 - 히스토그램: $$h(k)=|\{(i,j)∣f(i,j)=k\}|$$
 - 정규화 히스토그램: $$0 \leq p(k)=\frac{h(k)}{MN} \leq 1$$
 - 누적 히스토그램: $$c(k)=\sum_{t=0}^{k}p(t)$$
-- 알고리즘:
-	```
-		for l in range(L-1):
-			h[l] = 0
-			for i in range(M-1):
-				for j in range(N-1):
-					h[f[i][j]] += 1
-		
-		for l in range(L-1):
-			h2[l] = h[l] / (M * N)
-	```
+- 알고리즘:	
 - <font color="#ff0000">예제</font>
 - **용도:** 영상 특성 파악(밝기/대비/노출), 이진화 임계값 선정의 사전 지표.
 
