@@ -1,5 +1,5 @@
 {
-  "uploadStrategy": "ANONYMOUS_IMGUR",
-  "clientId": "",
+  "uploadStrategy": "AUTHENTICATED_IMGUR",
+  "clientId": "hemeralopia",
   "showRemoteUploadConfirmation": true
 }
