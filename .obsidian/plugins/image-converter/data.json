@@ -31,9 +31,15 @@
       "name": "NoteName-DateTime",
       "customTemplate": "{notename}-{date:YYYYMMDD}{HH}{mm}{ss}",
       "skipRenamePatterns": ""
+    },
+    {
+      "name": "Datetime",
+      "customTemplate": "{date:YYYY-MM-DD}-{HH}-{mm}-{ss}",
+      "skipRenamePatterns": "",
+      "conflictResolution": "increment"
     }
   ],
-  "selectedFilenamePreset": "NoteName-DateTime",
+  "selectedFilenamePreset": "Datetime",
   "outputFormat": "NONE",
   "quality": 100,
   "colorDepth": 1,
@@ -217,6 +223,23 @@
   "dropPasteCursorLocation": "back",
   "neverProcessFilenames": "",
   "modalBehavior": "never",
+  "singleImageModalSettings": {
+    "conversionPresetName": "None",
+    "outputFormat": "NONE",
+    "quality": 100,
+    "colorDepth": 1,
+    "resizeMode": "None",
+    "desiredWidth": 800,
+    "desiredHeight": 600,
+    "desiredLongestEdge": 1000,
+    "enlargeOrReduce": "Auto",
+    "allowLargerFiles": false,
+    "pngquantExecutablePath": "",
+    "pngquantQuality": "65-80",
+    "ffmpegExecutablePath": "",
+    "ffmpegCrf": 23,
+    "ffmpegPreset": "medium"
+  },
   "ProcessCurrentNoteconvertTo": "webp",
   "ProcessCurrentNotequality": 0.75,
   "ProcessCurrentNoteResizeModalresizeMode": "None",
