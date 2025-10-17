@@ -42,7 +42,7 @@ tags:
 # 8. 선분 검출
 ## 8.1. 에지 연결과 표현
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-10.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-10.jpg?raw=true)
 
 | 성분  | 주변 에지 성분 개수 |
 | --- | ----------- |
@@ -58,12 +58,12 @@ tags:
 
 ## 8.2. 선분 근사
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-11.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-11.jpg?raw=true)
 - 두 끝점을 잇는 직선으로부터 가장 먼 점까지의 거리 $h$가 임계값 이내가 될 때까지 선분 분할을 재귀적으로 반복한다
 
 ## 8.3. Voting Schemes
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-12-29.jpg)
+![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-12-29.jpg?raw=true)
 **투표(voting) 기반 모델 추정**: 특징(feature)들이 자신과 **양립 가능한 모델들**에 표를 던지고, 표가 많이 모인 모델을 정답으로 뽑는다
 e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set)**
 
@@ -117,7 +117,7 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 ## 8.4. 허프 변환(Hough Transform)
 ### 8.4.1. 개념
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-12.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-12.jpg?raw=true)
 - 허프 변환: 차원의 변환, 좌표계의 변환
 	- 에지 연결 과정 없이 선분 검출 (전역 연산을 이용한 지각 군집화)
 	- 영상 공간 _y-x_ 를 기울기 절편 공간 _b-a_ 로 매핑
@@ -125,17 +125,17 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 		1. 파라미터 공간을 **격자(bin)** 로 이산화
 		2. 영상의 각 에지점이 가능한 모든 파라미터 bin에 **투표**
 		3. 누적배열의 **피크**를 검출.
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-13.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-13.jpg?raw=true)
 - 파라미터 범위가 무한, **수직선**에서 $m\to\infty$ 문제가 발생.
 	- **극좌표** 대안: $\rho=x\cos\theta+y\sin\theta$
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-14.jpg)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-11-29-25.jpg)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-12-18.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-14.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-11-29-25.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-12-18.jpg?raw=true)
 
 ### 8.4.2. 원 검출
 
 - 원 검출: 3차원 누적 배열 사용
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-12-03.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-12-03.jpg?raw=true)
 	- $(y - b)^2 + (x-a)^2 = r^2$
 - **해석 관점**: 영상의 한 점 $(x_0,y_0)$은 허프 공간에서 **사인곡선**이며, **두 점 곡선의 교차**가 두 점을 지나는 직선의 파라미터.
 
@@ -161,9 +161,9 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 ## 8.5. RANSAC — 불량치(outlier) 견고 추정
 
 - **정의/배경**: Fischler & Bolles(1981). 인라이어 집합을 찾아 **모델을 견고하게 적합**(무작위 표본 기반). 선분 검출에선 모델을 $y=ax+b$로 둔다.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-11-51.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-11-51.jpg?raw=true)
 - 동작
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-11-37.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-11-37.jpg?raw=true)
     1. **최소 표본** 무작위 선택, 무작위로 두 점을 골라 직선의 방정식을 구함
     2. **모델 가설**, 구한 방정식으로부터 일정 범위의 속한 점들이 전체의 몇 %인지 구함
     3. **오차함수** 계산
@@ -171,7 +171,7 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
     5. **반복**.
 - **확장 포인트**: **점-점 매칭쌍** $X={(a_i,b_i)}$ 입력도 처리하도록 일반화(기하 추정에 활용).
 - 알고리즘
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-10-51.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-21-10-51.jpg?raw=true)
 
 ### 8.5.1. Hough V.S. RANSAC
 

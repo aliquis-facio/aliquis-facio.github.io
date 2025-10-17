@@ -34,11 +34,11 @@ tags:
 - 정규화 히스토그램: $$0 \leq p(k)=\frac{h(k)}{MN} \leq 1$$
 - 누적 히스토그램: $$c(k)=\sum_{t=0}^{k}p(t)$$
 - 알고리즘:
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-02-56.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-02-56.jpg?raw=true)
 - 예제
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-03-06.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-03-06.jpg?raw=true)
 - **용도:** 영상 특성 파악(밝기/대비/노출), 이진화 임계값 선정의 사전 지표.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-03-10.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-03-10.jpg?raw=true)
 
 ## 4.2. 히스토그램 평활화 (Histogram Equalization)
 
@@ -52,11 +52,11 @@ tags:
 - $$c(l_{in}) = \sum ^ {l_{in}} _ {l = 0} \hat h (l) $$
 	- $l = 0$: 가중치
 * 예제
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-03-49.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-03-49.jpg?raw=true)
 * Histogram Stretching V.S. Histogram Equalization
 	* Histogram Stretching: min ~ max 값을 0 ~ 255로 선형적으로 늘려줌 → min 값이 0, max 값이 255 면 의미가 없음
 	* Histogram Equalization: 분포가 몰린 부분을 비선형적으로 늘려줌
-* ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-04-04.jpg)
+* ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-04-04.jpg?raw=true)
 * 적용 여부 판단 조건
 	* 영상의 밝기 분포
 	* 영상 처리 목적: 시각적 개선(대비 향상 목적), 후처리 전처리 단계(명암 대비 균질화), 원본 톤 유지 필요 여부
@@ -70,7 +70,7 @@ tags:
 - **아이디어:** 학습(또는 모델) 영상의 히스토그램을 **매핑 함수**로 사용하여, 입력 영상의 각 화소를 **신뢰도 맵**으로 변환. 보통 2개의 차원 분포를 확인함.
 - **절차:** 대상 모델의 (정규화) 히스토그램 ($h_r$) 계산 → 입력 화소값을 ($h_r$)로 사상하여 **back-projection 맵** 생성 → 평활화/후처리 → 최대값/영역 추출.
 - 2차원 히스토그램 계산 알고리즘
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-04-51.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-04-51.jpg?raw=true)
 - **예시:** 2D 히스토그램(예: 피부색) 기반 얼굴 검출.
 	- $$h_r(i, j) = min(\frac{\hat h_m(i, j)}{\hat h_j(i, j)}, 1), \; 0 \leq i, \; j \leq q-1$$
 	- $h_r(i, j)$: 모델과 입력 영상의 유사도
@@ -80,7 +80,7 @@ tags:
 	- 장점: **배경 제어가 가능**한 상황에서 유리, **이동/회전 불변, 가림에도 비교적 강건**.
 	- 한계: **유사 분포물 혼동**(비슷한 색 분포를 갖는 다른 물체 구별 못함), 대상 색 분포가 여러 개인 경우 오류 증가.
 * 히스토그램 역투영 알고리즘
-	* ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-05-34.jpg)
+	* ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-05-34.jpg?raw=true)
 
 > “경계/질감이 약한 영역도 **분포 기반**으로 찾아낼 수 있다”
 
@@ -122,17 +122,17 @@ tags:
 		& \mu_1(t) = \frac{\mu - w_0(t)\mu_0(t)}{1 - w_0(t)}
 		\end{align}$$
 - 알고리즘
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-05-56.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-05-56.jpg?raw=true)
 
 > **실전 팁:** 조명 변화가 크면 **적응 임계값(블록별 T)** 나 **선행 평활화**를 병행.
 
 ### 4.5. 연결 요소(Connected Components) 라벨링
 
 - **연결성 정의:** **4-연결/8-연결**로 화소 이웃을 규정, 동일 라벨로 군집화.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-11.jpg)
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-23.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-11.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-23.jpg?raw=true)
 - **구현 관점:**
     - **Flood-fill(범람 채움):** 직관적이나 재귀 사용 시 **스택 오버플로** 주의.
-	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-40.jpg)
-	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-44.jpg)
-	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-54.jpg)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-40.jpg?raw=true)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-44.jpg?raw=true)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-17-17-06-54.jpg?raw=true)
