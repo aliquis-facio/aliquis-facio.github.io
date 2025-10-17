@@ -17,12 +17,12 @@ tags:
 # 목차
 
 1. [획득과 표현(Acquisition & Representation)](#2-획득과-표현acquisition--representation)
-1. [사람의 눈과 카메라](#21-사람의-눈과-카메라)
-1. [A Photon’s Life Choices](#22-a-photons-life-choices)
-1. [Image Formation](#23-image-formation)
-1. [From Light Rays to Pixel Values](#24-from-light-rays-to-pixel-values)
-1. [투영 모델과 좌표 사상](#25-투영-모델과-좌표-사상)
-1. [디지털 표현(Representation)](#26-디지털-표현representation)
+	1. [사람의 눈과 카메라](#21-사람의-눈과-카메라)
+	2. [A Photon’s Life Choices](#22-a-photons-life-choices)
+	3. [Image Formation](#23-image-formation)
+	4. [From Light Rays to Pixel Values](#24-from-light-rays-to-pixel-values)
+	5. [투영 모델과 좌표 사상](#25-투영-모델과-좌표-사상)
+	6. [디지털 표현(Representation)](#26-디지털-표현representation)
 
 ---
 
