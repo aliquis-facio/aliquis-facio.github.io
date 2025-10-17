@@ -33,7 +33,7 @@ tags:
 	- $$f_{out}(i, j) = t(f_1(i, j), \, f_2(i, j), \, ..., \, f_k(i, j))$$
 - **형태**
     - **선형 점 연산**: 밝기·대비 조절 등
-	    - ![](../../_image/2025-10-17-15-52-30.png)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-15-52-30.png)
 	    - $$f_{out}(i, j) = t(f(i, j))
 	    = \begin{cases}
 		min(f(i, j) + a, \, L-1), \quad \text{(밝게)} \\
@@ -41,10 +41,10 @@ tags:
 		(L-1) - f(i, j), \quad \text{(반전)}
 		\end{cases}$$
     - **비선형 점 연산**: **감마 수정**(표시 장치 보정 등)
-	    - ![](../../_image/2025-10-17-15-52-54.png)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-15-52-54.png)
 	    - $$f_{out}(i, j) = (L-1) \times (\hat f(i, j))^\gamma \quad \text {이때} \; \hat f(i, j) = \frac {f(i, j)}{L-1}$$
     - **디졸브(dissolve)**: 두 영상 섞기(점 연산이지만 **(k=2)** 입력) e.g. fade in/out
-	    - ![](../../_image/2025-10-17-15-53-13.png)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-15-53-13.png)
 	    - $$f_{out}(i, j) = \alpha f_1(i, j) + (1 - \alpha)f_2(i, j)$$
 - **특징/용도 요약**: 국소 문맥을 보지 않으므로 **빠르고 단순**, 명암 재매핑(밝기/대비/감마), 영상 간 블렌딩에 효과적.
 
@@ -61,13 +61,13 @@ tags:
 - **상관**: “원시적인 매칭 연산(윈도우 형태 템플릿으로 물체 검출)”
 - **컨볼루션**: **커널을 좌우·상하 뒤집은 후** 상관을 적용 → 내가 원하는 윈도우와 동일하게 출력시키기 위해 적용
 - “컨볼루션은 커널을 **뒤집어** 적용, 상관/컨볼루션은 **유사도 최대 위치를 찾는** 동일한 맥락”.
-- ![](../../_image/2025-10-17-16-03-26.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-03-26.jpg)
 - 수식
 	- 상관: $$g(i) = u \otimes f = \sum_{x=-\frac{(w-1)}{2}}^{\frac{(w-1)}{2}} u(x)\,f(i+x)$$
 	- 컨볼루션: $$g(i) = u \ast f
 		= \sum_{x=-\frac{(w-1)}{2}}^{\frac{(w-1)}{2}}
 		  u(x)\,f(i-x)$$
-- ![](../../_image/2025-10-17-16-03-44.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-03-44.jpg)
 - 수식
 	- 상관: $$g(j,i) = u \otimes f
 		= \sum_{y=-\frac{(h-1)}{2}}^{\frac{(h-1)}{2}}
@@ -89,27 +89,27 @@ tags:
 ### 5.2.3. 대표 필터와 효과
 
 - $$h[m, n] = \sum _{k, l} f[m+k, n+l]$$
-- ![](../../_image/2025-10-17-16-12-02.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-12-02.jpg)
 - **Smoothing, 스무딩(저역통과)**
     - **박스/가우시안**: 노이즈 저감, 부드러워짐.
-	    - ![](../../_image/2025-10-17-16-10-57.jpg)
-	    - ![](../../_image/2025-10-17-16-11-02.jpg)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-10-57.jpg)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-11-02.jpg)
 	- 박스 특징: 각 픽셀의 인접 픽셀의 평균값으로 교체, 격자 무늬
     - **가우시안 특징**: 고주파 제거, **자기 컨볼루션 → 폭 증가**($\sigma !\to! \sigma\sqrt{2}$), **분리 가능**(2D = 1D×1D).
     - 5×5 **가중 커널 예시**(중심 가중, 주변 작음).
 - **Sharpening, 샤프닝(고주파 강조)**
-	- ![](../../_image/2025-10-17-16-11-11.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-11-11.jpg)
 	- 특징: 자기 자신의 명암 강조 - 주변의 평균값
     - “**지역 평균과의 차**를 강조”하는 샤프닝 필터 예시.
 - **에지 검출(1차 미분형)**
-	- ![](../../_image/2025-10-17-16-11-16.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-11-16.jpg)
     - **Sobel**: 수직/수평 마스크로 **경계 강조**.
     - 미분은 노이즈에 민감 → **스무딩 후 미분**이 정석
 - 모션 필터
-	- ![](../../_image/2025-10-17-16-11-39.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-11-39.jpg)
 - **비선형 필터**
     - **Median**: **임펄스(솔트 페퍼) 노이즈**에 강함.
-	    - ![](../../_image/2025-10-17-16-18-18.jpg)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/../../_image/2025-10-17-16-18-18.jpg)
 	    - 최소, 최대 제외 후 중앙값 사용
 
 ### 5.2.4. 컨볼루션 연산의 대수적 성질

@@ -77,8 +77,8 @@ tags:
 - 특징 가능성 값 $C$:
 	- $$C = min(S(0, 1), \, S(0, -1), \, S(1, 0), \, S(-1, 0)) ≥ T$$
 - 예제
-	- ![](2025-10-15-5.jpg)
-	- ![](2025-10-15-6.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-5.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-6.jpg)
 - **한계:**
 	- **한 화소 이동 + 4개(또는 8개) 이산 방향**만 고려 → 방향성 편향
 	- **잡음 대책 부재**
@@ -89,7 +89,7 @@ tags:
 	- 가중치 제곱차합: $$S(u,v)=\sum _y \sum _x G(y, x)(f(y+v, x+u) - f(y, x))^2$$
 	- 1차 테일러 전개로 근사:
 		- 테일러 확장 $f(y+v, x+u) \cong f(y, x) + vd_y(y, x) + ud_x(y, x)$을 대입
-		- ![](2025-10-15-1.jpg)
+		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-1.jpg)
 		- $$S(u,v)=\sum _y \sum _x G(y, x)(vd_y(y, x) + ud_x(y, x))^2$$
 	- **2차 모멘트 행렬(=구조 텐서) $M$** 도출
 		- $$\begin{align} S(u, v) & \cong \sum_y \sum_x G(y, x)(vd_y + ud_x)^2 \\
@@ -108,7 +108,7 @@ tags:
 - 기하적 해석(타원 등고선)
 	- $E(u,v)=c$는 **타원**이고, **주축 방향이 $e_1,e_2$​**, 축 길이는 $1/\sqrt{\lambda_1},\,1/\sqrt{\lambda_2}$​​.
     - $λ$ **클수록** 그 축은 **짧음**(그 방향으로 조금만 움직여도 변화 큼).
-    - ![](2025-10-15-15.jpg)
+    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-15.jpg)
 - **응답식:**
 	- ![|545x546](2025-10-15-3.jpg)
 	- $$R=\det(M)-\alpha\mathrm{trace}(M)^2 = \lambda_1 \lambda_2 - k(\lambda_1 + \lambda_2)^2,\quad \alpha\approx0.04\sim0.06$$
@@ -119,7 +119,7 @@ tags:
 		- $A = \begin{pmatrix} p & r \\ r & q \\ \end{pmatrix}$
 		- $C = (pq-r)^2 - k(p+q)^2$
 - 예제
-	- ![](2025-10-15-4.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-4.jpg)
 - **검출 절차:**
 	- **가우시안 미분**으로 기울기
 	- **가우시안 윈도우**에서 $M$ 계산
@@ -151,10 +151,10 @@ tags:
 
 ### 9.3.5. 슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘
 
-- ![](2025-10-15-8.jpg)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-8.jpg)
 - **원리:** 중심 화소와 이웃 화소 간 **밝기 유사도**로 **USAN(유사 영역) 크기**를 계산, **USAN이 작을수록 코너성 강함**(에지는 중간, 평탄은 큼).
 	- 파라미터 $t$로 “유사”의 범위를 결정.
-	- ![](2025-10-15-2.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-2.jpg)
 - **장점(맥락):** 미분을 직접 쓰지 않아 **노이즈에 비교적 강인**, 구조적 변화(코너)에서 USAN이 급감.
 - 수식:
 	- $$\text {usan\_area}(r_0) = \sum_r s(r, r_0)$$
@@ -170,8 +170,8 @@ tags:
 ### 9.3.6. 위치 선정
 
 - **비최대 억제**: 이웃 화소보다 크지 않으면 억제됨 → **지역최대**인 지점만 최종 특징점으로 채택
-	- ![](2025-10-15-9.jpg)
-	- ![](2025-10-15-7.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-9.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-15-7.jpg)
 - **이동·회전 불변성:** 위 연산자들은 **이동·회전**에는 대체로 안정적.
 - **스케일 이슈:** **스케일 변화에는 취약**(연산자 크기 고정) → 이후 장(스케일 공간)에서 보완.
 

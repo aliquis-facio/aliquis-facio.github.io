@@ -29,7 +29,7 @@ tags:
 # 2. 획득과 표현(Acquisition & Representation)
 ### 2.1. 사람의 눈과 카메라
 
-![](2025-10-14-11.jpg)
+![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-11.jpg)
 
 | 사람의 눈                 | 카메라/이미지 파이프라인                                | 비고                                                      |
 | --------------------- | -------------------------------------------- | ------------------------------------------------------- |
@@ -42,43 +42,43 @@ tags:
 ### 2.2. A Photon’s Life Choices
 
 - Absorption(흡수)
-	- ![](2025-10-14-13.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-13.jpg)
 	- 매질 내부에서 광자 소멸
 - Diffuse Reflection(난반사)
-	- ![](2025-10-14-14.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-14.jpg)
 	- 거친 표면에서 무작위 산란 → 방향 독립에 가까운 반사
 - Specular Reflection(정반사)
-	- ![](2025-10-14-15.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-15.jpg)
 	- 매끄러운 계면에서 거울같이 반사(뷰 의존)
 - Transparency(투사)
-	- ![](2025-10-14-16.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-16.jpg)
 	- 흡수·산란 거의 없음 → 선명 투과
 - Refraction(굴절)
-	- ![](2025-10-14-17.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-17.jpg)
 	- 굴절률(밀도) 차이로 진행 방향 변화
 - Fluorescence(형광)
-	- ![](2025-10-14-5.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-5.jpg)
 	- 흡수 직후 장파장 재방출(나노–마이크로초)
 - Subsurface Scattering(표면하 산란, SSS)
-	- ![](2025-10-14-6.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-6.jpg)
 	- 표면 아래 들어가 다중 산란 후 다른 지점에서 출사
 - Phosphorescence(인광)
-	- ![](2025-10-14-7.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-7.jpg)
 	- 삼중항 전이로 지연 방출(ms–시간)
 - Interreflection(상호반사)
-	- ![](2025-10-14-8.jpg)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-8.jpg)
 	- 표면 간 다중 반사로 색·광량 교환
 
 ### 2.3. Image Formation
 
-![](2025-10-14-9.jpg)
+![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-9.jpg)
 - 요소 사슬: **광원 특성 → 표면 형상·방향 → 표면 반사특성 → 광학계 → 센서 특성**(Exposure 포함). 이들이 합쳐져 영상이 형성된다.
 - **기본 방사측정 관계**: 영상면 조사조도 $E$는 장면 복사휘도 $L$에 **선형**이며, **렌즈 구경(면적)** 에 비례, **렌즈–영상면 거리의 제곱**에 반비례, **시선각 증가에 따라 감소** 한다.
 	- $$E = \big[\frac{\pi}{4}(\frac {d}{f})^2 \cos ^4 \alpha \big]L$$
 
 ### 2.4. From Light Rays to Pixel Values
 
-![](2025-10-14-10.jpg)
+![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-10-14-10.jpg)
 
 - **카메라 응답함수(CRF)**: 조사조도/노출량 → **픽셀값**으로의 비선형 매핑. **재질 추정**·**HDR 복원**에서 중요
 
