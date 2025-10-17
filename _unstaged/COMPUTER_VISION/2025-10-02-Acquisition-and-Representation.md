@@ -4,8 +4,8 @@ comments: true
 sitemap:
   changefreq:
   priority:
-title: "[COMPUTER VISION] "
-excerpt: 
+title: "[COMPUTER VISION] 획득과 표현"
+excerpt: 사람의 눈과 카메라
 date: 2025-10-02
 last_modified_at: 2025-10-17
 categories:
@@ -14,8 +14,19 @@ tags:
   - COMPUTER_VISION
 ---
 
-# 2. 획득과 표현(Acquisition & Representation)
+# 목차
 
+1. [획득과 표현(Acquisition & Representation)](#2-획득과-표현acquisition--representation)
+1. [사람의 눈과 카메라](#21-사람의-눈과-카메라)
+1. [A Photon’s Life Choices](#22-a-photons-life-choices)
+1. [Image Formation](#23-image-formation)
+1. [From Light Rays to Pixel Values](#24-from-light-rays-to-pixel-values)
+1. [투영 모델과 좌표 사상](#25-투영-모델과-좌표-사상)
+1. [디지털 표현(Representation)](#26-디지털-표현representation)
+
+---
+
+# 2. 획득과 표현(Acquisition & Representation)
 ### 2.1. 사람의 눈과 카메라
 
 ![](2025-10-14-11.jpg)
@@ -27,6 +38,7 @@ tags:
 | **동공(Pupil)**         | **유효 구경(Entrance Pupil)**                    | 광량 제어(조리개와 동일하게 동작)                                     |
 | **망막(Retina: 막대/원추)** | **CCD/CMOS 센서 + CFA(베이어)**                   | 광자→전자 변환(포토다이오드), **색 필터배열**로 RGB 분리                    |
 | **시신경·피질 전처리**        | **ISP**(디모자이킹, 노이즈 억제, 색보정, 화밸, 감마/톤매핑, 샤프닝) | 눈은 생물학적 적응, 카메라는 명시적 알고리즘                               |
+
 ### 2.2. A Photon’s Life Choices
 
 - Absorption(흡수)
@@ -57,14 +69,14 @@ tags:
 	- ![](2025-10-14-8.jpg)
 	- 표면 간 다중 반사로 색·광량 교환
 
-### 2.3. Image formation 파이프라인
+### 2.3. Image Formation
 
 ![](2025-10-14-9.jpg)
 - 요소 사슬: **광원 특성 → 표면 형상·방향 → 표면 반사특성 → 광학계 → 센서 특성**(Exposure 포함). 이들이 합쳐져 영상이 형성된다.
 - **기본 방사측정 관계**: 영상면 조사조도 $E$는 장면 복사휘도 $L$에 **선형**이며, **렌즈 구경(면적)** 에 비례, **렌즈–영상면 거리의 제곱**에 반비례, **시선각 증가에 따라 감소** 한다.
 	- $$E = \big[\frac{\pi}{4}(\frac {d}{f})^2 \cos ^4 \alpha \big]L$$
 
-### 2.4. From light rays to pixel values
+### 2.4. From Light Rays to Pixel Values
 
 ![](2025-10-14-10.jpg)
 
