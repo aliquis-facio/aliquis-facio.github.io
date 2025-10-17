@@ -4,6 +4,6 @@
   "templater-obsidian",
   "obsidian-smart-typography",
   "cm-typewriter-scroll-obsidian",
-  "oz-clear-unused-images",
-  "image-converter"
+  "image-converter",
+  "editing-toolbar"
 ]

@@ -12,7 +12,7 @@ date: 2022-10-23
 last_modified_at: 2024-11-08
 
 categories: [MATHEMATICS]
-tags: [APPLICATION STATISTICS]
+tags: [APPLICATION_STATISTICS]
 ---
 
 # 목차

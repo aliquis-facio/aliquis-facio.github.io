@@ -38,8 +38,7 @@
   "editing-toolbar:header1-text": [
     {
       "modifiers": [
-        "Mod",
-        "Shift"
+        "Alt"
       ],
       "key": "1"
     }
@@ -47,46 +46,9 @@
   "editing-toolbar:header2-text": [
     {
       "modifiers": [
-        "Mod",
-        "Shift"
+        "Alt"
       ],
       "key": "2"
-    }
-  ],
-  "editing-toolbar:header3-text": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "3"
-    }
-  ],
-  "editing-toolbar:header4-text": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "4"
-    }
-  ],
-  "editing-toolbar:header5-text": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "5"
-    }
-  ],
-  "editing-toolbar:header6-text": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "6"
     }
   ]
 }
