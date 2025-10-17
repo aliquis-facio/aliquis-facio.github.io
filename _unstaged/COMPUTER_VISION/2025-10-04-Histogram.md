@@ -6,12 +6,24 @@ sitemap:
   priority:
 title: "[COMPUTER VISION] Histogram"
 excerpt:
-date: 2025-10-17
+date: 2025-10-04
 last_modified_at: 2025-10-17
 categories:
   - COMPUTER VISION
 tags:
   - COMPUTER_VISION
+---
+
+# 목차
+
+1. [히스토그램](#4-히스토그램)
+	1. [히스토그램](#41-히스토그램)
+	2. [히스토그램 평활화 (Histogram Equalization)](#42-히스토그램-평활화-histogram-equalization)
+	3. [히스토그램 역투영 & 얼굴 검출](#43-히스토그램-역투영--얼굴-검출)
+	4. [이진 영상: 임계값 & 오츠(Otsu) 알고리즘](#44-이진-영상-임계값--오츠otsu-알고리즘)
+		1. [Otsu 알고리즘](#441-otsu-알고리즘)
+	5. [연결 요소(Connected Components) 라벨링](#45-연결-요소connected-components-라벨링)
+
 ---
 
 # 4. 히스토그램
@@ -105,10 +117,10 @@ tags:
 	- $$v_{\text{between}}(t) = w_0(t)\big(1 - w_0(t)\big)\big(\mu_0(t) - \mu_1(t)\big)^2$$
 	- 초깃값: $$(t=0):\quad w_0(0) = \hat{h}(0),\quad \mu_0(0) = 0$$
 	- 순환식 (t>0): $$\begin{align}
-	w_0(t) = w_0(t-1) + \hat{h}(t) \\
-	\mu_0(t) = \frac{w_0(t-1)\mu_0(t-1) + t\,\hat{h}(t)}{w_0(t)} \\
-	
-	\end{align}$$
+		& w_0(t) = w_0(t-1) + \hat{h}(t) \\
+		& \mu_0(t) = \frac{w_0(t-1)\mu_0(t-1) + t\,\hat{h}(t)}{w_0(t)} \\
+		& \mu_1(t) = \frac{\mu - w_0(t)\mu_0(t)}{1 - w_0(t)}
+		\end{align}$$
 - 알고리즘
 	- ![](../../_image/2025-10-17-17-05-56.jpg)
 
@@ -116,7 +128,7 @@ tags:
 
 ---
 
-### 4.4 연결 요소(Connected Components) 라벨링
+### 4.5. 연결 요소(Connected Components) 라벨링
 
 - **연결성 정의:** **4-연결/8-연결**로 화소 이웃을 규정, 동일 라벨로 군집화.
 	- ![](../../_image/2025-10-17-17-06-11.jpg)
@@ -126,5 +138,3 @@ tags:
 	    - ![](../../_image/2025-10-17-17-06-40.jpg)
 	    - ![](../../_image/2025-10-17-17-06-44.jpg)
 	    - ![](../../_image/2025-10-17-17-06-54.jpg)
-    - **Two-pass 라벨링/Union–Find:** 대규모 영상에 안정적.
-- **후처리:** 작은 라벨 제거, **모폴로지(침식/팽창)로 구멍 메움·노이즈 정리**.

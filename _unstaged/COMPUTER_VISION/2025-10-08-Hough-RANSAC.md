@@ -6,7 +6,7 @@ sitemap:
   priority:
 title: "[COMPUTER VISION] Voting Schemes"
 excerpt: Hough Transform, RANSAC
-date: 2025-10-17
+date: 2025-10-08
 last_modified_at: 2025-10-17
 categories:
   - COMPUTER VISION

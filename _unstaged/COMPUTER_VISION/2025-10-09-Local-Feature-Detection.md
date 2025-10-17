@@ -6,7 +6,7 @@ sitemap:
   priority:
 title: "[COMPUTER VISION] 지역 특징 검출"
 excerpt: 지역 특징, 코너
-date: 2025-10-17
+date: 2025-10-09
 last_modified_at: 2025-10-17
 categories:
   - COMPUTER VISION
