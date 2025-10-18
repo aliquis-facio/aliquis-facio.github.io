@@ -149,17 +149,18 @@ x' = a_{12}y + a_{22}x + a_{32}$$
 
 - **왜 보간이 필요한가:** 실수 좌표를 정수로 **반올림**하면 에일리어싱 발생
 	- **주변 화소로 보간**해 완화 → 거리에 대한 비율
-- **방법과 비교:**
-    - **최근접(nearest):** 가장 빠르나 **블록/톱니** 아티팩트.
-    - **양선형(bilinear):** 4이웃 가중 평균(균형 잡힌 화질/속도)
-	    - 1차원 보간식 유도: $f(x')=(1-\alpha)\,f(x)+\alpha\,f(x+1)$
-		    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-19-55.png?raw=true)
-	    - 2차원 보간식 유도: $$\begin{aligned}
+- 보간식
+	- 1차원 보간식 유도: $f(x')=(1-\alpha)\,f(x)+\alpha\,f(x+1)$
+		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-19-55.png?raw=true)
+	- 2차원 보간식 유도: $$\begin{aligned}
 			f(y, x') &= (1-\alpha) f(y,x) + \alpha f(y, x+1),\\
 			f(y+1, x') &= (1-\alpha) f(y+1,x) + \alpha f(y+1, x+1),\\
 			f(y', x') &= (1-\beta) f(y, x') + \beta f(y+1, x')
 			\end{aligned}$$
-			- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-21-25.png?raw=true)
+		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-21-25.png?raw=true)
+- **방법과 비교:**
+    - **최근접(nearest):** 가장 빠르나 **블록/톱니** 아티팩트.
+    - **양선형(bilinear):** 4이웃 가중 평균(균형 잡힌 화질/속도)
     - **양삼차(bicubic):** 16이웃, **부드러움/에지 보존**↑(연산량↑).
 
 ## 6.6. 다해상도
