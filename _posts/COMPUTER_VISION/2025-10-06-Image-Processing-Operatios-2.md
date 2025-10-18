@@ -44,7 +44,7 @@ tags:
 ## 6.2. 변환 종류와 성질
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-20.jpg?raw=true)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
+- ![Alt Images|372x165](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
 - Scaling: 각각의 요소에 스칼라를 곱한다. 변수 $a, b$ → 자유도: 2
 	- Uniform -: 각각의 요소를 같은 스칼라를 곱한다.
 		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
