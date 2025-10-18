@@ -45,21 +45,23 @@ tags:
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-20.jpg?raw=true)
 - ![Alt Images|372x165](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
-### 6.3.1. 기본(원자) 변환
+
+### 6.2.1. 기본(원자) 변환
 
 - **이동(Translation)**
-    $$\begin{bmatrix}x'\\ y'\\ 1\end{bmatrix}=  
+	- $$\begin{bmatrix}x'\\ y'\\ 1\end{bmatrix}=  
     \begin{bmatrix}1 & 0 & t_x\\
     0 & 1 & t_y\\
     0 & 0 & 1 \end{bmatrix}  
     \begin{bmatrix}x\\ y\\ 1\end{bmatrix}$$
 - **회전(Rotation, 각도 $\theta$)**
-    $$\begin{bmatrix}x'\\ y'\\ 1 \end{bmatrix}=  
+	- 길이·각도 보존(등거리).
+	- $$\begin{bmatrix}x'\\ y'\\ 1 \end{bmatrix}=  
     \begin{bmatrix}\cos\theta & -\sin\theta & 0 \\
      \sin\theta & \cos\theta & 0\\
      0 & 0 & 1 \end{bmatrix}
     \begin{bmatrix}x\\ y\\ 1 \end{bmatrix}$$
-- **스케일(Scaling)**
+- **스케일(Scaling)**: 축 방향 길이만 바뀜, 축 혼합 없음.
     - $$\begin{bmatrix}s_x&0&0\\
     0&s_y&0\\
     0&0&1\end{bmatrix}$$
@@ -67,51 +69,46 @@ tags:
 	    - ![Alt Images|624x255](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
 	- Nonuniform Scale
 		- ![Alt Images|646x246](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
-- **시어(Shear/Skew)**
+- **시어(Shear/Skew)**: 회전 × 스케일 × 회전
+	- 축을 서로 **섞는** 선형변환(각도 변화), 평행성은 보존하지만 모양이 기울어짐.
 	- $$\begin{bmatrix}1&k_x&0\\
 	k_y&1&0\\
 	0&0&1\end{bmatrix}$$
-- **대칭(Reflection)**: 축에 대해 부호 반전(예: x-축 반사
+- **대칭(Reflection)**: 축에 대해 부호 반전(예: x-축 반사)
 	- $\mathrm{diag}(1,-1,1))$
 
-### 6.3.2. 군(그룹)별 변환 체계
+### 6.2.2. 군(그룹)별 변환 체계
 
 - **유클리드/강체(Rigid/Euclidean)**: 회전+이동 (거리·각도 보존, 3 DoF)
+	- 거리, 각도, 면적(2D) 보존
+	- 최소 2–3 쌍 대응점(중심 정규화 권장)
 	- $$\mathbf{x}'=\mathbf{R}\mathbf{x}+\mathbf{t},\ \mathbf{R}\in SO(2)$$
 - **유사(Similarity)**: Rigid + 등방 스케일(비율 보존, 4 DoF)
+	- 각도, 비율 보존(거리·면적은 스케일에 따라 변함)
+	- 최소 2–3 쌍 대응점(중심 정규화 권장)
 	- $$\mathbf{x}'=s\mathbf{R}\mathbf{x}+\mathbf{t}$$
 - **아핀(Affine)**: 선성 + 이동(평행성 보존, 6 DoF)
+	- 직선·평행성·면적 비율 보존(각도·길이 불변 아님)
+	- 최소 3 쌍(6방정식)
 	- $$\begin{bmatrix}x'\\ y'\\ 1\end{bmatrix}= \underbrace{\begin{bmatrix}a_{11}&a_{12}&t_x\\
     a_{21}&a_{22}&t_y\\
     0&0&1\end{bmatrix}}_{\text{2×3 추정 시 자주 사용}}  
     \begin{bmatrix}x\ y\ 1\end{bmatrix}$$
 - **투영/사영(Projective, Homography)**: 직선 보존(평행성은 불보존, 8 DoF)
+	- 직선만 보존(평행성·길이·각도 불변 아님)
+	- 최소 4 쌍(8방정식)
 	- $$\begin{bmatrix}x'\\ y'\\ w'\end{bmatrix}=  \underbrace{\begin{bmatrix}
     h_{11}&h_{12}&h_{13}\\
     h_{21}&h_{22}&h_{23}\\
     h_{31}&h_{32}&1\end{bmatrix}}_{\mathbf{H}}  
     \begin{bmatrix}x \ y \ 1 \end{bmatrix},\quad (x'/w',y'/w')$$
 
-# 3) 비선형/국소 변형(Non-rigid, Warping)
+### 6.2.3. 비선형/국소 변형(Non-rigid, Warping)
 
 - **다항(Polynomial) 워프**: (x',y')를 (x,y)의 다항식으로 모델링(왜곡 보정)
 - **Thin-Plate Spline(TPS)**: 소수의 랜드마크로 매끄러운 곡면 변형
 - **B-spline/Free-Form Deformation(FFD)**: 격자 제어점으로 국소 변형
 - **광류 기반 워프(Optical Flow warp)**: 픽셀 단위 변위장으로 프레임 정합
-
-# 4) 성질 요약(무엇이 보존되나?)
-
-- **Rigid**: 거리, 각도, 면적(2D) 보존
-- **Similarity**: 각도, 비율 보존(거리·면적은 스케일에 따라 변함)
-- **Affine**: 직선·평행성·면적 비율 보존(각도·길이 불변 아님)
-- **Projective**: 직선만 보존(평행성·길이·각도 불변 아님)
-
-# 5) 추정(Estimation) & 대응점 수
-
-- **Rigid/Similarity**: 최소 2–3 쌍 대응점(중심 정규화 권장)
-- **Affine**: 최소 3 쌍(6방정식)
-- **Homography**: 최소 4 쌍(8방정식)
-- 노이즈/외란 대응: **RANSAC**으로 외란점 제거 후 선형/비선형 최소제곱
 
 ## 6.3. 동차좌표·행렬
 
