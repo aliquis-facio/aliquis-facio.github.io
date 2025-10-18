@@ -857,6 +857,7 @@ HTML의 각종 태그, `<style>`, `<script>`로 감싸고 그 안에 각각의 �
 * [Markdown 각주, 미주](https://lynmp.com/ko/article/nu86c16d8f09c9fbd8)
 * [Markdown 수식 1](https://velog.io/@d2h10s/LaTex-Markdown-%EC%88%98%EC%8B%9D-%EC%9E%91%EC%84%B1%EB%B2%95)
 * [Markdown 수식 2](https://khw11044.github.io/blog/blog-etc/2020-12-21-markdown-tutorial2/#4%EC%9C%84%EC%B2%A8%EC%9E%90-%EC%A7%80%EC%88%98--power)
+* [Markdown 수식 기호](https://jjycjnmath.tistory.com/117)
 * [Markdown 수식 공백 띄어쓰기](https://uwgdqo.tistory.com/29)
 * [Markdown Mermaid(Diagram)](https://mystria.github.io/archivers/apply-mermaid-diagram-to-github-pages)
 * [Mermaid(Diagram) Syntax](https://mermaid.js.org/syntax/examples.html)

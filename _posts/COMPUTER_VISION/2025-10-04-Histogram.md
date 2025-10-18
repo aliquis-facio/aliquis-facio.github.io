@@ -45,6 +45,7 @@ tags:
 - 히스토그램을 평평하게 만들어 주는 연산
 - 명암의 동적 범위 확장 → 영상 품질 향상
 - **누적 히스토그램 ($c(\cdot)$)** 을 매핑 함수로 사용
+- "뭉쳐있다" → 특정 구간 `[a, b]`가 뭉쳐져있으면 CDF의 `[a, b]` 구간에서 가파르게 증가한다
 - $$l_{out} = T(l_{in}) = \text {round} (c(l_{in}) \times (L-1))$$
 	- $round$: 정수형 변환
 	- $c(l_{in})$: 누적합
@@ -53,6 +54,7 @@ tags:
 	- $l = 0$: 가중치
 * 예제
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-17-03-49.jpg?raw=true)
+	- 0~1 → 0, 2 → 1, 3 → 3, 4 → 5, 5~7 → 7로 매핑되는 것을 볼 수 있다.
 * Histogram Stretching V.S. Histogram Equalization
 	* Histogram Stretching: min ~ max 값을 0 ~ 255로 선형적으로 늘려줌 → min 값이 0, max 값이 255 면 의미가 없음
 	* Histogram Equalization: 분포가 몰린 부분을 비선형적으로 늘려줌
