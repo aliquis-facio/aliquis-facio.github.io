@@ -35,14 +35,8 @@ tags:
 # 6. 기하 연산
 ## 6.1. 정의
 
-- **정의:** “일정한 기하 연산으로 결정된 **화소 위치**의 값을 가져와 새 값을 만든다.” 즉, 좌표를 변환해 **어디서 샘플링할지**를 정하는 연산이다.
-- **대표 변환:**
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-12.jpg?raw=true)
-	- translation(이동)
-	- rotation(회전)
-	- aspect(scale/크기/비율의 변화)
-	- affine(평행사변형)
-	- perspective(사다리꼴)
+- **정의:** “일정한 기하 연산으로 결정된 **화소 위치**의 값을 가져와 새 값을 만든다.” 즉, 좌표를 변환해 **어디서 샘플링할지**를 정하는 연산이다.
 
 ## 6.2. 변환 종류와 성질
 

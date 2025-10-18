@@ -13,7 +13,7 @@ categories:
 tags:
   - COMPUTER_VISION
 ---
-e
+
 # 목차
 
 1. [획득과 표현(Acquisition & Representation)](#2-획득과-표현acquisition--representation)
@@ -29,7 +29,7 @@ e
 # 2. 획득과 표현(Acquisition & Representation)
 ### 2.1. 사람의 눈과 카메라
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-11.jpg?raw=true)
+![Alt Images|646x429](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-11.jpg?raw=true)
 
 | 사람의 눈                 | 카메라/이미지 파이프라인                                | 비고                                                      |
 | --------------------- | -------------------------------------------- | ------------------------------------------------------- |
