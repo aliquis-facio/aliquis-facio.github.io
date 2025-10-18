@@ -45,57 +45,52 @@ tags:
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-20.jpg?raw=true)
 - ![Alt Images|372x165](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
-기하 변환(Geometric Transformations) 핵심 정리 ✨
+### 6.3.1. 기본(원자) 변환
 
-# 1) 기본(원자) 변환
+- **이동(Translation)**
+    $$\begin{bmatrix}x'\\ y'\\ 1\end{bmatrix}=  
+    \begin{bmatrix}1 & 0 & t_x\\
+    0 & 1 & t_y\\
+    0 & 0 & 1 \end{bmatrix}  
+    \begin{bmatrix}x\\ y\\ 1\end{bmatrix}$$
+- **회전(Rotation, 각도 $\theta$)**
+    $$\begin{bmatrix}x'\\ y'\\ 1 \end{bmatrix}=  
+    \begin{bmatrix}\cos\theta & -\sin\theta & 0 \\
+     \sin\theta & \cos\theta & 0\\
+     0 & 0 & 1 \end{bmatrix}
+    \begin{bmatrix}x\\ y\\ 1 \end{bmatrix}$$
+- **스케일(Scaling)**
+    - $$\begin{bmatrix}s_x&0&0\\
+    0&s_y&0\\
+    0&0&1\end{bmatrix}$$
+    - Uniform Scale
+	    - ![Alt Images|624x255](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
+	- Nonuniform Scale
+		- ![Alt Images|646x246](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
+- **시어(Shear/Skew)**
+	- $$\begin{bmatrix}1&k_x&0\\
+	k_y&1&0\\
+	0&0&1\end{bmatrix}$$
+- **대칭(Reflection)**: 축에 대해 부호 반전(예: x-축 반사
+	- $\mathrm{diag}(1,-1,1))$
 
-- **이동(Translation)**  
-    [  
-    \begin{bmatrix}x'\y'\1\end{bmatrix}=  
-    \begin{bmatrix}1&0&t_x\0&1&t_y\0&0&1\end{bmatrix}  
-    \begin{bmatrix}x\y\1\end{bmatrix}  
-    ]
-    
-- **회전(Rotation, 각도 (\theta))**  
-    [  
-    \begin{bmatrix}x'\y'\1\end{bmatrix}=  
-    \begin{bmatrix}\cos\theta&-\sin\theta&0\ \sin\theta&\cos\theta&0\0&0&1\end{bmatrix}  
-    \begin{bmatrix}x\y\1\end{bmatrix}  
-    ]
-    
-- **스케일(Scaling)**  
-    [  
-    \begin{bmatrix}s_x&0&0\0&s_y&0\0&0&1\end{bmatrix}  
-    ]
-    
-- **시어(Shear/Skew)**  
-    [  
-    \begin{bmatrix}1&k_x&0\k_y&1&0\0&0&1\end{bmatrix}  
-    ]
-    
-- **대칭(Reflection)**: 축에 대해 부호 반전(예: x-축 반사 (\mathrm{diag}(1,-1,1)))
-    
+### 6.3.2. 군(그룹)별 변환 체계
 
-# 2) 군(그룹)별 변환 체계
-
-- **유클리드/강체(Rigid/Euclidean)**: 회전+이동 (거리·각도 보존, 3 DoF)  
-    ( \mathbf{x}'=\mathbf{R}\mathbf{x}+\mathbf{t},\ \mathbf{R}\in SO(2) )
-    
-- **유사(Similarity)**: Rigid + 등방 스케일(비율 보존, 4 DoF)  
-    ( \mathbf{x}'=s\mathbf{R}\mathbf{x}+\mathbf{t} )
-    
+- **유클리드/강체(Rigid/Euclidean)**: 회전+이동 (거리·각도 보존, 3 DoF)
+	- $$\mathbf{x}'=\mathbf{R}\mathbf{x}+\mathbf{t},\ \mathbf{R}\in SO(2)$$
+- **유사(Similarity)**: Rigid + 등방 스케일(비율 보존, 4 DoF)
+	- $$\mathbf{x}'=s\mathbf{R}\mathbf{x}+\mathbf{t}$$
 - **아핀(Affine)**: 선성 + 이동(평행성 보존, 6 DoF)
-    $$\begin{bmatrix}x'\y'\1\end{bmatrix}= \underbrace{\begin{bmatrix}a_{11}&a_{12}&t_x\a_{21}&a_{22}&t_y\0&0&1\end{bmatrix}}_{\text{2×3 추정 시 자주 사용}}  
-    \begin{bmatrix}x\y\1\end{bmatrix}$$
+	- $$\begin{bmatrix}x'\\ y'\\ 1\end{bmatrix}= \underbrace{\begin{bmatrix}a_{11}&a_{12}&t_x\\
+    a_{21}&a_{22}&t_y\\
+    0&0&1\end{bmatrix}}_{\text{2×3 추정 시 자주 사용}}  
+    \begin{bmatrix}x\ y\ 1\end{bmatrix}$$
 - **투영/사영(Projective, Homography)**: 직선 보존(평행성은 불보존, 8 DoF)
-    $$\begin{bmatrix}x'\ y'\ w'\end{bmatrix}=  \underbrace{\begin{bmatrix}
+	- $$\begin{bmatrix}x'\\ y'\\ w'\end{bmatrix}=  \underbrace{\begin{bmatrix}
     h_{11}&h_{12}&h_{13}\\
     h_{21}&h_{22}&h_{23}\\
     h_{31}&h_{32}&1\end{bmatrix}}_{\mathbf{H}}  
     \begin{bmatrix}x \ y \ 1 \end{bmatrix},\quad (x'/w',y'/w')$$
-    
 
 # 3) 비선형/국소 변형(Non-rigid, Warping)
 
