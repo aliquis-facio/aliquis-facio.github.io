@@ -13,7 +13,7 @@ categories:
 tags:
   - COMPUTER_VISION
 ---
-
+e
 # 목차
 
 1. [획득과 표현(Acquisition & Representation)](#2-획득과-표현acquisition--representation)
@@ -71,7 +71,7 @@ tags:
 
 ### 2.3. Image Formation
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-9.jpg?raw=true)
+![Alt Images|0x0](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-9.jpg?raw=true)
 - 요소 사슬: **광원 → 표면 형상·방향 → 표면 반사특성 → 광학계 → 센서**(Exposure 포함). 이들이 합쳐져 영상이 형성된다.
 - **기본 방사측정 관계**: 영상면 조사조도 $E$는 장면 복사휘도 $L$에 **선형**이며, **렌즈 구경(면적)** 에 비례, **렌즈–영상면 거리의 제곱**에 반비례, **시선각 증가에 따라 감소** 한다.
 	- $$E = \big[\frac{\pi}{4}(\frac {d}{f})^2 \cos ^4 \alpha \big]L$$
