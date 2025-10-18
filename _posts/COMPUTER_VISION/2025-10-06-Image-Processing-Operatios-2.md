@@ -101,7 +101,7 @@ tags:
     h_{11}&h_{12}&h_{13}\\
     h_{21}&h_{22}&h_{23}\\
     h_{31}&h_{32}&1\end{bmatrix}}_{\mathbf{H}}  
-    \begin{bmatrix}x \ y \ 1 \end{bmatrix},\quad (x'/w',y'/w')$$
+    \begin{bmatrix}x \\ y \\ 1 \end{bmatrix},\quad (x'/w',y'/w')$$
 
 ### 6.2.3. 비선형/국소 변형(Non-rigid, Warping)
 
