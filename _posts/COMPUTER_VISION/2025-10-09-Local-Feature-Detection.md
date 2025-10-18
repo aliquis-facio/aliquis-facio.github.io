@@ -110,13 +110,16 @@ tags:
     - $λ$ **클수록** 그 축은 **짧음**(그 방향으로 조금만 움직여도 변화 큼).
     - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-15.jpg?raw=true)
 - **응답식:**
-	- ![|545x546](2025-10-15-3.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-3.jpg?raw=true)
 	- $$R=\det(M)-\alpha\mathrm{trace}(M)^2 = \lambda_1 \lambda_2 - k(\lambda_1 + \lambda_2)^2,\quad \alpha\approx0.04\sim0.06$$
 		- $R>0$이면 코너
 		- $R<0$이면 에지
-		- $|R|$ 작으면 평탄
+		- $\vert R \vert$ 작으면 평탄
 	- 고유값 계산 회피 → 속도 향상
-		- $A = \begin{pmatrix} p & r \\ r & q \\ \end{pmatrix}$
+		- $$A = \begin{pmatrix} =
+		p & r \\
+		r & q
+		\end{pmatrix}$$
 		- $C = (pq-r)^2 - k(p+q)^2$
 - 예제
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-4.jpg?raw=true)
