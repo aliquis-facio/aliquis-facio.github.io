@@ -20,9 +20,8 @@ tags:
 	1. [점 연산(Point operation)](#51-점-연산point-operation)
 	2. [영역 연산(Spatial/Neighborhood operation, Filtering)](#52-영역-연산spatialneighborhood-operation-filtering)
 		1. [상관(correlation) vs 컨볼루션(convolution)](#521-상관correlation-vs-컨볼루션convolution)
-		2. [선형 필터의 핵심 성질(LSI)](#522-선형-필터의-핵심-성질lsi)
+		2. [컨볼루션 연산의 대수적 성질](#522-컨볼루션-연산의-대수적-성질)
 		3. [대표 필터와 효과](#523-대표-필터와-효과)
-		4. [컨볼루션 연산의 대수적 성질](#524-컨볼루션-연산의-대수적-성질)
 
 ---
 
@@ -51,7 +50,7 @@ tags:
 ## 5.2. 영역 연산(Spatial/Neighborhood operation, Filtering)
 
 - **정의**: 한 픽셀의 새 값이 **이웃 화소들의 명암값 함수**로 정해짐.
-- ==**무엇에 쓰나?**==
+- **무엇에 쓰나?**
     - **향상**(노이즈 감소(denoise), 사이즈 조정(resize), 대조 강화(contrast))
     - **정보 추출**(texture, **edges**, keypoints)
     - **패턴 검출**(템플릿 매칭)
@@ -78,12 +77,15 @@ tags:
 		  \sum_{x=-\frac{(w-1)}{2}}^{\frac{(w-1)}{2}}
 		  u(y,x)\,f(j-y,i-x)$$
 
-### 5.2.2. 선형 필터의 핵심 성질(LSI)
+### 5.2.2. 컨볼루션 연산의 대수적 성질
 
-- **선형성·시프트 불변성**: “어떤 **선형·시불변 연산자도 컨볼루션**으로 표현 가능”.
-	- $F(Shift(f)) = Shift(F(f))$
-- **대수 성질**: 교환·결합·분배·항등(임펄스) 등
-	- $F(f_1 + f_2) = F(f_1) + F(f_2)$
+- 선형성: $filter(f_1 + f_2) = filter(f_1) + filter(f_2)$
+- 이동 불변성: $filter(shift(f)) = shift(filter(f))$
+- 교환 법칙: $a \times b = b \times a$
+- 결합 법칙: $a \times  (b \times  c) = (a \times  b) \times  c$
+- 분배 법칙: $a \times  (b + c) = (a \times  b) + (a \times  c)$
+- 스칼라 결합: $ka \times  b = a \times  kb = k (a \times  b)$
+- 항등원: $e = [0, 0, 1, 0, 0], a \times  e = a$
 - **결론**: 여러 필터를 연속 적용 ≡ **하나의 등가 필터**(성능·설계 단순화).
 
 ### 5.2.3. 대표 필터와 효과
@@ -111,16 +113,6 @@ tags:
     - **Median**: **임펄스(솔트 페퍼) 노이즈**에 강함.
 	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-16-18-18.jpg?raw=true)
 	    - 최소, 최대 제외 후 중앙값 사용
-
-### 5.2.4. 컨볼루션 연산의 대수적 성질
-
-- 선형성: $filter(f_1 + f_2) = filter(f_1) + filter(f_2)$
-- 이동 불변성: $filter(shift(f)) = shift(filter(f))$
-- 교환 법칙: $a \times b = b \times a$
-- 결합 법칙: $a \times  (b \times  c) = (a \times  b) \times  c$
-- 분배 법칙: $a \times  (b + c) = (a \times  b) + (a \times  c)$
-- 스칼라 결합: $ka \times  b = a \times  kb = k (a \times  b)$
-- 항등원: $e = [0, 0, 1, 0, 0], a \times  e = a$
 
 ### 5.2.5. 패딩
 

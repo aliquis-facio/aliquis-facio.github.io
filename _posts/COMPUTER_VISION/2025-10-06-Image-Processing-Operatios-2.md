@@ -47,7 +47,7 @@ tags:
 ## 6.2. 변환 종류와 성질
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-20.jpg?raw=true)
-- ![Alt Images|372x165](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
 
 ### 6.2.1. 기본(원자) 변환
 
@@ -69,9 +69,9 @@ tags:
     0&s_y&0\\
     0&0&1\end{bmatrix}$$
     - Uniform Scale
-	    - ![Alt Images|624x255](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
 	- Nonuniform Scale
-		- ![Alt Images|646x246](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
+		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
 - **시어(Shear/Skew)**: 회전 × 스케일 × 회전
 	- 축을 서로 **섞는** 선형변환(각도 변화), 평행성은 보존하지만 모양이 기울어짐.
 	- $$\begin{bmatrix}1&k_x&0\\

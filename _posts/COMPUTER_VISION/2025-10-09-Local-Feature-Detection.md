@@ -160,13 +160,13 @@ tags:
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-2.jpg?raw=true)
 - **장점(맥락):** 미분을 직접 쓰지 않아 **노이즈에 비교적 강인**, 구조적 변화(코너)에서 USAN이 급감.
 - 수식:
-	- $$\text {usan\_area}(r_0) = \sum_r s(r, r_0)$$
+	- $$\text {usan \, area}(r_0) = \sum_r s(r, r_0)$$
 	- $$s(r, r_0) =
 		\begin{cases} {1, \; |f(r) - f(r_0)| \leq t_1} \\
 		0, \; \text {if not}
 		\end{cases}$$
 	- $$C = \begin{cases}
-		q - \text {usan\_area}(r_0), \; \text {usan\_area}(r_0) \leq t_2 \\
+		q - \text {usan \, area}(r_0), \; \text {usan \, area}(r_0) \leq t_2 \\
 		0, \; \text {if not}
 		\end{cases}$$
 
