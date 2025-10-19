@@ -1,63 +1,70 @@
-# Ignore docs files
-_gh_pages
-_site
+# GitHub Pages / Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler
 .ruby-version
 
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
+# Node / Tooling
+node_modules
+.cache/
+.vscode/
+.idea/
 *.log
-*.rej
-*.swo
-*.swp
-*.zip
-*.vi
-*~
 
 # OS or Editor folders
 .DS_Store
 ._*
 Thumbs.db
-.cache
+*.swo
+*.swp
+*~
+nbproject
+*.sublime-project
+*.sublime-workspace
 .project
 .settings
 .tmproj
 *.esproj
-nbproject
-*.sublime-project
-*.sublime-workspace
-.idea
+
+# Misc build/dev
+Makefile
+_config.dev.yml
+*.gem
+*.diff
+*.err
+*.orig
+*.rej
+*.zip
+*.vi
+
+# Obsidian / Makemd
+.obsidian/workspace-mobile.json
+.obsidian/workspace.json
+.obsidian/app.json
+.makemd/
+.trash/
+.space
+Tags
+Vault.md
+
+.DS_Store
+
+
 
 # Komodo
 *.komodoproject
 .komodotools
 
-# grunt-html-validation
+# Validation reports
 validation-status.json
 validation-report.json
 
-# Folders to ignore
-node_modules
-.sass-cache
-# _unstaged
+# Custom dirs
+_gh_pages
 
-# Dev stuff
-Makefile
-Gemfile.lock
-_config.dev.yml
-.vscode
-*.gem
-
-# obsidian
-.makemd
-.obsidian/workspace-mobile.json
-.obsidian/workspace.json
-.obsidian/app.json
-.space
-.trash/
-.DS_Store
-Tags
+# Project specific
 .stylelintrc.json
-Vault.md
 _posts/_posts.md
