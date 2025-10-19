@@ -46,18 +46,30 @@ tags:
 ### 6.2.1. 기본(원자) 변환
 
 - **이동(Translation)**
-	- $$\begin{bmatrix}x'\\ y'\\ 1\end{bmatrix}=  
-    \begin{bmatrix}1 & 0 & t_x\\
+	- $$\begin{bmatrix}
+	x'\\ y'\\ 1
+	\end{bmatrix}=  
+    \begin{bmatrix}
+	1 & 0 & t_x\\
     0 & 1 & t_y\\
-    0 & 0 & 1 \end{bmatrix}  
-    \begin{bmatrix}x\\ y\\ 1\end{bmatrix}$$
+    0 & 0 & 1
+	\end{bmatrix}  
+    \begin{bmatrix}
+	x\\ y\\ 1
+	\end{bmatrix}$$
 - **회전(Rotation, 각도 $\theta$)**
 	- 길이·각도 보존(등거리).
-	- $$\begin{bmatrix}x'\\ y'\\ 1 \end{bmatrix}=  
-    \begin{bmatrix}\cos\theta & -\sin\theta & 0 \\
-     \sin\theta & \cos\theta & 0\\
-     0 & 0 & 1 \end{bmatrix}
-    \begin{bmatrix}x\\ y\\ 1 \end{bmatrix}$$
+	- $$\begin{bmatrix}
+	x'\\ y'\\ 1
+	\end{bmatrix}=  
+    \begin{bmatrix}
+	\cos\theta & -\sin\theta & 0\\
+	\sin\theta & \cos\theta & 0\\
+	0 & 0 & 1
+	\end{bmatrix}
+    \begin{bmatrix}
+	x\\ y\\ 1
+	\end{bmatrix}$$
 - **스케일(Scaling)**: 축 방향 길이만 바뀜, 축 혼합 없음.
     - $$\begin{bmatrix}s_x&0&0\\
     0&s_y&0\\
@@ -68,9 +80,11 @@ tags:
 		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
 - **시어(Shear/Skew)**: 회전 × 스케일 × 회전
 	- 축을 서로 **섞는** 선형변환(각도 변화), 평행성은 보존하지만 모양이 기울어짐.
-	- $$\begin{bmatrix}1&k_x&0\\
-	k_y&1&0\\
-	0&0&1\end{bmatrix}$$
+	- $$\begin{bmatrix}
+	1 & k_x & 0\\
+	k_y & 1 & 0\\
+	0 & 0 & 1
+	\end{bmatrix}$$
 - **대칭(Reflection)**: 축에 대해 부호 반전(예: x-축 반사)
 	- $\mathrm{diag}(1,-1,1))$
 
@@ -87,18 +101,28 @@ tags:
 - **아핀(Affine)**: 선성 + 이동(평행성 보존, 6 DoF)
 	- 직선·평행성·면적 비율 보존(각도·길이 불변 아님)
 	- 최소 3 쌍(6방정식)
-	- $$\begin{bmatrix}x'\\ y'\\ 1\end{bmatrix}= \underbrace{\begin{bmatrix}a_{11}&a_{12}&t_x\\
-    a_{21}&a_{22}&t_y\\
-    0&0&1\end{bmatrix}}_{\text{2×3 추정 시 자주 사용}}  
-    \begin{bmatrix}x\ y\ 1\end{bmatrix}$$
+	- $$\begin{bmatrix}
+	x'\\ y'\\ 1
+	\end{bmatrix} = \underbrace{\begin{bmatrix}
+	a_{11 } &a_{12} & t_x\\
+    a_{21} & a_{22} & t_y\\
+    0 & 0 & 1
+	\end{bmatrix}}_{\text{2×3 추정 시 자주 사용}}  
+    \begin{bmatrix}
+	x\\ y\\ 1
+	\end{bmatrix}$$
 - **투영/사영(Projective, Homography)**: 직선 보존(평행성은 불보존, 8 DoF)
 	- 직선만 보존(평행성·길이·각도 불변 아님)
 	- 최소 4 쌍(8방정식)
-	- $$\begin{bmatrix}x'\\ y'\\ w'\end{bmatrix}=  \underbrace{\begin{bmatrix}
+	- $$\begin{bmatrix}
+	x'\\ y'\\ w'
+	\end{bmatrix} = \underbrace{\begin{bmatrix}
     h_{11}&h_{12}&h_{13}\\
     h_{21}&h_{22}&h_{23}\\
     h_{31}&h_{32}&1\end{bmatrix}}_{\mathbf{H}}  
-    \begin{bmatrix}x \\ y \\ 1 \end{bmatrix},\quad (x'/w',y'/w')$$
+    \begin{bmatrix}
+	x \\ y \\ 1
+	\end{bmatrix}, \quad (x'/w',y'/w')$$
 
 ### 6.2.3. 비선형/국소 변형(Non-rigid, Warping)
 
@@ -129,7 +153,7 @@ tags:
 		a_{31} & a_{32} & 1
 		\end{pmatrix}$$
 	- $$y' = a_{11}y + a_{21}x + a_{31}, \qquad
-x' = a_{12}y + a_{22}x + a_{32}$$
+	x' = a_{12}y + a_{22}x + a_{32}$$
 - 예제: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-05-36.png?raw=true)
 - **동차좌표 사용하는 이유**: 여러 변환을 **곱으로 결합**해 한 번에 적용 (**계산 효율↑**)
 
