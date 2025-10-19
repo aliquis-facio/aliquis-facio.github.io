@@ -40,6 +40,14 @@ _config.dev.yml
 *.zip
 *.vi
 
+# Komodo
+*.komodoproject
+.komodotools
+
+# Validation reports
+validation-status.json
+validation-report.json
+
 # Obsidian / Makemd
 .obsidian/workspace-mobile.json
 .obsidian/workspace.json
@@ -50,21 +58,9 @@ _config.dev.yml
 Tags
 Vault.md
 
-.DS_Store
-
-
-
-# Komodo
-*.komodoproject
-.komodotools
-
-# Validation reports
-validation-status.json
-validation-report.json
-
-# Custom dirs
-_gh_pages
-
 # Project specific
 .stylelintrc.json
 _posts/_posts.md
+
+# Custom dirs
+_gh_pages
