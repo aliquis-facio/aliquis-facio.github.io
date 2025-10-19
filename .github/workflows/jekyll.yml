@@ -44,6 +44,70 @@ jobs:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
+      - name: Generate sitemap.xml (Ruby)
+        env:
+          SITE_BASE_URL: https://aliquis-facio.github.io
+        run: |
+          ruby - <<'RUBY'
+          require 'time'
+          base = ENV['SITE_BASE_URL']
+          Dir.chdir('_site')
+          SKIP_DIRS = [
+            %r{^assets/}, %r{^css/}, %r{^js/}, %r{^images?/}, %r{^fonts?/}, %r{^vendor/},
+            %r{^tags?/}, %r{^tag/}, %r{^categories?/}, %r{^category/}, %r{^search/}, %r{^page\d+/}
+          ]
+          SKIP_FILES = [%r{^404\.html$}, %r{^feed\.xml$}, %r{^atom\.xml$}, %r{^sitemap\.xml$}]
+          urls = []
+          Dir.glob('**/*', File::FNM_DOTMATCH).each do |path|
+            next if File.directory?(path)
+            next if SKIP_DIRS.any? { |re| path.match?(re) }
+            next if SKIP_FILES.any? { |re| path.match?(re) }
+            loc =
+              if File.basename(path) == 'index.html'
+                path == 'index.html' ? base + '/' : base + '/' + File.dirname(path) + '/'
+              elsif File.extname(path) == '.html'
+                base + '/' + path.sub(/\.html$/, '/')    # /a/b.html → /a/b/
+              else
+                base + '/' + path
+              end
+            lastmod = File.mtime(path).utc.iso8601
+            urls << [loc.gsub(%r{//+}, '/'), lastmod]
+          end
+          urls.uniq!
+          File.write('sitemap.xml',
+            %(<?xml version="1.0" encoding="UTF-8"?>\n) +
+            %(<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n) +
+            urls.sort_by(&:first).map { |loc, m|
+              "  <url>\n    <loc>#{loc}</loc>\n    <lastmod>#{m}</lastmod>\n  </url>\n"
+            }.join +
+            %(</urlset>\n)
+          )
+          puts "Generated sitemap.xml with #{urls.size} urls"
+          RUBY
+
+      - name: Sanity check sitemap content
+        run: |
+          cd _site
+          head -n 4 sitemap.xml
+          # 카테고리/페이지네이션/검색이 남아있으면 실패 처리
+          if grep -Eq '/category/|/page[0-9]+/|/search/' sitemap.xml; then
+            echo "::error ::Filtered URLs still present in sitemap.xml"; exit 1
+          fi
+
+      - name: Generate sitemap_index.xml
+        env:
+          SITE_BASE_URL: https://aliquis-facio.github.io
+        run: |
+          cd _site
+          cat > sitemap_index.xml <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <sitemap>
+              <loc>${SITE_BASE_URL}/sitemap.xml</loc>
+            </sitemap>
+          </sitemapindex>
+          EOF
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
