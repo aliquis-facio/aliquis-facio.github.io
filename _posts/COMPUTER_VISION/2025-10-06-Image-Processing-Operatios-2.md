@@ -133,7 +133,7 @@ tags:
 
 ## 6.3. 동차좌표·행렬
 
-- 동치 좌표: $\dot{x}=(\,y\;\; x\;\; 1\,)$
+- 동차 좌표: $\dot{x}=(\,y\;\; x\;\; 1\,)$
 	-  예: $(3,5)\to(3,5,1)$
 - **동차행렬:** $(x,y)\to(x,y,1)$로 확장하면 2D 변환을 **3×3 행렬** 하나로 통일적으로 표현·조합 가능.
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-04-03.png?raw=true)
