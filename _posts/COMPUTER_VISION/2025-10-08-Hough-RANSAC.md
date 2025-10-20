@@ -76,6 +76,7 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 ### 8.3.2. 노이즈
 #### 8.3.2.1. 노이즈가 미치는 영향
 
+- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20 17-04-44.png?raw=true)
 - **피처 공간의 균일 잡음**은 누적 배열에 **허위(spurious) 피크**를 만든다. 노이즈가 커질수록 최대 득표 수 자체도 증가해 **진짜 피크가 흐려지고(peak fuzziness)** 위치도 불안정해진다.
 
 #### 8.3.2.2. 노이즈 대응 전략 (Hough 기준)
