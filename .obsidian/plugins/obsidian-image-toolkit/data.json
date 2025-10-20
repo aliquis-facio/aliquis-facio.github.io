@@ -1,8 +1,8 @@
 {
   "viewMode": "Normal",
   "viewImageInEditor": true,
-  "viewImageInCPB": false,
-  "viewImageWithLink": false,
+  "viewImageInCPB": true,
+  "viewImageWithLink": true,
   "viewImageOther": true,
   "pinMaximum": 3,
   "pinCoverMode": true,

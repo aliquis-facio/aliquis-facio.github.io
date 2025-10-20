@@ -12,7 +12,7 @@
 
 ## 1.2. Other Security Concepts(A.A.A.)
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-22-19.jpg?raw=true)
+![Alt Images|394x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-22-19.jpg?raw=true)
 
 - **Assurance(보증)**: 컴퓨터 시스템에서 신뢰를 어떻게 제공·관리하는지에 대한 개념.
 	- 신뢰 관리는 **정책(Policies)**, **권한(Permissions)**, **보호(Protections)** 세 축으로 구성.
@@ -21,29 +21,29 @@
 		- <font color="#ff0000">보호(Protections)</font>
 - **Authenticity(진정성)**: 사람이나 시스템이 발행한 진술·정책·권한이 **진짜**인지 판단하는 능력.
 	- 도구: **디지털 서명**
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-22-50.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-22-50.jpg?raw=true)
 - **Anonymity(익명성)**: 특정 기록/거래가 **개인에게 귀속되지 않음**을 의미.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-01.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-01.jpg?raw=true)
 	- 도구: **집계(aggregation)**, **믹싱(mixing)**, **프록시(proxies)**, **가명(pseudonyms)** 등
 
 ## 1.3. 위협과 공격 유형
 
 - **도청(Eavesdropping)**: 통신 채널에서 제3자가 정보를 가로채는 행위
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-15.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-15.jpg?raw=true)
 - **변조(Alteration)**: 무단 수정
 	- **중간자 공격(MITM)**: 스트림을 가로채 수정 후 재전송
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-32.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-32.jpg?raw=true)
 - **서비스거부(DoS)**: 데이터 서비스/접근의 중단·저하
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-57.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-57.jpg?raw=true)
 - **가장(Masquerading)**: 실제 작성자가 아닌데 **남으로 위장**해 정보 생산
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-08.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-08.jpg?raw=true)
 - **부인(Repudiation)**: 약속·수신 사실을 **나중에 부정**하는 행위(영수증 요구 프로토콜 회피 시도)
 - **상관/추적(Correlation & Traceback)**: 여러 데이터원을 **결합**해 정보/스트림의 **발신자 추적**.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-26.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-26.jpg?raw=true)
 
 ## 1.4. 보안 10원칙(Design Principles)
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-35.jpg?raw=true)
+![Alt Images|394x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-35.jpg?raw=true)
 
 - **경제성(Economy of mechanism)**: **단순성**을 지향해 이해·검증을 쉽게
 - **실패-안전 기본값(Fail-safe defaults)**: **보수적 기본값**(초기 권한 최소화 등)
@@ -59,13 +59,13 @@
 ## 1.5. 접근통제 모델(Access Control)
 
 - **접근통제 행렬(Access Control Matrix, ACM)**: 주체×객체 테이블에 권한 기입.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-59.jpg?raw=true)
+	- ![Alt Images|336x75](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-59.jpg?raw=true)
 - **Access Control List, ACL**: 객체 중심으로 “누가/무엇을” 목록화.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-25-03.jpg?raw=true)
+	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-25-03.jpg?raw=true)
 - **Capabilities**: 주체 중심으로 “어떤 객체에 어떤 권한”
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-25-11.jpg?raw=true)
 - **Role-Based Access Control, RBAC**: 사용자 대신 역할에 권한을 부여.
-	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-25-18.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-25-18.jpg?raw=true)
 
 ## 1.6. 암호(Encryption)·암복호 구성요소
 
@@ -112,7 +112,7 @@
 
 ## 1.8. 비밀번호(저장·강도·브루트포스)와 구성
 
-![Alt Images|394x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-26-46.jpg?raw=true)
+![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-26-46.jpg?raw=true)
 
 - **비밀번호 저장 방법(개념)**
     - 원문 저장 금지. **해시(가급적 Salt+느린 KDF)** 저장.
