@@ -36,7 +36,8 @@ tags:
 ## 6.1. 정의
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-12.jpg?raw=true)
-- **정의:** “일정한 기하 연산으로 결정된 **화소 위치**의 값을 가져와 새 값을 만든다.” 즉, 좌표를 변환해 **어디서 샘플링할지**를 정하는 연산이다.
+- 일정한 기하 연산으로 결정된 **화소 위치**의 값을 가져와 새 값을 만든다.
+- 좌표를 변환해 **어디서 샘플링할지**를 정하는 연산이다.
 
 ## 6.2. 변환 종류와 성질
 
@@ -86,7 +87,7 @@ tags:
 	0 & 0 & 1
 	\end{bmatrix}$$
 - **대칭(Reflection)**: 축에 대해 부호 반전(예: x-축 반사)
-	- $\mathrm{diag}(1,-1,1))$
+	- $\mathrm{diag}(1,-1,1)$
 
 ### 6.2.2. 군(그룹)별 변환 체계
 
@@ -165,9 +166,11 @@ tags:
 - **후방(backward) 매핑** 타깃의 각 픽셀에서 **역변환**으로 원 영상의 **실수 좌표**를 찾아 **보간**
 	- 역행렬을 미리 구해 두고 후방 매핑으로 샘플링한다
 	- **안티에일리어싱** 효과.
-- 알고리즘
-	- 전방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-00.png?raw=true)
-	- 후방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-14.png?raw=true)
+
+### 6.4.1. 알고리즘
+
+- 전방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-00.png?raw=true)
+- 후방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-14.png?raw=true)
 
 ## 6.5. 보간(Interpolation)과 반(反)에일리어싱
 
