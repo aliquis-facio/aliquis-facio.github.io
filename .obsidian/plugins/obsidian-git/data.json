@@ -1,5 +1,5 @@
 {
-  "commitMessage": "vault backup: {{date}}",
+  "commitMessage": "[DOCS] Obsidian Commit\n\n{{date}}",
   "autoCommitMessage": "[DOCS] Obsidian Auto Commit\n\n{{date}}",
   "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
