@@ -66,7 +66,6 @@
 > 현대 보안 목표: 보통 **IND-CPA**(스트림/블록 암호 모드)나 **IND-CCA**(암호화+MAC 또는 AEAD) 충족.
 
 ### 2.3.3. 대표 공격 기법
-
 #### 2.3.3.1. 고전/기초
 
 - **빈도 분석**: 모노알파벳 치환 붕괴
@@ -187,7 +186,20 @@ D(E(m)) = E(m) ⊕ OTP = 	1110100 1110010
 - **무결성 없음**: 공격자가 $C$를 바꾸면 $P$도 **예측 가능하게 바뀔 수 있음(가변성)**.  
     → **Encrypt-then-MAC(HMAC)** 또는 **AEAD(AES-GCM, ChaCha20-Poly1305)** 사용이 실무 표준.
 
-> Message Authentication Code, MAC
+#### 2.6.2.6. Message Authentication Code, MAC
+
+![](../../_image/2025-10-21-19-24-48.jpg)
+
+- **CBC-MAC에서의 residue**: CBC 방식으로 블록암호를 체이닝했을 때 **마지막 블록(최종 체이닝 값)** 을 가리킵니다. 이 값을 그대로(또는 변환·절단 후) **MAC 태그**로 사용한다.
+- **정의(길이 = 블록 크기 n)**
+    - $C_0=E_K(P_0⊕IV)C_0 = E_K(P_0 \oplus IV)C_0​=E_K​(P_0​⊕IV)$
+    - $C_i=E_K(P_i⊕C_{i−1})C_i = E_K(P_i \oplus C_{i-1})Ci​=E_K​(P_i​⊕C_{i−1}​)$
+    - **$residue = C_{m-1}$​** (마지막 블록) → 필요시 **truncation** 또는 **출력 변환**(예: 3DES 한 번 더 암호화) 후 사용
+- **주의점**
+    - **가변 길이 메시지**에 그대로 CBC-MAC을 쓰면 취약 → **길이 바인딩**(길이 포함, 도메인 구분) 또는 **CMAC** 같은 표준을 사용
+    - 태그 비교는 **상수시간**으로 하고, 직렬화/인코딩을 고정(정규화)
+
+> [Message Authentication Code MAC](Message%20Authentication%20Code%20MAC.md)
 
 #### 2.6.2.6. 성능·병렬성
 
@@ -207,7 +219,8 @@ D(E(m)) = E(m) ⊕ OTP = 	1110100 1110010
 
 ## 2.8. Advanced Encryption Standard, AES
 
-![](2025-10-13-13-45-57.png)
+![](../../_image/2025-10-21-19-26-20.jpg)
+
 - 128/192/256-bit Block Size
 - 128/192/256-bit Key. 블록 크기와 독립적
 - 10~14 rounds

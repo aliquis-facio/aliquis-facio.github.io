@@ -1,22 +1,17 @@
 # Message Authentication Code, MAC 검증
 
-## 1) 기본 원리
+## 1. 기본 원리
 
 - 송신자: **공유 키 K**로 `tag = MAC(K, message)` 생성 후 `(message, tag)` 전송
-    
 - 수신자: **동일 K**로 `tag' = MAC(K, message)` 다시 계산 → **상수시간 비교**로 `tag' == tag` 확인
-    
 - 통과하면 **무결성 + 인증** 보장(발신자가 K를 아는 자임을 증명)
-    
 
-## 2) 표준 MAC 종류
+## 2. 표준 MAC 종류
 
 - **HMAC**(SHA-256 등): 가장 널리 사용
-    
 - **CMAC**(AES 기반), **GMAC**(AES-GCM의 MAC), **Poly1305**(ChaCha20-Poly1305의 MAC)
-    
 
-## 3) 안전한 검증 절차 (체크리스트)
+## 3. 안전한 검증 절차 (체크리스트)
 
 1. **정확한 바이트열**로 검증
     - 직렬화/인코딩 통일(JSON canonicalize, 공백/정렬 고정)
