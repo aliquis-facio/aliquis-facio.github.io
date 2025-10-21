@@ -8,9 +8,9 @@
 - 안전한 사용을 위해선 **강한 알고리즘**과 **비밀키 보안**이 필수.
 - 키 배포를 위한 **안전 채널**이 전제된다.
 `
-- 수식 $Y=E_K(X), X=D_K(Y)$.
-	- $E$: Encryption
-	- $D$: Decryption
+- 수식
+	- $Y=E_K(X), \quad X=D_K(Y)$.
+	- $E$: Encryption, $D$: Decryption, $K$: Key
 
 ## 2.2. 치환 암호 (Substitution Ciphers)
 
