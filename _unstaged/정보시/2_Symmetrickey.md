@@ -104,12 +104,13 @@
 - 문제: 키 생성·분배가 현실적으로 어려움.
 - XOR 예시로 암·복호가 성립(A⊕B⊕A=B).
 ```
-m   =                   1110100 1110010
-OTP =                   0011010 1101101
-E(m) = m ⊕ OTP =       1101110 0011111
-D(E(m)) = E(m) ⊕ OTP = 1110100 1110010
+m = 					 1110100 1110010
+OTP = 					 0011010 1101101
+E(m) = m ⊕ OTP = 		1101110 0011111
+D(E(m)) = E(m) ⊕ OTP = 	1110100 1110010
 ```
 
+> 참고
 > [One Time Password, OTPassword](One%20Time%20Password.md)
 
 ## 2.5. Data Encryption Standard, DES
