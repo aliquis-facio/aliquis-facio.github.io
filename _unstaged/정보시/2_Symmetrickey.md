@@ -12,7 +12,7 @@
 	- $Y=E_K(X), \quad X=D_K(Y)$.
 	- $E$: Encryption, $D$: Decryption, $K$: Key
 
-## 2.2. 치환 암호 (Substitution Ciphers)
+## 2.2. 치환 **암호** (Substitution Ciphers)
 
 ### 2.2.1. 정의
 
