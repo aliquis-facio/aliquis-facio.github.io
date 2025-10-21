@@ -1,8 +1,5 @@
-/*
-웹폰트 적용
-영어: D2Coding
-한글: RIDIBatang-subset
-*/
+/* 웹폰트 적용 */
+/* 영어: D2Coding */
 @font-face {
   font-family: 'D2Coding';
   font-style: normal;
@@ -15,6 +12,7 @@
     unicode-range: U+0041-005A, U+0061-007A;
 }
 
+/* 영어: D2Coding */
 @font-face {
   font-family: 'D2Coding';
   font-style: normal;
@@ -27,6 +25,7 @@
     unicode-range: U+0041-005A, U+0061-007A;
 }
 
+/* 한글: RIDIBatang-subset */
 @font-face {
     font-family: 'RIDIBatang-subset';
     src: url('http://cdn.jsdelivr.net/gh/TetraTheta/RIDIBatang-subset/dist/webfont/RIDIBatang-subset.woff2') format('woff2');
@@ -51,3 +50,44 @@
     padding-top: 0.5em !important;
 }
 
+/* 헤더 크기 & 굵기 (미리보기) */
+.markdown-preview-view h1 { font-size: 2.0em; font-weight: 700; line-height: 1.25; }
+.markdown-preview-view h2 { font-size: 1.6em; font-weight: 700; line-height: 1.30; }
+.markdown-preview-view h3 { font-size: 1.35em; font-weight: 700; line-height: 1.35; }
+.markdown-preview-view h4 { font-size: 1.20em; font-weight: 700; line-height: 1.40; }
+.markdown-preview-view h5 { font-size: 1.10em; font-weight: 700; line-height: 1.45; }
+.markdown-preview-view h6 { font-size: 1.05em; font-weight: 700; line-height: 1.50; }
+
+/* 헤더와 본문 간 간격 */
+.markdown-preview-view h1, .markdown-preview-view h2,
+.markdown-preview-view h3, .markdown-preview-view h4,
+.markdown-preview-view h5, .markdown-preview-view h6 {
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+/* 편집기(CM6)에서도 헤더 크기 반영 */
+.markdown-source-view.mod-cm6 .cm-sizer .cm-header-1 { font-size: 2.0em; font-weight: 700; }
+.markdown-source-view.mod-cm6 .cm-sizer .cm-header-2 { font-size: 1.6em; font-weight: 700; }
+.markdown-source-view.mod-cm6 .cm-sizer .cm-header-3 { font-size: 1.35em; font-weight: 700; }
+.markdown-source-view.mod-cm6 .cm-sizer .cm-header-4 { font-size: 1.20em; font-weight: 700; }
+.markdown-source-view.mod-cm6 .cm-sizer .cm-header-5 { font-size: 1.10em; font-weight: 700; }
+.markdown-source-view.mod-cm6 .cm-sizer .cm-header-6 { font-size: 1.05em; font-weight: 700; }
+
+/* 편집기에서 헤더 줄만 행간을 더 촘촘하게 */
+.markdown-source-view.mod-cm6 .cm-line.cm-header {
+  line-height: 1.3 !important;
+}
+
+/* 본문 행간은 유지하되 헤더엔 적용 안 되도록 정교화 */
+.markdown-source-view.mod-cm6 .cm-line:not(.cm-header) {
+  line-height: 2.0 !important;
+}
+
+/* 헤더에 한글/영문 폰트 동일 적용 */
+.markdown-preview-view h1, .markdown-preview-view h2,
+.markdown-preview-view h3, .markdown-preview-view h4,
+.markdown-preview-view h5, .markdown-preview-view h6,
+.markdown-source-view.mod-cm6 .cm-header {
+  font-family: 'RIDIBatang-subset', 'D2Coding', ui-sans-serif, system-ui;
+}
