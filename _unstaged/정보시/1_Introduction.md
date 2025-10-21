@@ -16,9 +16,15 @@
 
 - **Assurance(보증)**: 컴퓨터 시스템에서 신뢰를 어떻게 제공·관리하는지에 대한 개념.
 	- 신뢰 관리는 **정책(Policies)**, **권한(Permissions)**, **보호(Protections)** 세 축으로 구성.
-		- <font color="#ff0000">정책(Policies)</font>
-		- <font color="#ff0000">권한(Permissions)</font>
-		- <font color="#ff0000">보호(Protections)</font>
+		- **정책(policies)**
+			- **의미**: 조직, 시스템, 혹은 개인이 **어떤 행동이 허용되고 금지되는지 명시적으로 규정한 규칙**
+			- **목적**: 보안 목표(기밀성, 무결성, 가용성)를 유지하기 위한 **행동 기준**을 설정
+		-  **권한 (Permissions)**
+			- **의미**: 정책에 따라 **특정 행위를 수행할 수 있는 권리나 허용 범위**
+			- **주체**: 사용자, 프로세스, 애플리케이션 등
+		-  **보호 (Protections)**
+			- **의미**: 정의된 **권한과 정책을 실제로 강제(enforce)** 하기 위한 **기술적 또는 관리적 메커니즘**
+			- **목적**: 정책 위반이나 권한 남용을 방지
 - **Authenticity(진정성)**: 사람이나 시스템이 발행한 진술·정책·권한이 **진짜**인지 판단하는 능력.
 	- 도구: **디지털 서명**
 	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-22-50.jpg?raw=true)
