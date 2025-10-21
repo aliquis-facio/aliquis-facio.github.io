@@ -1,9 +1,10 @@
 {
-  "cssTheme": "Minimal",
+  "cssTheme": "Atom",
   "interfaceFontFamily": "",
   "textFontFamily": "",
   "monospaceFontFamily": "",
   "enabledCssSnippets": [
     "font"
-  ]
+  ],
+  "accentColor": "#7689ea"
 }
