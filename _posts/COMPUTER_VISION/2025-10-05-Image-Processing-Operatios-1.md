@@ -16,17 +16,17 @@ tags:
 
 # 목차
 
-1. [영상 처리 연산](#5-영상-처리-연산)
-	1. [점 연산(Point operation)](#51-점-연산point-operation)
-	2. [영역 연산(Spatial/Neighborhood operation, Filtering)](#52-영역-연산spatialneighborhood-operation-filtering)
-		1. [상관(correlation) vs 컨볼루션(convolution)](#521-상관correlation-vs-컨볼루션convolution)
-		2. [컨볼루션 연산의 대수적 성질](#522-컨볼루션-연산의-대수적-성질)
-		3. [대표 필터와 효과](#523-대표-필터와-효과)
+1. [영상 처리 연산](#-영상-처리-연산)
+	1. [점 연산(Point operation)](#1-점-연산point-operation)
+	2. [영역 연산(Spatial/Neighborhood operation, Filtering)](#2-영역-연산spatialneighborhood-operation-filtering)
+		1. [상관(correlation) vs 컨볼루션(convolution)](#21-상관correlation-vs-컨볼루션convolution)
+		2. [컨볼루션 연산의 대수적 성질](#22-컨볼루션-연산의-대수적-성질)
+		3. [대표 필터와 효과](#23-대표-필터와-효과)
 
 ---
 
-# 5. 영상 처리 연산
-## 5.1. 점 연산(Point operation)
+#  영상 처리 연산
+## 1. 점 연산(Point operation)
 
 - **정의**: 한 픽셀의 새 값이 **오직 그 픽셀 자신의 명암값**만으로 결정되는 변환
 	- $$f_{out}(i, j) = t(f_1(i, j), \, f_2(i, j), \, ..., \, f_k(i, j))$$
@@ -47,7 +47,7 @@ tags:
 	    - $$f_{out}(i, j) = \alpha f_1(i, j) + (1 - \alpha)f_2(i, j)$$
 - **특징/용도 요약**: 국소 문맥을 보지 않으므로 **빠르고 단순**, 명암 재매핑(밝기/대비/감마), 영상 간 블렌딩에 효과적.
 
-## 5.2. 영역 연산(Spatial/Neighborhood operation, Filtering)
+## 2. 영역 연산(Spatial/Neighborhood operation, Filtering)
 
 - **정의**: 한 픽셀의 새 값이 **이웃 화소들의 명암값 함수**로 정해짐.
 - **무엇에 쓰나?**
@@ -55,7 +55,7 @@ tags:
     - **정보 추출**(texture, **edges**, keypoints)
     - **패턴 검출**(템플릿 매칭)
 
-### 5.2.1. 상관(correlation) vs 컨볼루션(convolution)
+### 2.1. 상관(correlation) vs 컨볼루션(convolution)
 
 - **상관**: “원시적인 매칭 연산(윈도우 형태 템플릿으로 물체 검출)”
 - **컨볼루션**: **커널을 좌우·상하 뒤집은 후** 상관을 적용 → 내가 원하는 윈도우와 동일하게 출력시키기 위해 적용
@@ -77,7 +77,7 @@ tags:
 		  \sum_{x=-\frac{(w-1)}{2}}^{\frac{(w-1)}{2}}
 		  u(y,x)\,f(j-y,i-x)$$
 
-### 5.2.2. 컨볼루션 연산의 대수적 성질
+### 2.2. 컨볼루션 연산의 대수적 성질
 
 - 선형성: $filter(f_1 + f_2) = filter(f_1) + filter(f_2)$
 - 이동 불변성: $filter(shift(f)) = shift(filter(f))$
@@ -88,7 +88,7 @@ tags:
 - 항등원: $e = [0, 0, 1, 0, 0], a \times  e = a$
 - **결론**: 여러 필터를 연속 적용 ≡ **하나의 등가 필터**(성능·설계 단순화).
 
-### 5.2.3. 대표 필터와 효과
+### 2.3. 대표 필터와 효과
 
 - $$h[m, n] = \sum _{k, l} f[m+k, n+l]$$
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-16-12-02.jpg?raw=true)
@@ -114,23 +114,23 @@ tags:
 	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-16-18-18.jpg?raw=true)
 	    - 최소, 최대 제외 후 중앙값 사용
 
-### 5.2.5. 패딩
+### 2.5. 패딩
 
-#### 5.2.5.1. Zero padding (제로 패딩, constant=0)
+#### 2.5.1. Zero padding (제로 패딩, constant=0)
 
 - **정의**: 영상 밖을 모두 0으로 채워넣고 필터링.
 - **1D 예시**: `[...] a b c [...]`  → 제로 패딩 후: `[0 a b c 0]`
 - **수식(2D)**: 바깥 좌표 `(x,y)`가 범위 밖이면 `I_padded(x,y)=0`.
 - **장단점**: 계산이 단순하고 속도가 빠르지만, **가장자리에서 어둡게 끌리는(검게 번짐) 인공물**이 생기기 쉽다.
 
-#### 5.2.5.2. Replicate padding (복제, 클램핑, edge)
+#### 2.5.2. Replicate padding (복제, 클램핑, edge)
 
 - **정의**: 영상 밖의 값을 **가장자리 픽셀값으로 복제**하여 연장.
 - **1D 예시**: 원본 `a b c` → 패딩 후 `[a a b c c]`  (왼쪽 바깥은 `a`로, 오른쪽 바깥은 `c`로 채움)
 - **수식(2D)**: 범위 밖 좌표를 가장 가까운 유효 좌표로 **클램프**: $I_padded(x,y)=I(clamp(x,0,W-1), clamp(y,0,H-1)$
 - **장단점**: 경계에서 값의 급격한 하락(0으로 가는) 현상을 막아 **엣지 보존**이 제로 패딩보다 낫다. 다만 **긴 평탄대(plateau)** 가 생겨 살짝 뭉개질 수 있다.
 
-#### 5.2.5.3. Reflect padding (미러, 반사)
+#### 2.5.3. Reflect padding (미러, 반사)
 
 - **정의**: 영상 바깥을 **거울 반사**처럼 대칭 확장.
 - **1D 예시(반복 없음, OpenCV의 `BORDER_REFLECT_101`/NumPy의 `reflect`)**: 
@@ -139,7 +139,7 @@ tags:
 	- `a b c` → `[a b a b c c]`처럼 **가장자리 값을 다시 한 번 포함**하는 미러.
 - **장단점**: 경계에서 **연속적인 그라디언트**를 유지해 **블러/가우시안 필터** 등에서 **경계 인공물 최소화**. 대개 시각적으로 가장 자연스럽다.
 
-#### 5.2.5.4. 패딩 사용 예시
+#### 2.5.4. 패딩 사용 예시
 
 - **블러/가우시안/저주파 필터**: `reflect` 권장(경계 자연스러움).
 - **엣지 검출(소벨/라플라시안)**: `reflect` 또는 `replicate` (제로 패딩은 경계에서 가짜 엣지 유발 가능).

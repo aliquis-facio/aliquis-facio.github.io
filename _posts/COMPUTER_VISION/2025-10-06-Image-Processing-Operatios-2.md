@@ -16,36 +16,36 @@ tags:
 
 # 목차
 
-1. [기하 연산](#6-기하-연산)
-	1. [정의](#61-정의)
-	2. [변환 종류와 성질](#62-변환-종류와-성질)
-		1. [기본(원자) 변환](#621-기본원자-변환)
-		1. [군(그룹)별 변환 체계](#622-군그룹별-변환-체계)
-		1. [비선형/국소 변형(Non-rigid, Warping)](#623-비선형국소-변형non-rigid-warping)
-	3. [동차좌표·행렬](#63-동차좌표행렬)
-	4. [전방 vs 후방 매핑](#64-전방-vs-후방-매핑)
-	5. [보간(Interpolation)과 반(反)에일리어싱](#65-보간interpolation과-반反에일리어싱)
-	6. [다해상도](#66-다해상도)
-		1. [알고리즈](#641-알고리즘)
-	7. [모폴로지(Morphology)](#67-모폴로지morphology)
-		1. [이진 모폴로지 (Binary)](#671-이진-모폴로지-binary)
-		2. [명암(그레이스케일) 모폴로지](#672-명암그레이스케일-모폴로지)
+1. [기하 연산](#-기하-연산)
+	1. [정의](#1-정의)
+	2. [변환 종류와 성질](#2-변환-종류와-성질)
+		1. [기본(원자) 변환](#21-기본원자-변환)
+		2. [군(그룹)별 변환 체계](#22-군그룹별-변환-체계)
+		3. [비선형/국소 변형(Non-rigid, Warping)](#23-비선형국소-변형non-rigid-warping)
+	3. [동차좌표·행렬](#3-동차좌표행렬)
+	4. [전방 vs 후방 매핑](#4-전방-vs-후방-매핑)
+	5. [보간(Interpolation)과 반(反)에일리어싱](#5-보간interpolation과-반反에일리어싱)
+	6. [다해상도](#6-다해상도)
+		1. [알고리즈](#41-알고리즘)
+	7. [모폴로지(Morphology)](#7-모폴로지morphology)
+		1. [이진 모폴로지 (Binary)](#71-이진-모폴로지-binary)
+		2. [명암(그레이스케일) 모폴로지](#72-명암그레이스케일-모폴로지)
 
 ---
 
-# 6. 기하 연산
-## 6.1. 정의
+#  기하 연산
+## 1. 정의
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-12.jpg?raw=true)
 - 일정한 기하 연산으로 결정된 **화소 위치**의 값을 가져와 새 값을 만든다.
 - 좌표를 변환해 **어디서 샘플링할지**를 정하는 연산이다.
 
-## 6.2. 변환 종류와 성질
+## 2. 변환 종류와 성질
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-20.jpg?raw=true)
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
 
-### 6.2.1. 기본(원자) 변환
+### 2.1. 기본(원자) 변환
 
 - **이동(Translation)**
 	- $$\begin{bmatrix}
@@ -90,7 +90,7 @@ tags:
 - **대칭(Reflection)**: 축에 대해 부호 반전(예: x-축 반사)
 	- $\mathrm{diag}(1,-1,1)$
 
-### 6.2.2. 군(그룹)별 변환 체계
+### 2.2. 군(그룹)별 변환 체계
 
 - **유클리드/강체(Rigid/Euclidean)**: 회전+이동 (거리·각도 보존, 3 DoF)
 	- 거리, 각도, 면적(2D) 보존
@@ -126,14 +126,14 @@ tags:
 	x \\ y \\ 1
 	\end{bmatrix}, \quad (x'/w',y'/w')$$
 
-### 6.2.3. 비선형/국소 변형(Non-rigid, Warping)
+### 2.3. 비선형/국소 변형(Non-rigid, Warping)
 
 - **다항(Polynomial) 워프**: (x',y')를 (x,y)의 다항식으로 모델링(왜곡 보정)
 - **Thin-Plate Spline(TPS)**: 소수의 랜드마크로 매끄러운 곡면 변형
 - **B-spline/Free-Form Deformation(FFD)**: 격자 제어점으로 국소 변형
 - **광류 기반 워프(Optical Flow warp)**: 픽셀 단위 변위장으로 프레임 정합
 
-## 6.3. 동차좌표·행렬
+## 3. 동차좌표·행렬
 
 - 동차 좌표: $\dot{x}=(\,y\;\; x\;\; 1\,)$
 	-  예: $(3,5)\to(3,5,1)$
@@ -159,7 +159,7 @@ tags:
 - 예제: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-05-36.png?raw=true)
 - **동차좌표 사용하는 이유**: 여러 변환을 **곱으로 결합**해 한 번에 적용 (**계산 효율↑**)
 
-## 6.4. 전방 vs 후방 매핑
+## 4. 전방 vs 후방 매핑
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-06-25.png?raw=true)
 - **전방(forward) 매핑:** 원 영상의 픽셀을 변환해 타깃 위치에 찍기
@@ -168,12 +168,12 @@ tags:
 	- 역행렬을 미리 구해 두고 후방 매핑으로 샘플링한다
 	- **안티에일리어싱** 효과.
 
-### 6.4.1. 알고리즘
+### 4.1. 알고리즘
 
 - 전방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-00.png?raw=true)
 - 후방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-14.png?raw=true)
 
-## 6.5. 보간(Interpolation)과 반(反)에일리어싱
+## 5. 보간(Interpolation)과 반(反)에일리어싱
 
 - **왜 보간이 필요한가:** 실수 좌표를 정수로 **반올림**하면 에일리어싱 발생
 	- **주변 화소로 보간**해 완화 → 거리에 대한 비율
@@ -191,7 +191,7 @@ tags:
     - **양선형(bilinear):** 4이웃 가중 평균(균형 잡힌 화질/속도)
     - **양삼차(bicubic):** 16이웃, **부드러움/에지 보존**↑(연산량↑).
 
-## 6.6. 다해상도
+## 6. 다해상도
 
 - 해상도를 줄이거나 늘리는 연산
 	- 다양한 응용
@@ -212,12 +212,12 @@ tags:
 	- 모든 화소가 50%씩 공헌
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-27-52.jpg?raw=true)
 
-## 6.7. 모폴로지(Morphology)
+## 7. 모폴로지(Morphology)
 
 - **모폴로지**: 본래 생물학의 ‘형태 변화’ 개념에서 시작
 - **수학적 모폴로지**는 영상을 원하는 형태로 바꾸는 규칙적 연산의 집합 → 패턴을 원하는 형태로 변환하는 기법
 
-### 6.7.1. 이진 모폴로지 (Binary)
+### 7.1. 이진 모폴로지 (Binary)
 
 - **대상**: 값이 0/1(또는 0/255)인 **이진 영상**.
 - 구조요소
@@ -235,7 +235,7 @@ tags:
 - 예제
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-30-27.jpg?raw=true)
 
-### 6.7.2. 명암(그레이스케일) 모폴로지
+### 7.2. 명암(그레이스케일) 모폴로지
 
 - **대상**: 0–255 등 **연속 톤(그레이스케일)** 영상.
 - 구조 요소

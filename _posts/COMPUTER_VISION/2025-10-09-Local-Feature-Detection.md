@@ -16,21 +16,21 @@ tags:
 
 # 목차
 
-1. [지역 특징 검출, Local Feature Detection](#9-지역-특징-검출-local-feature-detection)
-	1. [대응점 찾기](#91-대응점-찾기)
-	2. [지역 특징](#92-지역-특징)
-	3. [Corner Detection](#93-corner-detection)
-		1. [모라벡(Moravec) 알고리즘](#931-모라벡moravec-알고리즘)
-		2. [해리스(Harris) 코너](#932-해리스harris-코너)
-		3. [헤시안 행렬식(Hessian determinant)](#933-헤시안-행렬식hessian-determinant)
-		4. [LoG (Laplacian of Gaussian)](#934-log-laplacian-of-gaussian)
-		5. [슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘](#935-슈산smallest-uni-value-segment-assimilating-nucleus-susan-알고리즘)
-		6. [위치 선정](#936-위치-선정)
+1. [지역 특징 검출, Local Feature Detection](#-지역-특징-검출-local-feature-detection)
+	1. [대응점 찾기](#1-대응점-찾기)
+	2. [지역 특징](#2-지역-특징)
+	3. [Corner Detection](#3-corner-detection)
+		1. [모라벡(Moravec) 알고리즘](#31-모라벡moravec-알고리즘)
+		2. [해리스(Harris) 코너](#32-해리스harris-코너)
+		3. [헤시안 행렬식(Hessian determinant)](#33-헤시안-행렬식hessian-determinant)
+		4. [LoG (Laplacian of Gaussian)](#34-log-laplacian-of-gaussian)
+		5. [슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘](#35-슈산smallest-uni-value-segment-assimilating-nucleus-susan-알고리즘)
+		6. [위치 선정](#36-위치-선정)
 2. [참고](#참고)
 
-# 9. 지역 특징 검출, Local Feature Detection
+#  지역 특징 검출, Local Feature Detection
 
-## 9.1. 대응점 찾기
+## 1. 대응점 찾기
 
 - 같은 장면을 다른 시점에서 찍은 두 영상의 대응점 쌍 찾기
 - → 파노라마, 물체 인식/추적, 스테레오 등
@@ -39,7 +39,7 @@ tags:
 	2. 기술(description): 특징점 주변 영역을 벡터로 표현
 	3. 매칭(matching): 두 영상의 특징 벡터 비교 후 대응점 탐색
 
-## 9.2. 지역 특징
+## 2. 지역 특징
 
 - **목표**: 시점·스케일·조명 변화에도 견고한 **키포인트+디스크립터**로 영상 간 **대응점**을 잡아 **정합/추정(호모그래피, F)** 에 사용.
 	- 에지: 에지 강도와 방향 정보만 가지므로 매칭 참여 X
@@ -58,7 +58,7 @@ tags:
 	- 인지 실험: 사람에게 쉬운 곳이 컴퓨터에게도 쉽다
 	- 여러 방향으로 밝기 변화가 나타나는 곳 → 높은 점수
 
-## 9.3. Corner Detection
+## 3. Corner Detection
 
 작은 윈도우를 여러 방향으로 조금씩 이동했을 때 **모든 방향에서 밝기 변화가 크면 코너**, 한 방향만 크면 **에지**, 전반적으로 작으면 **평탄** 영역
 
@@ -70,7 +70,7 @@ tags:
 | **LoG**     | $\nabla^2(G*I)$                                                                                                         | 스무딩+2차미분 일관,<br>블롭 강함 | 스케일 고정 시 한계<br>→ 스케일 공간 필요       |
 | **SUSAN**   | **USAN 크기**                                                                                                             | 비미분·노이즈 견고            | 임계 $t$ 민감,<br>질감 많은 영역 과검출 가능    |
 
-### 9.3.1. 모라벡(Moravec) 알고리즘
+### 3.1. 모라벡(Moravec) 알고리즘
 
 - **측정 원리:** 정사각 윈도우(예: 3×3, 9×9)를 기준점에서 이웃 방향으로 한 화소씩 평행이동하여, **SSD(제곱차합)** 변화를 계산.
 - 수식: $$S(u,v)=\sum _y \sum _x w(y, x)(f(y+v, x+u) - f(y, x))^2$$
@@ -83,7 +83,7 @@ tags:
 	- **한 화소 이동 + 4개(또는 8개) 이산 방향**만 고려 → 방향성 편향
 	- **잡음 대책 부재**
 
-### 9.3.2. 해리스(Harris) 코너
+### 3.2. 해리스(Harris) 코너
 
 - **유도(개요):**
 	- 가중치 제곱차합: $$S(u,v)=\sum _y \sum _x G(y, x)(f(y+v, x+u) - f(y, x))^2$$
@@ -134,7 +134,7 @@ tags:
 
 ---
 
-### 9.3.3. 헤시안 행렬식(Hessian determinant)
+### 3.3. 헤시안 행렬식(Hessian determinant)
 
 - **핵심:** **2차 미분**으로 곡률을 직접 평가. **가우시안 포함 헤시안** $H_\sigma$ 사용(노이즈 완화).
 - **지표:** $$C = \det(H)=I_{xx}I_{yy}-I_{xy}^2$$ 
@@ -142,7 +142,7 @@ tags:
 
 ---
 
-### 9.3.4. LoG (Laplacian of Gaussian)
+### 3.4. LoG (Laplacian of Gaussian)
 
 - **정의:**  스무딩(가우시안) 뒤 **라플라시안(2차 미분)** 으로 **블롭/코너성 응답**을 얻음(스케일마다 응답 극값/영교차 활용)
 	- $$\mathrm{LoG}_\sigma = \nabla^2 (G_\sigma * I) = (\nabla^2 G_\sigma) * I$$
@@ -152,7 +152,7 @@ tags:
 
 ---
 
-### 9.3.5. 슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘
+### 3.5. 슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-8.jpg?raw=true)
 - **원리:** 중심 화소와 이웃 화소 간 **밝기 유사도**로 **USAN(유사 영역) 크기**를 계산, **USAN이 작을수록 코너성 강함**(에지는 중간, 평탄은 큼).
@@ -170,7 +170,7 @@ tags:
 		0, \; \text {if not}
 		\end{cases}$$
 
-### 9.3.6. 위치 선정
+### 3.6. 위치 선정
 
 - **비최대 억제**: 이웃 화소보다 크지 않으면 억제됨 → **지역최대**인 지점만 최종 특징점으로 채택
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-9.jpg?raw=true)

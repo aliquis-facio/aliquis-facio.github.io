@@ -1,5 +1,5 @@
-# 1. Introduction
-## 1.1. 보안 목표(C.I.A.)
+#  Introduction
+## 1. 보안 목표(C.I.A.)
 
 ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-20-40.jpg?raw=true)
 
@@ -11,7 +11,7 @@
 - **가용성(Availability)**: 허가된 사용자가 적시에 접근·수정 가능.
 	- 도구: 물리적 보호, 계산/저장 자원의 중복화.
 
-## 1.2. Other Security Concepts(A.A.A.)
+## 2. Other Security Concepts(A.A.A.)
 
 ![Alt Images|394x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-22-19.jpg?raw=true)
 
@@ -33,7 +33,7 @@
 	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-01.jpg?raw=true)
 	- 도구: **집계(aggregation)**, **믹싱(mixing)**, **프록시(proxies)**, **가명(pseudonyms)** 등
 
-## 1.3. 위협과 공격 유형
+## 3. 위협과 공격 유형
 
 - **도청(Eavesdropping)**: 통신 채널에서 제3자가 정보를 가로채는 행위
 	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-15.jpg?raw=true)
@@ -48,7 +48,7 @@
 - **상관/추적(Correlation & Traceback)**: 여러 데이터원을 **결합**해 정보/스트림의 **발신자 추적**.
 	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-26.jpg?raw=true)
 
-## 1.4. 보안 10원칙(Design Principles)
+## 4. 보안 10원칙(Design Principles)
 
 ![Alt Images|394x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-35.jpg?raw=true)
 
@@ -63,7 +63,7 @@
 - **작업량(Work factor)**: 공격자 **자원 대비 우회 비용**을 고려해 설계
 - **침해기록(Compromise recording)**: 방지보다 **침해 기록**이 더 효율적일 때 **로깅·증적 수집**을 중시
 
-## 1.5. 접근통제 모델(Access Control)
+## 5. 접근통제 모델(Access Control)
 
 - **접근통제 행렬(Access Control Matrix, ACM)**: 주체×객체 테이블에 권한 기입.
 	- ![Alt Images|336x75](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-59.jpg?raw=true)
@@ -74,7 +74,7 @@
 - **Role-Based Access Control, RBAC**: 사용자 대신 역할에 권한을 부여.
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-25-18.jpg?raw=true)
 
-## 1.6. 암호(Encryption)·암복호 구성요소
+## 6. 암호(Encryption)·암복호 구성요소
 
 - **암호의 목적**: 안전하지 않은 채널(감청 가능) 위에서도 **기밀성**을 확보해 Alice→Bob 메시지를 안전하게 전달
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-25-32.jpg?raw=true)
@@ -99,7 +99,7 @@
     - 대칭: 통신쌍마다 **서로 다른 공유키**를 **안전하게** 배포해야 함(규모가 커질수록 어려움).
     - 공개키: 사용자당 **한 쌍**만 관리(공개키는 널리 배포, 개인키는 비밀 유지).
 
-## 1.7. 전자서명·해시·MAC·인증서
+## 7. 전자서명·해시·MAC·인증서
 
 ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-26-34.jpg?raw=true)
 
@@ -117,7 +117,7 @@
     - **CA**가 **식별자(주체) ↔ 공개키** 바인딩에 **전자서명**을 부여한 문서.
     - 목적: “이 공개키가 **정말 그 주체의 것**인지” 신뢰 사슬로 증명.
 
-## 1.8. 비밀번호(저장·강도·브루트포스)와 구성
+## 8. 비밀번호(저장·강도·브루트포스)와 구성
 
 ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-26-46.jpg?raw=true)
 
@@ -135,7 +135,7 @@
     - 사용자에게는 **금지 목록(최악 비번) 차단**·**길이 우선 정책**·**비밀 답변 대신 MFA**를 권고.
     - 서버는 **Salt+KDF(예: bcrypt/Argon2)**, **인증 시도 제한**·**이상징후 모니터링**.
 
-## 1.9. 사회공학(Social Engineering)
+## 9. 사회공학(Social Engineering)
 
 - **주요 패턴**
     - **Pretexting**: 믿을만한 **구실(시나리오)** 로 비밀을 유도.
