@@ -156,10 +156,11 @@ D(E(m)) = E(m) ⊕ OTP = 	1110100 1110010
     2. 좌/우 32비트로 분할
     3. 라운드 함수 **F**: 확장(E, 32→48) → **서브키와 XOR** → **S-box 8개**(6비트→4비트 비선형 치환) → P-박스(확산)
 	    1. DES Round: ![DES ROUND](../../_image/2025-10-21-17-11-00.jpg)
+			> Feistel Cipher 구조
 	    2. Mangler Function: ![Mangler Function](../../_image/2025-10-21-19-48-26.jpg)
 	    3. Subkey Generation Function: ![Subkey Generation Function](../../_image/2025-10-21-19-48-42.jpg)
-    4. 좌우 스왑, 16라운드 반복
-    5. 최종 치환(IP⁻¹)
+    5. 좌우 스왑, 16라운드 반복
+    6. 최종 치환(IP⁻¹)
 	    1. ![](../../_image/2025-10-21-19-47-12.jpg)
 - **키 스케줄**: 56비트를 PC-1로 분리(C,D) → 라운드마다 순환이동 → PC-2로 48비트 **서브키** 생성.
 
