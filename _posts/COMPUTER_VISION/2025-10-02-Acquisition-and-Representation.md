@@ -16,18 +16,18 @@ tags:
 
 # 목차
 
-1. [획득과 표현(Acquisition & Representation)](#2-획득과-표현acquisition--representation)
-	1. [사람의 눈과 카메라](#21-사람의-눈과-카메라)
-	2. [A Photon’s Life Choices](#22-a-photons-life-choices)
-	3. [Image Formation](#23-image-formation)
-	4. [From Light Rays to Pixel Values](#24-from-light-rays-to-pixel-values)
-	5. [투영 모델과 좌표 사상](#25-투영-모델과-좌표-사상)
-	6. [디지털 표현(Representation)](#26-디지털-표현representation)
+1. [획득과 표현(Acquisition & Representation)](#-획득과-표현acquisition--representation)
+	1. [사람의 눈과 카메라](#1-사람의-눈과-카메라)
+	2. [A Photon’s Life Choices](#2-a-photons-life-choices)
+	3. [Image Formation](#3-image-formation)
+	4. [From Light Rays to Pixel Values](#4-from-light-rays-to-pixel-values)
+	5. [투영 모델과 좌표 사상](#5-투영-모델과-좌표-사상)
+	6. [디지털 표현(Representation)](#6-디지털-표현representation)
 
 ---
 
-# 2. 획득과 표현(Acquisition & Representation)
-### 2.1. 사람의 눈과 카메라
+#  획득과 표현(Acquisition & Representation)
+### 1. 사람의 눈과 카메라
 
 ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-11.jpg?raw=true)
 
@@ -39,7 +39,7 @@ tags:
 | **망막(Retina: 막대/원추)** | **CCD/CMOS 센서 + CFA(베이어)**                   | 광자→전자 변환(포토다이오드), **색 필터배열**로 RGB 분리                    |
 | **시신경·피질 전처리**        | **ISP**(디모자이킹, 노이즈 억제, 색보정, 화밸, 감마/톤매핑, 샤프닝) | 눈은 생물학적 적응, 카메라는 명시적 알고리즘                               |
 
-### 2.2. A Photon’s Life Choices
+### 2. A Photon’s Life Choices
 
 - Absorption(흡수)
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-13.jpg?raw=true)
@@ -69,20 +69,20 @@ tags:
 	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-8.jpg?raw=true)
 	- 표면 간 다중 반사로 색·광량 교환
 
-### 2.3. Image Formation
+### 3. Image Formation
 
 ![Alt Images|394x247](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-9.jpg?raw=true)
 - 요소 사슬: **광원 → 표면 형상·방향 → 표면 반사특성 → 광학계 → 센서**(Exposure 포함). 이들이 합쳐져 영상이 형성된다.
 - **기본 방사측정 관계**: 영상면 조사조도 $E$는 장면 복사휘도 $L$에 **선형**이며, **렌즈 구경(면적)** 에 비례, **렌즈–영상면 거리의 제곱**에 반비례, **시선각 증가에 따라 감소** 한다.
 	- $$E = \big[\frac{\pi}{4}(\frac {d}{f})^2 \cos ^4 \alpha \big]L$$
 
-### 2.4. From Light Rays to Pixel Values
+### 4. From Light Rays to Pixel Values
 
 ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-14-10.jpg?raw=true)
 
 - **카메라 응답함수(CRF)**: 조사조도/노출량 → **픽셀값**으로의 비선형 매핑. **재질 추정**·**HDR 복원**에서 중요
 
-### 2.5. 투영 모델과 좌표 사상
+### 5. 투영 모델과 좌표 사상
 
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-16-43-38.png)
 	- 핀홀 카메라와 3차원 → 2차원 투영
@@ -94,7 +94,7 @@ tags:
 - 2D 차원에서는 소실점을 통해 간접적으로 거리감을 느낌
 - **행렬 체인**: World→Camera(4×4) → Perspective(3×4) → Pixel(3×3). 구현 시 이 순서로 곱해 **한 번에** 사상.
 
-### 2.6. 디지털 표현(Representation)
+### 6. 디지털 표현(Representation)
 
 - **샘플링·양자화**
 	- 센서 신호(연속)를 **ADC**가 **0–255(8-bit)** 정수값으로 변환해 그레이스케일 영상(컬러는 채널별 변환) 구성.
