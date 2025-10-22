@@ -16,7 +16,7 @@
 
 ## 3. Kerberos
 
-# Ch.5 보조자료 – 전자결제(Payment Systems)
+# Ch.5 전자결제(Payment Systems)
 
 ## 1) 전자결제 기본 구조
 
