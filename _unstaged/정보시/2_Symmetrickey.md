@@ -64,13 +64,13 @@
 
 ### 3.2. 공격 가정(데이터 접근 수준)
 
-- **Ciphertext-only**: 암호문만 있음 → 빈도/통계 분석(고전암호)
+- **Ciphertext-Only Attack (COA)**: 암호문만 있음 → 빈도/통계 분석(고전암호)
 	- ![](2025-10-21-19-33-34.jpg)
-- **Known-plaintext**: 일부 평문–암호문 쌍을 앎
+- **Known-Plaintext Attack (KPA)**: 일부 평문–암호문 쌍을 앎
 	- ![](../../_image/2025-10-21-19-34-02.jpg)
-- **Chosen-plaintext (CPA)**: 임의 평문을 암호화 → 블록암호 분석에 강력
+- **Chosen-Plaintext Attack (CPA)**: 임의 평문을 암호화 → 블록암호 분석에 강력
 	- ![](../../_image/2025-10-21-19-34-04.jpg)
-- **Chosen-ciphertext (CCA)**: 임의 암호문을 복호화 → 패딩 오라클 등
+- **Chosen-Ciphertext Attack (CCA)**: 임의 암호문을 복호화 → 패딩 오라클 등
 	- ![](../../_image/2025-10-21-19-34-07.jpg)
 
 > 현대 보안 목표: 보통 **IND-CPA**(스트림/블록 암호 모드)나 **IND-CCA**(암호화+MAC 또는 AEAD) 충족.

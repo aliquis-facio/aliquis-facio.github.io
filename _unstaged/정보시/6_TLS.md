@@ -27,13 +27,6 @@
 - **HTTPS 서버**: `ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)` 생성 → `load_cert_chain(server.cer, server.key)` → `HTTPServer` 소켓을 `wrap_socket`으로 감싸 **[https://localhost:443](https://localhost/)** 서비스.
 - (슬라이드) 브라우저 개발자도구로 **협상된 스위트/랜덤/키교환값/암호화된 페이로드**를 확인하는 장면이 예시로 제공됩니다.
 
-### 한 장 암기 포인트
-
-- **무결성=HMAC, 기밀성=대칭키(레코드 계층)**, **ChangeCipherSpec로 실제 암호 스위치**, **Alert로 예외 통지**.
-- **핸드셰이크**: `CH`(버전·랜덤·스위트) → `SH`(인증서·랜덤·선택) → `CKE`(S → K, 세션키 파생) → `Finished`(검증).
-- **TLS 1.3**: **Forward Secrecy 기본**, **핸드셰이크 단축**.
-다음은 업로드한 **Ch.6: TLS 1.3 & ECH / DNS 보안(DoT·DoH) / JARM**의 핵심 정리예요.
-
 # 6-2. TLS
 ## 1) TLS 1.2 ↔ 1.3 핵심 차이
 
@@ -70,16 +63,6 @@
 - 지문 구조: 앞 **30자**는 10회 협상에서 **버전/사이퍼 선택 결과**(거부 시 `000`), 뒤 **32자**는 **서버 확장들의 누적 요약(SHA-256 trunc.)**.
 - 활용: **동일 인프라/운영 스택**으로 보이는 서버 군집화, **멀웨어 C2** 등 **악성 인프라 식별/블록리스트 고도화**에 활용.
 
----
-
-### 암기 포인트(초압축)
-
-1. **TLS 1.3 = PFS 기본 + 1-RTT + AEAD**(가시성 축소, 성능↑).
-2. **ECH**: SNI·ALPN 등 **ClientHello 메타데이터 암호화**, DNS **HTTPS RR(ECHConfig)**로 키 배포.
-3. **DNS 보안**: 무결성(DNSSEC) vs **전송 암호화(DoT/DoH)**—브라우저는 주로 **DoH**.
-4. **DoH 악용** 가능 → **행위 기반 탐지/정책** 필요, **CIRA-CIC DoHBrw-2020** 참고.
-5. **JARM**: 10회 핸드셰이크 변주 → **62자 지문**으로 서버 군집/악성 인프라 조기 식별.
-
 # 6-3. Networking
 
 - 로드맵: **Wireshark** 소개와 **패킷 전달**(Intra-LAN / Inter-LAN) 복습으로 구성.
@@ -92,9 +75,3 @@
     3. 이후 **각 라우터가 자체 라우팅 테이블**로 다음 홉을 결정해 목적지 LAN/호스트까지 전달.
 - 이름 해석: **DNS vs hosts 파일**(Windows 경로 `C:\Windows\System32\drivers\etc`) 비교 소개.
 - 참고문헌/사이트: **Kurose & Ross** 교재, **wireshark.org**.
-
-### 빠른 암기 포인트
-
-- 같은 서브넷: **ARP로 MAC → 전송**, 다른 서브넷: **게이트웨이로 라우팅**.
-- **Longest Prefix Match**가 라우팅의 핵심 기준.
-- Wireshark는 **필터**가 곧 힘: 캡처 후 **Display filter**로 노이즈 제거.
