@@ -23,3 +23,4 @@ sidebar_link: true
 - [X] pagination 적용
 - [ ] 이미지 원격 저장소에 올리기
     ~~- [ ] Imgur -> 이미지 자동 업로드~~
+- [ ] 모바일 UI 사이드바 접이식 메뉴바로 변경
