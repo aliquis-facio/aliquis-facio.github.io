@@ -56,7 +56,7 @@ nx.draw(G, pos)
 2. 정의 2
 유한한 차원의 공간에 존재하는 점
 python의 list나 tuple을 사용해 벡터 표현 가능.
-[그림1][2022-10-24-vector.png]
+[그림1](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-vector.png?raw=true)
 
 ## python's list != vector
 벡터는 다차원 공간상의 점으로 정의되므로, 리스트를 벡터처럼 사용하기 위해서는 각 점들끼리의 합, 차, 곱 등의 연산을 정의해야 함.
@@ -71,13 +71,13 @@ python의 list나 tuple을 사용해 벡터 표현 가능.
 * n행 m열을 가질 경우 n ⨉ m 행렬이라고 함.
 * 같은 크기의 벡터들이 모이면 행렬이 됨.
 * python에서 list의 list 혹은 tuple의 tuple로 표현 가능
-[그림2][2022-10-24-matrix.png]
+[그림2](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-matrix.png?raw=true)
 
 ### 행렬의 연산
 행렬의 합/차는 같은 위치의 값끼리 더한/뺀 것  
 행렬 A와 스칼라 k의 곱은 행렬의 각 요소에 k를 곱한 것  
 행렬의 곱셈  
-[그림3][2022-10-24-matrix_product.png]
+[그림3](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-matrix_product.png?raw=true)
 행렬 A의 크기가 n ⨉ m이고 행렬 B의 크기가 m ⨉ s일 때, 곱 AB의 결과로 나오는 행렬의 크기는 n ⨉ s이다. 행렬 A의 열 크기와 B의 행 크기가 같아야 연산 가능.
 
 ### 행렬의 응용
@@ -120,26 +120,26 @@ mat1.dot(mat2) # 행렬 곱
 
 * 공분산(covariance): 두 확률변수의 상관관계를 나타내는 값
     두 확률변수 X와 Y에 대해서 공분산 Cov(X, Y)는 다음과 같이 정의됨.
-    [그림4][2022-10-24-covariance.PNG]
+    [그림4](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-covariance.png?raw=true)
 
 * 상관계수(Pearson Corr. Coef.): 두 확률변수의 상관관계를 -1 ~ 1 사이의 값으로 나타내는 값
-    [그림5][2022-10-24-coeff.PNG]
-    [그림6][2022-10-24-coeff_figure.png]
+    [그림5](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-coeff.png?raw=true)
+    [그림6](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-coeff_figure.png?raw=true)
 
 # Regression
 * 지도학습(suprevised learning): 훈련 데이터(training data)로부터 하나의 함수를 유추해내기 위한 기계 학습(machine learning)의 한 방법 ex) teachable machine
 
 * 회귀분석(regression): 관찰된 연속형 변수들에 대해 두 변수 사이의 모형을 구한 뒤 적합도를 측정해 내는 분석 방법 -> 지도 학습 방법 중 하나
 * 선형회귀분석(linear regression): 종속 변수 y와 한 개 이상의 독립 변수(또는 설명 변수) X와의 선형 상관 관계를 모델링하는 회귀분석 기법
-    [그림7][2022-10-24-linear_regression.png]
+    [그림7](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-linear_regression.png?raw=true)
 
 * 가설(hypothesis)과 비용(cost)
-    [그림8][2022-10-24-hypothesis_and_cost.PNG]
+    [그림8](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-hypothesis_and_cost.png?raw=true)
 
 * 경사하강법(gradient descent): 편미분을 이용해 cost를 최소로 만드는 w, b 값을 찾자.
-    [그림9][2022-10-24-gradient_descent.PNG]
-    [그림10][2022-10-24-gradient_descent_1.PNG]
-    [그림11][2022-10-24-gradient_descent_2.PNG]
+    [그림9](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-gradient_descent.png?raw=true)
+    [그림10](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-gradient_descent_1.png?raw=true)
+    [그림11](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-gradient_descent_2.png?raw=true)
 
 * 그 밖의 학습 방법들: SGE, Momentum, NAG, Adagrad, Adadelta, Rmsprop
 
@@ -147,7 +147,7 @@ mat1.dot(mat2) # 행렬 곱
 ## pytorch
 `import torch`
 텐서(tensor): 파이토치에서 사용하는 가장 기본적인 자료구조. 다양한 수식 계산을 지원. 수학의 스칼라, 벡터, 행렬 등을 일반화한 개념.
-[그림12][2022-10-24-torch_tensor.png]
+[그림12](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-torch_tensor.png?raw=true)
 
 ```python
 # x == y, 같은 내용

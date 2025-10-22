@@ -2,17 +2,16 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
-
+  changefreq:
+  priority:
 title: "[DATA SCIENCE] 한글 텍스트 데이터 토큰화(Tokenization)"
-excerpt: "토큰화와 한글 텍스트 데이터 토큰화 실습"
-
+excerpt: 토큰화와 한글 텍스트 데이터 토큰화 실습
 date: 2025-03-16
-last_modified_at: 
-
-categories: [DATA SCIENCE]
-tags: [DATA SCIENCE, TIL]
+last_modified_at:
+categories:
+  - DATA SCIENCE
+tags:
+  - TIL
 ---
 
 # 토큰화(Tokenization)
