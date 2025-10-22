@@ -12,7 +12,7 @@
 - **흐름**: `client_hello → server_hello → client_key_exchange → finished`.
 - **client_hello**: 최고 지원 **버전**, 랜덤, 세션ID, **사이퍼 스위트 목록(ECDHE_AES_SHA-256 등)**.
 - **server_hello**: (필요 시) **서버 인증서**, 서버 랜덤, 선택된 사이퍼 스위트.
-- **client_key_exchange**: **Pre-master secret S**를 합의/전달하고, 양측 랜덤과 함께 함수 f로 **Master secret K=f(S,R_A,R_B)**를 계산. 여기서 파생된 **세션 키 6개(방향별 암호키/무결성키/IV)**를 얻습니다.
+- **client_key_exchange**: **Pre-master secret S**를 합의/전달하고, 양측 랜덤과 함께 함수 f로 **Master secret K=f(S,R_A,R_B)** 를 계산. 여기서 파생된 **세션 키 6개(방향별 암호키/무결성키/IV)** 를 얻습니다.
 - **finished**: 이전 핸드셰이크 전체에 대한 해시를 교환해 **키 합의가 일치하는지 검증**합니다.
 - (선택) 서버가 인증서 요청을 보내 **클라이언트 인증**을 요구할 수도 있어요(예: 인터넷 뱅킹).
     
@@ -30,7 +30,7 @@
 # 6-2. TLS
 ## 1) TLS 1.2 ↔ 1.3 핵심 차이
 
-- **보안성**: 1.2에 있던 취약 구성(정적 RSA, CBC 등) 제거 → **PFS 기본 적용**, 안전한 조합만 허용(AES-GCM, ChaCha20-Poly1305 등).
+- <font color="#ff0000">보안성</font>: 1.2에 있던 취약 구성(정적 RSA, CBC 등) 제거 → **PFS 기본 적용**, 안전한 조합만 허용(AES-GCM, ChaCha20-Poly1305 등).
 - **성능/지연**: **1-RTT 핸드셰이크**(최대 50% 단축), 일부 상황 **0-RTT** 지원.
 - **가시성 변화**: 1.3은 **서버 인증서도 암호화**되어 전송(평문 노출 축소).
 - **레코드 보호**: HMAC 기반(MAC-then-Encrypt) → **AEAD 일체형**으로 단순화.
