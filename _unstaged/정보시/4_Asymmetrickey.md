@@ -27,12 +27,12 @@
 
 - **개요/용도**: 가장 널리 쓰이는 공개키 체계. **정수분해 난이도**에 의존. 단문 암호화·서명·세션키 교환에 주로 사용.
 - **모듈러 연산 성질**(덧셈/곱셈 보존 등)을 활용.
-- **키 생성**:
+- <font color="#ff0000">키 생성</font>:
 	1. 큰 소수 p,q 선택
 	2. $n=pq$, $φ(n)=(p−1)(q−1)$
 	3. $gcd(e,φ)=1$인 e 선택
 	4. $d≡e⁻¹(mod φ(n))$. 공개키 (e, n), 비밀키 (d, n).
-- **암·복호식**: $C=M^e \; mod \; n$, $M=C^d \; mod \; n$ (단, 블록은 **M<n**).
+- <font color="#ff0000">암·복호식</font>: $C=M^e \; mod \; n$, $M=C^d \; mod \; n$ (단, 블록은 **M<n**).
 - **정당성(올바로 복원됨)**: $e·d=1+k·φ(n)$과 페르마/오일러 정리를 이용해 $M^{ed} ≡ M (mod \; n)$.
 - **예시**
 	1. $p=17, q=11$
@@ -46,5 +46,7 @@
 ## 6. 한국형 알고리즘
 
 - **블록암호**: SEED, ARIA
-- **전자서명**: KCDSA(Korea Certification-based Digital Signature Algorithm), EC-KCDSA(Korean Certificate-based Digital Signature Algorithm using Elliptic Curves)
-- **해시**: HAS-160(Hash Function Algorithm Standard)
+- **전자서명**:
+	- **KCDSA**(Korea Certification-based Digital Signature Algorithm),
+	- **EC-KCDSA**(Korean Certificate-based Digital Signature Algorithm using Elliptic Curves)
+- **해시**: **HAS-160**(Hash Function Algorithm Standard)

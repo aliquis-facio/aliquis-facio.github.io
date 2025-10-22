@@ -1,4 +1,4 @@
-# 6-1. SSL
+# SSL & TLS
 ## 1) SSL→TLS 배경과 구조
 
 - **SSL의 계보**: 넷스케이프가 설계(SSLv3) → 인터넷 표준 **TLS**로 발전(SSL v3.1). HMAC 사용, PRF로 시크릿 확장, 경고코드/패딩 등의 차이가 추가됐어요.
@@ -15,19 +15,11 @@
 - **client_key_exchange**: **Pre-master secret S**를 합의/전달하고, 양측 랜덤과 함께 함수 f로 **Master secret K=f(S,R_A,R_B)** 를 계산. 여기서 파생된 **세션 키 6개(방향별 암호키/무결성키/IV)** 를 얻습니다.
 - **finished**: 이전 핸드셰이크 전체에 대한 해시를 교환해 **키 합의가 일치하는지 검증**합니다.
 - (선택) 서버가 인증서 요청을 보내 **클라이언트 인증**을 요구할 수도 있어요(예: 인터넷 뱅킹).
-    
 
 ## 3) TLS 1.3 요점
 
 - **최신 표준(2018)**, 1.2 대비 개선: **순방향 보안 강화(정적 RSA 배제)**, **핸드셰이크 지연 감소**(key share 확장으로 1-RTT).
 
-## 4) 파이썬 TLS 실습(케이스 스터디)
-
-- **키/인증서 생성**: `cryptography`로 RSA 개인키와 **localhost**용 자가서명 인증서 생성. (예시 코드 포함)
-- **HTTPS 서버**: `ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)` 생성 → `load_cert_chain(server.cer, server.key)` → `HTTPServer` 소켓을 `wrap_socket`으로 감싸 **[https://localhost:443](https://localhost/)** 서비스.
-- (슬라이드) 브라우저 개발자도구로 **협상된 스위트/랜덤/키교환값/암호화된 페이로드**를 확인하는 장면이 예시로 제공됩니다.
-
-# 6-2. TLS
 ## 1) TLS 1.2 ↔ 1.3 핵심 차이
 
 - <font color="#ff0000">보안성</font>: 1.2에 있던 취약 구성(정적 RSA, CBC 등) 제거 → **PFS 기본 적용**, 안전한 조합만 허용(AES-GCM, ChaCha20-Poly1305 등).
