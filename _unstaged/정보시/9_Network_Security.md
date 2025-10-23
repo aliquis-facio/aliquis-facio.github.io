@@ -3,7 +3,7 @@
 ### 9.1.1. ARP Spoofing / Poisoning / Flooding
 
 - **개념**: 공격자가 ARP를 속여 **트래픽을 가로채거나 변경·차단**하게 만드는 기법(ARP spoofing/poisoning; 지속적 가짜 응답 전송은 ARP flooding).
-- **동작 예**: A가 “Who is R?”라고 묻는 ARP Request에 공격자 B가 “It’s me”로 회신 → **잘못된 MAC**이 ARP 캐시에 기록됨(=poisoning) → B가 계속 가짜 Reply를 보내 캐시를 유지(=flooding).
+- **동작**: A가 “Who is R?”라고 묻는 ARP Request에 공격자 B가 “It’s me”로 회신 → **잘못된 MAC**이 ARP 캐시에 기록됨(=poisoning) → B가 계속 가짜 Reply를 보내 캐시를 유지(=flooding).
 - **영향**: A의 웹·메시지·VoIP 등 모든 내용이 B를 **경유**하므로 도청/변조 가능(대표적이고 도구도 많음).
 
 ### 9.1.2. MITM(Man-in-the-Middle)
