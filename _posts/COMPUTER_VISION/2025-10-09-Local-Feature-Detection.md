@@ -116,7 +116,7 @@ tags:
 		- $R<0$이면 에지
 		- $\vert R \vert$ 작으면 평탄
 	- 고유값 계산 회피 → 속도 향상
-		- $$A = \begin{pmatrix} =
+		- $$A = \begin{pmatrix}
 		p & r \\
 		r & q
 		\end{pmatrix}$$
