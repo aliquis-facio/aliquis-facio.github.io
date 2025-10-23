@@ -32,7 +32,7 @@
 		-  **보호 (Protections)**
 			- **의미**: 정의된 **권한과 정책을 실제로 강제(enforce)** 하기 위한 **기술적 또는 관리적 메커니즘**
 			- **목적**: 정책 위반이나 권한 남용을 방지
-- **Authenticity(진정성)**: 사람이나 시스템이 발행한 진술·정책·권한이 **진짜**인지 판단하는 능력.
+- **Authenticity(진위)**: 사람이나 시스템이 발행한 진술·정책·권한이 **진짜**인지 판단하는 능력.
 	- 도구: **디지털 서명**
 	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-22-50.jpg?raw=true)
 - **Anonymity(익명성)**: 특정 기록/거래가 **개인에게 귀속되지 않음**을 의미.
