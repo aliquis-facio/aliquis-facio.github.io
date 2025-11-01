@@ -1,0 +1,92 @@
+@use "variables" as *;
+
+/* 데스크톱은 그대로 */
+.drawer-hamburger { display: none; }
+
+@media (max-width: $large-breakpoint) {
+    /* 더 작고, 회색 버튼 */
+    .drawer-hamburger{
+        position: fixed; top: .5rem; left: .5rem;
+        width: 40px; height: 40px;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+        background: rgba(255,255,255,.92);
+        color: #6b7280; /* 회색 아이콘 */
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,.15);
+        cursor: pointer; z-index: 3100;
+        /* 모바일 탭 하이라이트(파란/청록빛) 제거 */
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* hover 에서 파란색으로 바뀌지 않게 강제 회색 */
+    .drawer-hamburger:hover{
+        color: #4b5563 !important;      /* 조금 진한 회색 */
+        background: #f3f4f6 !important; /* 약간 밝은 회색 배경 */
+        border-color: #e5e7eb !important;
+    }
+
+    /* 클릭(Active) 시 더 진한 회색 */
+    .drawer-hamburger:active{
+        color: #374151 !important;
+        background: #e5e7eb !important;
+    }
+
+    /* 접근성: 파란 기본 포커스 링 대신 회색 포커스 링 */
+    .drawer-hamburger:focus{ outline: none; }
+    .drawer-hamburger:focus-visible{
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(107,114,128,.35); /* 회색 포커스 링 */
+        border-color: #9ca3af;
+    }
+
+    .drawer-hamburger svg,
+    .drawer-hamburger svg *{
+        width: 22px; height: 22px;
+        stroke: currentColor !important;
+        fill: none;
+    }
+
+    /* 닫기 버튼 */
+    #sidebar .drawer-close{
+        position: absolute; top: .5rem; right: .5rem;
+        background: transparent; border: 0;
+        font-size: 1.5rem; line-height: 1;
+        color: #9ca3af; cursor: pointer;
+    }
+
+    /* JS 켜진 경우 모바일 드로어 동작 */
+    html.js #sidebar{
+        position: fixed !important;
+        top: 0; left: 0; height: 100vh;
+        width: min(84vw, 20rem);
+        transform: translateX(-100%) !important;   /* 닫힘 상태 */
+        transition: transform .25s ease;
+        z-index: 3000; overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        background: inherit; /* 테마 배경 유지 */
+    }
+    html.js body.drawer-open { overflow: hidden; }
+    html.js body.drawer-open #sidebar{
+        transform: translateX(0) !important;       /* 열림 상태 */
+    }
+
+    /* 오버레이 */
+    .drawer-overlay{ display: none; }
+    html.js body.drawer-open .drawer-overlay{
+        display: block; position: fixed; inset: 0;
+        background: rgba(0,0,0,.45); z-index: 2000;
+    }
+
+    /* 모바일에서 목록이 숨겨지지 않도록 강제 노출 */
+    html.js #sidebar nav,
+    html.js #sidebar .sidebar-nav{ display:block !important; }
+    html.js #sidebar .sidebar-nav-item{ display:block; }
+
+    /* 버튼이 본문을 가리지 않게 여백 */
+    main.container{ padding-top: 3.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html.js #sidebar{ transition: none; }
+}
