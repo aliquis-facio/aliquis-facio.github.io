@@ -97,7 +97,14 @@ $g-700: #374151;
       z-index: $z-sidebar;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
-      background: inherit; /* 테마 유지 */
+      /* 테마와 동일한 다크 그라데이션을 명시적으로 적용 */
+      background-color: $sidebar-bg-color !important;
+      background-image: linear-gradient(
+        to bottom,
+        color.adjust($sidebar-bg-color, $lightness: 7%),
+        color.adjust($sidebar-bg-color, $lightness: -7%)
+      ) !important;
+      color: $sidebar-fg-color; /* 글자색 보장 */
       touch-action: pan-y;
     }
 
