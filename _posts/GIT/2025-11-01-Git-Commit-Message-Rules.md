@@ -16,8 +16,11 @@ tags: [GIT]
 ---
 
 # 목차
-1. []()
-2. []()
+
+1. [7가지 규칙](#1-7가지-규칙)
+2. [커밋 메시지 구조](#2-커밋-메시지-구조)
+    1. [Type](#21-type)
+    2. [Footer](#22-footer)
 
 ---
 
@@ -43,10 +46,12 @@ tags: [GIT]
 바닥글 // Footer
 ```
 
-- **Header**: **필수**
-    - **타입**: 해당 커밋의 성격
+- **Header**: **타입**(해당 커밋의 성격), **필수**
 - **Body**: **상세 내용**, **생략 가능**
 - **Footer**: **참조 정보 추가**, **생략 가능**
+	- Resolves: #issueNo
+
+### 2.1. Type
 
 | 타입 이름    | 내용                                    |
 | -------- | ------------------------------------- |
@@ -64,13 +69,18 @@ tags: [GIT]
 | remove   | 파일 삭제                                 |
 | design   | 사용자 UI 디자인 변경 (CSS 등)                 |
 
+### 2.2. Footer
+
 | 사용 시점 | 사용 키워드                                |
 | ----- | ------------------------------------- |
 | 해결    | Closes(종료), Fixes(수정), Resolves(해결)   |
 | 참고    | Ref(참고), Related to(관련), See also(참고) |
 
+---
+
 # 참고
-* [Git 커밋 메시지 규칙](https://velog.io/@chojs28/Git-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80-%EA%B7%9C%EC%B9%99)
-* [[Git] 좋은 commit message 작성법](https://jane-aeiou.tistory.com/93)
+
+* [Velog: Git 커밋 메시지 규칙](https://velog.io/@chojs28/Git-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80-%EA%B7%9C%EC%B9%99)
+* [Tistory: 좋은 commit message 작성법](https://jane-aeiou.tistory.com/93)
 * [[Git] 깃 커밋 메시지 작성법(git commit message) - 1](https://richone.tistory.com/26)
 * [[Git] 깃 커밋 메시지 작성법(git commit message) - 2](https://richone.tistory.com/27)
