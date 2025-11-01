@@ -12,7 +12,7 @@ date: 2022-10-24
 last_modified_at: 2024-11-08
 
 categories: [DATA SCIENCE]
-tags: [DATA SCIENCE]
+tags: [DATASCIENCE]
 ---
 
 # Data Visualization
@@ -112,20 +112,17 @@ mat1.dot(mat2) # 행렬 곱
 * 최빈값(mode): 가장 자주 등장하는 데이터
 * 최대값/최소값
 * 분위(quantile): 특정 백분위보다 낮은 분위에 속하는 데이터
-
 * 산포도(dispersion): 데이터가 퍼져있는 정도
 * max - min: 최대값과 최소값의 차이
 * 분산(variance): 편차 제곱의 평균
 * interquartile range: 상위 25%와 하위 25%의 차이
-
 * 공분산(covariance): 두 확률변수의 상관관계를 나타내는 값
     두 확률변수 X와 Y에 대해서 공분산 Cov(X, Y)는 다음과 같이 정의됨.
     [그림4](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-covariance.png?raw=true)
-
 * 상관계수(Pearson Corr. Coef.): 두 확률변수의 상관관계를 -1 ~ 1 사이의 값으로 나타내는 값
     [그림5](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-coeff.png?raw=true)
     [그림6](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-coeff_figure.png?raw=true)
-
+    
 # Regression
 * 지도학습(suprevised learning): 훈련 데이터(training data)로부터 하나의 함수를 유추해내기 위한 기계 학습(machine learning)의 한 방법 ex) teachable machine
 

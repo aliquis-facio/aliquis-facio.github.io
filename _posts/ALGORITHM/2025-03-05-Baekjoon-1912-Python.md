@@ -9,7 +9,7 @@ title: "[BAEKJOON] 백준 1912 연속합 문제 풀이"
 excerpt: "w. Python"
 
 date: 2025-03-05
-last_modified_at: 
+last_modified_at: 2025-11-01
 
 categories: [ALGORITHM]
 tags: [ALGORITHM, BAEKJOON, PYTHON]
@@ -18,12 +18,13 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
 # 연속합
 
 **출처: <https://www.acmicpc.net/problem/1912>**  
-![문제](../../_image/2025-03-07-1.png?raw=true)
+![문제](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-07-1.png?raw=true)
 
 ## 첫 번째 시도
+
 원소 배열 하나하나 돌면서 첫번째 최댓값, 두번째 최댓값, ..., n번째 최댓값을 비교해서 최종 최댓값 하나를 구하려고 했다.
 
-![그림 1](../../_image/2025-03-05-7.png?raw=true)
+![그림 1](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-05-7.png?raw=true)
 
 ``` python
 import sys
@@ -61,10 +62,11 @@ print(total_max)
 그러자 당연하게도 결과는 시간 초과
 
 ## 두 번째 시도
+
 O(n)만에 끝낼 수 있다는 말을 듣고 생각해본 것  
 연속합 값이 현재 최댓값보다 크면 최댓값을 현재 연속합 값으로 바꾸고, 연속합 값이 0보다 작다면 0으로 초기화하는 것이었다.
 
-![그림 2](../../_image/2025-03-05-8.png?raw=true)
+![그림 2](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-05-8.png?raw=true)
 
 ``` python
 import sys
@@ -89,6 +91,7 @@ print(curr_max)
 ```
 
 ## 세 번째 시도
+
 연속합 값이 0보다 작다면 0으로 초기화하는 것을 현재 원소값으로 초기화하는 것으로 바꿨다.
 
 ``` python
@@ -116,6 +119,7 @@ print(curr_max)
 ```
 
 ## 네 번째 시도
+
 연속합이 음수가 됐을 때 lst[i + 1]로 초기화하고, 다음 for문 돌 때 중복값을 더하지 않게 바꿨다.
 
 ``` python
@@ -153,6 +157,7 @@ print(curr_max)
 ```
 
 ## 다섯 번째 시도
+
 연속합값이 현재 원소값보다 작을 수 있음을 깨달았음.
 
 ``` python
