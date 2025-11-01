@@ -28,18 +28,13 @@
       "conflictResolution": "increment"
     },
     {
-      "name": "NoteName-DateTime",
-      "customTemplate": "{notename}-{date:YYYYMMDD}{HH}{mm}{ss}",
-      "skipRenamePatterns": ""
-    },
-    {
       "name": "Datetime",
       "customTemplate": "{date:YYYY-MM-DD}-{HH}-{mm}-{ss}",
       "skipRenamePatterns": "",
       "conflictResolution": "increment"
     }
   ],
-  "selectedFilenamePreset": "Datetime",
+  "selectedFilenamePreset": "Keep original name",
   "outputFormat": "NONE",
   "quality": 100,
   "colorDepth": 1,
