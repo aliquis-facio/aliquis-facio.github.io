@@ -2,7 +2,7 @@
   Layout
 
   Styles for managing the structural hierarchy of the site.
-  Hydeout features the large colored sidebar from Hyde that houses the
+  Hydeout features the large colored bar from Hyde that houses the
   site name, intro, and "footer" content. Sidebar is on top of content on
   mobile and expands into sidebar on larger width displays.
 
@@ -42,13 +42,21 @@ body {
 #sidebar {
   flex: 0 0 auto;
   padding: $section-spacing;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;    /* 화면 높이 고정 */
+  overflow: hidden;  /* 부모는 스크롤 안 하고, 아래 nav만 스크롤 */
 
+  /* 타이틀 줄바꿈/잘림 방지 */
   .site-title {
     font-family: 'Abril Fatface', serif;
     font-size: $large-font-size;
     font-weight: normal;
     margin-bottom: $heading-spacing;
     margin-top: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .site-title .back-arrow { margin-right: 0.5rem; }
@@ -279,24 +287,45 @@ body {
   a { color: inherit; }
 }
 
+/* nav는 컬럼 배치, 자체 스크롤은 끄고 내부 목록만 스크롤 */
 #sidebar nav {
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
-#sidebar-nav-links {
-  flex-flow: column nowrap;
+/* 카테고리 리스트만 스크롤되게 */
+#sidebar #sidebar-nav-links {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-right: .25rem; // 스크롤바 여백
 }
 
 #sidebar-icon-links {
-  flex-flow: row wrap;
-  justify-content: center;
+  display: flex !important;             /* 플렉스 컨테이너 */
+  flex-direction: row !important;
+  flex-wrap: nowrap;          /* 줄바꿈 금지 → 한 줄 유지 */
+  align-items: center;
+  gap: .5rem;                 /* 아이콘 간 간격 */
+  justify-content: flex-start;
   margin-top: 1rem;
   max-width: 100%;
+  overflow: hidden;           /* 혹시 넘치면 숨김(필요시 auto로) */
 
   @media (min-width: $large-breakpoint) {
     justify-content: flex-start;
     margin-left: -0.25em;
   }
+}
+
+/* 아이콘 앵커 기본 정렬 보조 */
+#sidebar nav#sidebar-icon-links > a {
+  display: inline-flex;
+  line-height: 1;
 }
 
 #sidebar nav > * {
@@ -308,6 +337,28 @@ body {
   display: inline-block;
   font-size: 1.5rem;
   margin: 0 0.25em;
+}
+
+/* 하단(아이콘/라이선스)은 고정 (스크롤 대상 아님) */
+#sidebar #sidebar-icon-links,
+#sidebar .sidebar-footer,
+#sidebar footer,
+#sidebar .license,
+#sidebar .copyright {
+  flex: 0 0 auto;
+  margin-top: .75rem;
+}
+
+/* 하단 아이콘/라이선스는 맨 아래에 고정 */
+#sidebar .sidebar-footer,
+#sidebar footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* 아이콘 왼쪽, 문구 오른쪽 */
+  gap: .5rem;
+  flex-wrap: nowrap;
+  margin-top: auto;
+  flex: 0 0 auto;
 }
 
 @media print {

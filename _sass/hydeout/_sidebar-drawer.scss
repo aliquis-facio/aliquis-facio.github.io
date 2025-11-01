@@ -4,6 +4,11 @@
 .drawer-hamburger { display: none; }
 
 @media (max-width: $large-breakpoint) {
+    #sidebar {
+        height: 100dvh;      /* 데스크톱에서도 고정 높이 */
+        max-height: 100dvh;  /* 혹시 모를 넘침 방지 */
+    }
+
     /* 더 작고, 회색 버튼 */
     .drawer-hamburger{
         position: fixed; top: .5rem; left: .5rem;
@@ -59,6 +64,8 @@
     html.js #sidebar{
         position: fixed !important;
         top: 0; left: 0; height: 100vh;
+        display: flex;
+        flex-direction: column;
         width: min(84vw, 20rem);
         transform: translateX(-100%) !important;   /* 닫힘 상태 */
         transition: transform .25s ease;
@@ -80,8 +87,23 @@
 
     /* 모바일에서 목록이 숨겨지지 않도록 강제 노출 */
     html.js #sidebar nav,
-    html.js #sidebar .sidebar-nav{ display:block !important; }
+    html.js #sidebar .sidebar-nav{
+        display: flex !important;
+        flex-direction: column;
+        overflow: hidden;
+        flex: 1 1 auto;
+        min-height: 0;
+    }
+
+    html.js #sidebar #sidebar-nav-links{
+        min-height: 0;
+        overflow-y: auto;
+    }
+
     html.js #sidebar .sidebar-nav-item{ display:block; }
+
+    html.js #sidebar #sidebar-icon-links,
+    html.js #sidebar .sidebar-footer{ flex: 0 0 auto; }
 
     /* 버튼이 본문을 가리지 않게 여백 */
     main.container{ padding-top: 3.25rem; }
