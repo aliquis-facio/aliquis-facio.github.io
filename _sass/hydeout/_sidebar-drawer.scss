@@ -1,0 +1,154 @@
+@use "variables" as *;
+
+/* ===========================
+   Local design tokens
+   =========================== */
+$hamb-size:        40px;
+$hamb-icon-size:   22px;
+$hamb-radius:      8px;
+
+$z-hamburger:      3100;
+$z-sidebar:        3000;
+$z-overlay:        2000;
+
+/* grayscale tokens (Tailwind 기준치와 유사) */
+$g-100: #f3f4f6;
+$g-200: #e5e7eb;
+$g-400: #9ca3af;
+$g-500: #6b7280;
+$g-600: #4b5563;
+$g-700: #374151;
+
+/* 접근성 포커스 링 */
+@mixin focus-ring($color, $width: 3px) {
+  outline: none;
+  box-shadow: 0 0 0 $width rgba($color, .35);
+  border-color: $color;
+}
+
+/* ===========================
+   Desktop default
+   =========================== */
+.drawer-hamburger { display: none; }
+
+/* ===========================
+   Mobile / narrow viewport
+   =========================== */
+@media (max-width: $large-breakpoint) {
+  /* 사이드바 높이: 구형 브라우저 폴백 + 동적 vh */
+  #sidebar {
+    height: 100vh;         /* fallback */
+    height: 100dvh;        /* modern */
+    max-height: 100dvh;    /* overscroll guard */
+  }
+
+  /* 햄버거 버튼 */
+  .drawer-hamburger {
+    position: fixed; top: .5rem; left: .5rem;
+    width: $hamb-size; height: $hamb-size;
+    border-radius: $hamb-radius;
+    border: 1px solid $g-200;
+    background: rgba(255,255,255,.92);
+    color: $g-500;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    cursor: pointer;
+    z-index: $z-hamburger;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+      color: $g-600 !important;
+      background: $g-100 !important;
+      border-color: $g-200 !important;
+    }
+    &:active {
+      color: $g-700 !important;
+      background: $g-200 !important;
+    }
+    &:focus { outline: none; }
+    &:focus-visible { @include focus-ring($g-400); }
+
+    svg, svg * {
+      width: $hamb-icon-size; height: $hamb-icon-size;
+      stroke: currentColor !important;
+      fill: none;
+    }
+  }
+
+  /* 사이드바 닫기 버튼 */
+  #sidebar .drawer-close{
+    position: absolute; top: .5rem; right: .5rem;
+    background: transparent; border: 0;
+    font-size: 1.5rem; line-height: 1;
+    color: $g-400; cursor: pointer;
+  }
+
+  /* JS 활성 시 드로어 동작 */
+  html.js {
+    #sidebar{
+      position: fixed !important;
+      top: 0; left: 0;
+      width: min(84vw, 20rem);
+      height: 100vh; height: 100dvh;
+      display: flex; flex-direction: column;
+      transform: translateX(-100%) !important;  /* closed */
+      transition: transform .25s ease;
+      will-change: transform;
+      z-index: $z-sidebar;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      background: inherit; /* 테마 유지 */
+      touch-action: pan-y;
+    }
+
+    body.drawer-open {
+      overflow: hidden; /* 뒤 스크롤 잠금 */
+
+      #sidebar {
+        transform: translateX(0) !important;      /* opened */
+      }
+    }
+  }
+
+  /* 오버레이 */
+  .drawer-overlay { display: none; }
+  html.js body.drawer-open .drawer-overlay {
+    display: block;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: $z-overlay;
+    backdrop-filter: blur(1px);
+  }
+
+  /* 모바일에서 네비게이션 노출 고정 */
+  html.js #sidebar {
+    nav, .sidebar-nav {
+      display: flex !important;
+      flex-direction: column;
+      overflow: hidden;
+      flex: 1 1 auto;
+      min-height: 0;
+    }
+
+    #sidebar-nav-links {
+      min-height: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar-nav-item { display: block; }
+
+    #sidebar-icon-links,
+    .sidebar-footer { flex: 0 0 auto; }
+  }
+
+  /* 버튼이 본문을 가리지 않도록 상단 여백 (safe-area 고려) */
+  main.container{
+    padding-top: calc((#{$hamb-size} + 1rem) + env(safe-area-inset-top));
+  }
+}
+
+/* 모션 감소 설정 시 애니메이션 제거 */
+@media (prefers-reduced-motion: reduce){
+  html.js #sidebar{ transition: none; }
+}

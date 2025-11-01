@@ -2,7 +2,7 @@
   Layout
 
   Styles for managing the structural hierarchy of the site.
-  Hydeout features the large colored sidebar from Hyde that houses the
+  Hydeout features the large colored bar from Hyde that houses the
   site name, intro, and "footer" content. Sidebar is on top of content on
   mobile and expands into sidebar on larger width displays.
 
@@ -20,11 +20,49 @@
   Basic approach is to color in body, make sidebar background transparent,
   and then fill in the .container or .content elements depending on how far
   we want the sidebar or header to stretch.
+
+  Layout (Refactored)
+  - 공통 토큰/믹스인 추가
+  - 모바일/데스크톱 섹션 구분
+  - 스크롤/높이/타이포/링크 상태 일관화
 */
 
 @use "sass:color";
 @use "variables" as *;
 
+/* ================================
+   MIXINS & LOCAL TOKENS
+================================== */
+@mixin dvh($prop, $value) {
+  // 100vh 폴백 + 100dvh 우선
+  #{$prop}: $value;
+  #{$prop}: $value; // fallback (ex: 100vh)
+  // 100dvh를 쓰고 싶으면 호출부에서 value를 100dvh로 전달
+}
+
+@mixin scroll-col {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+@mixin touch-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin title-blend {
+  background: transparent;
+  color: $sidebar-title-color;
+  h1, h2 { color: inherit; }
+  h1:last-child, h2:last-child { margin-bottom: 0; }
+}
+
+/* =================================
+   ROOT / BODY
+================================== */
 body {
   background-attachment: fixed;
   background-color: $sidebar-bg-color;
@@ -39,28 +77,40 @@ body {
   min-height: 100vh;
 }
 
+/* =================================
+   SIDEBAR (base)
+================================== */
 #sidebar {
   flex: 0 0 auto;
   padding: $section-spacing;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;   // fallback
+  height: 100dvh;  // modern
+  overflow: hidden; // 부모 고정, 내부 nav만 스크롤
 
   .site-title {
     font-family: 'Abril Fatface', serif;
     font-size: $large-font-size;
     font-weight: normal;
-    margin-bottom: $heading-spacing;
-    margin-top: 0;
-  }
+    margin: 0 0 $heading-spacing 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 
-  .site-title .back-arrow { margin-right: 0.5rem; }
+    .back-arrow { margin-right: .5rem; }
+  }
 }
 
+/* =================================
+   CONTENT / CONTAINER (base)
+================================== */
 .content {
   background: $body-bg;
   color: $body-color;
   padding: $section-spacing;
 }
 
-// Container is flexbox as well -- we want content div to stretch and fill
 .container {
   display: flex;
   flex: 1 1 auto;
@@ -72,12 +122,11 @@ body {
   }
 }
 
-/* -----------------------------------------------------------
-  Mobile view
------------------------------------------------------------ */
+/* =================================
+   MOBILE (default)
+================================== */
 
-// Hide secondary nav content in sidebar
-// Hide lead paragraph in sidebar
+/* 기본: 모바일에서 사이드바 보조 콘텐츠 감춤 */
 #sidebar {
   header ~ *,
   header ~ nav,
@@ -86,61 +135,40 @@ body {
   }
 }
 
-// Make header elements blend into sidebar / background
+/* 헤더(본문 상단) 색상/여백 정리 */
 .container > header {
-  background: transparent;
-  color: $sidebar-title-color;
+  @include title-blend;
   margin:
     ($heading-spacing - $section-spacing)
     $section-spacing
     $section-spacing;
-
-  h1,
-  h2 {
-    color: inherit;
-  }
-
-  h1:last-child,
-  h2:last-child {
-    margin-bottom: 0;
-  }
 }
 
-/* -----------------------------------------------------------
-  Mobile view for home page)
------------------------------------------------------------ */
-
+/* 홈에서만 보조 콘텐츠 노출 및 타이틀 확대 */
 .home #sidebar {
-
-  // Center sidebar content
   text-align: center;
 
-  // Bigger title
-  .site-title {
-    font-size: 3.25rem;
-  }
+  .site-title { font-size: 3.25rem; }
 
-  // Show secondary nav content + lead
   header ~ *,
-  p.lead {
-    display: block;
-  }
+  p.lead { display: block; }
 
-  header ~ nav {
-    display: flex;
-  }
+  header ~ nav { display: flex; }
 
-  // Slightly more bottom padding to compensate for heading not match 100% of
-  // line-height on top
-  > *:last-child {
-    margin-bottom: 0.5rem;
-  }
+  > *:last-child { margin-bottom: .5rem; }
 }
 
-/* -----------------------------------------------------------
-  Tablet / Desktop view
------------------------------------------------------------ */
+/* 드로어(모바일 오픈 상태) 예외: 카테고리/네비 노출 */
+html.js body.drawer-open #sidebar {
+  header ~ *,
+  p.lead { display: block !important; }
 
+  header ~ nav { display: flex !important; }
+}
+
+/* =================================
+   TABLET / DESKTOP
+================================== */
 @media (min-width: $large-breakpoint) {
   body {
     flex-direction: row;
@@ -154,38 +182,25 @@ body {
     }
   }
 
-  /* Undo mobile CSS */
-
+  /* 모바일 규칙 해제 + 데스크톱 배치 */
   #sidebar,
   .home #sidebar {
     text-align: left;
     width: $sidebar-width;
 
-    > *:last-child {
-      margin-bottom: 0;
-    }
+    > *:last-child { margin-bottom: 0; }
   }
 
   #sidebar {
     position: fixed;
 
-    // Attach to bottom or top of window
-    @if $sidebar-sticky {
-      bottom: 0;
-    }
+    // 상하 부착
+    @if $sidebar-sticky { bottom: 0; }
+    @else { top: 0; }
 
-    @else {
-      top: 0;
-    }
-
-    // Attach to right or left of window
-    @if $layout-reverse {
-      right: 0;
-    }
-
-    @else {
-      left: 0;
-    }
+    // 좌우 부착
+    @if $layout-reverse { right: 0; }
+    @else { left: 0; }
 
     .site-title {
       font-size: 3.25rem;
@@ -193,46 +208,31 @@ body {
     }
 
     p.lead,
-    header ~ * {
-      display: block;
-    }
+    header ~ * { display: block; }
 
-    header ~ nav {
-      display: flex;
-    }
+    header ~ nav { display: flex; }
   }
 
   .index #sidebar { margin-bottom: 0; }
 
-  // Make entire container background white to contrast against sidebar
+  /* 본문 컨테이너를 카드 배경으로 */
   .container {
     background: $body-bg;
     color: $body-color;
     min-height: 100vh;
-    padding:
-      $section-spacing * 2
-      $section-spacing * 2
-      0;
+    padding: $section-spacing * 2 $section-spacing * 2 0;
 
-    @if $layout-reverse {
-      margin-right: $sidebar-width;
-    }
-
-    @else {
-      margin-left: $sidebar-width;
-    }
+    @if $layout-reverse { margin-right: $sidebar-width; }
+    @else { margin-left: $sidebar-width; }
 
     > header {
       color: $heading-color;
       margin: 0;
 
-      h1,
-      h2 {
+      h1, h2 {
         color: inherit;
 
-        &:last-child {
-          margin-bottom: $heading-spacing;
-        }
+        &:last-child { margin-bottom: $heading-spacing; }
       }
     }
 
@@ -243,55 +243,82 @@ body {
   }
 }
 
-/* -----------------------------------------------------------
-  Sidebar links + nav
------------------------------------------------------------ */
+/* =================================
+   SIDEBAR LINKS + NAV
+================================== */
+#sidebar {
+  a {
+    color: $sidebar-link-color;
 
-#sidebar a {
-  color: $sidebar-link-color;
+    svg { fill: $sidebar-icon-color; }
 
-  svg {
-    fill: $sidebar-icon-color;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+
+      &.icon { text-decoration: none; }
+      svg { fill: $sidebar-icon-color; }
+    }
+
+    &.active {
+      font-weight: bold;
+      svg { fill: $sidebar-icon-color; }
+    }
+  }
+
+  .site-title {
+    color: $sidebar-title-color;
+
+    a { color: inherit; }
+  }
+
+  /* nav: 컬럼 배치 + 내부 리스트만 스크롤 */
+  nav {
+    @include scroll-col;
+  }
+
+  /* 카테고리 리스트 영역만 스크롤 */
+  #sidebar-nav-links {
+    flex: 1 1 auto;
+    min-height: 0;
+    @include touch-scroll;
+    padding-right: .25rem; // 스크롤바 간격
+  }
+
+  /* 하단 고정 영역(아이콘/라이선스)은 스크롤 대상에서 제외 */
+  #sidebar-icon-links,
+  .sidebar-footer,
+  footer,
+  .license,
+  .copyright {
+    flex: 0 0 auto;
+    margin-top: .75rem;
+  }
+
+  /* 하단 바: 아이콘 좌 / 문구 우 */
+  .sidebar-footer,
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    flex-wrap: nowrap;
+    margin-top: auto;
+    flex: 0 0 auto;
   }
 }
 
-#sidebar a:hover,
-#sidebar a:focus,
-#sidebar a.active {
-  svg { fill: $sidebar-icon-color; }
-}
-
-#sidebar a:hover,
-#sidebar a:focus {
-  text-decoration: underline;
-
-  &.icon {
-    text-decoration: none;
-  }
-}
-
-#sidebar a.active {
-  font-weight: bold;
-}
-
-#sidebar .site-title {
-  color: $sidebar-title-color;
-  a { color: inherit; }
-}
-
-#sidebar nav {
-  display: flex;
-}
-
-#sidebar-nav-links {
-  flex-flow: column nowrap;
-}
-
+/* 아이콘 링크 행 구성 */
 #sidebar-icon-links {
-  flex-flow: row wrap;
-  justify-content: center;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: .5rem;
+  justify-content: flex-start;
   margin-top: 1rem;
   max-width: 100%;
+  overflow: hidden;
 
   @media (min-width: $large-breakpoint) {
     justify-content: flex-start;
@@ -299,25 +326,24 @@ body {
   }
 }
 
-#sidebar nav > * {
-  display: block;
-  line-height: 1.75;
+/* 앵커 기본 정렬 보조 */
+#sidebar nav#sidebar-icon-links > a {
+  display: inline-flex;
+  line-height: 1;
 }
-
+#sidebar nav > * { display: block; line-height: 1.75; }
 #sidebar nav > .icon {
   display: inline-block;
   font-size: 1.5rem;
   margin: 0 0.25em;
 }
 
+/* =================================
+   PRINT
+================================== */
 @media print {
-  #sidebar {
-    display: none;
-  }
-
-  body {
-    display: block;
-  }
+  #sidebar { display: none; }
+  body { display: block; }
 
   .container {
     display: block;
@@ -325,12 +351,8 @@ body {
     margin-right: 0;
     padding: 0;
 
-    > * {
-      max-width: 100%;
-    }
+    > * { max-width: 100%; }
   }
 
-  html {
-    font-size: normal;
-  }
+  html { font-size: normal; }
 }
