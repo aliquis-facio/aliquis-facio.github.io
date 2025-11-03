@@ -1,3 +1,20 @@
+---
+layout: post
+comments: true
+sitemap:
+    changefreq:
+    priority:
+
+title: "[SECURITY] 보안의 속성"
+excerpt: "C.I.A.와 A.A.A."
+
+date: 2025-11-03
+last_modified_at:
+
+categories: [SECURITY]
+tags: [CRYPTOGRAPHY]
+---
+
 # 보안의 속성
 ## 1. 전통적 3요소 C.I.A.
 
@@ -6,25 +23,33 @@
 ### 1.1. Confidentiality(기밀성)
 
 : 인가된 사용자만 정보 자산에 접근할 수 있다. 허가되지 않은 정보 공개를 방지한다.
+
 도구:
-- Encryption(암호화): 
-- Access control(접근 통제)
-	- Authentication(인증)
+- **Encryption(암호화)**: 
+- **Access control(접근 통제)**
+	- **Authentication(인증)**
 		- 인증 방법 4가지:
 			1. 알고 있는 것: 머릿속에 기억하고 있는 정보를 이용해 인증을 수행한다.
 			2. 가지고 있는 것: 신분증이나 OTP(One Time Password) 장치 등으로 인증을 수행한다.
 			3. 자신의 모습: 홍채 같은 생체 정보로 인증을 수행한다.
 			4. 위치하는 곳: 현재 접속을 시도하는 위치의 적절성을 확인하거나 콜백을 이용해 인증을 수행한다.
-	- Authorization(권한 부여)
-- Physical security(물리적 보안)
+	- **Authorization(권한 부여)**
+- **Physical security(물리적 보안)**
 
 ### 1.2. Integrity(무결성)
-- **무결성(Integrity)**: 정보가 비인가로 변경되지 않았음을 보장.
-	- 도구: 백업, 체크섬, 오류정정코드.
+
+: 정보가 비인가로 변경되지 않았음을 보장한다
+
+도구
+- 백업
+- 체크섬
+- 오류정정코드
 
 ### 1.3. Availability(가용성)
 - **가용성(Availability)**: 허가된 사용자가 적시에 접근·수정 가능.
-	- 도구: 물리적 보호, 계산/저장 자원의 중복화.
+- 도구
+	- 물리적 보호
+	- 계산/저장 자원의 중복화.
 
 ## 2. 추가, 확장된 요소 A.A.A.
 
@@ -59,4 +84,3 @@
 
 - [Tistory: [정보보호개론] 보안의 속성(CIA triad, AAA triad)](https://junbyeol.tistory.com/20)
 - [Velog: Security](https://velog.io/@kimjihong9/Security)
-- 
