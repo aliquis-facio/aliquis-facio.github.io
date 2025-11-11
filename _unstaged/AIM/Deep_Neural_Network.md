@@ -1,6 +1,6 @@
 # 심층 신경망 (Deep Neural Network, DNN)
 
-여러 층(layer으로 구성된 인공 신경망(ANN)
+여러 층(layer)으로 구성된 인공 신경망(ANN)
 
 ## 1. 개념
 
