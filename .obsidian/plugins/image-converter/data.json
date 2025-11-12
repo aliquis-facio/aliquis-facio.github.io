@@ -34,7 +34,7 @@
       "conflictResolution": "increment"
     }
   ],
-  "selectedFilenamePreset": "Keep original name",
+  "selectedFilenamePreset": "Datetime",
   "outputFormat": "NONE",
   "quality": 100,
   "colorDepth": 1,
