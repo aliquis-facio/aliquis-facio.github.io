@@ -4,18 +4,19 @@ comments: true
 sitemap:
   changefreq:
   priority:
-title: "[DATA SCIENCE] 한글 텍스트 자연어 처리 실습 2"
+title: "[AI] 한글 텍스트 자연어 처리 실습 2"
 excerpt: "한글 텍스트 자연어 처리: 소설 속 등장인물 감정 흐름 변화 추적"
 date: 2025-04-13
-last_modified_at:
+last_modified_at: 2025-11-13
 categories:
-  - DATA SCIENCE
+  - AI
 tags:
   - NLP
   - TIL
 ---
 
 # 목차
+
 1. [활용 데이터셋 소개](#1-활용-데이터셋-소개)
 1. [환경설정 (Google Colab)](#2-환경설정-google-colab)
     1. [환경설정 진행](#21-환경설정-진행)
@@ -44,8 +45,11 @@ tags:
     1. [7권](#7권)
 1. [참고](#참고)
 
+---
+
 # 한글 텍스트 자연어 처리 실습 2
 ## 1. 활용 데이터셋 소개
+
 emotion_korTran.data  
 출처: [Naver Cafe - nlp study: 감정분석과 감정분석 말뭉치](https://cafe.naver.com/nlpk/335)
 
@@ -84,6 +88,7 @@ from transformers import AutoTokenizer, AutoModel
 
 ## 3. 데이터 전처리하기
 ### 3.1. 데이터 로드 및 전처리
+
 .data -> DataFrame
 
 ```python
@@ -549,6 +554,7 @@ for (path, dirs, files) in os.walk(root_path):
 
 ## 10. 결과
 ### 1권
+
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-2.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-3.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-4.png?raw=true.png)
@@ -607,6 +613,7 @@ for (path, dirs, files) in os.walk(root_path):
 
 
 ### 2권
+
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-5.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-6.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-7.png?raw=true.png)
@@ -661,6 +668,7 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 3권
+
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-8.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-9.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-10.png?raw=true.png)
@@ -715,6 +723,7 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 4권
+
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-11.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-12.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-13.png?raw=true.png)
@@ -769,6 +778,7 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 5권
+
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-14.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-15.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-16.png?raw=true.png)
@@ -823,6 +833,7 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 6권
+
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-17.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-18.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-19.png?raw=true.png)
@@ -877,6 +888,7 @@ for (path, dirs, files) in os.walk(root_path):
 </table>
 
 ### 7권
+
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-20.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-21.png?raw=true.png)
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-22.png?raw=true.png)
@@ -930,7 +942,10 @@ for (path, dirs, files) in os.walk(root_path):
   </tbody>
 </table>
 
+---
+
 # 참고
+
 * [Dataset.map](https://velog.io/@gsgh3016/Dataset.map)
 * [[RN] ONNX(Open Neural Network Exchange) 이해하기 -1: React Native 활용](https://adjh54.tistory.com/203)
 * [전이학습(Transfer learning)과 파인튜닝(Fine tuning)](https://hi-ai0913.tistory.com/32)
