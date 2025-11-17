@@ -9,9 +9,9 @@ excerpt: 소프트웨어 품질 정의와 품질 모델
 date: 2025-11-12
 last_modified_at: 2025-11-18
 categories:
-  - SOFT_DESIGN
+  - SOFTWARE_DESIGN
 tags:
-  - SOFT_DESIGN
+  - SOFTWARE_DESIGN
 ---
 
 # 목차
