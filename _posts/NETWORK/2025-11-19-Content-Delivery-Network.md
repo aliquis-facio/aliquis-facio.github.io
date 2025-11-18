@@ -19,15 +19,15 @@ tags:
 # 목차
 
 1. [정의](#1-정의)
-1. [구조 및 동작](#2-구조-및-동작)
-1. [등장 배경](#3-등장-배경)
+2. [구조 및 동작](#2-구조-및-동작)
+3. [등장 배경](#3-등장-배경)
     1. [1세대: 정적 콘텐츠 전달 (Static Content Delivery)](#31-1세대-정적-콘텐츠-전달-static-content-delivery)
-    1. [2세대: 동적 콘텐츠·스트리밍 지원 (Dynamic Content & Streaming)](#32-2세대-동적-콘텐츠스트리밍-지원-dynamic-content--streaming)
-    1. [3세대: 보안 중심 CDN (Security-Focused CDN)](#33-3세대-보안-중심-cdn-security-focused-cdn)
-    1. [4세대: 엣지 네트워크 & 엣지 컴퓨팅 (Edge Networks)](#34-4세대-엣지-네트워크--엣지-컴퓨팅-edge-networks)
-1. [사용 이점](#4-사용-이점)
-1. [사용처](#5-사용처)
-1. [참고](#참고)
+    2. [2세대: 동적 콘텐츠·스트리밍 지원 (Dynamic Content & Streaming)](#32-2세대-동적-콘텐츠스트리밍-지원-dynamic-content--streaming)
+    3. [3세대: 보안 중심 CDN (Security-Focused CDN)](#33-3세대-보안-중심-cdn-security-focused-cdn)
+    4. [4세대: 엣지 네트워크 & 엣지 컴퓨팅 (Edge Networks)](#34-4세대-엣지-네트워크--엣지-컴퓨팅-edge-networks)
+4. [사용 이점](#4-사용-이점)
+5. [사용처](#5-사용처)
+6. [참고](#참고)
 
 ---
 
