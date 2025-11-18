@@ -34,13 +34,13 @@ tags:
 # CDN, Content Delivery Network
 ## 1. 정의
 
-![512x288](../../_image/2025-11-19-00-30-04.png)
+![512x288](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-19-00-30-04.png?raw=true)
 
 웹 사이트의 이미지, 영상, JS, CSS 같은 정적 파일을 전 세계 여러 서버에 복제해 두고, 사용자와 가장 가까운 서버에서 대신 전달해 주는 시스템이다.
 
 ## 2. 구조 및 동작
 
-![604x275](../../_image/2025-11-19-00-33-17.png)
+![604x275](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-19-00-33-17.png?raw=true)
 
 흐름 예시:
 1. 사용자가 `example.com/image.png`을 요청한다.
