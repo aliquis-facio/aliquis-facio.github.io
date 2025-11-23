@@ -1,0 +1,5 @@
+- [OSTEP (Korean Version)](https://github.com/remzi-arpacidusseau/ostep-translations/blob/master/korean/README.md)
+- [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+- [pthread_mutex_lock, pthread_mutex_trylock 또는 pthread_mutex_unlock 서브루틴](https://www.ibm.com/docs/ko/aix/7.3.0?topic=p-pthread-mutex-lock-pthread-mutex-trylock-pthread-mutex-unlock-subroutine)
+- [[OS] C언어 스레드 API 사용법(Thread API) - OS 공부 18](https://icksw.tistory.com/156)
+- [[C/C++]thread 조건변수 다루기 - pthread_cond_broadcast()](https://elecs.tistory.com/135)
