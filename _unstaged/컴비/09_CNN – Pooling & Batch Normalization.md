@@ -1,4 +1,4 @@
-# 9. CNN – Pooling & Batch Normalization
+# CNN: Pooling & Batch Normalization
 ## 1. 1×1 Convolution
 
 ![|500x228](../../_image/2025-11-30-22-03-15.jpg)
