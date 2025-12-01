@@ -122,7 +122,7 @@ $$\text{Downstream grad} = \text{Upstream grad} \times \text{Local grad}$$
         꼴로 정리된 결과를 많이 쓴다는 정도의 메시지를 전달.
 
 ## 6. Backprop 구현 패턴
-### 6.1 “Flat” gradient 코드
+### 6.1. “Flat” gradient 코드
 
 1. **Forward pass 코드**
     - 중간 값들을 모두 저장:
@@ -146,7 +146,7 @@ $$\text{Downstream grad} = \text{Upstream grad} \times \text{Local grad}$$
 
 - 이 패턴이 모든 연산에 대해 반복되며, 각 연산은 **자신의 로컬 그레디언트만 알고 있으면** 된다.
 
-### 6.2 Autograd (PyTorch 예시)
+### 6.2. Autograd (PyTorch 예시)
 
 슬라이드 마지막 부분: **PyTorch의 `autograd.Function`** 예시
 - 클래스 구조:

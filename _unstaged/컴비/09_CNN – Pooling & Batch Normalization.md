@@ -34,7 +34,7 @@
 PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`는 위 수식을 그대로 구현한 2D 컨볼루션 레이어이다.
 
 ## 3. Pooling (풀링) 레이어
-### 3.1 개념
+### 3.1. 개념
 
 ![|500x394](../../_image/2025-11-30-22-03-32.jpg)
 
@@ -49,7 +49,7 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
     - $W' = \dfrac{W - K}{S} + 1$
     - 출력: $C \times H' \times W'$ (채널 수는 유지)
 
-### 3.2 Max Pooling 예시
+### 3.2. Max Pooling 예시
 
 - $2\times 2$ 커널, 스트라이드 $2$일 때, 입력의 $2\times2$ 블록마다 **최댓값**만 남긴다.
 - 예: ![|500x262](../../_image/2025-11-30-22-04-04.jpg)
@@ -58,16 +58,15 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
     - **학습 파라미터가 전혀 없음** (그냥 max/avg 연산만 수행)
 
 ## 4. CNN 구조와 LeNet-5 예시
-### 4.1 CNN의 전형적인 구성
+### 4.1. CNN의 전형적인 구성
 
 ![|500x166](../../_image/2025-11-30-22-04-41.jpg)
 
-- 예전 고전 CNN 구조:  
-    **[Conv → ReLU → Pool] × N → Flatten → [FC → ReLU] × M → FC(출력)**
+- 예전 고전 CNN 구조: **[Conv → ReLU → Pool] × N → Flatten → [FC → ReLU] × M → FC(출력)**
 - 앞부분: 2D 컨볼루션으로 이미지를 처리 (공간 구조 유지)
 - 뒷부분: Flatten 후 전결합(Linear) 레이어로 최종 분류
 
-### 4.2 LeNet-5 구조
+### 4.2. <font color="#ff0000">LeNet-5 구조</font>
 
 ![|500x380](../../_image/2025-11-30-22-05-16.jpg)
 
@@ -99,14 +98,14 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
     경사하강법의 수렴을 어렵게 만든다.
 
 ## 6. Batch Normalization (배치 정규화)
-### 6.1 기본 아이디어
+### 6.1. 기본 아이디어
 
 ![|500x195](../../_image/2025-11-30-22-05-39.jpg)
 
 - **레이어 출력(활성값)을 평균 0, 분산 1에 가깝게 정규화**하여  
     internal covariate shift를 줄이고 학습을 안정화/가속화하자는 아이디어.
 
-### 6.2 수식 (Fully-connected 기준)
+### 6.2. 수식 (Fully-connected 기준)
 
 ![|500x608](../../_image/2025-11-30-22-05-54.jpg)
 
@@ -122,7 +121,7 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
 - $\gamma,\beta$ 덕분에 “평균 0, 분산 1”이라는 제약을 **완전히 고정하지 않고**,  
     네트워크가 필요하면 다른 분포(스케일·평행이동)를 학습할 수 있다.
 
-### 6.3 ConvNet에서의 BatchNorm (Spatial BatchNorm)
+### 6.3. ConvNet에서의 BatchNorm (Spatial BatchNorm)
 
 - Batch Norm for Fully-Connected: ![|500x269](../../_image/2025-11-30-22-06-58.jpg)
 - Batch Norm for Conv: ![|500x280](../../_image/2025-11-30-22-07-03.jpg)
@@ -133,7 +132,7 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
     - $\gamma,\beta \in \mathbb{R}^{1\times C\times 1\times 1}$
     - 수식은 동일하게 $y = \gamma \dfrac{x-\mu}{\sigma} + \beta$
 
-### 6.4 학습 시와 테스트 시
+### 6.4. 학습 시와 테스트 시
 
 ![|500x260](../../_image/2025-11-30-22-08-29.jpg)
 
@@ -143,7 +142,7 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
 - 테스트 시 BatchNorm은 단순한 **고정된 선형 연산**이 되어,  
     이전 Conv/FC 레이어의 weight, bias에 흡수(퓨전)할 수도 있다.
 
-### 6.5 위치와 효과
+### 6.5. 위치와 효과
 
 - 보통 레이어 순서는  
     **(Linear or Conv) → BatchNorm → 활성함수(ReLU, tanh, …)** 로 둔다.
@@ -158,7 +157,7 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
     - 이론적으로 완전히 이해된 것은 아니며, 여전히 연구 주제
 	
 ## 7. 다른 정규화 기법들: Layer / Instance / Group Norm
-### 7.1 Layer Normalization
+### 7.1. Layer Normalization
 
 - **Batch Norm** for **Fully-Connected**: ![|500x308](../../_image/2025-11-30-22-09-10.jpg)
 - **Layer Norm** for **Fully-Connected**: ![|500x310](../../_image/2025-11-30-22-09-43.jpg)
@@ -170,7 +169,7 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
     **학습/테스트 시 동작이 동일**하다.
 - RNN, Transformer 등에서 표준처럼 사용.
 
-### 7.2 Instance Normalization
+### 7.2. Instance Normalization
 
 - **Batch Norm** for **Conv**: ![|500x318](../../_image/2025-11-30-22-12-07.jpg)
 - **Instance Norm** for **Conv**: ![|500x315](../../_image/2025-11-30-22-12-23.jpg)
@@ -182,13 +181,13 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
 - 마찬가지로 **배치에 의존하지 않아 train/test가 동일**하며,  
     스타일 변환, 텍스처 생성 같은 **이미지 스타일링**에서 많이 쓰인다.
 
-### 7.3 Group Normalization
+### 7.3. Group Normalization
 
 - 채널을 여러 **그룹**으로 나누고, 각 그룹 내부에서만 평균·분산을 계산.
 - BatchNorm처럼 채널 일부를 같이 보고, InstanceNorm처럼 배치에 의존하지 않는 절충.
 - **배치 크기가 매우 작을 때도 안정적**이라 detection/segmentation 등에서 많이 활용.
 
-### 7.4 비교
+### 7.4. 비교
 
 ![|500x194](../../_image/2025-11-30-22-12-33.jpg)
 

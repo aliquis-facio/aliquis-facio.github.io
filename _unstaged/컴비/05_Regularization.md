@@ -1,4 +1,4 @@
-# 5. Regularization
+# Regularization
 ## 1. 뉴럴넷 복습
 
 - **이전:** 선형 분류기
@@ -16,12 +16,12 @@
     - 손실이 작을수록 좋은 분류기.
 
 ## 2. 과적합과 정규화
-### (1) Overfitting
+### 2.1. Overfitting
 
 - **과적합(Overfitting)**: 모델 용량(capacity)이 너무 커서 **데이터의 노이즈까지 학습**해 버리는 현상.
 - 훈련 데이터에선 성능이 매우 좋지만, **테스트/검증 데이터에서 성능이 나빠짐** → 일반화 실패.
 
-### (2) Regularization 아이디어
+### 2.2. Regularization 아이디어
 
 - 우리가 최소화하는 건 원래: $$\min_{w,b} \text{loss}(w,b)$$
     (훈련 데이터 기준)
@@ -34,13 +34,13 @@
     - Loss landscape에 **곡률(curvature)** 를 추가하여 **최적화가 더 잘 되게** 도와주기도 함.
 	
 ## 3. L2 / L1 Regularization과 Weight Decay
-### (1) Regularizer의 기본 생각
+### 3.1. Regularizer의 기본 생각
 
 - 보통 “너무 큰 weight”를 원치 않는다:
     - weight가 크면 입력 feature의 작은 변화가 출력에 큰 영향을 미침 → 불안정한 모델.
     - 쓸모없는 feature는 **weight를 0**으로 만드는 것이 좋을 수 있음.
 
-### (2) L2 정규화 (Weight Decay, Ridge)
+### 3.2. L2 정규화 (Weight Decay, Ridge)
 
 - **정의:** $$\mathcal{L}_\text{reg}(\theta) = \mathcal{L}(\theta) + \lambda \sum_k \theta_k^2$$
     모든 weight에 대해 제곱합을 패널티로 추가.
@@ -54,7 +54,7 @@
 - **$\lambda$의 역할:**
     - $\lambda$가 크면 큰 weight에 대한 패널티가 커짐 → 더 강하게 0으로 수축.
 
-### (3) L1 정규화 (Lasso)
+### 3.3. L1 정규화 (Lasso)
 
 - **정의:** $$\mathcal{L}_\text{reg}(\theta) = \mathcal{L}(\theta) + \lambda \sum_k |\theta_k|$$
 - gradient는 sign을 사용: $$\frac{\partial}{\partial w_j} \mathcal{L}_\text{reg}  
@@ -66,7 +66,7 @@
         → **크기와 상관없이 0 방향으로 일정 속도로 당김**  
         → 많은 weight를 정확히 0으로 만들어 **sparse 모델**을 만드는 경향.
 
-### (4) Elastic Net
+### 3.4. Elastic Net
 
 - **L1 + L2를 섞은 정규화:**
     $$\mathcal{L}_\text{reg}(\theta) =  
@@ -86,7 +86,7 @@
 - 이 목적 함수는 **convex**라서 gradient descent로 최적화가 가능함(선형모델 기준).
 
 ## 5. Dropout & Early Stopping
-### (1) Dropout
+### 5.1. Dropout
 
 - **훈련 시**, 각 미니배치마다 뉴런(유닛)을 **확률적으로 끔**:
     - 각 유닛은 dropout rate $p$로 제거(또는 $1-p$로 유지).
@@ -95,7 +95,7 @@
     - 매 미니배치마다 **조금씩 다른 구조의 네트워크**를 학습하는 것과 같음 → 일종의 **앙상블(ensemble)** 효과.
     - 특정 뉴런/경로에 의존하는 것을 막고, 보다 **robust한 표현**을 학습.
 
-### (2) Early Stopping
+### 5.2. Early Stopping
 
 - 훈련 시 **validation set**을 별도로 모니터링:
     - 예: train:val = 75:25
@@ -119,7 +119,7 @@
     행렬 연산으로 쓰면 **벡터화/배치 연산**이 가능해서, 실제 구현에서 매우 중요함.
 
 ## 7. 활성화 함수 & 뉴런
-### (1) 활성화 함수 (Activation Function)
+### 7.1. 활성화 함수 (Activation Function)
 
 - **ReLU**: $\text{ReLU}(x) = \max(0, x)$ – 기본 선택(default)으로 많이 사용.
 - 그 외:
@@ -131,7 +131,7 @@
 - **활성화 함수가 없다면?**
     - 레이어를 여러 개 쌓아도 모두 선형 변환의 합성 → 결국 **하나의 선형 분류기와 동일** (표현력이 증가하지 않음).
 
-### (2) 생물학적 뉴런과 비교
+### 7.2. 생물학적 뉴런과 비교
 
 - 뇌의 뉴런:
     - 여러 입력(dendrite)이 들어와 가중 합 → cell body에서 비선형 “발화” 결정 → axon을 통해 신호 전파.

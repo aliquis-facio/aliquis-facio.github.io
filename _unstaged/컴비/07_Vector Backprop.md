@@ -1,11 +1,11 @@
-# 7. Vector Backprop
+# Vector Backprop
 ## 1. 벡터 미분 복습 (Gradient & Jacobian)
 ### 1.1 스칼라 도함수
 
 - $y = f(x)$, $x, y \in \mathbb{R}$ 일 때 $x$가 아주 조금 변하면 $y$가 얼마나 변하는지 보는 값이 도함수
 - 즉, $dy/dx$ 는 $x$에 대한 $y$의 변화율.
 
-### 1.2 그레이디언트 (Gradient)
+### 1.2. 그레이디언트 (Gradient)
 
 - $y = f(\mathbf{x})$
     - $\mathbf{x} \in \mathbb{R}^{D_x}$ : 벡터 입력
@@ -19,7 +19,7 @@
     \end{bmatrix}$$
 - 해석: 각 성분 $x_i$를 아주 살짝 바꿨을 때 $y$가 얼마나 변하는지 모은 것.
 
-### 1.3 자코비안 (Jacobian)
+### 1.3. 자코비안 (Jacobian)
 
 - $\mathbf{y} = f(\mathbf{x})$
     - $\mathbf{x} \in \mathbb{R}^{D_x}$
@@ -38,7 +38,7 @@
 
 슬라이드는 **계산 그래프(computational graph)** 상에서 벡터/행렬 단위로 backprop을 설명한다.
 
-### 2.1 설정
+### 2.1. 설정
 
 - 노드: $\mathbf{x} \to \mathbf{y} \to \mathbf{z} \to L$
 - $L$ 은 항상 스칼라 loss
@@ -49,7 +49,7 @@
     - 업스트림 그레이디언트: $\frac{\partial L}{\partial \mathbf{y}}$
     - 다운스트림 그레이디언트: $\frac{\partial L}{\partial \mathbf{x}}$
 
-### 2.2 벡터 체인 룰 (Matrix–vector 형태)
+### 2.2. 벡터 체인 룰 (Matrix–vector 형태)
 
 노드 $\mathbf{y} = f(\mathbf{x})$에 대해:
 $$\frac{\partial L}{\partial \mathbf{x}}  
@@ -62,7 +62,7 @@ $$\frac{\partial L}{\partial \mathbf{x}}
 슬라이드에서는 이를 **“Jacobian $\times$ upstream gradient = downstream gradient”** 라는 형태의 **행렬–벡터 곱**으로 표현한다.
 
 ## 3. Backprop with Vectors – ReLU 예제
-### 3.1 예제 설정
+### 3.1. 예제 설정
 
 슬라이드의 예시는 elementwise ReLU:
 - 함수: $f(x) = \max(0, x)$ (elementwise)
@@ -85,7 +85,7 @@ $$\frac{\partial L}{\partial \mathbf{x}}
     \end{bmatrix}  
     $$
 
-### 3.2 ReLU의 Jacobian
+### 3.2. ReLU의 Jacobian
 
 각 성분에 대해  
 $$  
@@ -114,7 +114,7 @@ $$
 \end{bmatrix}  
 $$
 
-### 3.3 다운스트림 그레이디언트 계산
+### 3.3. 다운스트림 그레이디언트 계산
 
 체인 룰에 따라:
 $$  
@@ -147,7 +147,7 @@ $$
 프레임워크에서는 Jacobian을 만들지 않고, **업스트림 그레이디언트에 활성화 마스크를 elementwise 곱**하는 방식으로 구현한다.
 
 ## 4. Backprop with Matrices (또는 Tensors)
-### 4.1 모양(Shape) 일반화
+### 4.1. 모양(Shape) 일반화
 
 슬라이드는 벡터 개념을 그대로 **행렬/텐서**로 확장한다.
 - 입력: $x \in \mathbb{R}^{D_x \times M_x}$
@@ -159,7 +159,7 @@ $$
 - $dL/dx$ 의 **shape는 항상 $x$와 같다.**
 - $dL/dy$ 는 $y$와, $dL/dz$ 는 $z$와 같은 shape.
 
-### 4.2 자코비안과 업스트림 그레이디언트
+### 4.2. 자코비안과 업스트림 그레이디언트
 
 - $\frac{\partial z}{\partial y}$, $\frac{\partial y}{\partial x}$ 는 각각 거대한 **자코비안 행렬**:
     - 예: $\frac{\partial y}{\partial x}$ 의 크기 $\big(D_y M_y\big) \times \big(D_x M_x\big)$
@@ -174,7 +174,7 @@ $$
     꼴의 **행렬–벡터 곱만 암묵적으로** 계산한다.
 
 ## 5. 예제: 행렬 곱 $y = xw$ 의 Backprop
-### 5.1 전방 연산 (Forward)
+### 5.1. 전방 연산 (Forward)
 
 슬라이드의 예제
 - 입력 행렬: $x \in \mathbb{R}^{N \times D},\quad  w \in \mathbb{R}^{D \times M}$
@@ -183,7 +183,7 @@ $$
 
 실제 슬라이드에는 구체적인 숫자 예제와 함께 $dL/dy$ 가 주어진다.
 
-### 5.2 자코비안 크기의 문제
+### 5.2. 자코비안 크기의 문제
 
 이론적으로는:
 - $y$ 를 $x$ 에 대해 미분한 자코비안: $$\frac{\partial y}{\partial x} \in \mathbb{R}^{(N D) \times (N M)}$$
@@ -194,7 +194,7 @@ $$
 - $dL/dw$ (weight에 대한 gradient)
 뿐이다.
 
-### 5.3 $dL/dx$ 유도
+### 5.3. $dL/dx$ 유도
 
 각 원소에 대해 체인 룰을 쓰면:
 $$  
@@ -225,7 +225,7 @@ $$
 - 여기서 $\frac{\partial L}{\partial y} \in \mathbb{R}^{N \times M}$ 이고, $w^\top \in \mathbb{R}^{M \times D}$ 이므로 결과는 $N \times D$ 로 $x$와 동일한 shape.
 - 슬라이드는 이를 “로컬 gradient slice”와 $dL/dy$ 의 내적(dot product)로 표현한 뒤, 위의 행렬식으로 일반화한다.
 
-### 5.4 $dL/dw$ 유도
+### 5.4. $dL/dw$ 유도
 
 마찬가지로:
 $$  
