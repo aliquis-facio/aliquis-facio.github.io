@@ -2,8 +2,7 @@
 ## 1. 벡터 미분 복습 (Gradient & Jacobian)
 ### 1.1 스칼라 도함수
 
-- $y = f(x)$, $x, y \in \mathbb{R}$ 일 때  
-    $x$가 아주 조금 변하면 $y$가 얼마나 변하는지 보는 값이 도함수
+- $y = f(x)$, $x, y \in \mathbb{R}$ 일 때 $x$가 아주 조금 변하면 $y$가 얼마나 변하는지 보는 값이 도함수
 - 즉, $dy/dx$ 는 $x$에 대한 $y$의 변화율.
 
 ### 1.2 그레이디언트 (Gradient)
@@ -14,8 +13,8 @@
 - 이때 도함수는 **그레이디언트 벡터**:  
     $$\nabla_{\mathbf{x}} y =  
     \begin{bmatrix}  
-    \frac{\partial y}{\partial x_1} \  
-    \vdots \  
+    \frac{\partial y}{\partial x_1} \\
+    \vdots \\\
     \frac{\partial y}{\partial x_{D_x}}  
     \end{bmatrix}$$
 - 해석: 각 성분 $x_i$를 아주 살짝 바꿨을 때 $y$가 얼마나 변하는지 모은 것.
@@ -102,7 +101,7 @@ $$
 \end{cases}  
 $$
 
-예제에서의 Jacobian은 대각선에 $$$1, 0, 1, 0$$$이 있는 대각 행렬:
+예제에서의 Jacobian은 대각선에 $$1, 0, 1, 0$$이 있는 대각 행렬:
 
 $$  
 \frac{\partial \mathbf{y}}{\partial \mathbf{x}}
@@ -142,10 +141,8 @@ $$
 $$
 
 **실질적인 규칙:**
-- $x_i > 0$ (ReLU가 “살아 있는” 위치):  
-    $dL/dx_i = dL/dy_i$
-- $x_i \le 0$ (“죽은” 위치):  
-    $dL/dx_i = 0$
+- $x_i > 0$ (ReLU가 “살아 있는” 위치): $dL/dx_i = dL/dy_i$
+- $x_i \le 0$ (“죽은” 위치): $dL/dx_i = 0$
 
 프레임워크에서는 Jacobian을 만들지 않고, **업스트림 그레이디언트에 활성화 마스크를 elementwise 곱**하는 방식으로 구현한다.
 
@@ -180,37 +177,18 @@ $$
 ### 5.1 전방 연산 (Forward)
 
 슬라이드의 예제
-- 입력 행렬:  
-	$$  
-    x \in \mathbb{R}^{N \times D},\quad  
-    w \in \mathbb{R}^{D \times M}  
-    $$
-- 출력:  
-    $$  
-    y = xw \in \mathbb{R}^{N \times M}  
-    $$
-- 각 원소:  
-    $$  
-    y_{i,j} = \sum_{k=1}^{D} x_{i,k} w_{k,j}  
-    $$
+- 입력 행렬: $x \in \mathbb{R}^{N \times D},\quad  w \in \mathbb{R}^{D \times M}$
+- 출력: $y = xw \in \mathbb{R}^{N \times M}$
+- 각 원소:  $$y_{i,j} = \sum_{k=1}^{D} x_{i,k} w_{k,j}$$
 
 실제 슬라이드에는 구체적인 숫자 예제와 함께 $dL/dy$ 가 주어진다.
 
 ### 5.2 자코비안 크기의 문제
 
 이론적으로는:
-- $y$ 를 $x$ 에 대해 미분한 자코비안:  
-    $$  
-    \frac{\partial y}{\partial x}  
-    \in \mathbb{R}^{(N D) \times (N M)}  
-    $$
-- $y$ 를 $w$ 에 대해 미분한 자코비안:  
-    $$  
-    \frac{\partial y}{\partial w}  
-    \in \mathbb{R}^{(D M) \times (N M)}  
-    $$
-예: $N = 64$, $D = M = 4096$ 인 경우,
-- 각 자코비안이 **약 256 GB 메모리**를 차지하므로, 명시적으로 만들 수 없다.
+- $y$ 를 $x$ 에 대해 미분한 자코비안: $$\frac{\partial y}{\partial x} \in \mathbb{R}^{(N D) \times (N M)}$$
+- $y$ 를 $w$ 에 대해 미분한 자코비안: $$\frac{\partial y}{\partial w} \in \mathbb{R}^{(D M) \times (N M)}$$
+예: $N = 64$, $D = M = 4096$ 인 경우, 각 자코비안이 **약 256 GB 메모리**를 차지하므로, 명시적으로 만들 수 없다.
 그래서 **Jacobians는 암묵적으로만** 다루고, 우리가 필요로 하는 것은 오직:
 - $dL/dx$ (입력에 대한 gradient)
 - $dL/dw$ (weight에 대한 gradient)
@@ -238,11 +216,11 @@ $$
 \left(\frac{\partial L}{\partial y_{i,j}}\right) w_{k,j}  
 $$
 이를 행렬 형태로 모으면
-$$  
+$$
 \boxed{  
 \frac{\partial L}{\partial x}
 \frac{\partial L}{\partial y} , w^\top  
-}  
+}
 $$
 - 여기서 $\frac{\partial L}{\partial y} \in \mathbb{R}^{N \times M}$ 이고, $w^\top \in \mathbb{R}^{M \times D}$ 이므로 결과는 $N \times D$ 로 $x$와 동일한 shape.
 - 슬라이드는 이를 “로컬 gradient slice”와 $dL/dy$ 의 내적(dot product)로 표현한 뒤, 위의 행렬식으로 일반화한다.
@@ -279,12 +257,10 @@ $$
 
 ## 6. 실무적 관점: 프레임워크에서의 Backprop
 
-1. **Loss $L$는 스칼라**
-    - 그래서 어떤 노드에서든 업스트림/다운스트림 gradient는 항상 “변수 vs 스칼라” 관계의 그레이디언트/자코비안 구조를 갖는다.
+1. **Loss $L$는 스칼라**: 그래서 어떤 노드에서든 업스트림/다운스트림 gradient는 항상 “변수 vs 스칼라” 관계의 그레이디언트/자코비안 구조를 갖는다.
 2. **Jacobians는 절대 명시적으로 만들지 않는다**
     - 메모리 폭발 (수백 GB) 때문에 불가능.
-    - 대신, 각 연산의 **로컬 gradient 공식을 직접 구현**해서,  
-        업스트림 gradient와의 곱만 수행한다.
+    - 대신, 각 연산의 **로컬 gradient 공식을 직접 구현**해서, 업스트림 gradient와의 곱만 수행한다.
     - 예:
         - ReLU: 마스크 곱
         - MatMul:
@@ -294,5 +270,4 @@ $$
     - PyTorch 같은 프레임워크는 각 연산(레이어)에 대해
         - forward: $y = f(x, w)$
         - backward: 주어진 $dL/dy$ 로부터 $dL/dx$, $dL/dw$ 를 계산하는 함수
-    - 사용자는 보통 `loss.backward()` 한 줄만 호출하면,  
-        이 규칙들이 계산 그래프를 따라 자동으로 적용된다.
+    - 사용자는 보통 `loss.backward()` 한 줄만 호출하면, 이 규칙들이 계산 그래프를 따라 자동으로 적용된다.
