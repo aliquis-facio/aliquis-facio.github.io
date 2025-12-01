@@ -1,0 +1,19 @@
+/* 폭 자동으로 꽉 차게 */
+.mermaid svg {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+/* 가로 스크롤/중앙정렬/부모를 넘치지 않게 */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;        /* 필요 시 가로/세로 스크롤 */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 커서 힌트 */
+.mermaid svg { cursor: grab; }
+.mermaid svg:active { cursor: grabbing; }

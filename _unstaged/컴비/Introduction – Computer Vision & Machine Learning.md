@@ -1,10 +1,10 @@
-## 1. Introduction – Computer Vision & Machine Learning
-### 1. 컴퓨터 비전이란?
+# 1. Introduction – Computer Vision & Machine Learning
+## 1. 컴퓨터 비전이란?
 
 - **정의**: 사람이 눈으로 사물을 보고 인지하는 작업을 컴퓨터가 수행하게 만드는 학문.
 - 결국, **이미지/영상 → 의미 있는 정보(객체, 사람, 문자, 거리 등)** 로 바꾸는 기술들의 집합.
 
-### 2. 컴퓨터 비전의 주요 응용 사례
+## 2. 컴퓨터 비전의 주요 응용 사례
 
 - **OCR (Optical Character Recognition)**
     - 스캔된 문서를 문자로 변환하는 기술
@@ -23,7 +23,7 @@
 - **의료 영상 (Medical Imaging)**
     - CT, MRI, 수술 내비게이션(이미지 유도 수술) 등에서 병변 탐지, 수술 경로 안내에 사용
 
-### 3. AI, Machine Learning, Deep Learning, Computer Vision 관계
+## 3. AI, Machine Learning, Deep Learning, Computer Vision 관계
 
 ![|500x271](../../_image/2025-11-24-18-03-28.png)
 
@@ -37,7 +37,7 @@
 
 ![|500x495](../../_image/2025-11-24-18-05-10.png)
 
-### 4. 클래식 비전 vs 딥러닝 비전
+## 4. 클래식 비전 vs 딥러닝 비전
 
 - **클래식 비전 (Classic Vision)**
     1. 원본 이미지 입력
@@ -52,7 +52,7 @@
 > 	_“Model 안에서 feature를 직접 뽑아주는 방식으로 변화”_  
 > 	→ 사람이 설계하던 feature engineering이 **모델 구조 설계 & 학습** 문제로 이동
 
-### 5. 머신러닝의 정의 (Mitchell / Simon)
+## 5. 머신러닝의 정의 (Mitchell / Simon)
 
 > 학습이란 “경험을 통해 성능이 개선되는 모든 과정”
 > - **Herbert Simon**
@@ -65,7 +65,7 @@
     - **E (Experience)**: 학습 데이터셋(이미지 + 라벨)
     - **P (Performance)**: 인식률, 정확도 등
 
-### 6. 학습의 종류 (Types of Learning)
+## 6. 학습의 종류 (Types of Learning)
 
 1. **Supervised Learning (지도 학습)**
     - 입력 데이터 + 정답 라벨이 모두 주어짐
@@ -79,8 +79,8 @@
 4. **Reinforcement Learning (강화 학습)**
     - 에이전트가 환경과 상호작용하면서 **보상(reward)** 을 통해 정책(policy)을 학습
 
-### 7. 지도 학습: 회귀(Regression)와 분류(Classification)
-#### 7.1. 회귀 (Regression)
+## 7. 지도 학습: 회귀(Regression)와 분류(Classification)
+### 7.1. 회귀 (Regression)
 
 ![|500x288](../../_image/2025-11-24-18-18-14.jpg)
 
@@ -90,7 +90,7 @@
     - **연도 $x$** → **북극 해빙 면적 $y$**
     - y가 실수(연속값)이므로 회귀 문제
 
-#### 7-2. 분류 (Classification)
+### 7-2. 분류 (Classification)
 
 ![|500x193](../../_image/2025-11-24-18-18-07.jpg)
 
@@ -103,7 +103,7 @@
     - 분류기는 **결정 경계(decision boundary)** 를 학습해
         - 한쪽은 “Benign” 영역, 다른 한쪽은 “Malignant” 영역으로 나눔
 
-### 8. 비지도/준지도 학습의 역할
+## 8. 비지도/준지도 학습의 역할
 
 - **비지도 학습**
 		![|500x182](../../_image/2025-11-24-18-15-57.png)
@@ -114,7 +114,7 @@
     - 인터넷에서 **라벨 없는 데이터가 계속 생성**되므로 중요성이 증가
     - 라벨 있는 데이터로 1차 학습 → 라벨 없는 데이터에 대해 라벨 추정 → 이 추정값까지 활용하여 반복 학습
 
-### 9. 학습 모델, 목적 함수, 일반화
+## 9. 학습 모델, 목적 함수, 일반화
 
 - **학습 모델**
     - 모델은 매개변수 집합 $\Theta$로 표현

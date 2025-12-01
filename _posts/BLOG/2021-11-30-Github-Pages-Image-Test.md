@@ -27,7 +27,7 @@ tags:
 1. 첫번째 favicon
 ![1st-favicon](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat1.jpg?raw=true)
 2. 두번째 favicon
-![2nd-favicon](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat2.png?raw=true)
+![2nd-favicon|656x656](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat2.png?raw=true)
 3. 세번째 favicon
 ![3rd-favicon](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat3.png?raw=true)
 4. 네번째 favicon
