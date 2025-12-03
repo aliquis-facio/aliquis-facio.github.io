@@ -31,17 +31,16 @@
 강의에서 쓰던 전형적인 예제 (값 예: $x=-2, y=5, z=-4$):
 
 1. **Forward pass**
-    - 예:  $$q = x + y,\quad f = q \cdot z$$
+    - 예:  $q = x + y,\quad f = q \cdot z$
     - 순서대로 계산하면서 **중간 값들을 모두 저장**해 둔다.
 2. **Backward pass – 목표**
-    - $\frac{\partial f}{\partial x},; \frac{\partial f}{\partial y},; \frac{\partial f}{\partial z}$ 를 구하고 싶다.
+    - $\frac{\partial f}{\partial x},\; \frac{\partial f}{\partial y},\; \frac{\partial f}{\partial z}$ 를 구하고 싶다.
     - 이를 위해 **체인 룰(chain rule)** + **계산 그래프**를 사용.
 
 ## 3. 체인 룰: Local / Upstream / Downstream Gradient
 ### 3.1. 체인 룰
 
-- 두 함수 $f(g(x))$가 있을 때:  
-    $$\frac{df}{dx} = \frac{df}{dg} \cdot \frac{dg}{dx}$$  
+- 두 함수 $f(g(x))$가 있을 때: $$\frac{df}{dx} = \frac{df}{dg} \cdot \frac{dg}{dx}$$  
 - 그래프에서 어떤 노드 $g$가 있을 때,
     - **Local gradient**: $\frac{\partial f}{\partial g}$ (해당 노드 주변만 보고 계산 가능한 미분)
     - **Upstream gradient**: 그래프 “위쪽”에서 내려오는 $\frac{\partial L}{\partial f}$

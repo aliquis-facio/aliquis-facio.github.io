@@ -17,6 +17,10 @@
 
 입력: 초기값 $Θ_{init}$, step size(learning rate) $η$, 함수 $f$, 미분 $f′$, 종료 기준 $ε$  
 반복 업데이트: $\Theta^{(t)} = \Theta^{(t-1)} - \eta f'(\Theta^{(t-1)})$
+- $\Theta^{(t)}$: t번째 업데이트 후의 파라미터 값
+- $\Theta^{(t-1)}$: 이전 단계(t-1번째) 파라미터 값
+- $\eta$: 학습률, 한 번에 얼마나 크게 이동할 지 결정하는 상수(> 0)
+- $f'(\Theta^{(t-1)})$: $\Theta^{(t-1)}$에서의 기울기
 - 알고리즘은 **연속 두 스텝의 함수값 차이**가 충분히 작아지면 종료: $$|f(\Theta^{(t)}) - f(\Theta^{(t-1)})| < \varepsilon$$
 
 ### 2.3. 종료 기준(Stopping Criteria)의 여러 가지
@@ -33,7 +37,7 @@
     - **작으면**: 매우 천천히 움직여 수렴이 느려짐.
     - **크면**: 최소점 주변에서 발산하거나 양 옆으로 튀면서 진동할 수 있음.
 
-### 2.5/ Convex vs Non-convex
+### 2.5. Convex vs Non-convex
 
 - **Convex 함수**: 두 점을 잇는 선분이 항상 그래프 위에 놓이는 함수 → 전역 최소점이 하나.
 - **Non-convex 함수**:
@@ -43,19 +47,23 @@
 ## 3. 다차원 경사하강법
 ### 3.1. Gradient의 정의
 
-- 파라미터 $\Theta \in \mathbb{R}^m$, 함수 $f: \mathbb{R}^m \to \mathbb{R}$
+- 파라미터:
+	- $\Theta \in \mathbb{R}^m$
+	- m차원 벡터 파라미터
+- 함수:
+	- $f: \mathbb{R}^m \to \mathbb{R}$
+	- 파라미터로 벡터를 입력받아서 스칼라 값 하나 출력
 - Gradient:
     $$\nabla_\Theta f(\Theta) =  
     \begin{bmatrix}  
-    \frac{\partial f}{\partial \Theta_1}\  
-    \vdots\  
+    \frac{\partial f}{\partial \Theta_1}\\ 
+    \vdots\\
     \frac{\partial f}{\partial \Theta_m}  
     \end{bmatrix}$$
 
 ### 3.2. 다차원 업데이트 식
 
-- 1D와 동일한 구조, 스칼라 기울기 대신 **벡터 gradient** 사용:  
-    $$\Theta^{(t)} = \Theta^{(t-1)} - \eta \nabla_\Theta f(\Theta^{(t-1)})$$
+- 1D와 동일한 구조, 스칼라 기울기 대신 **벡터 gradient** 사용: $$\Theta^{(t)} = \Theta^{(t-1)} - \eta \nabla_\Theta f(\Theta^{(t-1)})$$
 - 종료 기준은 1D와 비슷하게:
     - 함수값 변화:$|f(\Theta^{(t)}) - f(\Theta^{(t-1)})| < \varepsilon$
     - 혹은 gradient norm $|\nabla_\Theta f(\Theta^{(t)})|$ 가 충분히 작을 때 등.
@@ -67,7 +75,7 @@
     $$J(\theta) = \frac{1}{n}\sum_{i=1}^{n}(\theta^T x^{(i)} - y^{(i)})^2$$
 - 행렬 형태 gradient: 
     $$\nabla_\theta J = \frac{2}{n} \tilde{X}^T(\tilde{X}\theta - \tilde{Y})$$
-    (여기서 (\tilde{X})는 bias term이 포함된 디자인 행렬)
+    (여기서 $\tilde{X}$는 bias term이 포함된 디자인 행렬)
     
 - GD 업데이트 (샘플 합 표현):
     $$\theta^{(t)} = \theta^{(t-1)} - \eta \frac{2}{n}\sum_{i=1}^{n}  
@@ -119,7 +127,7 @@
 
 반복 t = 1 … T:
 1. i ~ Uniform{1, …, n} 랜덤 선택
-2. $$\Theta^{(t)} = \Theta^{(t-1)} - \eta^{(t)} \nabla_\Theta f_i(\Theta^{(t-1)})$$
+2. $\Theta^{(t)} = \Theta^{(t-1)} - \eta^{(t)} \nabla_\Theta f_i(\Theta^{(t-1)})$
 - 여기서 step size η는 반복에 따라 달라지는 **η(t)** 를 사용.
 
 ### 6.3. 수렴 조건
