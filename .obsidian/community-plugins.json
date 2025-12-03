@@ -10,5 +10,6 @@
   "obsidian-image-toolkit",
   "obsidian-emoji-toolbar",
   "mermaid-tools",
-  "dataview"
+  "dataview",
+  "obsidian-to-anki-plugin"
 ]
