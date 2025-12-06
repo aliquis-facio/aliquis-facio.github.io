@@ -175,11 +175,10 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
 - **Instance Norm** for **Conv**: ![|500x315](../../_image/2025-11-30-22-12-23.jpg)
 
 - ConvNet에서 사용.
-- 한 샘플, 한 채널에 대해 공간 차원 $H\times W$ 에 대해 평균·분산 계산:
+- 각 instance(한 샘플, 한 채널) 에 대해 공간 차원 $H\times W$ 에 대해 평균·분산 계산:
     - 입력 $x \in \mathbb{R}^{N\times C\times H\times W}$
     - $\mu,\sigma \in \mathbb{R}^{N\times C\times 1\times 1}$
-- 마찬가지로 **배치에 의존하지 않아 train/test가 동일**하며,  
-    스타일 변환, 텍스처 생성 같은 **이미지 스타일링**에서 많이 쓰인다.
+- 마찬가지로 **배치에 의존하지 않아 train/test가 동일**하며, 스타일 변환, 텍스처 생성 같은 **이미지 스타일링**에서 많이 쓰인다.
 
 ### 7.3. Group Normalization
 
@@ -191,8 +190,7 @@ PyTorch `Conv2d(in_channels, out_channels, kernel_size, stride, padding, ...)`�
 
 ![|500x194](../../_image/2025-11-30-22-12-33.jpg)
 
-- 슬라이드의 3D 블록 그림(페이지 36–37)은 $N$(배치), $C$(채널), $H\times W$(공간)에 대해  
-    어느 축을 따라 평균·분산을 내는지 시각적으로 보여준다.
+- $N$(배치), $C$(채널), $H\times W$(공간)에 대해 어느 축을 따라 평균·분산을 내는지 시각적으로 보여준다.
 
 ## 8. ConvNet 구성 요소 요약
 

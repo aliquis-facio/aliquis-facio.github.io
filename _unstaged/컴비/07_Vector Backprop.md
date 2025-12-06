@@ -64,8 +64,9 @@ $$\frac{\partial L}{\partial \mathbf{x}}
 ## 3. Backprop with Vectors – ReLU 예제
 ### 3.1. 예제 설정
 
-슬라이드의 예시는 elementwise ReLU:
-- 함수: $f(x) = \max(0, x)$ (elementwise)
+![|398x181](../../_image/2025-12-04-19-47-37.jpg)
+
+- 함수: $f(x) = \max(0, x)$
 - 4D 입력:  
     $$\mathbf{x} =  
     \begin{bmatrix}  
@@ -79,7 +80,6 @@ $$\frac{\partial L}{\partial \mathbf{x}}
 - 업스트림 그레이디언트 (이미 앞쪽에서 계산된 값):  
     $$  
     \frac{\partial L}{\partial \mathbf{y}}
-    
     \begin{bmatrix}  
     4 \\ -1 \\ 5 \\ 9  
     \end{bmatrix}  
@@ -87,25 +87,26 @@ $$\frac{\partial L}{\partial \mathbf{x}}
 
 ### 3.2. ReLU의 Jacobian
 
-각 성분에 대해  
-$$  
-y_i = \max(0, x_i)  
-$$  
-이므로
+![|398x189](../../_image/2025-12-04-19-55-46.jpg)
+
+각 성분에 대해 $y_i = \max(0, x_i)$ 이므로
 $$  
 \frac{\partial y_i}{\partial x_j}
-
 \begin{cases}  
-1 & \text{if } i = j \text{ and } x_i > 0 \  
+1 & \text{if } i = j \text{ and } x_i > 0 \\  
 0 & \text{otherwise}  
 \end{cases}  
 $$
+중요한 포인트:
+- $y_1$ 은 $x_1$ 만을 보고 결정됨
+- $y_2$ 는 $x_2$ 만을 보고 결정됨
+- …
+- $y_i$ 는 $x_i$ 만을 보고 결정됨
+즉, $i ≠ j$ 인 경우, $y_i 는 x_j$ 와 전혀 상관이 없음 → $∂y_i/∂x_j = 0$
 
-예제에서의 Jacobian은 대각선에 $$1, 0, 1, 0$$이 있는 대각 행렬:
-
+예제에서의 Jacobian은 대각선에 $1, 0, 1, 0$ 이 있는 대각 행렬:
 $$  
 \frac{\partial \mathbf{y}}{\partial \mathbf{x}}
-
 \begin{bmatrix}  
 1 & 0 & 0 & 0 \\
 0 & 0 & 0 & 0 \\
@@ -149,7 +150,9 @@ $$
 ## 4. Backprop with Matrices (또는 Tensors)
 ### 4.1. 모양(Shape) 일반화
 
-슬라이드는 벡터 개념을 그대로 **행렬/텐서**로 확장한다.
+![|398x206](../../_image/2025-12-04-20-11-17.jpg)
+
+벡터 개념을 그대로 **행렬/텐서**로 확장한다.
 - 입력: $x \in \mathbb{R}^{D_x \times M_x}$
 - 중간: $y \in \mathbb{R}^{D_y \times M_y}$
 - 출력: $z \in \mathbb{R}^{D_z \times M_z}$
@@ -167,7 +170,6 @@ $$
 - 대신, 앞에서 본 것처럼  
     $$  
     \frac{\partial L}{\partial x}
-    
     \left(\frac{\partial y}{\partial x}\right)^\top  
     \frac{\partial L}{\partial y}  
     $$  
@@ -223,7 +225,7 @@ $$
 }
 $$
 - 여기서 $\frac{\partial L}{\partial y} \in \mathbb{R}^{N \times M}$ 이고, $w^\top \in \mathbb{R}^{M \times D}$ 이므로 결과는 $N \times D$ 로 $x$와 동일한 shape.
-- 슬라이드는 이를 “로컬 gradient slice”와 $dL/dy$ 의 내적(dot product)로 표현한 뒤, 위의 행렬식으로 일반화한다.
+- “로컬 gradient slice”와 $dL/dy$ 의 내적(dot product)로 표현한 뒤, 위의 행렬식으로 일반화한다.
 
 ### 5.4. $dL/dw$ 유도
 
