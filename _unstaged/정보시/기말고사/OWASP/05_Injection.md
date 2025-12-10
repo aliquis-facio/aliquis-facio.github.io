@@ -2,82 +2,51 @@
 
 ## 1. 배경 (Background)
 
-- **순위**: OWASP Top 10:2025에서 A05 Injection은 2021년에 3위였던 것에서 **두 단계 하락해 5위**로 내려왔지만, 여전히 Cryptographic Failures(A04), Insecure Design(A06)과 비슷한 수준의 핵심 리스크로 유지됨.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-    
-- **테스트 범위**: Injection은 **가장 많이 테스트되는 카테고리 중 하나**로, 기여된 데이터 기준 **모든 애플리케이션(100%)이 어떤 형태로든 인젝션에 대해 테스트**되었음.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-    
+- **순위**: OWASP Top 10:2025에서 A05 Injection은 2021년에 3위였던 것에서 **두 단계 하락해 5위**로 내려왔지만, 여전히 Cryptographic Failures(A04), Insecure Design(A06)과 비슷한 수준의 핵심 리스크로 유지됨.
+- **테스트 범위**: Injection은 **가장 많이 테스트되는 카테고리 중 하나**로, 기여된 데이터 기준 **모든 애플리케이션(100%)이 어떤 형태로든 인젝션에 대해 테스트**되었음.
 - **데이터 특징**:
-    
-    - 이 카테고리에는 총 **37개의 CWE**가 매핑되어 있고,
-        
-    - **모든 카테고리 중 가장 많은 CVE 수(62,445개)** 를 갖고 있음.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-        
-    - Injection에는 **Cross-site Scripting(XSS, 고빈도/저영향)** 이 3만 개 이상의 CVE를 차지하고,  
-        **SQL Injection(저빈도/고영향)** 은 1만 4천 개 이상의 CVE를 차지함.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-        
-    - XSS(CWE-79)의 엄청난 CVE 수 때문에, 이 카테고리의 **가중 평균 Impact 점수는 상대적으로 낮게 보이는 경향**이 있음.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-        
-- **개념 정리**:  
-    Injection 취약점은 **프로그램이 처리해야 할 입력에 공격자가 악의적인 코드나 명령(SQL, OS 명령, 템플릿 코드 등)을 주입하고, 시스템이 이를 ‘자신의 일부’인 것처럼 실행하도록 속이는 시스템 결함**을 말한다.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-    
-- **대표 CWE** (A05에 매핑된 다수 CWE 중 주요 예):([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-    
+    - 이 카테고리에는 총 **37개의 CWE**가 매핑되어 있고, **모든 카테고리 중 가장 많은 CVE 수(62,445개)** 를 갖고 있음.
+    - Injection에는 **Cross-site Scripting(XSS, 고빈도/저영향)** 이 3만 개 이상의 CVE를 차지하고, **SQL Injection(저빈도/고영향)** 은 1만 4천 개 이상의 CVE를 차지함.
+    - XSS(CWE-79)의 엄청난 CVE 수 때문에, 이 카테고리의 **가중 평균 Impact 점수는 상대적으로 낮게 보이는 경향**이 있음.
+- **개념**: **프로그램이 처리해야 할 입력에 공격자가 악의적인 코드나 명령(SQL, OS 명령, 템플릿 코드 등)을 주입하고, 시스템이 이를 ‘자신의 일부’인 것처럼 실행하도록 속이는 시스템 결함**을 말한다.
+- **대표 CWE** (A05에 매핑된 다수 CWE 중 주요 예):
     - **CWE-20** – Improper Input Validation (입력값 검증 부적절)
-        
     - **CWE-74** – Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')
-        
     - **CWE-77/78** – OS Command Injection (명령어·OS 명령 인젝션)
-        
     - **CWE-79** – Cross-site Scripting (XSS)
-        
     - **CWE-89** – SQL Injection
-        
     - **CWE-917** – Expression Language Injection (EL/OGNL 등 표현식 언어 인젝션)
-        
-
----
 
 ## 2. Score table (점수 표)
 
-|항목|값|
-|---|---|
-|매핑된 CWE 수|37|
-|최대 발생률 (Max Incidence)|13.77%|
-|평균 발생률 (Avg Incidence)|3.08%|
-|최대 커버리지 (Max Coverage)|100.00%|
-|평균 커버리지 (Avg Coverage)|42.93%|
-|가중 평균 Exploit 점수|7.15|
-|가중 평균 Impact 점수|4.32|
-|총 발생 건수|1,404,249|
-|총 CVE 수|62,445|
+| 항목                     | 값         |
+| ---------------------- | --------- |
+| 매핑된 CWE 수              | 37        |
+| 최대 발생률 (Max Incidence) | 13.77%    |
+| 평균 발생률 (Avg Incidence) | 3.08%     |
+| 최대 커버리지 (Max Coverage) | 100.00%   |
+| 평균 커버리지 (Avg Coverage) | 42.93%    |
+| 가중 평균 Exploit 점수       | 7.15      |
+| 가중 평균 Impact 점수        | 4.32      |
+| 총 발생 건수                | 1,404,249 |
+| 총 CVE 수                | 62,445    |
 
-정량 지표를 종합하면, **Injection은 거의 모든 애플리케이션에서 테스트되고, 발견 빈도도 높은 편(평균 3.08%)이며, 무엇보다 CVE 개수가 가장 많은 “고빈도·고위험” 카테고리**입니다. XSS처럼 자주 나오지만 영향이 상대적으로 낮은 취약점부터, 발생 빈도는 낮지만 한 번 뚫리면 심각한 SQL Injection까지 스펙트럼이 넓기 때문에, 실제 서비스에서는 **“자주 나오는 작은 구멍과 가끔 터지는 대형 사고”가 함께 존재하는 영역**으로 이해하는 것이 좋습니다.
-
----
+정량 지표를 종합하면, **Injection은 거의 모든 애플리케이션에서 테스트되고, 발견 빈도도 높은 편(평균 3.08%)이며, 무엇보다 CVE 개수가 가장 많은 “고빈도·고위험” 카테고리**입니다.
+XSS처럼 자주 나오지만 영향이 상대적으로 낮은 취약점부터, 발생 빈도는 낮지만 한 번 뚫리면 심각한 SQL Injection까지 스펙트럼이 넓기 때문에, 실제 서비스에서는 **“자주 나오는 작은 구멍과 가끔 터지는 대형 사고”가 함께 존재하는 영역**으로 이해하는 것이 좋습니다.
 
 ## 3. 위험 설명 (Description)
 
-Injection 취약점은 **애플리케이션이 사용자 입력을 안전하게 처리하지 못한 채, 이를 명령·쿼리·표현식 등 “실행 가능한 컨텍스트”로 넘겨 버리는 상황**에서 발생합니다. 데이터로만 취급되어야 할 값이, 해석기(interpreter) 입장에서는 구조(코드)의 일부처럼 해석되어 실행되는 것이 핵심입니다.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+Injection 취약점은 **애플리케이션이 사용자 입력을 안전하게 처리하지 못한 채, 이를 명령·쿼리·표현식 등 “실행 가능한 컨텍스트”로 넘겨 버리는 상황**에서 발생합니다.
+데이터로만 취급되어야 할 값이, 해석기(interpreter) 입장에서는 구조(코드)의 일부처럼 해석되어 실행되는 것이 핵심입니다.
 
-OWASP 기준으로 애플리케이션은 다음과 같은 경우 Injection에 취약할 가능성이 큽니다:([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+OWASP 기준으로 애플리케이션은 다음과 같은 경우 Injection에 취약할 가능성이 큽니다:
 
 1. **사용자 입력 검증·필터링·정규화 부재**
-    
-    - 사용자로부터 받은 데이터(쿼리 파라미터, 바디, 헤더, 쿠키, JSON, XML 등)에 대해  
-        **서버 측 검증·필터링·정규화(normalization)를 수행하지 않고 그대로 사용**하는 경우.
-        
+    - 사용자로부터 받은 데이터(쿼리 파라미터, 바디, 헤더, 쿠키, JSON, XML 등)에 대해 **서버 측 검증·필터링·정규화(normalization)를 수행하지 않고 그대로 사용**하는 경우.
 2. **동적 쿼리·비파라미터 API 사용**
-    
-    - SQL, HQL, NoSQL 쿼리나 OS 명령, LDAP 쿼리, EL/OGNL 표현식 등을 만들 때  
-        **문자열 더하기(+)로 직접 조합**하거나,  
-        **동적 쿼리 / 비파라미터 호출을 그대로 인터프리터에 넘기는 경우**.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
-        
+    - SQL, HQL, NoSQL 쿼리나 OS 명령, LDAP 쿼리, EL/OGNL 표현식 등을 만들 때 **문자열 더하기(+)로 직접 조합**하거나, **동적 쿼리 / 비파라미터 호출을 그대로 인터프리터에 넘기는 경우**.
 3. **ORM 검색 파라미터에 대한 검증 부재**
-    
-    - ORM(Hibernate 등)을 쓴다고 안심하고,  
-        검색 조건, 정렬 기준, 필터 등 **객체 검색 파라미터에 사용자 입력을 그대로 넣는 경우**  
-        → HQL/JPQL/쿼리 빌더 레벨에서 여전히 인젝션이 발생할 수 있음.
-        
+    - ORM(Hibernate 등)을 쓴다고 안심하고, 검색 조건, 정렬 기준, 필터 등 **객체 검색 파라미터에 사용자 입력을 그대로 넣는 경우** → HQL/JPQL/쿼리 빌더 레벨에서 여전히 인젝션이 발생할 수 있음.
 4. **잠재적으로 위험한 데이터의 직결 사용·연결**
     
     - 아래와 같이 쿼리·명령·표현식의 구조와 사용자 입력이 **한 줄의 동적 문자열로 섞여 있는 경우**:
@@ -88,7 +57,7 @@ OWASP 기준으로 애플리케이션은 다음과 같은 경우 Injection에 �
         ```
         
 
-([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+
 
 5. **다양한 인터프리터에서 동일한 패턴 반복**
     
@@ -100,24 +69,24 @@ OWASP 기준으로 애플리케이션은 다음과 같은 경우 Injection에 �
     - 소스 코드 리뷰 없이, 또는 **자동화 테스트(SAST/DAST/IAST, Fuzzing) 없이**  
         일부 경로만 수동 테스트하는 경우  
         → 파라미터, 헤더, URL, 쿠키, JSON, SOAP, XML 입력 경로 중 일부만 점검되어  
-        인젝션 취약점이 남는 경우가 많음.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+        인젝션 취약점이 남는 경우가 많음.
         
 7. **LLM·프롬프트 인젝션과의 연관**
     
     - 최근에는 LLM(대규모 언어 모델)을 대상으로 하는 **프롬프트 인젝션**이  
         별도 문서(OWASP LLM Top 10)에서 다뤄지지만,  
         “입력이 모델의 지시/명령 구조에 섞여 들어가 원래 의도와 다른 행동을 유도한다”는 점에서  
-        **Injection의 일반화된 형태**로 볼 수 있음.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+        **Injection의 일반화된 형태**로 볼 수 있음.
         
 
 요약하면, **“데이터와 명령/구조가 섞여 있는 곳”은 모두 Injection 후보 지점**이며,  
 입력이 해석되는 곳마다 동일한 패턴의 위험이 존재합니다.
 
----
+
 
 ## 4. 예방 방법 (How to prevent)
 
-Injection 방어의 본질은 **“데이터와 명령을 분리하는 것”**입니다. OWASP에서 제시하는 핵심 예방 방법은 다음과 같습니다.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+Injection 방어의 본질은 **“데이터와 명령을 분리하는 것”**입니다. OWASP에서 제시하는 핵심 예방 방법은 다음과 같습니다.
 
 1. **가장 우선: 안전한 API / 파라미터화된 인터페이스 사용**
     
@@ -142,7 +111,7 @@ Injection 방어의 본질은 **“데이터와 명령을 분리하는 것”**�
         특수 문자를 적절히 이스케이프합니다.
         
     - 단, **테이블명·컬럼명 등 구조 자체를 사용자 입력으로 받는 것은 매우 위험**하며,  
-        이런 구조 요소는 이스케이프만으로 안전을 보장할 수 없습니다.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+        이런 구조 요소는 이스케이프만으로 안전을 보장할 수 없습니다.
         
 4. **SAST/DAST/IAST + Fuzzing을 CI/CD에 통합**
     
@@ -151,7 +120,7 @@ Injection 방어의 본질은 **“데이터와 명령을 분리하는 것”**�
     - 런타임에서는 **DAST(동적 분석), IAST(인터액티브 분석), Fuzzing** 을 통해  
         파라미터·헤더·쿠키·JSON·XML 등 모든 입력 경로를 자동으로 때려 보면서 취약점을 찾습니다.
         
-    - 이 도구들을 **CI/CD 파이프라인에 통합**해, 운영 배포 전에 인젝션을 최대한 걸러냅니다.([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+    - 이 도구들을 **CI/CD 파이프라인에 통합**해, 운영 배포 전에 인젝션을 최대한 걸러냅니다.
         
 5. **코딩 가이드·프레임워크 레벨 정책 수립**
     
@@ -177,13 +146,13 @@ Injection 방어의 본질은 **“데이터와 명령을 분리하는 것”**�
         개발·QA 단계에서 반복적으로 검증합니다.
         
 
----
+
 
 ## 5. 예시 공격 시나리오 (Example attack scenarios)
 
 ### 시나리오 1 – 동적 SQL 쿼리에서의 고전적 SQL Injection
 
-한 애플리케이션이 계정 정보를 조회하기 위해 다음과 같은 SQL 쿼리를 사용하고 있습니다:([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+한 애플리케이션이 계정 정보를 조회하기 위해 다음과 같은 SQL 쿼리를 사용하고 있습니다:
 
 ```java
 String query =
@@ -217,11 +186,11 @@ WHERE custID='' UNION SELECT SLEEP(10);--'
 다른 테이블의 민감 데이터(계정 목록, 비밀번호 해시 등)를 가져오거나,  
 갱신·삭제·스토어드 프로시저 호출 등을 수행해 **데이터 파괴나 권한 상승**으로 이어질 수 있습니다.
 
----
+
 
 ### 시나리오 2 – ORM(HQL)에서의 인젝션: 프레임워크 맹신의 함정
 
-같은 애플리케이션이 이번에는 Hibernate를 사용해 다음과 같은 HQL을 실행한다고 가정합니다:([owasp.org](https://owasp.org/Top10/2025/A05_2025-Injection/ "A05 Injection - OWASP Top 10:2025"))
+같은 애플리케이션이 이번에는 Hibernate를 사용해 다음과 같은 HQL을 실행한다고 가정합니다:
 
 ```java
 Query HQLQuery =
@@ -242,7 +211,7 @@ ORM과 HQL을 사용한다고 해서 자동으로 인젝션이 방어되는 것�
 이 시나리오는 ORM/프레임워크를 사용하더라도,  
 **“문자열로 쿼리를 만드는 패턴” 자체를 사용하면 인젝션에서 자유롭지 못하다**는 것을 보여 줍니다.
 
----
+
 
 ## 참고
 

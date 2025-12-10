@@ -19,8 +19,6 @@
     - **CWE-1329** – Reliance on Component That is Not Updateable (업데이트 불가능한 컴포넌트에 대한 의존)
     - **CWE-1395** – Dependency on Vulnerable Third-Party Component (취약한 서드파티 컴포넌트에 대한 의존)
 
-
-
 ## 2. Score table (점수 표)
 
 | 항목                     | 값       |
