@@ -1,6 +1,8 @@
 ## 1. Firewall (방화벽)
 ### 1.1 정의
 
+![|398x279](../../../_image/2025-12-10-17-50-54.jpg)
+
 - 컴퓨터 시스템/네트워크에서 **허가되지 않은 접근을 차단**하고, **허가된 통신만 허용**하도록 설계된 장비 또는 소프트웨어.
 - 사전에 정의된 **규칙 집합(rule-set, policy)** 에 따라 패킷을 허용(accept) 또는 차단(deny/drop)한다.
 
@@ -12,7 +14,8 @@
 ## 2. Firewall Rule-set & Packet Classification
 ### 2.1 룰 형식
 
-- 하나의 룰:  `Rule := (s_ip, s_port, d_ip, d_port, protocol, action[, interface])`
+- `Rule := (s_ip, s_port, d_ip, d_port, protocol, action, interface)`
+- 간단하게 `Rule := (s_ip, s_port, d_ip, d_port, protocol, action)`
 - `action`: `accept/drop/deny`, NAT, IPSec 처리 등.
 
 예시 rule-set (단순화):
@@ -38,6 +41,14 @@
 ## 3. Stateless Firewall vs Stateful Firewall
 ### 3.1 Stateless Firewall
 
+| no  | s_ip              | s_port     | d_ip              | d_port     | Prot | action |
+| --- | ----------------- | ---------- | ----------------- | ---------- | ---- | ------ |
+| 1   | *                 | *          | 210.123.36.100/32 | 80         | TCP  | accept |
+| 2   | 210.123.36.100/32 | 80         | *                 | *          | TCP  | accept |
+| 3   | 210.123.37.0/24   | 1024:65535 | *                 | *          | *    | accept |
+| 4   | *                 | *          | 210.123.37.0/24   | 1024:65535 | *    | accept |
+| 5   | *                 | *          | *                 | *          | *    | deny   |
+
 - **모든 패킷마다** rule-set을 매번 조회. 세션 상태를 기억하지 않음.
 - 장점: 구조가 단순.
 - 단점(중요):
@@ -47,7 +58,13 @@
 
 ### 3.2 Stateful Firewall
 
-- **세션의 첫 패킷**에 대해서만 rule-set을 조회하고, 이후 패킷은 **세션 테이블(session table)**을 먼저 조회.
+| no  | s_ip            | s_port     | d_ip              | d_port | Prot | action |
+| --- | --------------- | ---------- | ----------------- | ------ | ---- | ------ |
+| 1   | *               | *          | 210.123.36.100/32 | 80     | TCP  | accept |
+| 2   | 210.123.37.0/24 | 1024:65535 | *                 | *      | *    | accept |
+| 3   | *               | *          | *                 | *      | *    | deny   |
+
+- **세션의 첫 패킷**에 대해서만 rule-set을 조회하고, 이후 패킷은 **세션 테이블(session table)** 을 먼저 조회.
 - 세션 테이블에 (s_ip, s_port, d_ip, d_port, protocol) 등을 저장해두고, 반대 방향 패킷이 들어오면 **기존 세션의 일부인지 확인 후 허용**.
 - 이로 인해:
     - **성능 향상**: 룰 조회 빈도 감소.
@@ -60,12 +77,17 @@
 
 - 단순히 IP/Port 수준의 상태만이 아니라, **애플리케이션 프로토콜의 맥락까지 이해**하는 방화벽.
 - 예) FTP Active / Passive 모드:
+	- ![|500x479](../../../_image/2025-12-10-17-51-37.jpg)
+	- ![|500x405](../../../_image/2025-12-10-17-51-41.jpg)
     - FTP는 제어 포트(21)와 데이터 포트(20 또는 동적 포트)를 따로 사용.
     - 방화벽이 FTP 명령을 파싱해서, 제어 채널에서 협상된 데이터 포트에 대해 **임시 규칙을 자동 추가**해 준다.
 - HTTP encapsulation, 동적 포트 사용 등 **포트가 수시로 바뀌는 프로토콜**에서는 이런 stateful inspection이 필수적.
 
 ## 4. DMZ (Demilitarized Zone)
 ### 4.1 개념
+
+![|500x441](../../../_image/2025-12-10-17-52-08.jpg)
+![|500x356](../../../_image/2025-12-10-17-51-54.jpg)
 
 - 조직의 **외부 서비스를 외부 네트워크(인터넷)에 노출**시키기 위해 내부망과 분리된 **물리/논리적 서브넷**.
 - 원칙:
@@ -92,6 +114,8 @@
 - 방화벽이 죽으면 곧바로 **서비스 전체 중단** → 가용성(Availability) 매우 중요.
 
 ### 5.2 방식 1: L4/L7 스위치 이용
+
+![|500x1265](../../../_image/2025-12-10-17-52-21.jpg)
 
 구조: 인터넷 — L4/L7 스위치 — FW1 / FW2 — L4/L7 스위치 — 내부망
 동작:
@@ -120,6 +144,8 @@
 
 ### 6.2 VRRP(Virtual Router Redundancy Protocol)
 
+![|500x406](../../../_image/2025-12-10-17-52-45.jpg)
+
 - RFC 3768 표준.
 - LAN 상의 여러 물리 라우터 중 하나를 **가상 라우터(Virtual Router)** 의 역할(마스터)로 선출하는 **선출(election) 프로토콜**.
 - 호스트들은 디폴트 게이트웨이로 **버추얼 IP(VIP)** 를 설정.
@@ -139,6 +165,9 @@
     - 백업 라우터가 VIP를 자기 인터페이스에 설정하고, ARP 응답을 시작 → 거의 실시간에 가까운 **Fail-over**.
 
 Active/Passive 구조: 한 라우터만 실사용, 다른 한 대는 대기(standby) → 자원 낭비.
+
+HA for Server Clusters
+![|500x561](../../../_image/2025-12-10-17-55-58.jpg)
 
 Active/Active로 확장:
 - **VIP를 두 개** 사용 (예: 42.1, 42.10).
@@ -174,6 +203,8 @@ Active/Active로 확장:
 
 ### 7.2 DR(Disaster Recovery) 센터 & GSLB
 
+![|500x427](../../../_image/2025-12-10-17-36-52.png)
+
 - 메인 데이터센터 + 백업 DR 센터를 구성하여 **지역 재난 대비**.
 - Global Server Load Balancing(GSLB):
     - 여러 센터의 서버 상태(응답시간 등)를 모니터링하고, DNS 요청에 가장 적합한 서버의 IP를 응답.
@@ -193,10 +224,11 @@ Active/Active로 확장:
 
 ### 8.2 용어
 
-- **True Positive**: 실제 공격을 올바르게 경보.
-- **False Positive**: 공격이 아닌데 경보 발생.
-- **False Negative**: 실제 공격인데 탐지 실패.
-- **True Negative**: 공격 없고 경보도 없음.
+| 구분            | 실제 공격이 발생 O    | 실제 공격 발생 X     |
+| ------------- | -------------- | -------------- |
+| 공격 탐지 알람 발생 O | True Positive  | False Positive |
+| 공격 탐지 알람 발생 X | False Negative | True Negative  |
+
 - **Alarm filtering**: False Positive를 줄이기 위한 경보 분류/정제 과정.
 
 ### 8.3 HIDS(Host-based IDS)
@@ -229,7 +261,6 @@ Active/Active로 확장:
     - 안랩 V3가 만든 `DECOY_*` 같은 폴더/파일이 실제 그 역할.
     - 이런 파일 내용이 바뀌는 순간 즉시 랜섬웨어를 탐지하고 대응.
 
-
 ### 8.4. Honeypot(허니팟) – 공격자 유인 시스템
 
 - **허니팟(Honeypot)**: 말 그대로 “꿀단지”.
@@ -242,6 +273,7 @@ Active/Active로 확장:
     - 허니팟 자체가 뚫리면, 그 장비도 또 다른 공격 기점이 될 수 있음.
     - 실제 사례: 어느 보안 회사는 허니팟에 잘못된 민감 데이터를 올려놓고, 허니팟이 뚫리면서 **실제 고객 정보가 유출**되는 사고가 발생.
 - 결론: 허니팟은 강력한 연구/방어 수단이지만, 잘못 운영하면 **리스크도 매우 크다**.
+
 ### 8.4 NIDS
 
 - 스위치 미러링 포트, **네트워크 TAP** 등으로 트래픽을 복사하여 **수동 감시**.
@@ -271,7 +303,7 @@ Evasion 기법:
 
 ### 9.2 Botnet
 
-- 구성: Botmaster, C&C 서버, 다수의 Bot.
+- 구성: Botmaster, C&C 서버(C2 Server), 다수의 Bot.
 - 최근 DDoS는 과거처럼 **명성**이 아니라, **금전적 이익**을 노리는 경우가 많음.
 
 ### 9.3 방어의 어려움
@@ -295,6 +327,8 @@ Evasion 기법:
 ### 10.2 DDoS 대응 기능
 
 1. **IP Spoofing Test**
+	- ![|500x339](../../../_image/2025-12-10-17-54-18.jpg)
+	- ![|500x419](../../../_image/2025-12-10-17-54-22.jpg)
     - SYN-cookie를 이용해 TCP 3-way handshake의 신뢰성을 검증.
     - HTTP 레벨에서 캡차/리다이렉트 등으로 실제 브라우저인지 확인(Cisco Guard 등).
 2. **Traffic Management
