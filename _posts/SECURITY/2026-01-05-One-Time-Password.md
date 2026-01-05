@@ -67,7 +67,8 @@ OTP는 **매번 바뀌는 값**을 만들어 내는 인증 방식이며, 사용�
 
 ## 5. 동작 방식
 
-![404x124](../../_image/2026-01-05-18-31-10.png)
+<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-01-05-18-31-10.png?raw=true" alt = "Alt Image">
+
 *출처: [Tistory: OTP의 동작 원리, HOTP와 TOTP 이해하기](https://danyoujeong.tistory.com/223)*
 
 1. 비밀키 생성
@@ -91,7 +92,7 @@ OTP는 **매번 바뀌는 값**을 만들어 내는 인증 방식이며, 사용�
 
 S/KEY OTP는 **해시 함수를 연쇄 적용한 값(Lamport 해시 체인)** 을 역순으로 한 번씩 제출해 인증하는 방식으로, 매번 값이 소모되어 재사용이 불가능하다.
 
-![398x153](../../_image/2026-01-05-18-42-41.png)
+<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-01-05-18-42-41.png?raw=true" alt = "Alt Image">
 *출처: [Tistory: OTP (One Time Password) 인증](https://plummmm.tistory.com/311)*
 
 1. 클라이언트 A : 임의의 비밀키를 서버로 전송한다.
@@ -109,7 +110,7 @@ S/KEY OTP는 **해시 함수를 연쇄 적용한 값(Lamport 해시 체인)** �
 
 Time-based OTP(TOTP)는 **현재 시간(고정된 시간 간격)** 을 입력으로 사용해 공유 비밀키로 OTP를 생성하며, 짧은 유효시간 내에서만 인증되는 방식이다.
 
-![404x231](../../_image/2026-01-05-18-24-27.png)
+<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-01-05-18-24-27.png?raw=true" alt = "Alt Image">
 *출처: [Naver D2: 2차 인증 소개](https://d2.naver.com/helloworld/279640)*
 
 1. 클라이언트 : OTP 토큰 내부의 자체 시간 정보를 이용해서 OTP를 생성한다.
@@ -122,7 +123,7 @@ Time-based OTP(TOTP)는 **현재 시간(고정된 시간 간격)** 을 입력으
 
 Challenge-Response OTP는 서버가 제시한 **난수(Challenge)** 에 대해 사용자가 공유 비밀키로 **일회성 응답(Response)** 을 계산해 제출함으로써 인증하는 방식이다.
 
-![500x321](../../_image/2026-01-05-18-46-58.png)
+<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-01-05-18-46-58.png?raw=true" alt = "Alt Image">
 *출처: [Naver D2: 2차 인증 소개](https://d2.naver.com/helloworld/279640)*
 
 1. 인증서버 : 시도 값을 생성한다.
@@ -138,6 +139,7 @@ Challenge-Response OTP는 서버가 제시한 **난수(Challenge)** 에 대해 �
 Event-Synchronous OTP는 시간 대신 **이벤트/카운터(예: 버튼 누름, 로그인 시도 횟수)** 를 기준으로 OTP를 생성하고, 사용자·서버의 카운터가 동기화되어 있을 때만 인증되는 방식이다.
 
 ![404x231](../../_image/2026-01-05-18-22-42.png)
+<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-01-05-18-31-10.png?raw=true" alt = "Alt Image">
 *출처: [Naver D2: 2차 인증 소개](https://d2.naver.com/helloworld/279640)*
 
 1. 클라이언트 : 토큰 내부의 이벤트 정보를 이용해서 OTP를 생성한다.
