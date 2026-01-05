@@ -1,6 +1,8 @@
 # CHAPCHA
+## 개요
 
-# CAPTCHA(Completely Automated Public Turing test to tell Computers and Humans Apart)
+**C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part
+
 
 # 참고
 * [CLOUDFLARE: 캡차 작동 원리 | 캡차란?](https://www.cloudflare.com/ko-kr/learning/bots/how-captchas-work/)

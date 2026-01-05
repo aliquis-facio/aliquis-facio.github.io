@@ -10,21 +10,21 @@
 ## 3. 위협과 공격 유형
 
 - **도청(Eavesdropping)**: 통신 채널에서 제3자가 정보를 가로채는 행위
-	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-15.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-15.jpg?raw=true)
 - **변조(Alteration)**: 무단 수정
 	- **중간자 공격(MITM)**: 스트림을 가로채 수정 후 재전송
-	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-32.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-32.jpg?raw=true)
 - **서비스거부(DoS)**: 데이터 서비스/접근의 중단·저하
-	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-57.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-23-57.jpg?raw=true)
 - **가장(Masquerading)**: 실제 작성자가 아닌데 **남으로 위장**해 정보 생산
-	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-08.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-08.jpg?raw=true)
 - **부인(Repudiation)**: 약속·수신 사실을 **나중에 부정**하는 행위(영수증 요구 프로토콜 회피 시도)
 - **상관/추적(Correlation & Traceback)**: 여러 데이터원을 **결합**해 정보/스트림의 **발신자 추적**.
-	- ![Alt Images|94x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-26.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-26.jpg?raw=true)
 
 ## 4. 보안 10원칙(Design Principles)
 
-![Alt Images|394x24](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-35.jpg?raw=true)
+![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-17-24-35.jpg?raw=true)
 
 - **경제성(Economy of mechanism)**: **단순성**을 지향해 이해·검증을 쉽게
 - **실패-안전 기본값(Fail-safe defaults)**: **보수적 기본값**(초기 권한 최소화 등)

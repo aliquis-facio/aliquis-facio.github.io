@@ -16,57 +16,59 @@ tags: [DATASCIENCE]
 ---
 
 # Data Visualization
+
 ## matplotlib
-**python의 plotting 패키지 -> 데이터 통계 분석 및 가시화**  
+
+**python의 plotting 패키지 -> 데이터 통계 분석 및 가시화**
 `from matplotlib import pyplot as plt` = `import matplotlib.pyplot as plt`  
   
-그래프 생성  
-`plt.show()`
+그래프 생성: `plt.show()`
 1. 선그래프(line chart)
-`plt.plot(x_vals, y_vals, ...)`
-
+	`plt.plot(x_vals, y_vals, ...)`
 2. 막대그래프(bar chart): 이산적인 항목에 대한 변화나 차이를 보일 때 활용
-`plt.bar(x_vals, y_vals, ...)`  
-
+	`plt.bar(x_vals, y_vals, ...)`  
 3. 히스토그램(histogram): 정해진 구간에 해당하는 항목의 개수를 보이는 막대그래프(값의 분포)
-`w. Counter`
-```python
-from collections import Counter
-histogram = Counter(min(최댓값, x_val // 10 * 10) for x_val in x_vals)
-plt.bar([x + 5 for x in histogram.keys()], histogram.values()), ...)
-```  
-
+	`w. Counter`
+	```python
+	from collections import Counter
+	histogram = Counter(min(최댓값, x_val // 10 * 10) for x_val in x_vals)
+	plt.bar([x + 5 for x in histogram.keys()], histogram.values()), ...)
+	```  
 4. 산점도(scatterplot): 두 변수 간의 연관 관계를 보일 때 활용
-`plt.scatter(x_vals, y_vals)`  
-
+	 `plt.scatter(x_vals, y_vals)`  
 5. 네트워크 시각화(network visualization)
-```python
-import networkx as nx
-G = nx.Graph()
-G.add_edge(e1, e2, ...)
-pos = nx.spring_layout(G)
-nx.draw(G, pos)
-```  
+	```python
+	import networkx as nx
+	G = nx.Graph()
+	G.add_edge(e1, e2, ...)
+	pos = nx.spring_layout(G)
+	nx.draw(G, pos)
+	```  
 
 # Basic Linear Algebra
+
 ## vector
+
 1. 정의 1
-방향과 크기의 의미를 모두 포함하는 표현도구. e.g. 속도(velocity), 무게(weight) 등
-스칼라(scalar): 방향성 없이 하나의 크기를 나타냄. e.g. 속력(speed), 질량(mass) 등
+	- 방향과 크기의 의미를 모두 포함하는 표현도구. e.g. 속도(velocity), 무게(weight) 등
+	- 스칼라(scalar): 방향성 없이 하나의 크기를 나타냄. e.g. 속력(speed), 질량(mass) 등
 2. 정의 2
-유한한 차원의 공간에 존재하는 점
-python의 list나 tuple을 사용해 벡터 표현 가능.
+	- 유한한 차원의 공간에 존재하는 점
+	- python의 list나 tuple을 사용해 벡터 표현 가능.
 [그림1](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-vector.png?raw=true)
 
 ## python's list != vector
+
 벡터는 다차원 공간상의 점으로 정의되므로, 리스트를 벡터처럼 사용하기 위해서는 각 점들끼리의 합, 차, 곱 등의 연산을 정의해야 함.
 
 ## 벡터의 연산
+
 두 벡터의 합/차는 같은 차원의 값끼리 더한/뺀 것  
 벡터 x와 스칼라 k의 곱은 벡터 x의 각 차원의 값을 k배 한 것  
 벡터의 내적(dot product): 두 벡터의 내적은 같은 차원의 값끼리 곱한 것을 모두 더한 것  
 
 ## 행렬
+
 * 수를 다음과 같이 직사각형 모양의 행과 열로 배열한 것을 행렬(matrix)이라 하며, 각각의 수를 행렬의 성분(entry)이라고 함.
 * n행 m열을 가질 경우 n ⨉ m 행렬이라고 함.
 * 같은 크기의 벡터들이 모이면 행렬이 됨.
@@ -74,6 +76,7 @@ python의 list나 tuple을 사용해 벡터 표현 가능.
 [그림2](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-matrix.png?raw=true)
 
 ### 행렬의 연산
+
 행렬의 합/차는 같은 위치의 값끼리 더한/뺀 것  
 행렬 A와 스칼라 k의 곱은 행렬의 각 요소에 k를 곱한 것  
 행렬의 곱셈  
@@ -81,6 +84,7 @@ python의 list나 tuple을 사용해 벡터 표현 가능.
 행렬 A의 크기가 n ⨉ m이고 행렬 B의 크기가 m ⨉ s일 때, 곱 AB의 결과로 나오는 행렬의 크기는 n ⨉ s이다. 행렬 A의 열 크기와 B의 행 크기가 같아야 연산 가능.
 
 ### 행렬의 응용
+
 컴퓨터 그래픽스, 그래프 이론, 추천시스템, 딥러닝
 
 ## numpy
@@ -107,6 +111,7 @@ mat1.dot(mat2) # 행렬 곱
 ```  
 
 # Probability and Statistics
+
 * 평균(mean, average)
 * 중앙값(median): 정렬했을 때 가장 중앙에 있는 데이터
 * 최빈값(mode): 가장 자주 등장하는 데이터
