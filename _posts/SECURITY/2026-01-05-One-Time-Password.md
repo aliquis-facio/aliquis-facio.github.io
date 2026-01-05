@@ -25,7 +25,7 @@ tags: [TIL, SECURITY]
 4. [단점](#4-단점)
 5. [동작 방식](#5-동작-방식)
 6. [인증 방식](#6-인증-방식)
-    1. [S/KEY(= Lamport 해시 체인) OTP](#61-skey-lamport-해시-체인-otp)
+    1. [S/KEY OTP](#61-skey-otp)
     2. [Time-based OTP](#62-time-based-otp)
     3. [Challenge-Response OTP](#63-challenge-response-otp)
     4. [Event-Synchronous OTP](#64-event-synchronous-otp)
@@ -138,7 +138,7 @@ Challenge-Response OTP는 서버가 제시한 **난수(Challenge)** 에 대해 �
 
 Event-Synchronous OTP는 시간 대신 **이벤트/카운터(예: 버튼 누름, 로그인 시도 횟수)** 를 기준으로 OTP를 생성하고, 사용자·서버의 카운터가 동기화되어 있을 때만 인증되는 방식이다.
 
-![404x231](../../_image/2026-01-05-18-22-42.png)
+![404x231](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-01-05-18-31-10.png?raw=true)
 <img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-01-05-18-31-10.png?raw=true" alt = "Alt Image">
 *출처: [Naver D2: 2차 인증 소개](https://d2.naver.com/helloworld/279640)*
 
