@@ -38,6 +38,7 @@ Injection
 ## 2. Code
 
 ```python
+{% raw %}
 from flask import Flask, request, session, redirect, url_for, jsonify, render_template
 import json, uuid, os, hashlib
 
@@ -206,6 +207,7 @@ def flag():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+{% endraw %}
 ```
 
 회원가입에서 입력값의 검증이 없다.
