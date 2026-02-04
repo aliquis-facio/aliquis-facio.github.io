@@ -73,7 +73,8 @@ jobs:
                 base + '/' + path
               end
             lastmod = File.mtime(path).utc.iso8601
-            urls << [loc.gsub(%r{//+}, '/'), lastmod]
+            loc = loc.gsub(%r{(?<!:)//+}, '/')
+            urls << [loc, lastmod]
           end
           urls.uniq!
           File.write('sitemap.xml',
