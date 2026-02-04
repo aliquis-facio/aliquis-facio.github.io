@@ -5,7 +5,7 @@ sitemap:
     changefreq:
     priority:
 
-title: "[CTF] Dreamhack 문제 풀이: {role: admin}"
+title: "[CTF] Dreamhack 문제 풀이: {\"role\": \"admin\"}"
 excerpt: "JSON Injection"
 
 date: 2026-02-03
