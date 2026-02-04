@@ -96,20 +96,6 @@ jobs:
             echo "::error ::Filtered URLs still present in sitemap.xml"; exit 1
           fi
 
-      - name: Generate sitemap_index.xml
-        env:
-          SITE_BASE_URL: https://aliquis-facio.github.io
-        run: |
-          cd _site
-          cat > sitemap_index.xml <<EOF
-          <?xml version="1.0" encoding="UTF-8"?>
-          <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-            <sitemap>
-              <loc>${SITE_BASE_URL}/sitemap.xml</loc>
-            </sitemap>
-          </sitemapindex>
-          EOF
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
