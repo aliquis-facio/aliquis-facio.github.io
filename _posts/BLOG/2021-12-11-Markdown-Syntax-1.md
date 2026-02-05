@@ -15,7 +15,7 @@ categories: [BLOG]
 tags: [BLOG, MARKDOWN]
 ---
 
-<!-- markdownlint-disable MD004 MD007 MD022 MD025 MD029 MD032 MD033 MD034 MD035 MD048 MD050 MD059 -->
+<!-- markdownlint-disable MD004 MD007 MD022 MD025 MD029 MD032 MD033 MD034 MD035 MD048 MD049 MD050 MD059 -->
 
 # 마크다운 문법 총정리
 
