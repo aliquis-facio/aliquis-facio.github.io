@@ -1,3 +1,22 @@
+---
+layout: post
+comments: true
+sitemap:
+    changefreq:
+    priority:
+
+title: "[CTF] Dreamhack 문제 풀이: Simple-ssti"
+excerpt: "SSTI(Server-side Template Injection)"
+
+date: 2026-02-05
+last_modified_at: 2026-02-05
+
+categories: [CTF]
+tags: [TIL, WEB, CTF]
+---
+
+<!-- markdownlint-disable MD010 MD025 -->
+
 # Simple-ssti
 
 ## 목차
