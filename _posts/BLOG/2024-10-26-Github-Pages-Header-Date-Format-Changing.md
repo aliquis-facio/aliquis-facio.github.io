@@ -9,67 +9,95 @@ title: "[GITHUB PAGES] Date Format 변경하기"
 excerpt: ""
 
 date: 2024-10-26
-last_modified_at: 2025-02-25
+last_modified_at: 2026-02-25
 
 categories: [BLOG]
 tags: [BLOG]
 ---
 
-# 1. date 문구 추적
+<!-- markdownlint-disable MD010 MD025 MD033 MD045-->
+
+# Date Format 변경하기
+
+## 1. date 문구 추적
+
 `scripts.html`, `compress.html`, `post.html` 3군데에서 date랑 관련된 부분이 나옴
 
 ~~`git push --set-upstream origin header`~~
 
-# 2. scripts.html 추적
+## 2. scripts.html 추적
+
 `home.html`, `page.html`, `post-list.html`, `post.html`, `project.html` 5군데에서 나옴
 
-# 3. post.html
+## 3. post.html
+
 블로그 글이랑 가장 직접적인 연관이 많은 post.html 먼저 수정해보기로 함.  
 date 관련된 code 원본: `<h4>Date: {{ page.date | date_to_string }}</h4>`
-1. `<h4>Date: {{ page.date | %Y.%m.%d }}</h4>`
+
+1. {% raw %}`<h4>Date: {{ page.date | %Y.%m.%d }}</h4>`{% endraw %}
 -> Date: 2024-10-17 00:00:00 +0000
-1. `<h4>Date: {{ page.date | "%Y.%m.%d" }}</h4>`
+1. {% raw %}`<h4>Date: {{ page.date | "%Y.%m.%d" }}</h4>`{% endraw %}
 -> Date: 2024-10-17 00:00:00 +0000
-1. `<h4>Date: {{ page.date | %Y %m %d %a }}</h4>`
+1. {% raw %}`<h4>Date: {{ page.date | %Y %m %d %a }}</h4>`{% endraw %}
 -> Date: 2024-10-17 00:00:00 +0000
-1. `<h4>Date: {{ page.date | date: "%Y %m %d %a" }}</h4>`
+1. {% raw %}`<h4>Date: {{ page.date | date: "%Y %m %d %a" }}</h4>`{% endraw %}
 -> Date: 2024 10 17 Thu
 
-# 4. 'updated date' 추가
+## 4. 'updated date' 추가
+
 각각의 파일에 코드 추가  
+
 1. Gemfile  
-```
-group :jekyll_plugins do
-  gem "jekyll-last-modified-at"
-end
-```
+
+  ```gemfile
+  {% raw %}
+  group :jekyll_plugins do
+    gem "jekyll-last-modified-at"
+  end
+  {% endraw %}
+  ```
 
 1. _config.yml  
-```
-plugins:
-  - jekyll-last-modified-at
-# Optional. The default date format, used if none is specified in the tag.
-last-modified-at:
-​    date-format: '%d-%b-%y' #(like "04-Jan-14").
-```
+
+  ```gemfile
+  {% raw %}
+  plugins:
+    - jekyll-last-modified-at
+  # Optional. The default date format, used if none is specified in the tag.
+  last-modified-at:
+  ​    date-format: '%d-%b-%y' #(like "04-Jan-14").
+  {% endraw %}
+  ```
 
 1. post.html  
-`<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
--> 
-```
-Created: 2024.10.17 Thu
-Updated:
-```
 
-`last_modified_at` 값이 존재할 때만 블로그 글에 created_date와 modified_date가 함께 보이길 바란다.
+  {% raw %}
+  `<h4>Updated: {{ page.last_modified_at | date: "%Y.%m.%d %a" }}</h4>`
+  {% endraw %}
 
-1. post.html  
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-6.png?raw=true">
-->
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-7.png?raw=true">
+  ->
 
-# 5. CSS 수정
-## 목표: created date랑 updated date랑 가로로 배치하고 싶다
+  ```text
+  {% raw %}
+  Created: 2024.10.17 Thu
+  Updated:
+  {% endraw %}
+  ```
+
+  `last_modified_at` 값이 존재할 때만 블로그 글에 created_date와 modified_date가 함께 보이길 바란다.
+
+1. post.html
+
+  <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-6.png?raw=true">
+
+  ->
+
+  <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-7.png?raw=true">
+
+## 5. CSS 수정
+
+### 5.1. created date랑 updated date랑 가로로 배치하고 싶다
+
 `post.html` 바로 밑에 `p class="reading-time"` 있는데 요거 css 쫓아가보겠습니다
 -> `elements.scss`, `print.scss`
 
@@ -79,25 +107,35 @@ h4 태그로 감싸져있기 때문에
 2번째 방법부터 시도해보겠습니다  
 
 1. post.html - 코드 수정
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-1.png?raw=true">
-->
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-2.png?raw=true">
+
+  <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-1.png?raw=true">
+
+  ->
+
+  <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-2.png?raw=true">
 
 1. elements.scss - 코드 추가
-<img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-3.png?raw=true">
--> `Created: 2024.10.17 Thu           Updated: 2024.10.24 Thu`  
-가로로 배치 성공했는데 위치가 살짝 맘에 안 들어서
-정렬을 바꿔봅시다
 
-## 목표: updated date 생성 안 했을 때 grid 없애기
+  <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-3.png?raw=true">
+
+  -> `Created: 2024.10.17 Thu           Updated: 2024.10.24 Thu`  
+
+  가로로 배치 성공했는데 위치가 살짝 맘에 안 들어서
+  정렬을 바꿔봅시다
+
+### 5.2. updated date 생성 안 했을 때 grid 없애기
+
 <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-4.png?raw=true">
+
 <img src = "https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2024-10-27-5.png?raw=true">
 
 # 6. 궁금한 거
+
 post 작성할 때 last_modified_at 부분을 작성하고 날짜만 기입하지 않는다면?  
 -> updated date 안 생김
 
 # 7. home 버튼을 눌렀는데 home/index.html이 아니라 2024-10-23.md가 왜 불러와지는거죠??
+
 github.io 홈에 들어가면 정상적으로 홈으로 가는 게 아니라 가장 최근에 포스팅한 포스트로 연결이 되는 것이 문제였다.
 _layout 파일에 있던 `post.html`에서 코드를 변경하고 있었기 때문에 그쪽을 건드려서 뭔가 발생하는 건가 생각했다.
 
@@ -111,7 +149,10 @@ _layout 파일에 있던 `post.html`에서 코드를 변경하고 있었기 때�
 html 코드 내부에 있는 riquid 코드에서 오류가 발생한 듯 하다.
 pre 태그를 사용하지 않고 캡처해서 이미지로 업로드하니 정상적으로 push가 됐다.
 
-# 참고
+---
+
+## 참고
+
 * [Easy date formatting with Liquid](https://learn.customer.io/personalization/easy-date-formatting-with-liquid)
 * [Liquid Date Format](https://shopify.github.io/liquid/filters/date/)
 * [jekyll 깃허브 블로그에 파일의 마지막 수정 날짜 자동으로 넣는 방법](https://moeun2.github.io/blog/jekyll-last-modified-at)
