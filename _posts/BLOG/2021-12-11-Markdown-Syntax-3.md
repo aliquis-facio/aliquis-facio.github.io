@@ -21,10 +21,10 @@ tags: [BLOG, MARKDOWN]
 
 # 마크다운 문법 총정리
 
-> 시리즈: [Index]({% post_url BLOG/2021-12-11-markdown-grammar-index %})
-| [Part 1]({% post_url BLOG/2021-12-11-markdown-grammar-part-1 %})
-| [Part 2]({% post_url BLOG/2021-12-11-markdown-grammar-part-2 %})
-| [Part 3]({% post_url BLOG/2021-12-11-markdown-grammar-part-3 %})
+> 시리즈: [Index](./BLOG/Markdown-Syntax-Index.md)
+- [Part 1: 제목, 강조, 정렬, 수평선, 인용, 목록, 링크](./BLOG/Markdown-Syntax-1.md)
+- [Part 2: Heading ID, 코드, 표, 수식](./BLOG/Markdown-Syntax-2.md)
+- [Part 3: 이미지, 이모지, 다이어그램, HTML/CSS/JS](./BLOG/Markdown-Syntax-3.md)
 
 ## 목차
 
