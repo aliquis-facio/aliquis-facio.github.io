@@ -21,14 +21,19 @@ tags: [BLOG, MARKDOWN]
 
 # 마크다운 문법 총정리
 
+> 시리즈: [Index]({% post_url BLOG/2021-12-11-markdown-grammar-index %})
+| [Part 1]({% post_url BLOG/2021-12-11-markdown-grammar-part-1 %})
+| [Part 2]({% post_url BLOG/2021-12-11-markdown-grammar-part-2 %})
+| [Part 3]({% post_url BLOG/2021-12-11-markdown-grammar-part-3 %})
+
 ## 목차
 
-1. [이미지(Image)](#12-이미지image)
-2. [Emoji](#13-emoji)
-    1. [Emoji 붙여넣기](#131-emoji-붙여넣기)
-    2. [Shortcode 사용하기](#132-shortcode-사용하기)
-3. [다이어그램(mermaid)](#14-다이어그램mermaid)
-4. [HTML, CSS, JS](#15-html-css-js)
+1. [이미지(Image)](#1-이미지image)
+2. [Emoji](#2-emoji)
+    1. [Emoji 붙여넣기](#21-emoji-붙여넣기)
+    2. [Shortcode 사용하기](#22-shortcode-사용하기)
+3. [다이어그램(mermaid)](#3-다이어그램mermaid)
+4. [HTML, CSS, JS](#4-html-css-js)
 
 ---
 
