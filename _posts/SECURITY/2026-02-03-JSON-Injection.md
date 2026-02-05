@@ -22,13 +22,13 @@ tags: [TIL, WEB, SECURITY]
 ## 목차
 
 1. [정의](#1-정의)
-1. [영향](#2-영향)
-1. [동작원리](#3-동작원리)
-1. [Server-side JSON Injection](#31-server-side-json-injection)
-1. [Client-side JSON Injection](#32-client-side-json-injection)
-1. [파서 불일치 기반 공격](#33-파서-불일치-기반-공격)
-1. [보안대책](#4-보안대책)
-1. [참고](#참고)
+2. [영향](#2-영향)
+3. [동작원리](#3-동작원리)
+	1. [Server-side JSON Injection](#31-server-side-json-injection)
+	2. [Client-side JSON Injection](#32-client-side-json-injection)
+4. [파서 불일치 기반 공격](#33-파서-불일치-기반-공격)
+5. [보안대책](#4-보안대책)
+6. [참고](#참고)
 
 ---
 
