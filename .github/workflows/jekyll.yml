@@ -39,7 +39,10 @@ jobs:
           fi
 
       - name: Install gems
-        run: bundle install --path vendor/bundle --without development test --jobs 4 --retry 3
+        run: |
+          bundle config set path 'vendor/bundle'
+          bundle config set without 'development test'
+          bundle install --jobs 4 --retry 3
 
       - name: Build with Jekyll
         env:
@@ -95,6 +98,8 @@ jobs:
           # 카테고리/페이지네이션/검색이 남아있으면 실패 처리
           if grep -Eq '/category/|/page[0-9]+/|/search/' sitemap.xml; then
             echo "::error ::Filtered URLs still present in sitemap.xml"; exit 1
+          fi
+          # 과거 오타 https:/ (슬래시 1개) 검출
           if grep -q 'https:/[^/]' sitemap.xml; then
             echo "::error ::Invalid protocol (https:/) found in sitemap"; exit 1
           fi
