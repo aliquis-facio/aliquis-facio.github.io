@@ -1,7 +1,7 @@
 # aliquis-facio.github.io
 
 > 개인 기술 블로그 (GitHub Pages / Jekyll)  
-> 링크: <https://aliquis-facio.github.io/>
+> 링크: <https://aliquis-facio.github.io/>  
 > Theme: [Hydeout](https://github.com/poole/hyde)
 
 ## What’s inside
