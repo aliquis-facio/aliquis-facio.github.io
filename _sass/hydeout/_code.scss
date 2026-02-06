@@ -30,7 +30,6 @@ pre code {
   color: inherit;
   font-size: 100%;
   padding: 0;
-  word-break: break-all;
 }
 
 // Pygments/Rouge via Jekyll
@@ -53,6 +52,34 @@ pre code {
     padding-left: 0.25rem;
     padding-right: 0.75rem;
     user-select: none; // Make sure numbers aren't selectable
+  }
+}
+
+/* 모바일에서 코드 줄바꿈 강제 */
+@media (max-width: $large-breakpoint) {
+  /* 블록 코드 */
+  pre,
+  .highlight pre {
+    white-space: pre-wrap;     /* 개행 유지 + 줄바꿈 허용 */
+    word-break: break-all;     /* 긴 토큰 강제 분할 */
+    overflow-wrap: anywhere;   /* 추가 안전장치 */
+    hyphens: none;
+  }
+
+  /* 블록 내부의 code 요소도 동일 정책 */
+  pre code,
+  .highlight pre code {
+    white-space: pre-wrap;
+    word-break: inherit;
+    overflow-wrap: inherit;
+    hyphens: none;
+  }
+
+  /* 인라인 코드가 문장 중에 길게 늘어질 때 */
+  code:not(pre code) {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    hyphens: none;
   }
 }
 
