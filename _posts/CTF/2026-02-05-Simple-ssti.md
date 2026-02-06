@@ -23,7 +23,7 @@ tags: [TIL, WEB, CTF]
 
 ## 1. Vuln
 
-SSTI(Server-side Template Injection):
+SSTI(Server-side Template Injection): 
 
 ## 2. Code
 
@@ -75,12 +75,38 @@ FLAG는 `./flag.txt`에서 읽어와 `app.secret_key`로 저장하고 있다.
 ### 전체 구조
 
 {% raw %}
-`{{ ... }}`: 템플릿 코드 Jinja로 감싸기
+`{{ ... }}`: 템플릿 코드 Jinja로 감싼다.
 {% endraw %}
 
 ### 객체 탈출(파이썬 리플렉션 체인)
 
+`"".__class__.__base__.__subclasses__()`
+
+- `""`: 빈 문자열 객체(`str` 인스턴스)
+- `.__class__`: 그 객체의 클래스 -> `str`
+- `.__base__`: 그 클래스의 부모 클래스 -> `object`
+- `.__subclasses__()`: `object`를 상속하는 모든 클래스 목록을 리스트로 반환한다.
+
 > 리플렉션(Reflection): 런타임에서 프로그램의 구조를 파악하고 동적 객체 생성 및 함수 호출 등의 행위를 수행할 수 있게 해주는 장치이다.
+
+### 특정 클래스 하나를 골라서 전역 네임스페이스로 접근
+
+`__subclasses__()[109].__init__.__globals__`
+
+- `[109]` : subclasses 리스트에서 109번째 클래스를 고른다. (환경마다 인덱스는 달라진다)
+- `.__init__` : 그 클래스의 생성자 함수
+- `.__globals__` : 그 함수가 참조하는 전역 변수 딕셔너리(모듈 전역 스코프)
+
+### os 모듈을 찾아 명령 실행
+
+`['sys'].modules['os'].popen('cat flag.txt').read()`
+
+- `['sys']` : 전역에서 sys 객체를 꺼낸다.
+- `sys.modules['os']` : 이미 로드된 os 모듈 객체 참조
+- `os.popen('cat flag.txt')` : 쉘 명령 실행 파이프 연다.
+- `.read()` : 실행 결과(표준출력)를 문자열로 읽는다.
+
+### 실행 과정
 
 <details>
 <summary> 토글 접기/펼치기</summary>
