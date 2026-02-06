@@ -97,10 +97,10 @@ tags: [SECURITY, WEB]
 
 ## Directory overview
 
-_posts/ : 글 원본
-_image/ : 이미지 리소스(또는 CDN 업로드용)
-_sass/ : 스타일 커스터마이징
-_config.yml : 사이트 설정
+- `_posts/ `: 글 원본
+- `_image/` : 이미지 리소스(또는 CDN 업로드용)
+- `_sass/` : 스타일 커스터마이징
+- `_config.yml` : 사이트 설정
 
 ## Roadmap / TODO
 
