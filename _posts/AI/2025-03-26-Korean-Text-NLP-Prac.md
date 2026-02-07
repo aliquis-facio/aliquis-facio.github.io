@@ -4,18 +4,23 @@ comments: true
 sitemap:
   changefreq:
   priority:
-title: "[DATA SCIENCE] 한글 텍스트 자연어 처리 실습"
+title: "[AI] 한글 텍스트 자연어 처리 실습"
 excerpt: "한글 텍스트 자연어 처리: 소설 속 등장인물 감정 흐름 변화 추적"
 date: 2025-03-26
 last_modified_at:
 categories:
-  - DATA SCIENCE
+  - AI
 tags:
   - NLP
   - TIL
 ---
 
-# 목차
+<!-- markdownlint-disable MD007 MD010 MD025 -->
+
+# 한글 텍스트 자연어 처리 실습 1
+
+## 목차
+
 1. [활용 데이터셋 소개](#1-활용-데이터셋-소개)
 1. [환경설정 (Google Colab)](#2-환경설정-google-colab)
     1. [환경설정 진행](#21-환경설정-진행)
@@ -23,16 +28,20 @@ tags:
     1. [해리포터 불러오기](#23-해리포터-불러오기)
     1. [데이터 전처리하기](#24-데이터-전처리하기)
     1. [문서 벡터](#25-문서-벡터)
-1. [차후 진행 과제](#3-차후-진행-과제)
+<!-- 1. [차후 진행 과제]() -->
 1. [참고](#참고)
 
-# 한글 텍스트 자연어 처리 실습 1
+---
+
 ## 1. 활용 데이터셋 소개
+
 소설 「해리 포터」 시리즈
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-11.png?raw=true)
 
 ## 2. 환경설정 (Google Colab)
+
 ### 2.1. 환경설정 진행
+
 ```bash
 !pip install mecab-ko-dic
 !curl -s https://raw.githubusercontent.com/teddylee777/machine-learning/master/99-Misc/01-Colab/mecab-colab.sh | bash
@@ -118,6 +127,7 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-8.png?raw=true.png)
 
 ### 2.4. 데이터 전처리하기
+
 #### 목차 삭제 및 문장 단위 토큰화
 
 ```python
@@ -135,6 +145,7 @@ texts:List[str] = kss.split_sentences(texts)
 ~~챕터별로 나눌까?~~
 
 #### 형태소 단위 토큰화
+
 ```python
 from typing import * # python type hint module
 import re # regular expression module
@@ -173,6 +184,7 @@ def tokenizer(module:object, texts:List[str]) -> Dict[Any, Any]:
 ```
 
 #### KoNLPy 형태소 분석 비교
+
 ```python
 from konlpy.tag import Okt, Mecab, Komoran, Hannanum, Kkma # word tokenization module
 from mecab import MeCab
@@ -226,6 +238,7 @@ mecab의 형태소 분석 결과 중 일부이다.
 -> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.  
 
 ### 2.5. 문서 벡터
+
 #### TF-IDF
 
 ```python
@@ -282,8 +295,12 @@ plt.draw()
 
 ![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
 
-# 참고
-## Information
+---
+
+## 참고
+
+### Information
+
 * [KoBERT를 활용한 감정분류 모델 구현 with Colab](https://bbarry-lee.github.io/ai-tech/KoBERT%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EA%B0%90%EC%A0%95%EB%B6%84%EB%A5%98-%EB%AA%A8%EB%8D%B8-%EA%B5%AC%ED%98%84.html)
 * [감정분류(한국어)- 리뷰데이터 학습, 평가, 예측까지](https://wonhwa.tistory.com/35)
 * [텍스트 정보 추출 모델 (with. 개체명 인식(NER))](https://chocochip125.tistory.com/220)
@@ -324,7 +341,8 @@ plt.draw()
 * [](https://hoit1302.tistory.com/159)
 * [](https://nowolver.tistory.com/13)
 
-## Github
+### Github
+
 * [KoBookNLP](https://github.com/storidient/KoBookNLP)
 * [KoBERT](https://github.com/SKTBrain/KoBERT)
 * [**KoBERT-Transformers**](https://github.com/monologg/KoBERT-Transformers)

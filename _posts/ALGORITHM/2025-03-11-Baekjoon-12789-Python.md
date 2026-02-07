@@ -15,6 +15,8 @@ categoreis: [ALGORITHM]
 tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 
+<!-- markdownlint-disable MD010 MD025 -->
+
 # 12789 도키도키 간식드리미
 
 **출처: <https://www.acmicpc.net/problem/12789>**  

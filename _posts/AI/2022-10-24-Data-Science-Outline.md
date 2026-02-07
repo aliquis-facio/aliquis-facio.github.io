@@ -5,15 +5,17 @@ sitemap:
     changefreq:
     priority:
 
-title: "[DATA SCIENCE] 데이터과학 정리"
+title: "[AI] 데이터과학 정리"
 excerpt: "w.Python matplotlib"
 
 date: 2022-10-24
 last_modified_at: 2024-11-08
 
-categories: [DATA SCIENCE]
+categories: [AI]
 tags: [DATASCIENCE]
 ---
+
+<!-- markdownlint-disable MD004 MD007 MD010 MD025 MD033 -->
 
 # Data Visualization
 
@@ -23,20 +25,24 @@ tags: [DATASCIENCE]
 `from matplotlib import pyplot as plt` = `import matplotlib.pyplot as plt`  
   
 그래프 생성: `plt.show()`
+
 1. 선그래프(line chart)
 	`plt.plot(x_vals, y_vals, ...)`
 2. 막대그래프(bar chart): 이산적인 항목에 대한 변화나 차이를 보일 때 활용
 	`plt.bar(x_vals, y_vals, ...)`  
 3. 히스토그램(histogram): 정해진 구간에 해당하는 항목의 개수를 보이는 막대그래프(값의 분포)
 	`w. Counter`
+
 	```python
 	from collections import Counter
 	histogram = Counter(min(최댓값, x_val // 10 * 10) for x_val in x_vals)
 	plt.bar([x + 5 for x in histogram.keys()], histogram.values()), ...)
 	```  
+
 4. 산점도(scatterplot): 두 변수 간의 연관 관계를 보일 때 활용
 	 `plt.scatter(x_vals, y_vals)`  
 5. 네트워크 시각화(network visualization)
+
 	```python
 	import networkx as nx
 	G = nx.Graph()
@@ -73,6 +79,7 @@ tags: [DATASCIENCE]
 * n행 m열을 가질 경우 n ⨉ m 행렬이라고 함.
 * 같은 크기의 벡터들이 모이면 행렬이 됨.
 * python에서 list의 list 혹은 tuple의 tuple로 표현 가능
+
 [그림2](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-matrix.png?raw=true)
 
 ### 행렬의 연산
@@ -88,7 +95,9 @@ tags: [DATASCIENCE]
 컴퓨터 그래픽스, 그래프 이론, 추천시스템, 딥러닝
 
 ## numpy
+
 데이터, 수치 분석을 위한 python 패키지 효율적인 선형대수 프로그래밍 가능.
+
 ```python
 import numpy as np
 
@@ -127,8 +136,9 @@ mat1.dot(mat2) # 행렬 곱
 * 상관계수(Pearson Corr. Coef.): 두 확률변수의 상관관계를 -1 ~ 1 사이의 값으로 나타내는 값
     [그림5](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-coeff.png?raw=true)
     [그림6](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-coeff_figure.png?raw=true)
-    
+
 # Regression
+
 * 지도학습(suprevised learning): 훈련 데이터(training data)로부터 하나의 함수를 유추해내기 위한 기계 학습(machine learning)의 한 방법 ex) teachable machine
 
 * 회귀분석(regression): 관찰된 연속형 변수들에 대해 두 변수 사이의 모형을 구한 뒤 적합도를 측정해 내는 분석 방법 -> 지도 학습 방법 중 하나
@@ -146,7 +156,9 @@ mat1.dot(mat2) # 행렬 곱
 * 그 밖의 학습 방법들: SGE, Momentum, NAG, Adagrad, Adadelta, Rmsprop
 
 # Linear Regression Practice
+
 ## pytorch
+
 `import torch`
 텐서(tensor): 파이토치에서 사용하는 가장 기본적인 자료구조. 다양한 수식 계산을 지원. 수학의 스칼라, 벡터, 행렬 등을 일반화한 개념.
 [그림12](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2022-10-24-torch_tensor.png?raw=true)

@@ -15,7 +15,11 @@ tags:
   - TIL
 ---
 
-# 목차
+<!-- markdownlint-disable MD007 MD010 MD025 MD033 -->
+
+# 한글 텍스트 자연어 처리 실습 2
+
+## 목차
 
 1. [활용 데이터셋 소개](#1-활용-데이터셋-소개)
 1. [환경설정 (Google Colab)](#2-환경설정-google-colab)
@@ -47,13 +51,13 @@ tags:
 
 ---
 
-# 한글 텍스트 자연어 처리 실습 2
 ## 1. 활용 데이터셋 소개
 
 emotion_korTran.data  
 출처: [Naver Cafe - nlp study: 감정분석과 감정분석 말뭉치](https://cafe.naver.com/nlpk/335)
 
 ## 2. 환경설정 (Google Colab)
+
 ### 2.1. 환경설정 진행
 
 ```bash
@@ -87,6 +91,7 @@ from transformers import AutoTokenizer, AutoModel
 ```
 
 ## 3. 데이터 전처리하기
+
 ### 3.1. 데이터 로드 및 전처리
 
 .data -> DataFrame
@@ -129,6 +134,7 @@ df['label'] = df['label'].map(label_map)
 ```
 
 ## 4. 모델 학습 준비하기
+
 ### 4.1. tokenizer 및 모델 불러오기
 
 ```python
@@ -205,7 +211,9 @@ class KoBERTClassifier(nn.Module):
 ```
 
 ## 5. 모델 학습하기
+
 ### 5.1. 모델 학습하기
+
 colab은 12시간마다 런타임이 끊기기 때문에 학습데이터를 쪼개어서 진행했고, epoch별로 학습된 모델을 저장해줬다.
 
 ```python
@@ -434,6 +442,7 @@ def emotion_frequency_flow(emotion_df):
 ```
 
 평균값은 (감정 극성값 * 빈도수)의 합 / 전체 문장 수
+
 ```python
 # 감정 극성 평균값을 기반으로 흐름만 시각화
 def emotion_avg_score_flow(emotion_df):
@@ -553,6 +562,7 @@ for (path, dirs, files) in os.walk(root_path):
 ```
 
 ## 10. 결과
+
 ### 1권
 
 ![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-2.png?raw=true.png)
@@ -610,7 +620,6 @@ for (path, dirs, files) in os.walk(root_path):
     </tr>
   </tbody>
 </table>
-
 
 ### 2권
 

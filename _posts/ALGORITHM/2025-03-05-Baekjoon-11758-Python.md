@@ -15,6 +15,8 @@ categories: [ALGORITHM]
 tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 
+<!-- markdownlint-disable MD010 MD025 -->
+
 # 11758 CCW
 
 **출처: <https://www.acmicpc.net/problem/11758>**  

@@ -15,6 +15,8 @@ categories: [ALGORITHM]
 tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 
+<!-- markdownlint-disable MD010 MD025 -->
+
 # 연속합
 
 **출처: <https://www.acmicpc.net/problem/1912>**  
@@ -200,7 +202,7 @@ print(curr_max)
 
 case가
 
-```
+```text
 3
 -3 2 1
 ```

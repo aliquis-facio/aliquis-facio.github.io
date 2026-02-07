@@ -15,7 +15,11 @@ tags:
   - DEEP_LEARNING
 ---
 
-# 목차
+<!-- markdownlint-disable MD007 MD010 MD025 -->
+
+# Gradient Clipping
+
+## 목차
 
 1. [정의](#1-정의)
 2. [배경](#2-배경)
@@ -30,7 +34,6 @@ tags:
 
 ---
 
-# Gradient Clipping
 ## 1. 정의
 
 ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-11-1.png?raw=true)
@@ -38,9 +41,13 @@ tags:
 **Gradient Clipping**: **기울기(gradient)의 크기가 너무 커지는 것(기울기 폭발)** 을 방지하기 위해 기울기의 **크기(norm)** 를 일정 한도 이하로 잘라내는(clipping) 기법이다.
 
 ## 2. 배경
+
 ### 2.1. 신경망의 gradient(기울기)
+
 신경망의 학습 과정에서는 역전파(Backpropagation)를 통해 각 파라미터의 기울기(gradient)가 계산된다.
+
 기울기
+
 - 파라미터에 대한 함수의 변화율을 나타내는 미분값.
 - 딥러닝에서 네트워크 내 각 파라미터에 대한 손실 함수의 변화.
 
@@ -60,10 +67,11 @@ $$
 \quad\text{where}\quad
 \hat{\boldsymbol{g}} = \frac{\partial \varepsilon}{\partial \boldsymbol{\theta}}
 $$
+
 - $ε$: 손실(loss)
 - $θ$: 모델 파라미터 벡터
 - $\hat{\boldsymbol{g}}=\dfrac{\partial \varepsilon}{\partial \boldsymbol{\theta}}$​: 원래(미가공) 기울기
-- $∥⋅∥$: 보통 **L2 norm**(길이/크기). 문맥에 따라 L1/Lp도 가능    
+- $∥⋅∥$: 보통 **L2 norm**(길이/크기). 문맥에 따라 L1/Lp도 가능
 - `threshold` ($\tau$라고도 표기): 허용하는 최대 기울기 크기(하이퍼파라미터)
 
 - $∥g^​∥≥threshold$이면 scale factor $\frac{\text{threshold}}{\lVert \hat{\boldsymbol{g}} \rVert} \le 1$로 **일괄 축소** → 방향은 같고 크기만 `threshold`.
@@ -76,6 +84,7 @@ $$
 - **Adaptive Clipping**: 파라미터별로 다른 한도를 적용
 
 ## 5. 장단점
+
 ### 5.1. 장점
 
 - Gradient Exploding 방지
@@ -106,7 +115,7 @@ $$
 
 ---
 
-# 참고
+## 참고
 
 - [Spot Intelligence: Gradient Clipping Explained & Practical How To Guide In Python](https://spotintelligence.com/2023/12/01/gradient-clipping-explained-practical-how-to-guide-in-python/#How_does_Gradient_Clipping_Affect_the_Overall_Training_Time_of_a_Deep_Neural_Network)
 - [Tistory: [CODE] Gradient Clipping이란?](https://kalelpark.tistory.com/134)

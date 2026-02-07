@@ -4,15 +4,17 @@ comments: true
 sitemap:
   changefreq:
   priority:
-title: "[DATA SCIENCE] 한글 텍스트 데이터 토큰화(Tokenization)"
+title: "[AI] 한글 텍스트 데이터 토큰화(Tokenization)"
 excerpt: 토큰화와 한글 텍스트 데이터 토큰화 실습
 date: 2025-03-16
 last_modified_at:
 categories:
-  - DATA SCIENCE
+  - AI
 tags:
   - TIL
 ---
+
+<!-- markdownlint-disable MD007 MD010 MD025 MD033 -->
 
 # 토큰화(Tokenization)
 
