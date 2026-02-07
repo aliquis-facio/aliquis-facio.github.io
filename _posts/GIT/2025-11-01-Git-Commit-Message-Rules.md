@@ -90,8 +90,8 @@ footer
 
 - `type`: 변경 성격(필수)
 - `scope`: 변경 범위(선택)
-` `!`: Breaking Change(선택)
-` `subject`: 1줄 요약(필수)
+- `!`: Breaking Change(선택)
+- `subject`: 1줄 요약(필수)
 
 ### 2.2. Type
 
