@@ -122,7 +122,9 @@ footer
 
 ### 2.3. Scope
 
-Scope는 어디가 바뀌었는지에 대해 작성한다. e.g. `auth`, `api`, `ui`, `db`, `docs`, `infra`, `payment`, `search`
+Scope는 어디가 바뀌었는지에 대해 작성한다.
+
+e.g. `auth`, `api`, `ui`, `db`, `docs`, `infra`, `payment`, `search`
 
 사용 예:
 
@@ -173,7 +175,9 @@ e.g. Add / Remove / Rename / Update / Change / Refactor / Simplify / Extract / P
 
 ### 4.1. Body 생략 가능한 단순 변경
 
-`docs: update README install steps`
+```git
+docs: update README install steps
+```
 
 ### 4.2. 버그 수정(재현, 원인, 해결 포함)
 
@@ -206,7 +210,9 @@ p95 latency improved from 220ms to 140ms in local benchmark.
 
 ### 4.5. 파일/폴더명 변경
 
-`rename: move posts directory to _posts/BLOG`
+```git
+rename: move posts directory to _posts/BLOG
+```
 
 ### 4.6. Breaking change
 
