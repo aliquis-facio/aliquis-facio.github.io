@@ -125,8 +125,14 @@ jobs:
           head -n 4 sitemap.xml
 
           # 카테고리/페이지네이션/검색이 남아있으면 실패 처리
-          if grep -Eq '/category/|/page[0-9]+/|/search/' sitemap.xml; then
+          if grep -Eq '/category/|/categories/|/tag/|/tags/|/page[0-9]+/|/page/[0-9]+/|/search/' sitemap.xml; then
             echo "::error ::Filtered URLs still present in sitemap.xml";
+            exit 1
+          fi
+
+          # .gemspec / favicon / robots / ads 같은 파일이 들어가면 실패 처리 (원하면 조정)
+          if grep -Eq 'gemspec|favicon|robots\.txt|ads\.txt' sitemap.xml; then
+            echo "::error ::Non-page files present in sitemap.xml";
             exit 1
           fi
 
