@@ -1,10 +1,12 @@
 name: Build & Deploy
 
+# main 브랜치 push 시 실행 + 수동 실행 가능
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
 
+# Pages 배포에 필요한 권한
 permissions:
   contents: read
   pages: write
@@ -18,12 +20,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 체크아웃
       - uses: actions/checkout@v4
 
+      # actions/configure-pages@v5로 Pages 환경/base_path 확보
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
+      # Ruby 3.3 + bundler 2.7.2 세팅
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -32,23 +37,27 @@ jobs:
           bundler: '2.7.2'        # Gemfile.lock과 동일하게
           bundler-cache: false
 
+      # Gemfile.lock에 리눅스 플랫폼 추가(필요 시)
       - name: Add Linux platform to Gemfile.lock (if needed)
         run: |
           if [ -f Gemfile.lock ]; then
             bundle lock --add-platform x86_64-linux || true
           fi
 
+      # bundle install
       - name: Install gems
         run: |
           bundle config set path 'vendor/bundle'
           bundle config set without 'development test'
           bundle install --jobs 4 --retry 3
 
+      # jekyll build --baseurl "${{ steps.pages.outputs.base_path }}" 실행
       - name: Build with Jekyll
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
+      # _site 디렉토리에서 Ruby로 sitemap.xml 생성
       - name: Generate sitemap.xml (Ruby)
         env:
           SITE_BASE_URL: https://aliquis-facio.github.io
@@ -57,9 +66,10 @@ jobs:
           require 'time'
           base = ENV['SITE_BASE_URL']
           Dir.chdir('_site')
+
           SKIP_DIRS = [
             %r{^assets/}, %r{^css/}, %r{^js/}, %r{^images?/}, %r{^fonts?/}, %r{^vendor/},
-            %r{^tags?/}, %r{^tag/}, %r{^categories?/}, %r{^category/}, %r{^search/}, %r{^page\d+/}
+            %r{^tags?/}, %r{^tag/}, %r{^categories?/}, %r{^category/}, %r{^search/}, %r{^page/\d+/}
           ]
           SKIP_FILES = [
             %r{^404\.html$},
@@ -68,6 +78,7 @@ jobs:
             %r{^sitemap\.xml$},
             %r{^google.*\.html$}
           ]
+
           urls = []
           Dir.glob('**/*', File::FNM_DOTMATCH).each do |path|
             next if File.directory?(path)
@@ -77,11 +88,7 @@ jobs:
               if File.basename(path) == 'index.html'
                 path == 'index.html' ? base + '/' : base + '/' + File.dirname(path) + '/'
               elsif File.extname(path) == '.html'
-                if File.basename(path).start_with?('google')
-                  base + '/' + path
-                else
-                  base + '/' + path.sub(/\.html$/, '/')
-                end
+                base + '/' + path.sub(/\.html$/, '/')    # /a/b.html → /a/b/
               else
                 base + '/' + path
               end
@@ -102,6 +109,7 @@ jobs:
           puts "Generated sitemap.xml with #{urls.size} urls"
           RUBY
 
+      # sitemap sanity 확인
       - name: Sanity check sitemap content
         run: |
           cd _site
@@ -118,11 +126,13 @@ jobs:
             echo "::error ::Invalid protocol (https:/) found in sitemap"; exit 1
           fi
 
+      # _site를 Pages artifact로 업로드
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
+  # build 산출물을 actions/deploy-pages@v4로 배포
   deploy:
     runs-on: ubuntu-latest
     needs: build
