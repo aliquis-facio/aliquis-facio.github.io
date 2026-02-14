@@ -2,12 +2,13 @@
 layout: post
 comments: true
 sitemap:
-  changefreq:
-  priority:
+
 title: "[GITHUB PAGES] Image Test"
 excerpt: Image Test
+
 date: 2021-11-30
 last_modified_at: 2025-11-01
+
 categories:
   - BLOG
 tags:

@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[LINUX] 리눅스 구조 및 배포판의 종류"
 excerpt: "리눅스 배포판 정의와 종류, 리눅스의 디렉토리 구조"

@@ -2,12 +2,13 @@
 layout: post
 comments: true
 sitemap:
-  changefreq:
-  priority:
+
 title: "[COMPUTER VISION] 컴퓨터 비전"
 excerpt: 컴퓨터 비전 개요
+
 date: 2025-10-01
 last_modified_at: 2025-10-17
+
 categories:
   - COMPUTER VISION
 tags:

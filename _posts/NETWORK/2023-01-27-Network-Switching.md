@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] 교환(Switching)"
 excerpt: "회선 교환(Circuit -)과 패킷 교환(Packet -)"

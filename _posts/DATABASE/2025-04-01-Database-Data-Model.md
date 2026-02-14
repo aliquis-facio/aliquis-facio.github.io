@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[DATABASE] Data Model이란?"
 excerpt: "Data Model이란?"

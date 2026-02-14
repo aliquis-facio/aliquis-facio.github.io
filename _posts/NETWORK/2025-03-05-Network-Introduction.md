@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] Data Communications란?"
 excerpt: "Data Communication 의미, 특징과 요소"

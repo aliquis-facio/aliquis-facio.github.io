@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[WEB] 쿠키와 세션 (ft. 캐시)"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"

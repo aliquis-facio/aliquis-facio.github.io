@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[GITHUB PAGES] Date Format 변경하기"
 excerpt: ""

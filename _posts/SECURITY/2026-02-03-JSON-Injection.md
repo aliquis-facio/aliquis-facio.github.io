@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[SECURITY] JSON Injection이란"
 excerpt: "JSON Injection"

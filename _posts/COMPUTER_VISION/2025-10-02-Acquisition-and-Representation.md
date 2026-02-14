@@ -2,12 +2,13 @@
 layout: post
 comments: true
 sitemap:
-  changefreq:
-  priority:
+
 title: "[COMPUTER VISION] 획득과 표현"
 excerpt: 사람의 눈과 카메라
+
 date: 2025-10-02
 last_modified_at: 2025-10-17
+
 categories:
   - COMPUTER VISION
 tags:

@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
 
 title: "[WEB HACKING] Union SQL Injection"
 excerpt: "모의해킹 취업반 스터디 7기 6주차"

@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[Security] AI와 보안"
 excerpt: 보안에서 AI는 어떻게 쓰이는 지 알아보자

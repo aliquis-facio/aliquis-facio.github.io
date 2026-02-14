@@ -2,12 +2,13 @@
 layout: post
 comments: true
 sitemap:
-  changefreq:
-  priority:
+
 title: "[COMPUTER VISION] Histogram"
 excerpt: Histogram의 개념과 연산
+
 date: 2025-10-04
 last_modified_at: 2025-10-17
+
 categories:
   - COMPUTER VISION
 tags:

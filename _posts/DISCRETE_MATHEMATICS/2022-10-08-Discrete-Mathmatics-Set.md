@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[DISCRETE MATHEMATICS] 이산수학 집합"
 excerpt: "집합"

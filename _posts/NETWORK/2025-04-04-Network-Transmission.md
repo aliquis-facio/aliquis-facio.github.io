@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] 데이터 전송(Data Transmission)이란?"
 excerpt: "Data Transmission"

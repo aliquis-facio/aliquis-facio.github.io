@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[CTF] CTF 풀이: Cookie, SQL Injection"
 excerpt: "모의해킹 취업반 스터디 7기 5주차"

@@ -2,12 +2,13 @@
 layout: post
 comments: true
 sitemap:
-  changefreq:
-  priority:
+
 title: "[AI] 한글 텍스트 자연어 처리 실습"
 excerpt: "한글 텍스트 자연어 처리: 소설 속 등장인물 감정 흐름 변화 추적"
+
 date: 2025-03-26
 last_modified_at:
+
 categories:
   - AI
 tags:

@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] MAC Protocol 2"
 excerpt: "Controlled Access Protocol"

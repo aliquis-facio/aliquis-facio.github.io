@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[WEB HACKING] File Download 취약점"
 excerpt: "모의해킹 취업반 스터디 7기 15주차"

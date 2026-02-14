@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[OS] OS(Operating System)란?"
 excerpt: "Operating System: Three Easy Pieces 정리"

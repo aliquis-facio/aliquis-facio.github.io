@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[Markdown] 마크다운 문법 총 정리"
 excerpt: "Index 페이지"

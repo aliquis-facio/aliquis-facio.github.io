@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[DEVELOP] Module, Package, Library, Framework, Plug-in"
 excerpt: ""

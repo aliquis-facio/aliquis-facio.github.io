@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[AI] 데이터과학 정리"
 excerpt: "w.Python matplotlib"

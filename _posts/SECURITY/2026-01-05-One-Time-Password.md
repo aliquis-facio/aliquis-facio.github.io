@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[SECURITY] OTP란?"
 excerpt: "OTP, One Time Password"

@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[LINUX] 리눅스 마스터 2급 기출 문제"
 excerpt: "오답노트 1"

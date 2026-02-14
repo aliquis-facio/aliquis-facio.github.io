@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[Markdown] 마크다운 문법 총 정리 3"
 excerpt: "Part 3: 이미지, 이모지, 다이어그램, HTML/CSS/JS"

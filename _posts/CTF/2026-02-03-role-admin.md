@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[CTF] Dreamhack 문제 풀이: {\"role\": \"admin\"}"
 excerpt: "JSON Injection"

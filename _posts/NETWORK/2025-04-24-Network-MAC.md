@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] MAC 계층"
 excerpt: "MAC 계층의 개념과 이슈, 프로토콜 분류"

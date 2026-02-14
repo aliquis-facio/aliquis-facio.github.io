@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] 네트워크(Network)란?"
 excerpt: "네트워크(Network)"

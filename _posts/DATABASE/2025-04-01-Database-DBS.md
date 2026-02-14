@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[DATABASE] DBS(DataBase System)란?"
 excerpt: "DBS(DataBase System)"

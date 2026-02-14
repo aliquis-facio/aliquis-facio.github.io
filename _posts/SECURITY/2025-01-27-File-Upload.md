@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[WEB HACKING] File Upload 취약점"
 excerpt: "모의해킹 취업반 스터디 7기 14주차"

@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[GITHUB PAGES] github.io 만들면서 느낀 점"
 excerpt: "항상 느낍니다. 왜 안되는거냐?"

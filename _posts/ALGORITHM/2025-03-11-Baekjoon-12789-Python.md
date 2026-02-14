@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[BAEKJOON] 백준 12789 도키도키 간식드리미 문제 풀이"
 excerpt: "w. Python"

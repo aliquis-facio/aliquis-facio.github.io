@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[JS] JS로 페이지 갱신 없이 URL 변경하기"
 excerpt: "모의해킹 취업반 스터디 7기 11주차"

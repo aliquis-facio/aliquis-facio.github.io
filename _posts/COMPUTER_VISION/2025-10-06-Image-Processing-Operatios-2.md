@@ -2,12 +2,13 @@
 layout: post
 comments: true
 sitemap:
-  changefreq:
-  priority:
+
 title: "[COMPUTER VISION] 영상 처리 연산 2"
 excerpt: 기하 연산, 모폴로지
+
 date: 2025-10-06
 last_modified_at: 2025-10-17
+
 categories:
   - COMPUTER VISION
 tags:

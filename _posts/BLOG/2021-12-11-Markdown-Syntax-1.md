@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[Markdown] 마크다운 문법 총 정리 1"
 excerpt: "Part 1: 제목, 강조, 정렬, 수평선, 인용, 목록, 링크"

@@ -2,12 +2,13 @@
 layout: post
 comments: true
 sitemap:
-  changefreq:
-  priority:
+
 title: "[NETWORK] 콘텐츠 전송 네트워크(CDN)"
 excerpt: CDN(Content Delivery Network)
+
 date: 2025-11-19
 last_modified_at: 2025-11-19
+
 categories:
   - NETWORK
 tags:

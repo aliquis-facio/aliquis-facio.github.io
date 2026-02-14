@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[PHP] MySQL 연결하기"
 excerpt: "모의해킹 취업반 스터디 7기 2주차"

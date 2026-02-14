@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[LINUX] 리눅스 파티션과 설치 준비 작업"
 excerpt: "리눅스 파티션, 파일 시스템 개념 및 종류, 리눅스 설치를 위한 준비 작업"

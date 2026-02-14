@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[GITHUB PAGES] Google Search 등록하기"
 excerpt: ""

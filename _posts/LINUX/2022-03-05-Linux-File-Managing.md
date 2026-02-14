@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[LINUX] 파일관련 복사, 이동, 삭제 명령 설명 및 실습"
 excerpt: "파일관련 명령어 1: 파일 복사, 이동, 삭제 관련 명령어"

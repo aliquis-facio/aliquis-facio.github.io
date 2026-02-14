@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
 
 title: "[COD] COD 정리"
 excerpt: "COD 개요"

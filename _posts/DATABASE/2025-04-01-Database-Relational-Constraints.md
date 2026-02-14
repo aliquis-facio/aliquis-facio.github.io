@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[DATABASE] 관계 제약(Relational Constraints)이란?"
 excerpt: "관계 제약(Relational Constraints)이란?"

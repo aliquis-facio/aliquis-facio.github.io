@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[BAEKJOON] 백준 11758 CCW 문제 풀이"
 excerpt: "w. Python"

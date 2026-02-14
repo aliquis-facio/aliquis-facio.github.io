@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq: daily
-    priority: 0.5
 
 title: "Install Apache, PHP, MySQL"
 excerpt: "Install Apache, PHP, MySQL in Windows 10"

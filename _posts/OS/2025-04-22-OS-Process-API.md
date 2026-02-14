@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[OS] Process API"
 excerpt: "Operating System: Three Easy Pieces 정리"

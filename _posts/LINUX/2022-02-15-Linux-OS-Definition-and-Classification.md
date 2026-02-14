@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[LINUX] OS 정의 및 분류"
 excerpt: "리눅스 개요 - 리눅스 정의, 역사, 용어 및 특징"

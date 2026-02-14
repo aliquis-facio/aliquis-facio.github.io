@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] 네트워크 근거리 통신 기술"
 excerpt: "네트워크 2"

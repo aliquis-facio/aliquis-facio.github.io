@@ -2,8 +2,6 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[GIT] Commit 메시지 규칙"
 excerpt: "커밋 메시지를 일관되게 작성하기 위한 규칙"

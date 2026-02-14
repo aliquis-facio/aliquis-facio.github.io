@@ -3,8 +3,6 @@ layout: post
 comments: true
 published: true
 sitemap:
-    changefreq:
-    priority:
 
 title: "[NETWORK] Protocol이란?"
 excerpt: "Protocol의 의미와 인터넷 모델"
