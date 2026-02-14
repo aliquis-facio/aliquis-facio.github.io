@@ -61,7 +61,13 @@ jobs:
             %r{^assets/}, %r{^css/}, %r{^js/}, %r{^images?/}, %r{^fonts?/}, %r{^vendor/},
             %r{^tags?/}, %r{^tag/}, %r{^categories?/}, %r{^category/}, %r{^search/}, %r{^page\d+/}
           ]
-          SKIP_FILES = [%r{^404\.html$}, %r{^feed\.xml$}, %r{^atom\.xml$}, %r{^sitemap\.xml$}]
+          SKIP_FILES = [
+            %r{^404\.html$},
+            %r{^feed\.xml$},
+            %r{^atom\.xml$},
+            %r{^sitemap\.xml$},
+            %r{^google.*\.html$}
+          ]
           urls = []
           Dir.glob('**/*', File::FNM_DOTMATCH).each do |path|
             next if File.directory?(path)
@@ -79,6 +85,7 @@ jobs:
             loc = loc.gsub(%r{(?<!:)//+}, '/')
             urls << [loc, lastmod]
           end
+          
           urls.uniq!
           File.write('sitemap.xml',
             %(<?xml version="1.0" encoding="UTF-8"?>\n) +
@@ -95,10 +102,13 @@ jobs:
         run: |
           cd _site
           head -n 4 sitemap.xml
+
           # 카테고리/페이지네이션/검색이 남아있으면 실패 처리
           if grep -Eq '/category/|/page[0-9]+/|/search/' sitemap.xml; then
-            echo "::error ::Filtered URLs still present in sitemap.xml"; exit 1
+            echo "::error ::Filtered URLs still present in sitemap.xml";
+            exit 1
           fi
+
           # 과거 오타 https:/ (슬래시 1개) 검출
           if grep -q 'https:/[^/]' sitemap.xml; then
             echo "::error ::Invalid protocol (https:/) found in sitemap"; exit 1
