@@ -77,7 +77,11 @@ jobs:
               if File.basename(path) == 'index.html'
                 path == 'index.html' ? base + '/' : base + '/' + File.dirname(path) + '/'
               elsif File.extname(path) == '.html'
-                base + '/' + path.sub(/\.html$/, '/')    # /a/b.html → /a/b/
+                if File.basename(path).start_with?('google')
+                  base + '/' + path
+                else
+                  base + '/' + path.sub(/\.html$/, '/')
+                end
               else
                 base + '/' + path
               end
@@ -85,7 +89,7 @@ jobs:
             loc = loc.gsub(%r{(?<!:)//+}, '/')
             urls << [loc, lastmod]
           end
-          
+
           urls.uniq!
           File.write('sitemap.xml',
             %(<?xml version="1.0" encoding="UTF-8"?>\n) +
