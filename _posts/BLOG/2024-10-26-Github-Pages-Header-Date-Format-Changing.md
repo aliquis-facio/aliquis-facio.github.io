@@ -9,7 +9,7 @@ title: "[GITHUB PAGES] Date Format 변경하기"
 excerpt: ""
 
 date: 2024-10-26
-last_modified_at: 2026-02-25
+last_modified_at: 2026-02-15
 
 categories: [BLOG]
 tags: [BLOG]
