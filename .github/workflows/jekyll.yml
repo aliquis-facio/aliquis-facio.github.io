@@ -22,6 +22,8 @@ jobs:
     steps:
       # 체크아웃
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # actions/configure-pages@v5로 Pages 환경/base_path 확보
       - name: Setup Pages
@@ -58,88 +60,88 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 
       # _site 디렉토리에서 Ruby로 sitemap.xml 생성
-      - name: Generate sitemap.xml (Ruby)
-        env:
-          SITE_BASE_URL: https://aliquis-facio.github.io
-        run: |
-          ruby - <<'RUBY'
-          require 'time'
+      # - name: Generate sitemap.xml (Ruby)
+      #   env:
+      #     SITE_BASE_URL: https://aliquis-facio.github.io
+      #   run: |
+      #     ruby - <<'RUBY'
+      #     require 'time'
 
-          base = ENV.fetch('SITE_BASE_URL').sub(%r{/\z}, '') # 끝 슬래시 제거
-          Dir.chdir('_site')
+      #     base = ENV.fetch('SITE_BASE_URL').sub(%r{/\z}, '') # 끝 슬래시 제거
+      #     Dir.chdir('_site')
 
-          # 제외할 디렉토리(페이지네이션/분류/검색 등)
-          SKIP_DIRS = [
-            %r{^assets/}, %r{^css/}, %r{^js/}, %r{^images?/}, %r{^fonts?/}, %r{^vendor/},
-            %r{^(tags?|tag)/}, %r{^(categories?|category)/}, %r{^search/},
-            %r{^page/\d+/}, %r{^page\d+/} # 테마/설정에 따라 둘 다 대비
-          ]
+      #     # 제외할 디렉토리(페이지네이션/분류/검색 등)
+      #     SKIP_DIRS = [
+      #       %r{^assets/}, %r{^css/}, %r{^js/}, %r{^images?/}, %r{^fonts?/}, %r{^vendor/},
+      #       %r{^(tags?|tag)/}, %r{^(categories?|category)/}, %r{^search/},
+      #       %r{^page/\d+/}, %r{^page\d+/} # 테마/설정에 따라 둘 다 대비
+      #     ]
 
-          # 제외할 특정 파일
-          SKIP_FILES = [
-            %r{^404\.html$},
-            %r{^feed\.xml$}, %r{^atom\.xml$},
-            %r{^sitemap\.xml$}
-          ]
+      #     # 제외할 특정 파일
+      #     SKIP_FILES = [
+      #       %r{^404\.html$},
+      #       %r{^feed\.xml$}, %r{^atom\.xml$},
+      #       %r{^sitemap\.xml$}
+      #     ]
 
-          urls = []
+      #     urls = []
 
-          # 1) 콘텐츠 페이지: **/index.html 만 수집 (사람이 보는 페이지 위주)
-          Dir.glob('**/index.html').each do |path|
-            next if SKIP_DIRS.any? { |re| path.match?(re) }
+      #     # 1) 콘텐츠 페이지: **/index.html 만 수집 (사람이 보는 페이지 위주)
+      #     Dir.glob('**/index.html').each do |path|
+      #       next if SKIP_DIRS.any? { |re| path.match?(re) }
 
-            # URL: index.html => / , dir/index.html => /dir/
-            dir = File.dirname(path)
-            loc = (dir == '.') ? "#{base}/" : "#{base}/#{dir}/"
+      #       # URL: index.html => / , dir/index.html => /dir/
+      #       dir = File.dirname(path)
+      #       loc = (dir == '.') ? "#{base}/" : "#{base}/#{dir}/"
 
-            lastmod = File.mtime(path).utc.iso8601
-            urls << [loc, lastmod]
-          end
+      #       lastmod = File.mtime(path).utc.iso8601
+      #       urls << [loc, lastmod]
+      #     end
 
-          # 2) 예외: 루트의 google 검증 파일은 .html 유지 (404 방지)
-          Dir.glob('google*.html').each do |path|
-            next if SKIP_FILES.any? { |re| path.match?(re) }
-            loc = "#{base}/#{path}"
-            lastmod = File.mtime(path).utc.iso8601
-            urls << [loc, lastmod]
-          end
+      #     # 2) 예외: 루트의 google 검증 파일은 .html 유지 (404 방지)
+      #     Dir.glob('google*.html').each do |path|
+      #       next if SKIP_FILES.any? { |re| path.match?(re) }
+      #       loc = "#{base}/#{path}"
+      #       lastmod = File.mtime(path).utc.iso8601
+      #       urls << [loc, lastmod]
+      #     end
 
-          urls.uniq!
-          urls.sort_by!(&:first)
+      #     urls.uniq!
+      #     urls.sort_by!(&:first)
 
-          xml = +"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-          xml << "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n"
-          urls.each do |loc, m|
-            xml << "  <url>\n    <loc>#{loc}</loc>\n    <lastmod>#{m}</lastmod>\n  </url>\n"
-          end
-          xml << "</urlset>\n"
+      #     xml = +"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+      #     xml << "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n"
+      #     urls.each do |loc, m|
+      #       xml << "  <url>\n    <loc>#{loc}</loc>\n    <lastmod>#{m}</lastmod>\n  </url>\n"
+      #     end
+      #     xml << "</urlset>\n"
 
-          File.write('sitemap.xml', xml)
-          puts "Generated sitemap.xml with #{urls.size} urls"
-          RUBY
+      #     File.write('sitemap.xml', xml)
+      #     puts "Generated sitemap.xml with #{urls.size} urls"
+      #     RUBY
 
       # sitemap sanity 확인
-      - name: Sanity check sitemap content
-        run: |
-          cd _site
-          head -n 4 sitemap.xml
+      # - name: Sanity check sitemap content
+      #   run: |
+      #     cd _site
+      #     head -n 4 sitemap.xml
 
-          # 카테고리/페이지네이션/검색이 남아있으면 실패 처리
-          if grep -Eq '/category/|/categories/|/tag/|/tags/|/page[0-9]+/|/page/[0-9]+/|/search/' sitemap.xml; then
-            echo "::error ::Filtered URLs still present in sitemap.xml";
-            exit 1
-          fi
+      #     # 카테고리/페이지네이션/검색이 남아있으면 실패 처리
+      #     if grep -Eq '/category/|/categories/|/tag/|/tags/|/page[0-9]+/|/page/[0-9]+/|/search/' sitemap.xml; then
+      #       echo "::error ::Filtered URLs still present in sitemap.xml";
+      #       exit 1
+      #     fi
 
-          # .gemspec / favicon / robots / ads 같은 파일이 들어가면 실패 처리 (원하면 조정)
-          if grep -Eq 'gemspec|favicon|robots\.txt|ads\.txt' sitemap.xml; then
-            echo "::error ::Non-page files present in sitemap.xml";
-            exit 1
-          fi
+      #     # .gemspec / favicon / robots / ads 같은 파일이 들어가면 실패 처리 (원하면 조정)
+      #     if grep -Eq 'gemspec|favicon|robots\.txt|ads\.txt' sitemap.xml; then
+      #       echo "::error ::Non-page files present in sitemap.xml";
+      #       exit 1
+      #     fi
 
-          # 과거 오타 https:/ (슬래시 1개) 검출
-          if grep -q 'https:/[^/]' sitemap.xml; then
-            echo "::error ::Invalid protocol (https:/) found in sitemap"; exit 1
-          fi
+      #     # 과거 오타 https:/ (슬래시 1개) 검출
+      #     if grep -q 'https:/[^/]' sitemap.xml; then
+      #       echo "::error ::Invalid protocol (https:/) found in sitemap"; exit 1
+      #     fi
 
       # _site를 Pages artifact로 업로드
       - name: Upload artifact
