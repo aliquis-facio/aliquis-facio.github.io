@@ -93,3 +93,20 @@ article + *,
 button.disqus-load {
   margin-top: 1em;
 }
+
+/* details 위아래 여백 */
+details {
+  margin: 0.75rem 0;
+}
+
+/* summary 자체는 클릭 영역 확보 */
+details > summary {
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+
+/* 펼쳐진 내용과 summary 사이 간격 */
+details[open] > summary {
+  margin-bottom: 0.5rem;
+}
+
