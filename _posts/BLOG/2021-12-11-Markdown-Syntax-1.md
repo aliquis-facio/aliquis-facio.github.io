@@ -341,7 +341,7 @@ Second Term
     <summary>토글 접기/펼치기</summary>
     <div markdown="1">
         내용
-    <div>
+    </div>
 </details>
 ```
 
@@ -349,7 +349,7 @@ Second Term
     <summary>토글 접기/펼치기</summary>
     <div markdown="1">
         내용
-    <div>
+    </div>
 </details>
 
 ## 7. 링크(Link)
