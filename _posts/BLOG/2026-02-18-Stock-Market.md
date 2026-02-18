@@ -15,6 +15,18 @@ tags: [WEB, PHP]
 
 <!-- markdownlint-disable MD025 MD033 -->
 
+<style>
+  /* TradingView embed height fix */
+  .tv-embed { height: 70vh; min-height: 520px; }
+  .tv-embed .tradingview-widget-container,
+  .tv-embed .tradingview-widget-container__widget,
+  .tv-embed iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+</style>
+
 # Stock Market
 
 ## 목록
