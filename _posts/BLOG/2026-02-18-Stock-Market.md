@@ -196,7 +196,29 @@ tags: [WEB, PHP]
 
 ## 원자재
 
-### Gold (XAUUSD)
+### Gold
+
+금 선물: COMEX 금 연속물
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container" style="height:100%;width:100%">
+    <div class="tradingview-widget-container__widget"></div>
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+    {
+      "autosize": true,
+      "symbol": "COMEX:GC1!",
+      "interval": "60",
+      "timezone": "Asia/Seoul",
+      "locale": "kr",
+      "theme": "light",
+      "hide_top_toolbar": false,
+      "save_image": false
+    }
+    </script>
+  </div>
+</div>
+
+금 현물
 
 <div class="tv-embed" markdown="0">
   <div class="tradingview-widget-container">
@@ -347,3 +369,7 @@ tags: [WEB, PHP]
     </script>
   </div>
 </div>
+
+## 참고
+
+<https://www.tradingkey.com/kr/tools/heat-map>
