@@ -196,7 +196,9 @@ tags: [WEB, PHP]
   </div>
 </div>
 
-## 환율(한국/미국)
+## 환율
+
+### 한국/미국
 
 <div class="tv-embed" markdown="0">
   <div class="tradingview-widget-container">
@@ -221,7 +223,7 @@ tags: [WEB, PHP]
 
 ## 암호화폐
 
-### 비트코인
+### BTC(비트코인)
 
 <div class="tv-embed" markdown="0">
   <div class="tradingview-widget-container">
@@ -245,3 +247,5 @@ tags: [WEB, PHP]
     </script>
   </div>
 </div>
+
+### ETH(이더리움)
