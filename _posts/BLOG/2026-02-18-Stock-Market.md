@@ -35,6 +35,8 @@ tags: [WEB, PHP]
 
 ## 공포 탐욕 지수 & 변동성
 
+<https://edition.cnn.com/markets/fear-and-greed>
+
 ## 지수
 
 ### S&P 500 Heatmap
