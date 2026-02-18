@@ -35,7 +35,7 @@ tags: [WEB, PHP]
 
 ## S&P 500 Heatmap
 
-<div class="tradingview-widget-container" style="height: 600px; width: 100%;">
+<div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <script
     type="text/javascript"
@@ -58,7 +58,7 @@ tags: [WEB, PHP]
 ## KOSPI 200 Heatmap
 
 <!-- TradingView Stock Heatmap (KOSPI200) -->
-<div class="tradingview-widget-container" style="height: 600px; width: 100%;">
+<div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
 
   <script
