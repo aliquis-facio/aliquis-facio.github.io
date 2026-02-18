@@ -39,6 +39,56 @@ tags: [WEB, PHP]
 
 ## 지수
 
+### S&P 500 Chart
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+      async>
+    {
+      "autosize": true,
+      "symbol": "SP:SPX",
+      "interval": "D",
+      "timezone": "Asia/Seoul",
+      "locale": "kr",
+      "theme": "light",
+      "hide_top_toolbar": false,
+      "save_image": false,
+      "calendar": false,
+      "support_host": "https://www.tradingview.com"
+    }
+    </script>
+  </div>
+</div>
+
+### 다우존스 지수 차트 (DJI)
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+      async>
+    {
+      "autosize": true,
+      "symbol": "DJ:DJI",
+      "interval": "D",
+      "timezone": "Asia/Seoul",
+      "locale": "kr",
+      "theme": "light",
+      "hide_top_toolbar": false,
+      "save_image": false,
+      "calendar": false,
+      "support_host": "https://www.tradingview.com"
+    }
+    </script>
+  </div>
+</div>
+
 ### S&P 500 Heatmap
 
 <div class="tv-embed" markdown="0">
