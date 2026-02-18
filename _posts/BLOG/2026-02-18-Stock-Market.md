@@ -89,6 +89,31 @@ tags: [WEB, PHP]
   </div>
 </div>
 
+### 나스닥 100 지수 차트 (NDX)
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+      async>
+    {
+      "autosize": true,
+      "symbol": "NASDAQ:NDX",
+      "interval": "D",
+      "timezone": "Asia/Seoul",
+      "locale": "kr",
+      "theme": "light",
+      "hide_top_toolbar": false,
+      "save_image": false,
+      "calendar": false,
+      "support_host": "https://www.tradingview.com"
+    }
+    </script>
+  </div>
+</div>
+
 ### S&P 500 Heatmap
 
 <div class="tv-embed" markdown="0">
