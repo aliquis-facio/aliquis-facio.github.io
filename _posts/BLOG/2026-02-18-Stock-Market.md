@@ -213,3 +213,49 @@ tags: [WEB, PHP]
     </script>
   </div>
 </div>
+
+## 환율(한국/미국)
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"
+      async>
+    {
+      "symbols": [["FX_IDC:USDKRW|1D"]],
+      "locale": "kr",
+      "colorTheme": "light",
+      "autosize": true,
+      "chartOnly": false,
+      "showVolume": false
+    }
+    </script>
+  </div>
+</div>
+
+## 비트코인
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+      async>
+    {
+      "autosize": true,
+      "symbol": "PEPPERSTONE:XAUUSD",
+      "interval": "60",
+      "timezone": "Asia/Seoul",
+      "locale": "kr",
+      "theme": "light",
+      "hide_top_toolbar": false,
+      "save_image": false,
+      "calendar": false,
+      "support_host": "https://www.tradingview.com"
+    }
+    </script>
+  </div>
+</div>
