@@ -234,7 +234,7 @@ tags: [WEB, PHP]
       async>
     {
       "autosize": true,
-      "symbol": "PEPPERSTONE:XAUUSD",
+      "symbol": "BINANCE:BTCUSDT",
       "interval": "60",
       "timezone": "Asia/Seoul",
       "locale": "kr",
@@ -249,3 +249,26 @@ tags: [WEB, PHP]
 </div>
 
 ### ETH(이더리움)
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+      async>
+    {
+      "autosize": true,
+      "symbol": "BINANCE:ETHUSDT",
+      "interval": "60",
+      "timezone": "Asia/Seoul",
+      "locale": "kr",
+      "theme": "light",
+      "hide_top_toolbar": false,
+      "save_image": false,
+      "calendar": false,
+      "support_host": "https://www.tradingview.com"
+    }
+    </script>
+  </div>
+</div>
