@@ -33,7 +33,11 @@ tags: [WEB, PHP]
 
 ---
 
-## S&P 500 Heatmap
+## 공포 탐욕 지수 & 변동성
+
+## 지수
+
+### S&P 500 Heatmap
 
 <div class="tv-embed" markdown="0">
   <div class="tradingview-widget-container">
@@ -57,7 +61,7 @@ tags: [WEB, PHP]
   </div>
 </div>
 
-## KOSPI 200 Heatmap
+### KOSPI 200 Heatmap
 
 <!-- TradingView Stock Heatmap (KOSPI200) -->
 <div class="tv-embed" markdown="0">
@@ -88,7 +92,35 @@ tags: [WEB, PHP]
   </div>
 </div>
 
-## Gold (XAUUSD)
+### 코스닥
+
+<div class="tv-embed" markdown="0">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script
+      type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+      async
+    >
+    {
+      "autosize": true,
+      "symbol": "KRX:KOSDAQ",
+      "interval": "D",
+      "timezone": "Asia/Seoul",
+      "locale": "kr",
+      "theme": "light",
+      "hide_top_toolbar": false,
+      "save_image": false,
+      "calendar": false,
+      "support_host": "https://www.tradingview.com"
+    }
+    </script>
+  </div>
+</div>
+
+## 원자재
+
+### Gold (XAUUSD)
 
 <div class="tv-embed" markdown="0">
   <div class="tradingview-widget-container">
@@ -115,7 +147,7 @@ tags: [WEB, PHP]
   </div>
 </div>
 
-## 원자재/금속/농산물
+### 원자재/금속/농산물
 
 <div class="tv-embed" markdown="0">
   <div class="tradingview-widget-container">
@@ -158,32 +190,6 @@ tags: [WEB, PHP]
           ]
         }
       ]
-    }
-    </script>
-  </div>
-</div>
-
-## 코스닥
-
-<div class="tv-embed" markdown="0">
-  <div class="tradingview-widget-container">
-    <div class="tradingview-widget-container__widget"></div>
-    <script
-      type="text/javascript"
-      src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
-      async
-    >
-    {
-      "autosize": true,
-      "symbol": "KRX:KOSDAQ",
-      "interval": "D",
-      "timezone": "Asia/Seoul",
-      "locale": "kr",
-      "theme": "light",
-      "hide_top_toolbar": false,
-      "save_image": false,
-      "calendar": false,
-      "support_host": "https://www.tradingview.com"
     }
     </script>
   </div>
@@ -235,7 +241,11 @@ tags: [WEB, PHP]
   </div>
 </div>
 
-## 비트코인
+통화 히트맵: <https://kr.investing.com/tools/currency-heatmap>
+
+## 암호화폐
+
+### 비트코인
 
 <div class="tv-embed" markdown="0">
   <div class="tradingview-widget-container">
