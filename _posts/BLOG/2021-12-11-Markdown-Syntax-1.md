@@ -346,10 +346,10 @@ Second Term
 ```
 
 <details>
-    <summary>토글 접기/펼치기</summary>
-    <div markdown="1">
-        내용
-    </div>
+<summary>토글 접기/펼치기</summary>
+<div markdown="1">
+    내용
+</div>
 </details>
 
 ## 7. 링크(Link)
