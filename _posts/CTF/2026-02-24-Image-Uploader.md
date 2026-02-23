@@ -34,6 +34,10 @@ RCE(Remote Code Execution)
 
 ### .htaccess
 
+<details>
+<summary>토글 접기/펼치기</summary>
+<div markdown="1">
+
 ```apache
 # 지정한 확장자들을 MIME 타입 application/x-httpd-php로 취급
 AddType application/x-httpd-php .php .phtml .php3 .php4 .php5 .inc
@@ -52,7 +56,14 @@ Options +Indexes
 </FilesMatch>
 ```
 
+</div>
+</details>
+
 ### upload.php
+
+<details>
+<summary>토글 접기/펼치기</summary>
+<div markdown="1">
 
 ```php
 <?php
@@ -148,6 +159,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
 ?>
 ```
 
+</div>
+</details>
+
 이중확장자 이후 MIME 변경
 
 ## Payload
@@ -176,3 +190,6 @@ uploads/20260223165901_3516_webshell.php.jpg
 
 `cat ../flag.txt`
 ![500x101](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-06-21.png)
+> flag
+
+## 참고
