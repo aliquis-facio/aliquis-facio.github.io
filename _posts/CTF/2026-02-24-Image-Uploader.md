@@ -61,6 +61,9 @@ Options +Indexes
 </div>
 </details>
 
+- `/uploads` 안에는 인덱스 파일이 없으므로 파일명/경로가 전부 노출된다.
+- `.php`가 파일명에 포함되면 php 핸들러로 처리하게 된다.
+
 ### upload.php
 
 <details>
@@ -164,7 +167,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
 </div>
 </details>
 
-이중확장자 이후 MIME 변경
+- 파일 업로드할 때 MIME와 확장자 모두 통과하지 않을 때만 차단한다.
+- 원본 파일명을 새 파일명에 그대로 포함한다.
 
 ## Payload
 
