@@ -23,14 +23,16 @@ tags: [TIL, WEB, CTF]
 
 ---
 
-## Vuln
+## 1. Vuln
 
 File Upload
 RCE(Remote Code Execution)
 
-## Code
+## 2. Code
 
 ### 디렉토리 구조
+
+asdf
 
 ### .htaccess
 
@@ -191,5 +193,7 @@ uploads/20260223165901_3516_webshell.php.jpg
 `cat ../flag.txt`
 ![500x101](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-06-21.png)
 > flag
+
+---
 
 ## 참고
