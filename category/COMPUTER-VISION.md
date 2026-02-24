@@ -1,4 +1,4 @@
 ---
 layout: category
-title: COMPUTER VISION
+title: COMPUTER-VISION
 ---
