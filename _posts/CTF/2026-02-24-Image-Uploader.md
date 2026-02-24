@@ -192,7 +192,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
 
     ![500x232](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-47.png)
 
-4. uploads/20260223165901_3516_webshell.php.jpg에 접근. 원래라면 jpg 이미로 처리되어야 하지만 .htaccess에서 .php가 파일명에 존재하면 php로 처리해버리기 때문에 php로 인식된 모습을 확인할 수 있다.
+4. uploads/20260223165901_3516_webshell.php.jpg에 접근.
+    원래라면 jpg 이미로 처리되어야 하지만 `.htaccess`에서 `.php`가 파일명에 존재하면 php로 처리해버리기 때문에 php로 인식된 모습을 확인할 수 있다.
 
     ![500x208](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-43.png)
 
