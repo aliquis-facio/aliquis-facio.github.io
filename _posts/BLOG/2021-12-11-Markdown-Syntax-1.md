@@ -17,7 +17,7 @@ tags: [BLOG, MARKDOWN]
 
 # 마크다운 문법 총정리
 
-> 시리즈: [Index]({{ categories }}/Markdown-Syntax-Index/)
+> 시리즈: [Index](/Markdown-Syntax-Index/)
 - [Part 1: 제목, 강조, 정렬, 수평선, 인용, 목록, 링크](/Markdown-Syntax-1/)
 - [Part 2: Heading ID, 코드, 표, 수식](/Markdown-Syntax-2/)
 - [Part 3: 이미지, 이모지, 다이어그램, HTML/CSS/JS](/Markdown-Syntax-3/)
