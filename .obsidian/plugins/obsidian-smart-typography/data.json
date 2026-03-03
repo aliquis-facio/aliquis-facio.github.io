@@ -1,6 +1,6 @@
 {
   "curlyQuotes": true,
-  "emDash": true,
+  "emDash": false,
   "ellipsis": true,
   "arrows": true,
   "comparisons": true,
