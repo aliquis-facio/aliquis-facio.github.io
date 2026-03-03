@@ -233,28 +233,28 @@ Web Service = Web Server(Static Resource) + WAS(Dinamic Resource) + DB
 
 ## 참고 사이트
 
-- [18]: https://yoo11052.tistory.com/208
-- [19]: https://www.44bits.io/ko/keyword/veth
-- [20]: https://medium.com/pocs/%EB%B0%94%EC%9D%B8%EB%94%A9-binding-4a4a2f641b27
-- [21]: https://yunjipark0623.tistory.com/entry/CentOS7-%EB%A6%AC%EB%88%85%EC%8A%A4-Network-Manager-IP%EC%A3%BC%EC%86%8C-%EC%88%98%EB%8F%99-%EC%84%A4%EC%A0%95-IP-binding
-- [22]: https://blog.naver.com/appeal7712/222294712570
-- [23]: https://jettstream.tistory.com/345
-- [24]: https://positivemh.tistory.com/651
-- [25]: https://mingzz1.github.io/error/windows/2020/09/01/ssh_connection_failed.html/
-- [26]: https://support.google.com/merchants/answer/13813117?hl=ko
-- [27]: https://velog.io/@blackbean99/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%97%BF%EB%B3%B4%EA%B8%B0%EA%B5%AC%EB%A9%8D-Terminus-ssh-platform
-- [28]: https://m.blog.naver.com/jeonsr/221792705148
-- [29]: https://velog.io/@nayoon-kim/python
-- [30]: https://codigospython.com/python-2-vs-python-3-diferencias-y-consideraciones/
-- [31]: https://philip1994.tistory.com/6
-- [32]: https://velog.io/@woojin/address-already-in-use-port-%ED%8F%AC%ED%8A%B8-%EC%8B%A4%ED%96%89-%EC%A4%91-%EC%97%90%EB%9F%AC%EA%B0%80-%EC%83%9D%EA%B8%B8-%EB%95%8C
-- [33]: https://velog.io/@ansfls/docker-The-container-name-is-already-in-use-%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95
-- [34]: https://2jinishappy.tistory.com/314
-- [35]: https://velog.io/@songyouhyun/Get%EA%B3%BC-Post%EC%9D%98-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%84%EC%8B%9C%EB%82%98%EC%9A%94
-- [36]: https://brilliantdevelop.tistory.com/33
-- [37]: https://jamong-icetea.tistory.com/32
-- [38]: https://ko.javascript.info/forms-submit
-- [39]: https://medium.com/@marcie179c/java-script-%EC%8A%A4%EC%BC%88%EB%A0%88%ED%86%A4-%EC%BD%94%EB%93%9C-%EC%9D%98%EC%82%AC-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1-%EC%9E%90%ED%8C%90%EA%B8%B0-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-cb046014f21
+<a name="footnote_18">[18]: <https://yoo11052.tistory.com/208></a><br>
+<a name="footnote_19">[19]: <https://www.44bits.io/ko/keyword/veth></a><br>
+<a name="footnote_20">[20]: <https://medium.com/pocs/%EB%B0%94%EC%9D%B8%EB%94%A9-binding-4a4a2f641b27></a><br>
+<a name="footnote_21">[21]: <https://yunjipark0623.tistory.com/entry/CentOS7-%EB%A6%AC%EB%88%85%EC%8A%A4-Network-Manager-IP%EC%A3%BC%EC%86%8C-%EC%88%98%EB%8F%99-%EC%84%A4%EC%A0%95-IP-binding></a><br>
+<a name="footnote_22">[22]: <https://blog.naver.com/appeal7712/222294712570></a><br>
+<a name="footnote_23">[23]: <https://jettstream.tistory.com/345></a><br>
+<a name="footnote_24">[24]: <https://positivemh.tistory.com/651></a><br>
+<a name="footnote_25">[25]: <https://mingzz1.github.io/error/windows/2020/09/01/ssh_connection_failed.html/></a><br>
+<a name="footnote_26">[26]: <https://support.google.com/merchants/answer/13813117?hl=ko></a><br>
+<a name="footnote_27">[27]: <https://velog.io/@blackbean99/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%97%BF%EB%B3%B4%EA%B8%B0%EA%B5%AC%EB%A9%8D-Terminus-ssh-platform></a><br>
+<a name="footnote_28">[28]: <https://m.blog.naver.com/jeonsr/221792705148></a><br>
+<a name="footnote_29">[29]: <https://velog.io/@nayoon-kim/python></a><br>
+<a name="footnote_30">[30]: <https://codigospython.com/python-2-vs-python-3-diferencias-y-consideraciones/></a><br>
+<a name="footnote_31">[31]: <https://philip1994.tistory.com/6></a><br>
+<a name="footnote_32">[32]: <https://velog.io/@woojin/address-already-in-use-port-%ED%8F%AC%ED%8A%B8-%EC%8B%A4%ED%96%89-%EC%A4%91-%EC%97%90%EB%9F%AC%EA%B0%80-%EC%83%9D%EA%B8%B8-%EB%95%8C></a><br>
+<a name="footnote_33">[33]: <https://velog.io/@ansfls/docker-The-container-name-is-already-in-use-%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95></a><br>
+<a name="footnote_34">[34]: <https://2jinishappy.tistory.com/314></a><br>
+<a name="footnote_35">[35]: <https://velog.io/@songyouhyun/Get%EA%B3%BC-Post%EC%9D%98-%EC%B0%A8%EC%9D%B4%EB%A5%BC-%EC%95%84%EC%8B%9C%EB%82%98%EC%9A%94></a><br>
+<a name="footnote_36">[36]: <https://brilliantdevelop.tistory.com/33></a><br>
+<a name="footnote_37">[37]: <https://jamong-icetea.tistory.com/32></a><br>
+<a name="footnote_38">[38]: <https://ko.javascript.info/forms-submit></a><br>
+<a name="footnote_39">[39]: <https://medium.com/@marcie179c/java-script-%EC%8A%A4%EC%BC%88%EB%A0%88%ED%86%A4-%EC%BD%94%EB%93%9C-%EC%9D%98%EC%82%AC-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1-%EC%9E%90%ED%8C%90%EA%B8%B0-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-cb046014f21></a><br>
 
 ---
 
