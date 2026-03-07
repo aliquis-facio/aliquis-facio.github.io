@@ -1,3 +1,18 @@
+---
+layout: post
+comments: true
+sitemap:
+
+title: "[DEVELOP] "
+excerpt: ""
+
+date: 2025-04-14
+last_modified_at: 
+
+categories: []
+tags: [TIL]
+---
+
 # 웹소켓(WebSocket)과 SSE(Server-Sent Events) 정리
 
 ## 1. 정의
@@ -20,6 +35,8 @@
 - **단방향(서버→클라)**: 클라이언트가 서버에 보내려면 일반 HTTP 요청(POST 등) 별도로 사용
 - 연결 과정: 일반 HTTP 요청으로 `Accept: text/event-stream` → 서버가 연결을 **열어둔 채로** 이벤트를 계속 흘려보냄
 - 메시지 단위: 텍스트 기반 이벤트 포맷 (`event:`, `data:`, `id:` 등)
+
+> event: 정의한 포맷에 따라 UTF-8로 인코딩된 텍스트 데이터의 스트림
 
 ## 3) 재연결/내구성(끊김 대응)
 

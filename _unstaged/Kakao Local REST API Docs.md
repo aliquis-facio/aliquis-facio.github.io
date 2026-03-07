@@ -1,1 +1,0 @@
-https://developers.kakao.com/docs/latest/ko/local/dev-guide#search-by-category
