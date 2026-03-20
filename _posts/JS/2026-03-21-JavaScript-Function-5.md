@@ -19,6 +19,24 @@ tags: [WEB, JS]
 
 ## 목차
 
+1. [매개변수 관련 핵심 문법](#1-매개변수-관련-핵심-문법)
+1. [기본값](#11-기본값)
+1. [나머지 매개변수(rest parameter)](#12-나머지-매개변수rest-parameter)
+1. [구조 분해 매개변수](#13-구조-분해-매개변수)
+1. [arguments](#2-arguments)
+1. [재귀 함수](#3-재귀-함수)
+1. [즉시 실행 함수(IIFE, Immediately Invoked Function Expression)](#4-즉시-실행-함수iife-immediately-invoked-function-expression)
+1. [비동기 함수와 `async/await`](#5-비동기-함수와-asyncawait)
+1. [예외 처리와 함수](#6-예외-처리와-함수)
+1. [생성자 함수와 `new`](#7-생성자-함수와-new)
+1. [`prototype`](#8-prototype)
+1. [순수 함수와 부수 효과](#9-순수-함수와-부수-효과)
+1. [순수 함수](#91-순수-함수)
+1. [부수 효과가 있는 함수](#92-부수-효과가-있는-함수)
+1. [참고](#참고)
+
+---
+
 ## 1. 매개변수 관련 핵심 문법
 
 ### 1.1. 기본값

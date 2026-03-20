@@ -19,6 +19,20 @@ tags: [WEB, JS]
 
 ## 목차
 
+1. [함수는 값이다](#1-함수는-값이다)
+1. [일급 객체(first-class citizen)](#2-일급-객체first-class-citizen)
+1. [고차 함수(higher-order function)](#3-고차-함수higher-order-function)
+1. [콜백 함수](#4-콜백-함수)
+1. [클로저(closure)](#5-클로저closure)
+1. [함수도 객체다](#6-함수도-객체다)
+1. [함수 객체의 주요 속성](#7-함수-객체의-주요-속성)
+    1. [name](#71-name)
+    1. [length](#72-length)
+    1. [prototype](#73-prototype)
+1. [참고](#참고)
+
+---
+
 ## 1. 함수는 값이다
 
 JS에서 함수는 값처럼 다룰 수 있다.
