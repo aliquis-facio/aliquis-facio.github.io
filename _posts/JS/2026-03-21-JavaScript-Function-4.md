@@ -48,6 +48,7 @@ tags: [WEB, JS]
 
 ## 1. 함수 스코프와 렉시컬 환경
 
+<font color="#ff0000">렉시컬 환경이 뭔데?</font>
 함수는 자신만의 스코프를 만든다.
 
 ```js
@@ -126,7 +127,7 @@ const calculator = {
 obj.method()
 ```
 
-처럼 호출될 때, `this`가 `obj`가 됩니다.
+처럼 호출될 때, `this`가 `obj`가 된다.
 
 ## 4. `this`
 

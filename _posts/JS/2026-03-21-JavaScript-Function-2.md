@@ -91,7 +91,7 @@ const add = (a, b) => a + b;
 특징:
 
 * 짧게 쓸 수 있다.
-* `this`, `arguments`, `super`, `new.target` 바인딩 방식이 일반 함수와 다르다.
+* `this`, `arguments`, `super`, `new.target` 바인딩 방식이 일반 함수와 다르다. → <font color="#ff0000">어떻게 다른데?</font>
 * 생성자로 사용할 수 없다.
 
 예:
