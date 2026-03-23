@@ -28,10 +28,14 @@ tags: [TIL, WEB, CTF]
 
 ## 1. Vuln
 
-JS Prototype-based Auth Bypass
-SSRF
+- JS Prototype 기반 인증 우회
+- SSRF
 
 ## 2. Code
+
+<details>
+<summary>토글 접기/펼치기</summary>
+<div markdown="1">
 
 ```js
 // 모듈 불러오기
@@ -116,6 +120,9 @@ app.listen(port, '0.0.0.0', () => {
 });
 ```
 
+</div>
+</details>
+
 loginRequired 함수에서 취약점이 존재한다.
 
 ```js
@@ -136,15 +143,15 @@ __proto__
 ## 3. Payload
 
 1. `/report` 인증 우회
-  ![|398x423](../../_image/2026-03-24-00-18-27.png)
-  ![|398x74](../../_image/2026-03-24-00-17-09.png)
+  ![398x423](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-18-27.png)
+  ![398x74](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-17-09.png)
 2. `/report`에서 관리자 비밀번호 유출
-  ![|398x422](../../_image/2026-03-24-00-13-27.png)
-  ![|398x362](../../_image/2026-03-24-00-12-22.png)
-  ![|398x249](../../_image/2026-03-24-00-19-59.png)
+  ![398x422](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-13-27.png)
+  ![398x362](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-12-22.png)
+  ![398x249](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-19-59.png)
 3. 유출한 admin 계정으로 `/admin` 접근
-  ![|398x425](../../_image/2026-03-24-00-19-25.png)
-  ![|398x74](../../_image/2026-03-24-00-16-42.png)
+  ![398x425](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-19-25.png)
+  ![398x74](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-16-42.png)
 
 ---
 
