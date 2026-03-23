@@ -157,4 +157,4 @@ __proto__
 
 ## 참고
 
-- [[JS] 함수 1](./JavaScript-Function-1)
+- [[JS] 함수 1](../JavaScript-Function-1)
