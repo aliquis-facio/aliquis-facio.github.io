@@ -34,7 +34,7 @@ tags: [TIL, WEB, CTF]
 ## 2. Code
 
 <details>
-<summary>토글 접기/펼치기</summary>
+<summary>전체 코드 접기/펼치기</summary>
 <div markdown="1">
 
 ```js
@@ -129,16 +129,19 @@ loginRequired 함수에서 취약점이 존재한다.
 authorizer: (username, password) => users[username] == password
 ```
 
-{% raw %}
-`===`가 아니라 `==`를 쓰고 있고, `users`가 일반 객체이기 때문에 상속 프로퍼티 접근이 가능하다.
+{% raw %}`===`{% endraw %}가 아니라 {% raw %}`==`{% endraw %}를 쓰고 있고, `users`가 일반 객체이기 때문에 상속 프로퍼티 접근이 가능하다.
 
-toString
-function toString() { [native code] }
-constructor
-function Object() { [native code] }
-__proto__
-[object Object]
-{% endraw %}
+우회 후보:
+
+1. {% raw %}`toString`{% endraw %}
+    - username: {% raw %}`toString`{% endraw %}
+    - password: {% raw %}`function toString() { [native code] }`{% endraw %}
+2. {% raw %}`constructor`{% endraw %}
+    - username: {% raw %}`constructor`{% endraw %}
+    - password: {% raw %}`function Object() { [native code] }`{% endraw %}
+3. {% raw %}`__proto__`{% endraw %}
+    - username: {% raw %}`__proto__`{% endraw %}
+    - password: {% raw %}`[object Object]`{% endraw %}
 
 ## 3. Payload
 
