@@ -1,3 +1,20 @@
+---
+layout: post
+comments: true
+sitemap:
+
+title: "[LOGIC] 논증의 분류와 평가"
+excerpt: "논증의 분류와 평가"
+
+date: 2026-03-23
+last_modified_at: 2026-03-23
+
+categories: [LOGIC]
+tags: [LOGIC]
+---
+
+<!-- markdownlint-disable MD025 -->
+
 # 논증의 분류와 평가
 
 ## 1. 논증의 기본 개념
