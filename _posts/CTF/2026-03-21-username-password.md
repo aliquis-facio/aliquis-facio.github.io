@@ -22,6 +22,9 @@ tags: [TIL, WEB, CTF]
 1. [Vuln](#1-vuln)
 1. [Code](#2-code)
 1. [Payload](#3-payload)
+    1. [`/report` 인증 우회](#31-report-인증-우회)
+    1. [`/report`에서 관리자 비밀번호 유출](#32-report에서-관리자-비밀번호-유출)
+    1. [유출한 admin 계정으로 `/admin` 접근](#33-유출한-admin-계정으로-admin-접근)
 1. [참고](#참고)
 
 ---
@@ -145,39 +148,39 @@ authorizer: (username, password) => users[username] == password
 
 ## 3. Payload
 
-1. `/report` 인증 우회
+### 3.1. `/report` 인증 우회
 
-  ![398x423](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-18-27.png)
+![398x423](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-18-27.png)
 
-  > {% raw %}`toString:function toString() { [native code] }`{% endraw %}를 base64로 인코딩해서 Authorization에 붙인다.
+> {% raw %}`toString:function toString() { [native code] }`{% endraw %}를 base64로 인코딩해서 Authorization에 붙인다.
 
-  ![398x74](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-17-09.png)
+![398x74](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-17-09.png)
 
-  > 결과
+> 결과
 
-2. `/report`에서 관리자 비밀번호 유출
+### 3.2. `/report`에서 관리자 비밀번호 유출
 
-  ![398x422](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-13-27.png)
+![398x422](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-13-27.png)
 
-  > `path`를 내 requestbin 주소를 향하게 하고, 같은 방식으로 인증을 한다.
+> `path`를 내 requestbin 주소를 향하게 하고, 같은 방식으로 인증을 한다.
 
-  ![398x362](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-12-22.png)
+![398x362](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-12-22.png)
 
-  > requestbin에서 요청 결과를 확인할 수 있다.
+> requestbin에서 요청 결과를 확인할 수 있다.
 
-  ![398x249](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-19-59.png)
+![398x249](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-19-59.png)
 
-  > base64로 디코딩하면 admin의 랜덤 비밀번호를 확인할 수 있다.
+> base64로 디코딩하면 admin의 랜덤 비밀번호를 확인할 수 있다.
 
-3. 유출한 admin 계정으로 `/admin` 접근
+### 3.3. 유출한 admin 계정으로 `/admin` 접근
 
-  ![398x425](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-19-25.png)
+![398x425](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-19-25.png)
 
-  > 방금 확인한 admin 비밀번호를 이용해 base64 인코딩 후 요청을 보낸다.
+> 방금 확인한 admin 비밀번호를 이용해 base64 인코딩 후 요청을 보낸다.
 
-  ![398x74](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-16-42.png)
+![398x74](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-03-24-00-16-42.png)
 
-  > flag를 확인할 수 있다.
+> flag를 확인할 수 있다.
 
 ---
 
