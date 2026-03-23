@@ -186,8 +186,5 @@ authorizer: (username, password) => users[username] == password
 
 ## 참고
 
-- [[JS] 함수 1](../JavaScript-Function-1)
-- [[JS] 함수 2](../JavaScript-Function-2)
 - [[JS] 함수 3](../JavaScript-Function-3)
-- [[JS] 함수 4](../JavaScript-Function-4)
 - [[JS] 함수 5](../JavaScript-Function-5)
