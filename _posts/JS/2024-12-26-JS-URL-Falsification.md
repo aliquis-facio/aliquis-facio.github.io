@@ -9,7 +9,7 @@ excerpt: "모의해킹 취업반 스터디 7기 11주차"
 date: 2024-12-26
 last_modified_at: 
 
-categories: [WEB]
+categories: [JS]
 tags: [TIL, WEB, JS]
 ---
 

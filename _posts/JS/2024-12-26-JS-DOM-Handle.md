@@ -9,27 +9,35 @@ excerpt: "모의해킹 취업반 스터디 7기 11주차"
 date: 2024-12-26
 last_modified_at: 2024-12-27
 
-categories: [WEB]
+categories: [JS]
 tags: [TIL, WEB, JS]
 ---
 
-# 목차
+<!-- markdownlint-disable MD024 MD025 MD029 MD033 MD036 MD045 -->
+
+# JS로 DOM 객체 접근하기
+
+~~크롤링, 파싱이랑 비슷하다고 생각한다~~
+
+## 목차
+
 * [1. DOM이란?](#1-domdocument-object-model이란)
 * [2. DOM 접근 Method](#2-dom-접근-method)
-* [3. DOM 요소 접근 속성](#3-요소-접근-속성)
+* [3. DOM 요소 접근 속성](#3-dom-요소-접근-속성)
 * [4. document.write()](#4-documentwrite)
 * [5. DOM 로딩 확인 후 객체 접근하기](#5-dom-로딩-확인하고-객체-접근하기)
 * [6. iframe tag 이용하기](#6-iframe-tag-이용하기)
 
-# JS로 DOM 객체 접근하기
-~~크롤링, 파싱이랑 비슷하다고 생각한다~~
+---
 
 ## 1. DOM(Document Object Model)이란?
+
 Document Object Model을 우리말로 풀이하면 <mark>문서 객체 모델</mark>이다.  
 즉 DOM은 웹 페이지(HTML이나 XML 문서)의 콘텐츠 및 구조, 그리고 스타일 요소를 구조화시켜 표현하여  
 <mark>프로그래밍 언어가 해당 문서에 접근하여 읽고 조작할 수 있도록 API를 제공</mark>하는 일종의 인터페이스이다.
 
 ## 2. DOM 접근 Method
+
 <table>
     <thead>
         <tr>
@@ -62,6 +70,7 @@ Document Object Model을 우리말로 풀이하면 <mark>문서 객체 모델</m
 </table>
 
 ### Example Code
+
 ```html
 <!-- html -->
 <div class="big">
@@ -82,6 +91,7 @@ elem = document.querySelectorAll('.big')[1];
 ```
 
 ## 3. DOM 요소 접근 속성
+
 <table>
     <thead>
         <tr>
@@ -106,6 +116,7 @@ elem = document.querySelectorAll('.big')[1];
 </table>
 
 ### Example Code
+
 ```html
 <!-- html -->
 <div>
@@ -134,19 +145,23 @@ btn.type = 'submit';
 ```
 
 ## 4. document.write()
-1. HTML에서 텍스트를 바로 출력하기  
+
+1. HTML에서 텍스트를 바로 출력하기
+
 ```html
 <script>
     document.write("Hello World!");
 </script>
 ```
 
-2. HTML에서 HTML 요소를 바로 출력하기  
+2. HTML에서 HTML 요소를 바로 출력하기
+
 <img src="https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-12-27-1.png?raw=true" title="pre tag가 일을 안 해요">
 
 **DOM이 로딩된 이후 document.write()를 사용할 경우 HTML 요소가 전부 지워짐**
 
 ## 5. DOM 로딩 확인하고 객체 접근하기
+
 브라우저에서 DOM 로딩 순서는 head -> body 순서이다.  
 이 때 <mark>body가 로드되기 전에는 body 내에 선언된 요소들에 접근할 수 없다.</mark>  
 이벤트를 추가해 모든 요소가 전부 로드되었을 때 코드가 실행되도록 해야 한다.  
@@ -167,7 +182,9 @@ document.onload = function foo() {
 ```
 
 ## 6. iframe tag 이용하기
+
 ### iframe이란
+
 iframe = inline frame이다.  
 <mark>HTML 문서 내부에 또다른 HTML 문서를 넣을 때 사용</mark>한다.  
 
@@ -176,6 +193,7 @@ iframe = inline frame이다.
 ```
 
 ### iframe 내부 객체 접근하기
+
 ```html
 <!-- html -->
 <iframe src="http://~/mypage.php" id="targetFrame">
@@ -189,7 +207,10 @@ iframeDoc.body.style.background = "blue";
 iframeDoc.document.getElementById('');
 ```
 
-# 참고
+---
+
+## 참고
+
 * [문서 객체 모델(DOM)](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model)
 * [문서 객체 모델 DOM 과 자바스크립트 JavaScriptㅣ생성 방식 및 접근 방법](https://www.codestates.com/blog/content/dom-javascript)
 * [[웹 개발 기초 자바스크립트] 7. DOM이란?](https://velog.io/@hyhy9501/%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EC%B4%88-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-7.-DOM%EC%9D%B4%EB%9E%80)

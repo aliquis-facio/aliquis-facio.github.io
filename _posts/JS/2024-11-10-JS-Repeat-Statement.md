@@ -13,8 +13,13 @@ categories: [WEB]
 tags: [JS]
 ---
 
-# for
-```
+<!-- markdownlint-disable MD025 MD029 -->
+
+# 반복문
+
+## for
+
+```text
 for ([초기문]; [조건문]; [증감문]) {
     문장
 }
@@ -32,8 +37,9 @@ for(var i = 0; i < 5; i++){
 // 4
 ```
 
-# do...while
-```
+## do...while
+
+```text
 do {
     문장
 } while (조건문);
@@ -54,8 +60,9 @@ do {
 // 5
 ```
 
-# while
-```
+## while
+
+```text
 while (조건문) {
     문장
 }
@@ -92,12 +99,13 @@ while(i >= 0){
 // ...
 ```
 
-# label
+## label
+
 프로그램에서 다른 곳으로 참조할 수 있도록 식별자로 문을 제공한다.  
 레이블 값은 예약어가 아닌 임의의 JS 식별자일 수 있다.  
 label은 어떤 문장에도 붙일 수 있지만, 주로 중첩된 블록에서 break 또는 continue와 함께 사용해 중첩된 블록을 한번에 빠져나가거나 넘길 때 주로 사용한다.  
 
-```
+```text
 label:
     statement
 ```
@@ -108,7 +116,8 @@ markLoop: while (theMark == true) {
 }
 ```
 
-# break
+## break
+
 반복문, switch문, label문과 결합한 문장을 빠져나올 때 사용한다.  
 
 1. label 없이 break 쓸 때: 가장 가까운 반복문 또는 switch문을 종료하고 다음 명령어로 넘어간다.  
@@ -154,7 +163,8 @@ labelCancelLoops: while (true) {
 }
 ```
 
-# continue
+## continue
+
 반복문, switch문, label문을 다음 분기로 넘길 때 사용한다.  
 
 1. label 없이 continue 쓸 때: 가장 가까운 반복문의 현재 반복을 종료하고 다음 반복으로 반복문의 실행을 계속한다.  
@@ -203,11 +213,12 @@ checkIandJ: while (i < 4) {
 }
 ```
 
-# for in
+## for in
+
 객체가 가진 속성(property)을 지정된 변수에 넣어 반복 작업을 한다.  
 열거되는 속성은 enumerable = true인 속성만 보여진다.  
 
-```
+```text
 for ([변수] in [객체]) {
     문장
 }
@@ -224,11 +235,12 @@ for(let key in info){
 // userid: normal
 ```
 
-# for of
+## for of
+
 반복 가능한(iterable) 객체의 내용을 변수에 담아 반복한다.  
 반복 가능한 객체: Array, Map, Set, String, TypedArray, Arguments(함수 인수) 등  
 
-```
+```text
 for ([변수] of [객체]) {
     문장
 }
@@ -254,7 +266,8 @@ for (let x of arr) {
 // 3
 ```
 
-# forEach()
+## forEach()
+
 배열에 사용되는 method다. 인자에 콜백함수를 넣어 사용한다.  
 
 ``` js
@@ -264,7 +277,10 @@ arr.forEach((element) => {
 })
 ```
 
-# 참고
+---
+
+## 참고
+
 * [루프와 반복](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)
 * [JS 반복문](https://velog.io/@reasonz/2022.04.10-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%B0%98%EB%B3%B5%EB%AC%B8-for-for-in-for-of-forEach-while%EB%AC%B8)
 * [JS 반복문](https://offbyone.tistory.com/452)
