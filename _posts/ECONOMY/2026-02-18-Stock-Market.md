@@ -3,14 +3,14 @@ layout: post
 comments: true
 sitemap:
 
-title: "[Economy] 주식 시장 동향"
+title: "[ECONOMY] 주식 시장 동향"
 excerpt: "Stock Market"
 
 date: 2024-11-04
 last_modified_at:
 
-categories: [WEB]
-tags: [WEB, PHP]
+categories: [ECONOMY]
+tags: [ECONOMY]
 ---
 
 <!-- markdownlint-disable MD025 MD033 -->

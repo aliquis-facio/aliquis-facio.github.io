@@ -9,8 +9,8 @@ excerpt: "모의해킹 취업반 스터디 7기 4주차"
 date: 2024-11-10
 last_modified_at: 2024-11-11
 
-categories: [WEB]
-tags: [JS]
+categories: [JS]
+tags: [JS, WEB]
 ---
 
 <!-- markdownlint-disable MD025 MD029 -->
