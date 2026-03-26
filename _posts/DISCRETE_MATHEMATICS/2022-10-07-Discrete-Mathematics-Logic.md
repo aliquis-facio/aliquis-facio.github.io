@@ -13,26 +13,36 @@ categories: [MATHEMATICS]
 tags: [DISCRETE MATHEMATICS]
 ---
 
-# 목차
-* [명제와 진릿값](#명제와-진릿값)
-* [논리연산자](#논리연산자)
-* [합성명제](#합성명제)
-* [조건명제](#조건명제)
-* [논리연산자의 우선순위](#논리연산자의-우선순위)
-* [논리적 동치](#논리적-동치)
-* [명제함수](#명제함수)
-* [한정자](#한정자)
-* [한정자와 논리 연산자](#한정자와-논리-연산자)
-* [추론](#추론)
-* [유효추론과 허위추론](#유효추론과-허위추론)
-* [논리적 추론법칙](#논리적-추론법칙)
+<!-- markdownlint-disable MD004 MD025 MD029 MD033 MD050 -->
 
-# 명제와 진릿값
+# 이산수학 논리 정리
+
+## 목차
+
+1. [명제와 진릿값](#1-명제와-진릿값)
+2. [논리연산자](#2-논리연산자)
+3. [합성명제](#3-합성명제)
+4. [조건명제](#4-조건명제)
+5. [논리연산자의 우선순위](#5-논리연산자의-우선순위)
+6. [논리적 동치](#6-논리적-동치)
+7. [명제함수](#7-명제함수)
+8. [한정자](#8-한정자)
+9. [한정자와 논리 연산자](#9-한정자와-논리-연산자)
+10. [추론](#10-추론)
+11. [유효추론과 허위추론](#11-유효추론과-허위추론)
+12. [논리적 추론법칙](#12-논리적-추론법칙)
+
+---
+
+## 1. 명제와 진릿값
+
 1. 명제(Proposition): 객관적인 기준으로 진릿값을 구분할 수 있는 문장이나 수식: 영어 소문자 p, q, r ...로 표현
 2. 진릿값(Truth Value): 참(true: T)이나 거짓(false: F)을 가리키는 값
 
-# 논리연산자
+## 2. 논리연산자
+
 1. 부정(NOT): **~p** 또는 **¬p**
+
 <table>
     <thead>
         <tr>
@@ -53,6 +63,7 @@ tags: [DISCRETE MATHEMATICS]
 </table>
 
 2. 논리곱(AND): **p ∧ q**
+
 <table>
     <thead>
         <tr>
@@ -86,6 +97,7 @@ tags: [DISCRETE MATHEMATICS]
 </table>
 
 3. 논리합(OR): **p ∨ q**
+
 <table>
     <thead>
         <tr>
@@ -119,6 +131,7 @@ tags: [DISCRETE MATHEMATICS]
 </table>
 
 4. 배차적 논리합(Exclusive OR: XOR): **p ⊕ q ≡ (~p ∧ q) ∨ (p ∧ ~q)**
+
 <table>
     <thead>
         <tr>
@@ -151,8 +164,10 @@ tags: [DISCRETE MATHEMATICS]
     </tbody>
 </table>
 
-# 합성명제
+## 3. 합성명제
+
 합성명제(Compound Proposition): 하나 이상의 명제들이 논리연산자에 의해 결합된 명제
+
 1. 항진명제(Tautology): **T**
     - 합성명제를 구성하는 단일명제의 진리값에 상관없이 __합성명제의 진릿값이 항상 참(T)인 명제__
 2. 모순명제(Contradiction): **F**
@@ -160,8 +175,10 @@ tags: [DISCRETE MATHEMATICS]
 3. 사건명제(Contigency)
     - __항진명제도 모순명제도 아닌 합성명제__
 
-# 조건명제
+## 4. 조건명제
+
 1. 조건명제(Conditional Proposition) / 함축(Implication): **p → q ≡ ~p ∨ q**
+
 <table>
     <thead>
         <tr>
@@ -195,6 +212,7 @@ tags: [DISCRETE MATHEMATICS]
 </table>
 
 2. 쌍방조건명제(Biconditional Proposition): **p ↔ q ≡ (p → q) ∧ (q → p) ≡ ~(p ⊕ q)**
+
 <table>
     <thead>
         <tr>
@@ -228,6 +246,7 @@ tags: [DISCRETE MATHEMATICS]
 </table>
 
 3. 역(Converse), 이(Inverse), 대우(Contraposition)
+
 <table>
     <thead>
     <tr>
@@ -275,7 +294,8 @@ tags: [DISCRETE MATHEMATICS]
     </tbody>
 </table>
 
-# 논리연산자의 우선순위
+## 5. 논리연산자의 우선순위
+
 <table>
     <thead>
         <tr>
@@ -315,9 +335,12 @@ tags: [DISCRETE MATHEMATICS]
     </tbody>
 </table>
 
-# 논리적 동치
+## 6. 논리적 동치
+
 논리적 동치(Logically Equivalence): **P ≡ Q**
+
 - __두 개의 합성명제 P와 Q의 진릿값이 서로 같은 경우__
+
 <table>
     <thead>
         <tr>
@@ -382,19 +405,22 @@ tags: [DISCRETE MATHEMATICS]
     </tbody>
 </table>
 
-# 명제함수
+## 7. 명제함수
+
 1. 명제함수(Propositional Function): **P(x)**
     - 논의영역이 주어진 변수 x를 포함하여 진릿값을 판별할 수 있는 문장이나 수식
 2. 논의영역(Domain of Discourse): **D**
     - 명제함수에 포함된 변수 x의 범위이나 값
 
-# 한정자
+## 8. 한정자
+
 1. 전체/전칭한정자(Universal Quantifier): **∀**
     - __논의영역의 모든 값__ ex) 논의영역 D에 속하는 모든 x에 대한 명제 P(x): ∀xP(x)
 2. 존재한정자(Existential Quantifier): **∃**
     - __논의영역 중 어떤 값__ ex) 논의영역 D에 속하는 원소 중 어떤 x에 대한 명제 P(x): ∃xP(x)
 
-# 한정자와 논리 연산자
+## 9. 한정자와 논리 연산자
+
 <table>
     <thead>
         <tr>
@@ -418,20 +444,23 @@ tags: [DISCRETE MATHEMATICS]
     </tbody>
 </table>
 
-# 추론
+## 10. 추론
+
 1. 추론(Inference)/논증(Argument)
     - 참(T)인 명제를 근거로 하여 다른 명제가 참(T)임을 유도하는 방식
 2. 가정/전제(Hypothesis), 결론(Conclusion)
     - 가정/전제: __결론의 근거가 되는 최종 결론을 제외한 명제, 진릿값이 참(T)으로 간주되는 명제__
     - 결론: 주어진 전제에 의해 유도된 명제
 
-# 유효추론과 허위추론
+## 11. 유효추론과 허위추론
+
 1. 유효(정당한)추론
     - 주어진 전제를 이용해 유도된 결론이 정확한 추론, __전제가 참(T)일 때 결론이 모두 참(T)인 추론__
 2. 허위(부당한)추론
     - 주어진 전제를 이용해 유도된 결론이 틀린 추론, __전제가 참(T)인 경우, 결론이 거짓(F)인 경우가 하나라도 있는 추론__
   
 * 유효추론 예: 전제가 모두 참(T)인 경우에 결론인 q의 진릿값 역시 참(T)이므로 이 추론은 유효추론이다.
+
 <table>
     <thead>
         <tr>
@@ -470,6 +499,7 @@ tags: [DISCRETE MATHEMATICS]
 </table>
 
 * 허위추론 예: 전제가 모두 참(T)인 경우에 결론인 p의 진리값 중 거짓(F)이 존재하므로 이 추론은 허위추론이다.
+
 <table>
     <thead>
         <tr>
@@ -507,7 +537,8 @@ tags: [DISCRETE MATHEMATICS]
     </tbody>
 </table>
 
-# 논리적 추론법칙
+## 12. 논리적 추론법칙
+
 <table>
     <thead>
         <tr>
