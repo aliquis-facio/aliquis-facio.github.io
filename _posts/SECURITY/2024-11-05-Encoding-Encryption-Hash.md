@@ -3,19 +3,20 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CRYPTOGRAPHY] 인코딩과 암호화, 해시"
+title: "[SECURITY] 인코딩과 암호화, 해시"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"
 
 date: 2024-11-05
 last_modified_at: 2024-11-08
 
 categories: [SECURITY]
-tags: [CRYPTOGRAPHY]
+tags: [CRYPTOGRAPHY, SECURITY]
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 
 # 개요
+
 ```mermaid
 graph LR
 A[Encoding/Decoding<br>인코딩/디코딩]

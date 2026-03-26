@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[WEB HACKING] 인증/인가 취약점"
+title: "[SECURITY] 인증/인가 취약점"
 excerpt: "모의해킹 취업반 스터디 7기 16주차"
 
 date: 2025-02-16

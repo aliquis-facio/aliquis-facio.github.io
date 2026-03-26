@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[WEB HACKING] Union SQL Injection"
+title: "[SECURITY] Union SQL Injection"
 excerpt: "모의해킹 취업반 스터디 7기 6주차"
 
 date: 2024-11-20

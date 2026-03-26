@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[WEB HACKING] CSRF란?"
+title: "[SECURITY] CSRF란?"
 excerpt: "모의해킹 취업반 스터디 7기 12 ~ 13주차"
 
 date: 2025-01-09
