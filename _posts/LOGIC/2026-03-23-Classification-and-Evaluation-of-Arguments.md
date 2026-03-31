@@ -13,7 +13,9 @@ categories: [LOGIC]
 tags: [LOGIC]
 ---
 
-<!-- markdownlint-disable MD025 -->
+<!-- markdownlint-disable MD025 MD033 -->
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 
 # 논증의 분류와 평가
 
@@ -304,3 +306,8 @@ graph LR
 
 - 외연이 넓어질수록 내포는 줄어든다.
 - 외연이 좁아질수록 내포는 늘어난다.
+
+<script>
+mermaid.initialize({startOnLoad:true});
+window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
