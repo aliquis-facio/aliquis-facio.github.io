@@ -1,3 +1,20 @@
+---
+layout: post
+comments: true
+sitemap:
+
+title: "[LOGIC] 형식적 오류"
+excerpt: "형식적 오류"
+
+date: 2026-04-06
+last_modified_at: 2026-04-06
+
+categories: [LOGIC]
+tags: [LOGIC]
+---
+
+<!-- markdownlint-disable MD007 MD025 MD033 MD036 MD060 -->
+
 # 형식적 오류
 
 오류란 겉보기에는 그럴듯하지만, 실제로 검토해 보면 옳지 않은 논증이다. 오류를 배우는 이유는 다른 사람의 논증을 더 정확히 평가하고, 왜 잘못되었는지 설명할 수 있으며, 스스로 논증을 구성할 때 같은 실수를 피하기 위해서이다.
