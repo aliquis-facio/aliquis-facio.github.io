@@ -13,7 +13,7 @@ categories: [LOGIC]
 tags: [LOGIC]
 ---
 
-<!-- markdownlint-disable MD025 MD033 -→
+<!-- markdownlint-disable MD025 MD033 -->
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 
