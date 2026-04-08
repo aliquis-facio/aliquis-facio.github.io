@@ -442,6 +442,10 @@ P → Q
 그리고 가장 걱정스러운 것은 피부암 발생에 어떤 역할을 하는 것이다. (전제)
 ```
 
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
+
 ```mermaid
 graph LR
     A[피부의 노화를 촉진] --> D[지나친 태양 노출은 건강 문제를 일으킨다]
@@ -451,7 +455,8 @@ graph LR
 
 독립적 지지
 
----
+</div>
+</details>
 
 ```text
 정상성은 비정상성의 관점에서만 제한적으로 정의된다. (전제)
@@ -460,6 +465,10 @@ graph LR
 단순히 주관적인 개념은 사회적 결정의 기초가 될 수 없다. (전제)
 그러므로 정상성 개념을 기초로 사회적 결정을 해서는 안 된다. (결론 2)
 ```
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 ```mermaid
 graph LR
@@ -470,6 +479,9 @@ graph LR
 ```
 
 연쇄 논증(Serial Structure): 전제 -> 중간 결론 -> 최종 결론
+
+</div>
+</details>
 
 ## 6. 예제
 
