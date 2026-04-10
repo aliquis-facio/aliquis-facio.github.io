@@ -81,11 +81,9 @@ tags: [BLOG, MARKDOWN]
 그럴 경우
 
 <pre>
-```text
-{% raw %}
+&#123;% raw %&#125;
 ...
-{% endraw %}
-```
+&#123;% endraw %&#125;
 </pre>
 
 로 앞뒤를 감싸주면 해결할 수 있다.
