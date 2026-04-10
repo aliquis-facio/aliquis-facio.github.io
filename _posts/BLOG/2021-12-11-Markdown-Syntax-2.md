@@ -81,11 +81,11 @@ tags: [BLOG, MARKDOWN]
 그럴 경우
 
 <pre class="highlight">
-    <code>
-        &#123;% raw %&#125;
-        ...
-        &#123;% endraw %&#125;
-    </code>
+<code>
+&#123;% raw %&#125;
+...
+&#123;% endraw %&#125;
+</code>
 </pre>
 
 로 앞뒤를 감싸주면 해결할 수 있다.
