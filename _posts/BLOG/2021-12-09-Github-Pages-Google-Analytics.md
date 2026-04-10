@@ -13,7 +13,7 @@ categories: [BLOG]
 tags: [BLOG]
 ---
 
-<!-- markdownlint-disable MD025-->
+<!-- markdownlint-disable MD004 MD025-->
 
 # Google Analytics 적용하기
 
@@ -53,7 +53,7 @@ tags: [BLOG]
         </script> -->
         Global site tag (gtag.js) - Google Analytics
     ```
-      
+
     *변경한 코드*  
 
     ```html
@@ -72,7 +72,7 @@ tags: [BLOG]
 ~~이 부분이 특히 참고 사이트가 많은 이유는 구글 애너리틱스가 잘 적용됬는지 확인이 잘 되지 않아서 틀려서 그런건가하고 다른 사이트를 참조하느라 그랬다.~~  
   
 물론 지금은 확실히 확인이 되었다.
-![google-analytics](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2021-12-09-Screenshot.png?raw=true "2 People - One is me, and the other is my freind I think")
+![google-analytics](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/main/_image/2021-12-09-Screenshot.png?raw=true "2 People - One is me, and the other is my freind I think")
 
 ---
 
