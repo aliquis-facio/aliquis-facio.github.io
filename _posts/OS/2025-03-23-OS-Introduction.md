@@ -14,6 +14,7 @@ tags: [OS, C/C++, TIL]
 ---
 
 # 목차
+
 1. [운영체제(OS, Operating System)란?](#운영체제os-operating-system란)
     1. [운영체제 동작 방식](#1-운영체제-동작-방식)
         1. [가상화(Virtualization)](#11-가상화virtualization)
@@ -22,6 +23,7 @@ tags: [OS, C/C++, TIL]
     1. [디자인 목표](#2-디자인-목표)
 
 # 운영체제(OS, Operating System)란?
+
 **자원 추상화(Resource Abstraction)**: 운영체제는 CPU, 메모리, 디스크, 네트워크 등 <mark>복잡한 하드웨어를</mark> 사용자에게 <mark>편리한 인터페이스(프로세스, 가상 메모리, 파일 등)로 추상화</mark>해 제공합니다.
 
 **자원 관리자(Resource Manager)**: OS는 여러 프로세스나 애플리케이션이 경쟁하는 <mark>자원을 할당·회수</mark>하고, <mark>충돌을 방지</mark>하며, <mark>전체 시스템 효율을 극대화</mark>합니다.
@@ -31,9 +33,11 @@ tags: [OS, C/C++, TIL]
 1. 프로그램들이 devices와 상호작용할 수 있도록 만든다
 
 ## 1. 운영체제 동작 방식
+
 폰 노이만의 컴퓨터 모델을 따르면 OS가 동작하는 것을 3가지로 나누고 있다. <mark>가상화</mark>, <mark>동시성</mark>, <mark>영속성</mark> 이렇게 3가지이다.
 
 ### 1.1. 가상화(Virtualization)
+
 * OS는 자원(CPU, 메모리(memory), 디스크(disk))을 관리한다.  
     * **CPU**: 많은 프로그램들이 동작할 수 있게 한다.
     * **메모리(memory)**: 많은 프로그램들이 동시에 자신의 명령어(코드)와 데이터에 접근할 수 있게 한다.
@@ -44,6 +48,7 @@ tags: [OS, C/C++, TIL]
 **CPU 가상화**: 한정된 물리 CPU를 시간 분할로 나눠 “무한” 가상 CPU처럼 사용하게 함
 
 예제 코드
+
 ```c
 #include <stdio.h> // standard input output
 #include <stdlib.h> // standard library
@@ -73,6 +78,7 @@ int main(int argc, char *argv[]) {
 ```
 
 실행 결과
+
 ``` bash
 # gcc로 cpu.c(소스 코드)를 cpu(실행 파일)로 컴파일한다.
 prompt> gcc-o cpu cpu.c-Wall
@@ -102,6 +108,7 @@ OS는 주소 공간을 물리적인 메모리에 연결한다.
 물리적인 메모리는 OS에 의해 관리되는 공유된 자원이다.
 
 예제 코드
+
 ```c
 #include <unistd.h> // POSIX 운영체제 API에 대한 엑세스 제공
 #include <stdio.h>
@@ -131,6 +138,7 @@ int main(int argc, char *argv[]) {
 ```
 
 실행 결과
+
 ``` bash
 # mem이라는 실행파일이 생성되었다고 가정.
 prompt> ./mem & ./mem &
@@ -158,9 +166,11 @@ prompt> ./mem & ./mem &
 **I/O 가상화**: 디스크, 네트워크 등의 장치를 추상화해 표준화된 인터페이스로 관리
 
 ### 1.2. 동시성(Concurrency)
+
 * **프로세스/스레드 관리**: 생성(fork/exec), 소멸(exit), 동기화(mutex, semaphore) 지원
 
 예제 코드
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -205,6 +215,7 @@ int main(int argc, char *argv[]) {
   
 `pthread_create()`: <mark>thread를 생성</mark>하는 함수이다.  
 `int pthread_create(pthread_t*thread, const pthread_attr_t*attr, void*(*start_routine)(void *), void *arg);`  
+
 * pthread_t*thread: 스레드 식별자이다. 생성된 스레드를 구별하기 위한 id
 * const pthread_attr_t*attr: 스레드 특성을 지정한다. 보통은 NULL을 입력한다.
 * void*(*start_routine)(void *): thread가 실행되었을 때 시작할 스레드 함수이름이다.
@@ -212,10 +223,12 @@ int main(int argc, char *argv[]) {
   
 `pthread_join()`: main을 도는 스레드가 자신이 분기시킨 <mark>스레드들이 종료되기를 기다리는</mark> 함수이다.  
 `int pthread_join(pthread_t th, void **thread_return);`  
+
 * pthread_t th: 스레드의 식별자이다. pthread_create의 pthread_t*thread와 동일하다.
 * void **thread_return: 리턴값이다.
 
 실행 결과
+
 ```bash
 # 1번째
 prompt> gcc-o threads threads.c-Wall-pthread prompt> ./threads 1000
@@ -234,6 +247,7 @@ Final value : 137298
 ```
 
 공유하는 counter를 증가시키는 것은 기계어 측면에서는 사실 3가지 명령어를 사용한다.
+
 1. 메모리에서 counter의 값을 가져온다.
 1. 증가시킨다.
 1. 메모리에 다시 저장한다.
@@ -243,22 +257,26 @@ Final value : 137298
 **Race Condition(경쟁 상태)**: 두 개 이상의 실행 흐름(스레드나 프로세스)이 공유 자원(메모리, 파일, I/O 장치 등)에 동시에 접근하면서, 그 접근 순서와 타이밍에 따라 결과가 달라지는 상황을 말한다.
 
 ### 1.3. 영속성(Persistence)
+
 **파일 시스템(File System)**: 디스크에 데이터를 조직·저장·조회하고, 시스템 장애 후 복구 기능(저널링, COW 등) 제공
-* **하드웨어**: 하드 드라이브, SSD와 같은 입출력 장치  
+* **하드웨어**: 하드 드라이브, SSD와 같은 입출력 장치
 * **소프트웨어**: 파일 시스템은 디스크를 관리한다. 또한, 유저가 만든 어떤 파일들을 저장하는 것을 책임진다.
 
 **블록 디바이스 관리**: 디스크 블록 할당, 캐싱, I/O 스케줄링을 통해 성능과 신뢰성 보장
 
 #### 보호 및 격리(Protection & Isolation)
+
 **메모리 보호**: 가상 주소 기반 접근 제어로 프로세스 간 간섭 방지  
 **권한 관리**: 사용자/그룹별 접근 제어, 시그널(signal)로 프로세스 제어  
 **보안(Security)**: 커널 모드와 사용자 모드 분리로 악의적 코드 실행 차단
 
 #### 인터페이스 및 API
+
 **시스템 콜(System Call)**: open(), read(), write(), fork(), exec() 등 라이브러리와 하드웨어 제어의 경계  
 **라이브러리 지원**: 표준 C 라이브러리, POSIX 스레드, 파일 처리 등 편리한 프로그래밍 인터페이스 제공
 
 예제 코드
+
 ```c
 #include <stdio.h>
 #include <unistd.h>
@@ -277,7 +295,8 @@ int main(int argc, char *argv[]) {
 ```
 
 `open()`: 파일을 열거나 생성 후 열어준다.  
-`int open(const char *filepath, int flag, mode_t mode);`  
+`int open(const char *filepath, int flag, mode_t mode);`
+
 * const char *filepath: 열고자 하는 파일의 경로
 * int flag: 파일 열 때 사용할 옵션  
     * O_RDONLY : 읽기 모드 (Read Only)  
@@ -308,13 +327,15 @@ int main(int argc, char *argv[]) {
 * 반환 값: 성공 시 0, 실패 시 -1 을 리턴하고 errno 설정
 
 `write()`: 파일에 내용을 작성한다.  
-`ssize_t write(int fd, const void *buf, size_t count);`  
+`ssize_t write(int fd, const void *buf, size_t count);`
+
 * int fd : file descriptor이다. open의 반환 값이나 stdin, stdout, stderr 에 해당하는 0,1,2를 넣어주면 된다.
 * const void* buf : write 할 값이 담긴 buffer이다.
 * size_t count : write할 내용의 길이이다.
 * 반환 값: write에 성공한 byte의 수이다. write에 실패한 경우 -1을 반환하고 errno를 설정한다.
 
 ## 2. 디자인 목표
+
 * **추상화**: Make the system convenient and easy to use
 * **높은 성능**
     * Minimize the overhead of the OS
@@ -328,6 +349,7 @@ int main(int argc, char *argv[]) {
     * Mobility
 
 # 참고
+
 * [[운영체제] 운영체제(OS)란?](https://jerryjerryjerry.tistory.com/171)
 * [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
 * [C언어 main( ) 함수의 명령 인수 (argc, argv)](https://blog.naver.com/sharonichoya/220501242693)

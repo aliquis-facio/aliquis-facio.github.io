@@ -14,6 +14,7 @@ tags: [WEB, PHP]
 ---
 
 # 목차
+
 * [Q1. 어떻게 로그인을 유지할 수 있을까?](#q1-어떻게-로그인을-유지할-수-있을까)
 * [1. 쿠키](#1-쿠키cookie)
 * [2. 세션](#2-세션session)
@@ -22,6 +23,7 @@ tags: [WEB, PHP]
 * [참조](#쿠키-구성-요소)
 
 # Q1. 어떻게 로그인을 유지할 수 있을까?
+
 HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 > **Connectionless**: 클라이언트가 요청을 한 후 응답을 받으면 그 연결을 끊어 버리는 특징  
 > **Stateless**: 통신이 끝나면 상태를 유지하지 않는 특징.
@@ -31,23 +33,27 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 과연 어떻게 로그인을 유지할 수 있는 것일까?
 
 # 1. 쿠키(Cookie)
+
 * **클라이언트에 저장**되는 **키와 값이 들어있는 작은 데이터 파일**이다.
 * 만료 시간이 정해지면 **브라우저가 종료되어도 인증이 유지**된다.
 * 클라이언트의 상태 정보를 로컬에 저장했다가 참조한다.
 
 ## 쿠키 구성 요소
+
 * 쿠키 이름(Name)
 * 쿠키 값(Value)
-* 쿠키 만료 시간(Expires) 
+* 쿠키 만료 시간(Expires)
 * 쿠키를 전송할 도메인(Domain)
 * 쿠키를 전송할 경로(Path)
 * 보안 연결 여부(Secure)
 * Http Only 여부(HttpOnly)
 
 ## 쿠키 동작 방식
+
 <img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-11-08-4.jpg?raw=true" title = "쿠키 동작">
 
 # 2. 세션(Session)
+
 * **쿠키를 기반**으로 하지만 **사용자 정보 파일을 서버 측에서 관리**한다
 * 클라이언트가 request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 id를 부여하는 것이 세션id이다.
 * 클라이언트를 구분하기 위해 세션id를 부여하며 웹 브라우저가 서버에 접속한 후 종료할 때까지 인증상태를 유지한다
@@ -55,9 +61,11 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 ~~세션id에 Hash를 여러번 먹이면 되지 않을까?~~
 
 ## 세션 동작 방식
+
 <img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-11-08-5.jpg?raw=true" title = "세션 동작">
 
 # 3. 쿠키(Cookie) vs. 세션(Session)
+
 <table>
     <thead>
         <tr>
@@ -108,12 +116,14 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 -> 세션은 서버의 자원을 사용하기에 서버 자원에 한계가 있고, 서버 속도가 느려질 수 있기 때문에 자원관리 차원에서 쿠키와 세션을 적절한 요소 및 기능에 병행 사용한다.
 
 # 4. 캐시(Cache)
+
 * **웹 페이지 요소를 저장하기 위한** 임시 저장소이다.  
 * **웹 페이지를 빠르게 불러올 수 있도록 도와준다.**  
 * 한 번 캐시에 저장되면 브라우저를 참고하기 때문에 서버에서 변경이 되어도 사용자는 변경되어 보이지 않을 수 있다.  
 이럴 때는 캐시를 지워주거나 서버에서 클라이언트로 응답을 보낼 때 header에 캐시 만료 시간을 명시하는 방법 등으로 해결할 수 있다.
 
 # 참조
+
 * [쿠키, 세션, 캐시 1](https://interconnection.tistory.com/74)
 * [쿠키, 세션, 캐시 2](https://dev-coco.tistory.com/61)
 * [쿠키, 세션 1](https://lgphone.tistory.com/65)

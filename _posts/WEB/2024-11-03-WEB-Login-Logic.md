@@ -14,6 +14,7 @@ tags: [WEB, PHP]
 ---
 
 # 목차
+
 1. [로그인 로직 케이스](#로그인-로직-케이스)
     1. [식별, 인증 동시](#1-식별-인증-동시)
     1. [식별, 인증 분리](#2-식별-인증-분리)
@@ -22,7 +23,9 @@ tags: [WEB, PHP]
 <!-- 1. [5. PREPARED](#5-prepared) -->
 
 # 로그인 로직 케이스
+
 ## 1. 식별, 인증 동시
+
 user를 식별하는 것은 id를 확인하는 것이고, user가 자신이 맞는 지 인증하는 과정은 pw를 확인하는 것이다.
 
 ```php
@@ -70,6 +73,7 @@ function login2($conn, $user_id, $user_pw) {
 ```
 
 ## 3. 해시(Hash)
+
 PW를 해시 처리한다.
 
 ### 1. 식별, 인증 동시
@@ -117,6 +121,7 @@ function login4($conn, $user_id, $user_pw) {
 ```
 
 ## 4. Escape String
+
 **Escape String**: \를 앞에 붙여 php에 정의되어 있는 원래의 의미를 벗어나는(escape) 문자이다.  
 input으로 들어온 id, pw에 개행문자 처리를 한다.  
 
@@ -213,9 +218,8 @@ function login8($conn, $user_id, $user_pw) {
 }
 ```
 
-<!-- ## 5. prepared -->
-
 # 참고
+
 1. [PHP Hash 함수 사용](https://blog.naver.com/crehacktive3/221146696692)
 1. [SQL Injection](https://ko.wikipedia.org/wiki/SQL_%EC%82%BD%EC%9E%85)
 1. [Escape String 1](https://www.w3schools.com/php/php_string_escape.asp)
