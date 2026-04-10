@@ -20,7 +20,6 @@ tags: [WEB, PHP]
     1. [식별, 인증 분리](#2-식별-인증-분리)
     1. [해시(HASH)](#3-해시hash)
     1. [ESCAPE STRING](#4-escape-string)
-<!-- 1. [5. PREPARED](#5-prepared) -->
 
 # 로그인 로직 케이스
 
