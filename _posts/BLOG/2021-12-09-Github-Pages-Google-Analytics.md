@@ -7,7 +7,7 @@ title: "[GITHUB PAGES] 구글 애널리틱스 적용하기"
 excerpt: "구글 애널리틱스 적용"
 
 date: 2021-12-09
-last_modified_at: 2024-12-27
+last_modified_at: 2026-04-10
 
 categories: [BLOG]
 tags: [BLOG]
@@ -19,53 +19,53 @@ tags: [BLOG]
 
 1. google-analytics 가입함.
 2. google-analytics에서 속성 만들기
-    웹사이트: aliquis-facio.github.io
-    URL: <https://aliquis-facio.github.io/>
-    카테고리: github blog
-    시간대: 그리니치 표준시, 대한민국 시간
+    - 웹사이트: aliquis-facio.github.io
+    - URL: <https://aliquis-facio.github.io/>
+    - 카테고리: github blog
+    - 시간대: 그리니치 표준시, 대한민국 시간
 3. 추적 ID 복사
 4. _config.yml에 적용 - 내가 가져온 테마에 경우에는  
 
-```yml
-google:
-#plus:            #username
-analytics:        내 트랙 아이디
-#verify:
-#ad-client:
-#ad-slot:
-```
+    ```yml
+    google:
+    #plus:            #username
+    analytics:        내 트랙 아이디
+    #verify:
+    #ad-client:
+    #ad-slot:
+    ```
 
-이렇게 되있었다.
+    이렇게 되있었다.
 5. /_includes/scripts.html 부분에  
 
-*기존에 있던 코드*  
+    *기존에 있던 코드*  
 
-```html
-    Asynchronous Google Analytics snippet
+    ```html
+        Asynchronous Google Analytics snippet
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', '{{ site.google.analytics }}', 'auto');  
+          ga('require', 'linkid', 'linkid.js');
+          ga('send', 'pageview');
+        </script> -->
+        Global site tag (gtag.js) - Google Analytics
+    ```
+      
+    *변경한 코드*  
+
+    ```html
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE0BFF2TLD"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google.analytics }}', 'auto');  
-      ga('require', 'linkid', 'linkid.js');
-      ga('send', 'pageview');
-    </script> -->
-    Global site tag (gtag.js) - Google Analytics
-```
-  
-*변경한 코드*  
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QE0BFF2TLD"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-QE0BFF2TLD');
-</script>
-```
+        gtag('config', 'G-QE0BFF2TLD');
+    </script>
+    ```
   
 스트림 설정에서 태그하기에 대한 안내 - 새로운 온페이지 태그 추가를 누르면 나오는 코드이다. 이번에 구글에서 새롭게 발표한 추적코드인데, 애널리틱스, 광고 전환 추적 및 리마케팅을 한번에 적용할 수 있는 듯하다.  
   
