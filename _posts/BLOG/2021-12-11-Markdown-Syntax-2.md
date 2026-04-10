@@ -281,45 +281,37 @@ print("Hello, World!")
 ### 4.1. 인라인(inline)
 
 ```md
-$f(x)= if \; x < x_{min} : (x/x_{min})^a$
-$otherwise : 0$
-$P(w)=U(x/2)(7/5)/Z$
-$p_{\theta}(x) = \int p_{\theta}(2z)p_{\theta}(y\mid k)dz$
-$x = argmax_k((x_t - x_u + x_v)^T * x_m) / (||x_b - x_k + x_l||)$
+$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 ```
 
-$f(x)= if \; x < x_{min} : (x/x_{min})^a$  
-$otherwise : 0$  
-$P(w)=U(x/2)(7/5)/Z$  
-$p_{\theta}(x) = \int p_{\theta}(2z)p_{\theta}(y\mid k)dz$  
-$x = argmax_k((x_t - x_u + x_v)^T * x_m) / (||x_b - x_k + x_l||)$  
+$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 
 ### 4.2. 블록(block)
 
 ```md
 $$
 \begin{aligned}
-f(x) &=
-\begin{cases}
-\left(\frac{x}{x_{\min}}\right)^a, & x < x_{\min} \\
-0, & \text{otherwise}
-\end{cases} \\
-P(w) &= \frac{U(x/2)(7/5)}{Z} \\
-p_{\theta}(x) &= \int p_{\theta}(2z)\, p_{\theta}(y \mid k)\, dz \\
-x &= \arg\max_k \frac{(x_t - x_u + x_v)^T x_m}{\|x_b - x_k + x_l\|}
+y&=\sin x \\
+\frac{dy}{dx}&=\cos x \\
+\\
+y&=\cos x \\
+\frac{dy}{dx}&=-\sin x \\
+\\
+y&=\tan x \\
+\frac{dy}{dx}&=\sec^2 x
 \end{aligned}
 $$
 ```
 
 $$
 \begin{aligned}
-f(x) &=
-\begin{cases}
-\left(\frac{x}{x_{\min}}\right)^a, & x < x_{\min} \\
-0, & \text{otherwise}
-\end{cases} \\
-P(w) &= \frac{U(x/2)(7/5)}{Z} \\
-p_{\theta}(x) &= \int p_{\theta}(2z)\, p_{\theta}(y \mid k)\, dz \\
-x &= \arg\max_k \frac{(x_t - x_u + x_v)^T x_m}{\|x_b - x_k + x_l\|}
+y&=\sin x \\
+\frac{dy}{dx}&=\cos x \\
+\\
+y&=\cos x \\
+\frac{dy}{dx}&=-\sin x \\
+\\
+y&=\tan x \\
+\frac{dy}{dx}&=\sec^2 x
 \end{aligned}
 $$
