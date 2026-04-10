@@ -3,11 +3,11 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 형식적 오류"
-excerpt: "형식적 오류"
+title: "[LOGIC] 논리적 연결사"
+excerpt: "논리적 연결사"
 
-date: 2026-04-06
-last_modified_at: 2026-04-08
+date: 2026-04-10
+last_modified_at: 2026-04-10
 
 categories: [LOGIC]
 tags: [LOGIC]

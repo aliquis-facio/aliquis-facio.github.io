@@ -1,3 +1,20 @@
+---
+layout: post
+comments: true
+sitemap:
+
+title: "[LOGIC] 진리표"
+excerpt: "진리표"
+
+date: 2026-04-10
+last_modified_at: 2026-04-10
+
+categories: [LOGIC]
+tags: [LOGIC]
+---
+
+<!-- markdownlint-disable MD007 MD010 MD025 -->
+
 # 진리표
 
 진리표를 중심으로 **논리 연결사의 의미**, **복합 명제의 진리값 계산**, **명제의 종류**, **명제들 사이의 관계**를 설명하는 자료다. 진리표는 복합 명제의 참·거짓이 단순 명제의 진리값에 따라 어떻게 결정되는지를 모든 경우에 대해 보여주는 핵심 도구로 제시된다.
