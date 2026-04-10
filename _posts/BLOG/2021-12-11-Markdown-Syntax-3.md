@@ -2,15 +2,15 @@
 layout: post
 comments: true
 sitemap:
-
 title: "[Markdown] 마크다운 문법 총 정리 3"
 excerpt: "Part 3: 이미지, 이모지, 다이어그램, HTML/CSS/JS"
-
 date: 2021-12-11
-last_modified_at: 2026-02-05
-
-categories: [BLOG]
-tags: [BLOG, MARKDOWN]
+last_modified_at: 2026-04-10
+categories:
+  - BLOG
+tags:
+  - BLOG
+  - MARKDOWN
 ---
 
 <!-- markdownlint-disable MD004 MD007 MD022 MD025 MD029 MD032 MD033 MD034 MD035 MD048 MD059 -->
@@ -70,11 +70,12 @@ CDN 적용 사이트: [JSDELIVR](https://www.jsdelivr.com/github)
 
 ```md
 <!-- 이 넘은 사진 클릭하면 링크 탐 -->
-[![네 번째 이미지](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png)](https://www.google.no/)
+[![네 번째 이미지](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-10-20-00-22.png)](https://youtu.be/l8b0Vn_Idm8?si=AWcIncfU5aFjKnHW)
 ```
 
 이 넘은 사진 클릭하면 링크 탐
-[![네 번째 이미지](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png)](https://www.google.no/)
+
+[![네 번째 이미지](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-10-20-00-22.png)](https://youtu.be/l8b0Vn_Idm8?si=AWcIncfU5aFjKnHW)
 
 ---
 
