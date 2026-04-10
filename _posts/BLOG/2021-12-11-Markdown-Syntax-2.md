@@ -275,29 +275,30 @@ print("Hello, World!")
 ## 4. 수식
 
 ~~수식 같은 경우에는 다른 프로그램에서 수식을 작성하고 캡처해서 사진으로 붙여넣는 게 빠르다~~
+
 ~~* 2026.02.05 추가최근에는 AI에게 수식을 캡처해서 보여주고 LaTeX로 변환해줘! 하면 꽤나 깔끔하게 바꿔준다~~
 
 ### 4.1. 인라인(inline)
 
 ```md
-$f(x)= if x < x_{min} : (x/x_{min})^a$
+$f(x)= if \; x < x_{min} : (x/x_{min})^a$
 $otherwise : 0$
 $P(w)=U(x/2)(7/5)/Z$
 $p_{\theta}(x) = \int p_{\theta}(2z)p_{\theta}(y\mid k)dz$
-$x = argmax_k((x_t-x_u+x_v)^T*x_m)/(||x_b-x_k+x_l||)$
+$x = argmax_k((x_t - x_u + x_v)^T * x_m) / (||x_b - x_k + x_l||)$
 ```
 
-$f(x)= if x < x_{min} : (x/x_{min})^a$
+$f(x)= if \; x < x_{min} : (x/x_{min})^a$
 $otherwise : 0$
 $P(w)=U(x/2)(7/5)/Z$
 $p_{\theta}(x) = \int p_{\theta}(2z)p_{\theta}(y\mid k)dz$
-$x = argmax_k((x_t-x_u+x_v)^T*x_m)/(||x_b-x_k+x_l||)$
+$x = argmax_k((x_t - x_u + x_v)^T * x_m) / (||x_b - x_k + x_l||)$
 
 ### 4.2. 블록(block)
 
 ```md
 $$
-f(x)= if x < x_{min} : (x/x_{min})^a
+f(x)= if \; x < x_{min} : (x/x_{min})^a
 otherwise : 0
 P(w)=U(x/2)(7/5)/Z
 p_{\theta}(x) = \int p_{\theta}(2z)p_{\theta}(y\mid k)dz
@@ -306,7 +307,7 @@ $$
 ```
 
 $$
-f(x)= if x < x_{min} : (x/x_{min})^a \\
+f(x)= if \; x < x_{min} : (x/x_{min})^a \\
 otherwise : 0 \\
 P(w)=U(x/2)(7/5)/Z \\
 p_{\theta}(x) = \int p_{\theta}(2z)p_{\theta}(y\mid k)dz \\
