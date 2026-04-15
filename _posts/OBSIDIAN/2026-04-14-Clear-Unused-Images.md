@@ -101,31 +101,19 @@ tags: [OBSIDIAN, COMMUNITY PLUGINS]
 
 ### 3.1. `Deleted Image Destination`
 
-가장 먼저 설정해야 하는 항목이다.
-
-의미:
-
-* 삭제된 이미지를 어디로 보낼지 정하는 옵션
+삭제된 이미지를 어디로 보낼지 정하는 옵션
 
 선택지:
 
-* `Move to Obsidian Trash`
-* `Move to System Trash`
-* `Permanently Delete`
-
-초보자 해석:
-
-* **Obsidian Trash**: Obsidian 볼트 내부 `.trash` 폴더로 이동
-* **System Trash**: 운영체제 휴지통으로 이동
-* **Permanently Delete**: 복구 없이 바로 삭제
+* `Move to Obsidian Trash`: Obsidian 볼트 내부 `.trash` 폴더로 이동
+* `Move to System Trash`: 운영체제 휴지통으로 이동
+* `Permanently Delete`: 복구 없이 바로 삭제
 
 ### 3.2. `Excluded Folder Full Paths`
 
-의미:
+검사에서 제외할 폴더 전체 경로를 적는 설정
 
-* 검사에서 제외할 폴더 전체 경로를 적는 설정
-
-README 설명대로 **쉼표로 여러 폴더를 구분**할 수 있고, **Vault 기준 전체 경로**를 넣어야 한다.
+**쉼표로 여러 폴더를 구분**할 수 있고, **Vault 기준 전체 경로**를 넣어야 한다.
 
 예시:
 
@@ -135,17 +123,15 @@ README 설명대로 **쉼표로 여러 폴더를 구분**할 수 있고, **Vault
 
 ### 3.3. `Exclude Subfolders`
 
-의미:
-
-* 위에서 제외한 폴더의 **하위 폴더까지 함께 제외**할지 정하는 옵션
+위에서 제외한 폴더의 **하위 폴더까지 함께 제외**할지 정하는 옵션
 
 ### 3.4. `Delete Logs`
 
-README에는 이 옵션을 켜면 삭제 완료 후 어떤 이미지가 지워졌는지 **팝업 로그(modal)** 를 볼 수 있다고 설명한다.
+삭제 완료 후 어떤 이미지가 지워졌는지 **팝업 로그(modal)** 를 볼 지 정하는 옵션
 
 ### 3.5. `Ribbon Icon`
 
-README에는 리본 아이콘을 활성화해서 왼쪽 리본에서 바로 실행할 수 있다고 나온다.
+리본 아이콘을 활성화해서 왼쪽 리본에서 바로 실행할 수 있게 하는 옵션
 
 ## 4. 사용 예시
 
