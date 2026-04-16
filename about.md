@@ -401,18 +401,46 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     })
   }
 
-  function lineInsetAt(y) {
-    const { startY } = getLineMetrics()
+  function getLineSegmentsAt(y) {
+    const { startX, usableWidth } = getLineMetrics()
+    const columnLeft = startX
+    const columnRight = startX + usableWidth
     const lineTop = y - state.fontSize
     const lineBottom = lineTop + state.lineHeight
 
+    const shapeLeft = state.dropcap.x
+    const shapeRight = state.dropcap.x + state.dropcap.width
     const shapeTop = state.dropcap.y
     const shapeBottom = state.dropcap.y + state.dropcap.height
 
-    const overlaps = lineBottom > shapeTop && lineTop < shapeBottom
-    if (!overlaps) return 0
+    const overlapsVertically = lineBottom > shapeTop && lineTop < shapeBottom
+    if (!overlapsVertically) {
+      return [{ x: columnLeft, width: usableWidth }]
+    }
 
-    return state.dropcap.x + state.dropcap.width - getLineMetrics().startX + 20
+    const gutter = 18
+    const leftWidth = Math.max(0, shapeLeft - columnLeft - gutter)
+    const rightX = shapeRight + gutter
+    const rightWidth = Math.max(0, columnRight - rightX)
+    const segments = []
+
+    if (leftWidth >= 120) {
+      segments.push({ x: columnLeft, width: leftWidth })
+    }
+
+    if (rightWidth >= 120) {
+      segments.push({ x: rightX, width: rightWidth })
+    }
+
+    if (segments.length === 0) {
+      if (shapeLeft - columnLeft > columnRight - shapeRight) {
+        return [{ x: columnLeft, width: Math.max(80, shapeLeft - columnLeft - gutter) }]
+      }
+
+      return [{ x: rightX, width: Math.max(80, columnRight - rightX) }]
+    }
+
+    return segments
   }
 
   function renderText() {
@@ -423,31 +451,48 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     copyEl.style.lineHeight = `${state.lineHeight}px`
     copyEl.style.width = `${state.columnWidth}px`
 
-    const { startX, startY, usableWidth, paddingX } = getLineMetrics()
+    const { startY, paddingX } = getLineMetrics()
     let cursor = { segmentIndex: 0, graphemeIndex: 0 }
     let lineIndex = 0
     let maxBottom = startY
-    let maxInset = 0
+    let maxExclusion = 0
+    let finished = false
 
-    while (true) {
+    while (!finished) {
       const y = startY + lineIndex * state.lineHeight
-      const inset = lineInsetAt(y)
-      const width = Math.max(80, usableWidth - inset)
-      const range = layoutNextLineRange(state.prepared, cursor, width)
-      if (range === null) break
+      const segments = getLineSegmentsAt(y)
+      let renderedOnThisLine = false
 
-      const line = materializeLineRange(state.prepared, range)
-      const div = document.createElement('div')
-      div.className = 'manuscript-line'
-      div.textContent = line.text
-      div.style.left = `${startX + inset}px`
-      div.style.top = `${y}px`
-      div.style.width = `${line.width}px`
-      copyEl.appendChild(div)
+      for (const segment of segments) {
+        const width = Math.max(80, segment.width)
+        const range = layoutNextLineRange(state.prepared, cursor, width)
+
+        if (range === null) {
+          finished = true
+          break
+        }
+
+        const line = materializeLineRange(state.prepared, range)
+        const div = document.createElement('div')
+        div.className = 'manuscript-line'
+        div.textContent = line.text
+        div.style.left = `${segment.x}px`
+        div.style.top = `${y}px`
+        div.style.width = `${line.width}px`
+        copyEl.appendChild(div)
+
+        cursor = range.end
+        renderedOnThisLine = true
+      }
+
+      if (!renderedOnThisLine) break
+
+      if (segments.length > 1) {
+        const lineExclusion = state.columnWidth - segments.reduce((sum, segment) => sum + segment.width, 0)
+        maxExclusion = Math.max(maxExclusion, lineExclusion)
+      }
 
       maxBottom = y + state.lineHeight
-      maxInset = Math.max(maxInset, inset)
-      cursor = range.end
       lineIndex += 1
     }
 
@@ -455,7 +500,7 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     canvasEl.style.minHeight = `${Math.max(860, maxBottom + 80)}px`
     lineCountEl.textContent = String(lineIndex)
     heightEl.textContent = `${Math.round(maxBottom)}px`
-    insetEl.textContent = `${Math.round(maxInset)}px`
+    insetEl.textContent = `${Math.round(maxExclusion)}px`
   }
 
   function renderDropcap() {
