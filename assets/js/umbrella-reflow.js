@@ -35,9 +35,6 @@ const MAX_SPLASHES = 500;
 const PHRASE = "umbrella reflow sheltered text rain ";
 const MOBILE_MEDIA = window.matchMedia("(pointer: coarse), (max-width: 768px)");
 
-// 네가 프로젝트에 넣을 우산 이미지 경로로 바꿔서 사용
-
-const canvas = document.getElementById("umbrella-rain-canvas");
 const UMBRELLA_SRC = canvas.dataset.umbrellaSrc;
 
 let width = 0;
