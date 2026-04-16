@@ -326,6 +326,16 @@ function pseudoRandom(seed) {
   return x - Math.floor(x);
 }
 
+function wrapX(x, minX, maxX) {
+  const range = maxX - minX;
+  let value = x;
+
+  while (value < minX) value += range;
+  while (value >= maxX) value -= range;
+
+  return value;
+}
+
 function drawRain(dt) {
   for (let colIndex = 0; colIndex < columns.length; colIndex++) {
     const col = columns[colIndex];
@@ -354,7 +364,13 @@ function drawRain(dt) {
         // 현재 y 위치까지 내려오면서 바람에 밀린 양
         const fallRatio = Math.max(0, Math.min(1, drawY / Math.max(height, 1)));
         const windOffsetX = col.driftX * 0.15 + wind.strength * fallRatio * 70;
-        const drawX = col.x + windOffsetX;
+        
+        // 화면 밖으로 나가면 반대편으로 순환
+        const drawX = wrapX(
+          col.x + windOffsetX,
+          -COL_SPACING,
+          width + COL_SPACING
+        );
 
         const shelterInfo = getShelterStrength(drawX, drawY, umbrella.x, umbrella.y);
 
