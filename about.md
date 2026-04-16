@@ -407,40 +407,55 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     const columnRight = startX + usableWidth
 
     // manuscript-line 요소는 top=y로 배치되므로,
-    // 실제 충돌 판정도 baseline 보정이 아니라 렌더링 박스 기준으로 계산한다.
+    // 실제 충돌 판정도 렌더링 박스 기준으로 계산한다.
     const lineTop = y
     const lineBottom = y + state.lineHeight
 
-    const shapeLeft = state.dropcap.x
-    const shapeRight = state.dropcap.x + state.dropcap.width
-    const shapeTop = state.dropcap.y
-    const shapeBottom = state.dropcap.y + state.dropcap.height
+    // 텍스트가 이미지에 바짝 붙거나 위쪽에서 살짝 겹쳐 보이지 않도록
+    // 실제 드롭캡보다 조금 더 큰 exclusion box를 사용한다.
+    const exclusionPadding = {
+      top: Math.max(10, Math.round(state.fontSize * 0.35)),
+      right: 24,
+      bottom: 16,
+      left: 24,
+    }
+
+    const shapeLeft = state.dropcap.x - exclusionPadding.left
+    const shapeRight = state.dropcap.x + state.dropcap.width + exclusionPadding.right
+    const shapeTop = state.dropcap.y - exclusionPadding.top
+    const shapeBottom = state.dropcap.y + state.dropcap.height + exclusionPadding.bottom
 
     const overlapsVertically = lineBottom > shapeTop && lineTop < shapeBottom
     if (!overlapsVertically) {
       return [{ x: columnLeft, width: usableWidth }]
     }
 
-    const gutter = 24
-    const leftWidth = Math.max(0, shapeLeft - columnLeft - gutter)
-    const rightX = shapeRight + gutter
+    const leftWidth = Math.max(0, shapeLeft - columnLeft)
+    const rightX = shapeRight
     const rightWidth = Math.max(0, columnRight - rightX)
+    const minSegmentWidth = Math.max(120, Math.round(state.fontSize * 4.2))
     const segments = []
 
-    if (leftWidth >= 120) {
+    if (leftWidth >= minSegmentWidth) {
       segments.push({ x: columnLeft, width: leftWidth })
     }
 
-    if (rightWidth >= 120) {
+    if (rightWidth >= minSegmentWidth) {
       segments.push({ x: rightX, width: rightWidth })
     }
 
+    // 양쪽 공간이 모두 너무 좁으면, 더 넓은 한쪽만 사용한다.
     if (segments.length === 0) {
-      if (shapeLeft - columnLeft > columnRight - shapeRight) {
-        return [{ x: columnLeft, width: Math.max(80, shapeLeft - columnLeft - gutter) }]
+      if (leftWidth >= rightWidth && leftWidth > 0) {
+        return [{ x: columnLeft, width: Math.max(80, leftWidth) }]
       }
 
-      return [{ x: rightX, width: Math.max(80, columnRight - rightX) }]
+      if (rightWidth > 0) {
+        return [{ x: rightX, width: Math.max(80, rightWidth) }]
+      }
+
+      // 드롭캡이 줄 전체를 사실상 덮는 구간이면 이 줄은 비워두고 다음 줄로 넘긴다.
+      return []
     }
 
     return segments
