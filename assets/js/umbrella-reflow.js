@@ -22,8 +22,9 @@ const FONT_FAMILY =
   `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace`;
 const FONT = `${FONT_SIZE}px ${FONT_FAMILY}`;
 
-const UMBRELLA_WIDTH = 150;   // 이미지 표시 크기
-const UMBRELLA_HEIGHT = 120;  // 이미지 표시 크기
+// 가로:세로 비율 = 5:4
+const UMBRELLA_WIDTH = 220;   // 이미지 표시 크기
+const UMBRELLA_HEIGHT = 176;  // 이미지 표시 크기
 
 // 충돌 판정용 우산 반경/높이
 const UMBRELLA_RADIUS = 65;
@@ -305,7 +306,7 @@ function drawUmbrellaImage(x, y) {
 
   // x, y를 우산 중앙 기준으로 사용
   const drawX = x - UMBRELLA_WIDTH / 2;
-  const drawY = y - UMBRELLA_HEIGHT * 0.42;
+  const drawY = y - UMBRELLA_HEIGHT * 0.46;
 
   ctx.drawImage(
     umbrellaImg,
