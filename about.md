@@ -405,8 +405,11 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     const { startX, usableWidth } = getLineMetrics()
     const columnLeft = startX
     const columnRight = startX + usableWidth
-    const lineTop = y - state.fontSize
-    const lineBottom = lineTop + state.lineHeight
+
+    // manuscript-line 요소는 top=y로 배치되므로,
+    // 실제 충돌 판정도 baseline 보정이 아니라 렌더링 박스 기준으로 계산한다.
+    const lineTop = y
+    const lineBottom = y + state.lineHeight
 
     const shapeLeft = state.dropcap.x
     const shapeRight = state.dropcap.x + state.dropcap.width
@@ -418,7 +421,7 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
       return [{ x: columnLeft, width: usableWidth }]
     }
 
-    const gutter = 18
+    const gutter = 24
     const leftWidth = Math.max(0, shapeLeft - columnLeft - gutter)
     const rightX = shapeRight + gutter
     const rightWidth = Math.max(0, columnRight - rightX)
