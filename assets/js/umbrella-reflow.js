@@ -187,13 +187,15 @@ function lerp(current, target, factor) {
   return current + (target - current) * factor;
 }
 
-function isUnderUmbrella(px, py, ux, uy) {
+function getShelterStrength(px, py, ux, uy) {
   const canopyTop = uy - UMBRELLA_HEIGHT * 0.34;
   const canopyBottom = uy + UMBRELLA_HEIGHT * 0.02;
   const groundY = height;
 
   // 우산 위쪽은 보호 안 됨
-  if (py < canopyTop || py > canopyBottom) return false;
+  if (py < canopyTop) {
+    return { canopy: 0, shelter: 0 };
+  }
 
   // 1) 캐노피 자체 영역
   // 위쪽은 둥근 우산 느낌 나게 타원으로 판정
@@ -204,27 +206,35 @@ function isUnderUmbrella(px, py, ux, uy) {
   const dx = px - ux;
   const dy = py - domeCenterY;
 
-  const inDome = ((dx * dx) / (rx * rx) + (dy * dy) / (ry * ry)) <= 1.0;
-  if (py <= canopyBottom && inDome) return true;
+  const inCanopy =
+    py <= canopyBottom &&
+    ((dx * dx) / (rx * rx) + (dy * dy) / (ry * ry)) <= 1.0;
+
+  if (inCanopy) {
+    return { canopy: 1, shelter: 0 };
+  }
 
   // 2) 우산 아래 sheltered zone
   // 우산 밑면에서 시작해서 바닥까지 내려가며 폭이 점점 줄어듦
   if (py > canopyBottom && py <= groundY) {
     const t = (py - canopyBottom) / (groundY - canopyBottom);
-
     // 완만하게 줄어들도록 ease-out
     const eased = 1 - Math.pow(1 - t, 2);
 
     const topHalfWidth = UMBRELLA_WIDTH * 0.42;
     const bottomHalfWidth = UMBRELLA_WIDTH * 0.22;
-
     const currentHalfWidth =
       topHalfWidth + (bottomHalfWidth - topHalfWidth) * eased;
 
-    return Math.abs(px - ux) <= currentHalfWidth;
+    if (Math.abs(px - ux) <= currentHalfWidth) {
+      return {
+        canopy: 0,
+        shelter: 0.85 - eased * 0.6, // 0.85 -> 0.25
+      };
+    }
   }
 
-  return false;
+  return { canopy: 0, shelter: 0 };
 }
 
 function spawnSplash(x) {
@@ -292,14 +302,18 @@ function drawRain(dt) {
         if (drawY < -CHAR_HEIGHT || drawY > height + CHAR_HEIGHT) continue;
         // 깊이에 따라 sheltered zone 적용 강도 차등
         // 먼 배경 비는 우산 뒤로 지나가고 가까울수록 차단
-        const shelterStrength = Math.max(0, Math.min(1, (col.depth - 0.12) / 0.78));
-        const blockedByUmbrella =
-          isUnderUmbrella(col.x, drawY, umbrella.x, umbrella.y) &&
-          pseudoRandom(colIndex * 10000 + i + 777) < shelterStrength;
-
-        if (blockedByUmbrella) continue;
-
         const seed = colIndex * 10000 + i;
+        const shelterInfo = getShelterStrength(col.x, drawY, umbrella.x, umbrella.y);
+
+        // 캐노피(원단)는 depth와 무관하게 전부 차단
+        if (shelterInfo.canopy > 0) continue;
+
+        // sheltered zone만 depth 영향을 받게
+        const depthMask = 0.25 + col.depth * 0.75;
+        const blockChance = shelterInfo.shelter * depthMask;
+
+        if (pseudoRandom(seed + 777) < blockChance) continue;
+
         const keep = pseudoRandom(seed) < col.density;
         if (!keep) continue;
 
