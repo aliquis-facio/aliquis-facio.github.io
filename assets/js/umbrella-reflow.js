@@ -120,21 +120,29 @@ function createColumns() {
   columns = [];
   const colCount = Math.floor(width / COL_SPACING);
   const glyphs = buildColumnGlyphs(PHRASE, height);
-
+  
   for (let i = 0; i < colCount; i++) {
+    const depth = Math.random(); // 0: 배경, 1: 전경
+    const lightness = 68 - depth * 14; // 전경일수록 조금 더 진하게
+    const rainColor = `hsl(212 62% ${lightness}%)`;
+
     columns.push({
       x: i * COL_SPACING + COL_SPACING / 2,
       glyphs,
       y: Math.random() * height,
-      speed: 60 + Math.random() * 30,
-      density: 0.35 + Math.random() * 0.45,
+
+      // 전경일수록 조금 빠르게
+      speed: 52 + depth * 26 + Math.random() * 14,
+      // 전경일수록 더 많이 보이게
+      density: 0.28 + depth * 0.32 + Math.random() * 0.12,
+      // 전경일수록 진하게
+      alpha: 0.20 + depth * 0.45,
+      color: rainColor,
+      // 전경일수록 살짝 크게
+      fontScale: 0.92 + depth * 0.16,
+      depth,
     });
   }
-}
-
-function pseudoRandom(seed) {
-  const x = Math.sin(seed * 127.1) * 43758.5453123;
-  return x - Math.floor(x);
 }
 
 function updatePointerTarget(clientX, clientY) {
@@ -260,15 +268,21 @@ function updateAndDrawSplashes(dt) {
   splashes = next;
 }
 
-function drawRain(dt) {
-  ctx.font = FONT;
+function pseudoRandom(seed) {
+  const x = Math.sin(seed * 127.1) * 43758.5453123;
+  return x - Math.floor(x);
+}
 
+function drawRain(dt) {
   for (let colIndex = 0; colIndex < columns.length; colIndex++) {
     const col = columns[colIndex];
     col.y += col.speed * dt;
 
     const blockH = col.glyphs.length * CHAR_HEIGHT;
     if (col.y >= blockH) col.y -= blockH;
+
+    const fontSize = FONT_SIZE * col.fontScale;
+    ctx.font = `${fontSize}px ${FONT_FAMILY}`;
 
     for (let i = 0; i < col.glyphs.length; i++) {
       const baseY = i * CHAR_HEIGHT + col.y;
@@ -278,18 +292,19 @@ function drawRain(dt) {
         if (drawY < -CHAR_HEIGHT || drawY > height + CHAR_HEIGHT) continue;
         if (isUnderUmbrella(col.x, drawY, umbrella.x, umbrella.y)) continue;
 
-        // 안정적인 랜덤 밀도 판정
         const seed = colIndex * 10000 + i;
         const keep = pseudoRandom(seed) < col.density;
         if (!keep) continue;
 
-        // 살짝 투명도 차이도 주기
-        const alpha = 0.45 + pseudoRandom(seed + 17) * 0.35;
+        // 각 문자마다 약간의 밝기/투명도 차이
+        const flicker = 0.82 + pseudoRandom(seed + 31) * 0.28;
+        const alpha = Math.min(1, col.alpha * flicker);
+
         ctx.globalAlpha = alpha;
-        ctx.fillStyle = "#4a8ed4";
+        ctx.fillStyle = col.color;
         ctx.fillText(col.glyphs[i], col.x, drawY);
 
-        if (drawY > height - CHAR_HEIGHT * 2 && Math.random() < 0.008) {
+        if (drawY > height - CHAR_HEIGHT * 2 && Math.random() < 0.005) {
           spawnSplash(col.x);
         }
       }
@@ -297,6 +312,7 @@ function drawRain(dt) {
   }
 
   ctx.globalAlpha = 1;
+  ctx.font = FONT;
 }
 
 function drawUmbrellaImage(x, y) {
