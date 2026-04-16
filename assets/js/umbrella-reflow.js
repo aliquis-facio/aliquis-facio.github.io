@@ -292,6 +292,21 @@ function pseudoRandom(seed) {
   return x - Math.floor(x);
 }
 
+function getCanopySurfaceY(px, ux, uy) {
+  const rx = UMBRELLA_WIDTH * 0.45;
+  const topY = uy - UMBRELLA_HEIGHT * 0.34;
+  const rimY = uy + UMBRELLA_HEIGHT * 0.01;
+
+  const dx = px - ux;
+  const nx = dx / rx;
+
+  if (Math.abs(nx) > 1) return null;
+
+  // 반원형보다 살짝 납작한 캐노피 윗선
+  const curve = Math.sqrt(1 - nx * nx);
+  return rimY - curve * (rimY - topY);
+}
+
 function drawRain(dt) {
   for (let colIndex = 0; colIndex < columns.length; colIndex++) {
     const col = columns[colIndex];
@@ -317,12 +332,12 @@ function drawRain(dt) {
         // 캐노피(원단)는 depth와 무관하게 전부 차단
         // 캐노피(원단)와 만날 때 작은 splash 생성
         if (shelterInfo.canopy > 0) {
-          const canopyY = umbrella.y + UMBRELLA_HEIGHT * 0.02;
+          const surfaceY = getCanopySurfaceY(col.x, umbrella.x, umbrella.y);
           const side = Math.sign(col.x - umbrella.x) || (Math.random() < 0.5 ? -1 : 1);
 
           // 너무 많이 튀지 않게 낮은 확률로만 생성
           if (pseudoRandom(seed + 333) < 0.025) {
-            spawnSplashBurst(col.x, canopyY, {
+            spawnSplashBurst(col.x, surfaceY - 2, {
               count: 2,
               spreadX: 10,
               minVy: 6,
