@@ -20,7 +20,7 @@ tags:
 <section class="umbrella-reflow-section">
   <canvas
   id="umbrella-rain-canvas"
-  data-umbrella-src="{{ '/_image/2026-04-16-umbrella.svg' | relative_url }}"
+  data-umbrella-src="{{ '/assets/img/2026-04-16-umbrella.svg' | relative_url }}"
 ></canvas>
   <p class="umbrella-rain-hint">
     Move your cursor to drag the umbrella around. Text falls like rain in vertical columns — characters under the umbrella are blocked, creating the sheltered zone. On mobile, the umbrella sways automatically.
@@ -38,3 +38,5 @@ ASCII ART나 테두리를 글로 하는
 "우산"이 내린다
 "우박"이 내린다, 사람이 맞고 쓰러진다 혹은 자동차 범퍼가 찌그러진다
 "눈"이 내린다, 눈사람이 있고, 눈이 쌓인다
+바람이 불면 바람 방향에 맞춰서 비 내리는 방향이 대각선이 된다
+우박은 그 바람의 영향을 덜 받고 눈과 비, 우산은 많이 받는다
