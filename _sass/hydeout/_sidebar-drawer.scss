@@ -45,35 +45,53 @@ $g-700: #374151;
 
   /* 햄버거 버튼 */
   .drawer-hamburger {
-    position: fixed; top: .5rem; left: .5rem;
-    width: $hamb-size; height: $hamb-size;
-    border-radius: $hamb-radius;
-    border: 1px solid $g-200;
+    position: fixed;
+    top: .5rem;
+    left: .5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
     background: rgba(255,255,255,.92);
-    color: $g-500;
-    display: flex; align-items: center; justify-content: center;
+    color: #6b7280;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
     box-shadow: 0 2px 6px rgba(0,0,0,.15);
     cursor: pointer;
-    z-index: $z-hamburger;
+    z-index: 3100;
     -webkit-tap-highlight-color: transparent;
+  }
 
-    &:hover {
-      color: $g-600 !important;
-      background: $g-100 !important;
-      border-color: $g-200 !important;
-    }
-    &:active {
-      color: $g-700 !important;
-      background: $g-200 !important;
-    }
-    &:focus { outline: none; }
-    &:focus-visible { @include focus-ring($g-400); }
+  .drawer-hamburger span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+  }
 
-    svg, svg * {
-      width: $hamb-icon-size; height: $hamb-icon-size;
-      stroke: currentColor !important;
-      fill: none;
-    }
+  .drawer-hamburger:hover {
+    color: #4b5563 !important;
+    background: #f3f4f6 !important;
+    border-color: #e5e7eb !important;
+  }
+
+  .drawer-hamburger:active {
+    color: #374151 !important;
+    background: #e5e7eb !important;
+  }
+
+  .drawer-hamburger:focus {
+    outline: none;
+  }
+
+  .drawer-hamburger:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(107,114,128,.35);
+    border-color: #9ca3af;
   }
 
   /* 사이드바 닫기 버튼 */
