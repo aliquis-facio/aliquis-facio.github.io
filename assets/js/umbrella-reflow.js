@@ -22,16 +22,22 @@ const FONT_FAMILY =
   `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace`;
 const FONT = `${FONT_SIZE}px ${FONT_FAMILY}`;
 
+const UMBRELLA_WIDTH = 150;   // 이미지 표시 크기
+const UMBRELLA_HEIGHT = 120;  // 이미지 표시 크기
+
+// 충돌 판정용 우산 반경/높이
 const UMBRELLA_RADIUS = 65;
 const HANDLE_LEN = 80;
-const CANOPY_HEIGHT = UMBRELLA_RADIUS * 0.75;
 
 const SPLASH_GRAVITY = 120;
 const MAX_SPLASHES = 500;
 
-const PHRASE =
-  "umbrella reflow sheltered text rain ";
+const PHRASE = "umbrella reflow sheltered text rain ";
 const MOBILE_MEDIA = window.matchMedia("(pointer: coarse), (max-width: 768px)");
+
+// 네가 프로젝트에 넣을 우산 이미지 경로로 바꿔서 사용
+
+const UMBRELLA_SRC = "/_image/2026-04-16-umbrella.svg";
 
 let width = 0;
 let height = 0;
@@ -52,6 +58,16 @@ const umbrella = {
   y: 0,
   tx: 0,
   ty: 0,
+};
+
+const umbrellaImg = new Image();
+let umbrellaImgLoaded = false;
+umbrellaImg.src = UMBRELLA_SRC;
+umbrellaImg.onload = () => {
+  umbrellaImgLoaded = true;
+};
+umbrellaImg.onerror = () => {
+  console.error("Failed to load umbrella image:", UMBRELLA_SRC);
 };
 
 function resizeCanvas() {
@@ -76,7 +92,6 @@ function resizeCanvas() {
 }
 
 function buildColumnGlyphs(phrase, targetHeight) {
-  // Enough text to fill 2x canvas height for seamless wrap
   const charsNeeded = Math.ceil((targetHeight * 2) / CHAR_HEIGHT) + 10;
 
   let raw = "";
@@ -84,10 +99,8 @@ function buildColumnGlyphs(phrase, targetHeight) {
     raw += phrase;
   }
 
-  // Visible separator for whitespace in vertical flow
   raw = raw.replace(/ /g, "·");
 
-  // Use Pretext to force very narrow line layout so each grapheme becomes a line.
   const prepared = prepareWithSegments(raw, FONT, {
     whiteSpace: "pre-wrap",
     wordBreak: "keep-all",
@@ -97,9 +110,8 @@ function buildColumnGlyphs(phrase, targetHeight) {
 
   const glyphs = [];
   for (const line of lines) {
-    const text = line.text;
-    if (!text) continue;
-    glyphs.push(text);
+    if (!line.text) continue;
+    glyphs.push(line.text);
   }
 
   return glyphs;
@@ -163,13 +175,16 @@ function lerp(current, target, factor) {
 }
 
 function isUnderUmbrella(px, py, ux, uy) {
-  const R = UMBRELLA_RADIUS;
-  const canopyH = R * 0.75;
+  // 이미지 기준 충돌 판정
+  const canopyTop = uy - UMBRELLA_HEIGHT * 0.36;
+  const canopyBottom = uy + UMBRELLA_HEIGHT * 0.08;
+  const shelterBottom = uy + UMBRELLA_HEIGHT * 0.78;
+  const shelterHalfWidth = UMBRELLA_WIDTH * 0.42;
 
-  if (py < uy - canopyH) return false;
+  if (py < canopyTop) return false;
 
-  if (py < uy + HANDLE_LEN + 20) {
-    return Math.abs(px - ux) < R;
+  if (py <= shelterBottom) {
+    return Math.abs(px - ux) < shelterHalfWidth;
   }
 
   return false;
@@ -228,8 +243,6 @@ function drawRain(dt) {
 
     for (let i = 0; i < col.glyphs.length; i++) {
       const baseY = i * CHAR_HEIGHT + col.y;
-
-      // Draw two copies for seamless vertical wrap
       const drawPositions = [baseY - blockH, baseY];
 
       for (const drawY of drawPositions) {
@@ -246,71 +259,22 @@ function drawRain(dt) {
   }
 }
 
-function drawUmbrella(x, y) {
-  const R = UMBRELLA_RADIUS;
-  const canopyH = R * 0.75;
-  const panelW = (R * 2) / 3;
-  const tipDrop = R * 0.35;
-
-  const leftX = x - R;
-  const rightX = x + R;
-  const domeTop = y - canopyH;
-  const panelBaseY = y;
+function drawUmbrellaImage(x, y) {
+  if (!umbrellaImgLoaded) return;
 
   ctx.save();
 
-  // canopy fill
-  ctx.beginPath();
-  ctx.moveTo(leftX, y + tipDrop * 0.5);
-  ctx.bezierCurveTo(
-    leftX,
-    y - canopyH * 1.6,
-    rightX,
-    y - canopyH * 1.6,
-    rightX,
-    panelBaseY
+  // x, y를 우산 중앙 기준으로 사용
+  const drawX = x - UMBRELLA_WIDTH / 2;
+  const drawY = y - UMBRELLA_HEIGHT * 0.42;
+
+  ctx.drawImage(
+    umbrellaImg,
+    drawX,
+    drawY,
+    UMBRELLA_WIDTH,
+    UMBRELLA_HEIGHT
   );
-
-  let currentX = rightX;
-  for (let i = 2; i >= 0; i--) {
-    const startX = x - R + panelW * i;
-    const endX = x - R + panelW * (i + 1);
-    const midX = (startX + endX) / 2;
-    ctx.quadraticCurveTo(midX, y + tipDrop, startX, y);
-    currentX = startX;
-  }
-
-  ctx.closePath();
-  ctx.fillStyle = "#6aa2df";
-  ctx.fill();
-
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = "#2e5d91";
-  ctx.stroke();
-
-  // ribs
-  ctx.beginPath();
-  ctx.moveTo(x, y - canopyH * 0.9);
-  ctx.lineTo(x, y + tipDrop * 0.15);
-  ctx.moveTo(x - R * 0.52, y - canopyH * 0.48);
-  ctx.lineTo(x - R * 0.34, y + tipDrop * 0.12);
-  ctx.moveTo(x + R * 0.52, y - canopyH * 0.48);
-  ctx.lineTo(x + R * 0.34, y + tipDrop * 0.12);
-  ctx.strokeStyle = "rgba(46, 93, 145, 0.45)";
-  ctx.stroke();
-
-  // pole
-  ctx.beginPath();
-  ctx.moveTo(x, domeTop + 4);
-  ctx.lineTo(x, y + 80);
-  ctx.strokeStyle = "#27496d";
-  ctx.lineWidth = 2.5;
-  ctx.stroke();
-
-  // J-hook handle
-  ctx.beginPath();
-  ctx.arc(x - 12, y + 80, 12, 0, Math.PI, false);
-  ctx.stroke();
 
   ctx.restore();
 }
@@ -336,7 +300,7 @@ function render(now) {
   drawGroundGlow();
   drawRain(dt);
   updateAndDrawSplashes(dt);
-  drawUmbrella(umbrella.x, umbrella.y);
+  drawUmbrellaImage(umbrella.x, umbrella.y);
 
   requestAnimationFrame(render);
 }
