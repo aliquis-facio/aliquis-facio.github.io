@@ -1,4 +1,4 @@
-import { prepareWithSegments, layoutNextLineRange, materializeLineRange } from 'https://cdn.jsdelivr.net/npm/@chenglou/pretext@0.0.4/+esm';
+import { prepareWithSegments, layoutNextLine } from 'https://cdn.jsdelivr.net/npm/@chenglou/pretext@0.0.5/+esm';
 
 const canvas = document.getElementById('umbrella-canvas');
 const stage = document.getElementById('umbrella-stage');
@@ -143,9 +143,8 @@ function getAvailableSlots(lineY) {
 }
 
 function chooseSlotForWidth(slots, width) {
-  for (const slot of slots) {
-    if (slot.width >= width) return slot;
-  }
+  const fitting = slots.find(slot => slot.width >= width);
+  if (fitting) return fitting;
 
   return slots.reduce((best, slot) => {
     if (!best) return slot;
@@ -162,31 +161,31 @@ function buildLinesAroundUmbrella() {
 
   for (let guard = 0; guard < 500; guard += 1) {
     const slots = getAvailableSlots(y);
-    const primarySlot = chooseSlotForWidth(slots, Infinity) || slots[0];
-    const maxWidth = primarySlot.width;
+    const widestSlot = slots.reduce((best, slot) => {
+      if (!best) return slot;
+      return slot.width > best.width ? slot : best;
+    }, null);
 
-    const range = layoutNextLineRange(state.prepared, cursor, maxWidth);
-    if (!range) break;
+    if (!widestSlot || widestSlot.width <= 0) break;
 
-    const text = materializeLineRange(state.prepared, range);
-    const slot = chooseSlotForWidth(slots, range.width) || slots[0];
+    const line = layoutNextLine(state.prepared, cursor, widestSlot.width);
+    if (line === null) break;
+
+    const slot = chooseSlotForWidth(slots, line.width) || widestSlot;
 
     lines.push({
-      text,
+      text: line.text,
       x: slot.x,
       y,
-      width: range.width,
+      width: line.width,
       slotWidth: slot.width,
-      start: range.start,
-      end: range.end,
+      start: line.start,
+      end: line.end,
     });
 
-    cursor = {
-      segmentIndex: range.end.segmentIndex,
-      graphemeIndex: range.end.graphemeIndex,
-    };
-
+    cursor = line.end;
     y += LINE_HEIGHT;
+
     if (y > STAGE_HEIGHT - 20) break;
   }
 
