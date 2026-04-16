@@ -237,17 +237,26 @@ function getShelterStrength(px, py, ux, uy) {
   return { canopy: 0, shelter: 0 };
 }
 
-function spawnSplash(x) {
-  const count = 2 + Math.floor(Math.random() * 2);
+function spawnSplash(x, y, options = {}) {
+  const {
+    count = 3,
+    spreadX = 30,
+    minVy = 20,
+    maxVy = 60,
+    upward = true,
+    drift = 0,
+  } = options;
 
   for (let i = 0; i < count; i++) {
     if (splashes.length >= MAX_SPLASHES) break;
 
+    const vyBase = minVy + Math.random() * (maxVy - minVy);
+
     splashes.push({
       x,
-      y: height - 4,
-      vx: (Math.random() - 0.5) * 30,
-      vy: -(20 + Math.random() * 40),
+      y,
+      vx: (Math.random() - 0.5) * spreadX + drift,
+      vy: upward ? -vyBase : vyBase,
       life: 1,
       size: 1 + Math.random() * 1.5,
     });
@@ -306,7 +315,25 @@ function drawRain(dt) {
         const shelterInfo = getShelterStrength(col.x, drawY, umbrella.x, umbrella.y);
 
         // 캐노피(원단)는 depth와 무관하게 전부 차단
-        if (shelterInfo.canopy > 0) continue;
+        // 캐노피(원단)와 만날 때 작은 splash 생성
+        if (shelterInfo.canopy > 0) {
+          const canopyY = umbrella.y + UMBRELLA_HEIGHT * 0.02;
+          const side = Math.sign(col.x - umbrella.x) || (Math.random() < 0.5 ? -1 : 1);
+
+          // 너무 많이 튀지 않게 낮은 확률로만 생성
+          if (pseudoRandom(seed + 333) < 0.025) {
+            spawnSplashBurst(col.x, canopyY, {
+              count: 2,
+              spreadX: 10,
+              minVy: 6,
+              maxVy: 18,
+              upward: true,
+              drift: side * 8,
+            });
+          }
+
+          continue;
+        }
 
         // sheltered zone만 depth 영향을 받게
         const depthMask = 0.25 + col.depth * 0.75;
@@ -326,7 +353,13 @@ function drawRain(dt) {
         ctx.fillText(col.glyphs[i], col.x, drawY);
 
         if (drawY > height - CHAR_HEIGHT * 2 && Math.random() < 0.005) {
-          spawnSplash(col.x);
+          spawnSplashBurst(col.x, height - 4, {
+            count: 3,
+            spreadX: 30,
+            minVy: 20,
+            maxVy: 60,
+            upward: true,
+          });
         }
       }
     }
