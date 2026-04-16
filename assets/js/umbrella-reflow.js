@@ -37,7 +37,8 @@ const MOBILE_MEDIA = window.matchMedia("(pointer: coarse), (max-width: 768px)");
 
 // 네가 프로젝트에 넣을 우산 이미지 경로로 바꿔서 사용
 
-const UMBRELLA_SRC = "../../_image/2026-04-16-umbrella.svg";
+const canvas = document.getElementById("umbrella-rain-canvas");
+const UMBRELLA_SRC = canvas.dataset.umbrellaSrc;
 
 let width = 0;
 let height = 0;
