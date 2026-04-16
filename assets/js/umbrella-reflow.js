@@ -201,12 +201,16 @@ function isUnderUmbrella(px, py, ux, uy) {
   // 2) 우산 아래 sheltered zone
   // 우산 밑면에서 시작해서 바닥까지 내려가며 폭이 점점 줄어듦
   if (py > canopyBottom && py <= groundY) {
-    const t = (py - canopyBottom) / (groundY - canopyBottom); // 0 ~ 1
+    const t = (py - canopyBottom) / (groundY - canopyBottom);
+
+    // 완만하게 줄어들도록 ease-out
+    const eased = 1 - Math.pow(1 - t, 2);
+
     const topHalfWidth = UMBRELLA_WIDTH * 0.42;
-    const bottomHalfWidth = UMBRELLA_WIDTH * 0.16;
+    const bottomHalfWidth = UMBRELLA_WIDTH * 0.22;
 
     const currentHalfWidth =
-      topHalfWidth + (bottomHalfWidth - topHalfWidth) * t;
+      topHalfWidth + (bottomHalfWidth - topHalfWidth) * eased;
 
     return Math.abs(px - ux) <= currentHalfWidth;
   }
