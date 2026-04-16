@@ -188,18 +188,18 @@ function lerp(current, target, factor) {
 }
 
 function isUnderUmbrella(px, py, ux, uy) {
-  const canopyTop = uy - UMBRELLA_HEIGHT * 0.36;
-  const canopyBottom = uy + UMBRELLA_HEIGHT * 0.08;
+  const canopyTop = uy - UMBRELLA_HEIGHT * 0.34;
+  const canopyBottom = uy + UMBRELLA_HEIGHT * 0.02;
   const groundY = height;
 
   // 우산 위쪽은 보호 안 됨
-  if (py < canopyTop) return false;
+  if (py < canopyTop || py > canopyBottom) return false;
 
   // 1) 캐노피 자체 영역
   // 위쪽은 둥근 우산 느낌 나게 타원으로 판정
-  const domeCenterY = uy - UMBRELLA_HEIGHT * 0.10;
-  const rx = UMBRELLA_WIDTH * 0.46;
-  const ry = UMBRELLA_HEIGHT * 0.30;
+  const domeCenterY = uy - UMBRELLA_HEIGHT * 0.14;
+  const rx = UMBRELLA_WIDTH * 0.45;
+  const ry = UMBRELLA_HEIGHT * 0.24;
 
   const dx = px - ux;
   const dy = py - domeCenterY;
