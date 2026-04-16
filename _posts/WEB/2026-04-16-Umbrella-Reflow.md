@@ -19,6 +19,19 @@ tags:
 
 Move your cursor to drag the umbrella around. Text falls like rain in vertical columns — characters under the umbrella are blocked, creating the sheltered zone. On mobile, the umbrella sways automatically.
 
+<div class="wind-control">
+  <label for="wind-strength">Wind</label>
+  <input
+    id="wind-strength"
+    type="range"
+    min="-1"
+    max="1"
+    step="0.01"
+    value="0"
+  >
+  <span id="wind-strength-value">0.00</span>
+</div>
+
 <section class="umbrella-reflow-section">
   <canvas
   id="umbrella-rain-canvas"

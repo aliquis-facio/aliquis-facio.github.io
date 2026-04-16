@@ -17,9 +17,48 @@
   min-height: 520px;
 }
 
+.wind-control {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(74, 142, 212, 0.12);
+  color: #355777;
+  font-size: 0.9rem;
+}
+
+.wind-control input[type="range"] {
+  width: 140px;
+}
+
+.wind-control span {
+  min-width: 38px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 @media (max-width: 768px) {
   #umbrella-rain-canvas {
     min-height: 460px;
     height: 68vh;
+  }
+
+  .wind-control {
+    top: 12px;
+    right: 12px;
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+
+  .wind-control input[type="range"] {
+    width: 110px;
   }
 }

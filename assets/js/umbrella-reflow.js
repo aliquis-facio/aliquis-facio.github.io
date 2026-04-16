@@ -38,6 +38,11 @@ const MOBILE_MEDIA = window.matchMedia("(pointer: coarse), (max-width: 768px)");
 
 const UMBRELLA_SRC = canvas.dataset.umbrellaSrc;
 
+const windSlider = document.getElementById("wind-strength");
+const windValueEl = document.getElementById("wind-strength-value");
+
+const MAX_WIND_PX_PER_SEC = 90;
+
 let width = 0;
 let height = 0;
 
@@ -59,6 +64,11 @@ const umbrella = {
   ty: 0,
 };
 
+const wind = {
+  strength: 0,   // -1 ~ 1
+  pxPerSec: 0,   // 실제 수평 이동 속도
+};
+
 const umbrellaImg = new Image();
 let umbrellaImgLoaded = false;
 umbrellaImg.src = UMBRELLA_SRC;
@@ -68,6 +78,24 @@ umbrellaImg.onload = () => {
 umbrellaImg.onerror = () => {
   console.error("Failed to load umbrella image:", UMBRELLA_SRC);
 };
+
+if (windSlider) {
+  wind.strength = Number(windSlider.value) || 0;
+  wind.pxPerSec = wind.strength * MAX_WIND_PX_PER_SEC;
+
+  if (windValueEl) {
+    windValueEl.textContent = wind.strength.toFixed(2);
+  }
+
+  windSlider.addEventListener("input", (e) => {
+    wind.strength = Number(e.target.value) || 0;
+    wind.pxPerSec = wind.strength * MAX_WIND_PX_PER_SEC;
+
+    if (windValueEl) {
+      windValueEl.textContent = wind.strength.toFixed(2);
+    }
+  });
+}
 
 function resizeCanvas() {
   const rect = canvas.getBoundingClientRect();
@@ -140,7 +168,8 @@ function createColumns() {
       color: rainColor,
       // 전경일수록 살짝 크게
       fontScale: 0.92 + depth * 0.16,
-      depth,
+      depth, // 깊이
+      driftX: 0, // 바람 누적 오프셋
     });
   }
 }
@@ -203,6 +232,7 @@ function getShelterStrength(px, py, ux, uy) {
   const rx = UMBRELLA_WIDTH * 0.45;
   const ry = UMBRELLA_HEIGHT * 0.24;
 
+  // 캐노피 영역은 바람 영향 없이 우산 원단 자체 기준
   const dx = px - ux;
   const dy = py - domeCenterY;
 
@@ -226,7 +256,11 @@ function getShelterStrength(px, py, ux, uy) {
     const currentHalfWidth =
       topHalfWidth + (bottomHalfWidth - topHalfWidth) * eased;
 
-    if (Math.abs(px - ux) <= currentHalfWidth) {
+    // 바람이 강할수록 sheltered zone 중심축이 기울어짐
+    const shelterShiftX = wind.strength * t * 140;
+    const shelterCenterX = ux + shelterShiftX;
+
+    if (Math.abs(px - shelterCenterX) <= currentHalfWidth) {
       return {
         canopy: 0,
         shelter: 0.85 - eased * 0.6, // 0.85 -> 0.25
@@ -297,6 +331,10 @@ function drawRain(dt) {
     const col = columns[colIndex];
     col.y += col.speed * dt;
 
+    // 전경일수록 바람 영향을 조금 더 받게
+    const windFactor = 0.55 + col.depth * 0.65;
+    col.driftX += wind.pxPerSec * windFactor * dt;
+
     const blockH = col.glyphs.length * CHAR_HEIGHT;
     if (col.y >= blockH) col.y -= blockH;
 
@@ -312,7 +350,13 @@ function drawRain(dt) {
         // 깊이에 따라 sheltered zone 적용 강도 차등
         // 먼 배경 비는 우산 뒤로 지나가고 가까울수록 차단
         const seed = colIndex * 10000 + i;
-        const shelterInfo = getShelterStrength(col.x, drawY, umbrella.x, umbrella.y);
+
+        // 현재 y 위치까지 내려오면서 바람에 밀린 양
+        const fallRatio = Math.max(0, Math.min(1, drawY / Math.max(height, 1)));
+        const windOffsetX = col.driftX * 0.15 + wind.strength * fallRatio * 70;
+        const drawX = col.x + windOffsetX;
+
+        const shelterInfo = getShelterStrength(drawX, drawY, umbrella.x, umbrella.y);
 
         // 캐노피(원단)는 depth와 무관하게 전부 차단
         if (shelterInfo.canopy > 0) {
@@ -334,15 +378,16 @@ function drawRain(dt) {
 
         ctx.globalAlpha = alpha;
         ctx.fillStyle = col.color;
-        ctx.fillText(col.glyphs[i], col.x, drawY);
+        ctx.fillText(col.glyphs[i], drawX, drawY);
 
         if (drawY > height - CHAR_HEIGHT * 2 && Math.random() < 0.005) {
-          spawnSplashBurst(col.x, height - 4, {
+          spawnSplashBurst(drawX, height - 4, {
             count: 3,
             spreadX: 30,
             minVy: 20,
             maxVy: 60,
             upward: true,
+            drift: wind.strength * 8,
           });
         }
       }
