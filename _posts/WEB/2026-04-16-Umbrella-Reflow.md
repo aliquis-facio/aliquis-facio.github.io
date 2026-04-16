@@ -25,3 +25,13 @@ tags:
 </section>
 
 <script type="module" src="{{ '/assets/js/umbrella-reflow.js' | relative_url }}"></script>
+
+pretext demo
+ASCII ART나 테두리를 글로 하는
+기본 배경은 창문이 있는 책상
+창문을 열면 바깥 풍경이 보임
+바깥 풍경은 다음 중 하나임
+"비"가 내린다, 바닥에는 빗방울이 튄다
+"우산"이 내린다
+"우박"이 내린다, 사람이 맞고 쓰러진다 혹은 자동차 범퍼가 찌그러진다
+"눈"이 내린다, 눈사람이 있고, 눈이 쌓인다
