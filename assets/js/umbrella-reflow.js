@@ -290,7 +290,14 @@ function drawRain(dt) {
 
       for (const drawY of drawPositions) {
         if (drawY < -CHAR_HEIGHT || drawY > height + CHAR_HEIGHT) continue;
-        if (isUnderUmbrella(col.x, drawY, umbrella.x, umbrella.y)) continue;
+        // 깊이에 따라 sheltered zone 적용 강도 차등
+        // 먼 배경 비는 우산 뒤로 지나가고 가까울수록 차단
+        const shelterStrength = Math.max(0, Math.min(1, (col.depth - 0.12) / 0.78));
+        const blockedByUmbrella =
+          isUnderUmbrella(col.x, drawY, umbrella.x, umbrella.y) &&
+          pseudoRandom(colIndex * 10000 + i + 777) < shelterStrength;
+
+        if (blockedByUmbrella) continue;
 
         const seed = colIndex * 10000 + i;
         const keep = pseudoRandom(seed) < col.density;
