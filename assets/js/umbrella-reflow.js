@@ -125,9 +125,15 @@ function createColumns() {
       x: i * COL_SPACING + COL_SPACING / 2,
       glyphs,
       y: Math.random() * height,
-      speed: 60 + Math.random() * 50,
+      speed: 60 + Math.random() * 30,
+      density: 0.35 + Math.random() * 0.45,
     });
   }
+}
+
+function pseudoRandom(seed) {
+  const x = Math.sin(seed * 127.1) * 43758.5453123;
+  return x - Math.floor(x);
 }
 
 function updatePointerTarget(clientX, clientY) {
@@ -251,9 +257,9 @@ function updateAndDrawSplashes(dt) {
 
 function drawRain(dt) {
   ctx.font = FONT;
-  ctx.fillStyle = "#4a8ed4";
 
-  for (const col of columns) {
+  for (let colIndex = 0; colIndex < columns.length; colIndex++) {
+    const col = columns[colIndex];
     col.y += col.speed * dt;
 
     const blockH = col.glyphs.length * CHAR_HEIGHT;
@@ -267,14 +273,25 @@ function drawRain(dt) {
         if (drawY < -CHAR_HEIGHT || drawY > height + CHAR_HEIGHT) continue;
         if (isUnderUmbrella(col.x, drawY, umbrella.x, umbrella.y)) continue;
 
+        // 안정적인 랜덤 밀도 판정
+        const seed = colIndex * 10000 + i;
+        const keep = pseudoRandom(seed) < col.density;
+        if (!keep) continue;
+
+        // 살짝 투명도 차이도 주기
+        const alpha = 0.45 + pseudoRandom(seed + 17) * 0.35;
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = "#4a8ed4";
         ctx.fillText(col.glyphs[i], col.x, drawY);
 
-        if (drawY > height - CHAR_HEIGHT * 2 && Math.random() < 0.02) {
+        if (drawY > height - CHAR_HEIGHT * 2 && Math.random() < 0.008) {
           spawnSplash(col.x);
         }
       }
     }
   }
+
+  ctx.globalAlpha = 1;
 }
 
 function drawUmbrellaImage(x, y) {
