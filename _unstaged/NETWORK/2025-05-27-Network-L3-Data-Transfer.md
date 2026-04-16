@@ -28,7 +28,7 @@ SAR (Segmentation and Reassembly): 너무 큰 데이터는 나누고, 수신 측
 * 쪼갤 때 source와 destination 변경 금지
 * 라우터는 내용 변경 금지: 단지 주소만 확인해서 다음 홉으로 포워딩
 * 쪼개놓은 모든 packet 부분에 기존 header와 fragments header가 있어야 한다
-![SAR](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-4.jpg?raw=true)
+![SAR|40](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-4.jpg?raw=true)
 ![SAR in intermediate node](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-7.jpg?raw=true)
 
 * destination에서는 모든 fragments가 도착할 때까지 기다리고 재조립한 후 L4로 전달

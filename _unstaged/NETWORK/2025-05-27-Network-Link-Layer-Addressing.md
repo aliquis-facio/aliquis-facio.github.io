@@ -86,7 +86,7 @@ Hardware Address Length	6 (MAC 주소 길이)
 Protocol Address Length	4 (IPv4 주소 길이)
 Operation	1=Request, 2=Reply
 
-🗂️ 통신 예시 (Alice → Bob)
+통신 예시 (Alice → Bob)
 Alice는 Bob의 IP를 알고 있고, MAC 주소를 모름
 
 ARP Request: Alice → 전체 브로드캐스트로 Bob의 MAC 주소 요청
@@ -95,14 +95,4 @@ ARP Reply: Bob → Alice에게 MAC 주소 응답
 
 데이터 전송: Alice가 Bob의 MAC 주소로 프레임 캡슐화 후 전송
 
-🔁 각 링크(R1, R2 등)에서 프레임은 새롭게 구성되며, 해당 홉의 MAC 주소를 사용
-
-📌 핵심 개념 요약 정리
-개념	설명
-MAC 주소	네트워크 인터페이스 고유 주소 (링크 단위 주소)
-IP 주소	종단 간 논리 주소 (전체 경로 지정)
-ARP	IP 주소 → MAC 주소 변환 프로토콜
-유니캐스트	단일 수신자 주소
-멀티캐스트	그룹 통신 주소
-브로드캐스트	네트워크 전체 대상 주소
-
+각 링크(R1, R2 등)에서 프레임은 새롭게 구성되며, 해당 홉의 MAC 주소를 사용

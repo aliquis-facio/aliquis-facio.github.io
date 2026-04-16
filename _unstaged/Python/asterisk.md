@@ -1,5 +1,4 @@
-# `*(asterisk/star)`와 **(double asterisk/double star)
-
+# `*`(asterisk/star)와 `**`(double asterisk/double star)
 
 `*args` 및 `**kwargs`는 파이썬 문서의 `<More on Defining Functions>` 섹션에 설명된대로 function에 임의 개수의 인수(argument)를 허용하는 일반적인 관용구이다.
 

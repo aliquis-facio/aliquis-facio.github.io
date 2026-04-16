@@ -28,14 +28,15 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 ```mermaid
 flowchart TB
-subgraph "디지털"
-디지털 데이터 --> 아날로그 부호화
-디지털 데이터 --> 디지털 부호화
-end
-subgraph "아날로그"
-아날로그 데이터 --> 아날로그 부호화
-아날로그 데이터 --> 디지털 부호화
-end
+	subgraph "디지털"
+	디지털 데이터 --> 아날로그 부호화
+	디지털 데이터 --> 디지털 부호화
+	end
+	
+	subgraph "아날로그"
+	아날로그 데이터 --> 아날로그 부호화
+	아날로그 데이터 --> 디지털 부호화
+	end
 ```
 
 ## 디지털 변조
