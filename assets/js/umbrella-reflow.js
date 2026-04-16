@@ -25,6 +25,7 @@ let state = {
   lastTime: 0,
   umbrellaX: 260,
   direction: 1,
+  rain: [],
 };
 
 function resizeCanvas() {
@@ -46,6 +47,18 @@ function makePrepared() {
     whiteSpace: 'normal',
     wordBreak: 'normal',
   });
+}
+
+function initRain() {
+  const { width, height } = getStageMetrics();
+  state.rain = Array.from({ length: 180 }, () => ({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    len: 10 + Math.random() * 18,
+    speed: 180 + Math.random() * 240,
+    drift: -18 - Math.random() * 22,
+    alpha: 0.12 + Math.random() * 0.18,
+  }));
 }
 
 function getStageMetrics() {
@@ -75,6 +88,27 @@ function getUmbrellaShape() {
     handleBottomY: canopyBottomY + radius * 1.25,
     handleHookRadius: radius * 0.16,
   };
+}
+
+function updateRain(deltaMs) {
+  if (!state.playing) return;
+
+  const { width, height } = getStageMetrics();
+  const dt = deltaMs / 1000;
+
+  for (const drop of state.rain) {
+    drop.x += drop.drift * dt;
+    drop.y += drop.speed * dt;
+
+    if (drop.y > height + 30 || drop.x < -40) {
+      drop.x = Math.random() * width + 40;
+      drop.y = -20 - Math.random() * 120;
+      drop.len = 10 + Math.random() * 18;
+      drop.speed = 180 + Math.random() * 240;
+      drop.drift = -18 - Math.random() * 22;
+      drop.alpha = 0.12 + Math.random() * 0.18;
+    }
+  }
 }
 
 function umbrellaBlockedRangeAtY(y) {
@@ -161,6 +195,8 @@ function buildLinesAroundUmbrella() {
 
   for (let guard = 0; guard < 500; guard += 1) {
     const slots = getAvailableSlots(y);
+    if (!slots.length) break;
+
     const widestSlot = slots.reduce((best, slot) => {
       if (!best) return slot;
       return slot.width > best.width ? slot : best;
@@ -183,13 +219,32 @@ function buildLinesAroundUmbrella() {
       end: line.end,
     });
 
-    cursor = line.end;
-    y += LINE_HEIGHT;
+    cursor = {
+      segmentIndex: line.end.segmentIndex,
+      graphemeIndex: line.end.graphemeIndex,
+    };
 
+    y += LINE_HEIGHT;
     if (y > STAGE_HEIGHT - 20) break;
   }
 
   return lines;
+}
+
+function drawRain() {
+  ctx.save();
+  ctx.lineWidth = 1.4;
+  ctx.lineCap = 'round';
+
+  for (const drop of state.rain) {
+    ctx.strokeStyle = `rgba(90, 130, 180, ${drop.alpha})`;
+    ctx.beginPath();
+    ctx.moveTo(drop.x, drop.y);
+    ctx.lineTo(drop.x + drop.drift * 0.08, drop.y + drop.len);
+    ctx.stroke();
+  }
+
+  ctx.restore();
 }
 
 function drawBackground() {
@@ -293,8 +348,11 @@ function render(now) {
   state.lastTime = now;
 
   stepUmbrella(delta);
+  updateRain(delta);
 
   drawBackground();
+  drawRain();
+
   const lines = buildLinesAroundUmbrella();
   drawText(lines);
   drawUmbrella();
@@ -306,6 +364,7 @@ function rebuild() {
   resizeCanvas();
   ctx.font = FONT;
   makePrepared();
+  initRain();
 }
 
 textInput.addEventListener('input', rebuild);
