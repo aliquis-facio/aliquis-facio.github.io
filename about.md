@@ -6,35 +6,6 @@ sidebar_link: true
 
 <!-- markdownlint-disable MD025 MD033 -->
 
-# pretext 테스트
-
-`@chenglou/pretext`를 사용해서 텍스트의 줄 수와 높이를 DOM 측정 없이 계산하는 예제다.
-
-<div class="pretext-demo">
-  <label for="pretext-width"><strong>너비(px)</strong></label>
-  <input id="pretext-width" type="range" min="180" max="720" step="10" value="360" />
-  <p>현재 너비: <span id="pretext-width-value">360px</span></p>
-
-  <label for="pretext-input"><strong>텍스트</strong></label>
-  <textarea id="pretext-input" rows="8" style="width: 100%; margin-bottom: 1rem;">
-안녕하세요.
-이 페이지는 pretext를 Jekyll GitHub Pages 블로그에 붙인 예제입니다.
-한글 문장에서 줄바꿈이 어떻게 계산되는지 확인할 수 있습니다.
-  </textarea>
-
-  <p>예상 높이: <strong id="pretext-height">0px</strong></p>
-  <p>예상 줄 수: <strong id="pretext-lines">0</strong></p>
-
-  <div
-    id="pretext-preview"
-    style="border: 1px solid #d0d7de; padding: 16px; border-radius: 8px; background: #fff;"
-  ></div>
-</div>
-
-<script type="module" src="/assets/js/pretext-demo.js"></script>
-
----
-
 <style>
   .manuscript-shell {
     --paper: #f4ebd0;
@@ -205,7 +176,7 @@ sidebar_link: true
     transform-origin: left center;
   }
 
-  .manuscript-dropcap {
+  .manuscript-orb {
     position: absolute;
     z-index: 2;
     width: 196px;
@@ -213,11 +184,53 @@ sidebar_link: true
     cursor: grab;
     user-select: none;
     touch-action: none;
-    filter: drop-shadow(0 16px 26px rgba(47, 36, 24, 0.18));
+    filter: drop-shadow(0 18px 28px rgba(47, 36, 24, 0.16));
   }
 
-  .manuscript-dropcap:active {
+  .manuscript-orb:active {
     cursor: grabbing;
+  }
+
+  .orb-shell {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #b78628;
+    background:
+      radial-gradient(circle at 35% 30%, rgba(255,255,255,0.95), rgba(255,255,255,0.15) 32%, transparent 34%),
+      radial-gradient(circle at 50% 40%, rgba(209, 165, 70, 0.28), transparent 62%),
+      linear-gradient(160deg, rgba(250, 245, 225, 0.98), rgba(234, 221, 188, 0.96));
+    box-shadow:
+      inset 0 0 0 1px rgba(65, 45, 18, 0.12),
+      inset 0 0 48px rgba(183, 134, 40, 0.1);
+    position: relative;
+  }
+
+  .orb-shell::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: 50%;
+    border: 2px dashed rgba(183, 134, 40, 0.75);
+  }
+
+  .orb-inner {
+    position: absolute;
+    inset: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 30% 28%, rgba(255,255,255,0.9), transparent 24%),
+      radial-gradient(circle at 68% 74%, rgba(155, 44, 44, 0.2), transparent 30%),
+      linear-gradient(180deg, #f7f0dc, #efe2bf);
+  }
+
+  .orb-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .manuscript-note {
@@ -251,7 +264,7 @@ sidebar_link: true
       font-size: 24px;
     }
 
-    .manuscript-dropcap {
+    .manuscript-orb {
       width: 168px;
       height: 168px;
     }
@@ -307,8 +320,7 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
       </div>
 
       <p class="manuscript-note">
-        드롭 캡은 마우스나 터치로 움직일 수 있습니다. 오브젝트가 차지하는 세로 구간에서는 줄 너비가 줄어들고,
-        그 아래 구간부터는 전체 너비로 다시 배치됩니다.
+        원형 이미지는 마우스나 터치로 움직일 수 있습니다. 오브젝트가 차지하는 세로 구간에서는 줄 너비가 원형 기준으로 줄어들고, 그 아래 구간부터는 전체 너비로 다시 배치됩니다.
       </p>
     </aside>
 
@@ -321,24 +333,17 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
       </div>
 
       <div id="demo-canvas" class="manuscript-canvas">
-        <svg id="demo-dropcap" class="manuscript-dropcap" viewBox="0 0 220 220" aria-hidden="true">
-          <defs>
-            <linearGradient id="capGold" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#d8b35d" />
-              <stop offset="100%" stop-color="#9d6c17" />
-            </linearGradient>
-            <linearGradient id="capRed" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#b33a3a" />
-              <stop offset="100%" stop-color="#6b1717" />
-            </linearGradient>
-          </defs>
-          <rect x="12" y="12" width="196" height="196" rx="28" fill="#f8f1da" stroke="url(#capGold)" stroke-width="6" />
-          <rect x="24" y="24" width="172" height="172" rx="20" fill="none" stroke="#a8832d" stroke-width="1.5" stroke-dasharray="4 7" />
-          <path d="M62 164V58h54c28 0 47 14 47 38 0 18-9 30-28 36l34 32h-35l-29-28H95v28H62zm33-53h18c12 0 19-6 19-16 0-10-7-15-19-15H95v31z" fill="url(#capRed)" />
-          <path d="M157 46c18 9 28 24 30 46-12-10-22-15-31-15 4 14 2 29-7 45-5-11-12-19-22-24 12-5 21-14 27-27-10 2-19 1-29-4 12-13 23-20 32-21z" fill="url(#capGold)" opacity="0.92" />
-          <circle cx="164" cy="68" r="4" fill="#4c2b12" />
-          <path d="M43 47c12 2 24 8 35 20-11 0-19 3-24 8-2-10-6-19-11-28z" fill="#8f2323" opacity="0.8" />
-        </svg>
+        <div id="demo-orb" class="manuscript-orb" aria-hidden="true">
+          <div class="orb-shell">
+            <div class="orb-inner">
+              <img
+                class="orb-image"
+                src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=900&q=80"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
         <div id="demo-copy" class="manuscript-copy"></div>
       </div>
       <p class="manuscript-note">
@@ -365,15 +370,14 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
   const insetEl = document.getElementById('demo-inset')
   const canvasEl = document.getElementById('demo-canvas')
   const copyEl = document.getElementById('demo-copy')
-  const dropcapEl = document.getElementById('demo-dropcap')
+  const orbEl = document.getElementById('demo-orb')
 
   const state = {
     prepared: null,
     fontSize: Number(fontSizeEl.value),
     lineHeight: Number(fontSizeEl.value) * 1.45,
     columnWidth: Number(columnWidthEl.value),
-    textInset: 176,
-    dropcap: { x: 28, y: 28, width: 196, height: 196 },
+    orb: { x: 180, y: 180, size: 196 },
     dragging: null,
   }
 
@@ -405,35 +409,38 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     const { startX, usableWidth } = getLineMetrics()
     const columnLeft = startX
     const columnRight = startX + usableWidth
-
-    // manuscript-line 요소는 top=y로 배치되므로,
-    // 실제 충돌 판정도 렌더링 박스 기준으로 계산한다.
     const lineTop = y
     const lineBottom = y + state.lineHeight
 
-    // 텍스트가 이미지에 바짝 붙거나 위쪽에서 살짝 겹쳐 보이지 않도록
-    // 실제 드롭캡보다 조금 더 큰 exclusion box를 사용한다.
+    const radius = state.orb.size / 2
+    const cx = state.orb.x + radius
+    const cy = state.orb.y + radius
+
     const exclusionPadding = {
-      top: Math.max(10, Math.round(state.fontSize * 0.35)),
-      right: 24,
-      bottom: 16,
-      left: 24,
+      top: Math.max(12, Math.round(state.fontSize * 0.35)),
+      right: 26,
+      bottom: 18,
+      left: 26,
     }
 
-    const shapeLeft = state.dropcap.x - exclusionPadding.left
-    const shapeRight = state.dropcap.x + state.dropcap.width + exclusionPadding.right
-    const shapeTop = state.dropcap.y - exclusionPadding.top
-    const shapeBottom = state.dropcap.y + state.dropcap.height + exclusionPadding.bottom
+    const effectiveRadiusX = radius + Math.max(exclusionPadding.left, exclusionPadding.right)
+    const effectiveRadiusY = radius + Math.max(exclusionPadding.top, exclusionPadding.bottom)
+    const lineCenterY = (lineTop + lineBottom) / 2
+    const dy = Math.abs(lineCenterY - cy)
 
-    const overlapsVertically = lineBottom > shapeTop && lineTop < shapeBottom
-    if (!overlapsVertically) {
+    if (dy >= effectiveRadiusY) {
       return [{ x: columnLeft, width: usableWidth }]
     }
 
-    const leftWidth = Math.max(0, shapeLeft - columnLeft)
-    const rightX = shapeRight
+    const normalized = dy / effectiveRadiusY
+    const chordHalf = effectiveRadiusX * Math.sqrt(Math.max(0, 1 - normalized * normalized))
+    const exclusionLeft = cx - chordHalf
+    const exclusionRight = cx + chordHalf
+
+    const leftWidth = Math.max(0, exclusionLeft - columnLeft)
+    const rightX = exclusionRight
     const rightWidth = Math.max(0, columnRight - rightX)
-    const minSegmentWidth = Math.max(120, Math.round(state.fontSize * 4.2))
+    const minSegmentWidth = Math.max(120, Math.round(state.fontSize * 4.4))
     const segments = []
 
     if (leftWidth >= minSegmentWidth) {
@@ -444,7 +451,6 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
       segments.push({ x: rightX, width: rightWidth })
     }
 
-    // 양쪽 공간이 모두 너무 좁으면, 더 넓은 한쪽만 사용한다.
     if (segments.length === 0) {
       if (leftWidth >= rightWidth && leftWidth > 0) {
         return [{ x: columnLeft, width: Math.max(80, leftWidth) }]
@@ -454,7 +460,6 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
         return [{ x: rightX, width: Math.max(80, rightWidth) }]
       }
 
-      // 드롭캡이 줄 전체를 사실상 덮는 구간이면 이 줄은 비워두고 다음 줄로 넘긴다.
       return []
     }
 
@@ -503,7 +508,11 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
         renderedOnThisLine = true
       }
 
-      if (!renderedOnThisLine) break
+      if (!renderedOnThisLine) {
+        lineIndex += 1
+        maxBottom = y + state.lineHeight
+        continue
+      }
 
       if (segments.length > 1) {
         const lineExclusion = state.columnWidth - segments.reduce((sum, segment) => sum + segment.width, 0)
@@ -521,11 +530,11 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     insetEl.textContent = `${Math.round(maxExclusion)}px`
   }
 
-  function renderDropcap() {
-    dropcapEl.style.left = `${state.dropcap.x}px`
-    dropcapEl.style.top = `${state.dropcap.y}px`
-    dropcapEl.style.width = `${state.dropcap.width}px`
-    dropcapEl.style.height = `${state.dropcap.height}px`
+  function renderOrb() {
+    orbEl.style.left = `${state.orb.x}px`
+    orbEl.style.top = `${state.orb.y}px`
+    orbEl.style.width = `${state.orb.size}px`
+    orbEl.style.height = `${state.orb.size}px`
   }
 
   function syncLabels() {
@@ -535,7 +544,7 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
 
   function rerender() {
     syncLabels()
-    renderDropcap()
+    renderOrb()
     renderText()
   }
 
@@ -564,24 +573,24 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     }
   }
 
-  dropcapEl.addEventListener('pointerdown', event => {
+  orbEl.addEventListener('pointerdown', event => {
     const pos = pointerPosition(event)
     state.dragging = {
-      offsetX: pos.x - state.dropcap.x,
-      offsetY: pos.y - state.dropcap.y,
+      offsetX: pos.x - state.orb.x,
+      offsetY: pos.y - state.orb.y,
     }
-    dropcapEl.setPointerCapture(event.pointerId)
+    orbEl.setPointerCapture(event.pointerId)
   })
 
-  dropcapEl.addEventListener('pointermove', event => {
+  orbEl.addEventListener('pointermove', event => {
     if (!state.dragging) return
 
     const pos = pointerPosition(event)
-    const maxX = Math.max(24, state.columnWidth - 120)
-    const maxY = Math.max(24, copyEl.offsetHeight - 120)
+    const maxX = Math.max(24, state.columnWidth - state.orb.size - 24)
+    const maxY = Math.max(24, copyEl.offsetHeight - state.orb.size - 24)
 
-    state.dropcap.x = clamp(pos.x - state.dragging.offsetX, 24, maxX)
-    state.dropcap.y = clamp(pos.y - state.dragging.offsetY, 24, maxY)
+    state.orb.x = clamp(pos.x - state.dragging.offsetX, 24, maxX)
+    state.orb.y = clamp(pos.y - state.dragging.offsetY, 24, maxY)
     rerender()
   })
 
@@ -590,13 +599,13 @@ This page uses Pretext to measure and lay out each line without DOM reflow-based
     state.dragging = null
     if (event.pointerId !== undefined) {
       try {
-        dropcapEl.releasePointerCapture(event.pointerId)
+        orbEl.releasePointerCapture(event.pointerId)
       } catch (_) {}
     }
   }
 
-  dropcapEl.addEventListener('pointerup', stopDragging)
-  dropcapEl.addEventListener('pointercancel', stopDragging)
+  orbEl.addEventListener('pointerup', stopDragging)
+  orbEl.addEventListener('pointercancel', stopDragging)
 
   window.addEventListener('resize', rerender)
 
