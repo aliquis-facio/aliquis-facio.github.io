@@ -76,10 +76,11 @@ sidebar_link: true
 
   .manuscript-grid {
     display: grid;
-    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
-    gap: 28px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     align-items: start;
     margin-top: 28px;
+    max-width: 840px;
   }
 
   .manuscript-panel,
@@ -92,8 +93,6 @@ sidebar_link: true
 
   .manuscript-panel {
     padding: 20px;
-    position: sticky;
-    top: 24px;
   }
 
   .manuscript-panel h2,
@@ -240,11 +239,7 @@ sidebar_link: true
 
   @media (max-width: 960px) {
     .manuscript-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .manuscript-panel {
-      position: static;
+      max-width: 100%;
     }
 
     .manuscript-canvas {
