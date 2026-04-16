@@ -17,9 +17,7 @@ tags:
 
 <link rel="stylesheet" href="{{ '/assets/css/umbrella-reflow.css' | relative_url }}">
 
-<p class="umbrella-rain-hint">
-  Move your cursor to drag the umbrella around. Text falls like rain in vertical columns — characters under the umbrella are blocked, creating the sheltered zone. On mobile, the umbrella sways automatically.
-</p>
+Move your cursor to drag the umbrella around. Text falls like rain in vertical columns — characters under the umbrella are blocked, creating the sheltered zone. On mobile, the umbrella sways automatically.
 
 <section class="umbrella-reflow-section">
   <canvas
