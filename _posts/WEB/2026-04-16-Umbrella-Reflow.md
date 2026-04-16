@@ -15,36 +15,52 @@ tags: [DEMO]
 
 <!-- markdownlint-disable MD025 MD033 -->
 
-<link rel="stylesheet" href="{{ '/assets/css/umbrella-reflow.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/umbrella-rain.css' | relative_url }}">
 
-<div class="umbrella-page">
-  <header class="umbrella-header">
-    <h1>Umbrella Text Reflow</h1>
-    <p>움직이는 우산 도형을 피해 텍스트가 실시간으로 다시 줄바꿈되는 데모</p>
+<div class="page">
+  <header class="hero">
+    <h1>Umbrella Rain Text</h1>
+    <p class="hero-desc">
+      Move your cursor to drag the umbrella around. Text falls like rain in vertical columns —
+      characters under the umbrella are blocked, creating the sheltered zone.
+      On mobile, the umbrella sways automatically.
+    </p>
   </header>
 
-  <section class="umbrella-controls">
-    <label for="umbrella-text">텍스트</label>
-    <textarea id="umbrella-text" rows="7">Pretext makes it possible to compute text layout quickly enough that text can reflow around moving shapes. This demo recreates an umbrella-shaped obstacle and continuously rearranges the lines as the umbrella moves across the stage.</textarea>
+  <section class="controls">
+    <label class="control">
+      <span>텍스트</span>
+      <textarea id="sourceText" rows="6">Pretext makes it possible to compute text layout quickly enough that text can reflow around moving shapes. This version turns text into rainfall: letters descend in vertical columns, while the umbrella blocks the falling characters and creates a sheltered zone below.</textarea>
+    </label>
 
-    <div class="umbrella-row">
-      <label for="umbrella-speed">속도</label>
-      <input id="umbrella-speed" type="range" min="0.2" max="3" step="0.1" value="1">
+    <div class="control-grid">
+      <label class="control">
+        <span>낙하 속도</span>
+        <input id="speedRange" type="range" min="0.4" max="3" step="0.1" value="1.2" />
+      </label>
+
+      <label class="control">
+        <span>우산 크기</span>
+        <input id="sizeRange" type="range" min="90" max="210" step="2" value="140" />
+      </label>
+
+      <label class="control">
+        <span>열 간격</span>
+        <input id="gapRange" type="range" min="18" max="42" step="1" value="26" />
+      </label>
     </div>
 
-    <div class="umbrella-row">
-      <label for="umbrella-size">우산 크기</label>
-      <input id="umbrella-size" type="range" min="80" max="220" step="2" value="140">
+    <div class="button-row">
+      <button id="rebuildBtn" type="button">다시 생성</button>
+      <button id="toggleBtn" type="button">일시정지</button>
     </div>
-
-    <button id="umbrella-toggle" type="button">일시정지</button>
   </section>
 
-  <section class="umbrella-stage-wrap">
-    <div id="umbrella-stage" class="umbrella-stage">
-      <canvas id="umbrella-canvas"></canvas>
-    </div>
+  <section class="stage-wrap">
+    <canvas id="scene"></canvas>
+    <p class="hint desktop-only">마우스 또는 트랙패드로 우산을 잡아 움직이세요.</p>
+    <p class="hint mobile-only">모바일에서는 우산이 자동으로 흔들립니다.</p>
   </section>
 </div>
 
-<script type="module" src="{{ '/assets/js/umbrella-reflow.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/umbrella-rain.js' | relative_url }}"></script>
