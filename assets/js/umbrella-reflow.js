@@ -237,7 +237,7 @@ function getShelterStrength(px, py, ux, uy) {
   return { canopy: 0, shelter: 0 };
 }
 
-function spawnSplash(x, y, options = {}) {
+function spawnSplashBurst(x, y, options = {}) {
   const {
     count = 3,
     spreadX = 30,
