@@ -173,16 +173,36 @@ function lerp(current, target, factor) {
 }
 
 function isUnderUmbrella(px, py, ux, uy) {
-  // 이미지 기준 충돌 판정
   const canopyTop = uy - UMBRELLA_HEIGHT * 0.36;
   const canopyBottom = uy + UMBRELLA_HEIGHT * 0.08;
-  const shelterBottom = uy + UMBRELLA_HEIGHT * 0.78;
-  const shelterHalfWidth = UMBRELLA_WIDTH * 0.42;
+  const groundY = height;
 
+  // 우산 위쪽은 보호 안 됨
   if (py < canopyTop) return false;
 
-  if (py <= shelterBottom) {
-    return Math.abs(px - ux) < shelterHalfWidth;
+  // 1) 캐노피 자체 영역
+  // 위쪽은 둥근 우산 느낌 나게 타원으로 판정
+  const domeCenterY = uy - UMBRELLA_HEIGHT * 0.10;
+  const rx = UMBRELLA_WIDTH * 0.46;
+  const ry = UMBRELLA_HEIGHT * 0.30;
+
+  const dx = px - ux;
+  const dy = py - domeCenterY;
+
+  const inDome = ((dx * dx) / (rx * rx) + (dy * dy) / (ry * ry)) <= 1.0;
+  if (py <= canopyBottom && inDome) return true;
+
+  // 2) 우산 아래 sheltered zone
+  // 우산 밑면에서 시작해서 바닥까지 내려가며 폭이 점점 줄어듦
+  if (py > canopyBottom && py <= groundY) {
+    const t = (py - canopyBottom) / (groundY - canopyBottom); // 0 ~ 1
+    const topHalfWidth = UMBRELLA_WIDTH * 0.42;
+    const bottomHalfWidth = UMBRELLA_WIDTH * 0.16;
+
+    const currentHalfWidth =
+      topHalfWidth + (bottomHalfWidth - topHalfWidth) * t;
+
+    return Math.abs(px - ux) <= currentHalfWidth;
   }
 
   return false;
