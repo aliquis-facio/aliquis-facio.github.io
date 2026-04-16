@@ -17,14 +17,15 @@ tags:
 
 <link rel="stylesheet" href="{{ '/assets/css/umbrella-reflow.css' | relative_url }}">
 
+<p class="umbrella-rain-hint">
+  Move your cursor to drag the umbrella around. Text falls like rain in vertical columns — characters under the umbrella are blocked, creating the sheltered zone. On mobile, the umbrella sways automatically.
+</p>
+
 <section class="umbrella-reflow-section">
   <canvas
   id="umbrella-rain-canvas"
   data-umbrella-src="{{ '/assets/img/2026-04-16-umbrella.svg' | relative_url }}"
 ></canvas>
-  <p class="umbrella-rain-hint">
-    Move your cursor to drag the umbrella around. Text falls like rain in vertical columns — characters under the umbrella are blocked, creating the sheltered zone. On mobile, the umbrella sways automatically.
-  </p>
 </section>
 
 <script type="module" src="{{ '/assets/js/umbrella-reflow.js' | relative_url }}"></script>
