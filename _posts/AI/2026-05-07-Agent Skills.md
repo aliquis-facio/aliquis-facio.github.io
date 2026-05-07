@@ -1,3 +1,14 @@
+---
+title: "[AI] Agent Skills"
+excerpt: Agent Skills 개요
+categories:
+  - AI
+layout: post
+comments: true
+sitemap:
+date: 2026-05-07
+last_modified_at: 2026-05-07
+---
 # Agent Skills
 
 ## 1. Agent Skills란?
@@ -114,7 +125,7 @@ AI가 모든 Skill 내용을 처음부터 다 읽는 것이 아니라, 필요한
 
 Skills는 agent가 파일시스템 접근, bash 명령, 코드 실행 기능을 갖춘 코드 실행 환경에서 실행된다.
 
-![|500x281](../_image/2026-05-06-13-42-56.png)
+![|500x281](2026-05-06-13-42-56.png)
 
 **Claude가 Skill 콘텐츠에 접근하는 방법:**
 
