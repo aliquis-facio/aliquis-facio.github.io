@@ -116,6 +116,10 @@ tags: [LOGIC]
 
 #### 1.3.4. `~(H∙O), O∨~H / ~H`
 
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
+
 | H | O | H∙O | ~(H∙O) | ~H | O∨~H |
 | - | - | --- | ------ | -- | ---- |
 | T | T | T   | F      | F  | T    |
@@ -134,7 +138,14 @@ tags: [LOGIC]
 
 > **타당**
 
+</div>
+</details>
+
 #### 1.3.5. `D≡E, F∨~E / F⊃D`
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 | D | E | F | D≡E | ~E | F∨~E | F⊃D |
 | - | - | - | --- | -- | ---- | --- |
@@ -159,7 +170,14 @@ tags: [LOGIC]
 
 > **부당**
 
+</div>
+</details>
+
 #### 1.3.6. `B≡(C∨D), ~D∨C / B⊃C`
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 | B | C | D | C∨D | B≡(C∨D) | ~D | ~D∨C | B⊃C |
 | - | - | - | --- | ------- | -- | ---- | --- |
@@ -184,7 +202,14 @@ tags: [LOGIC]
 
 > **타당**
 
+</div>
+</details>
+
 #### 1.3.7. `B⊃(O∨R), ~(O∨~B) / B⊃R`
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 | B | O | R | O∨R | B⊃(O∨R) | ~B | O∨~B | ~(O∨~B) | B⊃R |
 | - | - | - | --- | ------- | -- | ---- | ------- | --- |
@@ -206,6 +231,9 @@ tags: [LOGIC]
 전제가 모두 참인 모든 행에서 결론도 참이다.
 
 > **타당**
+
+</div>
+</details>
 
 ## 2. 간접 진리표
 
@@ -249,8 +277,6 @@ D∨R = T
 
 > **부당**
 
----
-
 ## 2.3.2. `G⊃(H∨D), H⊃K, G / ∼D⊃K`
 
 결론 `∼D⊃K`가 거짓이려면:
@@ -290,8 +316,6 @@ K = T 이면서 K = F
 
 > **타당**
 
----
-
 ## 2.3.3. `W⊃P, K⊃P / W⊃Q`
 
 결론 `W⊃Q`가 거짓이려면:
@@ -318,9 +342,11 @@ W = T, P = T, K = F, Q = F
 
 > **부당**
 
----
-
 ## 2.3.4. `D∙(E∨F), (D∙F)⊃∼(R∨S), (~R∨~S)⊃~(D∙E) / R≡S`
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 결론 `R≡S`가 거짓이려면:
 
@@ -389,7 +415,14 @@ R = F, S = F
 
 > **타당**
 
+</div>
+</details>
+
 ## 2.3.5. `(A∨B)⊃C, C⊃(B∨R), A⊃(~Q⊃B), (Q⊃A)⊃~R / B≡C`
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 결론 `B≡C`가 거짓이려면:
 
@@ -448,9 +481,14 @@ C = T
 
 > **부당**
 
----
+</div>
+</details>
 
 ## 2.3.6. `(P∨Q)⊃(R∙S), (~P∨~Q)⊃E / (~R∨~S)⊃E`
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 결론 `(~R∨~S)⊃E`가 거짓이려면:
 
@@ -496,7 +534,14 @@ R = T, S = T
 
 > **타당**
 
+</div>
+</details>
+
 ## 2.3.7. `M⊃N, ~O∨P, (N∨P)⊃J, ~J / ~(M∨O)`
+
+<details>
+<summary>답 접기/펼치기</summary>
+<div markdown="1">
 
 결론 `~(M∨O)`가 거짓이려면:
 
@@ -547,3 +592,6 @@ M∨O = F
 모순.
 
 > **타당**
+
+</div>
+</details>
