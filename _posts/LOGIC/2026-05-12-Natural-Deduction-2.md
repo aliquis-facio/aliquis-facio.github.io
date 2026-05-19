@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 자연 연역 1"
+title: "[LOGIC] 자연 연역 2"
 excerpt: "대치 규칙 10가지"
 
 date: 2026-05-19
