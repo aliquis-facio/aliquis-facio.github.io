@@ -26,7 +26,7 @@
 ## Tech stack
 
 - GitHub Pages
-- Jekyll (theme: [사용 중인 테마명])
+- Jekyll (theme: [Hydeout](https://github.com/poole/hyde))
 - Markdown (+ 수식/이미지/코드 블록)
 
 ## Local development
