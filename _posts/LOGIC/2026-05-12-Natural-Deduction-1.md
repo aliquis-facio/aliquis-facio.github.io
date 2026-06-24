@@ -22,20 +22,20 @@ tags: [LOGIC]
 ## 목차
 
 1. [자연 연역이란](#1-자연-연역이란)
-1. [명제 형식과 논증 형식](#2-명제-형식과-논증-형식)
+2. [명제 형식과 논증 형식](#2-명제-형식과-논증-형식)
     1. [명제 형식](#21-명제-형식)
-    1. [구체적 명제의 형식 찾기](#22-구체적-명제의-형식-찾기)
-    1. [논증 형식](#23-논증-형식)
-1. [함축 규칙 9가지](#3-함축-규칙-9가지)
+    2. [구체적 명제의 형식 찾기](#22-구체적-명제의-형식-찾기)
+    3. [논증 형식](#23-논증-형식)
+3. [함축 규칙 9가지](#3-함축-규칙-9가지)
     1. [전건 긍정식 (Modus Ponens, MP)](#31-전건-긍정식-modus-ponens-mp)
-    1. [후건 부정식 (Modus Tollens, MT)](#32-후건-부정식-modus-tollens-mt)
-    1. [가정적 삼단논법 (Hypothetical Syllogism, HS)](#33-가정적-삼단논법-hypothetical-syllogism-hs)
-    1. [선언적 삼단논법 (Disjunctive Syllogism, DS)](#34-선언적-삼단논법-disjunctive-syllogism-ds)
-    1. [구성적 양도논법 (Constructive Dilemma, CD)](#35-구성적-양도논법-constructive-dilemma-cd)
-    1. [연언지 단순화 (Simplification, Simp)](#36-연언지-단순화-simplification-simp)
-    1. [연언 (Conjunction, Conj)](#37-연언-conjunction-conj)
-    1. [선언지 첨가 (Addition, Add)](#38-선언지-첨가-addition-add)
-    1. [흡수규칙 (Absorption, Abs)](#39-흡수규칙-absorption-abs)
+    2. [후건 부정식 (Modus Tollens, MT)](#32-후건-부정식-modus-tollens-mt)
+    3. [가정적 삼단논법 (Hypothetical Syllogism, HS)](#33-가정적-삼단논법-hypothetical-syllogism-hs)
+    4. [선언적 삼단논법 (Disjunctive Syllogism, DS)](#34-선언적-삼단논법-disjunctive-syllogism-ds)
+    5. [구성적 양도논법 (Constructive Dilemma, CD)](#35-구성적-양도논법-constructive-dilemma-cd)
+    6. [연언지 단순화 (Simplification, Simp)](#36-연언지-단순화-simplification-simp)
+    7. [연언 (Conjunction, Conj)](#37-연언-conjunction-conj)
+    8. [선언지 첨가 (Addition, Add)](#38-선언지-첨가-addition-add)
+    9. [흡수규칙 (Absorption, Abs)](#39-흡수규칙-absorption-abs)
 
 ## 1. 자연 연역이란
 
