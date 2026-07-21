@@ -1,4 +1,5 @@
 # Backpropagation with Computational Graph
+
 ## 1. 문제 설정: “어떻게 그레디언트를 계산할 것인가?”
 
 - 우리가 학습하고 싶은 것은 **손실 (L)** 을 줄이도록 **파라미터 $W_1, W_2, \dots$** 를 업데이트하는 것.
@@ -59,6 +60,7 @@ $$\text{Downstream grad} = \text{Upstream grad} \times \text{Local grad}$$
         - 업스트림 그레디언트와 곱해서 다운스트림으로 전달
 
 ## 4. 다양한 연산에 대한 Local Gradient 패턴
+
 ### 4.1. Add gate (덧셈 연산)
 
 - 연산: $q = x + y$
@@ -91,6 +93,7 @@ $$\text{Downstream grad} = \text{Upstream grad} \times \text{Local grad}$$
 이 세 가지 패턴(add, mul, max)을 이해하면, 복잡한 네트워크도 “게이트들의 조합”으로 보면서 **그레디언트 흐름을 직관적으로 추적**할 수 있다.
 
 ## 5. 활성 함수(Activation)와 Softmax의 Gradient
+
 ### 5.1 활성 함수들의 로컬 그레디언트
 
 주요 활성 함수:
