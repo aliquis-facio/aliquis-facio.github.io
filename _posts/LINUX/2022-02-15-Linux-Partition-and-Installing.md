@@ -190,9 +190,9 @@ free -h
 
 과거 IDE 방식에서는 디스크 연결 위치에 따라 다음과 같이 이름을 사용했다.
 
-| 구분        | Master   | Slave    |
-| --------- | -------- | -------- |
-| Primary   | /dev/hda | /dev/hdb |
+| 구분 | Master | Slave |
+| --- | --- | --- |
+| Primary | /dev/hda | /dev/hdb |
 | Secondary | /dev/hdc | /dev/hdd |
 
 예를 들어 첫 번째 IDE 디스크의 두 번째 파티션은 다음과 같다.
