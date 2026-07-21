@@ -4,7 +4,9 @@
   "textFontFamily": "",
   "monospaceFontFamily": "",
   "enabledCssSnippets": [
-    "font"
+    "font",
+    "mermaid"
   ],
-  "accentColor": "#7689ea"
+  "accentColor": "#7689ea",
+  "theme": "moonstone"
 }
