@@ -89,7 +89,7 @@ D: 데이터 저장 영역
 * `/dev/sda1`: 첫 번째 디스크의 첫 번째 파티션
 * `/dev/sda2`: 첫 번째 디스크의 두 번째 파티션
 
-과거 **IDE(Integrated Drive Electronics)** 디스크는 `/dev/hda`, `/dev/hdb` 형식을 사용했지만, 현대 리눅스에서는 **SATA(Serial Advanced Technology Attachment)**, **SCSI(Small Computer System Interface)**, USB뿐 아니라 대부분의 디스크가 `/dev/sdX` 형태로 표시된다. NVMe **SSD(Solid State Drive/Disk)** 는 `/dev/nvme0n1`과 같은 형식을 사용한다.
+과거 IDE 디스크는 `/dev/hda`, `/dev/hdb` 형식을 사용했지만, 현대 리눅스에서는 SATA, SCSI, USB뿐 아니라 대부분의 디스크가 `/dev/sdX` 형태로 표시된다. NVMe SSD는 `/dev/nvme0n1`과 같은 형식을 사용한다.
 
 ## 2. 리눅스의 마운트 개념
 
@@ -188,7 +188,7 @@ free -h
 
 ### 4.1. 과거 IDE 디스크
 
-과거 IDE 방식에서는 디스크 연결 위치에 따라 다음과 같이 이름을 사용했다.
+과거 **IDE(Integrated Drive Electronics)** 방식에서는 디스크 연결 위치에 따라 다음과 같이 이름을 사용했다.
 
 | 구분 | Master | Slave |
 | --- | --- | --- |
@@ -212,7 +212,7 @@ IDE 방식에서는 하나의 케이블에 최대 두 개의 장치를 연결할
 
 ### 4.3. SATA·SCSI·USB 디스크
 
-SATA, SCSI, USB 저장장치는 일반적으로 다음과 같이 표현된다.
+**SATA(Serial Advanced Technology Attachment)**, **SCSI(Small Computer System Interface)**, USB 저장장치는 일반적으로 다음과 같이 표현된다.
 
 ```text
 첫 번째 디스크: /dev/sda
@@ -230,7 +230,7 @@ SATA, SCSI, USB 저장장치는 일반적으로 다음과 같이 표현된다.
 
 ### 4.4. NVMe SSD
 
-NVMe 장치는 다음과 같은 이름을 사용한다.
+**SSD(Solid State Drive/Disk)**: NVMe 장치는 다음과 같은 이름을 사용한다.
 
 ```text
 /dev/nvme0n1
