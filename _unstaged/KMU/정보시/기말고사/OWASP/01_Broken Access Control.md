@@ -1,4 +1,5 @@
 # Broken Access Control
+
 ## 1. 배경 (Background)
 
 - **순위**: OWASP Top 10:2025에서 A01은 2021에 이어 **계속 1위 유지**.
