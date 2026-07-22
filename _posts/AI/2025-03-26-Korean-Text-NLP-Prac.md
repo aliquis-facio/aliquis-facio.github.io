@@ -125,7 +125,7 @@ with open(file_lst[0], "r", encoding='utf-8') as f:
   texts = f.read()
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-8.png?raw=true.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-8.png?raw=true)
 
 ### 2.4. 데이터 전처리하기
 
@@ -141,7 +141,7 @@ texts = re.sub(r'제\s*\d+\s*장\s*[^\n]*\n?', '', texts)
 texts:List[str] = kss.split_sentences(texts)
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-9.png?raw=true.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-9.png?raw=true)
 
 ~~챕터별로 나눌까?~~
 
@@ -230,11 +230,11 @@ ax.set_title('execution time')
 plt.show()
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-4.png?raw=true.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-4.png?raw=true)
 -> mecab의 속도가 압도적으로 빠르다
 
 mecab의 형태소 분석 결과 중 일부이다.
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-5.png?raw=true.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-5.png?raw=true)
 -> 이름과 같은 고유 명사가 분리되어 있는 경우를 몇몇 발견했다. e.g. 프리벳가, 더즐리, 덤블도어, 해그리드, 그리핀도르 등  
 -> 이러한 고유 명사들은 mecab의 user-dictionary에 추가할 예정이다.  
 
@@ -263,7 +263,7 @@ tfidf_df = pd.DataFrame(tfidf_arr, columns=tfidf_dict)
 tfidf_vocab = tfidf.vocabulary_
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-6.png?raw=true.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-6.png?raw=true)
 
 #### 차원 축소
 
@@ -275,7 +275,7 @@ tsne = TSNE(n_components=2, n_iter=10000, verbose=1)
 Z = tsne.fit_transform(tfidf_arr.T)
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-7.png?raw=true.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-7.png?raw=true)
 
 #### 시각화
 
@@ -294,7 +294,7 @@ for i in range(len(tfidf_dict)):
 plt.draw()
 ```
 
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true.png)
+![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2025-03-31-10.png?raw=true)
 
 ---
 
