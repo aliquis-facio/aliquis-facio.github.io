@@ -349,10 +349,9 @@ from __future__ import annotations
 
 ## 참고
 
-* [Python 공식 문서 — `__future__`](https://docs.python.org/3/library/__future__.html)
-* [Python 공식 문서 — Annotations Best Practices](https://docs.python.org/3/howto/annotations.html)
-* [PEP 563 — Postponed Evaluation of Annotations](https://peps.python.org/pep-0563/)
-* [PEP 649 — Deferred Evaluation of Annotations](https://peps.python.org/pep-0649/)
-* [PEP 749 — Implementing PEP 649](https://peps.python.org/pep-0749/)
-* [Python의 `from __future__ import annotations` 기능](https://memoryhub.tistory.com/entry/from-future-import-annotations-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)
-* [__future__ 문 | from __future__ import annotations](https://iambeginnerdeveloper.tistory.com/290)
+* [Python Docs: `__future__`](https://docs.python.org/3/library/__future__.html)
+* [Python Docs: Annotations Best Practices](https://docs.python.org/3/howto/annotations.html)
+* [PEP: PEP 563 — Postponed Evaluation of Annotations](https://peps.python.org/pep-0563/)
+* [PEP: PEP 649 — Deferred Evaluation of Annotations](https://peps.python.org/pep-0649/)
+* [PEP: PEP 749 — Implementing PEP 649](https://peps.python.org/pep-0749/)
+* [Tistory: Python의 `from __future__ import annotations` 기능](https://memoryhub.tistory.com/entry/from-future-import-annotations-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)
