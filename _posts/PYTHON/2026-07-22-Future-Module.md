@@ -52,7 +52,7 @@ tags:
 
 ## 1. 개요
 
-`__future__` 모듈은 향후 Python 버전에 도입될 기능을 이전 버전에서 미리 사용할 수 있도록 제공한다.
+`__future__` 모듈: 향후 Python 버전에 도입될 기능을 이전 버전에서 미리 사용할 수 있도록 제공한다.
 
 다음과 같이 파일 상단에서 `from __future__ import ...` 형태로 선언한다.
 
@@ -77,10 +77,6 @@ from __future__ import annotations
 
 Python 3.7부터 사용할 수 있으며, Python 3.7~3.13에서는 필요한 모듈에 직접 선언해야 한다.
 
-```python
-from __future__ import annotations
-```
-
 이 기능을 사용하면 다음과 같은 장점이 있다.
 
 * 아직 정의되지 않은 클래스를 타입으로 참조할 수 있다.
@@ -90,7 +86,7 @@ from __future__ import annotations
 
 ### 2.2. Forward Reference
 
-Forward Reference는 아직 정의되지 않은 클래스나 타입을 타입 어노테이션에서 먼저 참조하는 것을 의미한다.
+**Forward Reference** 아직 정의되지 않은 클래스나 타입을 타입 어노테이션에서 먼저 참조하는 것을 의미한다.
 
 다음 코드에서는 `Node` 클래스가 완전히 생성되기 전에 `Node` 타입을 참조한다.
 
