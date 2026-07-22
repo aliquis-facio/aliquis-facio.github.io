@@ -29,7 +29,7 @@ tags: [DATABASE, TIL]
 ## 1. DBMS의 발전 배경: 파일 시스템(File System)
 
 **파일 시스템(File System)**: 데이터의 입출력을 전담하는 별도의 시스템. 데이터의 공용이 가능하지만 데이터 파일의 내용을 제어하지 않았음.
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-17-1.png?raw=true)  
+![그림](/_image/2025-03-17-00-00-00.png)  
 
 ### 1.1. 파일 시스템의 문제점
 
@@ -45,14 +45,14 @@ tags: [DATABASE, TIL]
 데이터베이스를 운영 및 관리. 계층형, 망형, 관계형 등 다양한 종류의 DBMS가 존재하지만 <mark>대부분 관계형 DBMS(RDMBS)의 형태로 사용</mark>되고 있다. RDBMS의 데이터베이스는 하나 이상의 행(row)과 열(column)로 이루어진 <mark>테이블 형식</mark>을 데이터를 제공한다.  
 -> DBMS는 엑셀 프로그램 그 자체로 예를 들 수 있겠다.
 아래는 데이터베이스 테이블 구조 예시
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-12-10-1.png?raw=true)  
+![그림](/_image/2024-12-10-00-00-00.png)  
 
 ## 3. 데이터 독립성(Data Independency)
 
 * **논리적 데이터 독립성(Logical Data Independency)**: 응용 프로그램에 영향을 주지 않고, 데이터베이스의 논리적 구조를 변경시킬 수 있는 능력
 * **물리적 데이터 독립성(Physical Data Independency)**: 데이터베이스의 논리적 구조에 영향을 주지 않고, 데이터의 물리적 구조를 변경시킬 수 있는 능력
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-17-2.png?raw=true)  
+![그림](/_image/2025-03-17-00-00-01.png)  
 
 ## 4. DBMS의 필수 기능
 

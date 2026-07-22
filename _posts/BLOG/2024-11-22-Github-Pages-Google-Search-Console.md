@@ -21,12 +21,12 @@ tags: [BLOG]
 ![사진 넣기](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/.png?raw=true)  
 2. sitemap.xml에 코드 작성하기  
 ![사진 넣기](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/.png?raw=true)  
-![pre가 무시되니 사진으로 바꿀 수 밖에](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-2.png?raw=true)  
+![pre가 무시되니 사진으로 바꿀 수 밖에](/_image/2024-11-26-00-00-02.png)  
 -> 블록 코드 형식으로 xml 코드를 붙여놨더니 렌더링되는 과정에서 xml 코드로 인식돼버려서 마크다운이 꼬였다.  
-![요렇게 말이다](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-1.png?raw=true "이렇게 보였다")  
+![요렇게 말이다](/_image/2024-11-26-00-00-00.png)  
 3. `https://[blog url]/sitemap.xml`로 접속해보기  
 
-<img alt="images" src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-22-1.png?raw=true">  
+<img alt="images" src = "/_image/2024-11-22-00-00-00.png">  
 
 ## 2. 포스트 내에서 sitemap 설정하기
 
@@ -70,7 +70,7 @@ tags: [BLOG]
 2. URL 접두어
 3. 등록하려는 사이트 URL 입력
 4. 계속
-    <img alt="Images" src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-22-2.png?raw=true">
+    <img alt="Images" src = "/_image/2024-11-22-00-00-01.png">
     > 내 github.io 처음 페이지는 _layouts/home.html에서 렌더링 되기 때문에 여기에 header 부분에 meta code를 추가해줬다.
 5. sitemap 등록하기
     1. 색인
@@ -89,7 +89,7 @@ tags: [BLOG]
 4. (실제 URL의 색인을 생성할 수 있는 지 표시됨)
 5. 며칠 후에 sitemap 등록 상태가 성공으로 변경된다고 함.
 
-<img alt="images" src="https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-12-19-1.png?raw=true">  
+<img alt="images" src="/_image/2024-12-19-00-00-00.png">  
 
 거의 한 달이 지난 지금 sitemap 등록 상태가 여전해서 18일에 새롭게 시도를 해봤다.  
 

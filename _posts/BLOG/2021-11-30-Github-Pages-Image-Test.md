@@ -21,7 +21,7 @@ tags:
 
 <figure>
 	<a href="https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-screenshot-error.png?raw=true">
-  <img alt="Images" src="https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-screenshot-error.png?raw=true">
+  <img alt="Images" src="/_image/2021-12-01-00-00-05.png">
   </a>
 	<figcaption>
   <a href="https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-screenshot-google-analytics.png?raw=true" title="Error">_posts에 업로드했을 경우에는 이미지 주소 복사를 눌러서 직접 가져와야하는 듯.
@@ -29,27 +29,27 @@ tags:
   </figcaption>
 </figure>
   
-![google-analytics](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/main/_image/2021-12-01-screenshot-google-analytics.png?raw=true "2 People - One is me, and the other is my freind I think")
+![google-analytics](/_image/2021-12-01-00-00-06.png)
 
 ## favicon icons history
 
 1. 첫번째 favicon
-![1st-favicon](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat1.jpg?raw=true)
+![1st-favicon](/_image/2021-12-01-00-00-00.jpg)
 2. 두번째 favicon
-![2nd-favicon|656x656](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat2.png?raw=true)
+![2nd-favicon|656x656](/_image/2021-12-01-00-00-00.png)
 3. 세번째 favicon
-![3rd-favicon](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat3.png?raw=true)
+![3rd-favicon](/_image/2021-12-01-00-00-01.png)
 4. 네번째 favicon
-![4th-favicon](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-CheshireCat4.png?raw=true)
+![4th-favicon](/_image/2021-12-01-00-00-02.png)
 
 ## wallpaper history
 
 1. 첫번째 wallpaper
-![1st-wallpaper](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-wonderland.jpg?raw=true)
+![1st-wallpaper](/_image/2021-12-01-00-00-01.jpg)
 1. 두번째 wallpaper
-![2nd-wallpaper](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-chess.png?raw=true)
+![2nd-wallpaper](/_image/2021-12-01-00-00-03.png)
 1. 세번째 wallpaper
-![1st-wallpaper](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-chess_negative.png?raw=true)
+![1st-wallpaper](/_image/2021-12-01-00-00-04.png)
 
 cdn 이용하기
 `https://cdn.jsdelivr.net/gh/<github_user_name>/<repo_url@branch_name>/<file_path>`

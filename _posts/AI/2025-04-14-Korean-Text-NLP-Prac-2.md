@@ -117,7 +117,7 @@ df = pd.DataFrame(data, columns=["id", "text", "label"])
 ```
 
 전처리 된 데이터
-![Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-14-1.png?raw=true)
+![Image](/_image/2025-04-14-00-00-00.png)
 
 ### 3.2. 감정 label 인코딩
 
@@ -327,7 +327,7 @@ def evaluate_accuracy(model, dataloader, tokenizer, sample_texts=None):
 evaluate_accuracy(model, val_loader, tokenizer)
 ```
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-1.png?raw=true)
+![그림](/_image/2025-04-20-00-00-00.png)
 
 ## 8. 해리포터 소설에 감정 분석 모델 적용하기
 
@@ -566,9 +566,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ### 1권
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-2.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-3.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-4.png?raw=true)
+![그림](/_image/2025-04-20-00-00-11.png)
+![그림](/_image/2025-04-20-00-00-15.png)
+![그림](/_image/2025-04-20-00-00-16.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -624,9 +624,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ### 2권
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-5.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-6.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-7.png?raw=true)
+![그림](/_image/2025-04-20-00-00-17.png)
+![그림](/_image/2025-04-20-00-00-18.png)
+![그림](/_image/2025-04-20-00-00-19.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -679,9 +679,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ### 3권
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-8.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-9.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-10.png?raw=true)
+![그림](/_image/2025-04-20-00-00-20.png)
+![그림](/_image/2025-04-20-00-00-21.png)
+![그림](/_image/2025-04-20-00-00-01.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -734,9 +734,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ### 4권
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-11.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-12.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-13.png?raw=true)
+![그림](/_image/2025-04-20-00-00-02.png)
+![그림](/_image/2025-04-20-00-00-03.png)
+![그림](/_image/2025-04-20-00-00-04.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -789,9 +789,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ### 5권
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-14.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-15.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-16.png?raw=true)
+![그림](/_image/2025-04-20-00-00-05.png)
+![그림](/_image/2025-04-20-00-00-06.png)
+![그림](/_image/2025-04-20-00-00-07.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -844,9 +844,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ### 6권
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-17.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-18.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-19.png?raw=true)
+![그림](/_image/2025-04-20-00-00-08.png)
+![그림](/_image/2025-04-20-00-00-09.png)
+![그림](/_image/2025-04-20-00-00-10.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>
@@ -899,9 +899,9 @@ for (path, dirs, files) in os.walk(root_path):
 
 ### 7권
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-20.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-21.png?raw=true)
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-20-22.png?raw=true)
+![그림](/_image/2025-04-20-00-00-12.png)
+![그림](/_image/2025-04-20-00-00-13.png)
+![그림](/_image/2025-04-20-00-00-14.png)
 
 <table border="1" style="border-collapse: collapse; text-align: center;">
   <thead>

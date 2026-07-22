@@ -43,7 +43,7 @@ tags:
 #  선분 검출
 ## 1. 에지 연결과 표현
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-10.jpg?raw=true)
+- ![Alt Images](/_image/2025-10-15-00-00-01.jpg)
 
 | 성분  | 주변 에지 성분 개수 |
 | --- | ----------- |
@@ -59,7 +59,7 @@ tags:
 
 ## 2. 선분 근사
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-11.jpg?raw=true)
+- ![Alt Images](/_image/2025-10-15-00-00-02.jpg)
 - 두 끝점을 잇는 직선으로부터 가장 먼 점까지의 거리 $h$가 임계값 이내가 될 때까지 선분 분할을 재귀적으로 반복한다
 
 ## 3. Voting Schemes
@@ -119,7 +119,7 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 ## 4. 허프 변환(Hough Transform)
 ### 4.1. 개념
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-12.jpg?raw=true)
+- ![Alt Images](/_image/2025-10-15-00-00-03.jpg)
 - 허프 변환: 차원의 변환, 좌표계의 변환
 	- 에지 연결 과정 없이 선분 검출 (전역 연산을 이용한 지각 군집화)
 	- 영상 공간 _y-x_ 를 기울기 절편 공간 _b-a_ 로 매핑
@@ -127,10 +127,10 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 		1. 파라미터 공간을 **격자(bin)** 로 이산화
 		2. 영상의 각 에지점이 가능한 모든 파라미터 bin에 **투표**
 		3. 누적배열의 **피크**를 검출.
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-13.jpg?raw=true)
+- ![Alt Images](/_image/2025-10-15-00-00-04.jpg)
 - 파라미터 범위가 무한, **수직선**에서 $m\to\infty$ 문제가 발생.
 	- **극좌표** 대안: $\rho=x\cos\theta+y\sin\theta$
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-15-14.jpg?raw=true)
+	- ![Alt Images](/_image/2025-10-15-00-00-05.jpg)
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-11-29-25.jpg?raw=true)
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-21-12-18.jpg?raw=true)
 

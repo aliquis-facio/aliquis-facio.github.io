@@ -36,7 +36,7 @@ tags: [WEB]
 **월드 와이드 웹(WWW, World Wide Web)**:  
 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간으로, 인터넷 상의 인기 있는 하나의 서비스이다.  
 즉, `웹(Web) ⊂ 인터넷(Internet)`이다.  
-![Alt Image](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/main/_image/2024-10-18-1.jpg?raw=true)
+![Alt Image](/_image/2024-10-18-00-00-00.jpg)
 
 ## 2. 웹 서버(Web Server)란?
 
@@ -48,16 +48,16 @@ tags: [WEB]
 APM: 주로 쓰였던 조합인 Apache, Php, MySql의 앞 글자를 따서 APM이라 부른다.  
 
 1. Apache
-    ![Apache Logo](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/main/_image/2024-10-18-2.png?raw=true)
+    ![Apache Logo](/_image/2024-10-18-00-00-00.png)
     오픈 소스 HTTP 웹 서버 프로그램으로 정적인 데이터를 처리하는 웹 서버이다.
 
-    ![2024 글로벌 웹 서버 시장 점유율](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/main/_image/2024-10-19-1.png?raw=true)
+    ![2024 글로벌 웹 서버 시장 점유율](/_image/2024-10-19-00-00-00.png)
     _2024 글로벌 웹 서버 시장 점유율_
 2. PHP
-    ![PHP Logo](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/main/_image/2024-10-18-3.png?raw=true)
+    ![PHP Logo](/_image/2024-10-18-00-00-01.png)
     웹 서버상에서 쓰는 언어로, 일반 HTML + CSS + JS로는 DB 접속 구현 못해서 쓰는 언어다.
 3. MySQL
-    ![MySQL Logo](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/main/_image/2024-10-18-4.png?raw=true)
+    ![MySQL Logo](/_image/2024-10-18-00-00-02.png)
     오픈소스 관계형 데이터베이스 관리 시스템(RDBMS)으로 행과 열로 구성된 테이블에 데이터를 저장한다.  
     SQL(쿼리 언어)를 사용하여 데이터를 정의, 조작, 제어, 쿼리할 수 있다.
 
@@ -114,7 +114,7 @@ http, https의 경우 포트 번호 생략이 가능하다(Common Port의 경우
 | 포트 번호 | 80 |
 
 웹서버 파일 구조는 밑과 같을 때  
-![웹서버 디렉토리 구조](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-10-18-5.jpg?raw=true)
+![웹서버 디렉토리 구조](/_image/2024-10-18-00-00-01.jpg)
 
 1. Web Basic 안에서 웹서버를 실행했을 경우 (Root File이 Web Basic)
 c.txt 파일 열기 위해서 url을 어케 입력해야 할까?  
@@ -134,7 +134,7 @@ c.txt 파일 열기 위해서 url을 어케 입력해야 할까?
 디렉토리별로 index 파일이 적용된다  
 
 기본적으로 index.html을 제공한다. 그렇다면 index 파일이 없다면??  
-![index.html 없을 때](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-10-18-6.png?raw=true)
+![index.html 없을 때](/_image/2024-10-18-00-00-03.png)
 404 Not Found를 볼 줄 알았는데 예상 외다.
 
 ---

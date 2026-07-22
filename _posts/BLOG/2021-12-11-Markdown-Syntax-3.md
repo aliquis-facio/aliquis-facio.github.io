@@ -94,7 +94,7 @@ CDN 적용 사이트: [JSDELIVR](https://www.jsdelivr.com/github)
 ### 2.1. Emoji 붙여넣기
 
 1. [Emojipedia](https://emojipedia.org/): img 형태로 복사된다.
-    <img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-24-1.png?raw=true" alt="Emoji">
+    <img src = "/_image/2024-11-24-00-00-00.png" alt="Emoji">
 2. [twitter-symbols](https://kr.piliapp.com/twitter-symbols/): emoji 형태로 복사된다
     🙃
 

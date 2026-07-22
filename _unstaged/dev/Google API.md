@@ -5,7 +5,7 @@
 3. 사용자가 부여한 액세스 범위를 검사
 4. 액세스 토큰을 API로 전송
 5. 필요한 경우 액세스 토큰을 갱신
-![](20250921200037.png)
+![2025-09-21-20-00-37](/_image/2025-09-21-20-00-37.png)
 # 참고
 * [Google API - OAuth 2.0 인증](https://arcticwillow.tistory.com/31)
 * [OAuth 2.0을 사용하여 Google API에 액세스하기](https://developers.google.com/identity/protocols/oauth2?hl=ko#webserver)

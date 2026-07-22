@@ -364,7 +364,7 @@ OSI 네트워크 계층에서 호스트의 주소지정과 패킷 분할 및 조
 <div style="text-align: right"> 오답: 2, 정답: 4 </div>
 
 #### 74. 다음 그림에 해당하는 명령으로 알맞은 것은?
-![image](https://cdn.jsdelivr.net/gh/jenych0314/jenych0314.github.io@master/_image/2022-06-29-74_image.png)
+![image](/_image/2022-06-29-00-00-00.png)
 1. setup ➔ Network configuration
 2. neat
 3. nm-connection-editor

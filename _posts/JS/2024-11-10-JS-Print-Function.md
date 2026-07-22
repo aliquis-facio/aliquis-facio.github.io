@@ -31,7 +31,7 @@ tags: [JS, WEB]
 </body>
 ```
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-10-1.png?raw=true">
+<img src = "/_image/2024-11-10-00-00-00.png">
 
 ## 2. console.log()
 
@@ -45,7 +45,7 @@ tags: [JS, WEB]
 
 `F12 - 개발자도구 - 콘솔`에서만 확인이 가능하다
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-10-2.png?raw=true">
+<img src = "/_image/2024-11-10-00-00-01.png">
 
 ## 3. document.write()
 
@@ -54,7 +54,7 @@ document.write("Hello, World!<br>");
 document.write("Hello, World!");
 ```
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-10-3.png?raw=true">
+<img src = "/_image/2024-11-10-00-00-02.png">
 
 ## 4. alert()
 
@@ -66,7 +66,7 @@ document.write("Hello, 119");
 alert("It's OK?");
 ```
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-10-4.gif?raw=true">
+<img src = "/_image/2024-11-10-00-00-00.gif">
 
 ## 5. prompt()
 
@@ -79,7 +79,7 @@ document.write("Hi");
 prompt("I'm not OK");
 ```
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-10-5.gif?raw=true">
+<img src = "/_image/2024-11-10-00-00-01.gif">
 
 ## 6. confirm()
 
@@ -92,7 +92,7 @@ document.write("DEF");
 confirm("ALPHABET");
 ```
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-11-10-6.gif?raw=true">
+<img src = "/_image/2024-11-10-00-00-02.gif">
 
 ---
 

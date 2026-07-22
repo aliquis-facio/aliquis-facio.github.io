@@ -50,7 +50,7 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 
 ## 쿠키 동작 방식
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-11-08-4.jpg?raw=true" title = "쿠키 동작">
+<img src = "/_image/2024-11-08-00-00-03.jpg" title = "쿠키 동작">
 
 # 2. 세션(Session)
 
@@ -62,7 +62,7 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 
 ## 세션 동작 방식
 
-<img src = "https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2024-11-08-5.jpg?raw=true" title = "세션 동작">
+<img src = "/_image/2024-11-08-00-00-04.jpg" title = "세션 동작">
 
 # 3. 쿠키(Cookie) vs. 세션(Session)
 

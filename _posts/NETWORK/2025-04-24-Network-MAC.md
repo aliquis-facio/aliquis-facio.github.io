@@ -36,12 +36,12 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 ### 1.1. 데이터 통신 방식
 채널 서비스 장치(CSU, Channel Service Unit): 디지털 전용 회선 서비스의 회선 종단 장치
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-24-1.jpg?raw=true)
+![그림](/_image/2025-04-24-00-00-00.jpg)
 
 * **Point-to-Point Link**: 1:1 전용 회선 -> MAC 프로토콜 불필요
 * **Multi-Point/Broadcast/Shared Link**: 다수 공유 회선 -> Broadcast Link에서 한 번에 한 쌍씩(송신 장치와 수신 장치)가 link를 독점적으로 사용한다 -> MAC 프로토콜 필요
 
-![그림](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-04-24-2.jpg?raw=true)
+![그림](/_image/2025-04-24-00-00-01.jpg)
 
 ## 2. MAC Protocol의 주요 issues
 * **매체 접근 시점 결정**: medium(매체)에 언제 접근할거냐?

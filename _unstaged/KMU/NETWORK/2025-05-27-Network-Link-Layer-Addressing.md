@@ -26,7 +26,7 @@ IP 주소는 종단 간 주소지만, 실제 데이터 전송은 **링크 단위
 **데이터링크 계층(MAC)**은 링크 단위의 다음 홉 경로를 위한 주소 지정한다.
 
 # MAC 주소란?
-![PDU](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-6.jpg)
+![PDU](/_image/2025-05-28-00-00-06.jpg)
 
 NIC(Network Interface Card)에 전역적으로 고유하게 할당되어있는 주소이다. 총 48비트(6바이트), 16진수 12자리로 구성되어있다.
 -> locally unique하다
@@ -64,7 +64,7 @@ Windows: ipconfig /all, getmac -v
 </table>
 
 # ARP (Address Resolution Protocol)
-![ARP](https://github.com/aliquis-facio/aliquis-facio.github.io/blob/master/_image/2025-05-28-5.jpg)
+![ARP](/_image/2025-05-28-00-00-05.jpg)
 
 ARP: IP 주소 → MAC 주소로 변환하는 프로토콜이다. 네트워크 계층과 링크 계층 간의 주소 변환 다리 역할을 한다.
 

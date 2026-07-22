@@ -30,7 +30,7 @@
 
 시퀀스는 DNN에게 도전적인 문제다. 왜냐하면 입력과 출력의 차원이 알려져 있고 고정되어 있어야 하기 때문이다. 본 논문에서는 **LSTM(Long Short-Term Memory) 아키텍처를 직접 적용**함으로써 일반적인 시퀀스-투-시퀀스 문제를 해결할 수 있음을 보인다. 핵심 아이디어는 **하나의 LSTM을 사용해 입력 시퀀스를 한 시점씩 읽어 고차원 고정 벡터 표현을 얻고, 또 다른 LSTM을 사용해 그 벡터로부터 출력 시퀀스를 추출하는 것**이다 (그림 1 참고). **두 번째 LSTM은 본질적으로 입력 시퀀스에 조건화된 순환 신경망 언어 모델**이다. LSTM이 **[장기 의존성](AIM/Long_Term_Dependency.md)을 가진 데이터에서 성공적으로 학습할 수 있는 능력**은 입력과 출력 사이에 상당한 시간 지연이 존재하는 본 응용에 자연스럽게 적합하다 (그림 1 참고).
 
-![[2025-10-01-2.png]]
+![2025-10-01-2](/_image/2025-10-01-00-00-01.png)
 > 그림1
 
 3. <font color="#ff0000">제안 방법</font>
@@ -137,7 +137,7 @@ $$\frac{1}{|S|} \sum_{(T,S) \in \mathcal{S}} log_p(T|S)$$
 	- <font color="#ff0000"><b>대규모 심층 LSTM</b>을 문장 쌍에 대해 학습.</font>
 	- <font color="#ff0000">학습 목표:</font>
 	    - <font color="#ff0000">주어진 소스 문장 S → 올바른 번역 T의 <b>로그 확률 최대화</b></font>
-	    - <font color="#ff0000">수식:</font> ![[2025-10-01-3.png]]
+	    - <font color="#ff0000">수식:</font> ![2025-10-01-3](/_image/2025-10-01-00-00-02.png)
 
 학습이 완료된 후에는, LSTM이 계산한 확률에 따라 **가장 가능성이 높은 번역**을 찾는다:
 $$\hat{T} = \arg\max_T p(T|S)$$
@@ -149,7 +149,7 @@ $$\hat{T} = \arg\max_T p(T|S)$$
 2. <font color="#ff0000">번역 생성 (Decoding)</font>
 	- <font color="#ff0000">학습 완료 후 번역:</font>
 	    - <font color="#ff0000">가장 가능성 높은 번역</font>
-	    - ![[2025-10-01-4.png]]
+	    - ![2025-10-01-4](/_image/2025-10-01-00-00-03.png)
 	- <font color="#ff0000">탐색 방식: <b>좌→우 빔 서치 디코더</b></font>
 	    - <font color="#ff0000">빔 안에는 <b>B개의 부분 가설(partial hypotheses)</b> 유지.</font>
 	    - <font color="#ff0000">각 단계에서 가능한 모든 단어로 확장 후, <b>상위 B개만 유지</b>.</font>
@@ -248,10 +248,10 @@ LSTM은 장기 의존성을 가진 문제를 해결할 수 있지만, 우리는 
     - <font color="#ff0000">동일한 방식으로 <b>최고 WMT’14 시스템 [9]</b> 을 평가하면 BLEU <b>37.0점</b></font>
     - <font color="#ff0000">이는 statmt.org\matrix에 보고된 <b>35.8점</b>보다 약간 높음</font>
 
-![](2025-10-09-2.png)
+![2025-10-09-00-00-01](/_image/2025-10-09-00-00-01.png)
 > 표1: The performance of the LSTM on WMT’14 English to French test set (ntst14).
 
-![](2025-10-09-1.png)
+![2025-10-09-00-00-00](/_image/2025-10-09-00-00-00.png)
 > 표2: Methods that use neural networks together with an SMT system on the WMT’14 English to French test set (ntst14).
 
 결과는 **표 1과 표 2**에 제시되어 있다. 우리의 **최고 결과(best results)** 는 서로 다른 **무작위 초기화(random initialization)** 와 **미니배치의 무작위 순서(random order of minibatches)** 로 학습된 **여러 LSTM들의 앙상블(ensemble)** 에 의해 얻어졌다.
@@ -275,13 +275,13 @@ LSTM 앙상블의 디코딩된 번역 결과는 **최고의 WMT’14 시스템**
 
 ### 3.8 Model Analysis 모델 분석
 
-![](2025-10-09-3.png)
+![2025-10-09-00-00-02](/_image/2025-10-09-00-00-02.png)
 > 그림2: The figure shows a 2-dimensional PCA projection of the LSTM hidden states that are obtained after processing the phrases in the figures.
 
-![](2025-10-09-4.png)
+![2025-10-09-00-00-03](/_image/2025-10-09-00-00-03.png)
 > 표3: A few examples of long translations produced by the LSTM alongside the ground truth translations.
 
-![](2025-10-09-5.png)
+![2025-10-09-00-00-04](/_image/2025-10-09-00-00-04.png)
 > 그림3: **문장 길이에 따른 시스템 성능** 과  **단어 희귀도에 따른 시스템 성능**
 
 우리 모델의 매력적인 특징 중 하나는 **단어 시퀀스를 고정된 차원의 벡터로 변환할 수 있는 능력**이다.  **그림 2(Figure 2)** 는 학습된 표현 중 일부를 시각화한 것이다. 이 그림은 모델이 **단어의 순서(order of words)** 에 민감하면서도, **능동태(active voice)를 수동태(passive voice)** 로 바꾸는 것에는 거의 영향을 받지 않음을 명확히 보여준다. 그림에 사용된 **2차원 투영(two-dimensional projection)** 은 **[PCA(주성분 분석)]()** 를 통해 얻어진 것이다.

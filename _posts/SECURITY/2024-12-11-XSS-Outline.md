@@ -186,7 +186,7 @@ burp, param check, response에 같은 값 있나?
 ## 6. 대응방안
 
 1. HTML 특수문자를 <mark>HTML Entity</mark> 표현 방법으로 치환하기
-![Some HTML Entities](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/2024-12-19-2.png?raw=true)
+![Some HTML Entities](/_image/2024-12-19-00-00-01.png)
 -> 적용하지 못하는 곳: HTML Editor 등
 1. 필터링
     * 블랙 리스트 기반 필터링: 특정 단어를 못 들어오게 하는 것  

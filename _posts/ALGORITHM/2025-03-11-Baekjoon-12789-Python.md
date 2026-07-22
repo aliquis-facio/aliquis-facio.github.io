@@ -18,7 +18,7 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
 # 12789 도키도키 간식드리미
 
 **출처: <https://www.acmicpc.net/problem/12789>**  
-![문제](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-1.png?raw=true)
+![문제](/_image/2025-03-11-00-00-00.png)
 
 ## 문제 이해
 
@@ -29,14 +29,14 @@ tags: [ALGORITHM, BAEKJOON, PYTHON]
     1. 같다면 stack의 마지막 수를 빼주고 p를 1증가시키고 다음 마지막 수와 비교한다
     1. 다르다면 반복을 종료한다
 
-1. ![그림1](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-2.jpg?raw=true)
-1. ![그림2](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-3.jpg?raw=true)
-1. ![그림3](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-4.jpg?raw=true)
-1. ![그림4](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-5.jpg?raw=true)
-1. ![그림5](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-6.jpg?raw=true)
-1. ![그림6](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-7.jpg?raw=true)
-1. ![그림7](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-8.jpg?raw=true)
-1. ![그림8](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-03-11-9.jpg?raw=true)
+1. ![그림1](/_image/2025-03-11-00-00-00.jpg)
+1. ![그림2](/_image/2025-03-11-00-00-01.jpg)
+1. ![그림3](/_image/2025-03-11-00-00-02.jpg)
+1. ![그림4](/_image/2025-03-11-00-00-03.jpg)
+1. ![그림5](/_image/2025-03-11-00-00-04.jpg)
+1. ![그림6](/_image/2025-03-11-00-00-05.jpg)
+1. ![그림7](/_image/2025-03-11-00-00-06.jpg)
+1. ![그림8](/_image/2025-03-11-00-00-07.jpg)
 
 ## 풀이
 
