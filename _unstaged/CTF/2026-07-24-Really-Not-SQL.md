@@ -1,7 +1,7 @@
 
 <!-- markdownlint-disable MD010 MD025 MD029 MD033 -->
 
-# Really Not SQL
+# [Dreamhack] Really Not SQL
 
 ## 목차
 
@@ -11,7 +11,7 @@
     1. [flag.php](#22-flagphp)
 3. [Vuln](#3-vuln)
 4. [Payload](#4-payload)
-5. [참고](#참고)
+<!-- 5. [참고](#참고) -->
 
 ---
 
