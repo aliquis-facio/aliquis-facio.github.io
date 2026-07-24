@@ -29,10 +29,15 @@
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    "_template/post.md"
+    "_template/01-concept-research.md"
   ],
   "startup_templates": [
-    "_template/post.md"
+    "_template/01-concept-research.md"
   ],
-  "intellisense_render": 1
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": ""
+    }
+  ]
 }

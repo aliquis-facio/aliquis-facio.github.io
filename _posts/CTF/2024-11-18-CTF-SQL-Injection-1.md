@@ -30,7 +30,7 @@ pw: dol1234
 2. 
 id: doldol(')#
 pw: dol1234
--> 실행X -> python인가? php도 #으로 주석처리가 되는구나??
+-> 실행X -> python인가? php도 `#`으로 주석처리가 되는구나??
 3. 
 id: doldol(')//
 pw: dol1234
