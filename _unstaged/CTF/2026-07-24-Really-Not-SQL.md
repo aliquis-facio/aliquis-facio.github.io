@@ -17,9 +17,13 @@
 
 ## 1. Intro
 
-해당 문제는 Apache와 PHP로 구성된 간단한 로그인 애플리케이션이다.
+Dreamhack 링크: <https://dreamhack.io/wargame/challenges/2105>
+
+Apache와 PHP로 구성된 간단한 로그인 애플리케이션.
 
 사용자 정보는 데이터베이스가 아닌 JSON 파일에 저장되어 있으며, 관리자 계정으로 로그인하면 `/flag.php`에서 플래그를 확인할 수 있다.
+
+## 2. Code
 
 파일 구조
 
@@ -42,20 +46,6 @@
         ├── guest.json
         └── index.php
 ```
-
-`admin.json` 구조
-
-```json
-{
-  "no": 0,
-  "id": "admin",
-  "password": "SHA-256 해시값"
-}
-```
-
-로그인 시 입력한 비밀번호를 SHA-256으로 해시한 뒤, JSON 파일의 `password` 값과 비교한다.
-
-## 2. Code
 
 ### 2.1. login.php
 
@@ -131,28 +121,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 </details>
 
-로그인 로직은 대략 다음과 같다.
-
-```php
-$userData = json_decode(file_get_contents($filepath), true);
-
-if ($userData['password'] !== hash("sha256", $password)) {
-    // 로그인 실패
-}
-
-$_SESSION['user'] = $username;
-```
-
 관리자 계정의 비밀번호 해시를 알고 있거나 변경할 수 있다면 정상적인 로그인 절차를 통해 관리자 세션을 얻을 수 있다.
 
 ### 2.2. flag.php
-
-`flag.php`에서는 세션의 사용자 이름이 `admin`인지 검사한다.
 
 ```php
 <?php 
 session_start();
 
+// 세션의 user 값이 admin인지 검사
 if ($_SESSION['user'] !== "admin") {
     http_response_code(403);
 } else {
@@ -162,14 +139,6 @@ if ($_SESSION['user'] !== "admin") {
 
 ?>
 ```
-
-따라서 최종 목표는 관리자 계정으로 로그인해 세션에 다음 값이 저장되도록 만드는 것이다.
-
-```php
-$_SESSION['user'] = "admin";
-```
-
----
 
 ## 3. Vuln
 
