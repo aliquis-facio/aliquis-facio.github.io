@@ -1,3 +1,17 @@
+---
+layout: post
+comments: true
+sitemap:
+
+title: "[CTF] Dreamhack 문제 풀이: Really Not SQL"
+excerpt: "임의 파일 덮어쓰기"
+
+date: 2026-07-24
+last_modified_at: 2026-07-28
+
+categories: [CTF]
+tags: [TIL, WEB, CTF]
+---
 
 <!-- markdownlint-disable MD010 MD025 MD029 MD033 -->
 
@@ -46,6 +60,100 @@ Apache와 PHP로 구성된 간단한 로그인 애플리케이션.
         ├── guest.json
         └── index.php
 ```
+
+### 2.1. Dockerfile
+
+<details>
+<summary>전체 코드 접기/펼치기</summary>
+<div markdown="1">
+
+```docker
+FROM ubuntu:24.04
+
+RUN apt-get update
+RUN apt-get upgrade -y
+
+RUN apt-get install -y zip unzip tzdata curl
+RUN apt-get install -y php
+RUN apt-get install -y apache2
+
+RUN rm /var/www/html/index.html
+COPY ./deploy/src /var/www/html/
+# /var/www/html/user 권한이 777
+RUN chmod 777 /var/www/html/user/
+RUN chmod 666 /var/www/html/user/*.json
+COPY ./deploy/000-default.conf /etc/apache2/sites-enabled/
+COPY ./deploy/.htaccess /var/www/html/user/
+COPY ./deploy/run.sh /usr/sbin/
+COPY ./deploy/flag /flag
+
+RUN a2enmod rewrite
+RUN a2enmod dav
+RUN a2enmod dav_fs
+RUN chmod +x /usr/sbin/run.sh
+
+EXPOSE 80
+
+CMD ["/usr/sbin/run.sh"]
+```
+
+</div>
+</details>
+
+인증 정보가 웹 루트 내부에 저장됨
+
+### 2.2. 000-default.conf
+
+<details>
+<summary>전체 코드 접기/펼치기</summary>
+<div markdown="1">
+
+```conf
+<VirtualHost *:80>
+  ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+   <Directory /var/www/html/>
+     AllowOverride None
+     Require all granted
+   </Directory>
+
+  # WebDav가 허용됨
+  <Directory /var/www/html/user/>
+      DAV On
+      Options Indexes
+      AllowOverride All
+      # 외부 사용자 접근 모두 허용
+      Require all granted
+  </Directory>
+</VirtualHost>
+```
+
+</div>
+</details>
+
+WebDAV는 HTTP를 통해 파일 생성과 수정을 허용한다.
+
+### 2.3. .htaccess
+
+<details>
+<summary>전체 코드 접기/펼치기</summary>
+<div markdown="1">
+
+```htaccess
+<!-- DELETE method만 차단 -->
+<Limit DELETE>
+        Require all denied
+</Limit>
+```
+
+</div>
+</details>
+
+`PUT`을 이용한 파일 덮어쓰기 가능
 
 ### 2.1. login.php
 
@@ -125,6 +233,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ### 2.2. flag.php
 
+<details>
+<summary>전체 코드 접기/펼치기</summary>
+<div markdown="1">
+
 ```php
 <?php 
 session_start();
@@ -140,60 +252,12 @@ if ($_SESSION['user'] !== "admin") {
 ?>
 ```
 
+</div>
+</details>
+
 ## 3. Vuln
 
-### 인증 정보가 웹 루트 내부에 저장됨
-
-```text
-/var/www/html/user/admin.json
-```
-
-인증 데이터는 웹 서버가 직접 제공하는 경로에 존재해서는 안 된다.
-
-### 사용자 디렉터리에 WebDAV가 활성화됨
-
-```apache
-DAV On
-```
-
-WebDAV는 HTTP를 통해 파일 생성과 수정을 허용한다.
-
-### 외부 사용자의 접근을 모두 허용함
-
-```apache
-Require all granted
-```
-
-WebDAV 요청에 별도의 인증이 적용되지 않았다.
-
-### PUT 메서드가 차단되지 않음
-
-```apache
-<Limit DELETE>
-    Require all denied
-</Limit>
-```
-
-`DELETE`만 차단했기 때문에 `PUT`을 이용한 파일 덮어쓰기는 가능했다.
-
-### 파일 시스템 쓰기 권한이 과도함
-
-```dockerfile
-chmod 777 /var/www/html/user/
-chmod 666 /var/www/html/user/*.json
-```
-
-Apache 프로세스가 JSON 파일을 수정할 수 있는 환경이 만들어졌다.
-
----
-
-즉, 외부 사용자가 다음 요청으로 기존 파일을 덮어쓸 수 있다.
-
-```text
-PUT /user/admin.json
-```
-
-`admin.json`의 비밀번호 해시를 공격자가 정한 비밀번호의 해시로 변경하면, 해당 비밀번호를 이용해 관리자 계정으로 정상 로그인할 수 있다.
+인증 X WebDAV 파일 쓰기
 
 ## 4. Payload
 
@@ -268,72 +332,6 @@ print(response.text)
 
 pass
 
-## 12. 대응 방안
+## 참고
 
-### WebDAV 비활성화
-
-WebDAV가 필요하지 않다면 완전히 제거해야 한다.
-
-```apache
-<Directory /var/www/html/user/>
-    DAV Off
-    Options -Indexes
-    AllowOverride None
-    Require all denied
-</Directory>
-```
-
-### 사용자 데이터 웹 루트 밖으로 이동
-
-사용자 인증 파일은 다음과 같이 웹 루트 외부에 저장해야 한다.
-
-```text
-/var/lib/myapp/users/admin.json
-```
-
-PHP 코드에서 해당 경로를 직접 읽도록 구성한다.
-
-```php
-$filepath = "/var/lib/myapp/users/" . $username . ".json";
-```
-
-### 안전한 비밀번호 해시 사용
-
-단순 SHA-256 대신 PHP의 비밀번호 전용 함수를 사용해야 한다.
-
-```php
-$hash = password_hash(
-    $password,
-    PASSWORD_DEFAULT
-);
-```
-
-로그인 검증은 다음과 같이 수행한다.
-
-```php
-if (
-    password_verify(
-        $password,
-        $userData['password']
-    )
-) {
-    // 로그인 성공
-}
-```
-
-### 최소 권한 적용
-
-```dockerfile
-RUN chown -R www-data:www-data /var/lib/myapp/users \
-    && chmod 750 /var/lib/myapp/users \
-    && chmod 640 /var/lib/myapp/users/*.json
-```
-
-### 세션 보안 강화
-
-로그인 성공 시 세션 ID를 재생성해야 한다.
-
-```php
-session_regenerate_id(true);
-$_SESSION['user'] = $username;
-```
+- [Wikipedia: WebDAV](https://ko.wikipedia.org/wiki/WebDAV)
