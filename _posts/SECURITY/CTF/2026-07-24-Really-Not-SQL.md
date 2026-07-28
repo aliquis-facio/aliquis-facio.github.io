@@ -21,11 +21,14 @@ tags: [TIL, WEB, CTF]
 
 1. [Intro](#1-intro)
 2. [Code](#2-code)
-    1. [login.php](#21-loginphp)
-    1. [flag.php](#22-flagphp)
+    1. [Dockerfile](#21-dockerfile)
+    1. [000-default.conf](#22-000-defaultconf)
+    1. [.htaccess](#23-htaccess)
+    1. [login.php](#24-loginphp)
+    1. [flag.php](#25-flagphp)
 3. [Vuln](#3-vuln)
 4. [Payload](#4-payload)
-<!-- 5. [참고](#참고) -->
+5. [참고](#참고)
 
 ---
 
@@ -161,7 +164,7 @@ CMD ["/usr/sbin/run.sh"]
 
 - `DELETE`만 차단 -> `PUT`을 이용해 파일 덮어쓰기가 가능하다.
 
-### 2.1. login.php
+### 2.4. login.php
 
 <details>
 <summary>전체 코드 접기/펼치기</summary>
@@ -237,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 - 관리자 계정의 비밀번호 해시를 알고 있거나 변경할 수 있다면, 정상적인 로그인 절차를 통해 관리자 세션을 얻을 수 있다.
 
-### 2.2. flag.php
+### 2.5. flag.php
 
 <details>
 <summary>전체 코드 접기/펼치기</summary>
@@ -341,6 +344,8 @@ print(response.text)
 ### 4.2. flag.php 접근
 
 pass
+
+---
 
 ## 참고
 
