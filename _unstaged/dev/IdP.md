@@ -1,6 +1,7 @@
 # IdP (Identity Provider)
 
-# 참고
+## 참고
+
 * [ID 공급자(IDP)란 무엇인가요?](https://www.entrust.com/ko/resources/learn/what-is-an-identity-provider)
 * [ID 공급자(IdP)는 무엇입니까?](https://www.cloudflare.com/ko-kr/learning/access-management/what-is-an-identity-provider/)
 * [SSO](obsidian://open?vault=memo&file=ESW%2FSSO)

@@ -2,6 +2,7 @@
 tags:
   - ESW
 ---
+
 # Ingest 서비스란?
 
 ## 개요
@@ -18,6 +19,7 @@ Ingest 서비스는 테이프, 라이브 방송, 파일 등 다양한 형태의 
 * 데이터 가공 및 보강: 데이터에 정보를 추가하거나 구문을 분석하는 등의 전처리 과정을 거쳐 데이터의 가치를 높인다.
 
 ## 주요 활용 분야
+
 * 방송 및 미디어: 테이프, 파일 등의 방송 콘텐츠를 수집해 방송사의 미디어 자산 관리(MAM) 시스템에 등록하고, 편집 및 배포를 위한 준비를 한다.
 * 데이터 분석: 다양한 소스에서 들어오는 로그 데이터나 정형/비정형 데이터를 수집하고 가공해 분석 시스템에 저장한다.
 * 클라우드 서비스: Amazon OpenSearch Service와 같은 클라우드 플랫폼에서 데이터를 수집하고 처리하기 위해 사용된다.
@@ -28,7 +30,7 @@ Ingest 서비스는 테이프, 라이브 방송, 파일 등 다양한 형태의 
 * ThinQ Poller
 * [Webhook](Webhook.md)
 
-# 참고
+## 참고
 
 * [What is the Ingest server and how is it compared to Sony Vegas Pro?](https://www.quora.com/What-is-the-Ingest-server-and-how-is-it-compared-to-Sony-Vegas-Pro)
 * [NPS - 인제스트 시스템](https://blog.naver.com/t_rex_one/220979406065)
