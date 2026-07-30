@@ -266,7 +266,7 @@ if ($_SESSION['user'] !== "admin") {
 
 ## 3. Vuln
 
-인증 X WebDAV 파일 쓰기
+인증 없이 WebDAV 파일 덮어쓰기
 
 ## 4. Payload
 
