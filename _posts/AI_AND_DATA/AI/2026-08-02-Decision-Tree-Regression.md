@@ -4,7 +4,7 @@ comments: true
 sitemap:
 
 title: "[AI] Decision Tree Regression"
-excerpt: "의사결정나무 회귀 개념과 코드"
+excerpt: "의사결정나무 회귀 개념과 파이썬 코드"
 
 date: 2026-08-02
 last_modified_at: 2026-08-02
@@ -17,32 +17,33 @@ tags:
   - CART
 ---
 
-<!-- markdownlint-disable MD025 MD060 -->
+<!-- markdownlint-disable MD004 MD025 MD060 -->
 
 # Decision Tree Regression 의사결정나무 회귀
 
 > **Decision tree regression(의사결정나무 회귀)**: 입력 특성에 관한 조건을 기준으로 데이터를 반복해서 나누고, 최종 구역에 속한 학습 데이터의 대표값으로 연속적인 값을 예측하는 지도학습 알고리즘이다.
 
+---
+
+## 목차
+
+1. []()
+
+---
+
 ## 1. 개요
 
 **Decision Tree(의사결정나무)**: 일련의 질문을 통해 예측 결과를 찾아가는 트리 구조의 머신러닝 모델이다.
+
+![|500x281](../../../_image/2026-08-02-16-05-05.png)
+> *출처: AI 생성*
 
 다음과 같은 형태의 질문을 반복한다고 생각할 수 있다.
 
 * 주택 면적이 100㎡ 이하인가?
 * 건축 연도가 2010년 이전인가?
-* 지하철역과의 거리가 1km 이하인가?
 
 각 질문에 따라 데이터가 두 집단으로 나뉘며, 더 이상 분할하지 않는 마지막 노드에서 예측값이 결정된다.
-
-Decision Tree는 다음 두 가지 문제에 모두 사용할 수 있다.
-
-| 구분 | 모델                       | 예측 대상   |
-| -- | ------------------------ | ------- |
-| 분류 | `DecisionTreeClassifier` | 범주형 값   |
-| 회귀 | `DecisionTreeRegressor`  | 연속적인 수치 |
-
-분류와 회귀를 모두 처리하는 대표적인 트리 알고리즘을 **CART(Classification and Regression Trees)** 라고 한다. scikit-learn의 Decision Tree도 최적화된 CART 알고리즘을 기반으로 구현되어 있다. CART는 하나의 노드에서 데이터를 두 집단으로 분할하는 **이진 트리**를 만든다.
 
 ## 2. Decision Tree의 구조
 
@@ -118,8 +119,6 @@ $$
 
 따라서 새로운 데이터가 이 리프 노드에 도착하면 `3.75`를 예측한다.
 
-`criterion="absolute_error"`를 사용하면 평균이 아니라 **중앙값**을 이용한다. [scikit-learn DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
-
 ## 4. 최적 분할 기준
 
 ### 4.1 평균제곱오차
@@ -164,8 +163,8 @@ $$
 
 두 설명을 혼동하지 않아야 한다.
 
-> - 지니 불순도:
-> - 엔트로피: 
+> - 지니 불순도(Gini Impurity): 무작위로 뽑은 데이터를 잘못 분류할 확률
+> - 엔트로피: 데이터의 무질서함이나 불확실성
 
 ## 5. 간단한 분할 예시
 
@@ -535,9 +534,11 @@ plt.show()
 
 ### 참고 자료
 
-* [Tistory: Decision Tree Regression 개념과 Python 예제](https://riverzayden.tistory.com/6)
-* [Towards Data Science: Decision Tree Regressor Explained](https://towardsdatascience.com/decision-tree-regressor-explained-a-visual-guide-with-code-examples-fbd2836c3bef/)
-* [Tistory: DecisionTreeRegressor 회귀 트리 모델](https://everyday-joyful.tistory.com/entry/DecisionTreeRegressor-%ED%9A%8C%EA%B7%80-%ED%8A%B8%EB%A6%AC-%EB%AA%A8%EB%8D%B8)
-* [Tistory: DecisionTreeClassifier와 DecisionTreeRegressor](https://zephyrus1111.tistory.com/227)
 * [scikit-learn docs: DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
 * [scikit-learn docs: Decision Trees](https://scikit-learn.org/stable/modules/tree.html)
+* [Towards Data Science: Decision Tree Regressor Explained](https://towardsdatascience.com/decision-tree-regressor-explained-a-visual-guide-with-code-examples-fbd2836c3bef/)
+* [Tistory: Decision Tree Regression 개념과 Python 예제](https://riverzayden.tistory.com/6)
+* [Tistory: DecisionTreeRegressor 회귀 트리 모델](https://everyday-joyful.tistory.com/entry/DecisionTreeRegressor-%ED%9A%8C%EA%B7%80-%ED%8A%B8%EB%A6%AC-%EB%AA%A8%EB%8D%B8)
+* [Tistory: 9. 의사결정나무(Decision Tree)에 대해서 알아보자 with Python](https://zephyrus1111.tistory.com/124)
+* [Tistory: DecisionTreeClassifier와 DecisionTreeRegressor](https://zephyrus1111.tistory.com/227)
+* [Tistory: [Regression & Classifcation] Decision Tree](https://moogie.tistory.com/144#2.%20%EB%85%B8%EB%93%9C%20%EB%B6%88%EC%88%9C%EB%8F%84%20%EC%A7%80%ED%91%9C-1-1)
