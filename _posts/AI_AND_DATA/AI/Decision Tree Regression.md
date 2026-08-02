@@ -126,7 +126,7 @@ $$
 
 `DecisionTreeRegressor`의 기본 분할 기준은 `squared_error`이다.
 
-현재 노드에 속한 목표값의 평균을 (\bar{y})라고 하면 평균제곱오차는 다음과 같다.
+현재 노드에 속한 목표값의 평균을 $\bar{y}$라고 하면 평균제곱오차는 다음과 같다.
 
 $$
 MSE=\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2
