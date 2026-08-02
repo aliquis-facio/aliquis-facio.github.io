@@ -46,7 +46,7 @@ Edge AI는 데이터가 생성되는 현장(Edge), 즉 사용자의 기기(Devic
 
 이런 기술을 통해 파라미터 수를 줄여(약 20억~80억 개 수준), 노트북이나 스마트폰에서도 돌아가는 **'작지만 강한 모델'**들이 등장했습니다.
 
-- _예시:_ Google의 **Gemma edge model**, Meta의 **Llama 3 (8B)**등.
+- _예시:_ Google의 **Gemma edge model**, Meta의 **Llama 3 (8B)** 등.
 
 ---
 
