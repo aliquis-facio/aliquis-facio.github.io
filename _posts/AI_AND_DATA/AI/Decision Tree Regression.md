@@ -1,3 +1,22 @@
+---
+layout: post
+comments: true
+sitemap:
+
+title: "[AI] Decision Tree Regression"
+excerpt: "의사결정나무 회귀 개념과 코드"
+
+date: 2026-08-02
+last_modified_at: 2026-08-02
+
+categories:
+  - AI
+tags:
+  - AI
+  - DEEP_LEARNING
+  - CART
+---
+
 <!-- markdownlint-disable MD025 MD060 -->
 
 # Decision Tree Regression 의사결정나무 회귀
