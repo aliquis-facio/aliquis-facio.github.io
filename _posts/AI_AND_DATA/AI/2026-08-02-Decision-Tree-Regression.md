@@ -34,12 +34,12 @@ tags:
 
 **Decision Tree(의사결정나무)**: 일련의 질문을 통해 예측 결과를 찾아가는 트리 구조의 머신러닝 모델이다.
 
-![|500x452](../../../_image/2026-08-02-16-20-54.png)
+![500x452](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-08-02-16-20-54.png)
 > *출처: Towards Data Science: Decision Tree Regressor Explained*
 
 ## 2. Decision Tree의 구조
 
-![|500x231](../../../_image/2026-08-02-16-25-39.png)
+![500x231](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-08-02-16-25-39.png)
 > *출처: Tistory: Decision Tree Regression (의사결정나무) 개념과 python 예제*
 
 | 구성 요소 | 설명                        |
