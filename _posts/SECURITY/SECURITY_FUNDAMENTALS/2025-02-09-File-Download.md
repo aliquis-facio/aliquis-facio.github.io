@@ -51,3 +51,9 @@ oscp
 * DB를 이용해 파일을 관리한다
 * NAS를 이용해 파일 서버를 따로 관리한다
 * 파일 확장자 검증, 사용자의 입력값 검증 (우선순위가 떨어짐)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] WEB 취약점](2025-02-21-WEB-Secure-Weak-Points.md)
+
+</div>

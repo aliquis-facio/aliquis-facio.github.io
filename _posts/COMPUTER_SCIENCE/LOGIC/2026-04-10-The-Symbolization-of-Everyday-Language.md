@@ -99,3 +99,10 @@ A≡B = (A⊃B)∙(B⊃A)
 - 또는은 문맥에 따라 배타적일 수도, 포괄적일 수도 있다.
 - 명제 논리의 선언은 기본적으로 포괄적 선언이다.
 - 조건문은 인과관계 자체가 아니라 진리값 관계를 표현한다.
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 논리적 연결사](2026-04-10-Logical-Connectives.md)
+[\[LOGIC\] 진리표](2026-04-10-Vote-of-Truth.md)
+
+</div>

@@ -67,3 +67,8 @@
     3. 이후 **각 라우터가 자체 라우팅 테이블**로 다음 홉을 결정해 목적지 LAN/호스트까지 전달.
 - 이름 해석: **DNS vs hosts 파일**(Windows 경로 `C:\Windows\System32\drivers\etc`) 비교 소개.
 - 참고문헌/사이트: **Kurose & Ross** 교재, **wireshark.org**.
+
+## 관련 문서
+
+- [5_Applied_Crypto](5_Applied_Crypto.md)
+- [7_CA](7_CA.md)

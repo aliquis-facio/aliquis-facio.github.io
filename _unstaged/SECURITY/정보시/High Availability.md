@@ -48,3 +48,7 @@
 - 목표:
     - **Single Point of Failure(SPOF)** 제거,
     - 센터가 통째로 날아가도 서비스가 계속되도록 설계.
+
+## 관련 문서
+
+- [방화벽(Firewall)](Firewall.md)

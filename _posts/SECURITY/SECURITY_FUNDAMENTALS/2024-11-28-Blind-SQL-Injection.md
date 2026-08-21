@@ -51,3 +51,10 @@ select table_name from information_schema.tables where table_schema = '' limit 0
 * 글자 개수가 몇 개인지 세는 함수
 
 https://sabarada.tistory.com/49
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](2024-11-14-SQL-Injection.md)
+[\[CTF\] CTF 문제 풀이: Blind SQL Injection](../CTF/2024-11-29-CTF-SQL-Injection-6.md)
+
+</div>

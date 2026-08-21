@@ -77,3 +77,10 @@ tags: [OS, TIL]
 # 참고
 
 * [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[OS\] OS](2025-04-19-OS.md)
+[\[OS\] Process API](2025-04-22-OS-Process-API.md)
+
+</div>

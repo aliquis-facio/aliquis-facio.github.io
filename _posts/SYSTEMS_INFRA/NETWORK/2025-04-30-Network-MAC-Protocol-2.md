@@ -57,3 +57,10 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 # 참고
 
 * *Data Communications and Networking with TCP/IP Protocol Suite, Sixth Edition* - Behrouz A, Forouzan
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] MAC Protocol](2025-04-30-Network-MAC-Protocol-1.md)
+[\[NETWORK\] 콘텐츠 전송 네트워크(CDN)](2025-11-19-Content-Delivery-Network.md)
+
+</div>

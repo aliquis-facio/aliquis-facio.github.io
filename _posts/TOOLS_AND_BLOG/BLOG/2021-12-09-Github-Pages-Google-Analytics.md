@@ -84,3 +84,10 @@ tags: [BLOG]
 * [깃블로그(jekyll)에 구글 애널리틱스(Google Analytics) 적용법!](https://mingnol2.tistory.com/70)
 * [github blog, page google analytics로 측정하기](https://chinsun9.github.io/2020/11/20/github-blog-page-google-analytics%EB%A1%9C-%EC%B8%A1%EC%A0%95%ED%95%98%EA%B8%B0/)
 * ~~[404 Not Found](https://atgane.tistory.com/14)~~
+
+<div class="obsidian-links" style="display: none;">
+
+[\[GITHUB PAGES\] github.io 만들면서 느낀 점](2021-11-30-Github-Pages-Making-3.md)
+[\[GITHUB PAGES\] Date Format 변경하기](2024-10-26-Github-Pages-Header-Date-Format-Changing.md)
+
+</div>

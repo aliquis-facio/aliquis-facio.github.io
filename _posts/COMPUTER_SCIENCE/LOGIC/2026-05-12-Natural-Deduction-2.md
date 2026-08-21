@@ -132,3 +132,9 @@ tags: [LOGIC]
 의미:
 
 - 같은 명제를 반복한 선언 또는 연언은 원래 명제와 동치이다.
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 자연 연역 1](2026-05-12-Natural-Deduction-1.md)
+
+</div>

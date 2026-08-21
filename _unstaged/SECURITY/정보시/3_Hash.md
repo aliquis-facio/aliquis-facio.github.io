@@ -59,3 +59,10 @@
 - 서버 난수 **R** 제시 → 클라이언트가 **H(R‖s)** 제출 → 서버도 계산해 일치 시 통과.
 - 장점: 입력값이 매번 임의의 값이 된다 → 안전성
 - 단점: 네트워크 모니터링에 의해 전송되는 값들이 노출될 경우 매우 취약해진다. 또 서버와 클라이언트 사이의 통신 횟수도 비교적 많이 요구된다.
+
+## 관련 문서
+
+- [목차](2_Symmetrickey.md)
+- [4_Asymmetrickey](4_Asymmetrickey.md)
+- [Message Authentication Code, MAC 검증](Message%20Authentication%20Code%20MAC.md)
+- [\[SECURITY\] OTP란?](../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2026-01-05-One-Time-Password.md)

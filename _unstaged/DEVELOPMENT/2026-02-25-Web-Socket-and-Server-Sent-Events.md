@@ -69,4 +69,8 @@ tags: [TIL]
 
 ## 참고
 
+## 관련 문서
 
+- [WebSocket이란?](WEB_SERVER/WebSocket.md)
+- [1. SSE 한 줄 정의](WEB_SERVER/SSE.md)
+- [1. HTTP란 무엇인가](WEB_SERVER/HTTP%20VS%20Web%20Socket.md)

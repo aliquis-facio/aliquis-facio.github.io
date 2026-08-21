@@ -74,3 +74,10 @@ tags: [LINUX]
 15. /lost+found: 파일 시스템 결손 복구
 
 _허드(HURD)_
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] OS 정의 및 분류](2022-02-15-Linux-OS-Definition-and-Classification.md)
+[\[LINUX\] 리눅스 파티션과 설치 준비 작업](2022-02-15-Linux-Partition-and-Installing.md)
+
+</div>

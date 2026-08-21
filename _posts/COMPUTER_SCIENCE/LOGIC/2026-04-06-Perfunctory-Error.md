@@ -408,3 +408,10 @@ S(x): x는 과학자이다
 
 </div>
 </details>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 오류](2026-04-06-Error.md)
+[\[LOGIC\] 비형식적 오류](2026-04-06-Informal-Error.md)
+
+</div>

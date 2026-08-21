@@ -84,3 +84,10 @@ MAC 프로토콜은 크게 채널 접근 방식을 제어하는 규칙에 따라
 * [CSU/DSU (Channel Service Unit/Digital Service Unit)](https://blog.naver.com/jjws666/57133035)
 * [데이터 링크 계층의 역할과 이더넷](https://velog.io/@kimmainsain/%EB%AA%A8%EB%91%90%EC%9D%98-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A0%95%EB%A6%AC-4)
 * *Data Communications and Networking with TCP/IP Protocol Suite, Sixth Edition* - Behrouz A, Forouzan
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] 데이터 전송(Data Transmission)이란?](2025-04-04-Network-Transmission.md)
+[\[NETWORK\] MAC Protocol](2025-04-30-Network-MAC-Protocol-1.md)
+
+</div>

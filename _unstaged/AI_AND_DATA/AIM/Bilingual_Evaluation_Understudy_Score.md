@@ -98,3 +98,7 @@ BLEU는 절대적인 점수라기보다는 **“비교용 지표”** 로 사용
 |“I love dogs.”|“I like dogs.”|약 70.0|
 |“I love dogs.”|“Dogs are loved.”|약 30.0|
 |“I love dogs.”|“Cats are great.”|0.0|
+
+## 관련 문서
+
+- [Beam_Search_Decoder](Beam_Search_Decoder.md)

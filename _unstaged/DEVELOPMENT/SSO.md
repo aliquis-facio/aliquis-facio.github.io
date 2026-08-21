@@ -69,3 +69,10 @@ SSO 토큰은 사용자 이름 또는 전자 메일 주소와 같은 사용자 �
 
 * [SSO(Single Sign On)란 무엇인가요?](https://aws.amazon.com/ko/what-is/sso/)
 * [SSO(Single Sign-On)이란?](https://toma0912.tistory.com/75)
+
+## 관련 문서
+
+- [IdP (Identity Provider)](IdP.md)
+- [OIDC (OpenID Connect)](OIDC.md)
+- [Authentik](Authentik.md)
+- [목차](Happy-Path.md)

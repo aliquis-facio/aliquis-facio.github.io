@@ -801,3 +801,7 @@ cardNumber: 1234-****-****-5678
 mermaid.initialize({startOnLoad:true});
 window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </script>
+
+## 관련 문서
+
+- [Mishandling of Exceptional Conditions](10_Mishandling%20of%20Exceptional%20Conditions.md)

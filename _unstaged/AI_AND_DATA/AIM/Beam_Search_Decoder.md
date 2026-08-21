@@ -100,3 +100,8 @@ Beam Size ↑, 더 좋은 문장을 찾을 확률 ↑, 계산량 ↑
 |**Diverse Beam Search**|후보들 간 유사도 줄여 더 다양한 결과|
 |**Length Normalized Beam Search**|긴 문장 불이익 방지|
 |**Temperature Sampling / Top-k Sampling**|확률 분포 기반 확률적 선택 (GPT 계열)|
+
+## 관련 문서
+
+- [\[논문 리뷰\] Sequence to Sequence Learning with Neural Networks](Sequence_to_Sequence_Learning_with_Neural_Networks.md)
+- [Bilingual_Evaluation_Understudy_Score(BLEU 점수)](Bilingual_Evaluation_Understudy_Score.md)

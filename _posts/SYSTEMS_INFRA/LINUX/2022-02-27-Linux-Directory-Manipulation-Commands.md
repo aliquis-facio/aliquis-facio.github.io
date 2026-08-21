@@ -36,3 +36,10 @@ tags: [LINUX]
 1. `rmdir [opt] [삭제할 directory]`: 비어있는 디렉토리를 삭제
     * `-p`: 상위 디렉토리까지 삭제
         * `rmdir -p test1/test2`
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 리눅스 시스템 종료를 위한 명령어](2022-02-18-Linux-Commands-for-Shutting-Down.md)
+[\[LINUX\] 사용자 및 그룹관리](2022-02-27-Linux-Managing-Users-and-Groups.md)
+
+</div>

@@ -26,3 +26,7 @@
     - **Traffic Management**:
         - Rate limiting, 우선순위 조정,
         - 화이트리스트 기반으로 중요한 서비스/고객 트래픽만 우선 보호.
+
+## 관련 문서
+
+- [9. 네트워크 보안](9_Network_Security.md)

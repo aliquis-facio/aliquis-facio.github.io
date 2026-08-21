@@ -87,3 +87,9 @@ Injection 보안 대책의 핵심은 데이터를 명령 및 쿼리와 분리하
 - [OWASP: Injection](https://owasp.org/Top10/2021/A03_2021-Injection/index.html)
 - [PortSwigger: DOM-based client-side JSON injection](https://portswigger.net/web-security/dom-based/client-side-json-injection)
 - [CWE: OWASP Top Ten 2013 Category A1 - Injection](https://cwe.mitre.org/data/definitions/929.html)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[CTF\] Dreamhack 문제 풀이: {\"role\": \"admin\"}](../CTF/2026-02-03-role-admin.md)
+
+</div>

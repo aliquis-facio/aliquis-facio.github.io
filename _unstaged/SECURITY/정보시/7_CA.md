@@ -24,3 +24,8 @@
 ## 7) 표준화 경쟁 맥락
 
 - **ITU-T/ISO 계열(X.400/X.500/X.700)** vs **IETF(SMTP, LDAP, SNMP)** 로드맵 비교가 배경으로 제시됩니다.
+
+## 관련 문서
+
+- [SSL & TLS](6_TLS.md)
+- [9. 네트워크 보안](9_Network_Security.md)

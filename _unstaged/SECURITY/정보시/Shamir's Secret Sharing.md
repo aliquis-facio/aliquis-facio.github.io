@@ -278,11 +278,11 @@ tags:
 
 ### 1. 공식 문서
 
-* [공식 문서명](URL)
+* 공식 문서명 (URL 미정)
 
 ### 2. 논문 및 기술 문서
 
-* [논문 또는 기술 문서명](URL)
+* 논문 또는 기술 문서명 (URL 미정)
 
 ### 3. 추가 참고자료
 
@@ -291,4 +291,4 @@ tags:
 - https://ehdvudee.tistory.com/27
 - https://eprint.iacr.org/2025/518
 - https://onekey.so/blog/ko/ecosystem/what-is-shamirs-secret-sharing/
-* [관련된 내 포스트](URL)
+* 관련된 내 포스트 (URL 미정)

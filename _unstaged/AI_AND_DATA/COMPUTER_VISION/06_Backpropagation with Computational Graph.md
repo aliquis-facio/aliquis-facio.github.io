@@ -191,3 +191,8 @@ $$\text{Downstream grad} = \text{Upstream grad} \times \text{Local grad}$$
         - 업스트림 그레디언트와 곱해 **입력 쪽으로 down-stream 그레디언트 전달**
         - 파라미터에 대한 그레디언트를 누적.
 4. 계산된 $\frac{\partial L}{\partial W}$ 로 **경사하강법(gradient descent)** 업데이트 수행: $$W \leftarrow W - \eta \frac{\partial L}{\partial W}$$
+
+## 관련 문서
+
+- [Regularization](05_Regularization.md)
+- [Vector Backprop](07_Vector%20Backprop.md)

@@ -122,3 +122,9 @@ pw: asdf
 id: ' or name like '%e%' #
 pw: asdf
 ![alt text](/_image/2024-11-26-00-00-06.png)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](../SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection.md)
+
+</div>

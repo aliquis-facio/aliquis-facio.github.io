@@ -18,3 +18,7 @@ tags: [APPLICATION_STATISTICS]
 기댓값: 확률변수의 결과값을 그 확률변수의 확률분포를 가중치로 평균한 값. 확률실험을 무한히 반복했을 때 관측되는 확률변수 값들의 평균.
 * 확률변수의 기댓값(expected value)
 * 이산형 $\displaystyle\sum_{i=0}^{\infty}{(y_i-t_i)^2}$
+
+## 관련 문서
+
+- [\[APPLICATION STATISTICS\] 응용통계학 정리](2022-10-23-Application-Statistics-Summary.md)

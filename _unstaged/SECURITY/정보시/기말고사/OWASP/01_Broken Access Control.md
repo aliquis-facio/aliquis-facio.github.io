@@ -144,3 +144,7 @@
 ## 참고
 
 - [OWASP Foundation – A01:2025 Broken Access Control](https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/ "A01 Broken Access Control - OWASP Top 10:2025")
+
+## 관련 문서
+
+- [Security Misconfiguration](02_Security%20Misconfiguration.md)

@@ -256,3 +256,10 @@ tags:
 		- $f \bullet S = (f \oplus S) \ominus S$
 - **명암 모폴로지(특히 closing 등)의 실전 활용 빈도·효익이 낮다**
 - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-32-10.jpg?raw=true)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[COMPUTER VISION\] 영상 처리 연산 1](2025-10-05-Image-Processing-Operatios-1.md)
+[\[COMPUTER VISION\] Edge](2025-10-07-Edge.md)
+
+</div>

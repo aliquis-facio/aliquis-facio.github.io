@@ -215,3 +215,10 @@ tags: [LOGIC]
 |`p∨q`|선언|p, q 중 적어도 하나가 참일 때|
 |`p⊃q`|조건|p가 참이고 q가 거짓인 경우를 제외한 나머지|
 |`p≡q`|쌍조건|p와 q의 진리값이 같을 때|
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 논리적 연결사 2](2026-04-10-The-Symbolization-of-Everyday-Language.md)
+[\[LOGIC\] 진리표 증명](2026-05-05-Proof-of-Validity-through-Truth-Tables.md)
+
+</div>

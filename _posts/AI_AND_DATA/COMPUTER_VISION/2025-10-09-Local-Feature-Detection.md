@@ -183,4 +183,10 @@ tags:
 
 # 참고
 
-- [Github Pages: 다변수 함수의 테일러 근사와 tangent hyperplane](https://lightaxis.github.io/posts/multivariable-taylor-series/) 
+- [Github Pages: 다변수 함수의 테일러 근사와 tangent hyperplane](https://lightaxis.github.io/posts/multivariable-taylor-series/)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[COMPUTER VISION\] Voting Schemes](2025-10-08-Hough-RANSAC.md)
+
+</div>

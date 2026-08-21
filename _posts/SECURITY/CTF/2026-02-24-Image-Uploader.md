@@ -19,6 +19,8 @@ tags: [TIL, WEB, CTF]
 
 문제: [드림핵 Wargame Web 2 Image Uploader](https://dreamhack.io/wargame/challenges/2624)
 
+업로드 파일 처리 흐름은 [File Upload 취약점](/File-Upload/)과 직접 연결된다.
+
 ## 목차
 
 1. [Vuln](#1-vuln)

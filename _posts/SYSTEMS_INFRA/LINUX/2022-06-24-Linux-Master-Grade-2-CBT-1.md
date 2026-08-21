@@ -412,3 +412,10 @@ drwx------ user1/user1 0 2017-02-11 01:33 /home/user1/
 3. 베어울프 클러스터
 4. 고가용성 클러스터
 <div style="text-align: right"> 오답: 2, 정답: 3 </div>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] Redirection](2022-03-07-Linux-Redirection.md)
+[\[LINUX\] 리눅스 마스터 2급 기출 문제](2022-06-29-Linux-Master-Grade-2-CBT-2.md)
+
+</div>

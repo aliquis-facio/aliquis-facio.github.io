@@ -287,3 +287,10 @@ CSMA/CA: 충돌 회피를 위한 프로토콜로, 주로 무선 LAN에서 사용
 * [velog: 기초컴퓨터네트워크 25 (Medium Access Control, Random Access Protocols, ALOHA, CSMA)](https://velog.io/@tonyhan18/%EA%B8%B0%EC%B4%88%EC%BB%B4%ED%93%A8%ED%84%B0%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-25)
 * [ktword: CSMA/CA](http://www.ktword.co.kr/test/view/view.php?no=2038)
 * *Data Communications and Networking with TCP/IP Protocol Suite, Sixth Edition* - Behrouz A, Forouzan
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] MAC 계층](2025-04-24-Network-MAC.md)
+[\[NETWORK\] MAC Protocol 2](2025-04-30-Network-MAC-Protocol-2.md)
+
+</div>

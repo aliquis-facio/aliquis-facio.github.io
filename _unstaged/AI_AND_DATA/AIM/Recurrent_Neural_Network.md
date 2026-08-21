@@ -79,7 +79,7 @@ $h_t$가 $h_{t-1}$ 을 포함한다. 즉, 이전의 정보를 현재 상태로 �
 
 ---
 
-## 6. RNN의 한계 — 왜 [LSTM](AIM/Long_Short_Term_Memory.md)이 필요한가?
+## 6. RNN의 한계 — 왜 [LSTM](Long_Short_Term_Memory.md)이 필요한가?
 
 |문제|설명|
 |---|---|
@@ -113,3 +113,8 @@ $h_t$가 $h_{t-1}$ 을 포함한다. 즉, 이전의 정보를 현재 상태로 �
 |**시계열 분석**|주가 예측, 센서 데이터 분석|
 |**영상 처리**|비디오의 시간적 변화 감지|
 |**대화형 AI**|문맥 기반 답변 생성|
+
+## 관련 문서
+
+- [Sequence](Sequence.md)
+- [장기 의존성(Long-term Dependency)](Long_Term_Dependency.md)

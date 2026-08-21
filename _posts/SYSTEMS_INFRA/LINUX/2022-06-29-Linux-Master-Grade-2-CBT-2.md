@@ -408,3 +408,9 @@ OSI 네트워크 계층에서 호스트의 주소지정과 패킷 분할 및 조
 3. 반가상화 구성 시에는 QEMU 기반으로 동작한다.
 4. CPU 전가상화 지원으로 다른 기술과 비교해서 물리적 서버 대비 효율성이 가장 좋다.
 <div style="text-align: right"> 오답: 3, 정답: 2 </div>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 리눅스 마스터 2급 기출 문제](2022-06-24-Linux-Master-Grade-2-CBT-1.md)
+
+</div>

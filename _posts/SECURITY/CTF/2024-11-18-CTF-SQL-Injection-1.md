@@ -81,3 +81,9 @@ pw: dol1234' or
 id: normaltic2'#
 pw: asdf
 -> O
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](../SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection.md)
+
+</div>

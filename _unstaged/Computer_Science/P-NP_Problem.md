@@ -511,3 +511,7 @@ P-NP 문제는 암호학, 최적화, 인공지능, 알고리즘 이론 등 여�
 2. [Clay Mathematics Institute, P vs NP](https://www.claymath.org/millennium/p-vs-np/)
 3. [MIT News, Explained: P vs. NP](https://news.mit.edu/2009/explainer-pnp?utm_source=chatgpt.com)
 4. [Wikipedia: P VS. NP Problem](https://en.wikipedia.org/wiki/P_versus_NP_problem?utm_source=chatgpt.com)
+
+## 관련 문서
+
+- [타원 곡선 암호, ECC](../SECURITY/정보시/Elliptic_Curve_Cryptography.md)

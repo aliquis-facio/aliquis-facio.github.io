@@ -19,7 +19,7 @@ tags: [TIL, WEB, DATABASE, SECURITY]
 공격자는 데이터베이스에 직접적으로 접근해 중요 정보를 조회, 탈취할 수 있다.
 
 ## 기본 개념
-[DATABASE와 SQL문 설명](./Database_and_SQL.md)
+[SQL과 데이터베이스 기본 문법](/MySQL-SQL/)
 
 ## 작동 방식
 사용자 ID와 PW를 입력받으면 SQL 쿼리는 아래와 같이 작동한다.
@@ -56,13 +56,13 @@ or와 and 연산자
 
 ## 공격 유형에 따른 분류
 ### Union SQL Injection
-[Union SQL Injection](./Union_SQL_Injection.md)
+[Union SQL Injection](/Union-SQL-Injection/)
 
 ### Error Based SQL Injection
-[Error Based SQL Injection](./Error_Based_SQL_Injection.md)
+[Error-Based SQL Injection](/Error-Based-SQL-Injection/)
 
 ### Blind SQL Injection
-[Blind SQL Injection](./Blind_SQL_Injection.md)
+[Blind SQL Injection](/Blind-SQL-Injection/)
 
 # sqli
 ## SQL Injection Exploit
@@ -104,3 +104,18 @@ white list filtering
 
 # 참고
 * [SQL Injection](https://developer.mozilla.org/ko/docs/Glossary/SQL_Injection)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection Tip](2024-12-04-SQL-Injection-Tip.md)
+[\[CTF\] CTF 풀이: Cookie, SQL Injection](../CTF/2024-11-18-CTF-SQL-Injection-1.md)
+[\[CTF\] CTF 문제 풀이: SQL Injection w. UNION](../CTF/2024-11-25-CTF-SQL-Injection-2.md)
+[\[CTF\] CTF 문제 풀이: SQL Injection](../CTF/2024-11-26-CTF-SQL-Injection-3.md)
+[\[CTF\] CTF 문제 풀이: SQL Injection](../CTF/2024-11-28-CTF-SQL-Injection-4.md)
+[\[CTF\] CTF 문제 풀이: Error Based SQL Injection](../CTF/2024-11-28-CTF-SQL-Injection-5.md)
+[\[CTF\] CTF 문제 풀이: Blind SQL Injection](../CTF/2024-11-29-CTF-SQL-Injection-6.md)
+[\[CTF\] CTF 문제 풀이: SQL Injection](../CTF/2024-12-09-CTF-SQL-Injection-7.md)
+[\[CTF\] Dreamhack 문제 풀이: Really Not SQL](../CTF/2026-07-24-Really-Not-SQL.md)
+[\[SECURITY\] WEB 취약점](2025-02-21-WEB-Secure-Weak-Points.md)
+
+</div>

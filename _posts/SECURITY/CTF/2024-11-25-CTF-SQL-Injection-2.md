@@ -169,3 +169,10 @@ tags: [TIL, WEB, DATABASE, CTF]
   
 15. **' union select 1, 2, 3, 4, 5, flag from secret order by 6 desc #**
 ![alt text](/_image/2024-11-25-00-00-21.png)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](../SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection.md)
+[\[SECURITY\] Union SQL Injection](../SECURITY_FUNDAMENTALS/2024-11-20-Union-SQL-Injection.md)
+
+</div>

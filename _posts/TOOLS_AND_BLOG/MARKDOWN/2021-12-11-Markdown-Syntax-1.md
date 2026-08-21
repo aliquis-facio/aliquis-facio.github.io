@@ -18,7 +18,7 @@ tags: [BLOG, MARKDOWN]
 # 마크다운 문법 총정리
 
 > 시리즈: [Index](/Markdown-Syntax-Index/)
-- [Part 1: 제목, 강조, 정렬, 수평선, 인용, 목록, 링크](/Markdown-Syntax-1/)
+- Part 1: 제목, 강조, 정렬, 수평선, 인용, 목록, 링크
 - [Part 2: Heading ID, 코드, 표, 수식](/Markdown-Syntax-2/)
 - [Part 3: 이미지, 이모지, 다이어그램, HTML/CSS/JS](/Markdown-Syntax-3/)
 
@@ -361,7 +361,7 @@ Second Term
 * <a href="http://www.youtube.com">설명 있는 inline 링크 2</a>  
 * [갖다 대면 텍스트 뜨는 inline 링크 1](https://www.youtube.com "유튜브")  
 * <a href="http://www.youtube.com" title="Youtube">갖다 대면 텍스트 뜨는 inline 링크 2</a>  
-* [내가 작성한 다른 post로 넘어가고 싶을 때](./2021-11-30-github%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%8A%90%EB%82%80%EC%A0%90.md)  
+* [내가 작성한 다른 post로 넘어가고 싶을 때](/Github-Pages-Making-3/)
 * [갖다 대면 텍스트 뜨는 설명 있는 inline 링크인데 링크를 다른 곳에 빼 놓음]  
 * [링크 다른 곳에 써놓기 1][Naver Link]  
 * [링크 다른 곳에 써놓기 2][1]  
@@ -377,7 +377,7 @@ Second Term
 * <a href="http://www.youtube.com">설명 있는 inline 링크 2</a>  
 * [갖다 대면 텍스트 뜨는 inline 링크 1](https://www.youtube.com "유튜브")  
 * <a href="http://www.youtube.com" title="Youtube">갖다 대면 텍스트 뜨는 inline 링크 2</a>  
-* [내가 작성한 다른 post로 넘어가고 싶을 때](./2021-11-30-github%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%8A%90%EB%82%80%EC%A0%90.md)  
+* [내가 작성한 다른 post로 넘어가고 싶을 때](/Github-Pages-Making-3/)
 * [갖다 대면 텍스트 뜨는 설명 있는 inline 링크인데 링크를 다른 곳에 빼 놓음]  
 * [링크 다른 곳에 써놓기 1][Naver Link]  
 * [링크 다른 곳에 써놓기 2][1]  

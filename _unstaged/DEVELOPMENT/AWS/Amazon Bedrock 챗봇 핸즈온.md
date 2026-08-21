@@ -225,3 +225,8 @@ Converse = 고수준 API
 ```
 
 요약하면, 이 자료는 **Amazon Bedrock으로 챗봇을 만들면서 저수준 호출의 구조와 불편함을 이해하고, 최종적으로 Converse API의 장점을 체감하도록 설계된 실습 안내서**다.
+
+## 관련 문서
+
+- [AWS 인프라 구조](AWS%20인프라%20구조.md)
+- [1. RAG란?](Bedrock%20RAG.md)

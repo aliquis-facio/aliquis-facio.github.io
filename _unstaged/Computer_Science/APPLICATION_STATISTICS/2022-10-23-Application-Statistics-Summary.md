@@ -230,3 +230,7 @@ tags: [APPLICATION_STATISTICS]
 ### 3.2.1. 확률의 개념
 
 대수의 법칙(law of large numbers): 상대도수의 극한
+
+## 관련 문서
+
+- [\[APPLICATION STATISTICS\] 응용통계학 기댓값, 분산, 표준편차](2022-10-31-Application-Statistics-Expectation.md)

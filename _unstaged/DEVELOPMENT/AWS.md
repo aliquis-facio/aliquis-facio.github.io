@@ -17,3 +17,7 @@
 ---
 * [[Linux] Ubuntu 계정 권한 설정](https://velog.io/@xangj0ng/Linux-Ubuntu-%EA%B6%8C%ED%95%9C-%EC%84%A4%EC%A0%95)
 * [Linux : 사용자 암호를 변경 방법, 예제, 명령어](https://jjeongil.tistory.com/822)
+
+## 관련 문서
+
+- [AWS 인프라 구조](AWS/AWS%20인프라%20구조.md)

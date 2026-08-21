@@ -36,3 +36,10 @@ O: 관계 제약(Relational Constraints)
 C: 관계 연산(Relational Operations)
 
 ## 관계 데이터 구조(Relational Data Structure)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[DATABASE\] DBS(DataBase System)란?](2025-04-01-Database-DBS.md)
+[\[DATABASE\] 관계 제약(Relational Constraints)이란?](2025-04-01-Database-Relational-Constraints.md)
+
+</div>

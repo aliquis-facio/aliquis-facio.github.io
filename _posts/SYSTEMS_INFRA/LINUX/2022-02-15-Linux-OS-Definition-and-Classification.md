@@ -66,3 +66,9 @@ GNU 프로젝트: SW 상업화에 반대해 SW를 자유롭게 사용하는 데 
 * 사용자의 숙련된 기술 요구
 
 _하드디스크 일부를 메모리처럼 사용하는 기술: 스왑_
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 리눅스 구조 및 배포판의 종류](2022-02-15-Linux-Structures-and-Distribution-Types.md)
+
+</div>

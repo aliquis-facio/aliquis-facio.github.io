@@ -19,7 +19,7 @@ tags: [TIL, WEB]
 * MySQL에서는 공격 방식이 크게 두 가지가 있는데, 그 중 하나가 XPath를 이용한 공격이다.
     extractvalue()함수를 이용한다.
   
-**[이론 설명 포스트](/Error_Based_SQL_Injection)**
+**[이론 설명 포스트](/Error-Based-SQL-Injection/)**
 
 # Error Based SQL Injection
 ## START
@@ -93,4 +93,10 @@ tags: [TIL, WEB]
 
 1. **normaltic' and extractvalue('1', (concat(0x3a, (select flag from flagTable)))) #**
 ![alt text](/_image/2024-11-28-00-00-04.png)
--> 😎 찾았다!  
+-> 😎 찾았다!
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](../SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection.md)
+
+</div>

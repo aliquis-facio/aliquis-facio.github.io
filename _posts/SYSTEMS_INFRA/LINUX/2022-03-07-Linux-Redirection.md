@@ -104,3 +104,10 @@ cat < test1.txt >> test2.txt
 
 - `-n 행`: 파일의 마지막 행에서부터 지정된 행 수만큼 출력
 - `tail -5 etc/passwd`
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 파일관련 복사, 이동, 삭제 명령 설명 및 실습](2022-03-05-Linux-File-Managing.md)
+[\[LINUX\] 리눅스 마스터 2급 기출 문제](2022-06-24-Linux-Master-Grade-2-CBT-1.md)
+
+</div>

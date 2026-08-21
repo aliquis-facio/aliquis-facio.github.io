@@ -157,3 +157,10 @@ c.txt 파일 열기 위해서 url을 어케 입력해야 할까?
 - [NAT(Network Address Translation) 정보](https://www.ibm.com/docs/ko/networkmanager/4.2.0?topic=discoveries-about-network-address-translation)
 - [NAT(Network Address Translation) - 네트워크 주소 변환](https://www.stevenjlee.net/2020/07/11/%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-nat-network-address-translation-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98/)
 - [(생활코딩) 웹서버와 http](https://developer-yeony.tistory.com/22)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[WEB\] 웹 서버 실습](2024-10-17-Web-Server-Practice.md)
+[Install Apache, PHP, MySQL](../../../_unstaged/DEVELOPMENT/WEB/2022-02-14-Apache-PHP-MySQL.md)
+
+</div>

@@ -28,7 +28,7 @@ tags: [TIL, WEB, CTF]
 
 ## 1. Vuln
 
-Injection
+[JSON Injection](/JSON-Injection/)
 
 - 애플리케이션이 사용자 제공 데이터를 검증, 필터링 하지 않는다.
 - 악성 데이터가 직접 사용되거나 이어붙여진다. 즉, 동적 쿼리/명령/저장 과정에서 명령 문자열이 "구조 + 악성 데이터" 형태로 구성된다.
@@ -250,3 +250,9 @@ pw: `asdf`
 ## 참고
 
 - [OWASP: Injection](https://owasp.org/Top10/2021/A03_2021-Injection/index.html)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] 인증/인가 취약점](../SECURITY_FUNDAMENTALS/2025-02-12-Authentication-and-Authorization.md)
+
+</div>

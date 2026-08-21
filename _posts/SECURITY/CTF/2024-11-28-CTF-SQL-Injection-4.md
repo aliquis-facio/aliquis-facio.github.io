@@ -245,3 +245,9 @@ if db_pw = input_pw:
     통과
 
 -> union 값을 넣어줄 장소를 마련해줄 수는 없을까?
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](../SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection.md)
+
+</div>

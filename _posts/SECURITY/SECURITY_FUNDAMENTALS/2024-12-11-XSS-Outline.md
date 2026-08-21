@@ -218,3 +218,14 @@ burp, param check, response에 같은 값 있나?
 * [PHP-Micro-RequestBin](https://github.com/vinhch/PHP-Micro-RequestBin)
 * [HTML Entities](https://www.w3schools.com/html/html_entities.asp)
 * [브라우저 XSS 필터 우회의 모든 것](https://blog.rubiya.kr/index.php/2019/03/28/browsers-xss-filter-bypass-cheat-sheet/)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[CTF\] CTF 문제 풀이: XSS](../CTF/2024-12-18-CTF-XSS-1.md)
+[\[CTF\] CTF 문제 풀이: XSS - iframe tag 이용 다른 페이지 data 탈취하기](../CTF/2024-12-30-CTF-XSS-3.md)
+[\[SECURITY\] WEB 취약점](2025-02-21-WEB-Secure-Weak-Points.md)
+[Web Security](../../../_unstaged/SECURITY/정보시/기말고사/8_Web_Security.md)
+[여기, 내 자리](../../../_unstaged/SECURITY/CTF/here-my-seat.md)
+[\[Dreamhack\] PTML](../../../_unstaged/SECURITY/CTF/2026-07-24-PTML.md)
+
+</div>

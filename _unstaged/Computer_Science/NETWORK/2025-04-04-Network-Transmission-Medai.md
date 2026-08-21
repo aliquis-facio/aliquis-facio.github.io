@@ -46,3 +46,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 # 참고
 * [](https://m.blog.naver.com/loveyou_a_a/222249013117)
 * [](https://simsim231.tistory.com/117)
+
+## 관련 문서
+
+- [\[NETWORK\] NAT](2024-10-23-NAT.md)
+- [\[NETWORK\] 데이터 변조(Data Modulation)란?](2025-04-04-Network-Modulation.md)

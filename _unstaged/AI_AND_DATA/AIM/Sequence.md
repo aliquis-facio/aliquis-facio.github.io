@@ -64,3 +64,7 @@ $$x_1 = \text{I},\quad x_2 = \text{love},\quad x_3 = \text{pizza}$$
 |**가변 길이(Variable Length)**|시퀀스의 길이는 일정하지 않음|
 |**시간성(Temporal nature)**|시점에 따라 의미가 달라짐|
 |**문맥성(Context)**|전체 시퀀스의 맥락이 중요|
+
+## 관련 문서
+
+- [RNN(Recurrent Neural Network, 순환 신경망)](Recurrent_Neural_Network.md)

@@ -66,3 +66,10 @@ tags: [LOGIC]
 
 - 외연이 넓어질수록 내포는 줄어든다.
 - 외연이 좁아질수록 내포는 늘어난다.
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 논증의 분류와 평가](2026-03-23-Classification-and-Evaluation-of-Arguments.md)
+[\[LOGIC\] 오류](2026-04-06-Error.md)
+
+</div>

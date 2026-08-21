@@ -40,3 +40,8 @@ class User(BaseModel): # pydantic의 BaseModel 상속
 * [[Python] Pydantic 의  BaseModel 클래스 사용](https://mobicon.tistory.com/627)
 * [Fields](https://docs.pydantic.dev/latest/concepts/fields/)
 * [Pydantic - Field 클래스의 용도와 사용법](https://light-tree.tistory.com/301)
+
+## 관련 문서
+
+- [멀티플랫폼 장소 리뷰 비교 분석 서비스 설계 문서](../../PROJECT/여행지/멀티플랫폼%20리뷰%20분석%20시스템/02_설계.md)
+- [FastAPI](FastAPI.md)

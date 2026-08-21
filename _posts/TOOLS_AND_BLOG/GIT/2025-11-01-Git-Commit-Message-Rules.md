@@ -238,3 +238,9 @@ BREAKING CHANGE: Clients must send offset/limit instead of page/size.
 - [Tistory: Commit은 어느 시점, 어느 단위로 쪼개는 게 좋을까?](https://soo-develop.tistory.com/80)
 - [Tistory: [Git] 의미있는 commit 메시지와 깔끔한 history](https://hyeo-noo.tistory.com/394)
 - [Tistory: Commit 생성, commit message 작성 가이드라인](https://ch-programmer.tistory.com/76)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[GIT\] Git 명령어 정리](../../../_unstaged/TOOLS_AND_BLOG/GIT/2022-02-27-Git-Commands.md)
+
+</div>

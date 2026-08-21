@@ -65,3 +65,10 @@ sql query문 직접 실행해보기
 
 https://www.redirhub.com/ko/blog/redirect-types-and-seo-effects-2
 https://developer.mozilla.org/ko/docs/Web/HTTP/Redirections
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](2024-11-14-SQL-Injection.md)
+[\[CTF\] CTF 문제 풀이: SQL Injection w. UNION](../CTF/2024-11-25-CTF-SQL-Injection-2.md)
+
+</div>

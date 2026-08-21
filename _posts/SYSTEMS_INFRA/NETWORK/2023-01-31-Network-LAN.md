@@ -528,3 +528,10 @@ UTP 케이블은 5개의 카테고리로 분류되며 유선 LAN을 연결함.
 <a name="footnote_1">[1]</a> 반송파(carrier): 정보가 실린(변조된) 높은 주파수의 파형. 정보 전달을 위해 입력 신호를 변조한 전자기파.<br>
 <a name="footnote_2">[2]</a> shared device hub: <br>
 <a name="footnote_3">[3]</a> 버스트 전송: 간격을 두고 중단하면서 하는 전송. 짧은 시간 동안 상대적으로 고대역의 데이터 전송이 가능함.<br>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] 네트워크 통신망(Network Topology)](2023-01-27-Network-Topology.md)
+[\[NETWORK\] Data Communications란?](2025-03-05-Network-Introduction.md)
+
+</div>

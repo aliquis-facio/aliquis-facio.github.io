@@ -202,3 +202,8 @@ ConvNet은 다음 5가지 구성요소의 조합으로 이루어진다.
 3. **Activation Functions** – ReLU, tanh 등 비선형성 부여
 4. **Normalization (Batch/Layer/Instance/Group)** – 학습 안정화 및 가속
 5. **Fully-Connected Layers** – 마지막에 Flatten 후 분류/회귀 수행
+
+## 관련 문서
+
+- [Convolutional Neural Networks](08_Convolutional%20Neural%20Networks.md)
+- [🪓 One-shot Pruning이란?](One-shot%20Pruning.md)

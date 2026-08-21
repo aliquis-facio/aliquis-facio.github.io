@@ -152,3 +152,10 @@ cat etc/shadow 패스워드가 암호화되서 저장
 2. <https://doongdangdoongdangdong.tistory.com/129>
 3. <https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS6259570844>
 1. <https://helloitstory.tistory.com/25>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 리눅스 파티션과 설치 준비 작업](2022-02-15-Linux-Partition-and-Installing.md)
+[\[LINUX\] 리눅스 시스템 종료를 위한 명령어](2022-02-18-Linux-Commands-for-Shutting-Down.md)
+
+</div>

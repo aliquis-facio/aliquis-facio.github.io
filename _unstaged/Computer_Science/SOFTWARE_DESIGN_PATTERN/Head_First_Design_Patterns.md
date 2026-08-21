@@ -134,3 +134,7 @@
     2. 구현이 아닌 인터페이스에 맞춰 프로그래밍
     3. 상속보다 합성을 선호
 - 결과: **Strategy Pattern**
+
+## 관련 문서
+
+- [소프트웨어 디자인패턴](11_Software-Design-Pattern.md)

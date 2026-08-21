@@ -154,3 +154,9 @@ A03가 말하는 전형적인 “신뢰된 공급망의 붕괴” 사례다.
 ## 참고
 
 - [OWASP Foundation – A03:2025 Software Supply Chain Failures](https://owasp.org/Top10/2025/A03_2025-Software_Supply_Chain_Failures/ "A03 Software Supply Chain Failures - OWASP Top 10:2025")
+
+## 관련 문서
+
+- [Security Misconfiguration](02_Security%20Misconfiguration.md)
+- [Cryptographic Failures](04_Cryptographic%20Failures.md)
+- [공급망 공격과 SBOM](../공급망%20공격과%20SBOM.md)

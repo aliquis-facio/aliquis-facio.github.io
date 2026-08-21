@@ -77,3 +77,9 @@ tags:
 - [Aston Zhang «Dive into Deep Learning» (2022)](https://d2l.ai/)
 - <https://learnpython.org>
 - [코세라](https://kr/courser.org/courses?query=python)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[COMPUTER VISION\] 획득과 표현](2025-10-02-Acquisition-and-Representation.md)
+
+</div>

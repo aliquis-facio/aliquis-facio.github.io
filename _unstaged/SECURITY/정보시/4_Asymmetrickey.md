@@ -50,3 +50,9 @@
 	- **KCDSA**(Korea Certification-based Digital Signature Algorithm),
 	- **EC-KCDSA**(Korean Certificate-based Digital Signature Algorithm using Elliptic Curves)
 - **해시**: **HAS-160**(Hash Function Algorithm Standard)
+
+## 관련 문서
+
+- [3_Hash](3_Hash.md)
+- [5_Applied_Crypto](5_Applied_Crypto.md)
+- [타원 곡선 암호, ECC](Elliptic_Curve_Cryptography.md)

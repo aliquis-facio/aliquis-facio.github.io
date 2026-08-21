@@ -359,3 +359,10 @@ plt.draw()
 * [okt](https://github.com/open-korean-text/open-korean-text)
 * [mecab](https://github.com/LuminosoInsight/mecab-ko-dic)
 * [언어모델 기반 개체명 인식 기술을 활용한 119 신고 접수 도움 서비스](https://github.com/dimup/119NER)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[AI\] 한글 텍스트 데이터 토큰화(Tokenization)](2025-03-17-Korean-Tokenization.md)
+[\[AI\] 한글 텍스트 자연어 처리 실습 2](2025-04-14-Korean-Text-NLP-Prac-2.md)
+
+</div>

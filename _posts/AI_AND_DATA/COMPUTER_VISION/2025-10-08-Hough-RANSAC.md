@@ -179,3 +179,10 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 
 - **허프**: 파라미터가 **저차원**이고 폐형식(직선·원 등)이 있을 때 단순·효율적.
 - **RANSAC**: 복잡하거나 고차원 모델, 불균일한 불확실성에서 유리. 표본 추출 → 가설 모델 → 인라이어 카운트로 **투표와 유사한 합의**를 구함.
+
+<div class="obsidian-links" style="display: none;">
+
+[\[COMPUTER VISION\] Edge](2025-10-07-Edge.md)
+[\[COMPUTER VISION\] 지역 특징 검출](2025-10-09-Local-Feature-Detection.md)
+
+</div>

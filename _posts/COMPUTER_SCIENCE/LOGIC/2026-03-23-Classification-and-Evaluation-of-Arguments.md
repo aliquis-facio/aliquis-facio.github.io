@@ -533,3 +533,10 @@ graph LR
 mermaid.initialize({startOnLoad:true});
 window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </script>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 논증(Argument)](2026-03-23-Argument.md)
+[\[LOGIC\] 언어와 정의](2026-03-23-Language-and-Definition.md)
+
+</div>

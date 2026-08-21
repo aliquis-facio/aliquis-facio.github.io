@@ -212,3 +212,8 @@ Switch 종류	L1 (허브), L2 (스위치), L3 (라우터), L4/L7 (로드 밸런�
 # 참고
 * [IPv6 기본 헤더](http://www.ktword.co.kr/test/view/view.php?m_temp1=3251&id=1065)
 * [IPv4, IPv6 헤더 비교](http://www.ktword.co.kr/test/view/view.php?no=5185)
+
+## 관련 문서
+
+- [\[NETWORK\] 데이터 변조(Data Modulation)란?](2025-04-04-Network-Modulation.md)
+- [\[NETWORK\] 링크 계층 주소](2025-05-27-Network-Link-Layer-Addressing.md)

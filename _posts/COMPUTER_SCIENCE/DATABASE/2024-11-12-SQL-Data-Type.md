@@ -265,3 +265,10 @@ YEAR(2) 와 같이 두 자리로 표기하는 데이터 유형은 MySQL 5.7 이�
 
 * [MySQL 자료형 종류 정리 1](https://devdhjo.github.io/mysql/2020/01/30/database-mysql-003.html)
 * [MySQL 자료형 종류 정리 2](https://inpa.tistory.com/entry/MYSQL-%F0%9F%93%9A-%EC%9E%90%EB%A3%8C%ED%98%95-%ED%83%80%EC%9E%85-%EC%A2%85%EB%A5%98-%EC%A0%95%EB%A6%AC)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[MySQL\] 간단한 SQL Query문](2024-10-23-MySQL-SQL.md)
+[\[MySQL\] 특정 개수의 값 출력](2024-11-28-SQL-Top-Limit.md)
+
+</div>

@@ -164,3 +164,9 @@
 - **의도:** 구조는 고정, **연산을 후첨**(이중 디스패치).
 - **언제:** 복잡한 계층/AST에 다양한 연산 추가.
 - **포인트:** 요소 추가는 비용↑, 연산 추가는 용이.
+
+## 관련 문서
+
+- [1. 소프트웨어 품질 모델과 철학](10_Software_Quality_Models_and_Philosophies.md)
+- [객체지향 설계의 5대 원칙(SOLID Principles)](12_SOLID-Principles.md)
+- [Chapter 1: Intro to Design Patterns](Head_First_Design_Patterns.md)

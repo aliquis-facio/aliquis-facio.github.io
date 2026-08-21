@@ -105,3 +105,10 @@ tags:
 	- 화소 위치는 $x = (i, j)$로 표기
 	- 영상은 $f(x)$ 또는 $f(i, j)$, $0 ≤ i ≤ M-1$, $0 ≤ j ≤ N-1$로 표기
 	- 컬러 영상은 $fr(x)$, $fg(x)$, $fb(x)$의 세 채널로 구성
+
+<div class="obsidian-links" style="display: none;">
+
+[\[COMPUTER VISION\] 컴퓨터 비전](2025-10-01-Computer-Vision.md)
+[\[COMPUTER VISION\] Color](2025-10-03-Color.md)
+
+</div>

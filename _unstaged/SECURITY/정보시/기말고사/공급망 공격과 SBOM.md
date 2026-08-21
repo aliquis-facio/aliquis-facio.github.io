@@ -19,3 +19,7 @@
     - 어떤 오픈소스·3rd party가 어떤 버전으로 들어갔는지 파악.
     - 특정 취약점(CVE)이 나왔을 때, **내 시스템 어디에 해당 라이브러리가 쓰이는지** 빠르게 찾기 위함.
     - 공급망 공격·라이선스 이슈·규제 대응에 필수.
+
+## 관련 문서
+
+- [Software Supply Chain Failures](OWASP/03_Software%20Supply%20Chain%20Failures.md)

@@ -461,3 +461,10 @@ tags: [LOGIC]
 
 - **군중에 호소**: 다들 그렇게 한다
 - **허영심에 호소**: 특별한 사람만 누린다
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 형식적 오류](2026-04-06-Perfunctory-Error.md)
+[\[LOGIC\] 논리적 연결사](2026-04-10-Logical-Connectives.md)
+
+</div>

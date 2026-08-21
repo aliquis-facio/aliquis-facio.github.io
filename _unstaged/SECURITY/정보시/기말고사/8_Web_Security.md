@@ -79,3 +79,9 @@
 
 - **정의/주의**: 알려진 취약점을 자동 탐지(nmap, nessus 등). 일부는 **실제 공격을 수행**하므로 서비스 영향에 유의.
 - **종류**: **블랙박스**(Nikto, Burp Scanner, Acunetix 등) / **화이트박스**(Fortify SCA, HP DevInspect, PMD 등).
+
+## 관련 문서
+
+- [\[WEB\] 쿠키와 세션 (ft. 캐시)](../../../../_posts/DEVELOPMENT/WEB/2024-11-04-WEB-Cookie-and-Session-Cache.md)
+- [\[SECURITY\] CSRF란?](../../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2025-01-08-CSRF-Outline.md)
+- [\[SECURITY\] XSS란?](../../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2024-12-11-XSS-Outline.md)

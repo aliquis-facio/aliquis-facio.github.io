@@ -139,3 +139,8 @@
     - $z = w^\top x + b$ (가중합)
     - $a = \sigma(z)$ (비선형 활성화)  
         → 생물학적 뉴런의 “firing rate의 비선형 함수”를 수학적으로 흉내 낸 것.
+
+## 관련 문서
+
+- [<font color="#ff0000">Gradient Descent</font>](04_Gradient%20Descent.md)
+- [Backpropagation with Computational Graph](06_Backpropagation%20with%20Computational%20Graph.md)

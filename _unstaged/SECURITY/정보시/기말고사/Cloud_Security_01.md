@@ -269,3 +269,7 @@
 6. **로깅**: CloudTrail(누가 무엇을 언제), VPC Flow Logs(트래픽 흐름), CloudWatch(로그·메트릭).
 7. **가상 환경 보안**: Image Builder로 Golden Image, GuardDuty Runtime으로 런타임 위협 탐지.
 8. **CSPM/취약점 관리**: Security Hub(표준 기반 점검), Config(설정 준수), Inspector(패치 대상 관리).
+
+## 관련 문서
+
+- [02. 클라우드 보안 정리](Cloud_Security_2.md)

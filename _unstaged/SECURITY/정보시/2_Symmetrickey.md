@@ -121,7 +121,7 @@ D(E(m)) = E(m) ⊕ OTP = 	1110100 1110010
 ```
 
 > 참고
-> [One Time Password, OTPassword](One%20Time%20Password.md)
+> [One Time Password, OTPassword](../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2026-01-05-One-Time-Password.md)
 
 ## 5. Block Cipher V.S. Streaming Cipher
 ### 5.1. Block Cipher
@@ -299,3 +299,8 @@ D(E(m)) = E(m) ⊕ OTP = 	1110100 1110010
 - [NAVER: DES(Data Encryption Standard)](https://m.blog.naver.com/wnrjsxo/221708511553)
 - [NAVER: AES(Advanced Encryption Standard)](https://blog.naver.com/PostView.naver?blogId=wnrjsxo&logNo=221711255389)
 - [Wikipedia: OTPassword](https://ko.wikipedia.org/wiki/%EC%9D%BC%ED%9A%8C%EC%9A%A9_%EB%B9%84%EB%B0%80%EB%B2%88%ED%98%B8)
+
+## 관련 문서
+
+- [\[SECURITY\] 보안의 속성](2025-11-03-Pillars-of-Information-Security.md)
+- [3_Hash](3_Hash.md)

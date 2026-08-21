@@ -167,3 +167,8 @@ $$\sum_{t=1}^{\infty}\eta^{(t)} = \infty, \quad
     - L2 정규화가 추가된 선형 회귀도 GD로 쉽게 최적화 가능.
 5. **SGD**
     - 대규모 데이터, non-convex 최적화, 일반화 성능 측면에서 **딥러닝에서 사실상 표준**이 되는 알고리즘.
+
+## 관련 문서
+
+- [DNN(Deep Neural Network)](03_DNN%28Deep%20Neural%20Network%29.md)
+- [Regularization](05_Regularization.md)

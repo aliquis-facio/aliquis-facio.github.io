@@ -259,3 +259,10 @@ Web Service = Web Server(Static Resource) + WAS(Dinamic Resource) + DB
 
 * 번외)  
 후... 우분투 사랑해 ^^7 -> 리눅스 다시 한 번 보는 걸로
+
+<div class="obsidian-links" style="display: none;">
+
+[\[WEB\] 웹 개요](2024-10-17-Web-Outline.md)
+[\[WEB\] 로그인 로직](2024-11-03-WEB-Login-Logic.md)
+
+</div>

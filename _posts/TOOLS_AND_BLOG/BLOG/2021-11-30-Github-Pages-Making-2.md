@@ -221,3 +221,10 @@ gemfile에 `gem 'bigdecimal', '1.3.5.'`를 기입하자 마법처럼 다른 오�
 * [RubyInstallers](https://rubyinstaller.org/downloads/)
 * ~~[404 Not Found](https://likelionsungguk.github.io/20-12-17/jekyll-Blog-%EB%A7%8C%EB%93%9C%EB%8A%94%EA%B2%8C-%EA%B8%80%EC%93%B0%EB%8A%94-%EA%B2%83%EB%B3%B4%EB%8B%A4-%ED%9E%98%EB%93%A0-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%97%90%EA%B2%8C)~~
 * ~~[404 Not Found](http://loustler.io/etc/github_pages_blog_google_analytics/)~~
+
+<div class="obsidian-links" style="display: none;">
+
+[\[GITHUB PAGES\] github.io 만들기 1](2021-11-02-Github-Pages-Making-1.md)
+[\[GITHUB PAGES\] Image Test](2021-11-30-Github-Pages-Image-Test.md)
+
+</div>

@@ -162,3 +162,8 @@ OWASP가 제안하는 Insecure Design 예방 전략을 정리하면 다음과 �
 - [aikido.dev](https://www.aikido.dev/blog/owasp-top-10-2025-changes-for-developers?utm_source=chatgpt.com)
 - [Cyber Security News](https://cybersecuritynews.com/owasp-top-10-2025/?utm_source=chatgpt.com)
 - [eSecurity Planet](https://www.esecurityplanet.com/threats/news-owasp-top-10-2025/?utm_source=chatgpt.com)
+
+## 관련 문서
+
+- [Injection](05_Injection.md)
+- [Authentication Failures](07_Authentication%20Failures.md)

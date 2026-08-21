@@ -109,3 +109,10 @@ extractvalue()는 XML(xml_frag 인수)과 XPath 표현식(xpath_expr 인수), �
 * [웹 취약점과 해킹 매커니즘 #4 Error Based SQL Injection](https://www.skshieldus.com/download/files/download.do?o_fname=EQST%20insight_Special%20Report_202207.pdf&r_fname=20220718162542886.pdf)
 * **[오류 기반 SQL Injection이란?](https://www.bugbountyclub.com/pentestgym/view/53)**
 * [https://blog.naver.com/crehacktive3/222187681939](https://blog.naver.com/crehacktive3/222187681939)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](2024-11-14-SQL-Injection.md)
+[\[CTF\] CTF 문제 풀이: Error Based SQL Injection](../CTF/2024-11-28-CTF-SQL-Injection-5.md)
+
+</div>

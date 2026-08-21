@@ -19,7 +19,7 @@ tags:
 
 # Bypass OTP in Mobile Apps
 
-[OTP란?](One-Time-Password)
+[OTP란?](../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2026-01-05-One-Time-Password.md)
 
 ## 목차
 

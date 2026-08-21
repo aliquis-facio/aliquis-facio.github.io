@@ -43,3 +43,10 @@ rm (opt) [삭제할 file 또는 directory]: 파일 삭제 시 사용
 -f: 삭제 시 어떠한 메시지 없이 강제 삭제 *
 -r: 서브 디렉토리를 포함한 모든 내용을 삭제 *
 -v: 삭제된 파일명을 출력
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 사용자 및 그룹관리](2022-02-27-Linux-Managing-Users-and-Groups.md)
+[\[LINUX\] Redirection](2022-03-07-Linux-Redirection.md)
+
+</div>

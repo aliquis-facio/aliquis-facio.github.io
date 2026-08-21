@@ -221,3 +221,10 @@ tags: [LOGIC]
 - `~M∙~J` (O)
 
 즉, **자연어는 애매할 수 있으므로 문장의 정확한 의미를 먼저 파악해야 한다.**
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 비형식적 오류](2026-04-06-Informal-Error.md)
+[\[LOGIC\] 논리적 연결사 2](2026-04-10-The-Symbolization-of-Everyday-Language.md)
+
+</div>

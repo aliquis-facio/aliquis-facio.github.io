@@ -181,3 +181,10 @@ DBMS 성능 개선(tuning)
 # 참고
 
 * [스키마란? (개념스키마, 내부스키마, 외부스키마)](https://jwprogramming.tistory.com/47)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[DATABASE\] Database란?](2025-03-16-Database-Outline.md)
+[\[DATABASE\] Data Model이란?](2025-04-01-Database-Data-Model.md)
+
+</div>

@@ -157,3 +157,10 @@ Event-Synchronous OTP는 시간 대신 **이벤트/카운터(예: 버튼 누름,
 - [Tistory: OTP(One-Time Password)에 대해 알아보겠습니다.](https://feccle.tistory.com/329)
 - [Tistory: OTP의 동작 원리, HOTP와 TOTP 이해하기](https://danyoujeong.tistory.com/223)
 - [Tistory: OTP (One Time Password) 인증](https://plummmm.tistory.com/311)
+
+<div class="obsidian-links" style="display: none;">
+
+[3_Hash](../../../_unstaged/SECURITY/정보시/3_Hash.md)
+[\[SECURITY\] Bypass OTP In Mobile Apps](../../../_unstaged/SECURITY/2026-01-05-One-Time-Password%201.md)
+
+</div>

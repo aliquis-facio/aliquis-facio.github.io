@@ -219,3 +219,8 @@ if (!strcmp(Password, "badprog")) ...
     - **변수 및 메모리 초기화**
     - **모든 함수 리턴값 확인**  
         → 이 세 가지만 꾸준히 지켜도 디펙트와 취약점 상당수를 줄일 수 있다는 메시지. (이전 코딩/시큐어코딩 강의와 연결되는 부분)
+
+## 관련 문서
+
+- [코딩 / 시큐어 코딩 정리](06_Secure_Coding.md)
+- [DDM(Dependencies & Dependence Management)](08_Dependencies_and_Dependence%20Management.md)

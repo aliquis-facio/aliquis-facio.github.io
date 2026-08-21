@@ -48,3 +48,9 @@ ex) 회원가입 사이트
 내가 쓴 게시글은 읽을 수 있다
 내가 쓴 게시글에 접속할 때 파라미터에 다른 사람 글 번호를 넣으면 읽을 수도 있다
 
+<div class="obsidian-links" style="display: none;">
+
+[\[CTF\] Dreamhack 문제 풀이: {\"role\": \"admin\"}](../CTF/2026-02-03-role-admin.md)
+[\[SECURITY\] WEB 취약점](2025-02-21-WEB-Secure-Weak-Points.md)
+
+</div>

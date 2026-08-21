@@ -106,3 +106,8 @@
 ### 8.3 Maximum Likelihood와 연결
 
 - Softmax + Cross-Entropy 조합은 “**관측된 정답 레이블들이 나올 확률을 최대화**” 하는 **Maximum Likelihood Estimation** 과 동치.
+
+## 관련 문서
+
+- [Introduction – Computer Vision & Machine Learning](01_Introduction%20–%20Computer%20Vision%20&%20Machine%20Learning.md)
+- [DNN(Deep Neural Network)](03_DNN%28Deep%20Neural%20Network%29.md)

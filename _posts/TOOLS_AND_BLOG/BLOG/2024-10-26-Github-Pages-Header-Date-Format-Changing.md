@@ -168,3 +168,10 @@ pre 태그를 사용하지 않고 캡처해서 이미지로 업로드하니 정�
 * [Using CSS to detect if child exists](https://stackoverflow.com/questions/18482718/using-css-to-detect-if-child-exists)
 * [[Blog] github 블로그 포스팅 게시 안되는 오류 해결](https://sehooni.github.io/blog/github_blog_not_shown/)
 * [Github 블로그 page build error 해결 후기](https://roadtos7.github.io/android/2021/06/10/Jekyll-FixBuildError.html)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[GITHUB PAGES\] 구글 애널리틱스 적용하기](2021-12-09-Github-Pages-Google-Analytics.md)
+[\[GITHUB PAGES\] Google Search 등록하기](2024-11-22-Github-Pages-Google-Search-Console.md)
+
+</div>

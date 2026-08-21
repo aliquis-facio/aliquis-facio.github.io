@@ -273,3 +273,8 @@ $$
         - forward: $y = f(x, w)$
         - backward: 주어진 $dL/dy$ 로부터 $dL/dx$, $dL/dw$ 를 계산하는 함수
     - 사용자는 보통 `loss.backward()` 한 줄만 호출하면, 이 규칙들이 계산 그래프를 따라 자동으로 적용된다.
+
+## 관련 문서
+
+- [Backpropagation with Computational Graph](06_Backpropagation%20with%20Computational%20Graph.md)
+- [Convolutional Neural Networks](08_Convolutional%20Neural%20Networks.md)

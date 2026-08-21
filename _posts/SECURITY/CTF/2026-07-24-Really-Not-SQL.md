@@ -350,3 +350,9 @@ pass
 ## 참고
 
 - [Wikipedia: WebDAV](https://ko.wikipedia.org/wiki/WebDAV)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](../SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection.md)
+
+</div>

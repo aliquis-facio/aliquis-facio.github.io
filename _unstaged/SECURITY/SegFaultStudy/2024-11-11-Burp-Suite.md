@@ -581,3 +581,7 @@ Comparer는 두 요청이나 응답의 차이를 비교할 때 사용한다.
 8. 응답 차이를 분석
 9. 취약점 여부 판단
 ```
+
+## 관련 문서
+
+- [\[SECURITY\] 모의해킹 보고서 작성 팁](../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2024-12-19-Penetration-Testing-Report-Write-Tip.md)

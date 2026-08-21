@@ -55,3 +55,9 @@ macOS 등에서 MenuMeters 같은 GUI 유틸리티 활용 가능
 **사용자 격리**: 일반 사용자는 자신의 프로세스만 제어하고, root는 모든 프로세스를 관리
 
 * **superuser(root)**: 모든 프로세스와 시스템 자원에 대한 무제한 권한 사용자
+
+<div class="obsidian-links" style="display: none;">
+
+[\[OS\] Process](2025-04-22-OS-Process.md)
+
+</div>

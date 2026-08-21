@@ -796,3 +796,7 @@ WebSocket은
 5. **채팅, 알림, 게임, 시세에 적합하다**
 6. **연결 관리, 인증, 재연결, 확장 처리가 중요하다**
 7. **모든 API를 WebSocket으로 바꾸는 건 오히려 비효율적일 수 있다**
+
+## 관련 문서
+
+- [\[DEVELOP\]](../2026-02-25-Web-Socket-and-Server-Sent-Events.md)

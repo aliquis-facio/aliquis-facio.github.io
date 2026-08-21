@@ -142,3 +142,10 @@ print('꼬꼬마 명사 추출 :',kkma.nouns("열심히 코딩한 당신, 연휴
 * [텍스트 전처리(Text preprocessing)](https://wikidocs.net/21694)
 * [정규표현식(Regular Expression) with 파이썬](https://jh2021.tistory.com/8)
 * [한국어 소설 텍스트를 위한 자연어처리 라이브러리](https://github.com/storidient/KoBookNLP)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[AI\] 자연어 처리(NLP)란?](2025-03-25-NLP.md)
+[\[AI\] 한글 텍스트 자연어 처리 실습](2025-03-26-Korean-Text-NLP-Prac.md)
+
+</div>

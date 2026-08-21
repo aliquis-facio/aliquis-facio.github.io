@@ -675,3 +675,10 @@ tags: [TIL, DATABASE, CTF]
 * [MySQL CHAR_LENGTH() Function](https://www.w3schools.com/sql/func_mysql_char_length.asp)
 * [MySQL SUBSTR() Function](https://www.w3schools.com/sql/func_mysql_substr.asp)
 * [MySQL ASCII() Function](https://www.w3schools.com/sql/func_mysql_ascii.asp)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](../SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection.md)
+[\[SECURITY\] Blind SQL Injection](../SECURITY_FUNDAMENTALS/2024-11-28-Blind-SQL-Injection.md)
+
+</div>

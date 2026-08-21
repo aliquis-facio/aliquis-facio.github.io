@@ -42,3 +42,10 @@ git push
 ## 답답했던 점들
 
 테마를 folk해서 첫 수정을 할 때면 오류가 항상 일어났다는 사소한 버그와 원격 레포에 올려도 github.io에서 적용되는 딜레이가 있어서 답답해서 너무나도 행복했다는 사소한 이야기
+
+<div class="obsidian-links" style="display: none;">
+
+[\[GITHUB PAGES\] Image Test](2021-11-30-Github-Pages-Image-Test.md)
+[\[GITHUB PAGES\] 구글 애널리틱스 적용하기](2021-12-09-Github-Pages-Google-Analytics.md)
+
+</div>

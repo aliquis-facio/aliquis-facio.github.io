@@ -146,3 +146,11 @@ double extension (이중확장자)
 * [Content Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)
 * [헥스에디터 ( Hex Editor 핵사 에디터 ) 의 사용법](https://blog.naver.com/PostView.nhn?blogId=kjg5345&logNo=150098304449)
 * [Apache HTTP Server Tutorial: .htaccess files](https://httpd.apache.org/docs/2.4/en/howto/htaccess.html)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[CTF\] Dreamhack 문제 풀이: Image Uploader](../CTF/2026-02-24-Image-Uploader.md)
+[\[SECURITY\] WEB 취약점](2025-02-21-WEB-Secure-Weak-Points.md)
+[\[Dreamhack\] PTML](../../../_unstaged/SECURITY/CTF/2026-07-24-PTML.md)
+
+</div>

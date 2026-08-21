@@ -61,3 +61,7 @@ Webhook:
 * [웹훅[Webhook]이란 무엇일까?](https://frtt0608.tistory.com/143)
 * [웹훅](https://ko.wikipedia.org/wiki/%EC%9B%B9%ED%9B%85)
 * [Webhook 을 통해 알림을 구현해보자!](https://velog.io/@weskii/Webhook-%EC%9D%84-%ED%86%B5%ED%95%B4-%EC%95%8C%EB%A6%BC%EC%9D%84-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EC%9E%90)
+
+## 관련 문서
+
+- [Ingest 서비스란?](Ingest.md)

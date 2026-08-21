@@ -170,3 +170,8 @@ $$s = W_2 h \quad (\text{s는 클래스 점수})$$
     - 예: GPT 같은 대형 모델은 **어마어마하게 큰 데이터셋** 위에서 학습되기 때문에 오버피팅보다 **용량 부족**이 더 문제.
 - **실제 연구/서비스에서는**:
     - 데이터 수집 & 정제(레이블링 포함)가 가장 비싼 작업이며 딥러닝 성능의 진짜 bottleneck이 되기도 한다고 언급.
+
+## 관련 문서
+
+- [Linear Model (Linear Classifiers)](02_Linear%20Model%20%28Linear%20Classifiers%29.md)
+- [<font color="#ff0000">Gradient Descent</font>](04_Gradient%20Descent.md)

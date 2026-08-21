@@ -129,3 +129,10 @@ HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
 * [쿠키, 세션 1](https://lgphone.tistory.com/65)
 * [쿠키, 세션 2](https://velog.io/@octo__/%EC%BF%A0%ED%82%A4Cookie-%EC%84%B8%EC%85%98Session)
 * [JSESSIONID](https://dmobi.tistory.com/136)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[WEB\] 로그인 로직](2024-11-03-WEB-Login-Logic.md)
+[Web Security](../../../_unstaged/SECURITY/정보시/기말고사/8_Web_Security.md)
+
+</div>

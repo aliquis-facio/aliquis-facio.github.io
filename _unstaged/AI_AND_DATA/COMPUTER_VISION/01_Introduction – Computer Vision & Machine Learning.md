@@ -131,3 +131,7 @@
     - 학습에 사용하지 않은 **테스트 집합**으로 최종 모델 성능 평가
     - 학습/테스트 성능이 비슷하면 **일반화가 잘 됨**
     - 학습 성능만 높고 테스트 성능이 낮으면 **과적합(Overfitting)**
+
+## 관련 문서
+
+- [Linear Model (Linear Classifiers)](02_Linear%20Model%20%28Linear%20Classifiers%29.md)

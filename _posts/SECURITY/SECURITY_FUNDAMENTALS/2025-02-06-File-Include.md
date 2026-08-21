@@ -55,3 +55,9 @@ file include 취약점이라는 것은 그 존재만으로 web shell을 설치�
 * [[보안] [파일/다운로드] 경로 숨기기에 관한 짧은 생각](https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=tipntech&wr_id=26832)
 * []()
 * []()
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] WEB 취약점](2025-02-21-WEB-Secure-Weak-Points.md)
+
+</div>

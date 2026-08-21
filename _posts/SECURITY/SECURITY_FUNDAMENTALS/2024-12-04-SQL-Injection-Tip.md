@@ -82,3 +82,9 @@ table 이름, column 이름
 e.g. where _column_ ~
 
 -> 왜 적용할 수 없는 건가?
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](2024-11-14-SQL-Injection.md)
+
+</div>

@@ -620,3 +620,10 @@ M∨O = F
 
 </div>
 </details>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 진리표](2026-04-10-Vote-of-Truth.md)
+[\[LOGIC\] 자연 연역 1](2026-05-12-Natural-Deduction-1.md)
+
+</div>

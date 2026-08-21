@@ -869,3 +869,7 @@ HTTP를 공부할 때 가장 먼저 잡아야 할 건 6개야.
 6. **HTTP와 HTTPS 차이**
 
 이 6개를 이해하면 Django, FastAPI, REST API, 브라우저 네트워크 탭까지 전부 연결된다.
+
+## 관련 문서
+
+- [\[NETWORK\] HTTP](../../../_posts/SYSTEMS_INFRA/NETWORK/2024-10-23-HTTP.md)

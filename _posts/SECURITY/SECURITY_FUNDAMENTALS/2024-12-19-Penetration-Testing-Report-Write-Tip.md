@@ -206,3 +206,9 @@ XSS 취약점 보고서를 작성할 때는 관련 페이지를 역할별로 구
 결국 좋은 보고서는  
 “취약점을 찾았다”에서 끝나는 것이 아니라  
 **누가 봐도 이해할 수 있고, 바로 수정 작업에 들어갈 수 있게 만드는 문서**라고 볼 수 있다.
+
+<div class="obsidian-links" style="display: none;">
+
+[Burp Suite](../../../_unstaged/SECURITY/SegFaultStudy/2024-11-11-Burp-Suite.md)
+
+</div>

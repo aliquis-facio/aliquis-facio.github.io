@@ -33,7 +33,7 @@ tags: [TIL, WEB, CTF]
 
 ## 1. Vuln
 
-SSTI(Server-side Template Injection): 공격자의 악의적인 코드가 웹 템플릿 엔진(Web Template Engine)에 들어가 서버측에서 템플릿 코드가 실행되는 취약점이다.
+[SSTI(Server-side Template Injection)](/SSTI/): 공격자의 악의적인 코드가 웹 템플릿 엔진(Web Template Engine)에 들어가 서버측에서 템플릿 코드가 실행되는 취약점이다.
 
 ## 2. Code
 

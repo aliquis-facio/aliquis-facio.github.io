@@ -96,3 +96,7 @@ ARP Reply: Bob → Alice에게 MAC 주소 응답
 데이터 전송: Alice가 Bob의 MAC 주소로 프레임 캡슐화 후 전송
 
 각 링크(R1, R2 등)에서 프레임은 새롭게 구성되며, 해당 홉의 MAC 주소를 사용
+
+## 관련 문서
+
+- [\[NETWORK\] Data Transfer](2025-05-27-Network-L3-Data-Transfer.md)

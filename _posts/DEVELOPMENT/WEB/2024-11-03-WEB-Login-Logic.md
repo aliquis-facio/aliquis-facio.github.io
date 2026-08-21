@@ -224,3 +224,11 @@ function login8($conn, $user_id, $user_pw) {
 1. [Escape String 1](https://www.w3schools.com/php/php_string_escape.asp)
 1. [Escape String 2](https://m.blog.naver.com/jskorl/220544334899)
 1. [PHP 문법: mysqli_real_escape_string](https://www.php.net/manual/en/mysqli.real-escape-string.php)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[WEB\] 웹 서버 실습](2024-10-17-Web-Server-Practice.md)
+[\[WEB\] 쿠키와 세션 (ft. 캐시)](2024-11-04-WEB-Cookie-and-Session-Cache.md)
+[\[WEB\] 로그인이란?](../../../_unstaged/DEVELOPMENT/WEB/2024-10-30-WEB-Login-Outline.md)
+
+</div>

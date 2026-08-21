@@ -146,3 +146,10 @@ tags:
 - **엣지 검출(소벨/라플라시안)**: `reflect` 또는 `replicate` (제로 패딩은 경계에서 가짜 엣지 유발 가능).
 - **딥러닝 전처리에서 일관성/단순성**: 구현·성능 고려해 `replicate`가 흔함(프레임워크 기본도 자주 이 모드).
 - **수치 안정성/특정 이론 가정(예: 경계=0)**: `zero` 선택.
+
+<div class="obsidian-links" style="display: none;">
+
+[\[COMPUTER VISION\] Histogram](2025-10-04-Histogram.md)
+[\[COMPUTER VISION\] 영상 처리 연산 2](2025-10-06-Image-Processing-Operatios-2.md)
+
+</div>

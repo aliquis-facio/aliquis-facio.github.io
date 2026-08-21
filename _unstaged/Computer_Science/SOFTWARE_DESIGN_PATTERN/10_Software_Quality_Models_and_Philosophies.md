@@ -341,3 +341,8 @@ Garvin의 다섯 가지 관점
 품질 모델은 간단하고 사용하기 쉽지만 좁은 시각을 제공한다.
 품질 철학은 더 복잡하지만 본질에 가까운 품질 개념을 포착한다.
 상호보완적으로 활용하는 것이 이상적이다.
+
+## 관련 문서
+
+- [OO Concepts](09_Object-Oriented-Design.md)
+- [소프트웨어 디자인패턴](11_Software-Design-Pattern.md)

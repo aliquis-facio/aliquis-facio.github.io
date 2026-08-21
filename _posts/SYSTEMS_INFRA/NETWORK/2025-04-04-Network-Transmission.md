@@ -107,3 +107,10 @@ Block Coding
 mermaid.initialize({startOnLoad:true});
 window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </script>
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] Protocol이란?](2025-04-03-Network-Protocol.md)
+[\[NETWORK\] MAC 계층](2025-04-24-Network-MAC.md)
+
+</div>

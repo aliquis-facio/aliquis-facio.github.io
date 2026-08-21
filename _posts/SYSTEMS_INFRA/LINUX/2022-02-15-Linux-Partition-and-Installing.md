@@ -465,3 +465,10 @@ VirtualBox, VMware 등의 가상화 프로그램 안에 리눅스를 설치하�
 * [정보통신기술용어해설: Disk Partition, Disk Volume   디스크 파티션, 디스크 볼륨, 디스크 구성 단위](http://www.ktword.co.kr/test/view/view.php?no=4856)
 * [TakeTheNotes: Exploring the World of Mount Points in Linux Disk Management](https://takethenotes.com/mount-points/)
 * [howtouselinux: Understanding Disk Partition in Linux – MBR vs GPT](https://www.howtouselinux.com/post/mbr-vs-gpt)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 리눅스 구조 및 배포판의 종류](2022-02-15-Linux-Structures-and-Distribution-Types.md)
+[\[LINUX\] 부트로더 grub에 대한 설명과 실행레벨 설명](2022-02-18-Linux-Bootloader.md)
+
+</div>

@@ -134,3 +134,9 @@ tags:
 - [GCORE: CDN Evolution: From Static Content to Edge Computing](https://gcore.com/blog/cdn-evolution)
 - [AZION: Edge Computing is the Evolution of CDNs](https://www.azion.com/en/learning/cdn/edge-computing-evolution-of-cdn/)
 - [정보통신용어사전: 다이얼 업, dial-up](https://terms.tta.or.kr/dictionary/dictionaryView.do?subject=%EB%8B%A4%EC%9D%B4%EC%96%BC+%EC%97%85)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] MAC Protocol 2](2025-04-30-Network-MAC-Protocol-2.md)
+
+</div>

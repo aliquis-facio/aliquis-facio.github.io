@@ -67,3 +67,7 @@ if __name__ == "__main__":
 # 참고
 * [071 비동기 방식으로 프로그래밍하려면? ― asyncio](https://wikidocs.net/125092)
 * [코루틴과 태스크](https://docs.python.org/ko/3/library/asyncio-task.html)
+
+## 관련 문서
+
+- [FastAPI](FastAPI.md)

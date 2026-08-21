@@ -77,3 +77,7 @@ AddHandler application/x-httpd-php .php
 ---
 
 하지만 apache를 실행시키고 127.0.0.1을 접속하면 '사이트에 연결할 수 없음'만 나오고 있음.
+
+## 관련 문서
+
+- [\[WEB\] 웹 개요](../../../_posts/DEVELOPMENT/WEB/2024-10-17-Web-Outline.md)

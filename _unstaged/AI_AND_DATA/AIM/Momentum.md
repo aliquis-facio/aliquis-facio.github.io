@@ -75,3 +75,8 @@ $$\theta_{t+1} = \theta_t - \eta v_t$$
 |**RMSProp**|gradient 크기를 제곱 평균으로 정규화 (adaptive learning rate)|
 |**Adam**|Momentum + RMSProp 결합 (현재 표준)|
 **Adam = “Momentum + Adaptive Learning Rate”**
+
+## 관련 문서
+
+- [SGD (Stochastic Gradient Descent, 확률적 경사 하강법)](Stochastic_Gradient_Descent.md)
+- [\[AI\] Gradient Clipping](../../../_posts/AI_AND_DATA/AI/2025-11-11-Gradient-Clipping.md)

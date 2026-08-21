@@ -201,3 +201,10 @@ tags: [NETWORK]
 * [대역폭, bandwidth란 ?](https://velog.io/@ragnarok_code/%EB%8C%80%EC%97%AD%ED%8F%AD-bandwidth%EB%9E%80)
 * [나무위키: 패킷](https://namu.wiki/w/%ED%8C%A8%ED%82%B7)
 * [wikimedia: atm](https://ko.wikipedia.org/wiki/%EB%B9%84%EB%8F%99%EA%B8%B0_%EC%A0%84%EC%86%A1_%EB%B0%A9%EC%8B%9D)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] 네트워크(Network)란?](2023-01-27-Network-Outline.md)
+[\[NETWORK\] 네트워크 통신망(Network Topology)](2023-01-27-Network-Topology.md)
+
+</div>

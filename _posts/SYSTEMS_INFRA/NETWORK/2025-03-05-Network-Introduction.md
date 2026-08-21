@@ -84,3 +84,10 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 ### 4.5. Video
 ![출처: https://thescriptlab.com/blogs/36023-what-was-the-first-movie-ever-made/](/_image/2025-03-05-00-00-06.png)
 * Video는 사진이나 영상을 녹화한 것이나 방송한 것을 말한다
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] 네트워크 근거리 통신 기술](2023-01-31-Network-LAN.md)
+[\[NETWORK\] Protocol이란?](2025-04-03-Network-Protocol.md)
+
+</div>

@@ -965,3 +965,9 @@ for (path, dirs, files) in os.walk(root_path):
 * [Hugging Face: KoBERT](https://huggingface.co/monologg/kobert)
 * [[인지과학] 사람의 감정을 어떻게 정의할 수 있을까?](https://steemit.com/kr-science/@man-in-the-moon/5sboad)
 * [[Python] 히트맵 그리기 (Heatmap by python matplotlib, seaborn, pandas)](https://rfriend.tistory.com/419)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[AI\] 한글 텍스트 자연어 처리 실습](2025-03-26-Korean-Text-NLP-Prac.md)
+
+</div>

@@ -75,3 +75,10 @@ _사용자 계정명: 패스워드: 사용자 계정 uid: 사용자 계정 group
     * `cd .`: 상위 디렉토리로 이동
     * `cd /`: 무조건 루트 디렉토리로 이동
     * `cd ~`: 어떤 위치에서든 현재 계정의 홈디렉토리로 이동
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 부트로더 grub에 대한 설명과 실행레벨 설명](2022-02-18-Linux-Bootloader.md)
+[\[LINUX\] 디렉토리 조작명령어 설명 및 실습](2022-02-27-Linux-Directory-Manipulation-Commands.md)
+
+</div>

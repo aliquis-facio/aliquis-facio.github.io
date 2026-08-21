@@ -74,4 +74,9 @@ packet filtering/classification
 - [방화벽에서의 Stateful VS Stateless](http://blog.omoknooni.me/64)
 - [ITpedia: 비무장지대(DMZ)란 무엇입니까?](https://ko.itpedia.nl/2023/01/28/wat-is-een-demilitarized-zone-dmz/)
 - [Fortinet: DMZ 네트워크](https://www.fortinet.com/kr/resources/cyberglossary/what-is-dmz)
-- 
+-
+
+## 관련 문서
+
+- [9. 네트워크 보안](9_Network_Security.md)
+- [High Availability](High%20Availability.md)

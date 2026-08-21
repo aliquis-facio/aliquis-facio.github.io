@@ -52,3 +52,8 @@ flowchart TB
 mermaid.initialize({startOnLoad:true});
 window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </script>
+
+## 관련 문서
+
+- [\[NETWORK\] Data Communications란?](2025-04-04-Network-Transmission-Medai.md)
+- [\[NETWORK\] Data Transfer](2025-05-27-Network-L3-Data-Transfer.md)

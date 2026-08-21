@@ -80,3 +80,7 @@ CNN에서 필터 중요도를 측정해 필터 단위로 삭제
 - 여러 pruning 전략을 비교하기 위한 baseline
 - edge-device 배포를 위한 단순 모델 최적화
 - 학습비용이 부족해 반복적 pruning이 어려울 때
+
+## 관련 문서
+
+- [CNN: Pooling & Batch Normalization](09_CNN%20–%20Pooling%20&%20Batch%20Normalization.md)

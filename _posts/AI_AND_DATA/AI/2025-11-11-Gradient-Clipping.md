@@ -123,3 +123,9 @@ $$
 - [Tistory: [Deep Learning] Gradient clipping 사용하여 loss nan 문제 방지하기](https://eehoeskrap.tistory.com/582)
 - [Tistory: [PyTorch] Gradient clipping (그래디언트 클리핑)](https://sanghyu.tistory.com/87)
 - [Neptuen: Understanding Gradient Clipping (and How It Can Fix Exploding Gradients Problem)](https://neptune.ai/blog/understanding-gradient-clipping-and-how-it-can-fix-exploding-gradients-problem)
+
+<div class="obsidian-links" style="display: none;">
+
+[Momentum](../../../_unstaged/AI_AND_DATA/AIM/Momentum.md)
+
+</div>

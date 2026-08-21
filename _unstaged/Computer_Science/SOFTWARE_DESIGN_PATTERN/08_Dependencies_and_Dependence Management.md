@@ -23,3 +23,8 @@
 2. **상속을 인터페이스 기반 사용으로 대체**: 상속의 강결합을 피하고 합성/주입으로 유연성 확보.
 3. **계약에 의한 설계(Design by Contract)**: 사전/사후조건, 불변식으로 역할·책임 경계 명시.
 4. **합성 우선 원칙**: **폴리모orphism이 꼭 필요하지 않다면 합성 우선**.
+
+## 관련 문서
+
+- [Secure Coding in C/C++](07_Secure_Coding_2.md)
+- [OO Concepts](09_Object-Oriented-Design.md)

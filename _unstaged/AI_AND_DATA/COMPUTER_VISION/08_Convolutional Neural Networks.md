@@ -206,3 +206,8 @@
 - **엄밀한 의미의 컨볼루션(convolution)** 은 필터(함수)를 **시간/공간 축으로 뒤집은 후** 곱해 적분(또는 합)하는 연산이다.
 - 반면, 딥러닝에서 구현하는 “컨볼루션”은 실제로는 **뒤집지 않고** 그대로 곱해 더하는 **상관(correlation)** 에 가깝다.
 - 하지만 딥러닝 커뮤니티에서는 관습적으로 이것을 “convolution” 이라고 부르고 있다.
+
+## 관련 문서
+
+- [Vector Backprop](07_Vector%20Backprop.md)
+- [CNN: Pooling & Batch Normalization](09_CNN%20–%20Pooling%20&%20Batch%20Normalization.md)

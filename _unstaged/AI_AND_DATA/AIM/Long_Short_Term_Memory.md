@@ -1,6 +1,6 @@
 # Long Short-Term Memory, LSTM
 
-[RNN(Recurrent Neural Network, 순환 신경망)](AIM/Recurrent_Neural_Network.md)의 한 종류로, “시퀀스 데이터”; 즉, 순서가 중요한 데이터를 처리하는 데 특화된 신경망 구조이다.
+[RNN(Recurrent Neural Network, 순환 신경망)](Recurrent_Neural_Network.md)의 한 종류로, “시퀀스 데이터”; 즉, 순서가 중요한 데이터를 처리하는 데 특화된 신경망 구조이다.
 
 ## 1. 기본 정의
 
@@ -97,3 +97,8 @@ LSTM은 내부에 세 가지 게이트와 하나의 셀 상태(cell state)를 �
 |**GRU (Gated Recurrent Unit)**|LSTM보다 간단한 구조, 유사한 성능|
 |**Bi-LSTM (Bidirectional LSTM)**|앞뒤 문맥을 모두 반영|
 |**Stacked LSTM (Deep LSTM)**|여러 LSTM 층을 쌓아 더 깊은 표현 학습|
+
+## 관련 문서
+
+- [장기 의존성(Long-term Dependency)](Long_Term_Dependency.md)
+- [\[논문 리뷰\] Sequence to Sequence Learning with Neural Networks](Sequence_to_Sequence_Learning_with_Neural_Networks.md)

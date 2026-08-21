@@ -75,3 +75,7 @@ app.listen(PORT, () => {
 - [Tistory: EJS Server Side Template Injection 취약점 [CVE-2022-29078]](https://one3147.tistory.com/65)
 - [Github: EJS, Server side template injection ejs@3.1.9 Latest #720](https://github.com/mde/ejs/issues/720)
 - [Blog: EJS Vulnerabilities in CTF](https://blog.huli.tw/2023/06/22/en/ejs-render-vulnerability-ctf/)
+
+## 관련 문서
+
+- [\[SECURITY\] SSTI란](../../../_posts/SECURITY/SECURITY_FUNDAMENTALS/2026-02-05-SSTI.md)

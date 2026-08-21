@@ -70,3 +70,9 @@ tags: [DATABASE, TIL]
 * [What is a Database Index?](https://www.codecademy.com/article/sql-indexes)
 * [데이터베이스의 개념](https://blog.naver.com/k97b1114/140153610388)
 * [데이터베이스의 개념적 구성(개체, 속성, 관계)](https://kingnamji.tistory.com/34)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[DATABASE\] DBS(DataBase System)란?](2025-04-01-Database-DBS.md)
+
+</div>

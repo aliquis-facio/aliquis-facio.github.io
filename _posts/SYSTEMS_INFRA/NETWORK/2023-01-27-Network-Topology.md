@@ -71,3 +71,10 @@ tags: [NETWORK]
 
 # 참고
 * [나무위키: 병목현상](https://namu.wiki/w/%EB%B3%91%EB%AA%A9%20%ED%98%84%EC%83%81)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] 교환(Switching)](2023-01-27-Network-Switching.md)
+[\[NETWORK\] 네트워크 근거리 통신 기술](2023-01-31-Network-LAN.md)
+
+</div>

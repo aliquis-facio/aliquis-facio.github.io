@@ -162,3 +162,7 @@ tags: [GIT]
 # 참고
 
 1. <https://jw910911.tistory.com/77>
+
+## 관련 문서
+
+- [\[GIT\] Commit 메시지 규칙](../../../_posts/TOOLS_AND_BLOG/GIT/2025-11-01-Git-Commit-Message-Rules.md)

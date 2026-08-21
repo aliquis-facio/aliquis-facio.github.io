@@ -38,3 +38,8 @@
 
 - [Tistory: 객체 지향(Object-Oriented)이란?](https://kim6394.tistory.com/113)
 - [Geeksforgeeks: Object-Oriented Design (OOD) - System Design](https://www.geeksforgeeks.org/system-design/oops-object-oriented-design/)
+
+## 관련 문서
+
+- [DDM(Dependencies & Dependence Management)](08_Dependencies_and_Dependence%20Management.md)
+- [1. 소프트웨어 품질 모델과 철학](10_Software_Quality_Models_and_Philosophies.md)

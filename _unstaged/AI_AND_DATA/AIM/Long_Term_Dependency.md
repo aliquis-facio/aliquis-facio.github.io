@@ -32,7 +32,7 @@
 
 ---
 
-## 3. [RNN](AIM/Recurrent_Neural_Network.md)에서의 장기 의존성 문제
+## 3. [RNN](Recurrent_Neural_Network.md)에서의 장기 의존성 문제
 
 ### 3.1. RNN 기본 구조
 
@@ -58,7 +58,7 @@ $$h_t = f(Wx_t + Uh_{t-1} + b)$$
 
 ---
 
-## 5. [LSTM](AIM/Long_Short_Term_Memory.md)이 등장한 이유
+## 5. [LSTM](Long_Short_Term_Memory.md)이 등장한 이유
 
 LSTM(Long Short-Term Memory)은 바로 이 “장기 의존성 문제”를 해결하기 위해 설계된 RNN 구조이다.
 

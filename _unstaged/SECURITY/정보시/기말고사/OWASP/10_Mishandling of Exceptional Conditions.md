@@ -110,3 +110,8 @@ OWASP가 제시하는 권고와 주변 해설을 합쳐 보면, 핵심 키워드
 - [eSecurity Planet](https://www.esecurityplanet.com/threats/news-owasp-top-10-2025/?utm_source=chatgpt.com)
 - [Orca Security](https://orca.security/resources/blog/owasp-top-10-2025-key-changes/?utm_source=chatgpt.com)
 - [blog.gitguardian.com](https://blog.gitguardian.com/owasp-top-10-2025/?utm_source=chatgpt.com)
+
+## 관련 문서
+
+- [Logging & Alerting Failures](09_Logging%20&%20Alerting%20Failures.md)
+- [\[SECURITY\] Mishandling of Exceptional Conditions](Mishandling-of-Exceptional-Conditions.md)

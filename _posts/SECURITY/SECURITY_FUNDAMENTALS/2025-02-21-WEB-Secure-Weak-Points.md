@@ -879,3 +879,15 @@ Set-Cookie: domain=app.mysite.com
 ```
 
 ### 참고
+
+<div class="obsidian-links" style="display: none;">
+
+[\[SECURITY\] SQL Injection 정리](2024-11-14-SQL-Injection.md)
+[\[SECURITY\] XSS란?](2024-12-11-XSS-Outline.md)
+[\[SECURITY\] CSRF란?](2025-01-08-CSRF-Outline.md)
+[\[SECURITY\] File Upload 취약점](2025-01-27-File-Upload.md)
+[\[SECURITY\] File Include 취약점](2025-02-06-File-Include.md)
+[\[SECURITY\] File Download 취약점](2025-02-09-File-Download.md)
+[\[SECURITY\] 인증/인가 취약점](2025-02-12-Authentication-and-Authorization.md)
+
+</div>

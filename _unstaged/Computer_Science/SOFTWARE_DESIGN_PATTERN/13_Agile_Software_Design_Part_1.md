@@ -435,3 +435,8 @@ private static int calcMaxPrimeFactor() {
 - **리팩토링**: 깨끗한 코드 유지를 위해 필수적이다.
 - **페어 프로그래밍**: 두 명이 협력함으로써 코드 품질과 지식 공유가 강화된다.
 - **애자일 실천법의 통합 효과**: 계획, 테스트, 리팩토링, 협업이 유기적으로 작동하여 안정적이고 유연한 개발 가능.
+
+## 관련 문서
+
+- [객체지향 설계의 5대 원칙(SOLID Principles)](12_SOLID-Principles.md)
+- [14_Agile_Software_Design_Part_2](14_Agile_Software_Design_Part_2.md)

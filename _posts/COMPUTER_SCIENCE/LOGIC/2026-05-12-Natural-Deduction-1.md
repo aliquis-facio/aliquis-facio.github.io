@@ -185,3 +185,10 @@ p⊃q
 
 의미: `p`이면 `q`라는 조건문이 있으면, `p`이면 `p`와 `q`가 함께 참이라는 형태로 바꿀 수 있다.
 조건문의 결론을 연언으로 확장하는 규칙이다.
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LOGIC\] 진리표 증명](2026-05-05-Proof-of-Validity-through-Truth-Tables.md)
+[\[LOGIC\] 자연 연역 2](2026-05-12-Natural-Deduction-2.md)
+
+</div>

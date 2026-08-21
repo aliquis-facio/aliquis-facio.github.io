@@ -359,3 +359,9 @@ int main(int argc, char *argv[]) {
 * [[C] pthread란? pthread 예제](https://m.blog.naver.com/whtie5500/221692793640)
 * [C/C++ open 함수 - 파일 생성 / 읽기 / 쓰기](https://bubble-dev.tistory.com/entry/CC-open-%ED%95%A8%EC%88%98-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EC%9D%BD%EA%B8%B0-%EC%93%B0%EA%B8%B0)
 * [open, read, write, close 사용하기](https://tempdev.tistory.com/44)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[OS\] OS](2025-04-19-OS.md)
+
+</div>

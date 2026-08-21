@@ -115,3 +115,10 @@ _groups 명령을 통해 해당 사용자가 속한 그룹 확인 가능_
 _/etc/gshadow_
 
 2. `groupdel [group]`: 그룹을 삭제하는 명령(그룹에 속한 사용자가 있을 경우 사용자부터 제거 후 작업)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[LINUX\] 디렉토리 조작명령어 설명 및 실습](2022-02-27-Linux-Directory-Manipulation-Commands.md)
+[\[LINUX\] 파일관련 복사, 이동, 삭제 명령 설명 및 실습](2022-03-05-Linux-File-Managing.md)
+
+</div>

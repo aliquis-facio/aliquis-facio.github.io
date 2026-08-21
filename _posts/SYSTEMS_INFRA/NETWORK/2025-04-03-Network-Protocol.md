@@ -104,3 +104,10 @@ Protocol: 각 계층별로 어떻게 소통할 것인지와 어떻게 인접한 
 
 <!-- [OSI vs TCP/IP]()
 [계층 framework]() -->
+
+<div class="obsidian-links" style="display: none;">
+
+[\[NETWORK\] Data Communications란?](2025-03-05-Network-Introduction.md)
+[\[NETWORK\] 데이터 전송(Data Transmission)이란?](2025-04-04-Network-Transmission.md)
+
+</div>

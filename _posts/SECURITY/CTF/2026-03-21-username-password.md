@@ -32,7 +32,7 @@ tags: [TIL, WEB, CTF]
 ## 1. Vuln
 
 - JS Prototype 기반 인증 우회
-- [SSRF](../SSRF)
+- [SSRF](/SSRF/)
 
 ## 2. Code
 
@@ -186,5 +186,5 @@ authorizer: (username, password) => users[username] == password
 
 ## 참고
 
-- [[JS] 함수 3](../JavaScript-Function-3)
-- [[JS] 함수 5](../JavaScript-Function-5)
+- [[JS] 함수 3](/JavaScript-Function-3/)
+- [[JS] 함수 5](/JavaScript-Function-5/)

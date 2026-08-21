@@ -127,3 +127,8 @@ OWASP는 인증 실패를 줄이기 위해 다음과 같은 예방책을 제안�
 ## 참고
 
 - [OWASP Foundation – A07:2025 Authentication Failures](https://owasp.org/Top10/2025/A07_2025-Authentication_Failures/ "A07 Authentication Failures - OWASP Top 10:2025")
+
+## 관련 문서
+
+- [Insecure Design](06_Insecure%20Design.md)
+- [Software or Data Integrity Failures](08_Software%20or%20Data%20Integrity%20Failures.md)

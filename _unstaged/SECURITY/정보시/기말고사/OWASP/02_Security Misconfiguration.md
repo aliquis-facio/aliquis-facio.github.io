@@ -114,3 +114,8 @@ Security Misconfiguration을 줄이기 위해서는 **반복 가능하고 표준
 ## 참고
 
 - [OWASP Foundation – A02:2025 Security Misconfiguration](https://owasp.org/Top10/2025/A02_2025-Security_Misconfiguration/ "A02 Security Misconfiguration - OWASP Top 10:2025")
+
+## 관련 문서
+
+- [Broken Access Control](01_Broken%20Access%20Control.md)
+- [Software Supply Chain Failures](03_Software%20Supply%20Chain%20Failures.md)

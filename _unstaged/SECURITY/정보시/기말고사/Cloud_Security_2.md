@@ -237,3 +237,7 @@
 5. **가상 환경 보안은 “이미지 단계 + 런타임 단계” 둘 다 필요**: EC2 Image Builder와 GuardDuty Runtime/에이전트 조합.
 6. **CSPM·위협 탐지·취약점 관리는 별도가 아니라 연결된 흐름**:
     - Resource Explorer → Security Hub/Config → GuardDuty → Inspector 순으로 **자산 식별–설정 점검–위협 탐지–취약점 관리**를 이어서 보는 것이 포인트.
+
+## 관련 문서
+
+- [Cloud_Security_01](Cloud_Security_01.md)

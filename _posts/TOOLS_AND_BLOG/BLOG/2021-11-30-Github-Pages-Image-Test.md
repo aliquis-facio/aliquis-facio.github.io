@@ -63,3 +63,10 @@ cdn 이용하기
 * [마크다운 사용법 - Quick Start](http://taewan.kim/post/markdown/#comment)
 * [[Blog] GitHub Pages 블로그 이미지 업로드](https://hyeonjiwon.github.io/blog/markdown_img/)
 * [지킬(Jekyll) 포스팅에 이미지 첨부하는 방법 총체적 정리](https://blog.jaeyoon.io/2017/12/jekyll-image.html)
+
+<div class="obsidian-links" style="display: none;">
+
+[\[GITHUB PAGES\] github.io 만들기 2](2021-11-30-Github-Pages-Making-2.md)
+[\[GITHUB PAGES\] github.io 만들면서 느낀 점](2021-11-30-Github-Pages-Making-3.md)
+
+</div>
