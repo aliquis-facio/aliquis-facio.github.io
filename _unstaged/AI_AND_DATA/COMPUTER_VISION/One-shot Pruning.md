@@ -6,8 +6,8 @@
 
 ## 🔍 1. 개념
 
-One-shot pruning은 **사전 훈련된 모델(pretrained model)**에서  
-중요도가 낮은 가중치(혹은 채널·필터)를 **한 번에 제거(prune)**한 뒤,  
+One-shot pruning은 **사전 훈련된 모델(pretrained model)** 에서  
+중요도가 낮은 가중치(혹은 채널·필터)를 **한 번에 제거(prune)** 한 뒤,  
 **필요하면 짧게 fine-tuning만 수행하는 방법**이다.
 
 즉,
