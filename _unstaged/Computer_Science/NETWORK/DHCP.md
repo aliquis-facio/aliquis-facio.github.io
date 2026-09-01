@@ -1,5 +1,28 @@
 # DHCP(Dynamic Host Configuration Protocol)
 
+## 목차
+
+1. [DHCP 정의](#1-정의)
+2. [DHCP가 제공하는 정보](#2-dhcp가-제공하는-정보)
+3. [DHCP 동작 과정: DORA](#3-동작-과정-dora)
+	   1. [DHCP Discover](#31-dhcp-discover)
+	   2. [DHCP Offer](#32-dhcp-offer)
+	   3. [DHCP Request](#33-dhcp-request)
+	   4. [DHCP ACK](#34-dhcp-ack)
+	   5. [DHCP NAK](#35-dhcp-nak)
+	   6. [임대 갱신 과정](#36-임대-갱신-과정)
+	   7. [임대 만료](#37-임대-만료)
+	   8. [IP 주소 반환](#38-ip-주소-반환)
+4. [DHCP 메시지 종류](#4-dhcp-메시지-종류)
+5. [주요 DHCP 옵션](#5-주요-dhcp-옵션)
+6. [주요 포트](#6-주요-포트)
+7. [DHCP Relay](#7-dhcp-relay)
+8. [DHCP 보안 위협과 대응](#8-dhcp-보안-위협과-대응)
+9. [핵심 정리](#9-핵심-정리)
+10. [출처 및 참고 자료](#10-출처-및-참고-자료)
+
+---
+
 ## 1. 정의
 
 **DHCP(Dynamic Host Configuration Protocol)**: 네트워크에 접속한 장비에 IP 설정을 자동으로 할당하는 프로토콜이다.
@@ -186,59 +209,6 @@ T1에서 기존 서버가 응답하지 않고 임대 시간의 약 87.5%가 지�
 
 서버는 해당 주소를 회수해 다른 클라이언트에게 할당할 수 있다. 하지만 갑작스러운 전원 종료나 케이블 분리 시 Release가 전송되지 않을 수 있으므로, 서버는 임대 시간이 끝날 때까지 주소를 유지한다.
 
-## 4. 주요 포트
-
-DHCP는 **UDP**를 사용한다.
-
-| 구분         | UDP 포트 |
-| ---------- | -----: |
-| DHCP 서버    |     67 |
-| DHCP 클라이언트 |     68 |
-
-## 5. DHCP의 보안 위협
-
-* Rogue DHCP Server: 공격자가 가짜 DHCP 서버를 설치해 잘못된 게이트웨이와 DNS 주소를 제공
-* DHCP Starvation: 대량의 가짜 MAC 주소로 DHCP 주소를 모두 소진
-* 중간자 공격: 공격자 주소를 기본 게이트웨이로 제공해 트래픽을 가로챔
-
-스위치에서는 DHCP Snooping으로 방어할 수 있다.
-
-```cisco
-ip dhcp snooping
-ip dhcp snooping vlan 10,20
-
-interface GigabitEthernet0/1
- ip dhcp snooping trust
-```
-
-DHCP 서버로 연결되는 포트만 `trust`로 지정하고, 사용자 포트는 기본 상태인 `untrusted`로 유지해야 한다.
-
-아래 내용을 기존 글에 추가하면 됩니다. 표의 헤더 구조와 일부 표현도 RFC 기준으로 다듬었습니다.
-
-## 목차
-
-1. [DHCP 정의](#1-정의)
-2. [DHCP가 제공하는 정보](#2-dhcp가-제공하는-정보)
-3. [DHCP 동작 과정: DORA](#3-동작-과정-dora)
-
-   * [DHCP Discover](#31-dhcp-discover)
-   * [DHCP Offer](#32-dhcp-offer)
-   * [DHCP Request](#33-dhcp-request)
-   * [DHCP ACK](#34-dhcp-ack)
-   * [DHCP NAK](#35-dhcp-nak)
-   * [임대 갱신 과정](#36-임대-갱신-과정)
-   * [임대 만료](#37-임대-만료)
-   * [IP 주소 반환](#38-ip-주소-반환)
-4. [DHCP 메시지 종류](#4-dhcp-메시지-종류)
-5. [주요 DHCP 옵션](#5-주요-dhcp-옵션)
-6. [주요 포트](#6-주요-포트)
-7. [DHCP Relay](#7-dhcp-relay)
-8. [DHCP 보안 위협과 대응](#8-dhcp-보안-위협과-대응)
-9. [핵심 정리](#9-핵심-정리)
-10. [출처 및 참고 자료](#10-출처-및-참고-자료)
-
----
-
 ## 4. DHCP 메시지 종류
 
 DHCP는 주소 할당 과정 외에도 충돌 통보, 주소 반환, 추가 설정 요청 등을 위한 여러 메시지를 사용한다. DHCP 메시지 유형은 DHCP Option 53으로 구분된다. ([RFC Editor][1])
@@ -255,8 +225,6 @@ DHCP는 주소 할당 과정 외에도 충돌 통보, 주소 반환, 추가 설�
 | `DHCPINFORM`   | 클라이언트 → 서버 | IP 주소를 제외한 추가 네트워크 설정 요청    |
 
 > `DORA`는 최초 주소 할당 과정에서 사용되는 네 메시지인 Discover, Offer, Request, ACK의 앞 글자를 조합한 표현이다.
-
----
 
 ## 5. 주요 DHCP 옵션
 
@@ -278,9 +246,6 @@ DHCP는 메시지의 Options 영역을 통해 클라이언트에 필요한 네�
 |    82 | Relay Agent Information | DHCP Relay가 전달하는 회선·포트 식별 정보      |
 
 모든 DHCP 서버가 위 옵션을 전부 제공하는 것은 아니다. 실제로 전달되는 옵션은 서버 설정과 네트워크 정책에 따라 달라진다.
-
----
-
 ## 6. 주요 포트
 
 DHCPv4는 UDP를 사용한다.
@@ -298,8 +263,6 @@ DHCPv4는 UDP를 사용한다.
 | --------------------- | -----: |
 | DHCPv6 클라이언트          |    546 |
 | DHCPv6 서버·Relay Agent |    547 |
-
----
 
 ## 7. DHCP Relay
 
@@ -328,8 +291,6 @@ interface GigabitEthernet0/0
 * DHCP 서버: `192.168.100.10`
 
 Relay Agent는 클라이언트의 브로드캐스트 요청을 받아 DHCP 서버에 전달한다. 서버는 Relay 정보로 클라이언트가 속한 네트워크를 판단하고 적절한 주소 풀을 선택한다.
-
----
 
 ## 8. DHCP 보안 위협과 대응
 
@@ -385,8 +346,6 @@ MAC 주소 ↔ IP 주소 ↔ VLAN ↔ 스위치 포트 ↔ 임대 시간
 * Dynamic ARP Inspection
 * IP Source Guard
 
----
-
 ## 9. 핵심 정리
 
 * DHCP는 클라이언트에 IP 주소와 네트워크 설정을 자동으로 제공한다.
@@ -405,41 +364,13 @@ MAC 주소 ↔ IP 주소 ↔ VLAN ↔ 스위치 포트 ↔ 임대 시간
 ### 표준 문서
 
 1. [RFC 2131—Dynamic Host Configuration Protocol](https://www.rfc-editor.org/rfc/rfc2131)
-   DHCP의 메시지 교환, 클라이언트 상태, 주소 임대, 갱신 및 재바인딩 과정을 정의한다.
-
 2. [RFC 2132—DHCP Options and BOOTP Vendor Extensions](https://www.rfc-editor.org/rfc/rfc2132)
-   서브넷 마스크, 라우터, DNS, 임대 시간, 메시지 유형 등 주요 DHCP 옵션을 정의한다.
-
 3. [RFC 3046—DHCP Relay Agent Information Option](https://www.rfc-editor.org/rfc/rfc3046)
-   DHCP Relay Agent가 사용하는 Option 82를 정의한다.
-
 4. [RFC 8415—Dynamic Host Configuration Protocol for IPv6](https://www.rfc-editor.org/rfc/rfc8415)
-   DHCPv6의 동작과 메시지 구조를 정의한다.
 
 ### 네트워크 장비 참고 자료
 
-5. [Cisco—Configuring DHCP Snooping](https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html)
-   Trusted·Untrusted 포트, DHCP 메시지 필터링, 바인딩 데이터베이스 및 설정 방법을 설명한다.
-
-### 추가 학습 주제
-
-* DHCP Relay와 `ip helper-address`
-* DHCP Option 82
-* DHCP Snooping Binding Table
-* Dynamic ARP Inspection
-* IP Source Guard
-* Rogue DHCP Server 공격
-* DHCP Starvation 공격
-* DHCPv4와 DHCPv6 비교
-
-기존 문서의 표는 `| 항목 값 | |` 형태보다 `| 항목 | 값 |`처럼 헤더를 분리하는 것이 좋습니다. 임대 갱신 표 역시 다음과 같이 수정하면 더 자연스럽습니다.
-
-|      시점 | 상태           | 동작                            |
-| ------: | ------------ | ----------------------------- |
-|      0% | 임대 시작        | DHCP ACK를 받고 주소 사용            |
-|   약 50% | T1·Renewing  | 기존 서버에 유니캐스트로 갱신 요청           |
-| 약 87.5% | T2·Rebinding | 이용 가능한 DHCP 서버에 브로드캐스트로 갱신 요청 |
-|    100% | 임대 만료        | 해당 IP 주소의 사용 중단               |
+5. [Cisco—Configuring DHCP Snooping]
 
 [1]: https://www.rfc-editor.org/info/rfc2132/ "RFC 2132: DHCP Options and BOOTP Vendor Extensions"
 [2]: https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html "Security - Configuring DHCP Snooping  [Support]"
