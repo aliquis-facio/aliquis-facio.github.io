@@ -33,7 +33,7 @@
 
 ### Requirements
 
-- Ruby / Bundler (버전: [예: 3.x])
+- Ruby / Bundler
 
 ### Run
 

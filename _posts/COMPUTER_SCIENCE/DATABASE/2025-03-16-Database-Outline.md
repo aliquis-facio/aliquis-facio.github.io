@@ -2,29 +2,32 @@
 layout: post
 comments: true
 sitemap:
-
 title: "[DATABASE] Database란?"
 excerpt: ""
-
 date: 2025-03-16
-last_modified_at: 
-
-categories: [DATABASE]
-tags: [DATABASE, TIL]
+last_modified_at: 2026-09-01
+categories:
+  - DATABASE
+tags:
+  - DATABASE
+  - TIL
 ---
 
-# 목차
+# Database란?
+
+## 목차
 
 1. [Database의 정의](#1-database의-정의)
-1. [Database의 특성](#2-database의-특성)
-1. [Database의 구조](#3-database의-구조)
-1. [Database의 구성요소](#4-database의-구성요소)
-1. [참고](#참고)
+2. [Database의 특성](#2-database의-특성)
+3. [Database의 구조](#3-database의-구조)
+4. [Database의 구성요소](#4-database의-구성요소)
+5. [참고](#참고)
 
-# DB(Database)
+---
+
 ## 1. Database의 정의
 
-**Database**: 한 조직의 여러 응용 시스템들이 공용(shared)하기 위해, 통합(integrated), 저장(stored)한 운영(operational) 데이터의 집합이다.  
+**Database(DB)**: 한 조직의 여러 응용 시스템들이 공용(shared)하기 위해, 통합(integrated), 저장(stored)한 운영(operational) 데이터의 집합이다.  
 -> 예시를 들어 설명하자면 데이터베이스가 Excel 파일이라면 테이블은 Excel 시트다.  
 * **공용 데이터(Shared Data)**: Database는 한 조직의 여러 응용 프로그램이 공동으로 소유, 유지, 사용하는 데이터이다.
 * **통합 데이터(Integrated Data)**: Database는 중복된 데이터 제거한다. 그러나 실제로 중복성을 완전히 배제하는 것이 아니고 경우에 따라 효율성을 증진시키기 위해 불가피하게 일부 데이터의 중복을 허용하기도 한다.
@@ -45,7 +48,6 @@ tags: [DATABASE, TIL]
 * **테이블(table)**: 같은 레코드 타입(record type)을 따르는 레코드 인스턴스(record instance)의 집합
 
 ![그림1](/_image/2025-03-16-00-00-00.jpg)  
-
 ![그림2](/_image/2025-03-16-00-00-01.jpg)  
 
 ## 4. Database의 구성요소
@@ -64,7 +66,9 @@ tags: [DATABASE, TIL]
 : 저장장치의 데이터베이스: {파일(file)}
 : 파일 내의 데이터를 빠르게 검색할 수 있는 인덱스(index)의 집합
 
-# 참고
+---
+
+## 참고
 
 * [[Database] 인덱스(index)란?](https://mangkyu.tistory.com/96)
 * [What is a Database Index?](https://www.codecademy.com/article/sql-indexes)
