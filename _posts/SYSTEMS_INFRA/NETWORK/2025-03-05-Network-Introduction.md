@@ -13,7 +13,12 @@ categories: [NETWORK]
 tags: [COMPUTER NETWORK, NETWORK, TIL]
 ---
 
+<!-- markdownlint-disable md007 md025 md033 -->
+
+# Data Communications
+
 # 목차
+
 1. [Data Communications란?](#1-data-communications란)
 1. [Data Communications의 4가지 특징](#2-data-communications의-4가지-특징)
 1. [Data communications System의 5가지 요소](#3-data-communications-system의-5가지-요소)
@@ -24,14 +29,18 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
     1. [Audio](#44-audio)
     1. [Video](#45-video)
 
-# Data Communications
+---
+
 ## 1. Data Communications란?
+
 우리가 서로 소통을 할 때, data 또는 <abbr title="data를 가공한 것">information</abbr>를 공유한다.  
-이 공유는 지역적이거나 원격적일 수 있다.  
+이 공유는 지역적이거나 원격적일 수 있다.
+
 * Telecommunication: 거리를 두고 하는 소통
-* Data communication: 특정한 형태의 전송매체를 통한 두 개의 기기간의 data 교환 
+* Data communication: 특정한 형태의 전송매체를 통한 두 개의 기기간의 data 교환
 
 ## 2. Data Communications의 4가지 특징
+
 1. **Delivery(전달)**: 정확한 목적지에 data를 전달해야 한다.
 1. **Accuracy(정확성)**: data를 distortion(왜곡)이나 corruption(부패) 없이 정확하게 전달해야 한다.
 1. **Timeless(시간 손해 없이)**
@@ -46,7 +55,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 ## 3. Data communications System의 5가지 요소
 
-<img src = "/_image/2025-03-05-00-00-00.jpg">
+![Alt Images](/_image/2025-03-05-00-00-00.jpg)
 
 1. Message(메시지, 보내는 내용)
 1. Sender(송신자, 보내는 사람)
@@ -55,34 +64,45 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 1. Protocol(프로토콜, 전송 규약, 어떻게 보내고 받을 건지에 대한 약속)
 
 ## 4. 다양한 Message 형태
+
 오늘날 Information은 다양한 형태를 이루고 있다. 글, 숫자, 사진, 음성, 영상 등
 
 ### 4.1. Text
+
 ![출처: https://www.unicode.org/charts/](/_image/2025-03-05-00-00-02.png)
+
 * text는 0과 1로 이뤄진 일련의 bit들이다.
 * text symbols마다 다른 bit pattern들을 가지고 있다.
 * 오늘날 일반적으로 사용하는 것은 unicode로 32bit를 이용하여 전세계 어떤 언어라도 표현할 수 있다.
 
 ### 4.2. Numbers
+
 ![출처: https://velog.io/@k_k_s__h/%EC%9D%B4%EC%A7%84%EC%88%98](/_image/2025-03-05-00-00-03.png)
+
 * numbers 또한 0과 1로 이뤄진 일련의 bit들이다.
 * number는 이진수로 변환되어 표현된다.
 
 ### 4.3. Images
+
 ![출처: https://www.megavoxels.com/learn/how-to-make-a-pixel-art-watermelon/](/_image/2025-03-05-00-00-04.png)
+
 * images은 pixels(picture elements)의 행렬 형태로 구성되어 있다.
 * color images를 표현하는 방법
     * RGB: Red(빨강), Green(초록), Blue(파랑)
     * YCM: Yellow(노랑랑), Cyan(청록), Magenta(자홍)
 
 ### 4.4. Audio
+
 ![출처: https://myweb.liu.edu/jmeschi/audweb/audio.htm](/_image/2025-03-05-00-00-05.png)
+
 * Audio는 소리나 음악을 녹음한 것이나 방송한 것을 말한다
 * Audio는 text, numbers, images와는 다르게 자연스럽다. 끊어진 data가 아니라 연속적인 data이다.
 * 전기 신호로 바꿀 때에도 연속적인 신호로 만든다.
 
 ### 4.5. Video
+
 ![출처: https://thescriptlab.com/blogs/36023-what-was-the-first-movie-ever-made/](/_image/2025-03-05-00-00-06.png)
+
 * Video는 사진이나 영상을 녹화한 것이나 방송한 것을 말한다
 
 <div class="obsidian-links" style="display: none;">

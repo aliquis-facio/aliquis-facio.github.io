@@ -1,3 +1,5 @@
+<!-- markdownlint-disable md060 -->
+
 # DHCP(Dynamic Host Configuration Protocol)
 
 ## 목차
@@ -5,21 +7,21 @@
 1. [DHCP 정의](#1-정의)
 2. [DHCP가 제공하는 정보](#2-dhcp가-제공하는-정보)
 3. [DHCP 동작 과정: DORA](#3-동작-과정-dora)
-	   1. [DHCP Discover](#31-dhcp-discover)
-	   2. [DHCP Offer](#32-dhcp-offer)
-	   3. [DHCP Request](#33-dhcp-request)
-	   4. [DHCP ACK](#34-dhcp-ack)
-	   5. [DHCP NAK](#35-dhcp-nak)
-	   6. [임대 갱신 과정](#36-임대-갱신-과정)
-	   7. [임대 만료](#37-임대-만료)
-	   8. [IP 주소 반환](#38-ip-주소-반환)
+    1. [DHCP Discover](#31-dhcp-discover)
+    2. [DHCP Offer](#32-dhcp-offer)
+    3. [DHCP Request](#33-dhcp-request)
+    4. [DHCP ACK](#34-dhcp-ack)
+    5. [DHCP NAK](#35-dhcp-nak)
+    6. [임대 갱신 과정](#36-임대-갱신-과정)
+    7. [임대 만료](#37-임대-만료)
+    8. [IP 주소 반환](#38-ip-주소-반환)
 4. [DHCP 메시지 종류](#4-dhcp-메시지-종류)
 5. [주요 DHCP 옵션](#5-주요-dhcp-옵션)
 6. [주요 포트](#6-주요-포트)
 7. [DHCP Relay](#7-dhcp-relay)
 8. [DHCP 보안 위협과 대응](#8-dhcp-보안-위협과-대응)
 9. [핵심 정리](#9-핵심-정리)
-10. [출처 및 참고 자료](#10-출처-및-참고-자료)
+10. [참고](#참고)
 
 ---
 
@@ -211,7 +213,7 @@ T1에서 기존 서버가 응답하지 않고 임대 시간의 약 87.5%가 지�
 
 ## 4. DHCP 메시지 종류
 
-DHCP는 주소 할당 과정 외에도 충돌 통보, 주소 반환, 추가 설정 요청 등을 위한 여러 메시지를 사용한다. DHCP 메시지 유형은 DHCP Option 53으로 구분된다. ([RFC Editor][1])
+DHCP는 주소 할당 과정 외에도 충돌 통보, 주소 반환, 추가 설정 요청 등을 위한 여러 메시지를 사용한다. DHCP 메시지 유형은 DHCP Option 53으로 구분된다.
 
 | 메시지            | 전송 방향      | 역할                          |
 | -------------- | ---------- | --------------------------- |
@@ -228,7 +230,7 @@ DHCP는 주소 할당 과정 외에도 충돌 통보, 주소 반환, 추가 설�
 
 ## 5. 주요 DHCP 옵션
 
-DHCP는 메시지의 Options 영역을 통해 클라이언트에 필요한 네트워크 설정을 전달한다. RFC 2132는 서브넷 마스크, 라우터, DNS 서버, 임대 시간, 서버 식별자 등의 옵션을 정의한다. ([RFC Editor][1])
+DHCP는 메시지의 Options 영역을 통해 클라이언트에 필요한 네트워크 설정을 전달한다. RFC 2132는 서브넷 마스크, 라우터, DNS 서버, 임대 시간, 서버 식별자 등의 옵션을 정의한다.
 
 | 옵션 번호 | 옵션 이름                   | 역할                                |
 | ----: | ----------------------- | --------------------------------- |
@@ -246,6 +248,7 @@ DHCP는 메시지의 Options 영역을 통해 클라이언트에 필요한 네�
 |    82 | Relay Agent Information | DHCP Relay가 전달하는 회선·포트 식별 정보      |
 
 모든 DHCP 서버가 위 옵션을 전부 제공하는 것은 아니다. 실제로 전달되는 옵션은 서버 설정과 네트워크 정책에 따라 달라진다.
+
 ## 6. 주요 포트
 
 DHCPv4는 UDP를 사용한다.
@@ -317,7 +320,7 @@ DHCP Snooping은 스위치가 DHCP 메시지를 검사하여 비인가 DHCP 서�
 | Trusted   | 정상 DHCP 서버 또는 Relay 방향 | DHCP 서버 응답 허용      |
 | Untrusted | 일반 사용자·클라이언트 방향        | 서버가 보내는 DHCP 응답 차단 |
 
-Cisco 스위치의 포트는 기본적으로 DHCP Snooping 관점에서 `untrusted`이며, 정상 DHCP 서버 또는 Relay 방향의 포트만 명시적으로 `trusted`로 설정해야 한다. ([Cisco Systems][2])
+Cisco 스위치의 포트는 기본적으로 DHCP Snooping 관점에서 `untrusted`이며, 정상 DHCP 서버 또는 Relay 방향의 포트만 명시적으로 `trusted`로 설정해야 한다.
 
 ```cisco
 ip dhcp snooping
@@ -352,26 +355,17 @@ MAC 주소 ↔ IP 주소 ↔ VLAN ↔ 스위치 포트 ↔ 임대 시간
 * 최초 주소 할당은 일반적으로 `Discover → Offer → Request → ACK` 순서로 진행된다.
 * DHCPv4는 서버 UDP 67번, 클라이언트 UDP 68번 포트를 사용한다.
 * IP 주소는 영구적으로 제공되는 것이 아니라 임대 방식으로 할당된다.
-* T1과 T2를 서버가 별도로 지정하지 않았다면 기본값은 각각 임대 시간의 50%와 87.5%이다. ([Dynamic Host Configuration Protocol][3])
+* T1과 T2를 서버가 별도로 지정하지 않았다면 기본값은 각각 임대 시간의 50%와 87.5%이다.
 * 서버가 다른 네트워크에 있으면 DHCP Relay가 필요하다.
 * Rogue DHCP Server와 DHCP Starvation을 방어하기 위해 DHCP Snooping을 사용할 수 있다.
 * DHCP 서버나 Relay 방향만 `trusted`로 설정하고 사용자 포트는 `untrusted`로 유지한다.
 
 ---
 
-## 10. 출처 및 참고 자료
-
-### 표준 문서
+## 참고
 
 1. [RFC 2131—Dynamic Host Configuration Protocol](https://www.rfc-editor.org/rfc/rfc2131)
 2. [RFC 2132—DHCP Options and BOOTP Vendor Extensions](https://www.rfc-editor.org/rfc/rfc2132)
 3. [RFC 3046—DHCP Relay Agent Information Option](https://www.rfc-editor.org/rfc/rfc3046)
 4. [RFC 8415—Dynamic Host Configuration Protocol for IPv6](https://www.rfc-editor.org/rfc/rfc8415)
-
-### 네트워크 장비 참고 자료
-
-5. [Cisco—Configuring DHCP Snooping]
-
-[1]: https://www.rfc-editor.org/info/rfc2132/ "RFC 2132: DHCP Options and BOOTP Vendor Extensions"
-[2]: https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html "Security - Configuring DHCP Snooping  [Support]"
-[3]: https://datatracker.ietf.org/doc/html/rfc2131 "RFC 2131"
+5. [Cisco—Configuring DHCP Snooping](https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/snoodhcp.html)

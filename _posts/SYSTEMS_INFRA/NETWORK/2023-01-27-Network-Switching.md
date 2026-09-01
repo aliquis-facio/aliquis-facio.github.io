@@ -4,16 +4,21 @@ comments: true
 sitemap:
 
 title: "[NETWORK] 교환(Switching)"
-excerpt: "회선 교환(Circuit -)과 패킷 교환(Packet -)"
+excerpt: "회선 교환(Circuit Switching)과 패킷 교환(Packet Switching)"
 
 date: 2023-01-25
-last_modified_at: 2025-04-04
+last_modified_at: 2026-09-01
 
 categories: [NETWORK]
 tags: [NETWORK]
 ---
 
-# 목차
+<!-- markdownlint-disable md025 md033 -->
+
+# 회선 교환 및 패킷 교환
+
+## 목차
+
 1. [회선 교환](#1-회선-교환circuit-switching)
     1. [개념](#11-개념)
     1. [특징](#12-특징)
@@ -30,14 +35,19 @@ tags: [NETWORK]
     1. [방식](#42-방식)
 1. [참고](#참고)
 
-# 회선 교환 및 패킷 교환
+---
+
 ## 1. 회선 교환(Circuit Switching)
+
 ### 1.1. 개념
+
 **회선 교환**: Point to Point 방식으로 연결(Connection)을 확립하고 안정적으로 통신할 수 있는 방법이다.  
 연결이 이뤄진다 = 선로를 독점해 사용한다 -> 자원을 많이 사용 & 다중 통신이 어려움.
+
 * **QoS(Quality of Service)**: 네트워크 품질 평가 지표. QoS가 가장 우수한 네트워크 = 회선 교환.
 
 ### 1.2. 특징
+
 * 교환기를 통해 통신 회선을 설정해 직접 데이터를 교환하는 방식임.
 * 직접 교환 방식으로 음성 전화 시스템에 활용함.
 * 송신자의 메시지는 같은 경로로 전송됨.
@@ -45,6 +55,7 @@ tags: [NETWORK]
 * Point to Point 방식 사용.
 
 ### 1.3. 장단점
+
 <table>
     <thead>
         <tr>
@@ -73,7 +84,9 @@ tags: [NETWORK]
 </table>
 
 ## 2. 패킷 교환(Packet Switching)
+
 ### 2.1. 개념
+
 * 패킷 교환은 송신 측에서 <span style="color: #FF8869;">모든 메시지를 일정한 크기의 패킷으로 분해해서 전송</span>하고, 수신 측에서 이를 원래의 메시지로 조립하는 것임.
 * IP(Internet Protocol) 주소가 붙은 패킷을 데이터그램(Datagram)이라 함.
 * 라우터(Router): 데이터를 최적의 전송 경로를 결정하는 장비
@@ -82,6 +95,7 @@ tags: [NETWORK]
 * 패킷 교환 네트워크는 공중 교환 데이터망(Public Switched Data Network)에서 사용됨.
 
 ### 2.2. 특징
+
 <table>
     <thead>
         <tr>
@@ -118,6 +132,7 @@ tags: [NETWORK]
 </table>
 
 ### 2.3. 장단점
+
 <table>
     <thead>
         <tr>
@@ -144,12 +159,16 @@ tags: [NETWORK]
 </table>
 
 ## 3. 데이터그램과 가상회선
+
 ### 3.1. 동작 원리
+
 데이터그램(Datagram) 네트워크: 패킷 교환 방식으로 동작하면서 IP 주소를 사용하는 인터넷을 의미함.
 가상회선: 회선 교환 방식과 데이터그램 방식의 장점을 결합한 통신 기술. 처음 패킷으로 최적의 경로를 고정하고 경로가 고정하면 그 다음은 패킷으로 나누어 고속으로 전송하는 기술임.
+
 * e.g. ATM(Asynchronous Transfer Mode)
 
 ### 3.2. 차이점
+
 <table>
     <thead>
         <tr>
@@ -182,21 +201,25 @@ tags: [NETWORK]
 </table>
 
 ## 4. 메시지 교환(Message Switching)
+
 ### 4.1. 개념
+
 * 메시지 교환망(Message Switching Network): 송신된 메시지를 중앙에서 축적해 처리하는 방법 = <span style="color: #FF8869;"><abbr title="송신자가 메시지를 전송하면 전송한 메시지를 일정한 단위로 나누어서 버퍼(Buffer)에 저장한 후에 저장이 완료되면 다시 그것을 읽어들여서 전송 경로를 결정하는 전송">축적 교환 방식</abbr></span>
 * 메시지를 메모리에 저장하고 여러 수신자에게 데이터를 전송 가능.
 * 전자우편에서 사용함.
 
 ### 4.2. 방식
+
 1. 메시지를 공유해 데이터 전송 가능.
 2. 메시지 별로 우선순위 부여함.
 3. 에러 제어 제공함.
 4. 응답 속도가 느림.
 5. 대화형 시스템으로 사용하기 어려움.
 
-***
+---
 
-# 참고
+## 참고
+
 * [wikipedia: point-to-point](https://ko.wikipedia.org/wiki/%EC%A0%90%EB%8C%80%EC%A0%90_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)
 * [대역폭, bandwidth란 ?](https://velog.io/@ragnarok_code/%EB%8C%80%EC%97%AD%ED%8F%AD-bandwidth%EB%9E%80)
 * [나무위키: 패킷](https://namu.wiki/w/%ED%8C%A8%ED%82%B7)

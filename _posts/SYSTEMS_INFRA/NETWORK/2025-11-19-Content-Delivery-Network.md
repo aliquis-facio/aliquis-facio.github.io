@@ -7,7 +7,7 @@ title: "[NETWORK] 콘텐츠 전송 네트워크(CDN)"
 excerpt: CDN(Content Delivery Network)
 
 date: 2025-11-19
-last_modified_at: 2025-11-19
+last_modified_at: 2026-09-01
 
 categories:
   - NETWORK
@@ -17,7 +17,11 @@ tags:
   - EDGE_COMPUTING
 ---
 
-# 목차
+<!-- markdownlint-disable md007 md010 md025 md033 -->
+
+# CDN, Content Delivery Network
+
+## 목차
 
 1. [정의](#1-정의)
 2. [구조 및 동작](#2-구조-및-동작)
@@ -32,7 +36,6 @@ tags:
 
 ---
 
-# CDN, Content Delivery Network
 ## 1. 정의
 
 ![512x288](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-19-00-30-04.png?raw=true)
@@ -44,6 +47,7 @@ tags:
 ![604x275](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-19-00-33-17.png?raw=true)
 
 흐름 예시:
+
 1. 사용자가 `example.com/image.png`을 요청한다.
 2. DNS가 **CDN 서버 주소**로 유도한다.
 3. CDN 엣지 서버에:
@@ -52,6 +56,7 @@ tags:
 4. 다음 사용자부터는 엣지 서버 캐시에서 바로 응답한다.
 
 ## 3. 등장 배경
+
 ### 3.1. 1세대: 정적 콘텐츠 전달 (Static Content Delivery)
 
 - **시기**: 1990년대 후반~ (CDN 등장 시점)
@@ -123,7 +128,7 @@ tags:
 
 ---
 
-# 참고
+## 참고
 
 - [AWS: 콘텐츠 전송 네트워크(CDN)란 무엇인가요?](https://aws.amazon.com/ko/what-is/cdn/)
 - [CLOUDFLARE: 콘텐츠 전송 네트워크(CDN)란? | CDN의 작동 방식은?](https://www.cloudflare.com/ko-kr/learning/cdn/what-is-a-cdn/)

@@ -8,20 +8,26 @@ title: "[NETWORK] Protocol이란?"
 excerpt: "Protocol의 의미와 인터넷 모델"
 
 date: 2025-04-02
-last_modified_at: 
+last_modified_at: 2026-09-01
 
 categories: [NETWORK]
 tags: [COMPUTER NETWORK, NETWORK, TIL]
 ---
 
+<!-- markdownlint-disable md025 md033 -->
+
+# Protocol
+
 # 목차
+
 1. [Protocol](#protocol)
     1. [Protocol이란?](#1-protocol이란)
     1. [다계층 네트워크 모델](#2-다계층-네트워크-모델)
         1. [OSI 7계층](#21-osi-7계층)
         1. [TCP/IP 4계층](#22-tcpip-4계층)
 
-# Protocol
+---
+
 ## 1. Protocol이란?
 
 **Protocol**: 전송자와 수신자 그리고 모든 통신 매체에서 효과적으로 통신하기 위해 필요한 약속이다.
@@ -41,6 +47,7 @@ Protocol: 각 계층별로 어떻게 소통할 것인지와 어떻게 인접한 
 [TCP/IP 모델]() -->
 
 ### 2.1. OSI 7계층
+
 - L7. 응용계층: 사용자 소프트웨어를 네트워크에 접근 가능하도록 함. 사용자에게 최종 서비스를 제공
 - L6. 표현계층: 포맷 기능, 압축, 암호화. 텍스트 및 그래픽 정보를 컴퓨터가 이해할 수 있는 16진수 데이터로 변환
 - L5. 세션계층: 세션 연결 및 동기화 수행, 통신 방식 결정. 가상 연결을 제공하여 Login/Logout 수행
