@@ -13,7 +13,7 @@ categories: [GIT]
 tags: [GIT]
 ---
 
-<!-- markdownlint-disable MD005 MD007 MD010 MD025 MD060 -->
+<!-- markdownlint-disable MD005 MD007 MD010 MD025 md033 MD060 -->
 
 # Git Commit Message Rules
 

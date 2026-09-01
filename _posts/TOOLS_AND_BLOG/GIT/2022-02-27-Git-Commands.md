@@ -9,17 +9,29 @@ title: "[GIT] Git 명령어 정리"
 excerpt: "자주 쓰는 20개 정리"
 
 date: 2022-02-27
-last_modified_at: 2026-02-05
+last_modified_at: 2026-09-01
 
 categories: [GIT]
 tags: [GIT]
 ---
 
-<!-- markdownlint-disable MD010 MD025 MD029 -->
+<!-- markdownlint-disable md004 MD010 MD025 MD029 -->
 
 # Git Commands
 
 ## 목차
+
+1. [시작/설정](#1-시작설정)
+1. [기본 흐름](#2-기본-흐름-작업--스테이징--커밋)
+1. [푸시/풀](#3-원격remote--푸시풀)
+1. [브랜치/병합](#4-브랜치병합)
+1. [히스토리/되돌리기/응급처치](#5-히스토리되돌리기응급처치)
+1. [주요 문제 상황](#6-주요-문제-상황)
+	1. [`push` 했는데 “이미 up to date”인데 내 변경이 없을 때](#61-push해서-이미-up-to-date인데-내-변경이-없을-때)
+	1. [pull 하다 충돌났을 때](#62-pull-하다-충돌났을-때)
+	1. [원격에 올린 커밋을 수정해야 할 때](#63-원격에-올린-커밋을-수정해야-할-때)
+1. [참고](#참고)
+1. [관련 문서](#관련-문서)
 
 ---
 
@@ -87,41 +99,41 @@ tags: [GIT]
 19. **로그 보기(필수)**
 	* `git log --oneline --graph --decorate --all`
 20. **되돌리기 3종 세트 (상황별 선택)**
-* **(A) “커밋을 취소하는 새 커밋”**: 공유된 브랜치(원격)에 안전
-	  * `git revert <commit>`
-* **(B) “커밋 자체를 없애고 과거로”**: 혼자 쓰는 브랜치에서만 권장
-	  * `git reset --soft <commit>` (커밋만 취소, add 상태 유지)
-	  * `git reset --mixed <commit>` (기본값, add 해제)
-	  * `git reset --hard <commit>` (작업물까지 삭제: 주의)
-* **(C) “잠깐 치우기”** (브랜치 옮기기/풀 받기 전에)
-	  * `git stash`
-	  * `git stash pop`
+	* **(A) “커밋을 취소하는 새 커밋”**: 공유된 브랜치(원격)에 안전
+		* `git revert <commit>`
+	* **(B) “커밋 자체를 없애고 과거로”**: 혼자 쓰는 브랜치에서만 권장
+		* `git reset --soft <commit>` (커밋만 취소, add 상태 유지)
+		* `git reset --mixed <commit>` (기본값, add 해제)
+		* `git reset --hard <commit>` (작업물까지 삭제: 주의)
+	* **(C) “잠깐 치우기”** (브랜치 옮기기/풀 받기 전에)
+		* `git stash`
+		* `git stash pop`
 
-# “실무에서 자주 터지는 상황” 빠른 처방
+## 6. 주요 문제 상황
 
-## 1) `push` 했는데 “이미 up to date”인데 내 변경이 없다?
+### 6.1. `push`해서 “이미 up to date”인데 내 변경이 없을 때
 
 * 보통 **커밋이 없거나 다른 브랜치**에 있음
 	  1. `git status`
 	  2. `git branch --show-current`
 	  3. `git log --oneline -5`
 
-## 2) pull 하다 충돌났을 때
+### 6.2. pull 하다 충돌났을 때
 
 * 파일 열어서 `<<<<<<` 구간 해결 →
   `git add .` →
   (merge면) `git commit` / (rebase면) `git rebase --continue`
 
-## 3) “원격에 올린 커밋을 수정”해야 한다
+### 6.3. 원격에 올린 커밋을 수정해야 할 때
 
 * 혼자 쓰는 브랜치면: `git commit --amend` 후 `git push --force-with-lease`
 * 협업 브랜치면: 웬만하면 `revert`로 처리
 
 ---
 
-# 참고
+## 참고
 
-- <https://jw910911.tistory.com/77>
+- [Tistory: GIT - Commit한 메세지 문구 수정하기 (Commit 메세지 오타 수정)](https://jw910911.tistory.com/77)
 
 ## 관련 문서
 
