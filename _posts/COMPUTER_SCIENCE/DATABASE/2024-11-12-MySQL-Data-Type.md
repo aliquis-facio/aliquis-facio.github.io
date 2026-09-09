@@ -7,7 +7,7 @@ title: "[MySQL] DATA TYPE"
 excerpt: "모의해킹 취업반 스터디 7기 4주차"
 
 date: 2024-11-13
-last_modified_at: 
+last_modified_at: 2026-09-09
 
 categories: [DATABASE]
 tags: [DATABASE]
@@ -83,7 +83,8 @@ MySQL의 자료형은 크게 다음과 같이 구분할 수 있다.
 `DECIMAL(M,D)`의 범위는 다음과 같이 표현할 수 있다.
 
 $$
-K = 10^{M-D}-10^{-D} \quad \Rightarrow \quad 
+K = 10^{M-D}-10^{-D}
+\quad \Rightarrow \quad
 -K \sim K
 $$
 
