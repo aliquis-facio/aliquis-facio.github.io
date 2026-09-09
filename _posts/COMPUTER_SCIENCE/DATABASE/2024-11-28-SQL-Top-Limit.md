@@ -31,6 +31,6 @@ e.g. `SELECT * FROM TABLE ORDER BY SCORE LIMIT 3`
 
 <div class="obsidian-links" style="display: none;">
 
-[\[MySQL\] DATA TYPE](2024-11-12-SQL-Data-Type.md)
+[\[MySQL\] DATA TYPE](2024-11-12-MySQL-Data-Type.md)
 
 </div>
