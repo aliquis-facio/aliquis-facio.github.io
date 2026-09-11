@@ -246,6 +246,7 @@ DBMS별 대표적인 지연 함수는 다음과 같다.
 | SQL Server | `WAITFOR DELAY`                 |
 | Oracle     | `DBMS_PIPE.RECEIVE_MESSAGE()` 등 |
 
+`sleep(1) and '1'='1`
 네트워크 지연도 응답 시간에 영향을 줄 수 있으므로 한 번의 측정만으로 취약점을 단정해서는 안 된다. 기준 응답을 여러 번 측정하고 반복 가능한 차이가 있는지 확인해야 한다.
 
 ### 4.3. Out-of-band SQL Injection
