@@ -119,6 +119,8 @@ for i in range(1000):
 </div>
 </details>
 
+- 100~999 사이에 flag가 랜덤으로 생성됨
+
 ## 3. Vuln
 
 불충분한 인증
