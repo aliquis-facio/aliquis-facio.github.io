@@ -1,0 +1,1 @@
+https://www.mongodb.com/ko-kr/resources/basics/databases/nosql-explained
