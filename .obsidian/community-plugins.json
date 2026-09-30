@@ -1,6 +1,5 @@
 [
   "table-editor-obsidian",
-  "obsidian-git",
   "obsidian-smart-typography",
   "cm-typewriter-scroll-obsidian",
   "image-converter",
@@ -10,6 +9,5 @@
   "obsidian-emoji-toolbar",
   "mermaid-tools",
   "dataview",
-  "oz-clear-unused-images",
-  "templater-obsidian"
+  "oz-clear-unused-images"
 ]
