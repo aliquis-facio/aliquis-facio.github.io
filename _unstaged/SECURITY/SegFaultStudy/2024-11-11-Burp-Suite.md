@@ -2,17 +2,18 @@
 layout: post
 comments: true
 sitemap:
-    changefreq:
-    priority:
-
-title: "Burp Suite"
-excerpt: "모의해킹 취업반 스터디 7기 4주차"
-
+  changefreq:
+  priority:
+title: Burp Suite
+excerpt: 모의해킹 취업반 스터디 7기 4주차
 date: 2024-11-11
-last_modified_at: 2024-11-24
-
-categories: [WEB]
-tags: [WEB, SECURITY, TOOL]
+last_modified_at: 2026-10-13
+categories:
+  - WEB
+tags:
+  - WEB
+  - SECURITY
+  - TOOL
 ---
 # Burp Suite란?
 

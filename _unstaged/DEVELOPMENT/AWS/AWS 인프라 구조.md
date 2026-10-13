@@ -90,5 +90,5 @@ AWS 서비스는 제공 범위에 따라 **글로벌 서비스**와 **리전 서
 
 ## 관련 문서
 
-- [AWS](../AWS.md)
+- [AWS](AWS.md)
 - [Amazon Bedrock 챗봇 핸즈온](Amazon%20Bedrock%20챗봇%20핸즈온.md)
