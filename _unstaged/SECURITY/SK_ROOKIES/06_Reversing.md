@@ -1312,16 +1312,13 @@ $$RVA=Offset-RawPointer+SectionVA$$
 
 ## 12. 자료 출처
 
-본문의 기존 개념은 업로드된 강의자료를 기본으로 하였으며, 카빙·패킹 및 주소 변환의 상세 설명은 다음 공식 기술 문서와 프로젝트 자료를 참고해 보완하였다.
-
-| 번호 | 출처                                                                                                                       | 참고 내용                                                |
-| -- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| 1  | 업로드한 `REVERSING_1_PE_ELF_로고삭제.pptx`                                                                                      | PE, ELF, 어셈블리어, 악성코드 분석 기초 (슬라이드 1\~49)              |
-| 2  | [Microsoft Learn — PE Format](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format)                           | PE Header, RVA, Section, Data Directory, File Offset |
-| 3  | [ELF Specification](https://refspecs.linuxfoundation.org/elf/elf.pdf)                                                    | ELF Header, Program Header, Section Header           |
-| 4  | [The Sleuth Kit — Carving](https://wiki.sleuthkit.org/Carving/)                                                          | 파일 카빙의 원리 및 복구 대상                                    |
-| 5  | [Autopsy — PhotoRec Carver Module](https://sleuthkit.org/autopsy/docs/user-docs/4.2/photorec_carver_page.html)           | 파일 카빙 실무 및 결과 분석                                     |
-| 6  | [Scalpel GitHub](https://github.com/sleuthkit/scalpel)                                                                   | 파일 시그니처 기반 카빙                                        |
-| 7  | [UPX 공식 홈페이지](https://upx.github.io/)                                                                                    | 패킹과 언패킹의 개념                                          |
-| 8  | [UPX 공식 문서](https://github.com/upx/upx/blob/devel/doc/upx-doc.html)                                                      | UPX 옵션 및 언패킹 명령                                      |
-| 9  | [Intel Software Developer's Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html) | x86/x64 레지스터, 명령어, 스택 및 분기                           |
+| 번호  | 출처                                                                                                                       | 참고 내용                                                |
+| --- | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| 2   | [Microsoft Learn — PE Format](https://learn.microsoft.com/en-us/windows/win32/debug/pe-format)                           | PE Header, RVA, Section, Data Directory, File Offset |
+| 3   | [ELF Specification](https://refspecs.linuxfoundation.org/elf/elf.pdf)                                                    | ELF Header, Program Header, Section Header           |
+| 4   | [The Sleuth Kit — Carving](https://wiki.sleuthkit.org/Carving/)                                                          | 파일 카빙의 원리 및 복구 대상                                    |
+| 5   | [Autopsy — PhotoRec Carver Module](https://sleuthkit.org/autopsy/docs/user-docs/4.2/photorec_carver_page.html)           | 파일 카빙 실무 및 결과 분석                                     |
+| 6   | [Scalpel GitHub](https://github.com/sleuthkit/scalpel)                                                                   | 파일 시그니처 기반 카빙                                        |
+| 7   | [UPX 공식 홈페이지](https://upx.github.io/)                                                                                    | 패킹과 언패킹의 개념                                          |
+| 8   | [UPX 공식 문서](https://github.com/upx/upx/blob/devel/doc/upx-doc.html)                                                      | UPX 옵션 및 언패킹 명령                                      |
+| 9   | [Intel Software Developer's Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html) | x86/x64 레지스터, 명령어, 스택 및 분기                           |
