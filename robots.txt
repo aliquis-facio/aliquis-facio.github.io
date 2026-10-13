@@ -1,5 +1,5 @@
 # Allow crawling of all content
 User-agent: *
 Allow: /
-Sitemap: https://aliquis-facio.github.io/sitemap.xml
+Sitemap: https://s3mper.github.io/sitemap.xml
 
