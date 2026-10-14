@@ -54,8 +54,8 @@ $string = $date->format('Y-m-d H:i:s');
 * i: 분을 00에서 59까지로 표현
 * s: 초를 00에서 59까지로 표현
 
-# 참고
-* [PHP Convert DateTime to String](https://stackoverflow.com/questions/10569053/convert-datetime-to-string-php)
-* [PHP Manual - DateTime class](https://www.php.net/manual/en/class.datetime.php)
-* [PHP date format](https://blog.naver.com/diceworld/220256080804)
-* [PHP Manual - DateTime format](https://www.php.net/manual/en/datetime.format.php)
+# 출처
+- [Stack Overflow, 「PHP Convert DateTime to String」](https://stackoverflow.com/questions/10569053/convert-datetime-to-string-php)
+- [PHP Manual, 「PHP Manual - DateTime class」](https://www.php.net/manual/en/class.datetime.php)
+- [Naver, 「PHP date format」](https://blog.naver.com/diceworld/220256080804)
+- [PHP Manual, 「PHP Manual - DateTime format」](https://www.php.net/manual/en/datetime.format.php)

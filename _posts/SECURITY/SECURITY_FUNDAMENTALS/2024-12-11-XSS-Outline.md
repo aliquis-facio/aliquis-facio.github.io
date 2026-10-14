@@ -22,7 +22,7 @@ tags: [TIL, WEB, SECURITY]
 * [3. 공격 유형](#3-xss-공격-유형)
 * [4. 공격 구문 예시](#4-공격-구문-예시)
 * [5. 공격 순서](#5-공격-순서)
-* [참고](#참고)
+* [출처](#출처)
 
 # XSS(Cross Site Scripting)란?
 
@@ -36,6 +36,8 @@ tags: [TIL, WEB, SECURITY]
 ## 2. XSS 공격 방식
 
 XSS 공격 방식으로는 <mark>Cookie Sniffing</mark>, <mark>스크립트 암호화 및 우회</mark>, <mark>악성 스크립트 유포</mark>, <mark>Key Logger</mark>, <mark>Mouse Sniffer</mark>, <mark>거짓 정보추가</mark> 등이 있다.
+
+쿠키가 로그인 상태 유지에 쓰이는 이유는 [쿠키와 세션]({% post_url DEVELOPMENT/WEB/2024-11-04-WEB-Cookie-and-Session-Cache %})에서 다룬다. 취약한 입력 위치를 찾는 과정은 [XSS CTF 풀이]({% post_url SECURITY/CTF/2024-12-18-CTF-XSS-1 %}), iframe을 활용하는 사례는 [XSS로 다른 페이지 데이터 탈취하기]({% post_url SECURITY/CTF/2024-12-30-CTF-XSS-3 %})에서 이어서 볼 수 있다.
 
 ### 2.1. Cookie Sniffing
 
@@ -201,23 +203,23 @@ burp, param check, response에 같은 값 있나?
 
 ---
 
-## 참고
+## 출처
 
-* [Cross Site Scripting](https://owasp.org/www-community/attacks/xss/)
-* [XSS란?](https://tibetsandfox.tistory.com/5)
-* [크로스 사이트 스크립팅의 정의 및 공격 유형](https://nordvpn.com/ko/blog/xss-attack/)
-* [XSS Filter Evasion Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
-* [DOM-based XSS 1](https://portswigger.net/web-security/cross-site-scripting/dom-based)
-* [DOM-based XSS 2](https://owasp.org/www-community/attacks/DOM_Based_XSS)
-* [해시뱅(#!)에 대해서...](https://blog.outsider.ne.kr/698)
-* [DOM XSS in jQuery anchor href attribute sink using location.search source](https://medium.com/@marduk.i.am/dom-xss-in-jquery-anchor-href-attribute-sink-using-location-search-source-b1000b4b16b3)
-* [XSS(크로스 사이트 스크립트)란? 공격 유형부터 보안대책까지!](https://www.skshieldus.com/blog-security/security-trend-idx-06)
-* [[알아두면 유용한] 넷상의 쓰레기통들 - pastebin과 requestbin](https://domdom.tistory.com/38)
-* [Requestbin Development](https://glasses96.github.io/posts/24/)
-* [Request Capture like requestbin PHP](https://stackoverflow.com/questions/42685368/request-capture-like-requestbin-php)
-* [PHP-Micro-RequestBin](https://github.com/vinhch/PHP-Micro-RequestBin)
-* [HTML Entities](https://www.w3schools.com/html/html_entities.asp)
-* [브라우저 XSS 필터 우회의 모든 것](https://blog.rubiya.kr/index.php/2019/03/28/browsers-xss-filter-bypass-cheat-sheet/)
+- [OWASP, 「Cross Site Scripting」](https://owasp.org/www-community/attacks/xss/)
+- [Tistory, 「XSS란?」](https://tibetsandfox.tistory.com/5)
+- [Nordvpn, 「크로스 사이트 스크립팅의 정의 및 공격 유형」](https://nordvpn.com/ko/blog/xss-attack/)
+- [OWASP Cheat Sheet Series, 「XSS Filter Evasion Cheat Sheet」](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
+- [PortSwigger, 「DOM-based XSS 1」](https://portswigger.net/web-security/cross-site-scripting/dom-based)
+- [OWASP, 「DOM-based XSS 2」](https://owasp.org/www-community/attacks/DOM_Based_XSS)
+- [Blog, 「해시뱅(#!)에 대해서...」](https://blog.outsider.ne.kr/698)
+- [Medium, 「DOM XSS in jQuery anchor href attribute sink using location.search source」](https://medium.com/@marduk.i.am/dom-xss-in-jquery-anchor-href-attribute-sink-using-location-search-source-b1000b4b16b3)
+- [SK Shieldus, 「XSS(크로스 사이트 스크립트)란? 공격 유형부터 보안대책까지!」](https://www.skshieldus.com/blog-security/security-trend-idx-06)
+- [Tistory, 「[알아두면 유용한] 넷상의 쓰레기통들 - pastebin과 requestbin」](https://domdom.tistory.com/38)
+- [GitHub Pages, 「Requestbin Development」](https://glasses96.github.io/posts/24/)
+- [Stack Overflow, 「Request Capture like requestbin PHP」](https://stackoverflow.com/questions/42685368/request-capture-like-requestbin-php)
+- [GitHub, 「PHP-Micro-RequestBin」](https://github.com/vinhch/PHP-Micro-RequestBin)
+- [W3Schools, 「HTML Entities」](https://www.w3schools.com/html/html_entities.asp)
+- [Blog, 「브라우저 XSS 필터 우회의 모든 것」](https://blog.rubiya.kr/index.php/2019/03/28/browsers-xss-filter-bypass-cheat-sheet/)
 
 <div class="obsidian-links" style="display: none;">
 

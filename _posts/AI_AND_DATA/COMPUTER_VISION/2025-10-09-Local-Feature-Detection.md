@@ -27,7 +27,7 @@ tags:
 		4. [LoG (Laplacian of Gaussian)](#34-log-laplacian-of-gaussian)
 		5. [슈산(Smallest Uni-value Segment Assimilating Nucleus, SUSAN) 알고리즘](#35-슈산smallest-uni-value-segment-assimilating-nucleus-susan-알고리즘)
 		6. [위치 선정](#36-위치-선정)
-2. [참고](#참고)
+2. [출처](#출처)
 
 #  지역 특징 검출, Local Feature Detection
 
@@ -181,9 +181,9 @@ tags:
 
 ---
 
-# 참고
+# 출처
 
-- [Github Pages: 다변수 함수의 테일러 근사와 tangent hyperplane](https://lightaxis.github.io/posts/multivariable-taylor-series/)
+- [GitHub Pages, 「다변수 함수의 테일러 근사와 tangent hyperplane」](https://lightaxis.github.io/posts/multivariable-taylor-series/)
 
 <div class="obsidian-links" style="display: none;">
 

@@ -83,9 +83,9 @@ tags: [NETWORK]
 
 ---
 
-## 참고
+## 출처
 
-* [나무위키: 병목현상](https://namu.wiki/w/%EB%B3%91%EB%AA%A9%20%ED%98%84%EC%83%81)
+- [출처] [나무위키, 「병목현상」](https://namu.wiki/w/%EB%B3%91%EB%AA%A9%20%ED%98%84%EC%83%81)
 
 <div class="obsidian-links" style="display: none;">
 

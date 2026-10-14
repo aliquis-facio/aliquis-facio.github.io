@@ -58,7 +58,7 @@ tags:
     2. [듀얼 부팅](#92-듀얼-부팅)
     3. [가상 머신 설치](#93-가상-머신-설치)
 10. [설치 미디어 준비](#10-설치-미디어-준비)
-11. [참고](#참고)
+11. [출처](#출처)
 
 ---
 
@@ -70,7 +70,7 @@ tags:
 
 ![partition](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-07-21-15-05-42.png)
 
-> 출처: [정보통신기술용어해설: Disk Partition, Disk Volume   디스크 파티션, 디스크 볼륨, 디스크 구성 단위](http://www.ktword.co.kr/test/view/view.php?no=4856)
+<small>[출처] [정보통신기술용어해설, 「Disk Partition, Disk Volume 디스크 파티션, 디스크 볼륨, 디스크 구성 단위」](http://www.ktword.co.kr/test/view/view.php?no=4856)</small>
 
 예를 들어 하나의 디스크를 다음과 같이 분리할 수 있다.
 
@@ -103,7 +103,7 @@ D: 데이터 저장 영역
 
 ![mount](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-07-21-15-07-58.png)
 
-> 출처: [TakeTheNotes: Exploring the World of Mount Points in Linux Disk Management](https://takethenotes.com/mount-points/)
+<small>[출처] [TakeTheNotes, 「Exploring the World of Mount Points in Linux Disk Management」](https://takethenotes.com/mount-points/)</small>
 
 리눅스는 모든 파일과 장치를 최상위 디렉터리인 루트 디렉터리 `/` 아래에 배치한다. 따라서 별도의 드라이브 문자를 사용하는 대신 파티션을 특정 디렉터리에 연결한다.
 
@@ -310,7 +310,7 @@ MBR 방식에서는 하나의 디스크에 최대 네 개까지 만들 수 있�
 
 ![MBR vs GPT](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-07-21-15-15-26.png)
 
-> 출처: [howtouselinux: Understanding Disk Partition in Linux – MBR vs GPT](https://www.howtouselinux.com/post/mbr-vs-gpt)
+<small>[출처] [howtouselinux, 「Understanding Disk Partition in Linux – MBR vs GPT」](https://www.howtouselinux.com/post/mbr-vs-gpt)</small>
 
 ### 6.1. MBR
 
@@ -455,16 +455,16 @@ VirtualBox, VMware 등의 가상화 프로그램 안에 리눅스를 설치하�
 
 ---
 
-## 참고
+## 출처
 
-* [Ubuntu Installation Guide](https://ubuntu.com/tutorials/install-ubuntu-desktop)
-* [ArchWiki - Partitioning](https://wiki.archlinux.org/title/Partitioning)
-* [ArchWiki - File systems](https://wiki.archlinux.org/title/File_systems)
-* [GNU GRUB Manual](https://www.gnu.org/software/grub/manual/grub/)
-* [Red Hat Enterprise Linux - Managing File Systems](https://docs.redhat.com/)
-* [정보통신기술용어해설: Disk Partition, Disk Volume   디스크 파티션, 디스크 볼륨, 디스크 구성 단위](http://www.ktword.co.kr/test/view/view.php?no=4856)
-* [TakeTheNotes: Exploring the World of Mount Points in Linux Disk Management](https://takethenotes.com/mount-points/)
-* [howtouselinux: Understanding Disk Partition in Linux – MBR vs GPT](https://www.howtouselinux.com/post/mbr-vs-gpt)
+- [출처] [Ubuntu, 「Ubuntu Installation Guide」](https://ubuntu.com/tutorials/install-ubuntu-desktop)
+- [출처] [ArchWiki, 「ArchWiki - Partitioning」](https://wiki.archlinux.org/title/Partitioning)
+- [출처] [ArchWiki, 「ArchWiki - File systems」](https://wiki.archlinux.org/title/File_systems)
+- [출처] [GNU, 「GNU GRUB Manual」](https://www.gnu.org/software/grub/manual/grub/)
+- [출처] [Red Hat Docs, 「Red Hat Enterprise Linux - Managing File Systems」](https://docs.redhat.com/)
+- [출처] [정보통신기술용어해설, 「Disk Partition, Disk Volume 디스크 파티션, 디스크 볼륨, 디스크 구성 단위」](http://www.ktword.co.kr/test/view/view.php?no=4856)
+- [출처] [TakeTheNotes, 「Exploring the World of Mount Points in Linux Disk Management」](https://takethenotes.com/mount-points/)
+- [출처] [howtouselinux, 「Understanding Disk Partition in Linux – MBR vs GPT」](https://www.howtouselinux.com/post/mbr-vs-gpt)
 
 <div class="obsidian-links" style="display: none;">
 

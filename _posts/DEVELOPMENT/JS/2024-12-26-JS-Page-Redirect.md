@@ -35,8 +35,8 @@ location.replace("example.com"); // 뒤로 가기 불가능
 
 ---
 
-## 참고
+## 출처
 
-* [How TO - Redirect to Another Webpage](https://www.w3schools.com/howto/howto_js_redirect_webpage.asp)
-* [How to Redirect to Another Webpage using JavaScript?](https://www.geeksforgeeks.org/how-to-redirect-to-another-webpage-using-javascript/)
-* [JavaScript Redirect: How to Redirect to a New URL](https://www.semrush.com/blog/javascript-redirect/)
+- [W3Schools, 「How TO - Redirect to Another Webpage」](https://www.w3schools.com/howto/howto_js_redirect_webpage.asp)
+- [Geeksforgeeks, 「How to Redirect to Another Webpage using JavaScript?」](https://www.geeksforgeeks.org/how-to-redirect-to-another-webpage-using-javascript/)
+- [Semrush, 「JavaScript Redirect: How to Redirect to a New URL」](https://www.semrush.com/blog/javascript-redirect/)

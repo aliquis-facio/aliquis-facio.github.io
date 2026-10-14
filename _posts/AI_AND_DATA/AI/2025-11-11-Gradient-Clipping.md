@@ -31,7 +31,7 @@ tags:
 5. [장단점](#5-장단점)
 	1. [장점](#51-장점)
 	2. [단점](#52-단점)
-6. [참고](#참고)
+6. [출처](#출처)
 
 ---
 
@@ -116,13 +116,13 @@ $$
 
 ---
 
-## 참고
+## 출처
 
-- [Spot Intelligence: Gradient Clipping Explained & Practical How To Guide In Python](https://spotintelligence.com/2023/12/01/gradient-clipping-explained-practical-how-to-guide-in-python/#How_does_Gradient_Clipping_Affect_the_Overall_Training_Time_of_a_Deep_Neural_Network)
-- [Tistory: [CODE] Gradient Clipping이란?](https://kalelpark.tistory.com/134)
-- [Tistory: [Deep Learning] Gradient clipping 사용하여 loss nan 문제 방지하기](https://eehoeskrap.tistory.com/582)
-- [Tistory: [PyTorch] Gradient clipping (그래디언트 클리핑)](https://sanghyu.tistory.com/87)
-- [Neptuen: Understanding Gradient Clipping (and How It Can Fix Exploding Gradients Problem)](https://neptune.ai/blog/understanding-gradient-clipping-and-how-it-can-fix-exploding-gradients-problem)
+- [Spot Intelligence, 「Gradient Clipping Explained & Practical How To Guide In Python」](https://spotintelligence.com/2023/12/01/gradient-clipping-explained-practical-how-to-guide-in-python/#How_does_Gradient_Clipping_Affect_the_Overall_Training_Time_of_a_Deep_Neural_Network)
+- [Tistory, 「[CODE] Gradient Clipping이란?」](https://kalelpark.tistory.com/134)
+- [Tistory, 「[Deep Learning] Gradient clipping 사용하여 loss nan 문제 방지하기」](https://eehoeskrap.tistory.com/582)
+- [Tistory, 「[PyTorch] Gradient clipping (그래디언트 클리핑)」](https://sanghyu.tistory.com/87)
+- [Neptuen, 「Understanding Gradient Clipping (and How It Can Fix Exploding Gradients Problem)」](https://neptune.ai/blog/understanding-gradient-clipping-and-how-it-can-fix-exploding-gradients-problem)
 
 <div class="obsidian-links" style="display: none;">
 

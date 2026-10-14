@@ -36,7 +36,7 @@ tags: [GIT]
     1. [성능 개선](#44-성능-개선)
     1. [파일/폴더명 변경](#45-파일폴더명-변경)
     1. [Breaking change](#46-breaking-change)
-1. [참고](#참고)
+1. [출처](#출처)
 
 ---
 
@@ -224,20 +224,20 @@ BREAKING CHANGE: Clients must send offset/limit instead of page/size.
 
 ---
 
-## 참고
+## 출처
 
-- [Velog: Git 커밋 메시지 규칙](https://velog.io/@chojs28/Git-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80-%EA%B7%9C%EC%B9%99)
-- [Tistory: 좋은 commit message 작성법](https://jane-aeiou.tistory.com/93)
-- [Tistory: 깃 커밋 메시지 작성법(git commit message) - 1](https://richone.tistory.com/26)
-- [Tistory: 깃 커밋 메시지 작성법(git commit message) - 2](https://richone.tistory.com/27)
-- [Conventional Commits: Conventional Commits 1.0.0](https://www.conventionalcommits.org/ko/v1.0.0/)
-- [Medium: 효율적인 commit message 작성을 위한 conventional commits](https://medium.com/humanscape-tech/%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-commit-message-%EC%9E%91%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-conventional-commits-ae885898e754)
-- [pre-commit](https://pre-commit.com/)
-- [Medium: The Art of Writing Meaningful Git Commit Messages](https://medium.com/@iambonitheuri/the-art-of-writing-meaningful-git-commit-messages-a56887a4cb49)
-- [EU System: Git Commit Guidelines](https://ec.europa.eu/component-library/v1.15.0/eu/docs/conventions/git/)
-- [Tistory: Commit은 어느 시점, 어느 단위로 쪼개는 게 좋을까?](https://soo-develop.tistory.com/80)
-- [Tistory: [Git] 의미있는 commit 메시지와 깔끔한 history](https://hyeo-noo.tistory.com/394)
-- [Tistory: Commit 생성, commit message 작성 가이드라인](https://ch-programmer.tistory.com/76)
+- [출처] [Velog, 「Git 커밋 메시지 규칙」](https://velog.io/@chojs28/Git-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80-%EA%B7%9C%EC%B9%99)
+- [출처] [Tistory, 「좋은 commit message 작성법」](https://jane-aeiou.tistory.com/93)
+- [출처] [Tistory, 「깃 커밋 메시지 작성법(git commit message) - 1」](https://richone.tistory.com/26)
+- [출처] [Tistory, 「깃 커밋 메시지 작성법(git commit message) - 2」](https://richone.tistory.com/27)
+- [출처] [Conventional Commits, 「Conventional Commits 1.0.0」](https://www.conventionalcommits.org/ko/v1.0.0/)
+- [출처] [Medium, 「효율적인 commit message 작성을 위한 conventional commits」](https://medium.com/humanscape-tech/%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-commit-message-%EC%9E%91%EC%84%B1%EC%9D%84-%EC%9C%84%ED%95%9C-conventional-commits-ae885898e754)
+- [출처] [pre-commit, 「pre-commit」](https://pre-commit.com/)
+- [출처] [Medium, 「The Art of Writing Meaningful Git Commit Messages」](https://medium.com/@iambonitheuri/the-art-of-writing-meaningful-git-commit-messages-a56887a4cb49)
+- [출처] [EU System, 「Git Commit Guidelines」](https://ec.europa.eu/component-library/v1.15.0/eu/docs/conventions/git/)
+- [출처] [Tistory, 「Commit은 어느 시점, 어느 단위로 쪼개는 게 좋을까?」](https://soo-develop.tistory.com/80)
+- [출처] [Tistory, 「[Git] 의미있는 commit 메시지와 깔끔한 history」](https://hyeo-noo.tistory.com/394)
+- [출처] [Tistory, 「Commit 생성, commit message 작성 가이드라인」](https://ch-programmer.tistory.com/76)
 
 <div class="obsidian-links" style="display: none;">
 

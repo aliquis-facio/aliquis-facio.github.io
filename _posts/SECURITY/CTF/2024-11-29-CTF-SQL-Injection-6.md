@@ -13,6 +13,8 @@ categories: [CTF]
 tags: [TIL, DATABASE, CTF]
 ---
 
+[Blind SQL Injection의 참·거짓 응답 원리]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-28-Blind-SQL-Injection %})를 적용해 데이터베이스, 테이블, 컬럼과 데이터를 차례로 확인하는 실습이다.
+
 # 목차
 * [0. 회고](#0-회고)
 * [CTF 문제 풀이 시작](#1-start)
@@ -36,7 +38,7 @@ tags: [TIL, DATABASE, CTF]
     * [Data 개수 확인](#51-개수-확인)
     * [글자수 확인](#52-글자수-확인)
     * [Data 확인](#53-이름-확인)
-* [참고](#참고)
+* [출처](#출처)
 
 # 0. 회고
 * Blind SQL Injection은 로그인 페이지, 아이디 중복 체크 등 결과가 참과 거짓으로 나눠질 때 사용한다.
@@ -669,12 +671,12 @@ tags: [TIL, DATABASE, CTF]
 -> 찾은 글자: sxxxx xxx{C onxrx tz_fi rsxBx ixxSx xx}  
 -> 예측한 글자: segfa ult{C ongra tz_fi rstBl indSq li}   -->
 
-# 참고
-* [SQL 문자열 길이 출력 함수](https://lcs1245.tistory.com/entry/SQL-%EB%AC%B8%EC%9E%90%EC%97%B4-%EA%B8%B8%EC%9D%B4-%EC%B6%9C%EB%A0%A5-%ED%95%A8%EC%88%98-LENGTH-CHARLENGTH-LEN-DATALENGTH-LENGTHB)
-* [SQL 특정 개수의 값 출력](https://lcs1245.tistory.com/entry/SQL-%ED%8A%B9%EC%A0%95-%EA%B0%9C%EC%88%98%EC%9D%98-%EA%B0%92-%EC%B6%9C%EB%A0%A5-SELECT-TOP-N-TOP-LIMIT-ROWNUM?category=348747)
-* [MySQL CHAR_LENGTH() Function](https://www.w3schools.com/sql/func_mysql_char_length.asp)
-* [MySQL SUBSTR() Function](https://www.w3schools.com/sql/func_mysql_substr.asp)
-* [MySQL ASCII() Function](https://www.w3schools.com/sql/func_mysql_ascii.asp)
+# 출처
+- [출처] [Tistory, 「SQL 문자열 길이 출력 함수」](https://lcs1245.tistory.com/entry/SQL-%EB%AC%B8%EC%9E%90%EC%97%B4-%EA%B8%B8%EC%9D%B4-%EC%B6%9C%EB%A0%A5-%ED%95%A8%EC%88%98-LENGTH-CHARLENGTH-LEN-DATALENGTH-LENGTHB)
+- [출처] [Tistory, 「SQL 특정 개수의 값 출력」](https://lcs1245.tistory.com/entry/SQL-%ED%8A%B9%EC%A0%95-%EA%B0%9C%EC%88%98%EC%9D%98-%EA%B0%92-%EC%B6%9C%EB%A0%A5-SELECT-TOP-N-TOP-LIMIT-ROWNUM?category=348747)
+- [출처] [W3Schools, 「MySQL CHAR_LENGTH() Function」](https://www.w3schools.com/sql/func_mysql_char_length.asp)
+- [출처] [W3Schools, 「MySQL SUBSTR() Function」](https://www.w3schools.com/sql/func_mysql_substr.asp)
+- [출처] [W3Schools, 「MySQL ASCII() Function」](https://www.w3schools.com/sql/func_mysql_ascii.asp)
 
 <div class="obsidian-links" style="display: none;">
 

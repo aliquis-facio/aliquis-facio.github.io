@@ -147,7 +147,7 @@ cat etc/shadow 패스워드가 암호화되서 저장
 /usr/local: 일반적 프로그램 설치
 /usr/src: rpm, 소스 파일들을 저장해 사용
 
-# 참고
+# 출처
 1. <https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=akohong&logNo=220797668319>
 2. <https://doongdangdoongdangdong.tistory.com/129>
 3. <https://www.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS6259570844>

@@ -96,8 +96,8 @@ $conn = null;
 2. 웹 루트 밖으로 옮기고 파일 자체를 암호화해라.
 3. DB PW를 암호화하면 매번 복호화를 해야 하므로 CPU 시간 낭비일 뿐이다.
 
-# 참고
+# 출처
 
-* [PHP Connect to MySQL](https://www.w3schools.com/php/php_mysql_connect.asp)
-* [What is PDO?](https://www.simplilearn.com/tutorials/php-tutorial/pdo-in-php)
-* [How to encrypt database connection credentials on a web server?](https://security.stackexchange.com/questions/22817/how-to-encrypt-database-connection-credentials-on-a-web-server)
+- [W3Schools, 「PHP Connect to MySQL」](https://www.w3schools.com/php/php_mysql_connect.asp)
+- [Simplilearn, 「What is PDO?」](https://www.simplilearn.com/tutorials/php-tutorial/pdo-in-php)
+- [Stack Exchange, 「How to encrypt database connection credentials on a web server?」](https://security.stackexchange.com/questions/22817/how-to-encrypt-database-connection-credentials-on-a-web-server)

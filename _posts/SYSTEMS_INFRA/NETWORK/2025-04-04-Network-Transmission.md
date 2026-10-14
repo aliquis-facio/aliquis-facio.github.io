@@ -97,11 +97,11 @@ Block Coding
 
 ---
 
-## 참고
+## 출처
 
-* [신호 요소, 信號要素, signal element](https://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=055625-1)
-* [정보통신용어사전: 데이터 요소](https://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=040320-1)
-* [Tistory: [데이터 통신] Line coding에 대해](https://ideadummy.tistory.com/102)
+- [출처] [정보통신용어사전, 「신호 요소, 信號要素, signal element」](https://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=055625-1)
+- [출처] [정보통신용어사전, 「데이터 요소」](https://terms.tta.or.kr/dictionary/dictionaryView.do?word_seq=040320-1)
+- [출처] [Tistory, 「[데이터 통신] Line coding에 대해」](https://ideadummy.tistory.com/102)
 
 <script>
 mermaid.initialize({startOnLoad:true});

@@ -25,9 +25,9 @@ TOP N% WITH TIES`
 `SELECT ~ FROM ~ LIMIT N(시작할 위치), M(개수)`
 e.g. `SELECT * FROM TABLE ORDER BY SCORE LIMIT 3`
 
-# 참고
+# 출처
 
-* [SQL 특정 개수의 값 출력](https://lcs1245.tistory.com/entry/SQL-%ED%8A%B9%EC%A0%95-%EA%B0%9C%EC%88%98%EC%9D%98-%EA%B0%92-%EC%B6%9C%EB%A0%A5-SELECT-TOP-N-TOP-LIMIT-ROWNUM?category=348747)
+- [Tistory, 「SQL 특정 개수의 값 출력」](https://lcs1245.tistory.com/entry/SQL-%ED%8A%B9%EC%A0%95-%EA%B0%9C%EC%88%98%EC%9D%98-%EA%B0%92-%EC%B6%9C%EB%A0%A5-SELECT-TOP-N-TOP-LIMIT-ROWNUM?category=348747)
 
 <div class="obsidian-links" style="display: none;">
 

@@ -14,6 +14,7 @@ tags: [TIL, WEB, SECURITY]
 ---
 
 # File Include
+
 WEB PAGE 파라미터의 값에 따라서, 다른 페이지를 보여준다
 ?lang=ko.php
 
@@ -45,14 +46,14 @@ file include 취약점이라는 것은 그 존재만으로 web shell을 설치�
 외부 서버에 있는 파일
 # LFI, 웹 서버 내에 있는 파일
 
-# 참고
-* [파일 삽입 취약점 (File Inclusion Vulnerability)](https://isc9511.tistory.com/109)
-* [정보보안 스터디 - 10주차 1일 - 파일 include, 파일 다운로드 취약점](https://wonder12.tistory.com/92)
-* [File Include / File Download [15주차]](https://canbehacker.tistory.com/30)
-* [LFI](https://securitynote.tistory.com/31)
-* [LFI, RFI 취약점 설명 및 실습](https://mokpo.tistory.com/388)
-* [다운로드_DOWNLOAD_파일경로감추기](https://www.zetswing.com/bbs/board.php?bo_table=php_tip&wr_id=67&page=0&page=0)
-* [[보안] [파일/다운로드] 경로 숨기기에 관한 짧은 생각](https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=tipntech&wr_id=26832)
+# 출처
+- [Tistory, 「파일 삽입 취약점 (File Inclusion Vulnerability)」](https://isc9511.tistory.com/109)
+- [Tistory, 「정보보안 스터디 - 10주차 1일 - 파일 include, 파일 다운로드 취약점」](https://wonder12.tistory.com/92)
+- [Tistory, 「File Include / File Download [15주차」](https://canbehacker.tistory.com/30)
+- [Tistory, 「LFI」](https://securitynote.tistory.com/31)
+- [Tistory, 「LFI, RFI 취약점 설명 및 실습」](https://mokpo.tistory.com/388)
+- [Zetswing, 「다운로드_DOWNLOAD_파일경로감추기」](https://www.zetswing.com/bbs/board.php?bo_table=php_tip&wr_id=67&page=0&page=0)
+- [Phpschool, 「[보안] [파일/다운로드] 경로 숨기기에 관한 짧은 생각」](https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=tipntech&wr_id=26832)
 * []()
 * []()
 

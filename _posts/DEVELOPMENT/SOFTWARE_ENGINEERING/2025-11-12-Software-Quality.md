@@ -81,7 +81,7 @@ tags:
         3. [모델 관계/특징](#5103-모델-관계특징)
         4. [장점·한계](#5104-장점한계)
     11. [정리](#511-정리)
-6. [참고](#참고)
+6. [출처](#출처)
 
 ---
 
@@ -515,6 +515,6 @@ tags:
 
 ---
 
-## 참고
+## 출처
 
-- [ACADEMIA: Software Quality Models and Philosophies](https://www.academia.edu/24491465/Chapter_One_1_Software_Quality_Models_and_Philosophies_1_1_Introduction)
+- [ACADEMIA, 「Software Quality Models and Philosophies」](https://www.academia.edu/24491465/Chapter_One_1_Software_Quality_Models_and_Philosophies_1_1_Introduction)

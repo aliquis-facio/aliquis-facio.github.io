@@ -13,6 +13,8 @@ categories: [CTF]
 tags: [TIL, WEB, DATABASE, CTF]
 ---
 
+[쿠키와 세션의 동작 방식]({% post_url DEVELOPMENT/WEB/2024-11-04-WEB-Cookie-and-Session-Cache %})과 [SQL Injection의 기본 원리]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection %})를 바탕으로 문제의 인증 흐름을 분석한 풀이이다.
+
 # get admin
 <img src = "/_image/2024-11-18-00-00-00.png">
 쿠키값을 admin으로 바꾸면 clear

@@ -13,6 +13,8 @@ categories: [SECURITY]
 tags: [TIL, WEB, DATABASE, SECURITY]
 ---
 
+[SQL Injection의 전체 원리와 유형]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection %})에서 이어지는 내용이다. 참·거짓 응답으로 데이터베이스 정보를 추론하는 과정은 [Blind SQL Injection CTF 풀이]({% post_url SECURITY/CTF/2024-11-29-CTF-SQL-Injection-6 %})에서 확인할 수 있다.
+
 3. Blind SQL Injection
     1. 참과 거짓의 응답 차이로 알아낸다.
 

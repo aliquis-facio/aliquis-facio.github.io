@@ -35,12 +35,12 @@ tags:
 **Decision Tree(의사결정나무)**: 일련의 질문을 통해 예측 결과를 찾아가는 트리 구조의 머신러닝 모델이다.
 
 ![500x452](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-08-02-16-20-54.png)
-> *출처: Towards Data Science: Decision Tree Regressor Explained*
+<small>[출처] [Towards Data Science, 「Decision Tree Regressor Explained」](https://towardsdatascience.com/decision-tree-regressor-explained-a-visual-guide-with-code-examples-fbd2836c3bef/)</small>
 
 ## 2. Decision Tree의 구조
 
 ![500x231](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-08-02-16-25-39.png)
-> *출처: Tistory: Decision Tree Regression (의사결정나무) 개념과 python 예제*
+<small>[출처] [Tistory, 「Decision Tree Regression 개념과 Python 예제」](https://riverzayden.tistory.com/6)</small>
 
 | 구성 요소 | 설명                        |
 | ----- | ------------------------- |
@@ -381,13 +381,13 @@ plt.show()
 
 ---
 
-### 참고 자료
+### 출처
 
-* [scikit-learn docs: DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
-* [scikit-learn docs: Decision Trees](https://scikit-learn.org/stable/modules/tree.html)
-* [Towards Data Science: Decision Tree Regressor Explained](https://towardsdatascience.com/decision-tree-regressor-explained-a-visual-guide-with-code-examples-fbd2836c3bef/)
-* [Tistory: Decision Tree Regression 개념과 Python 예제](https://riverzayden.tistory.com/6)
-* [Tistory: DecisionTreeRegressor 회귀 트리 모델](https://everyday-joyful.tistory.com/entry/DecisionTreeRegressor-%ED%9A%8C%EA%B7%80-%ED%8A%B8%EB%A6%AC-%EB%AA%A8%EB%8D%B8)
-* [Tistory: 9. 의사결정나무(Decision Tree)에 대해서 알아보자 with Python](https://zephyrus1111.tistory.com/124)
-* [Tistory: DecisionTreeClassifier와 DecisionTreeRegressor](https://zephyrus1111.tistory.com/227)
-* [Tistory: [Regression & Classifcation] Decision Tree](https://moogie.tistory.com/144#2.%20%EB%85%B8%EB%93%9C%20%EB%B6%88%EC%88%9C%EB%8F%84%20%EC%A7%80%ED%91%9C-1-1)
+- [scikit-learn docs, 「DecisionTreeRegressor」](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html)
+- [scikit-learn docs, 「Decision Trees」](https://scikit-learn.org/stable/modules/tree.html)
+- [Towards Data Science, 「Decision Tree Regressor Explained」](https://towardsdatascience.com/decision-tree-regressor-explained-a-visual-guide-with-code-examples-fbd2836c3bef/)
+- [Tistory, 「Decision Tree Regression 개념과 Python 예제」](https://riverzayden.tistory.com/6)
+- [Tistory, 「DecisionTreeRegressor 회귀 트리 모델」](https://everyday-joyful.tistory.com/entry/DecisionTreeRegressor-%ED%9A%8C%EA%B7%80-%ED%8A%B8%EB%A6%AC-%EB%AA%A8%EB%8D%B8)
+- [Tistory, 「9. 의사결정나무(Decision Tree)에 대해서 알아보자 with Python」](https://zephyrus1111.tistory.com/124)
+- [Tistory, 「DecisionTreeClassifier와 DecisionTreeRegressor」](https://zephyrus1111.tistory.com/227)
+- [Tistory, 「[Regression & Classifcation] Decision Tree」](https://moogie.tistory.com/144#2.%20%EB%85%B8%EB%93%9C%20%EB%B6%88%EC%88%9C%EB%8F%84%20%EC%A7%80%ED%91%9C-1-1)

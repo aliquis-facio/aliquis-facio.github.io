@@ -22,13 +22,13 @@ tags: [TIL, WEB, CTF]
 1. [Vuln](#1-vuln)
 2. [Code](#2-code)
 3. [Payload](#3-payload)
-4. [참고](#참고)
+4. [출처](#출처)
 
 ---
 
 ## 1. Vuln
 
-[JSON Injection](/JSON-Injection/)
+[JSON Injection의 원리와 파서 불일치]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2026-02-03-JSON-Injection %})
 
 - 애플리케이션이 사용자 제공 데이터를 검증, 필터링 하지 않는다.
 - 악성 데이터가 직접 사용되거나 이어붙여진다. 즉, 동적 쿼리/명령/저장 과정에서 명령 문자열이 "구조 + 악성 데이터" 형태로 구성된다.
@@ -247,9 +247,9 @@ pw: `asdf`
 
 ---
 
-## 참고
+## 출처
 
-- [OWASP: Injection](https://owasp.org/Top10/2021/A03_2021-Injection/index.html)
+- [OWASP, 「Injection」](https://owasp.org/Top10/2021/A03_2021-Injection/index.html)
 
 <div class="obsidian-links" style="display: none;">
 

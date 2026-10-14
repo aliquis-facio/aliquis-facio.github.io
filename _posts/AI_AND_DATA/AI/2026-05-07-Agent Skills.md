@@ -434,18 +434,18 @@ hooks
 
 ---
 
-## 참고
+## 출처
 
-- [Claude API Docs: Agent Skills](https://platform.claude.com/docs/ko/agents-and-tools/agent-skills/overview)
-- [Anthropic: Equipping agents for the real world with Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
-- [Claude API Docs: API에서 Agent Skills 시작하기](https://platform.claude.com/docs/ko/agents-and-tools/agent-skills/quickstart)
-- [Claude API Docs: Create Skill](https://platform.claude.com/docs/en/api/beta/skills/create)
-- [Cookbook: Introduction to Claude Skills](https://platform.claude.com/cookbook/skills-notebooks-01-skills-introduction)
-- [AgentSkills: Agent Skills](https://agentskills.io/home)
-- [Codelabs: AI Agent Skills 사용 방법](https://codelabs.developers.google.com/gemini-cli/how-to-create-agent-skills-for-gemini-cli?hl=ko#0)
-- [Agentskills: Specification](https://agentskills.io/specification)
-- [Gemini CLI: Agent Skills](https://geminicli.com/docs/cli/skills/)
-- [Tistory: OpenAI ChatGPT와 Codex CLI에 도입된 Skills 기능 정리와 활용 사례](https://digitalbourgeois.tistory.com/2444)
-- [OpenAI Developers: Agent Skills](https://developers.openai.com/codex/skills)
-- [Tistory: 클로드 스킬(Claude Skills) 사용방법 - Docs,Pptx,Xlsx 스킬 활용 + Custom Skill 등록 해보기](https://goddaehee.tistory.com/411)
-- [Aitmpl: Skills](https://www.aitmpl.com/skills)
+- [Anthropic Docs, 「Agent Skills」](https://platform.claude.com/docs/ko/agents-and-tools/agent-skills/overview)
+- [Anthropic, 「Equipping agents for the real world with Agent Skills」](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+- [Anthropic Docs, 「API에서 Agent Skills 시작하기」](https://platform.claude.com/docs/ko/agents-and-tools/agent-skills/quickstart)
+- [Anthropic Docs, 「Create Skill」](https://platform.claude.com/docs/en/api/beta/skills/create)
+- [Anthropic Docs, 「Introduction to Claude Skills」](https://platform.claude.com/cookbook/skills-notebooks-01-skills-introduction)
+- [AgentSkills, 「Agent Skills」](https://agentskills.io/home)
+- [Codelabs, 「AI Agent Skills 사용 방법」](https://codelabs.developers.google.com/gemini-cli/how-to-create-agent-skills-for-gemini-cli?hl=ko#0)
+- [AgentSkills, 「Specification」](https://agentskills.io/specification)
+- [Gemini CLI, 「Agent Skills」](https://geminicli.com/docs/cli/skills/)
+- [Tistory, 「OpenAI ChatGPT와 Codex CLI에 도입된 Skills 기능 정리와 활용 사례」](https://digitalbourgeois.tistory.com/2444)
+- [OpenAI Developers, 「Agent Skills」](https://developers.openai.com/codex/skills)
+- [Tistory, 「클로드 스킬(Claude Skills) 사용방법 - Docs,Pptx,Xlsx 스킬 활용 + Custom Skill 등록 해보기」](https://goddaehee.tistory.com/411)
+- [AITMPL, 「Skills」](https://www.aitmpl.com/skills)

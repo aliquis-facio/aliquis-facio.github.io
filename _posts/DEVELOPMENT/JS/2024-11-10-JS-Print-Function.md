@@ -96,8 +96,8 @@ confirm("ALPHABET");
 
 ---
 
-## 참고
+## 출처
 
-* [JS 출력 방법 4가지](https://jinnnkcoding.tistory.com/140)
-* [JS prompt](https://developer.mozilla.org/ko/docs/Web/API/Window/prompt)
-* [JS confirm](https://developer.mozilla.org/ko/docs/Web/API/Window/confirm)
+- [Tistory, 「JS 출력 방법 4가지」](https://jinnnkcoding.tistory.com/140)
+- [MDN, 「JS prompt」](https://developer.mozilla.org/ko/docs/Web/API/Window/prompt)
+- [MDN, 「JS confirm」](https://developer.mozilla.org/ko/docs/Web/API/Window/confirm)

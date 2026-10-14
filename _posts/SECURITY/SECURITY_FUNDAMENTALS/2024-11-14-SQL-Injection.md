@@ -30,13 +30,15 @@ tags: [TIL, WEB, DATABASE, SECURITY]
 9. [대응 방안](#대응-방안)
 10. [인증 공격과의 차이](#인증-공격과의-차이)
 11. [모의해킹 시 주의사항](#모의해킹-시-주의사항)
-12. [참고](#참고)
+12. [출처](#출처)
 
 ---
 
 ## 1. 개요
 
 SQL Injection은 외부 입력값이 SQL 쿼리에 안전하지 않은 방식으로 결합될 때, 공격자가 원래 쿼리의 구조나 실행 의도를 변경할 수 있는 취약점이다.
+
+쿼리가 사용되는 로그인 흐름은 [로그인 로직]({% post_url DEVELOPMENT/WEB/2024-11-03-WEB-Login-Logic %})에서, 실제 문제의 입력값과 응답을 분석하는 과정은 [Cookie·SQL Injection CTF 풀이]({% post_url SECURITY/CTF/2024-11-18-CTF-SQL-Injection-1 %})에서 이어서 볼 수 있다.
 
 공격자는 SQL Injection을 이용해 다음과 같은 행위를 시도할 수 있다.
 
@@ -191,7 +193,7 @@ FROM another_table;
 * 대응하는 열의 자료형이 서로 호환되어야 한다.
 * 결과가 웹페이지 등에 출력되어야 한다.
 
-[Union SQL Injection](/Union-SQL-Injection/)
+[Union SQL Injection]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-20-Union-SQL-Injection %})
 
 #### 4.1.2. Error-based SQL Injection
 
@@ -208,7 +210,7 @@ FROM another_table;
 
 운영 환경에서는 상세한 데이터베이스 오류를 사용자에게 직접 반환하지 않아야 한다.
 
-[Error-Based SQL Injection](/Error-Based-SQL-Injection/)
+[Error-Based SQL Injection]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-28-Error-Based-SQL-Injection %})
 
 ### 4.2. Inferential SQL Injection
 
@@ -231,7 +233,7 @@ FROM another_table;
 * 리다이렉션 여부
 * 조회 결과 개수
 
-[Blind SQL Injection](/Blind-SQL-Injection/)
+[Blind SQL Injection]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-28-Blind-SQL-Injection %})
 
 #### 4.2.2. Time-based Blind SQL Injection
 
@@ -653,15 +655,15 @@ CREATE
 
 ---
 
-## 참고
+## 출처
 
-* [SQL Injection](https://developer.mozilla.org/ko/docs/Glossary/SQL_Injection)
-* [OWASP: SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
-* [OWASP: SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
-* [OWASP: Query Parameterization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
-* [MITRE CWE-89: Improper Neutralization of Special Elements used in an SQL Command](https://cwe.mitre.org/data/definitions/89.html)
-* [PortSwigger Web Security Academy: SQL Injection](https://portswigger.net/web-security/sql-injection)
-* [PortSwigger Web Security Academy: SQL Injection Labs](https://portswigger.net/web-security/all-labs#sql-injection)
+- [MDN, 「SQL Injection」](https://developer.mozilla.org/ko/docs/Glossary/SQL_Injection)
+- [OWASP, 「SQL Injection」](https://owasp.org/www-community/attacks/SQL_Injection)
+- [OWASP, 「SQL Injection Prevention Cheat Sheet」](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
+- [OWASP, 「Query Parameterization Cheat Sheet」](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html)
+- [MITRE CWE-89, 「Improper Neutralization of Special Elements used in an SQL Command」](https://cwe.mitre.org/data/definitions/89.html)
+- [PortSwigger Web Security Academy, 「SQL Injection」](https://portswigger.net/web-security/sql-injection)
+- [PortSwigger Web Security Academy, 「SQL Injection Labs」](https://portswigger.net/web-security/all-labs#sql-injection)
 
 <div class="obsidian-links" style="display: none;">
 

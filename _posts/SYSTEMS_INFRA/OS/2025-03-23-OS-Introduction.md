@@ -348,17 +348,17 @@ int main(int argc, char *argv[]) {
     * 보안성
     * Mobility
 
-# 참고
+# 출처
 
-* [[운영체제] 운영체제(OS)란?](https://jerryjerryjerry.tistory.com/171)
-* [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/)
-* [C언어 main( ) 함수의 명령 인수 (argc, argv)](https://blog.naver.com/sharonichoya/220501242693)
-* [[C언어/C++] assert 함수에 대해서 : 디버깅을위한, 더 안전한 코드를 위한 오류 검출 방법](https://blockdmask.tistory.com/286)
-* [gcc 그리고 unistd.h](https://wonillism.tistory.com/151)
-* [c언어의 volatile 키워드](https://m.blog.naver.com/eslectures/80143556699)
-* [[C] pthread란? pthread 예제](https://m.blog.naver.com/whtie5500/221692793640)
-* [C/C++ open 함수 - 파일 생성 / 읽기 / 쓰기](https://bubble-dev.tistory.com/entry/CC-open-%ED%95%A8%EC%88%98-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EC%9D%BD%EA%B8%B0-%EC%93%B0%EA%B8%B0)
-* [open, read, write, close 사용하기](https://tempdev.tistory.com/44)
+- [출처] [Tistory, 「[운영체제] 운영체제(OS)란?」](https://jerryjerryjerry.tistory.com/171)
+- [출처] [Operating Systems, 「Three Easy Pieces」](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+- [출처] [Naver, 「C언어 main( ) 함수의 명령 인수 (argc, argv)」](https://blog.naver.com/sharonichoya/220501242693)
+- [출처] [Tistory, 「[C언어/C++] assert 함수에 대해서: 디버깅을위한, 더 안전한 코드를 위한 오류 검출 방법」](https://blockdmask.tistory.com/286)
+- [출처] [Tistory, 「gcc 그리고 unistd.h」](https://wonillism.tistory.com/151)
+- [출처] [Naver, 「c언어의 volatile 키워드」](https://m.blog.naver.com/eslectures/80143556699)
+- [출처] [Naver, 「[C] pthread란? pthread 예제」](https://m.blog.naver.com/whtie5500/221692793640)
+- [출처] [Tistory, 「C/C++ open 함수 - 파일 생성 / 읽기 / 쓰기」](https://bubble-dev.tistory.com/entry/CC-open-%ED%95%A8%EC%88%98-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EC%9D%BD%EA%B8%B0-%EC%93%B0%EA%B8%B0)
+- [출처] [Tistory, 「open, read, write, close 사용하기」](https://tempdev.tistory.com/44)
 
 <div class="obsidian-links" style="display: none;">
 

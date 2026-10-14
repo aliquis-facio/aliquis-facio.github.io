@@ -370,6 +370,6 @@ tags: [ECONOMY]
   </div>
 </div>
 
-## 참고
+## 출처
 
 <https://www.tradingkey.com/kr/tools/heat-map>

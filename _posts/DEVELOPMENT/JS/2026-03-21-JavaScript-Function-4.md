@@ -42,7 +42,7 @@ tags: [WEB, JS]
     1. [this를 자체적으로 가지지 않음](#71-this를-자체적으로-가지지-않음)
     2. [생성자로 사용 불가](#72-생성자로-사용-불가)
     3. [arguments 없음](#73-arguments-없음)
-8. [참고](#참고)
+8. [출처](#출처)
 
 ---
 
@@ -276,13 +276,13 @@ new User("홍길동"); // 에러
 
 ---
 
-## 참고
+## 출처
 
-- [MDN: 호이스팅](https://developer.mozilla.org/ko/docs/Glossary/Hoisting)
-- [MDN: IIFE](https://developer.mozilla.org/ko/docs/Glossary/IIFE)
-- [MDN: 함수](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Functions)
-- [Velog: 함수 (Function)](https://velog.io/@surim014/%EC%9B%B9%EC%9D%84-%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94-%EA%B7%BC%EC%9C%A1-JavaScript%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-part-6-Function)
-- [Tistory: [JavaScript (6)] Javascript 함수(함수 기본, 재귀함수, 호이스팅 등)](https://goddaehee.tistory.com/228)
+- [MDN, 「호이스팅」](https://developer.mozilla.org/ko/docs/Glossary/Hoisting)
+- [MDN, 「IIFE」](https://developer.mozilla.org/ko/docs/Glossary/IIFE)
+- [MDN, 「함수」](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Functions)
+- [Velog, 「함수 (Function)」](https://velog.io/@surim014/%EC%9B%B9%EC%9D%84-%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94-%EA%B7%BC%EC%9C%A1-JavaScript%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-part-6-Function)
+- [Tistory, 「[JavaScript (6)] Javascript 함수(함수 기본, 재귀함수, 호이스팅 등)」](https://goddaehee.tistory.com/228)
 
 <div class="obsidian-links" style="display: none;">
 

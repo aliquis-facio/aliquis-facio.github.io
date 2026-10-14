@@ -29,7 +29,7 @@ tags: [WEB, VMWare]
 * [4. 동적 페이지](#4-동적-페이지dynamic)
 * [Skelton code란?](#skelton-code란)
 * [의사 코드](#의사-코드pseudo-code)
-* [참고 사이트](#참고-사이트)
+* [출처](#출처)
 
 ---
 
@@ -232,28 +232,28 @@ Web Service = Web Server(Static Resource) + WAS(Dinamic Resource) + DB
 
 ---
 
-## 참고 사이트
+## 출처
 
-- [[Docker] Docker Network (docker0와 veth)](https://yoo11052.tistory.com/208)
-- [[키워드] veth: 리눅스 가상 이더넷 인터페이스란?](https://www.44bits.io/ko/keyword/veth)
-- [바인딩(Binding)](https://medium.com/pocs/%EB%B0%94%EC%9D%B8%EB%94%A9-binding-4a4a2f641b27)
-- [리눅스 NIC 종류 (eth, ens, eno, enp)](https://blog.naver.com/appeal7712/222294712570)
-- [NIC이란 무엇인가?](https://jettstream.tistory.com/345)
-- [리눅스에서 ifconfig 명령 시 나오는 virbr0, lo 란?](https://positivemh.tistory.com/651)
-- [[VMware Connection failed] VMware SSH 연결 오류 - ip 구성이 올바르지 않습니다](https://mingzz1.github.io/error/windows/2020/09/01/ssh_connection_failed.html/)
-- [​SFTP를 사용하여 제품 데이터 소스를 제출하는 방법](https://support.google.com/merchants/answer/13813117?hl=ko)
-- [[개발환경 엿보기구멍] Termius - ssh platform](https://velog.io/@blackbean99/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%97%BF%EB%B3%B4%EA%B8%B0%EA%B5%AC%EB%A9%8D-Terminus-ssh-platform)
-- [SSH 접속프로그램 PuTTY 사용법](https://m.blog.naver.com/jeonsr/221792705148)
-- [[python] 2 vs 3](https://velog.io/@nayoon-kim/python)
-- [Python 2 vs. Python 3: Diferencias y Consideraciones](https://codigospython.com/python-2-vs-python-3-diferencias-y-consideraciones/)
-- [Address already in use (Bind failed) 에러 해결하기](https://philip1994.tistory.com/6)
-- [address already in use :::{port} - 포트 실행 중 에러가 생길 때](https://velog.io/@woojin/address-already-in-use-port-%ED%8F%AC%ED%8A%B8-%EC%8B%A4%ED%96%89-%EC%A4%91-%EC%97%90%EB%9F%AC%EA%B0%80-%EC%83%9D%EA%B8%B8-%EB%95%8C)
-- [[Docker] The container name ~ is already in use 에러 처리 방법](https://velog.io/@ansfls/docker-The-container-name-is-already-in-use-%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95)
-- [GET Method는 URL을 256자 이하로 제한하지 않는다](https://2jinishappy.tistory.com/314)
-- [HTTP GET,POST방식 차이](https://brilliantdevelop.tistory.com/33)
-- [PHP - submit](https://jamong-icetea.tistory.com/32)
-- [submit 이벤트와 메서드](https://ko.javascript.info/forms-submit)
-- [[JavaScript] 스켈레톤 코드, 의사 코드 작성(자판기 애플리케이션)](https://medium.com/@marcie179c/java-script-%EC%8A%A4%EC%BC%88%EB%A0%88%ED%86%A4-%EC%BD%94%EB%93%9C-%EC%9D%98%EC%82%AC-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1-%EC%9E%90%ED%8C%90%EA%B8%B0-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-cb046014f21)
+- [Tistory, 「[Docker] Docker Network (docker0와 veth)」](https://yoo11052.tistory.com/208)
+- [키워드] veth, 「리눅스 가상 이더넷 인터페이스란?」](https://www.44bits.io/ko/keyword/veth)
+- [Medium, 「바인딩(Binding)」](https://medium.com/pocs/%EB%B0%94%EC%9D%B8%EB%94%A9-binding-4a4a2f641b27)
+- [Naver, 「리눅스 NIC 종류 (eth, ens, eno, enp)」](https://blog.naver.com/appeal7712/222294712570)
+- [Tistory, 「NIC이란 무엇인가?」](https://jettstream.tistory.com/345)
+- [Tistory, 「리눅스에서 ifconfig 명령 시 나오는 virbr0, lo 란?」](https://positivemh.tistory.com/651)
+- [GitHub Pages, 「[VMware Connection failed] VMware SSH 연결 오류 - ip 구성이 올바르지 않습니다」](https://mingzz1.github.io/error/windows/2020/09/01/ssh_connection_failed.html/)
+- [Google Help, 「​SFTP를 사용하여 제품 데이터 소스를 제출하는 방법」](https://support.google.com/merchants/answer/13813117?hl=ko)
+- [Velog, 「[개발환경 엿보기구멍] Termius - ssh platform」](https://velog.io/@blackbean99/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%97%BF%EB%B3%B4%EA%B8%B0%EA%B5%AC%EB%A9%8D-Terminus-ssh-platform)
+- [Naver, 「SSH 접속프로그램 PuTTY 사용법」](https://m.blog.naver.com/jeonsr/221792705148)
+- [Velog, 「[python] 2 vs 3」](https://velog.io/@nayoon-kim/python)
+- [Codigos Python, 「Python 2 vs. Python 3: Diferencias y Consideraciones」](https://codigospython.com/python-2-vs-python-3-diferencias-y-consideraciones/)
+- [Tistory, 「Address already in use (Bind failed) 에러 해결하기」](https://philip1994.tistory.com/6)
+- [Velog, 「address already in use::{port} - 포트 실행 중 에러가 생길 때」](https://velog.io/@woojin/address-already-in-use-port-%ED%8F%AC%ED%8A%B8-%EC%8B%A4%ED%96%89-%EC%A4%91-%EC%97%90%EB%9F%AC%EA%B0%80-%EC%83%9D%EA%B8%B8-%EB%95%8C)
+- [Velog, 「[Docker] The container name ~ is already in use 에러 처리 방법」](https://velog.io/@ansfls/docker-The-container-name-is-already-in-use-%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EB%B2%95)
+- [Tistory, 「GET Method는 URL을 256자 이하로 제한하지 않는다」](https://2jinishappy.tistory.com/314)
+- [Tistory, 「HTTP GET,POST방식 차이」](https://brilliantdevelop.tistory.com/33)
+- [Tistory, 「PHP - submit」](https://jamong-icetea.tistory.com/32)
+- [JavaScript.info, 「submit 이벤트와 메서드」](https://ko.javascript.info/forms-submit)
+- [Medium, 「[JavaScript] 스켈레톤 코드, 의사 코드 작성(자판기 애플리케이션)」](https://medium.com/@marcie179c/java-script-%EC%8A%A4%EC%BC%88%EB%A0%88%ED%86%A4-%EC%BD%94%EB%93%9C-%EC%9D%98%EC%82%AC-%EC%BD%94%EB%93%9C-%EC%9E%91%EC%84%B1-%EC%9E%90%ED%8C%90%EA%B8%B0-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-cb046014f21)
 
 ---
 

@@ -279,8 +279,8 @@ arr.forEach((element) => {
 
 ---
 
-## 참고
+## 출처
 
-* [루프와 반복](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)
-* [JS 반복문](https://velog.io/@reasonz/2022.04.10-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%B0%98%EB%B3%B5%EB%AC%B8-for-for-in-for-of-forEach-while%EB%AC%B8)
-* [JS 반복문](https://offbyone.tistory.com/452)
+- [MDN, 「루프와 반복」](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [Velog, 「JS 반복문」](https://velog.io/@reasonz/2022.04.10-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%B0%98%EB%B3%B5%EB%AC%B8-for-for-in-for-of-forEach-while%EB%AC%B8)
+- [Tistory, 「JS 반복문」](https://offbyone.tistory.com/452)

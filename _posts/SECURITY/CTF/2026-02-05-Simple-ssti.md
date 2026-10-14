@@ -27,13 +27,13 @@ tags: [TIL, WEB, CTF]
     3. [특정 클래스 하나를 골라서 전역 네임스페이스로 접근](#33-특정-클래스-하나를-골라서-전역-네임스페이스로-접근)
     4. [os 모듈을 찾아 명령 실행](#34-os-모듈을-찾아-명령-실행)
     5. [실행 과정](#35-실행-과정)
-4. [참고](#참고)
+4. [출처](#출처)
 
 ---
 
 ## 1. Vuln
 
-[SSTI(Server-side Template Injection)](/SSTI/): 공격자의 악의적인 코드가 웹 템플릿 엔진(Web Template Engine)에 들어가 서버측에서 템플릿 코드가 실행되는 취약점이다.
+[SSTI(Server-side Template Injection)의 원리와 탐지 방법]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2026-02-05-SSTI %}): 공격자의 악의적인 코드가 웹 템플릿 엔진(Web Template Engine)에 들어가 서버측에서 템플릿 코드가 실행되는 취약점이다.
 
 ## 2. Code
 
@@ -156,9 +156,9 @@ FLAG는 `./flag.txt`에서 읽어와 `app.secret_key`로 저장하고 있다.
 
 ---
 
-## 참고
+## 출처
 
-- [quantylab: 파이썬 리플렉션 (동적 클래스 인스턴스 생성 및 함수 호출)](https://blog.quantylab.com/python_reflection.html)
-- [Python Docs: reflection](https://docs.python.org/ko/3/c-api/reflection.html)
-- [WikiDocs: subprocess.Popen()](https://wikidocs.net/14350)
-- [Github Pages: Server-Side Template Injection(SSTI)](https://core-research-team.github.io/2021-05-01/Server-Side-Template-Injection(SSTI))
+- [quantylab, 「파이썬 리플렉션 (동적 클래스 인스턴스 생성 및 함수 호출)」](https://blog.quantylab.com/python_reflection.html)
+- [Python Docs, 「reflection」](https://docs.python.org/ko/3/c-api/reflection.html)
+- [WikiDocs, 「subprocess.Popen()」](https://wikidocs.net/14350)
+- [GitHub Pages, 「Server-Side Template Injection(SSTI)」](https://core-research-team.github.io/2021-05-01/Server-Side-Template-Injection(SSTI))

@@ -28,13 +28,15 @@ tags: [TIL, WEB, SECURITY]
 	2. [Client-side JSON Injection](#32-client-side-json-injection)
 4. [파서 불일치 기반 공격](#33-파서-불일치-기반-공격)
 5. [보안대책](#4-보안대책)
-6. [참고](#참고)
+6. [출처](#출처)
 
 ---
 
 ## 1. 정의
 
 **JSON Injection**: 공격자가 JSON 문자열/스트림에 데이터를 주입하거나, 악성 JSON을 입력으로 제공해 애플리케이션의 로직, 권한, 처리 흐름을 바꾸게 만드는 취약점이다. 일반적으로 서버 측(JSON 생성/직렬화 단계)과 클라이언트 측(JSON 파싱/처리 단계)으로 구분된다.
+
+JSON 입력과 권한 처리 로직을 분석하는 사례는 [Dreamhack role-admin 풀이]({% post_url SECURITY/CTF/2026-02-03-role-admin %})에서 다룬다.
 
 ## 2. 영향
 
@@ -80,13 +82,13 @@ Injection 보안 대책의 핵심은 데이터를 명령 및 쿼리와 분리하
 
 ---
 
-## 참고
+## 출처
 
-- [invicti: JSON 주입](https://www.invicti.com/learn/json-injection)
-- [GeekNews: JSON 인젝션을 이용한 API 공격](https://news.hada.io/topic?id=17615)
-- [OWASP: Injection](https://owasp.org/Top10/2021/A03_2021-Injection/index.html)
-- [PortSwigger: DOM-based client-side JSON injection](https://portswigger.net/web-security/dom-based/client-side-json-injection)
-- [CWE: OWASP Top Ten 2013 Category A1 - Injection](https://cwe.mitre.org/data/definitions/929.html)
+- [invicti, 「JSON 주입」](https://www.invicti.com/learn/json-injection)
+- [GeekNews, 「JSON 인젝션을 이용한 API 공격」](https://news.hada.io/topic?id=17615)
+- [OWASP, 「Injection」](https://owasp.org/Top10/2021/A03_2021-Injection/index.html)
+- [PortSwigger, 「DOM-based client-side JSON injection」](https://portswigger.net/web-security/dom-based/client-side-json-injection)
+- [CWE, 「OWASP Top Ten 2013 Category A1 - Injection」](https://cwe.mitre.org/data/definitions/929.html)
 
 <div class="obsidian-links" style="display: none;">
 

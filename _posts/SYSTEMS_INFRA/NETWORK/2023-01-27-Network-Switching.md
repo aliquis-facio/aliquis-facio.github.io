@@ -33,7 +33,7 @@ tags: [NETWORK]
 1. [메시지 교환](#4-메시지-교환message-switching)
     1. [개념](#41-개념)
     1. [방식](#42-방식)
-1. [참고](#참고)
+1. [출처](#출처)
 
 ---
 
@@ -218,12 +218,12 @@ tags: [NETWORK]
 
 ---
 
-## 참고
+## 출처
 
-* [wikipedia: point-to-point](https://ko.wikipedia.org/wiki/%EC%A0%90%EB%8C%80%EC%A0%90_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)
-* [대역폭, bandwidth란 ?](https://velog.io/@ragnarok_code/%EB%8C%80%EC%97%AD%ED%8F%AD-bandwidth%EB%9E%80)
-* [나무위키: 패킷](https://namu.wiki/w/%ED%8C%A8%ED%82%B7)
-* [wikimedia: atm](https://ko.wikipedia.org/wiki/%EB%B9%84%EB%8F%99%EA%B8%B0_%EC%A0%84%EC%86%A1_%EB%B0%A9%EC%8B%9D)
+- [출처] [Wikipedia, 「point-to-point」](https://ko.wikipedia.org/wiki/%EC%A0%90%EB%8C%80%EC%A0%90_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)
+- [출처] [Velog, 「대역폭, bandwidth란 ?」](https://velog.io/@ragnarok_code/%EB%8C%80%EC%97%AD%ED%8F%AD-bandwidth%EB%9E%80)
+- [출처] [나무위키, 「패킷」](https://namu.wiki/w/%ED%8C%A8%ED%82%B7)
+- [출처] [Wikipedia, 「atm」](https://ko.wikipedia.org/wiki/%EB%B9%84%EB%8F%99%EA%B8%B0_%EC%A0%84%EC%86%A1_%EB%B0%A9%EC%8B%9D)
 
 <div class="obsidian-links" style="display: none;">
 

@@ -21,7 +21,7 @@ tags:
 2. [Database의 특성](#2-database의-특성)
 3. [Database의 구조](#3-database의-구조)
 4. [Database의 구성요소](#4-database의-구성요소)
-5. [참고](#참고)
+5. [출처](#출처)
 
 ---
 
@@ -68,12 +68,12 @@ tags:
 
 ---
 
-## 참고
+## 출처
 
-* [[Database] 인덱스(index)란?](https://mangkyu.tistory.com/96)
-* [What is a Database Index?](https://www.codecademy.com/article/sql-indexes)
-* [데이터베이스의 개념](https://blog.naver.com/k97b1114/140153610388)
-* [데이터베이스의 개념적 구성(개체, 속성, 관계)](https://kingnamji.tistory.com/34)
+- [Tistory, 「[Database] 인덱스(index)란?」](https://mangkyu.tistory.com/96)
+- [Codecademy, 「What is a Database Index?」](https://www.codecademy.com/article/sql-indexes)
+- [Naver, 「데이터베이스의 개념」](https://blog.naver.com/k97b1114/140153610388)
+- [Tistory, 「데이터베이스의 개념적 구성(개체, 속성, 관계)」](https://kingnamji.tistory.com/34)
 
 <div class="obsidian-links" style="display: none;">
 

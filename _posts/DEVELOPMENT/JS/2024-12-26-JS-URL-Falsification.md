@@ -53,10 +53,10 @@ history.pushState(null, null, 'abracadabra') // hostname은 변경할 수 없지
 
 ---
 
-## 참고
+## 출처
 
-* [History: pushState() method](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)
-* [[JavaScript] history.pushState() - 페이지 갱신없이 주소URL 변경하기](https://mine-it-record.tistory.com/439)
-* [JavaScript를 사용하여 동적으로 URL 변경](https://www.tempmail.us.com/ko/javascript/%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EB%A1%9C%EB%93%9C%ED%95%98%EC%A7%80-%EC%95%8A%EA%B3%A0-javascript%EC%97%90%EC%84%9C-url-%EC%88%98%EC%A0%95)
-* [[Javascript] 현재 페이지 URL 가져오기](https://hianna.tistory.com/464)
-* [history.pushState 사용하기](https://jintaewoo.tistory.com/13)
+- [MDN, 「History: pushState() method」](https://developer.mozilla.org/en-US/docs/Web/API/History/pushState)
+- [Tistory, 「[JavaScript] history.pushState() - 페이지 갱신없이 주소URL 변경하기」](https://mine-it-record.tistory.com/439)
+- [Tempmail, 「JavaScript를 사용하여 동적으로 URL 변경」](https://www.tempmail.us.com/ko/javascript/%ED%8E%98%EC%9D%B4%EC%A7%80%EB%A5%BC-%EB%8B%A4%EC%8B%9C-%EB%A1%9C%EB%93%9C%ED%95%98%EC%A7%80-%EC%95%8A%EA%B3%A0-javascript%EC%97%90%EC%84%9C-url-%EC%88%98%EC%A0%95)
+- [Tistory, 「[Javascript] 현재 페이지 URL 가져오기」](https://hianna.tistory.com/464)
+- [Tistory, 「history.pushState 사용하기」](https://jintaewoo.tistory.com/13)

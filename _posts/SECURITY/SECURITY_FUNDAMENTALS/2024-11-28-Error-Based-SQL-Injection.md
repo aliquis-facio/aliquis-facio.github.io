@@ -15,6 +15,8 @@ tags: [TIL, WEB, DATABASE, SECURITY]
 
 # Error-Based SQL Injection
 
+기본 원리와 대응 방안은 [SQL Injection 정리]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection %})에서 확인할 수 있다. 데이터를 화면에 출력하는 [Union SQL Injection]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-20-Union-SQL-Injection %})과 비교하면 오류 메시지를 이용하는 방식의 차이가 드러난다.
+
 ## Error-Based SQL Injection란?
 
 : SQL 에러메시지를 활용해 DB에 관한 정보를 획득하는 공격 기법이다.
@@ -102,13 +104,13 @@ extractvalue()는 XML(xml_frag 인수)과 XPath 표현식(xpath_expr 인수), �
 
 ---
 
-## 참고
+## 출처
 
-* [Error-Based SQL Injection: Examples and 5 Tips for Prevention](https://brightsec.com/blog/error-based-sql-injection/)
-* [SQL Injection Payloads: How SQLi exploits work](https://brightsec.com/blog/sql-injection-payloads/)
-* [웹 취약점과 해킹 매커니즘 #4 Error Based SQL Injection](https://www.skshieldus.com/download/files/download.do?o_fname=EQST%20insight_Special%20Report_202207.pdf&r_fname=20220718162542886.pdf)
-* **[오류 기반 SQL Injection이란?](https://www.bugbountyclub.com/pentestgym/view/53)**
-* [https://blog.naver.com/crehacktive3/222187681939](https://blog.naver.com/crehacktive3/222187681939)
+- [Bright Security, 「Error-Based SQL Injection: Examples and 5 Tips for Prevention」](https://brightsec.com/blog/error-based-sql-injection/)
+- [Bright Security, 「SQL Injection Payloads: How SQLi exploits work」](https://brightsec.com/blog/sql-injection-payloads/)
+- [SK Shieldus, 「웹 취약점과 해킹 매커니즘 #4 Error Based SQL Injection」](https://www.skshieldus.com/download/files/download.do?o_fname=EQST%20insight_Special%20Report_202207.pdf&r_fname=20220718162542886.pdf)
+- [Bug Bounty Club, 「오류 기반 SQL Injection이란?」](https://www.bugbountyclub.com/pentestgym/view/53)
+- [Naver, 「crehacktive3/222187681939」](https://blog.naver.com/crehacktive3/222187681939)
 
 <div class="obsidian-links" style="display: none;">
 

@@ -21,6 +21,8 @@ tags: [TIL, WEB, SECURITY]
 
 Web Shell: 악의적인 스크립트
 
+업로드 파일과 서버 설정을 함께 분석하는 실습은 [Dreamhack Image Uploader 풀이]({% post_url SECURITY/CTF/2026-02-24-Image-Uploader %})에서 확인할 수 있다.
+
 ## 발생 원인
 서버측에서 파일을 업로드 받을 때 파일에 대한 검증, 검사가 부족할 경우 발생할 수 있다.
 
@@ -137,15 +139,15 @@ double extension (이중확장자)
 -> BLOB / CLOB
 4. nas 서버: 파일 저장 서버
 
-# 참고
-* [What Is a Web Shell?](https://www.imperva.com/learn/application-security/web-shell/)
-* [왕초보를 위한 용어 풀이, 디페이스(Deface) 공격이란?](https://m.boannews.com/html/detail.html?idx=55936)
-* [디페이스 공격이란?](https://m.blog.naver.com/lhi5693/221347344931)
-* [What Is a Reverse Shell?](https://www.imperva.com/learn/application-security/reverse-shell/)
-* [MIME types (IANA media types)](https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types)
-* [Content Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)
-* [헥스에디터 ( Hex Editor 핵사 에디터 ) 의 사용법](https://blog.naver.com/PostView.nhn?blogId=kjg5345&logNo=150098304449)
-* [Apache HTTP Server Tutorial: .htaccess files](https://httpd.apache.org/docs/2.4/en/howto/htaccess.html)
+# 출처
+- [Imperva, 「What Is a Web Shell?」](https://www.imperva.com/learn/application-security/web-shell/)
+- [Boannews, 「왕초보를 위한 용어 풀이, 디페이스(Deface) 공격이란?」](https://m.boannews.com/html/detail.html?idx=55936)
+- [Naver, 「디페이스 공격이란?」](https://m.blog.naver.com/lhi5693/221347344931)
+- [Imperva, 「What Is a Reverse Shell?」](https://www.imperva.com/learn/application-security/reverse-shell/)
+- [MDN, 「MIME types (IANA media types)」](https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types)
+- [MDN, 「Content Type」](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type)
+- [Naver, 「헥스에디터 ( Hex Editor 핵사 에디터 ) 의 사용법」](https://blog.naver.com/PostView.nhn?blogId=kjg5345&logNo=150098304449)
+- [Apache HTTP Server Docs, 「.htaccess files」](https://httpd.apache.org/docs/2.4/en/howto/htaccess.html)
 
 <div class="obsidian-links" style="display: none;">
 

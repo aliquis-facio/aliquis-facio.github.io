@@ -34,9 +34,9 @@ tags: [TIL]
 ## Framework
 목적에 따라 효율적으로 구조를 짜놓은 개발 방식
 
-# 참고
-* [프레임워크(Framework), 라이브러리(Library), 플러그인(Plug-in), 모듈(Module)의 차이](https://doozi0316.tistory.com/entry/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%ACFramework-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%ACLibrary-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8Plug-in-%EB%AA%A8%EB%93%88Module%EC%9D%98-%EC%B0%A8%EC%9D%B4)
-* [모듈, 패키지, 라이브러리, 프레임워크의 차이](https://kevinitcoding.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%ACPython-%EA%B8%B0%EC%B4%88-%EB%AA%A8%EB%93%88-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%9D%98-%EC%B0%A8%EC%9D%B4)
-* [모듈, 패키지, 라이브러리](https://wikidocs.net/188205)
-* [모듈 VS 라이브러리 VS 프레임워크](https://joie-kim.github.io/Module-Library-Framework/)
-* [분할 컴파일](https://tcpschool.com/c/c_complie_module)
+# 출처
+- [Tistory, 「프레임워크(Framework), 라이브러리(Library), 플러그인(Plug-in), 모듈(Module)의 차이」](https://doozi0316.tistory.com/entry/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%ACFramework-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%ACLibrary-%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8Plug-in-%EB%AA%A8%EB%93%88Module%EC%9D%98-%EC%B0%A8%EC%9D%B4)
+- [Tistory, 「모듈, 패키지, 라이브러리, 프레임워크의 차이」](https://kevinitcoding.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%ACPython-%EA%B8%B0%EC%B4%88-%EB%AA%A8%EB%93%88-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EC%9D%98-%EC%B0%A8%EC%9D%B4)
+- [WikiDocs, 「모듈, 패키지, 라이브러리」](https://wikidocs.net/188205)
+- [GitHub Pages, 「모듈 VS 라이브러리 VS 프레임워크」](https://joie-kim.github.io/Module-Library-Framework/)
+- [Tcpschool, 「분할 컴파일」](https://tcpschool.com/c/c_complie_module)

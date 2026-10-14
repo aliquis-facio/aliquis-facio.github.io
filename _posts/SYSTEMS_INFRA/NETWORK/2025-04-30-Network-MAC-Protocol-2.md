@@ -54,7 +54,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
     - 장점: 충돌을 방지하고 효율적인 통제가 가능
     - 단점: 중앙 제어 장치가 필요하고, 대규모 네트워크에서는 비효율적일 수 있다.
 
-# 참고
+# 출처
 
 * *Data Communications and Networking with TCP/IP Protocol Suite, Sixth Edition* - Behrouz A, Forouzan
 

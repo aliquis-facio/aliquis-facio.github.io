@@ -17,9 +17,9 @@ tags: [TIL, WEB, CTF]
 
 # Image Uploader
 
-문제: [드림핵 Wargame Web 2 Image Uploader](https://dreamhack.io/wargame/challenges/2624)
+[출처] [Dreamhack, 「드림핵 Wargame Web 2 Image Uploader」](https://dreamhack.io/wargame/challenges/2624)
 
-업로드 파일 처리 흐름은 [File Upload 취약점](/File-Upload/)과 직접 연결된다.
+업로드 파일 처리 흐름은 [File Upload 취약점의 원인과 공격 시나리오]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2025-01-27-File-Upload %})와 직접 연결된다.
 
 ## 목차
 
@@ -28,7 +28,7 @@ tags: [TIL, WEB, CTF]
     1. [.htaccess](#htaccess)
     2. [upload.php](#uploadphp)
 3. [Payload](#payload)
-4. [참고](#참고)
+4. [출처](#출처)
 
 ---
 
@@ -212,6 +212,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
 
 ---
 
-## 참고
+## 출처
 
-- [CLOUDFLARE: 원격 코드 실행이란?](https://www.cloudflare.com/ko-kr/learning/security/what-is-remote-code-execution/)
+- [Cloudflare, 「원격 코드 실행이란?」](https://www.cloudflare.com/ko-kr/learning/security/what-is-remote-code-execution/)

@@ -23,6 +23,8 @@ tags: [WEB, PHP]
 
 # 로그인 로직 케이스
 
+로그인 이후의 상태 관리는 [쿠키와 세션]({% post_url DEVELOPMENT/WEB/2024-11-04-WEB-Cookie-and-Session-Cache %})에서 다룬다. 이 글의 문자열 결합 쿼리와 관련된 취약점 및 대응 방안은 [SQL Injection 정리]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection %})를 함께 참고한다.
+
 ## 1. 식별, 인증 동시
 
 user를 식별하는 것은 id를 확인하는 것이고, user가 자신이 맞는 지 인증하는 과정은 pw를 확인하는 것이다.
@@ -217,7 +219,7 @@ function login8($conn, $user_id, $user_pw) {
 }
 ```
 
-# 참고
+# 출처
 
 1. [PHP Hash 함수 사용](https://blog.naver.com/crehacktive3/221146696692)
 1. [SQL Injection](https://ko.wikipedia.org/wiki/SQL_%EC%82%BD%EC%9E%85)

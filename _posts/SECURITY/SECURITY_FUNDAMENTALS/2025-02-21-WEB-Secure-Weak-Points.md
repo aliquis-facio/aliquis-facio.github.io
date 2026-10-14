@@ -67,10 +67,10 @@ tags: [TIL, WEB, SECURITY]
 * 동적 메모리 할당을 위해 크기를 사용하는 경우 그 값이 음수가 아닌지 검사하여 버퍼 오버플로우를 예방하는 형태로 소스 코드 변경
 * 버퍼 오버플로우를 점검하는 웹 스캐닝 툴을 이용하여 주기적으로 점검검
 
-### 참고
+### 출처
 
-* [버퍼 오버플로우 공격(Buffer Overfloaw Attack) 원리와 개념](https://onecoin-life.com/31)
-* [버퍼 오버플로](https://namu.wiki/w/%EB%B2%84%ED%8D%BC%20%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C)
+- [Onecoin Life, 「버퍼 오버플로우 공격(Buffer Overfloaw Attack) 원리와 개념」](https://onecoin-life.com/31)
+- [Namu, 「버퍼 오버플로」](https://namu.wiki/w/%EB%B2%84%ED%8D%BC%20%EC%98%A4%EB%B2%84%ED%94%8C%EB%A1%9C)
 
 ## 2. 포맷스트링(Format String), FS
 
@@ -88,9 +88,9 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 * 웹 서버 프로그램 최신 보안패치 적용
 * 웹 사이트에서 사용자가 입력한 파라미터 값 처리 중에 발생한 경우 사용자 입력 값의 유효성에 대한 검증 로직을 구현
 
-### 참고
+### 출처
 
-* [버퍼 오버플로우 공격 - 포맷 스트링 공격](https://m.blog.naver.com/wnrjsxo/221267600469)
+- [Naver, 「버퍼 오버플로우 공격 - 포맷 스트링 공격」](https://m.blog.naver.com/wnrjsxo/221267600469)
 
 ## 3. <abbr title="Lightweight Directory Access Protocol">LDAP</abbr> 인젝션(<abbr title="Lightweight Directory Access Protocol">LDAP</abbr> Injection), LI
 
@@ -169,10 +169,10 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 
 * 웹 방화벽에 LDAP 관련 특수문자를 필터링하도록 룰셋 적용
 
-### 참고
+### 출처
 
-* [LDAP injection](https://portswigger.net/kb/issues/00100500_ldap-injection)
-* [LDAP DNs and RDNs](https://ldap.com/ldap-dns-and-rdns/)
+- [PortSwigger, 「LDAP injection」](https://portswigger.net/kb/issues/00100500_ldap-injection)
+- [LDAP.com, 「LDAP DNs and RDNs」](https://ldap.com/ldap-dns-and-rdns/)
 
 ## 4. 운영체제 명령 실행(OS Command Execution), OC
 
@@ -196,10 +196,10 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 * 웹 서버 및 웹 애플리케이션 서버는 공개적으로 알려진 취약점이 제거된 상위 버전으로 업데이트해야 함
 * 클라이언트에서 전송되는 요청(Request) 값에 대한 엄격한 필터링 적용 및 OGNL(Object Graph Navigation Language) 표현식 사용을 금지하여 원격에서 임의의 명령어가 실행되지 않도록 구현해야 함
 
-### 참고
+### 출처
 
-* [Search CVE List](https://cve.mitre.org/cve/search_cve_list.html)
-* [Search Vulnerability Database](https://nvd.nist.gov/vuln/search)
+- [MITRE CVE, 「Search CVE List」](https://cve.mitre.org/cve/search_cve_list.html)
+- [NVD, 「Search Vulnerability Database」](https://nvd.nist.gov/vuln/search)
 
 ## 5. <abbr title="Structured Query Language">SQL</abbr> 인젝션(<abbr title="Structured Query Language">SQL</abbr> Injection), SI
 
@@ -228,9 +228,9 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 * 웹 방화벽에 인젝션 공격 관련
 * 문자열 유효성 검증 로직 구현
 
-### 참고
+### 출처
 
-* [JSP, PHP, ASP 개념 / 장단점 / 비교](https://velog.io/@bcl0206/JSP-PHP-ASP)
+- [Velog, 「JSP, PHP, ASP 개념 / 장단점 / 비교」](https://velog.io/@bcl0206/JSP-PHP-ASP)
 
 ## 6. <abbr title="Server Side Includes">SSI</abbr> 인젝션(<abbr title="Server Side Includes">SSI</abbr> Injection), SS
 
@@ -250,9 +250,9 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 * 필터링 해야 하는 대상은 GET 질의 문자열, POST 데이터, 쿠키, URL, 그리고 일반적으로 브라우저와 웹 서버가 주고받는 모든 데이터를 포함하며, 아래는 특수문자에 대한 Entity 형태를 표시한 것임
 * 웹 서버의 SSI 기능을 사용하지 않거나, 웹 방화벽에 특수문자를 필터링하도록 룰셋 적용
 
-### 참고
+### 출처
 
-* [SSI 인젝션 개념 정리 및 실습](https://mokpo.tistory.com/390)
+- [Tistory, 「SSI 인젝션 개념 정리 및 실습」](https://mokpo.tistory.com/390)
 
 ## 7. XPath 인젝션(XPath Injection), XI
 
@@ -268,9 +268,9 @@ C언어로 만드는 프로그램 중 변수의 값을 출력하거나 입력받
 
 XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입력 값 검증을 통해 필요문자만을 받아들이게 함 `(`, `)`, `=`, `\`, `[`, `]`, `:`, `,`, `*`, `/` 등 XPath 쿼리를 파괴하는 특수문자를 입력하지 못하게 막아야 하며, 특정 특수문자만을 필터링하는 것이 아닌 허용된 문자 이외의 모든 입력을 허용하지 않아야 함
 
-### 참고
+### 출처
 
-* [XPath Injection](https://www.imperva.com/learn/application-security/xpath-injection/)
+- [Imperva, 「XPath Injection」](https://www.imperva.com/learn/application-security/xpath-injection/)
 
 ## 8. 디렉터리 인덱싱(Directory Indexing), DI
 
@@ -286,9 +286,9 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 
 * 웹 서버 환경설정에서 디렉터리 인덱싱 기능 제거
 
-### 참고
+### 출처
 
-* [4. 디렉토리 인덱싱 취약점](https://whitesnake1004.tistory.com/134)
+- [Tistory, 「4. 디렉토리 인덱싱 취약점」](https://whitesnake1004.tistory.com/134)
 
 ## 9 정보 누출(Information Leakage), IL
 
@@ -314,7 +314,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 로그인 실패 시 반환되는 에러 메시지는 특정 ID의 가입 여부를 식별할 수 없게 구현 (e.g. 가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.)
 * 일반적으로 웹에서 발생하는 에러 메시지는 400, 500번대의 에러 코드를 반환하는데 이러한 에러 코드에 대해 별도의 에러 페이지로 redirect 하거나 적절한 에러처리 루틴을 설정하여 처리되도록 함(전체적인 통합 에러 페이지를 작성한 후 모든 에러 코드에 대해 통합 에러 페이지로 redirect 되도록 설정)
 
-### 참고
+### 출처
 
 ## 10. 악성 콘텐츠(), CS
 
@@ -332,7 +332,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 게시판의 글 등록 및 파일 업로드 기능에 Flash 파일이나 avi 동영상 파일, exe 실행 파일 등 악성코드가 포함될 수 있는 콘텐츠를 사입 또는 업로드 하지 못하게 필터링 적용
 * 주기적으로 업로드된 파일을 대상으로 바이러스 검사 실시
 
-### 참고
+### 출처
 
 ## 11. 크로스사이트 스크립팅(<abbr title="Cross Site Scripting">XSS</abbr>), XS
 
@@ -512,7 +512,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
         </tbody>
     </table>
 
-### 참고
+### 출처
 
 ## 12. 약한 문자열 강도(Brute Force), BF
 
@@ -539,7 +539,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
     1. 최근 사용되었던 패스워드 재사용 금지
 * 로그인 시 패스워드 입력 실패가 일정 횟수(3 ~ 5회) 이상 초과할 경우 관리자에게 통보 및 계정 잠금
 
-### 참고
+### 출처
 
 ## 13. 불충분한 인증(Insufficient Authentication), IA
 
@@ -558,7 +558,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 접근제어가 필요한 모든 페이지에 통제수단(로그인 체크 및 권한 체크)을 구현해야 하며 특히, 하나의 프로세스가 여러 개의 페이지 또는 모듈로 이루어져 있을 때 권한 체크가 누락되는 경우를 방지하기 위해서 공통 모듈을 사용하는 것을 권장함
 * 인증 과정을 처리하는 부분에 Client Side Script(Javascript, VBScript 등)를 사용하면 사용자가 임의로 수정할 수 있으므로 Server Side Script(PHP, ASP, JSP)를 통하여 인증 및 필터링 과정을 수행함
 
-### 참고
+### 출처
 
 ## 14. 취약한 패스워드 복구(Password Recorvery), PR
 
@@ -576,7 +576,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 사용자 패스워드를 발급해주거나 확인해줄 때 웹 사이트 화면에 바로 출력해주는 것이 아니라 인증된 사용자 메일이나 SMS로 전송해주어야 함
 * 패스워드 재발급 검증 실패에 대한 임계값을 설정하여 일정 횟수 이상 실패한 경우 다른 방식으로 패스워드 찾기 기능을 제공하여야 한다. 검증 후 기존의 패스워드가 아닌 임시 패스워드를 발급하도록 설계해야 하며, 사용자가 임시 패스워드를 발급받은 즉시 새로운 패스워드로 재설정하도록 구현하여야 함
 
-### 참고
+### 출처
 
 ## 15. 크로스사이트 리퀘스트 변조(<abbr title="Cross Site Request Forgery">CSRF</abbr>), CF
 
@@ -598,7 +598,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * HTML Editor 사용으로 인한 상기사항 조치 불가 시, 서버 사이드/서블릿/DAO(Data Access Object) 영역에서 조치하도록 설계
 * XSS 조치 방안 참조
 
-### 참고
+### 출처
 
 ## 16. 세션 예측(Session Prediction), SE
 
@@ -617,7 +617,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 단순 조합보다는 상용 웹 서버나 웹 애플리케이션 플랫폼에서 제공하는 세션 ID를 사용하고, 가능하다면 맞춤형 세션 관리 체계를 권고함  
 * 세션 ID는 로그인 시마다 추측할 수 없는 새로운 세션 ID로 발급하여야 함
 
-### 참고
+### 출처
 
 ## 17. 불충분한 인가(Insufficient Authorization), IN
 
@@ -634,7 +634,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 접근제어가 필요한 중요 페이지는 세션을 통한 인증 등 통제수단을 구현하여 인가된 사용자 여부를 검증 후 해당 페이지에 접근할 수 있도록 함
 * 페이지별 권한 매트릭스를 작성하여 접근제어가 필요한 모든 페이지에서 권한 체크가 이뤄지도록 구현하여야 함
 
-### 참고
+### 출처
 
 ## 18. 불충분한 세션 만료(Insufficient Session Close), SC
 
@@ -650,7 +650,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 
 세션 타임아웃 구현 시 타임아웃 시간은 10분으로 설정할 것을 권고함
 
-### 참고
+### 출처
 
 ## 19. 세션 고정(Session Fixation), SF
 
@@ -666,7 +666,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 
 로그인할 때마다 예측 불가능한 새로운 세션 ID를 발급받도록 해야 하고 기존 세션 ID는 파기해야 함
 
-### 참고
+### 출처
 
 ## 20. 자동화 공격(Automation Attack), AU
 
@@ -684,7 +684,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 
 * 자동화 공격을 시도하면 짧은 시간에 다량의 패킷(양)이 전송되므로 이를 공격으로 감지하고 방어할 수 있는 IDS/IPS 시스템을 구축하여야 함. 서버에 요청되는 패킷(양)의 모니터링이 불가능한 경우 적시에 적절한 대응이 어려움
 
-### 참고
+### 출처
 
 ## 21. 프로세스 검증 누락(Process Verification Missing), PV
 
@@ -702,7 +702,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 인증이 필요한 모든 페이지에 대해 유효 세션임을 확인하는 프로세스 및 주요 정보 페이지에 접근 요청자의 권한 검증 로직을 적용함
 * 유효 세션의 검증 및 페이지에 대한 접근 권한을 Client Side Script에 의존할 경우 사용자가 임의로 수정할 수 있으므로 Server Side Script로 구현된 프로세스를 사용
 
-### 참고
+### 출처
 
 ## 22. 파일 업로드(File Upload), FU
 
@@ -726,7 +726,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 외부 사용자가 첨부 파일을 이용하여 권한을 획득할지라도 최소한의 권한만을 사용할 수 있도록 함
 * 업로드된 디렉터리에서 실행 권한을 제거하는 방법은 임시적이기는 하지만 소스 코드의 수정 없이 간단히 수행될 수 있음
 
-### 참고
+### 출처
 
 ## 23. 파일 다운로드(File Download), FD
 
@@ -756,7 +756,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
     | \ | 운영환경에 따른 Path 접근 확인 |
     | % | UTF 인코딩 파라미터 |
 
-### 참고
+### 출처
 
 ## 24. 관리자 페이지 노출(Administrator Page Exposure), AE
 
@@ -775,7 +775,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 관리자 페이지 이외에도 특정 사용자만 접근 가능한 페이지들은 정상적인 프로세스에 따라 접근할 수 있도록 페이지마다 세션 검증이 필요함
 * 웹 방화벽을 이용하여 특정 IP만 접근 가능할 수 있도록 룰셋 적용
 
-### 참고
+### 출처
 
 ## 25. 경로 추적(Path Trace), PT
 
@@ -795,7 +795,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * PHP를 사용하는 경우 php.ini에서 magic_quotes_gpc를 On으로 설정하여 .\\./와 같은 역슬러시 문자 입력 시 치환되도록 설정
 * 웹 사이트에서 사용되는 파라미터 값 대상으로 특수 문자를 필터링하도록 웹 방화벽 룰셋 적용
 
-### 참고
+### 출처
 
 ## 26. 위치 공개(Public Location), PL
 
@@ -837,7 +837,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 웹 서버 설정 후 디폴트 페이지와 디폴트 디렉터리 및 Banner를 삭제하여 Banner Grab에 의한 시스템 정보 유출을 차단함
 * Apache, IIS, Tomcat 등 각 웹 서버 설정 시 함께 제공되는 샘플 디렉터리 및 매뉴얼 디렉터리, 샘플 애플리케이션을 삭제하여 보안 위험을 최소화함
 
-### 참고
+### 출처
 
 ## 27. 데이터 평문 전송(), SN
 
@@ -855,7 +855,7 @@ XPath 쿼리에 사용자가 값을 입력할 수 있는 경우, 엄격한 입�
 * 쿠키와 같이 클라이언트 측에서 노출되는 곳에 비밀번호, 인증인식 값, 개인정보 등의 정보를 기록하지 않음
 * 암호화 전송 시 프로토콜 설계의 결함이 있는 SSLv2, SSLv3, TLSv1.0, TLSv1.1은 비활성화 필수, TLSv1.2 이상 사용을 권장함
 
-### 참고
+### 출처
 
 ## 28. 쿠키 변조(), CC
 
@@ -878,7 +878,7 @@ Set-Cookie: secure, HttpOnly
 Set-Cookie: domain=app.mysite.com
 ```
 
-### 참고
+### 출처
 
 <div class="obsidian-links" style="display: none;">
 

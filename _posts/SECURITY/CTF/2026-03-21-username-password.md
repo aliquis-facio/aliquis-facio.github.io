@@ -25,7 +25,7 @@ tags: [TIL, WEB, CTF]
     1. [`/report` 인증 우회](#31-report-인증-우회)
     1. [`/report`에서 관리자 비밀번호 유출](#32-report에서-관리자-비밀번호-유출)
     1. [유출한 admin 계정으로 `/admin` 접근](#33-유출한-admin-계정으로-admin-접근)
-1. [참고](#참고)
+1. [출처](#출처)
 
 ---
 
@@ -184,7 +184,7 @@ authorizer: (username, password) => users[username] == password
 
 ---
 
-## 참고
+## 출처
 
 - [[JS] 함수 3](/JavaScript-Function-3/)
 - [[JS] 함수 5](/JavaScript-Function-5/)

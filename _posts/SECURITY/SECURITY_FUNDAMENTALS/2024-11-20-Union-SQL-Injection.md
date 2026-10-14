@@ -13,6 +13,9 @@ tags: [TIL, WEB, DATABASE, SECURITY]
 ---
 
 # Union SQL Injection
+
+전체 공격 유형과 대응 방안은 [SQL Injection 정리]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-14-SQL-Injection %})에서 다룬다. 결과가 화면에 직접 출력되지 않는 경우는 [Blind SQL Injection]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2024-11-28-Blind-SQL-Injection %})과 비교해 볼 수 있다.
+
 ## Union SQL Injection이란?
 : 웹페이지에 데이터가 나오는 경우에서 데이터를 추출하는 방법
 union

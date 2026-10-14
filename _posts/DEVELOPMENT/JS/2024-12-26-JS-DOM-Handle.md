@@ -209,16 +209,16 @@ iframeDoc.document.getElementById('');
 
 ---
 
-## 참고
+## 출처
 
-* [문서 객체 모델(DOM)](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model)
-* [문서 객체 모델 DOM 과 자바스크립트 JavaScriptㅣ생성 방식 및 접근 방법](https://www.codestates.com/blog/content/dom-javascript)
-* [[웹 개발 기초 자바스크립트] 7. DOM이란?](https://velog.io/@hyhy9501/%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EC%B4%88-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-7.-DOM%EC%9D%B4%EB%9E%80)
-* [[JavaScript] 자바스크립트로 DOM 접근하기](https://lifejusik1004.tistory.com/entry/JavaScript-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A1%9C-DOM-%EC%A0%91%EA%B7%BC%ED%95%98%EA%B8%B0)
-* [EventTarget: addEventListener() method](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-* [dom트리 <script></script> 순서 질문입니다.](https://www.codeit.kr/community/questions/UXVlc3Rpb246NjEwN2Y2MTAzYjQ4NzM0MGYwZjM2NTAz)
-* [What's the difference between HTML <head> and <body> tags?](https://stackoverflow.com/questions/6303490/whats-the-difference-between-html-head-and-body-tags)
-* [[JavaScript] JavaScript 문서 로딩 순서](https://creative103.tistory.com/45)
-* [HTML DOM Document write()](https://www.w3schools.com/jsref/met_doc_write.asp)
-* [HTMLIFrameElement: contentDocument property](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument)
-* [[JS] iframe 내부 접근](https://velog.io/@sjc0829/JS-iframe-%EB%82%B4%EB%B6%80-%EC%A0%91%EA%B7%BC)
+- [MDN, 「문서 객체 모델(DOM)」](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model)
+- [Codestates, 「문서 객체 모델 DOM 과 자바스크립트 JavaScriptㅣ생성 방식 및 접근 방법」](https://www.codestates.com/blog/content/dom-javascript)
+- [Velog, 「[웹 개발 기초 자바스크립트] 7. DOM이란?」](https://velog.io/@hyhy9501/%EC%9B%B9-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EC%B4%88-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-7.-DOM%EC%9D%B4%EB%9E%80)
+- [Tistory, 「[JavaScript] 자바스크립트로 DOM 접근하기」](https://lifejusik1004.tistory.com/entry/JavaScript-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EB%A1%9C-DOM-%EC%A0%91%EA%B7%BC%ED%95%98%EA%B8%B0)
+- [MDN, 「EventTarget: addEventListener() method」](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [Codeit, 「dom트리 <script></script> 순서 질문입니다.」](https://www.codeit.kr/community/questions/UXVlc3Rpb246NjEwN2Y2MTAzYjQ4NzM0MGYwZjM2NTAz)
+- [Stack Overflow, 「What's the difference between HTML <head> and <body> tags?」](https://stackoverflow.com/questions/6303490/whats-the-difference-between-html-head-and-body-tags)
+- [Tistory, 「[JavaScript] JavaScript 문서 로딩 순서」](https://creative103.tistory.com/45)
+- [W3Schools, 「HTML DOM Document write()」](https://www.w3schools.com/jsref/met_doc_write.asp)
+- [MDN, 「HTMLIFrameElement: contentDocument property」](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument)
+- [Velog, 「[JS] iframe 내부 접근」](https://velog.io/@sjc0829/JS-iframe-%EB%82%B4%EB%B6%80-%EC%A0%91%EA%B7%BC)

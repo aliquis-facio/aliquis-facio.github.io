@@ -69,7 +69,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 ### 4.1. Text
 
-![출처: https://www.unicode.org/charts/](/_image/2025-03-05-00-00-02.png)
+![이미지](/_image/2025-03-05-00-00-02.png)
+<small>[출처] [Unicode, 「charts」](https://www.unicode.org/charts/)</small>
 
 * text는 0과 1로 이뤄진 일련의 bit들이다.
 * text symbols마다 다른 bit pattern들을 가지고 있다.
@@ -77,14 +78,16 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 ### 4.2. Numbers
 
-![출처: https://velog.io/@k_k_s__h/%EC%9D%B4%EC%A7%84%EC%88%98](/_image/2025-03-05-00-00-03.png)
+![이미지](/_image/2025-03-05-00-00-03.png)
+<small>[출처] [Velog, 「이진수」](https://velog.io/@k_k_s__h/%EC%9D%B4%EC%A7%84%EC%88%98)</small>
 
 * numbers 또한 0과 1로 이뤄진 일련의 bit들이다.
 * number는 이진수로 변환되어 표현된다.
 
 ### 4.3. Images
 
-![출처: https://www.megavoxels.com/learn/how-to-make-a-pixel-art-watermelon/](/_image/2025-03-05-00-00-04.png)
+![이미지](/_image/2025-03-05-00-00-04.png)
+<small>[출처] [Mega Voxels, 「how to make a pixel art watermelon」](https://www.megavoxels.com/learn/how-to-make-a-pixel-art-watermelon/)</small>
 
 * images은 pixels(picture elements)의 행렬 형태로 구성되어 있다.
 * color images를 표현하는 방법
@@ -93,7 +96,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 ### 4.4. Audio
 
-![출처: https://myweb.liu.edu/jmeschi/audweb/audio.htm](/_image/2025-03-05-00-00-05.png)
+![이미지](/_image/2025-03-05-00-00-05.png)
+<small>[출처] [Long Island University, 「audio.htm」](https://myweb.liu.edu/jmeschi/audweb/audio.htm)</small>
 
 * Audio는 소리나 음악을 녹음한 것이나 방송한 것을 말한다
 * Audio는 text, numbers, images와는 다르게 자연스럽다. 끊어진 data가 아니라 연속적인 data이다.
@@ -101,7 +105,8 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
 
 ### 4.5. Video
 
-![출처: https://thescriptlab.com/blogs/36023-what-was-the-first-movie-ever-made/](/_image/2025-03-05-00-00-06.png)
+![이미지](/_image/2025-03-05-00-00-06.png)
+<small>[출처] [The Script Lab, 「36023 what was the first movie ever made」](https://thescriptlab.com/blogs/36023-what-was-the-first-movie-ever-made/)</small>
 
 * Video는 사진이나 영상을 녹화한 것이나 방송한 것을 말한다
 

@@ -20,6 +20,8 @@ tags:
 
 # 한글 텍스트 자연어 처리 실습 2
 
+[한글 텍스트 자연어 처리 실습 1]({% post_url AI_AND_DATA/AI/2025-03-26-Korean-Text-NLP-Prac %})의 데이터 준비 과정에서 이어지는 모델 학습 기록이다. 배경 개념은 [자연어 처리(NLP) 개요]({% post_url AI_AND_DATA/AI/2025-03-25-NLP %})에서 확인할 수 있다.
+
 ## 목차
 
 1. [활용 데이터셋 소개](#1-활용-데이터셋-소개)
@@ -48,14 +50,14 @@ tags:
     1. [5권](#5권)
     1. [6권](#6권)
     1. [7권](#7권)
-1. [참고](#참고)
+1. [출처](#출처)
 
 ---
 
 ## 1. 활용 데이터셋 소개
 
 emotion_korTran.data  
-출처: [Naver Cafe - nlp study: 감정분석과 감정분석 말뭉치](https://cafe.naver.com/nlpk/335)
+[출처] [Naver, 「감정분석과 감정분석 말뭉치」](https://cafe.naver.com/nlpk/335)
 
 ## 2. 환경설정 (Google Colab)
 
@@ -954,17 +956,17 @@ for (path, dirs, files) in os.walk(root_path):
 
 ---
 
-# 참고
+# 출처
 
-* [Dataset.map](https://velog.io/@gsgh3016/Dataset.map)
-* [[RN] ONNX(Open Neural Network Exchange) 이해하기 -1: React Native 활용](https://adjh54.tistory.com/203)
-* [전이학습(Transfer learning)과 파인튜닝(Fine tuning)](https://hi-ai0913.tistory.com/32)
-* [[Python, KoBERT] 다중 감정 분류 모델 구현하기 (huggingface로 이전 방법 O)](https://hoit1302.tistory.com/159)
-* [[KoBERT] SKTBrain의 KoBERT 공부하기](https://nowolver.tistory.com/13)
-* [1.허깅페이스란?](https://jaeyoon-95.tistory.com/222)
-* [Hugging Face: KoBERT](https://huggingface.co/monologg/kobert)
-* [[인지과학] 사람의 감정을 어떻게 정의할 수 있을까?](https://steemit.com/kr-science/@man-in-the-moon/5sboad)
-* [[Python] 히트맵 그리기 (Heatmap by python matplotlib, seaborn, pandas)](https://rfriend.tistory.com/419)
+- [Velog, 「Dataset.map」](https://velog.io/@gsgh3016/Dataset.map)
+- [Tistory, 「[RN] ONNX(Open Neural Network Exchange) 이해하기 -1: React Native 활용」](https://adjh54.tistory.com/203)
+- [Tistory, 「전이학습(Transfer learning)과 파인튜닝(Fine tuning)」](https://hi-ai0913.tistory.com/32)
+- [Tistory, 「[Python, KoBERT] 다중 감정 분류 모델 구현하기 (huggingface로 이전 방법 O)」](https://hoit1302.tistory.com/159)
+- [Tistory, 「[KoBERT] SKTBrain의 KoBERT 공부하기」](https://nowolver.tistory.com/13)
+- [Tistory, 「1.허깅페이스란?」](https://jaeyoon-95.tistory.com/222)
+- [Hugging Face, 「KoBERT」](https://huggingface.co/monologg/kobert)
+- [Steemit, 「[인지과학] 사람의 감정을 어떻게 정의할 수 있을까?」](https://steemit.com/kr-science/@man-in-the-moon/5sboad)
+- [Tistory, 「[Python] 히트맵 그리기 (Heatmap by python matplotlib, seaborn, pandas)」](https://rfriend.tistory.com/419)
 
 <div class="obsidian-links" style="display: none;">
 

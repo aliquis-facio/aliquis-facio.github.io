@@ -40,7 +40,7 @@ tags: [COMPUTER NETWORK, NETWORK, TIL]
     1. [장단점](#52-장단점)
         1. [장점](#521-장점)
         1. [단점](#522-단점)
-1. [참고](#참고)
+1. [출처](#출처)
 
 ---
 
@@ -280,12 +280,12 @@ CSMA/CA: 충돌 회피를 위한 프로토콜로, 주로 무선 LAN에서 사용
 
 ---
 
-# 참고
+# 출처
 
-* [정보통신기술용어해설: Contention Method 경쟁 방식](http://www.ktword.co.kr/test/view/view.php?no=4902)
-* [velog: [데이터통신] ALOHA](https://velog.io/@seokjun0915/%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%86%B5%EC%8B%A0-ALOHA)
-* [velog: 기초컴퓨터네트워크 25 (Medium Access Control, Random Access Protocols, ALOHA, CSMA)](https://velog.io/@tonyhan18/%EA%B8%B0%EC%B4%88%EC%BB%B4%ED%93%A8%ED%84%B0%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-25)
-* [ktword: CSMA/CA](http://www.ktword.co.kr/test/view/view.php?no=2038)
+- [출처] [정보통신기술용어해설, 「Contention Method 경쟁 방식」](http://www.ktword.co.kr/test/view/view.php?no=4902)
+- [출처] [Velog, 「[데이터통신] ALOHA」](https://velog.io/@seokjun0915/%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%86%B5%EC%8B%A0-ALOHA)
+- [출처] [Velog, 「기초컴퓨터네트워크 25 (Medium Access Control, Random Access Protocols, ALOHA, CSMA)」](https://velog.io/@tonyhan18/%EA%B8%B0%EC%B4%88%EC%BB%B4%ED%93%A8%ED%84%B0%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-25)
+- [출처] [정보통신기술용어해설, 「CSMA/CA」](http://www.ktword.co.kr/test/view/view.php?no=2038)
 * *Data Communications and Networking with TCP/IP Protocol Suite, Sixth Edition* - Behrouz A, Forouzan
 
 <div class="obsidian-links" style="display: none;">

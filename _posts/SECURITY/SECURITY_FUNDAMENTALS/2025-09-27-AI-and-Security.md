@@ -141,7 +141,7 @@ AI의 역할
 
 ---
 
-## 참고
+## 출처
 
-* [Fortinet, _Artificial Intelligence in Cybersecurity_, Fortinet Resources, 2024.](https://www.fortinet.com/kr/resources/cyberglossary/artificial-intelligence-in-cybersecurity)
-* [IBM, _What is AI Security?_, IBM Think, 2024.](https://www.ibm.com/kr-ko/think/topics/ai-security)
+- [Fortinet, 「Fortinet, _Artificial Intelligence in Cybersecurity_, Fortinet Resources, 2024.」](https://www.fortinet.com/kr/resources/cyberglossary/artificial-intelligence-in-cybersecurity)
+- [IBM, 「IBM, _What is AI Security?_, IBM Think, 2024.」](https://www.ibm.com/kr-ko/think/topics/ai-security)

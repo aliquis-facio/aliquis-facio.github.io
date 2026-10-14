@@ -19,6 +19,8 @@ tags:
 
 # 토큰화(Tokenization)
 
+[자연어 처리의 기본 개념]({% post_url AI_AND_DATA/AI/2025-03-25-NLP %})에서 다룬 전처리 과정 중 토큰화에 집중한 글이다. 한글 데이터를 불러와 처리하는 전체 흐름은 [한글 텍스트 자연어 처리 실습 1]({% post_url AI_AND_DATA/AI/2025-03-26-Korean-Text-NLP-Prac %})에서 확인할 수 있다.
+
 토큰화(tokenization): 주어진 <abbr title="말뭉치">코퍼스(corpus)</abbr>에서 토큰(token)이라 불리는 단위로 나누는 작업. 토큰의 단위가 상황에 따라 다르지만, 보통 의미있는 단위로 토큰을 정의함.
 
 ## 1. 단어 토큰화(Word Tokenization)
@@ -137,11 +139,11 @@ print('꼬꼬마 명사 추출 :',kkma.nouns("열심히 코딩한 당신, 연휴
 
 ## 출처
 
-* [okt github](https://github.com/open-korean-text/open-korean-text)
-* [KoNLPy tag Package](https://konlpy.org/en/latest/api/konlpy.tag/)
-* [텍스트 전처리(Text preprocessing)](https://wikidocs.net/21694)
-* [정규표현식(Regular Expression) with 파이썬](https://jh2021.tistory.com/8)
-* [한국어 소설 텍스트를 위한 자연어처리 라이브러리](https://github.com/storidient/KoBookNLP)
+- [GitHub, 「okt github」](https://github.com/open-korean-text/open-korean-text)
+- [KoNLPy, 「KoNLPy tag Package」](https://konlpy.org/en/latest/api/konlpy.tag/)
+- [WikiDocs, 「텍스트 전처리(Text preprocessing)」](https://wikidocs.net/21694)
+- [Tistory, 「정규표현식(Regular Expression) with 파이썬」](https://jh2021.tistory.com/8)
+- [GitHub, 「한국어 소설 텍스트를 위한 자연어처리 라이브러리」](https://github.com/storidient/KoBookNLP)
 
 <div class="obsidian-links" style="display: none;">
 

@@ -27,7 +27,7 @@ tags: [WEB]
         1. [URL과 www.naver.com과는 너무 다르다](#222-url과-wwwnavercom과는-너무-다르다)
         1. [Web Root](#223-web-root)
         1. [index.html](#224-indexhtml)
-1. [참고](#참고)
+1. [출처](#출처)
 
 ---
 
@@ -139,24 +139,24 @@ c.txt 파일 열기 위해서 url을 어케 입력해야 할까?
 
 ---
 
-## 참고
+## 출처
 
-- [웹이란?](https://www.tcpschool.com/webbasic/www)
-- [웹 서버와 WAS의 차이를 쉽게 알아보자](https://codechasseur.tistory.com/25)
-- [APM: Apache, PHP, MySQL의 역할과 상호작용 이해하기](https://selfinvestfriends.tistory.com/160/)
-- [아파치 HTTP 서버](https://namu.wiki/w/%EC%95%84%ED%8C%8C%EC%B9%98%20HTTP%20%EC%84%9C%EB%B2%84)
-- [APM(Apache, Php, MySql)란?](https://gwonbookcase.tistory.com/25/)
-- [MySQL이란 무엇인가요?](https://cloud.google.com/mysql?hl=ko)
-- [URI와 URL, 어떤 차이점이 있나요?](https://www.elancer.co.kr/blog/detail/74)
-- [URL이란?](https://developer.mozilla.org/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- [URL](https://ko.wikipedia.org/wiki/URL)
-- [포트](https://namu.wiki/w/%ED%8F%AC%ED%8A%B8)
-- [포트 번호 (PORT NUMBER)](https://m.blog.naver.com/hanmaru64/140188138042)
-- [포트(PORT)란?](https://sangbeomkim.tistory.com/101)
-- [포트(Port) 개념 정리 및 종류](https://ittrue.tistory.com/185)
-- [NAT(Network Address Translation) 정보](https://www.ibm.com/docs/ko/networkmanager/4.2.0?topic=discoveries-about-network-address-translation)
-- [NAT(Network Address Translation) - 네트워크 주소 변환](https://www.stevenjlee.net/2020/07/11/%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-nat-network-address-translation-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98/)
-- [(생활코딩) 웹서버와 http](https://developer-yeony.tistory.com/22)
+- [Tcpschool, 「웹이란?」](https://www.tcpschool.com/webbasic/www)
+- [Tistory, 「웹 서버와 WAS의 차이를 쉽게 알아보자」](https://codechasseur.tistory.com/25)
+- [Tistory, 「APM: Apache, PHP, MySQL의 역할과 상호작용 이해하기」](https://selfinvestfriends.tistory.com/160/)
+- [Namu, 「아파치 HTTP 서버」](https://namu.wiki/w/%EC%95%84%ED%8C%8C%EC%B9%98%20HTTP%20%EC%84%9C%EB%B2%84)
+- [Tistory, 「APM(Apache, Php, MySql)란?」](https://gwonbookcase.tistory.com/25/)
+- [Google Cloud, 「MySQL이란 무엇인가요?」](https://cloud.google.com/mysql?hl=ko)
+- [Elancer, 「URI와 URL, 어떤 차이점이 있나요?」](https://www.elancer.co.kr/blog/detail/74)
+- [MDN, 「URL이란?」](https://developer.mozilla.org/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Wikipedia, 「URL」](https://ko.wikipedia.org/wiki/URL)
+- [Namu, 「포트」](https://namu.wiki/w/%ED%8F%AC%ED%8A%B8)
+- [Naver, 「포트 번호 (PORT NUMBER)」](https://m.blog.naver.com/hanmaru64/140188138042)
+- [Tistory, 「포트(PORT)란?」](https://sangbeomkim.tistory.com/101)
+- [Tistory, 「포트(Port) 개념 정리 및 종류」](https://ittrue.tistory.com/185)
+- [IBM, 「NAT(Network Address Translation) 정보」](https://www.ibm.com/docs/ko/networkmanager/4.2.0?topic=discoveries-about-network-address-translation)
+- [Stevenjlee, 「NAT(Network Address Translation) - 네트워크 주소 변환」](https://www.stevenjlee.net/2020/07/11/%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-nat-network-address-translation-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EC%A3%BC%EC%86%8C-%EB%B3%80%ED%99%98/)
+- [Tistory, 「(생활코딩) 웹서버와 http」](https://developer-yeony.tistory.com/22)
 
 <div class="obsidian-links" style="display: none;">
 

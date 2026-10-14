@@ -24,13 +24,15 @@ tags: [WEB, PHP]
 
 # Q1. 어떻게 로그인을 유지할 수 있을까?
 
-HTTP는 Connectionless, Stateless한 특징을 가지고 있다.
+[HTTP]({% post_url SYSTEMS_INFRA/NETWORK/2024-10-23-HTTP %})는 Connectionless, Stateless한 특징을 가지고 있다.
 > **Connectionless**: 클라이언트가 요청을 한 후 응답을 받으면 그 연결을 끊어 버리는 특징  
 > **Stateless**: 통신이 끝나면 상태를 유지하지 않는 특징.
 
 이 두 특징으로 인해 원래라면 사이트에 접속할 때마다 로그인을 해야 한다.  
 하지만 로그인 유지를 하겠다고 하면 다음에 접속할 때도 로그인이 유지가 되어 있다.  
 과연 어떻게 로그인을 유지할 수 있는 것일까?
+
+로그인 시점의 아이디·비밀번호 검증은 [로그인 로직]({% post_url DEVELOPMENT/WEB/2024-11-03-WEB-Login-Logic %})에서 다룬다. 인증 상태를 이용하는 요청 위조는 [CSRF 개념과 대응 방안]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2025-01-08-CSRF-Outline %})으로 이어진다.
 
 # 1. 쿠키(Cookie)
 

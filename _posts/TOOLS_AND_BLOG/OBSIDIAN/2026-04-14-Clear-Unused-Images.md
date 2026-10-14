@@ -43,7 +43,7 @@ tags:
    2. [공용 이미지 폴더를 제외하지 않는 경우](#52-공용-이미지-폴더를-제외하지-않는-경우)
    3. [“사용 중” 기준을 잘못 이해하는 경우](#53-사용-중-기준을-잘못-이해하는-경우)
    4. [실행 전에 로그 옵션을 확인하지 않는 경우](#54-실행-전에-로그-옵션을-확인하지-않는-경우)
-6. [참고](#참고)
+6. [출처](#출처)
 
 ---
 
@@ -196,6 +196,6 @@ README에서도 이 옵션은 되돌릴 수 없다고 안내하고 있다. 처�
 
 ---
 
-## 참고
+## 출처
 
-- [GitHub: Clear Unused Images README.md](https://github.com/ozntel/oz-clear-unused-images-obsidian/blob/master/README.md)
+- [출처] [GitHub, 「Clear Unused Images README.md」](https://github.com/ozntel/oz-clear-unused-images-obsidian/blob/master/README.md)

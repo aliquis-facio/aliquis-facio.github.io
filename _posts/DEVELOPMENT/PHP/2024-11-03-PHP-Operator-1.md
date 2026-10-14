@@ -50,7 +50,7 @@ $arr = array(
     );
 ```
 
-# 참고
+# 출처
 1. [-> 연산자 의미](https://blog.naver.com/pjh445/222140371310)
 2. [-> 와 =>의 차이점](https://withhsunny.tistory.com/63)
 3. [PHP Manual](https://www.php.net/manual/en/language.types.object.php)

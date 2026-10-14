@@ -28,13 +28,13 @@ tags: [TIL, WEB, CTF]
     1. [flag.php](#25-flagphp)
 3. [Vuln](#3-vuln)
 4. [Payload](#4-payload)
-5. [참고](#참고)
+5. [출처](#출처)
 
 ---
 
 ## 1. Intro
 
-Dreamhack 링크: <https://dreamhack.io/wargame/challenges/2105>
+[출처] [Dreamhack, 「Really Not SQL」](https://dreamhack.io/wargame/challenges/2105)
 
 Apache와 PHP로 구성된 간단한 로그인 애플리케이션이다.
 
@@ -347,9 +347,9 @@ pass
 
 ---
 
-## 참고
+## 출처
 
-- [Wikipedia: WebDAV](https://ko.wikipedia.org/wiki/WebDAV)
+- [Wikipedia, 「WebDAV」](https://ko.wikipedia.org/wiki/WebDAV)
 
 <div class="obsidian-links" style="display: none;">
 

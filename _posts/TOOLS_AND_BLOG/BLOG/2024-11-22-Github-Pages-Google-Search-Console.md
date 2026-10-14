@@ -15,6 +15,8 @@ tags: [BLOG]
 
 <!-- markdownlint-disable MD007 MD033-->
 
+[GitHub Pages 블로그 만들기]({% post_url TOOLS_AND_BLOG/BLOG/2021-11-02-Github-Pages-Making-1 %}) 이후 검색 등록을 진행한 기록이다. 방문자의 이용 통계를 확인하는 설정은 [Google Analytics 적용하기]({% post_url TOOLS_AND_BLOG/BLOG/2021-12-09-Github-Pages-Google-Analytics %})에 정리했다.
+
 ## 1. sitemap.xml 생성하기
 
 1. github.io 루트 디렉토리에 sitemap.xml 생성  
@@ -95,16 +97,16 @@ tags: [BLOG]
 
 ---
 
-## 참고
+## 출처
 
-* [github 블로그 SEO 설정하기](https://ch3coo2ca.github.io/2022-05-02/github-blog-seo-settings)
-* [Google Search Console 사이트맵 등록 안 될 때](https://gh96.tistory.com/59)
-* [구글에 깃허브 블로그(github.io) 노출시키기](https://yongjunism.github.io/tips/how-to-expose-github-blog-to-google.html)
-* [구글 서치 콘솔 사이트맵 가져올 수 없음, 4가지 원인과 완벽 해결 가이드라인](https://www.buildableseo.io/blog/google-search-console-sitemap-fetch-error-causes-solutions)
-* [구글 서치 콘솔 사이트맵 가져올 수 없음](https://yi-sang.github.io/blog/Blog-GoogleSearchConsoleSitemap)
-* [Google Search Console의 사이트맵을 가져올 수 없음 문제를 해결한 과정](https://present.kim/posts/blog/sitemap-issue)
-* [[github.io] 블로그 구글 검색 등록하기(SEO 설정)](https://blog.jagaldol.com/blog/blog-google-seo-setting/)
-* [구글 서치콘솔 사이트맵 등록이 안 될 때 가져올 수 없음 상태 해결 방법 알려드립니다.](https://gh96.tistory.com/59)
+- [출처] [GitHub Pages, 「github 블로그 SEO 설정하기」](https://ch3coo2ca.github.io/2022-05-02/github-blog-seo-settings)
+- [출처] [Tistory, 「Google Search Console 사이트맵 등록 안 될 때」](https://gh96.tistory.com/59)
+- [출처] [GitHub Pages, 「구글에 깃허브 블로그(github.io) 노출시키기」](https://yongjunism.github.io/tips/how-to-expose-github-blog-to-google.html)
+- [출처] [Buildable SEO, 「구글 서치 콘솔 사이트맵 가져올 수 없음, 4가지 원인과 완벽 해결 가이드라인」](https://www.buildableseo.io/blog/google-search-console-sitemap-fetch-error-causes-solutions)
+- [출처] [GitHub Pages, 「구글 서치 콘솔 사이트맵 가져올 수 없음」](https://yi-sang.github.io/blog/Blog-GoogleSearchConsoleSitemap)
+- [출처] [Present, 「Google Search Console의 사이트맵을 가져올 수 없음 문제를 해결한 과정」](https://present.kim/posts/blog/sitemap-issue)
+- [출처] [Blog, 「[github.io] 블로그 구글 검색 등록하기(SEO 설정)」](https://blog.jagaldol.com/blog/blog-google-seo-setting/)
+- [출처] [Tistory, 「구글 서치콘솔 사이트맵 등록이 안 될 때 가져올 수 없음 상태 해결 방법 알려드립니다.」](https://gh96.tistory.com/59)
 
 <div class="obsidian-links" style="display: none;">
 

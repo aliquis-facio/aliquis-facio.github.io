@@ -14,6 +14,9 @@ tags: [TIL, WEB, SECURITY]
 ---
 
 # CSRF란?
+
+인증 상태가 유지되는 배경은 [쿠키와 세션]({% post_url DEVELOPMENT/WEB/2024-11-04-WEB-Cookie-and-Session-Cache %})에서, iframe과 form 제출을 사용하는 예시는 [CSRF CTF 풀이]({% post_url SECURITY/CTF/2025-01-11-CTF-CSRF-1 %})에서 다룬다. 서버가 요청을 보내는 [SSRF]({% post_url SECURITY/SECURITY_FUNDAMENTALS/2026-01-16-SSRF %})와도 비교해 볼 수 있다.
+
 ## 1. 개요
 **CRSF(Cross Site Request Forgery)**: 
 -> 공격자가 원하는 요청을 피해자가 하게 만든다!
@@ -117,17 +120,15 @@ GET 방식이면 프리패스
 POST -> XSS, form tag
 CORS 정책이 잘 적용되어 있지 않다 -> 공격자 서버 만들어서 공격
 
-# 참고
-* [CSRF 공격과 방어 기법](https://velog.io/@gwanuuoo/CSRF-%EA%B3%B5%EA%B2%A9%EA%B3%BC-%EB%B0%A9%EC%96%B4-%EA%B8%B0%EB%B2%95)
-* [Spring Security_CSRF Token의 개념과 사용 방법](https://codevang.tistory.com/282)
-* [CSRF(Cross Site Request Forgery)란?](https://tibetsandfox.tistory.com/11)
-* [CSRF(Cross Site Request Forgery) 공격, 사례, 방어 방법](https://stir.tistory.com/265)
-* [[아이프레임(iframe)이란?](https://okayoon.tistory.com/entry/%EC%95%84%EC%9D%B4%ED%94%84%EB%A0%88%EC%9E%84iframe)](https://okayoon.tistory.com/entry/%EC%95%84%EC%9D%B4%ED%94%84%EB%A0%88%EC%9E%84iframe)
-* [나무위키: XSS](https://namu.wiki/w/XSS)
-* [웹 취약점 공격 방법인 XSS, CSRF에 대하여 간단하게 알아보기](https://falsy.me/%EC%9B%B9-%EC%B7%A8%EC%95%BD%EC%A0%90-%EA%B3%B5%EA%B2%A9-%EB%B0%A9%EB%B2%95%EC%9D%B8-xss-csrf%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EA%B0%84%EB%8B%A8%ED%95%98%EA%B2%8C-%EC%95%8C%EC%95%84%EB%B3%B4/)
-* [XSS JavaScript 활용 (DOM 객체) 11-1](https://blog.naver.com/leem8419/223493830500)
-*
-
+# 출처
+- [Velog, 「CSRF 공격과 방어 기법」](https://velog.io/@gwanuuoo/CSRF-%EA%B3%B5%EA%B2%A9%EA%B3%BC-%EB%B0%A9%EC%96%B4-%EA%B8%B0%EB%B2%95)
+- [Tistory, 「Spring Security_CSRF Token의 개념과 사용 방법」](https://codevang.tistory.com/282)
+- [Tistory, 「CSRF(Cross Site Request Forgery)란?」](https://tibetsandfox.tistory.com/11)
+- [Tistory, 「CSRF(Cross Site Request Forgery) 공격, 사례, 방어 방법」](https://stir.tistory.com/265)
+- [Tistory, 「아이프레임(iframe)이란?」](https://okayoon.tistory.com/entry/%EC%95%84%EC%9D%B4%ED%94%84%EB%A0%88%EC%9E%84iframe)
+- [나무위키, 「XSS」](https://namu.wiki/w/XSS)
+- [Falsy, 「웹 취약점 공격 방법인 XSS, CSRF에 대하여 간단하게 알아보기」](https://falsy.me/%EC%9B%B9-%EC%B7%A8%EC%95%BD%EC%A0%90-%EA%B3%B5%EA%B2%A9-%EB%B0%A9%EB%B2%95%EC%9D%B8-xss-csrf%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-%EA%B0%84%EB%8B%A8%ED%95%98%EA%B2%8C-%EC%95%8C%EC%95%84%EB%B3%B4/)
+- [Naver, 「XSS JavaScript 활용 (DOM 객체) 11-1」](https://blog.naver.com/leem8419/223493830500)
 <div class="obsidian-links" style="display: none;">
 
 [\[CTF\] CTF 문제 풀이: CSRF 취약점 1](../CTF/2025-01-11-CTF-CSRF-1.md)

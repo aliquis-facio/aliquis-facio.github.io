@@ -30,7 +30,7 @@ tags: [DATABASE, TIL]
         1. [사용자(User)](#23-사용자user)
         1. [데이터베이스 관리시스템(DBMS)](#24-데이터베이스-관리시스템dbms)
         1. [데이터베이스 관리자(DBA)](#25-데이터베이스-관리자dba)
-1. [참고](#참고)
+1. [출처](#출처)
 
 
 # DBS(Database System)
@@ -178,9 +178,9 @@ DBMS 성능 개선(tuning)
 데이터의 표현과 시스템의 문서화에 있어서 표준 설정  
 사용자의 요구 및 불평 해결  
 
-# 참고
+# 출처
 
-* [스키마란? (개념스키마, 내부스키마, 외부스키마)](https://jwprogramming.tistory.com/47)
+- [Tistory, 「스키마란? (개념스키마, 내부스키마, 외부스키마)」](https://jwprogramming.tistory.com/47)
 
 <div class="obsidian-links" style="display: none;">
 

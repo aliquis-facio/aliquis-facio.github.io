@@ -31,7 +31,7 @@ tags: [TIL, WEB, CTF]
 
 ## 1. Intro
 
-Dreamhack 링크: <https://dreamhack.io/wargame/challenges/1922>
+[출처] [Dreamhack, 「Are you admin?」](https://dreamhack.io/wargame/challenges/1922)
 
 ## 2. Code
 
