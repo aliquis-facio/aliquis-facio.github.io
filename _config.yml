@@ -1,7 +1,7 @@
 # Site
 title:            s3mper
 tagline:          ""
-description:      ""
+description:      "웹 보안과 CTF 풀이, 프로그래밍, 컴퓨터 과학, 인공지능을 공부하며 개념과 실습 과정을 기록하는 s3mper의 기술 블로그입니다."
 url:              "https://s3mper.github.io"
 baseurl:          ""
 future:           true # 미래 날짜 포스트도 공개
@@ -35,6 +35,7 @@ sidebar_home_link:  true
 
 reading_time:     true
 words_per_minute: 200
+lang:             ko-KR
 locale:           ko_KR
 
 # Jekyll core
