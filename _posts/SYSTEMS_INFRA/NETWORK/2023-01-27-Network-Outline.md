@@ -94,11 +94,11 @@ IEEE 802에서 신호(Signal)가 전송되는 거리에 따라 네트워크를 �
 
 ## 출처
 
-- [출처] [나무위키, 「인터넷」](https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7)
-- [출처] [나무위키, 「WWW」](https://namu.wiki/w/%EC%9B%94%EB%93%9C%20%EC%99%80%EC%9D%B4%EB%93%9C%20%EC%9B%B9)
-- [출처] [나무위키, 「동축 케이블」](https://namu.wiki/w/%EB%8F%99%EC%B6%95%20%EC%BC%80%EC%9D%B4%EB%B8%94?from=%EB%8F%99%EC%B6%95%EC%BC%80%EC%9D%B4%EB%B8%94)
-- [출처] [Tistory, 「DQDB(Distributed Queue Dual Bus)」](https://itdexter.tistory.com/168)
-- [출처] [나무위키, 「P2P」](https://namu.wiki/w/P2P)
+- [나무위키, 「인터넷」](https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7)
+- [나무위키, 「WWW」](https://namu.wiki/w/%EC%9B%94%EB%93%9C%20%EC%99%80%EC%9D%B4%EB%93%9C%20%EC%9B%B9)
+- [나무위키, 「동축 케이블」](https://namu.wiki/w/%EB%8F%99%EC%B6%95%20%EC%BC%80%EC%9D%B4%EB%B8%94?from=%EB%8F%99%EC%B6%95%EC%BC%80%EC%9D%B4%EB%B8%94)
+- [Tistory, 「DQDB(Distributed Queue Dual Bus)」](https://itdexter.tistory.com/168)
+- [나무위키, 「P2P」](https://namu.wiki/w/P2P)
 
 <div class="obsidian-links" style="display: none;">
 

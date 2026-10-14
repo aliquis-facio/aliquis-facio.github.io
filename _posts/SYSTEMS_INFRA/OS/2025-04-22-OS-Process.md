@@ -76,7 +76,7 @@ tags: [OS, TIL]
 
 # 출처
 
-- [출처] [Operating Systems, 「Three Easy Pieces」](https://pages.cs.wisc.edu/~remzi/OSTEP/)
+- [Operating Systems, 「Three Easy Pieces」](https://pages.cs.wisc.edu/~remzi/OSTEP/)
 
 <div class="obsidian-links" style="display: none;">
 

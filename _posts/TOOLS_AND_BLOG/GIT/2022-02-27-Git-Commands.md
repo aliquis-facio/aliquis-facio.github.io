@@ -133,7 +133,7 @@ tags: [GIT]
 
 ## 출처
 
-- [출처] [Tistory, 「GIT - Commit한 메세지 문구 수정하기 (Commit 메세지 오타 수정)」](https://jw910911.tistory.com/77)
+- [Tistory, 「GIT - Commit한 메세지 문구 수정하기 (Commit 메세지 오타 수정)」](https://jw910911.tistory.com/77)
 
 ## 관련 문서
 

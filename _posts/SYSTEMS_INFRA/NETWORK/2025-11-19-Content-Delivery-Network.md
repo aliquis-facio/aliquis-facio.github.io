@@ -130,15 +130,15 @@ tags:
 
 ## 출처
 
-- [출처] [AWS, 「콘텐츠 전송 네트워크(CDN)란 무엇인가요?」](https://aws.amazon.com/ko/what-is/cdn/)
-- [출처] [Cloudflare, 「콘텐츠 전송 네트워크(CDN)란? | CDN의 작동 방식은?」](https://www.cloudflare.com/ko-kr/learning/cdn/what-is-a-cdn/)
-- [출처] [IBM, 「CDN(Content Delivery Network)이란?」](https://www.ibm.com/kr-ko/think/topics/content-delivery-networks)
-- [출처] [Gabia, 「[클라우드 이해] CDN이란?」](https://library.gabia.com/contents/infrahosting/8985/)
-- [출처] [Akamai, 「CDN(콘텐츠 전송 네트워크)이란 무엇일까요?」](https://www.akamai.com/ko/glossary/what-is-a-cdn)
-- [출처] [Toss, 「CDN(Content Delivery Network)」](https://docs.tosspayments.com/resources/glossary/cdn)
-- [출처] [GCORE, 「CDN Evolution: From Static Content to Edge Computing」](https://gcore.com/blog/cdn-evolution)
-- [출처] [AZION, 「Edge Computing is the Evolution of CDNs」](https://www.azion.com/en/learning/cdn/edge-computing-evolution-of-cdn/)
-- [출처] [정보통신용어사전, 「다이얼 업, dial-up」](https://terms.tta.or.kr/dictionary/dictionaryView.do?subject=%EB%8B%A4%EC%9D%B4%EC%96%BC+%EC%97%85)
+- [AWS, 「콘텐츠 전송 네트워크(CDN)란 무엇인가요?」](https://aws.amazon.com/ko/what-is/cdn/)
+- [Cloudflare, 「콘텐츠 전송 네트워크(CDN)란? | CDN의 작동 방식은?」](https://www.cloudflare.com/ko-kr/learning/cdn/what-is-a-cdn/)
+- [IBM, 「CDN(Content Delivery Network)이란?」](https://www.ibm.com/kr-ko/think/topics/content-delivery-networks)
+- [Gabia, 「[클라우드 이해] CDN이란?」](https://library.gabia.com/contents/infrahosting/8985/)
+- [Akamai, 「CDN(콘텐츠 전송 네트워크)이란 무엇일까요?」](https://www.akamai.com/ko/glossary/what-is-a-cdn)
+- [Toss, 「CDN(Content Delivery Network)」](https://docs.tosspayments.com/resources/glossary/cdn)
+- [GCORE, 「CDN Evolution: From Static Content to Edge Computing」](https://gcore.com/blog/cdn-evolution)
+- [AZION, 「Edge Computing is the Evolution of CDNs」](https://www.azion.com/en/learning/cdn/edge-computing-evolution-of-cdn/)
+- [정보통신용어사전, 「다이얼 업, dial-up」](https://terms.tta.or.kr/dictionary/dictionaryView.do?subject=%EB%8B%A4%EC%9D%B4%EC%96%BC+%EC%97%85)
 
 <div class="obsidian-links" style="display: none;">
 

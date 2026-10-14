@@ -457,14 +457,14 @@ VirtualBox, VMware 등의 가상화 프로그램 안에 리눅스를 설치하�
 
 ## 출처
 
-- [출처] [Ubuntu, 「Ubuntu Installation Guide」](https://ubuntu.com/tutorials/install-ubuntu-desktop)
-- [출처] [ArchWiki, 「ArchWiki - Partitioning」](https://wiki.archlinux.org/title/Partitioning)
-- [출처] [ArchWiki, 「ArchWiki - File systems」](https://wiki.archlinux.org/title/File_systems)
-- [출처] [GNU, 「GNU GRUB Manual」](https://www.gnu.org/software/grub/manual/grub/)
-- [출처] [Red Hat Docs, 「Red Hat Enterprise Linux - Managing File Systems」](https://docs.redhat.com/)
-- [출처] [정보통신기술용어해설, 「Disk Partition, Disk Volume 디스크 파티션, 디스크 볼륨, 디스크 구성 단위」](http://www.ktword.co.kr/test/view/view.php?no=4856)
-- [출처] [TakeTheNotes, 「Exploring the World of Mount Points in Linux Disk Management」](https://takethenotes.com/mount-points/)
-- [출처] [howtouselinux, 「Understanding Disk Partition in Linux – MBR vs GPT」](https://www.howtouselinux.com/post/mbr-vs-gpt)
+- [Ubuntu, 「Ubuntu Installation Guide」](https://ubuntu.com/tutorials/install-ubuntu-desktop)
+- [ArchWiki, 「ArchWiki - Partitioning」](https://wiki.archlinux.org/title/Partitioning)
+- [ArchWiki, 「ArchWiki - File systems」](https://wiki.archlinux.org/title/File_systems)
+- [GNU, 「GNU GRUB Manual」](https://www.gnu.org/software/grub/manual/grub/)
+- [Red Hat Docs, 「Red Hat Enterprise Linux - Managing File Systems」](https://docs.redhat.com/)
+- [정보통신기술용어해설, 「Disk Partition, Disk Volume 디스크 파티션, 디스크 볼륨, 디스크 구성 단위」](http://www.ktword.co.kr/test/view/view.php?no=4856)
+- [TakeTheNotes, 「Exploring the World of Mount Points in Linux Disk Management」](https://takethenotes.com/mount-points/)
+- [howtouselinux, 「Understanding Disk Partition in Linux – MBR vs GPT」](https://www.howtouselinux.com/post/mbr-vs-gpt)
 
 <div class="obsidian-links" style="display: none;">
 

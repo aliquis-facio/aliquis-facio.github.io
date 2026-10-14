@@ -198,4 +198,4 @@ README에서도 이 옵션은 되돌릴 수 없다고 안내하고 있다. 처�
 
 ## 출처
 
-- [출처] [GitHub, 「Clear Unused Images README.md」](https://github.com/ozntel/oz-clear-unused-images-obsidian/blob/master/README.md)
+- [GitHub, 「Clear Unused Images README.md」](https://github.com/ozntel/oz-clear-unused-images-obsidian/blob/master/README.md)

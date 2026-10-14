@@ -80,11 +80,11 @@ tags: [BLOG]
 
 ## 출처
 
-- [출처] [GitHub Pages, 「github page 와 google analytics 연동」](https://inasie.github.io/it%EC%9D%BC%EB%B0%98/1/)
-- [출처] [Devinlife, 「Google 검색 엔진과 애널리틱스 등록하기」](https://devinlife.com/howto%20github%20pages/google-search-console-and-analytics/)
-- [출처] [Velog, 「[Github Blog] 방문자 통계(Analytics)하기」](https://velog.io/@eona1301/Github-Blog-%EB%B0%A9%EB%AC%B8%EC%9E%90-%ED%86%B5%EA%B3%84Analytics%ED%95%98%EA%B8%B0)
-- [출처] [Tistory, 「깃블로그(jekyll)에 구글 애널리틱스(Google Analytics) 적용법!」](https://mingnol2.tistory.com/70)
-- [출처] [GitHub Pages, 「github blog, page google analytics로 측정하기」](https://chinsun9.github.io/2020/11/20/github-blog-page-google-analytics%EB%A1%9C-%EC%B8%A1%EC%A0%95%ED%95%98%EA%B8%B0/)
+- [GitHub Pages, 「github page 와 google analytics 연동」](https://inasie.github.io/it%EC%9D%BC%EB%B0%98/1/)
+- [Devinlife, 「Google 검색 엔진과 애널리틱스 등록하기」](https://devinlife.com/howto%20github%20pages/google-search-console-and-analytics/)
+- [Velog, 「[Github Blog] 방문자 통계(Analytics)하기」](https://velog.io/@eona1301/Github-Blog-%EB%B0%A9%EB%AC%B8%EC%9E%90-%ED%86%B5%EA%B3%84Analytics%ED%95%98%EA%B8%B0)
+- [Tistory, 「깃블로그(jekyll)에 구글 애널리틱스(Google Analytics) 적용법!」](https://mingnol2.tistory.com/70)
+- [GitHub Pages, 「github blog, page google analytics로 측정하기」](https://chinsun9.github.io/2020/11/20/github-blog-page-google-analytics%EB%A1%9C-%EC%B8%A1%EC%A0%95%ED%95%98%EA%B8%B0/)
 * ~~[404 Not Found](https://atgane.tistory.com/14)~~
 
 <div class="obsidian-links" style="display: none;">
