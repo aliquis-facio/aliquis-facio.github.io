@@ -46,7 +46,7 @@ bundle exec jekyll serve
 
 ### New post
 
-1. `_posts/[CATEGORY]/YYYY-MM-DD-descriptive-slug.md` 생성
+1. `_posts/[CATEGORY]/YYYY-MM-DD-file-name.md` 생성
 2. Front matter 작성 예시:
 
 ```text
@@ -56,10 +56,6 @@ comments: true
 
 title: "Softmax 함수의 원리와 Sigmoid 비교"
 excerpt: Softmax 함수의 정의 및 성질과 Sigmoid 함수와의 비교 (w. Python)
-
-title: "SSTI의 원리, 탐지 방법과 보안 대책"
-slug: ssti-template-injection
-excerpt: "Server-side Template Injection 정리"
 
 date: 2026-02-05
 last_modified_at: 2026-02-05
@@ -81,8 +77,8 @@ tags: [SECURITY, WEB]
 
 ### Post URLs
 
-- 새 글의 파일명과 slug는 내용을 설명하는 영문 소문자, 숫자, 하이픈으로 작성한다.
-- 현재 `/:title/` 규칙의 URL은 파일명 또는 slug를 사용한다. Front matter의 제목을 바꿔도 기존 URL은 유지된다.
+- 새 글의 파일명은 내용을 설명하는 영문 소문자, 숫자, 하이픈으로 작성한다.
+- 현재 `/:title/` 규칙의 URL은 파일명을 사용한다. Front matter의 제목을 바꿔도 기존 URL은 유지된다.
 - 발행한 글의 파일명과 URL은 유지한다. 오타 등으로 변경이 필요한 경우에만 `permalink`와 `redirect_from`을 함께 설정한다.
 - URL을 바꾸는 글은 `guid`에 이전 절대 URL을 적어 기존 Disqus 댓글 식별값을 유지한다.
 - 글 사이 링크는 `{% post_url CATEGORY/YYYY-MM-DD-filename %}`으로 작성한다. 파일명은 확장자 없이 쓰며, 새 permalink와 baseurl이 자동 반영된다.
