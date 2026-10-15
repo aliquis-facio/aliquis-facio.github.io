@@ -17,11 +17,11 @@ tags: [BLOG]
 # Github Blog Image Test
 
 <figure>
-	<a href="https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-screenshot-error.png?raw=true">
+	<a href="https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2021-12-01-screenshot-error.png?raw=true">
   <img alt="Images" src="/_image/2021-12-01-00-00-05.png">
   </a>
 	<figcaption>
-  <a href="https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2021-12-01-screenshot-google-analytics.png?raw=true" title="Error">_posts에 업로드했을 경우에는 이미지 주소 복사를 눌러서 직접 가져와야하는 듯.
+  <a href="https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2021-12-01-screenshot-google-analytics.png?raw=true" title="Error">_posts에 업로드했을 경우에는 이미지 주소 복사를 눌러서 직접 가져와야하는 듯.
   </a>
   </figcaption>
 </figure>

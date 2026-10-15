@@ -65,7 +65,7 @@ tags: [LINUX, PARTITION, FILESYSTEM, INSTALLATIO]
 
 **파티션(partition)**: 하나의 물리적 디스크를 여러 개의 독립된 논리적 저장 공간으로 나누는 작업이다.
 
-![partition](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-07-21-15-05-42.png)
+![partition](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-07-21-15-05-42.png)
 
 <small>[출처] [정보통신기술용어해설, 「Disk Partition, Disk Volume 디스크 파티션, 디스크 볼륨, 디스크 구성 단위」](http://www.ktword.co.kr/test/view/view.php?no=4856)</small>
 
@@ -98,7 +98,7 @@ D: 데이터 저장 영역
 
 **마운트(mount)**: 디스크나 파티션을 리눅스의 특정 디렉터리에 연결하여 사용할 수 있게 만드는 작업이다.
 
-![mount](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-07-21-15-07-58.png)
+![mount](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-07-21-15-07-58.png)
 
 <small>[출처] [TakeTheNotes, 「Exploring the World of Mount Points in Linux Disk Management」](https://takethenotes.com/mount-points/)</small>
 
@@ -305,7 +305,7 @@ MBR 방식에서는 하나의 디스크에 최대 네 개까지 만들 수 있�
 
 ## 6. MBR과 GPT
 
-![MBR vs GPT](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-07-21-15-15-26.png)
+![MBR vs GPT](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-07-21-15-15-26.png)
 
 <small>[출처] [howtouselinux, 「Understanding Disk Partition in Linux – MBR vs GPT」](https://www.howtouselinux.com/post/mbr-vs-gpt)</small>
 

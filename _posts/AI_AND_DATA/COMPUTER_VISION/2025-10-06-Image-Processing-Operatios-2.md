@@ -39,14 +39,14 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 #  기하 연산
 ## 1. 정의
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-12.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-14-56-12.jpg?raw=true)
 - 일정한 기하 연산으로 결정된 **화소 위치**의 값을 가져와 새 값을 만든다.
 - 좌표를 변환해 **어디서 샘플링할지**를 정하는 연산이다.
 
 ## 2. 변환 종류와 성질
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-20.jpg?raw=true)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-14-56-20.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-14-56-32.jpg?raw=true)
 
 ### 2.1. 기본(원자) 변환
 
@@ -80,9 +80,9 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
     0&s_y&0\\
     0&0&1\end{bmatrix}$$
     - Uniform Scale
-	    - ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
+	    - ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-14-13-52.png?raw=true)
 	- Nonuniform Scale
-		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
+		- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-14-14-07.png?raw=true)
 - **시어(Shear/Skew)**: 회전 × 스케일 × 회전
 	- 축을 서로 **섞는** 선형변환(각도 변화), 평행성은 보존하지만 모양이 기울어짐.
 	- $$\begin{bmatrix}
@@ -141,7 +141,7 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 - 동차 좌표: $\dot{x}=(\,y\;\; x\;\; 1\,)$
 	-  예: $(3,5)\to(3,5,1)$
 - **동차행렬:** $(x,y)\to(x,y,1)$로 확장하면 2D 변환을 **3×3 행렬** 하나로 통일적으로 표현·조합 가능.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-04-03.png?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-04-03.png?raw=true)
 - e.g. 평행이동 행렬(행-벡터 우측곱 규약):  T(3,2)
 	- $$\dot{H}=T(3,2)=
 		\begin{pmatrix}
@@ -159,12 +159,12 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 		\end{pmatrix}$$
 	- $$y' = a_{11}y + a_{21}x + a_{31}, \qquad
 	x' = a_{12}y + a_{22}x + a_{32}$$
-- 예제: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-05-36.png?raw=true)
+- 예제: ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-05-36.png?raw=true)
 - **동차좌표 사용하는 이유**: 여러 변환을 **곱으로 결합**해 한 번에 적용 (**계산 효율↑**)
 
 ## 4. 전방 vs 후방 매핑
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-06-25.png?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-06-25.png?raw=true)
 - **전방(forward) 매핑:** 원 영상의 픽셀을 변환해 타깃 위치에 찍기
 	- **구멍(hole)/겹침**·**에일리어싱** 심함.
 - **후방(backward) 매핑** 타깃의 각 픽셀에서 **역변환**으로 원 영상의 **실수 좌표**를 찾아 **보간**
@@ -173,8 +173,8 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 
 ### 4.1. 알고리즘
 
-- 전방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-00.png?raw=true)
-- 후방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-07-14.png?raw=true)
+- 전방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-07-00.png?raw=true)
+- 후방 기하 변환: ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-07-14.png?raw=true)
 
 ## 5. 보간(Interpolation)과 반(反)에일리어싱
 
@@ -182,13 +182,13 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 	- **주변 화소로 보간**해 완화 → 거리에 대한 비율
 - 보간식
 	- 1차원 보간식 유도: $f(x')=(1-\alpha)\,f(x)+\alpha\,f(x+1)$
-		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-19-55.png?raw=true)
+		- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-19-55.png?raw=true)
 	- 2차원 보간식 유도: $$\begin{aligned}
 			f(y, x') &= (1-\alpha) f(y,x) + \alpha f(y, x+1),\\
 			f(y+1, x') &= (1-\alpha) f(y+1,x) + \alpha f(y+1, x+1),\\
 			f(y', x') &= (1-\beta) f(y, x') + \beta f(y+1, x')
 			\end{aligned}$$
-		- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-21-25.png?raw=true)
+		- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-21-25.png?raw=true)
 - **방법과 비교:**
     - **최근접(nearest):** 가장 빠르나 **블록/톱니** 아티팩트.
     - **양선형(bilinear):** 4이웃 가중 평균(균형 잡힌 화질/속도)
@@ -206,14 +206,14 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 	- 피라미드 구축 연산식: $$f_k(j,i)
 		= f_{k-1}\!\left(\frac{j}{r},\,\frac{i}{r}\right),
 		\qquad r=\frac{1}{2},\; 1\le k \le q$$
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-26-13.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-26-13.jpg?raw=true)
 - Burt & Adelson 방법
 	- 수식: $$f_k(j,i)
 		= \sum_{y=-2}^{2}\sum_{x=-2}^{2} w(y,x)\;
 		  f_{k-1}\!\left(\frac{j}{r}+y,\; \frac{i}{r}+x\right),
 		\qquad r=\frac{1}{2},\; 1\le k \le q$$
 	- 모든 화소가 50%씩 공헌
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-27-52.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-27-52.jpg?raw=true)
 
 ## 7. 모폴로지(Morphology)
 
@@ -224,7 +224,7 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 
 - **대상**: 값이 0/1(또는 0/255)인 **이진 영상**.
 - 구조요소
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-29-21.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-29-21.jpg?raw=true)
 - 연산
 	- $S_t=\{\,s+t \mid s\in S\,\}$
 	- 팽창: 두꺼워짐/커짐(틈 메움·연결 강화)
@@ -236,13 +236,13 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 	- **닫기(팽창→침식)**: **작은 구멍 메움**·틈새 채움
 		- $f\bullet S=(f\oplus S)\ominus S$
 - 예제
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-30-27.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-30-27.jpg?raw=true)
 
 ### 7.2. 명암(그레이스케일) 모폴로지
 
 - **대상**: 0–255 등 **연속 톤(그레이스케일)** 영상.
 - 구조 요소
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-30-55.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-30-55.jpg?raw=true)
 - 연산
 	- 명암 팽창(평편 X 구조요소)
 		- $(f \oplus S)(j,i)= \max_{(y,x)\in S}\big(f(j-y,i-x)+S(y,x)\big)$
@@ -257,7 +257,7 @@ guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 	- 닫기
 		- $f \bullet S = (f \oplus S) \ominus S$
 - **명암 모폴로지(특히 closing 등)의 실전 활용 빈도·효익이 낮다**
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-15-32-10.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-15-32-10.jpg?raw=true)
 
 <div class="obsidian-links" style="display: none;">
 

@@ -187,26 +187,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['file'])) {
 
 2. webshell.php → webshell.php.jpg로 변경 후 업로드
 
-    ![500x212](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-51.png)
+    ![500x212](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-24-02-15-51.png)
 
 3. /upload에 접근
 
-    ![500x232](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-47.png)
+    ![500x232](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-24-02-15-47.png)
 
 4. uploads/20260223165901_3516_webshell.php.jpg에 접근.
     원래라면 jpg 이미로 처리되어야 하지만 `.htaccess`에서 `.php`가 파일명에 존재하면 php로 처리해버리기 때문에 php로 인식된 모습을 확인할 수 있다.
 
-    ![500x208](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-43.png)
+    ![500x208](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-24-02-15-43.png)
 
 5. 리눅스 명령을 통해 flag 확인
     1. `ls`
-       ![500x124](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-40.png)
+       ![500x124](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-24-02-15-40.png)
 
     2. `ls ..`
-        ![500x115](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-15-37.png)
+        ![500x115](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-24-02-15-37.png)
 
     3. `cat ../flag.txt`
-        ![500x101](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-24-02-06-21.png)
+        ![500x101](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-24-02-06-21.png)
         > flag
 
 ---

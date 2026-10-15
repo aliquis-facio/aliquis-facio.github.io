@@ -69,12 +69,12 @@ CDN 적용 사이트: [JSDELIVR](https://www.jsdelivr.com/github)
 
 ```md
 <!-- 이 넘은 사진 클릭하면 링크 탐 -->
-[![네 번째 이미지](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-10-20-00-22.png)](https://youtu.be/l8b0Vn_Idm8?si=AWcIncfU5aFjKnHW)
+[![네 번째 이미지](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-10-20-00-22.png)](https://youtu.be/l8b0Vn_Idm8?si=AWcIncfU5aFjKnHW)
 ```
 
 이 넘은 사진 클릭하면 링크 탐
 
-[![네 번째 이미지](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-10-20-00-22.png)](https://youtu.be/l8b0Vn_Idm8?si=AWcIncfU5aFjKnHW)
+[![네 번째 이미지](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-10-20-00-22.png)](https://youtu.be/l8b0Vn_Idm8?si=AWcIncfU5aFjKnHW)
 
 ---
 

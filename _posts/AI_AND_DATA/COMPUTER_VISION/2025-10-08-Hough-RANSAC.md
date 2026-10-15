@@ -61,7 +61,7 @@ tags: [COMPUTER_VISION]
 
 ## 3. Voting Schemes
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-21-12-29.jpg?raw=true)
+![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-21-12-29.jpg?raw=true)
 **투표(voting) 기반 모델 추정**: 특징(feature)들이 자신과 **양립 가능한 모델들**에 표를 던지고, 표가 많이 모인 모델을 정답으로 뽑는다
 e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set)**
 
@@ -74,7 +74,7 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 ### 3.2. 노이즈
 #### 3.2.1. 노이즈가 미치는 영향
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20 17-04-44.png?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-20 17-04-44.png?raw=true)
 - **피처 공간의 균일 잡음**은 누적 배열에 **허위(spurious) 피크**를 만든다. 노이즈가 커질수록 최대 득표 수 자체도 증가해 **진짜 피크가 흐려지고(peak fuzziness)** 위치도 불안정해진다.
 
 #### 3.2.2. 노이즈 대응 전략 (Hough 기준)
@@ -128,13 +128,13 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 - 파라미터 범위가 무한, **수직선**에서 $m\to\infty$ 문제가 발생.
 	- **극좌표** 대안: $\rho=x\cos\theta+y\sin\theta$
 	- ![Alt Images](/_image/2025-10-15-00-00-05.jpg)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-11-29-25.jpg?raw=true)
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-21-12-18.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-11-29-25.jpg?raw=true)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-21-12-18.jpg?raw=true)
 
 ### 4.2. 원 검출
 
 - 원 검출: 3차원 누적 배열 사용
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-21-12-03.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-21-12-03.jpg?raw=true)
 	- $(y - b)^2 + (x-a)^2 = r^2$
 - **해석 관점**: 영상의 한 점 $(x_0,y_0)$은 허프 공간에서 **사인곡선**이며, **두 점 곡선의 교차**가 두 점을 지나는 직선의 파라미터.
 
@@ -160,9 +160,9 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
 ## 5. RANSAC — 불량치(outlier) 견고 추정
 
 - **정의/배경**: Fischler & Bolles(1981). 인라이어 집합을 찾아 **모델을 견고하게 적합**(무작위 표본 기반). 선분 검출에선 모델을 $y=ax+b$로 둔다.
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-21-11-51.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-21-11-51.jpg?raw=true)
 - 동작
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-21-11-37.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-21-11-37.jpg?raw=true)
     1. **최소 표본** 무작위 선택, 무작위로 두 점을 골라 직선의 방정식을 구함
     2. **모델 가설**, 구한 방정식으로부터 일정 범위의 속한 점들이 전체의 몇 %인지 구함
     3. **오차함수** 계산
@@ -170,7 +170,7 @@ e.g. **허프 변환(Hough transform)**, **RANSAC의 합의 집합(consensus set
     5. **반복**.
 - **확장 포인트**: **점-점 매칭쌍** $X={(a_i,b_i)}$ 입력도 처리하도록 일반화(기하 추정에 활용).
 - 알고리즘
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-17-21-10-51.jpg?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-17-21-10-51.jpg?raw=true)
 
 ### 5.1. Hough V.S. RANSAC
 

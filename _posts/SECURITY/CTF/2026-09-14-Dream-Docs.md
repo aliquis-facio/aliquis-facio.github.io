@@ -164,9 +164,9 @@ for i in range(1000):
     </div>
     </details>
 
-    ![Captured Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-15-17-46.png)
+    ![Captured Image](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-15-17-46.png)
     - `276`이 flag가 담겨져 있는 문서임을 확인
 2. Burp Suite를 이용해 헤더값 변경 후 요청
-	![Captured Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-15-18-22.png)
+	![Captured Image](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-15-18-22.png)
 3. flag 획득
-	![Captured Image](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-15-18-49.png)
+	![Captured Image](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-15-18-49.png)

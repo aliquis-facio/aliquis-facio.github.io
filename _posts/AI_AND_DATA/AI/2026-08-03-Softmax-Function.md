@@ -211,7 +211,7 @@ plt.show()
 
 실행 결과:
 
-![500x408](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-08-03-14-05-22.png)
+![500x408](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-08-03-14-05-22.png)
 
 - 이진 분류에서 2개 입력값에 적용한 softmax는 sigmoid와 같다.
 - 아래쪽 그래프에서는 sigmoid는 각 값을 독립적으로 계산하지만, softmax는 세 출력의 합이 1이 되도록 계산한다.

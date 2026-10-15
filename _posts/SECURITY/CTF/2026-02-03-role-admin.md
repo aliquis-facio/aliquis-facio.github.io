@@ -233,15 +233,15 @@ flag를 얻기 위해서 `role`이 `admin`이면 된다. 내가 생각한 방법
 
 [Code](#2-code) 부분에서 분석했듯이 `register`에서 사용자 입력값의 검증 없이 문자열로 조합해 JSON을 만들고 있다. 여기에서 `"`/`,` 문자를 섞으면 기존 JSON 구조가 깨지면서 중간에 임의의 값을 삽입할 수 있고, `role`을 덮어쓰면 `admin`으로 바로 만들 수 있게 된다.
 
-![500x308](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-03-15-42-05.png)
+![500x308](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-03-15-42-05.png)
 
 id: `asdf","role":"admin`
 pw: `asdf`
 
-![500x225](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-03-15-43-12.png)
+![500x225](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-03-15-43-12.png)
 > `asdf` 계정으로 로그인을 한 모습
 
-![500x120](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-02-03-15-44-08.png)
+![500x120](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-02-03-15-44-08.png)
 > flag가 보인다.
 
 ---

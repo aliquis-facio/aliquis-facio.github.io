@@ -68,32 +68,32 @@ tags: [OBSIDIAN, COMMUNITY-PLUGINS]
 메뉴 경로: **Settings → Community plugins → Browse**
 
 1. **Community plugins** 화면에서 **Browse**를 클릭한다.
-	![500x265](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-14-15-02-44.png)
+	![500x265](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-14-15-02-44.png)
 2. 검색창에 `Clear Unused Images`를 입력한다.
-	![500x266](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-14-15-03-07.png)
+	![500x266](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-14-15-03-07.png)
 3. 검색 결과에서 해당 플러그인을 선택한다.
 
 ### 2.2. 설치
 
 1. 플러그인 상세 화면에서 **Install**을 클릭한다.
-	![500x266](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-14-15-03-13.png)
+	![500x266](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-14-15-03-13.png)
 2. 설치가 완료될 때까지 기다린다.
 
 ### 2.3. Enable 활성화
 
 1. 설치가 끝나면 **Enable**을 클릭한다.
-	![500x266](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-14-15-03-19.png)
+	![500x266](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-14-15-03-19.png)
 2. 활성화되면 Community Plugins 목록에서 켜진 상태로 표시된다.
 
 ### 2.4. 설정 화면 진입
 
 메뉴 경로: **Settings → Community plugins → Clear Unused Images**
 
-![500x266](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-14-15-03-33.png)
+![500x266](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-14-15-03-33.png)
 
 ## 3. 설정
 
-![500x266](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-04-14-15-04-21.png)
+![500x266](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-04-14-15-04-21.png)
 
 ### 3.1. `Deleted Image Destination`
 

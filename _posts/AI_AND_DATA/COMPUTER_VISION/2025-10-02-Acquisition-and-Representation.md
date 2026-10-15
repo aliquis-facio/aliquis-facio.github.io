@@ -82,7 +82,7 @@ tags: [COMPUTER_VISION]
 
 ### 5. 투영 모델과 좌표 사상
 
-- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-10-20-16-43-38.png)
+- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-10-20-16-43-38.png)
 	- 핀홀 카메라와 3차원 → 2차원 투영
 - **원근 투영식**: Optical center 기준
 	- $$3D (P(X,Y,Z)) → 2D (P'(x,y))$$

@@ -103,10 +103,10 @@ tags: [SOFTWARE_DESIGN]
 
 ### 2.1. 관리 사이클
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-17-13-51-03.png?raw=true)
+![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-11-17-13-51-03.png?raw=true)
 > PDA Cycle(Walter A. Shewhart)
 
-![393x393](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-12-12-45-04.png?raw=true)
+![393x393](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-11-12-12-45-04.png?raw=true)
 > PDCA Cycle(Dr. W. Edwards): 계획→실행→점검→개선, 카이젠의 핵심 도구.
 
 ### 2.2. 측정
@@ -122,13 +122,13 @@ tags: [SOFTWARE_DESIGN]
 
 ## 3. 품질 관리(Quality Control)
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-12-12-44-09.png?raw=true)
+![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-11-12-12-44-09.png?raw=true)
 > 품질 관리: 입력(input) → 프로세스(process) → 출력(output)으로 전환되는 동안 품질을 일관되게 확보/통제
 
-![470x210](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-12-12-59-59.png?raw=true)
+![470x210](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-11-12-12-59-59.png?raw=true)
 > 품질 관리 프로세스: 품질 요구 정의 → 측정/점검 → 변동(문제) 식별 → 시정/예방조치 → 모니터링/표준화
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-12-12-44-32.png?raw=true)
+![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-11-12-12-44-32.png?raw=true)
 (a) 전통적 QC ↔ (b) **통계적 QC** 대비.
 
 - 전통적 QC: 사후 검사, 합격/불합격 중심의 통제
@@ -138,7 +138,7 @@ tags: [SOFTWARE_DESIGN]
 
 - **Correctness(정확성)**
 - **Efficiency(효율성)**
-	- ![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-12-12-45-23.png?raw=true)
+	- ![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-11-12-12-45-23.png?raw=true)
 	- 시간 (O(f(n)))
 	- 공간 (memory)
 - **Maintainability(유지보수성)**
@@ -148,7 +148,7 @@ tags: [SOFTWARE_DESIGN]
 
 ## 5. 소프트웨어 품질 모델
 
-![Alt Images](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2025-11-12-12-45-48.png?raw=true)
+![Alt Images](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2025-11-12-12-45-48.png?raw=true)
 
 ### 5.1. McCall (1977)
 

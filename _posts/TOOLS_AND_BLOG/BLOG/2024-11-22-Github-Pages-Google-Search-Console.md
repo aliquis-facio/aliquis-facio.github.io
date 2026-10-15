@@ -19,9 +19,9 @@ tags: [BLOG]
 ## 1. sitemap.xml 생성하기
 
 1. github.io 루트 디렉토리에 sitemap.xml 생성  
-![사진 넣기](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/.png?raw=true)  
+![사진 넣기](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@master/_image/.png?raw=true)  
 2. sitemap.xml에 코드 작성하기  
-![사진 넣기](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@master/_image/.png?raw=true)  
+![사진 넣기](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@master/_image/.png?raw=true)  
 ![pre가 무시되니 사진으로 바꿀 수 밖에](/_image/2024-11-26-00-00-02.png)  
 -> 블록 코드 형식으로 xml 코드를 붙여놨더니 렌더링되는 과정에서 xml 코드로 인식돼버려서 마크다운이 꼬였다.  
 ![요렇게 말이다](/_image/2024-11-26-00-00-00.png)  

