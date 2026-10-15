@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "데이터베이스 시스템 DBS의 구성 요소"
 excerpt: "DBS(DataBase System)"

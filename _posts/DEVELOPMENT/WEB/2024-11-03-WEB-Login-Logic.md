@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "PHP 로그인 로직: 식별, 인증과 비밀번호 검증"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"

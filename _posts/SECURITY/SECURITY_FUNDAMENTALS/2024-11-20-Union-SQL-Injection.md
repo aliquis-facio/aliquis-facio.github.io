@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "UNION 기반 SQL Injection의 원리와 데이터 추출 과정"
 excerpt: "모의해킹 취업반 스터디 7기 6주차"
@@ -9,6 +8,7 @@ excerpt: "모의해킹 취업반 스터디 7기 6주차"
 date: 2024-11-20
 last_modified_at: 2024-12-21
 
+categories: []
 tags: [TIL, WEB, DATABASE, SECURITY]
 ---
 

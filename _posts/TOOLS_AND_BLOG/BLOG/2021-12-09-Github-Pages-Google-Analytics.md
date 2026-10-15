@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "GitHub Pages에 Google Analytics 적용하기"
 excerpt: "구글 애널리틱스 적용"

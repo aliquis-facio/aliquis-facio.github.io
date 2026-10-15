@@ -1,14 +1,14 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "SQL Injection 진단과 문제 풀이 팁"
 excerpt: "모의해킹 취업반 스터디 7기 8주차"
 
 date: 2024-12-04
-last_modified_at: 
+last_modified_at:
 
+categories: []
 tags: [TIL, WEB, SECURITY, DATABASE]
 ---
 

@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "컴퓨터 구조 기초: CPU와 MIPS 명령어"
 excerpt: "COD 개요"
 
 date: 2022-09-30
-last_modified_at: 
+last_modified_at:
 
 categories: [COD]
 tags: [COD, MIPS, SPIM]

@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "XSS의 원리, 공격 유형과 동작 방식"
 excerpt: "모의해킹 취업반 스터디 7기 9 ~ 11주차"

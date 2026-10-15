@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "비형식적 오류의 유형과 구별 방법"
 excerpt: "비형식적 오류"

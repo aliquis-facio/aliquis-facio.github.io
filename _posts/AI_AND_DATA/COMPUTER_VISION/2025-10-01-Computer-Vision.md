@@ -1,18 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "컴퓨터 비전의 개념, 목표와 주요 과제"
-excerpt: 컴퓨터 비전 개요
+excerpt: "컴퓨터 비전 개요"
 
 date: 2025-10-01
 last_modified_at: 2025-10-17
 
-categories:
-  - COMPUTER VISION
-tags:
-  - COMPUTER_VISION
+categories: [COMPUTER VISION]
+tags: [COMPUTER_VISION]
 ---
 
 <!-- markdownlint-disable MD007 MD010 MD025 -->

@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "SQL TOP과 LIMIT으로 조회 결과 개수 제한하기"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
 
 date: 2024-11-28
-last_modified_at: 
+last_modified_at:
 
 categories: [DATABASE]
 tags: [TIL, DATABASE, SQL]

@@ -1,13 +1,15 @@
 ---
-title: "Agent Skills의 구조와 Prompt·MCP의 차이"
-excerpt: Agent Skills 개요
-categories:
-  - AI
 layout: post
 comments: true
-sitemap:
+
+title: "Agent Skills의 구조와 Prompt·MCP의 차이"
+excerpt: "Agent Skills 개요"
+
 date: 2026-05-07
 last_modified_at: 2026-05-07
+
+categories: [AI]
+tags: []
 ---
 
 <!-- markdownlint-disable MD007 MD010 MD025 MD060 -->

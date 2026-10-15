@@ -1,18 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
+
 title: "리눅스 설치 준비: 디스크 파티션과 마운트"
-excerpt: 리눅스 파티션의 정의와 구조, 파일 시스템, 디스크 장치 이름, 설치 방식과 사전 준비사항 정리
+excerpt: "리눅스 파티션의 정의와 구조, 파일 시스템, 디스크 장치 이름, 설치 방식과 사전 준비사항 정리"
+
 date: 2022-02-15
 last_modified_at: 2026-07-21
-categories:
-  - LINUX
-tags:
-  - LINUX
-  - PARTITION
-  - FILESYSTEM
-  - INSTALLATIO
+
+categories: [LINUX]
+tags: [LINUX, PARTITION, FILESYSTEM, INSTALLATIO]
 ---
 
 <!-- markdownlint-disable MD004 MD007 MD025 MD033 MD036 MD046 -->

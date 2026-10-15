@@ -1,18 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "한국어 텍스트 토큰화의 개념과 실습"
-excerpt: 토큰화와 한글 텍스트 데이터 토큰화 실습
+excerpt: "토큰화와 한글 텍스트 데이터 토큰화 실습"
 
 date: 2025-03-16
 last_modified_at:
 
-categories:
-  - AI
-tags:
-  - TIL
+categories: [AI]
+tags: [TIL]
 ---
 
 <!-- markdownlint-disable MD007 MD010 MD025 MD033 -->

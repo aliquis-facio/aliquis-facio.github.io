@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "리눅스 사용자와 그룹 관리 명령어"
 excerpt: "리눅스 사용자 계정 생성/관리에 필요한 명령 및 관련 디렉토리 파일, 그룹 관리를 위한 명령어"
 
 date: 2022-02-27
-last_modified_at: 
+last_modified_at:
 
 categories: [LINUX]
 tags: [LINUX]

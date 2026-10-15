@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "백준 11758 CCW 풀이: 외적을 이용한 방향 판별 (Python)"
 excerpt: "w. Python"

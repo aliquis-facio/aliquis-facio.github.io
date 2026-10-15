@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "이산수학 논리: 명제, 논리 연산과 한정자"
 excerpt: ""
 
 date: 2022-10-07
-last_modified_at: 
+last_modified_at:
 
 categories: [MATHEMATICS]
 tags: [DISCRETE MATHEMATICS]

@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "인코딩, 암호화와 해시의 원리와 차이"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"

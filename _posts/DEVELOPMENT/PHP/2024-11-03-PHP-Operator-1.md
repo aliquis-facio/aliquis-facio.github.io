@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "PHP의 ->와 => 연산자 차이"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"

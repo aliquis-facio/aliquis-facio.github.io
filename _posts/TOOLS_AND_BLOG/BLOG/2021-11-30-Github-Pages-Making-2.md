@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "GitHub Pages 블로그 만들기 2: 테마 설정과 오류 해결"
 excerpt: "오류 멈춰!"

@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Blind SQL Injection의 원리와 데이터 추론"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
 
 date: 2024-11-28
-last_modified_at: 
+last_modified_at:
 
 categories: [SECURITY]
 tags: [TIL, WEB, DATABASE, SECURITY]

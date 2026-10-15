@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "CSRF의 원리와 요청 위조 대응 방안"
 excerpt: "모의해킹 취업반 스터디 7기 12 ~ 13주차"

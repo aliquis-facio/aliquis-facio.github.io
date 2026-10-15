@@ -1,16 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
+
 title: "Obsidian Clear Unused Images로 미사용 이미지 정리하기"
-excerpt: Community Plugins - Clear Unused Images
+excerpt: "Community Plugins - Clear Unused Images"
+
 date: 2026-04-14
 last_modified_at: 2026-04-15
-categories:
-  - OBSIDIAN
-tags:
-  - OBSIDIAN
-  - COMMUNITY-PLUGINS
+
+categories: [OBSIDIAN]
+tags: [OBSIDIAN, COMMUNITY-PLUGINS]
 ---
 
 <!-- markdownlint-disable MD004 MD010 MD025 MD029 -->

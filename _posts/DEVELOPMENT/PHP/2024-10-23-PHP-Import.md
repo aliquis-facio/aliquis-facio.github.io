@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "PHP에서 외부 파일 불러오기"
 excerpt: "모의해킹 취업반 스터디 7기 2주차"
@@ -9,6 +8,7 @@ excerpt: "모의해킹 취업반 스터디 7기 2주차"
 date: 2024-10-23
 last_modified_at: 2025-02-25
 
+categories: []
 tags: [WEB, TIL]
 ---
 

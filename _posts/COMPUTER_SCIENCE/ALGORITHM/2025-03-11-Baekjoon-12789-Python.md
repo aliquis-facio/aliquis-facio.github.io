@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "백준 12789 도키도키 간식드리미 풀이 (Python)"
 excerpt: "w. Python"
@@ -9,7 +8,7 @@ excerpt: "w. Python"
 date: 2025-03-05
 last_modified_at: 2025-11-01
 
-categoreis: [ALGORITHM]
+categories: [ALGORITHM]
 tags: [ALGORITHM, BAEKJOON, PYTHON]
 ---
 

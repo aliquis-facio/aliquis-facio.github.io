@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "자바스크립트로 웹페이지 리디렉션하기"
 excerpt: "모의해킹 취업반 스터디 7기 11주차"
 
 date: 2024-12-26
-last_modified_at: 
+last_modified_at:
 
 categories: [JS]
 tags: [TIL, WEB, JS]

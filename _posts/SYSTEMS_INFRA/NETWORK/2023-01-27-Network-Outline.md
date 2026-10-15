@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "네트워크의 개념, 종류와 데이터 전송 방식"
 excerpt: "네트워크(Network)"

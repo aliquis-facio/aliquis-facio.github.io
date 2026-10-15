@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "기울기 클리핑의 원리와 기울기 폭주 방지"
 excerpt: ""
@@ -9,11 +8,8 @@ excerpt: ""
 date: 2025-11-11
 last_modified_at: 2025-11-11
 
-categories:
-  - AI
-tags:
-  - AI
-  - DEEP_LEARNING
+categories: [AI]
+tags: [AI, DEEP_LEARNING]
 ---
 
 <!-- markdownlint-disable MD007 MD010 MD025 -->

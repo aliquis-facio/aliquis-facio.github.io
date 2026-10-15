@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "리눅스마스터 2급 기출 풀이: 2017년 6월 10일"
 excerpt: "오답노트 1"
 
 date: 2022-06-24
-last_modified_at: 
+last_modified_at:
 
 categories: [LINUX]
 tags: [LINUX, LICENSE]

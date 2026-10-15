@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "자바스크립트 반복문: for, while과 순회 방법"
 excerpt: "모의해킹 취업반 스터디 7기 4주차"

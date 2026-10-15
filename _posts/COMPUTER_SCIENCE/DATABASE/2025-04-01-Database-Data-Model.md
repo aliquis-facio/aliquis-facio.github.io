@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "관계 데이터 모델과 데이터 구조"
 excerpt: "Data Model이란?"
 
 date: 2025-04-01
-last_modified_at: 
+last_modified_at:
 
 categories: [DATABASE]
 tags: [DATABASE, TIL]

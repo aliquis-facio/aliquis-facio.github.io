@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Dreamhack DreamDocs 풀이"
 excerpt: "불충분한 인증"

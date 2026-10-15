@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Dreamhack Really Not SQL 풀이"
 excerpt: "임의 파일 덮어쓰기"

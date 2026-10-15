@@ -1,18 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "소프트웨어 품질 관리와 측정 지표"
-excerpt: 소프트웨어 품질 정의와 품질 모델
+excerpt: "소프트웨어 품질 정의와 품질 모델"
 
 date: 2025-11-12
 last_modified_at: 2026-01-06
 
-categories:
-  - SOFTWARE_DESIGN
-tags:
-  - SOFTWARE_DESIGN
+categories: [SOFTWARE_DESIGN]
+tags: [SOFTWARE_DESIGN]
 ---
 
 <!-- markdownlint-disable MD007 MD010 MD025 -->

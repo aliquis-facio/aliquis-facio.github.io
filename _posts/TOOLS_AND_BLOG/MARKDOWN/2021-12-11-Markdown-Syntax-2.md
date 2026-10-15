@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "마크다운 문법 2: 코드, 표, 수식과 앵커"
 excerpt: "Part 2: Heading ID, 코드, 표, 수식"

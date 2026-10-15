@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "리눅스 GRUB 부트로더와 실행 레벨"
 excerpt: "리눅스 부트로더 - 부트로더인 LILO, GRUB"

@@ -1,18 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "지역 특징 검출과 코너 검출 알고리즘"
-excerpt: 지역 특징, 코너
+excerpt: "지역 특징, 코너"
 
 date: 2025-10-09
 last_modified_at: 2025-10-17
 
-categories:
-  - COMPUTER VISION
-tags:
-  - COMPUTER_VISION
+categories: [COMPUTER VISION]
+tags: [COMPUTER_VISION]
 ---
 
 # 목차

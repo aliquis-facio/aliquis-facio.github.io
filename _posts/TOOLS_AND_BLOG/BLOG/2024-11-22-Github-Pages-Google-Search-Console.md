@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "GitHub Pages를 Google Search Console에 등록하기"
 excerpt: ""

@@ -1,10 +1,9 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "AI의 보안 활용과 사이버 위협"
-excerpt: 보안에서 AI는 어떻게 쓰이는 지 알아보자
+excerpt: "보안에서 AI는 어떻게 쓰이는 지 알아보자"
 
 date: 2025-09-27
 last_modified_at: 2025-09-29

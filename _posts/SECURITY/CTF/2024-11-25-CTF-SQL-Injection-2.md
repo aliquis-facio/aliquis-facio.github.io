@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "UNION SQL Injection CTF 풀이: 컬럼 확인과 데이터 추출"
 excerpt: "모의해킹 취업반 스터디 7기 6주차"

@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "자연 연역 1: 함축 규칙과 논증 증명"
 excerpt: "함축 규칙 9가지"

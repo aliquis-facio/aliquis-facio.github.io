@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "언어와 정의: 내포와 외연의 차이"
 excerpt: "언어와 정의"

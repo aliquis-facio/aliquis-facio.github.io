@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Dreamhack Simple-ssti 풀이: Jinja2 템플릿 인젝션"
 excerpt: "SSTI(Server-side Template Injection)"

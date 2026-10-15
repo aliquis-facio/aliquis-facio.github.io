@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "일상 언어의 기호화와 명제 논리의 차이"
 excerpt: "명제 논리와 일상 언어의 차이"

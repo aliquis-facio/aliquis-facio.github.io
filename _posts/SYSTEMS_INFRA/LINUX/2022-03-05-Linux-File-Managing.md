@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "리눅스 파일 복사, 이동, 삭제 명령어"
 excerpt: "파일관련 명령어 1: 파일 복사, 이동, 삭제 관련 명령어"
 
 date: 2022-03-05
-last_modified_at: 
+last_modified_at:
 
 categories: [LINUX]
 tags: [LINUX]

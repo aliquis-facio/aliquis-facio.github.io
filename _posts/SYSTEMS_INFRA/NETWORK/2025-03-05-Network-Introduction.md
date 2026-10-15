@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "데이터 통신의 개념, 구성 요소와 메시지 형태"
 excerpt: "Data Communication 의미, 특징과 요소"

@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "SQL Injection CTF 풀이: Login Bypass 3과 4"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
 
 date: 2024-11-28
-last_modified_at: 
+last_modified_at:
 
 categories: [CTF]
 tags: [TIL, WEB]

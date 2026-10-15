@@ -1,15 +1,14 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "자바스크립트 변수와 상수: var, let, const 비교"
 excerpt: "모의해킹 취업반 스터디 7기 4주차"
 
 date: 2024-11-10
-last_modified_at: 
+last_modified_at:
 
-categoreis: [JS]
+categories: [JS]
 tags: [JS]
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "자바스크립트 함수 3: 일급 객체, 콜백과 클로저"
 excerpt: "JS에서 함수가 특별한 이유"

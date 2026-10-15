@@ -1,8 +1,6 @@
 ---
 layout: post
 comments: true
-published: true
-sitemap:
 
 title: "네트워크 프로토콜과 OSI·TCP/IP 계층 모델"
 excerpt: "Protocol의 의미와 인터넷 모델"
@@ -12,6 +10,8 @@ last_modified_at: 2026-09-01
 
 categories: [NETWORK]
 tags: [COMPUTER NETWORK, NETWORK, TIL]
+
+published: true
 ---
 
 <!-- markdownlint-disable md025 md033 -->

@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Dreamhack {\"role\": \"admin\"} 풀이: JSON Injection"
 excerpt: "JSON Injection"

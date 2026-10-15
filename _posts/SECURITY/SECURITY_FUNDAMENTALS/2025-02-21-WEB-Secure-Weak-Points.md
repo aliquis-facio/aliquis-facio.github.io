@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "웹 보안 취약점 유형과 점검 항목"
 excerpt: "모의해킹 취업반 스터디 7기 17주차"

@@ -1,15 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
+
 title: "리눅스 리다이렉션 명령어 정리"
 excerpt: "파일관련 명령어 2: 검색조건에 맞는 파일 검색 및 리다이렉션, 파이프 명령어"
+
 date: 2022-03-07
 last_modified_at: 2026-07-30
-categories:
-  - LINUX
-tags:
-  - LINUX
+
+categories: [LINUX]
+tags: [LINUX]
 ---
 
 redirection 명령: 입출력의 방향을 바꾸는 작업

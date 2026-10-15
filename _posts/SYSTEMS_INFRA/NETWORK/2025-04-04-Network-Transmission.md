@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "디지털 데이터 전송과 라인 코딩"
 excerpt: "Data Transmission"

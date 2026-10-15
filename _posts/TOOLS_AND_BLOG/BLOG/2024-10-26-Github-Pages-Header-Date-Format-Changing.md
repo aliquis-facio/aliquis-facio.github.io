@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Jekyll 글 날짜 형식과 마지막 수정일 표시 바꾸기"
 excerpt: ""

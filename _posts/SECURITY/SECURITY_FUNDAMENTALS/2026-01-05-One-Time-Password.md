@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "일회용 비밀번호 OTP의 원리"
 excerpt: "OTP, One Time Password"

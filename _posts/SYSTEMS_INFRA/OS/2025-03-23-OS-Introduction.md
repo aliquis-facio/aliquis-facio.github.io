@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "운영체제의 역할: 가상화, 동시성과 영속성"
 excerpt: "Operating System: Three Easy Pieces 정리"
@@ -10,7 +9,7 @@ date: 2025-03-16
 last_modified_at: 2025-04-22
 
 categories: [OS]
-tags: [OS, C/C++, TIL]
+tags: [OS, "C/C++", TIL]
 ---
 
 # 목차

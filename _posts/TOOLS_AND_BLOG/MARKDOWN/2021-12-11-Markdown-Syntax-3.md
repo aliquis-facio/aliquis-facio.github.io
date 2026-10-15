@@ -1,16 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
+
 title: "마크다운 문법 3: 이미지, 다이어그램과 HTML"
 excerpt: "Part 3: 이미지, 이모지, 다이어그램, HTML/CSS/JS"
+
 date: 2021-12-11
 last_modified_at: 2026-04-10
-categories:
-  - BLOG
-tags:
-  - BLOG
-  - MARKDOWN
+
+categories: [BLOG]
+tags: [BLOG, MARKDOWN]
 ---
 
 <!-- markdownlint-disable MD004 MD007 MD022 MD025 MD029 MD032 MD033 MD034 MD035 MD048 MD059 -->

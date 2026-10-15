@@ -1,18 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "영상 히스토그램: 평활화, 역투영과 이진화"
-excerpt: Histogram의 개념과 연산
+excerpt: "Histogram의 개념과 연산"
 
 date: 2025-10-04
 last_modified_at: 2025-10-17
 
-categories:
-  - COMPUTER VISION
-tags:
-  - COMPUTER_VISION
+categories: [COMPUTER VISION]
+tags: [COMPUTER_VISION]
 ---
 
 # 목차

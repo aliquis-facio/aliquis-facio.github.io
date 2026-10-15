@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "데이터 과학 기초 정리"
 excerpt: "w.Python matplotlib"

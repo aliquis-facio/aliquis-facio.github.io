@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Dreamhack Are you admin? 풀이"
 excerpt: "Reflected XSS"

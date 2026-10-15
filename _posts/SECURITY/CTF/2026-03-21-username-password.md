@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Dreamhack username:password@ 풀이: SSRF와 인증 우회"
 excerpt: "JS Prototype, SSRF"

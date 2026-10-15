@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "모듈, 패키지, 라이브러리와 프레임워크의 차이"
 excerpt: ""
 
 date: 2025-04-14
-last_modified_at: 
+last_modified_at:
 
 categories: []
 tags: [TIL]

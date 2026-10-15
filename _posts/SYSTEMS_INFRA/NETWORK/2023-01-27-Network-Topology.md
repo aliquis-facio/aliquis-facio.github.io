@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "네트워크 토폴로지의 종류와 특징"
 excerpt: "네트워크 통신망이란?"

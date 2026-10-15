@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "백준 1912 연속합 풀이 (Python)"
 excerpt: "w. Python"

@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "주식 시장 지표 모음: 주요 지수와 변동성"
 excerpt: "Stock Market"

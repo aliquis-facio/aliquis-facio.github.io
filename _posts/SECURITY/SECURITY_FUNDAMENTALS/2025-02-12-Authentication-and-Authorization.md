@@ -1,17 +1,15 @@
 ---
 layout: post
 comments: true
-sitemap:
+
 title: "인증·인가 취약점의 원인과 점검 방법"
-excerpt: 모의해킹 취업반 스터디 7기 16주차
+excerpt: "모의해킹 취업반 스터디 7기 16주차"
+
 date: 2025-02-16
 last_modified_at: 2026-09-07
-categories:
-  - SECURITY
-tags:
-  - TIL
-  - WEB
-  - SECURITY
+
+categories: [SECURITY]
+tags: [TIL, WEB, SECURITY]
 ---
 
 <!-- markdownlint-disable md004 md007 md010 MD025 md033 -->

@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "회선 교환과 패킷 교환의 원리와 차이"
 excerpt: "회선 교환(Circuit Switching)과 패킷 교환(Packet Switching)"

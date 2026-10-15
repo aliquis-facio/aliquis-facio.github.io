@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "파일 다운로드 취약점의 원인과 동작 방식"
 excerpt: "모의해킹 취업반 스터디 7기 15주차"

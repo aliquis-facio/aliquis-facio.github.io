@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "JSON Injection의 원리와 파서 불일치"
 excerpt: "JSON Injection"

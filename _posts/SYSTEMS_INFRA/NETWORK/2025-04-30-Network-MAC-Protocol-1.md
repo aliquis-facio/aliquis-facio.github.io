@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "MAC 프로토콜 1: ALOHA와 경쟁 기반 접근"
 excerpt: "Random Access Protocol"

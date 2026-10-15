@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "의사결정나무 회귀의 원리, 가지치기와 Python 실습"
 excerpt: "의사결정나무 회귀 개념과 파이썬 코드"
@@ -9,11 +8,8 @@ excerpt: "의사결정나무 회귀 개념과 파이썬 코드"
 date: 2026-08-02
 last_modified_at: 2026-08-02
 
-categories:
-  - AI
-tags:
-  - AI
-  - DEEP_LEARNING
+categories: [AI]
+tags: [AI, DEEP_LEARNING]
 ---
 
 <!-- markdownlint-disable MD004 MD025 MD060 -->

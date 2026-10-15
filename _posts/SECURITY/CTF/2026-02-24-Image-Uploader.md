@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "Dreamhack Image Uploader 풀이: 파일 업로드와 RCE"
 excerpt: "RCE 취약점"

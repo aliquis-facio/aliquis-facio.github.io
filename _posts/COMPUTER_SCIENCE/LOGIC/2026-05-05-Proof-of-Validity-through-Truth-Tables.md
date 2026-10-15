@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "직접·간접 진리표로 논증의 타당성 증명하기"
 excerpt: "직접 진리표와 간접 진리표"

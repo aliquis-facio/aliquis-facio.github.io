@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "GitHub Pages 블로그 제작 회고와 자주 쓴 명령어"
 excerpt: "항상 느낍니다. 왜 안되는거냐?"
 
 date: 2021-11-30
-last_modified_at: 
+last_modified_at:
 
 categories: [BLOG]
 tags: [BLOG]

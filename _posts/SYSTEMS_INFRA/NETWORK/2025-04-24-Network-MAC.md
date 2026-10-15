@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "MAC 계층의 역할과 매체 접근 제어"
 excerpt: "MAC 계층의 개념과 이슈, 프로토콜 분류"

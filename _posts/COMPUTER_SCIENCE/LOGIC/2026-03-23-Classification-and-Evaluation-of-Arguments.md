@@ -1,7 +1,6 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "연역·귀납 논증의 분류와 평가 기준"
 excerpt: "논증의 분류와 평가"

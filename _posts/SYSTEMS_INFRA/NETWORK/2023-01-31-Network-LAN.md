@@ -1,13 +1,12 @@
 ---
 layout: post
 comments: true
-sitemap:
 
 title: "근거리 통신망 LAN과 네트워크 통신 기술"
 excerpt: "네트워크 2"
 
 date: 2023-01-31
-last_modified_at: 
+last_modified_at:
 
 categories: [NETWORK]
 tags: [NETWORK]
