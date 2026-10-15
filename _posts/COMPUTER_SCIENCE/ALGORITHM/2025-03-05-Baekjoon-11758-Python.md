@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[BAEKJOON] 백준 11758 CCW 문제 풀이"
+title: "백준 11758 CCW 풀이: 외적을 이용한 방향 판별 (Python)"
 excerpt: "w. Python"
 
 date: 2025-03-05

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[DEVELOP] Module, Package, Library, Framework, Plug-in"
+title: "모듈, 패키지, 라이브러리와 프레임워크의 차이"
 excerpt: ""
 
 date: 2025-04-14

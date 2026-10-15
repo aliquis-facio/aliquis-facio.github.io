@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] 모의해킹 보고서 작성 팁"
+title: "모의해킹 보고서 작성 팁"
 excerpt: "모의해킹 취업반 스터디 7기 10주차"
 
 date: 2024-12-19

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[NETWORK] 네트워크(Network)란?"
+title: "네트워크의 개념, 종류와 데이터 전송 방식"
 excerpt: "네트워크(Network)"
 
 date: 2023-01-25

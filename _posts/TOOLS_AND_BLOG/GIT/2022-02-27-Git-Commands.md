@@ -5,7 +5,7 @@ sitemap:
     changefreq:
     priority:
 
-title: "[GIT] Git 명령어 정리"
+title: "Git 명령어 정리: 커밋, 브랜치와 원격 저장소"
 excerpt: "자주 쓰는 20개 정리"
 
 date: 2022-02-27

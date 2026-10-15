@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] Dreamhack 문제 풀이: {\"role\": \"admin\"}"
+title: "Dreamhack {\"role\": \"admin\"} 풀이: JSON Injection"
 excerpt: "JSON Injection"
 
 date: 2026-02-03

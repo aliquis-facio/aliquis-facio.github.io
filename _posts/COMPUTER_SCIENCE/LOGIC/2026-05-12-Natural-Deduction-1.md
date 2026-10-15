@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 자연 연역 1"
+title: "자연 연역 1: 함축 규칙과 논증 증명"
 excerpt: "함축 규칙 9가지"
 
 date: 2026-05-12

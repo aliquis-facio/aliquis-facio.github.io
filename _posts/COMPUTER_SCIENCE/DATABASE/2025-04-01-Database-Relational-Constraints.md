@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[DATABASE] 관계 제약(Relational Constraints)이란?"
+title: "관계 데이터베이스의 키와 무결성 제약"
 excerpt: "관계 제약(Relational Constraints)이란?"
 
 date: 2025-04-01

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[JS] 함수(Function) 2"
+title: "자바스크립트 함수 2: 선언 방식과 호이스팅"
 excerpt: "함수를 만드는 방법"
 
 date: 2026-03-21

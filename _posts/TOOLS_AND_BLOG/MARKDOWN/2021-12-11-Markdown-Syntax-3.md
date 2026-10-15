@@ -2,7 +2,7 @@
 layout: post
 comments: true
 sitemap:
-title: "[Markdown] 마크다운 문법 총 정리 3"
+title: "마크다운 문법 3: 이미지, 다이어그램과 HTML"
 excerpt: "Part 3: 이미지, 이모지, 다이어그램, HTML/CSS/JS"
 date: 2021-12-11
 last_modified_at: 2026-04-10

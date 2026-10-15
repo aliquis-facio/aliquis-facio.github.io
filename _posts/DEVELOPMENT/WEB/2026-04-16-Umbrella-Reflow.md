@@ -2,7 +2,7 @@
 layout: post
 comments: true
 sitemap:
-title: Umbrella Text Reflow
+title: "Umbrella Text Reflow: Pretext 텍스트 배치 데모"
 excerpt: Pretext Library Demo Site
 date: 2026-04-16
 last_modified_at: 2026-04-16

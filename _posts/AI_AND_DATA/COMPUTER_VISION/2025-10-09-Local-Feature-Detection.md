@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[COMPUTER VISION] 지역 특징 검출"
+title: "지역 특징 검출과 코너 검출 알고리즘"
 excerpt: 지역 특징, 코너
 
 date: 2025-10-09

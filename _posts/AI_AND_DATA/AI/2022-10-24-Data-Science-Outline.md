@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[AI] 데이터과학 정리"
+title: "데이터 과학 기초 정리"
 excerpt: "w.Python matplotlib"
 
 date: 2022-10-24

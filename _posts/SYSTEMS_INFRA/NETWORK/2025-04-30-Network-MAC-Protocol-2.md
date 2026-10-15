@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[NETWORK] MAC Protocol 2"
+title: "MAC 프로토콜 2: 토큰 전달과 폴링"
 excerpt: "Controlled Access Protocol"
 
 date: 2025-04-30

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[AI] 한글 텍스트 데이터 토큰화(Tokenization)"
+title: "한국어 텍스트 토큰화의 개념과 실습"
 excerpt: 토큰화와 한글 텍스트 데이터 토큰화 실습
 
 date: 2025-03-16

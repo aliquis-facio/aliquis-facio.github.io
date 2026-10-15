@@ -1,5 +1,5 @@
 ---
-title: "[AI] Agent Skills"
+title: "Agent Skills의 구조와 Prompt·MCP의 차이"
 excerpt: Agent Skills 개요
 categories:
   - AI

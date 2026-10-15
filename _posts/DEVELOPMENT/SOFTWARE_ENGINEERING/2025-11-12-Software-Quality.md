@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SOFTWARE DESIGN] Software Quality"
+title: "소프트웨어 품질 관리와 측정 지표"
 excerpt: 소프트웨어 품질 정의와 품질 모델
 
 date: 2025-11-12

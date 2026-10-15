@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[NETWORK] 데이터 전송(Data Transmission)이란?"
+title: "디지털 데이터 전송과 라인 코딩"
 excerpt: "Data Transmission"
 
 date: 2025-04-04

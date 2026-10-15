@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[GITHUB PAGES] Google Search 등록하기"
+title: "GitHub Pages를 Google Search Console에 등록하기"
 excerpt: ""
 
 date: 2024-11-22

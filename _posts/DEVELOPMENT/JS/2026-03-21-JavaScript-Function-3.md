@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[JS] 함수(Function) 3"
+title: "자바스크립트 함수 3: 일급 객체, 콜백과 클로저"
 excerpt: "JS에서 함수가 특별한 이유"
 
 date: 2026-03-21

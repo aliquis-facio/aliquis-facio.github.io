@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] CTF 문제 풀이: Blind SQL Injection"
+title: "Blind SQL Injection CTF 풀이: 응답 차이로 데이터 추론"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
 
 date: 2024-11-28

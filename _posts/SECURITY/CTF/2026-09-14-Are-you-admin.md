@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] Dreamhack 문제 풀이: Are you admin?"
+title: "Dreamhack Are you admin? 풀이"
 excerpt: "Reflected XSS"
 
 date: 2026-09-14

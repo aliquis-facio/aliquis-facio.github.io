@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] CTF 문제 풀이: SQL Injection"
+title: "SQL Injection CTF 풀이: 로그인과 게시판 분석"
 excerpt: "모의해킹 취업반 스터디 7기 8주차"
 
 date: 2024-12-09

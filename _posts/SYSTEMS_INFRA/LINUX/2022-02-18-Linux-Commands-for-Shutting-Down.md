@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LINUX] 리눅스 시스템 종료를 위한 명령어"
+title: "리눅스 시스템 종료와 재부팅 명령어"
 excerpt: "기본 명령어 - 디렉토리 관련명령: 리눅스 시스템 종료 및 재시동을 위한 명령어 및 디렉토리 조작을 위한 명령어"
 
 date: 2022-02-18

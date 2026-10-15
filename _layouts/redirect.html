@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ko-KR' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>페이지 이동 | {{ site.title | escape }}</title>
+    <link rel="canonical" href="{{ page.redirect.to | escape }}">
+    <meta name="robots" content="noindex">
+    <script>
+      const target = new URL({{ page.redirect.to | jsonify }}, window.location.href);
+      if (!target.search) target.search = window.location.search;
+      if (!target.hash) target.hash = window.location.hash;
+      window.location.replace(target.href);
+    </script>
+    <meta http-equiv="refresh" content="0; url={{ page.redirect.to | escape }}">
+  </head>
+  <body>
+    <p>글 주소가 변경되었습니다. <a href="{{ page.redirect.to | escape }}">새 주소로 이동</a></p>
+  </body>
+</html>

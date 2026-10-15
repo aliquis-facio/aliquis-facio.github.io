@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[OS] OS(Operating System)란?"
+title: "운영체제의 역할: 가상화, 동시성과 영속성"
 excerpt: "Operating System: Three Easy Pieces 정리"
 
 date: 2025-03-16

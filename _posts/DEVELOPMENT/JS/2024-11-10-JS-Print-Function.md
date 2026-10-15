@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[JS] 출력"
+title: "자바스크립트 출력: console.log, alert와 DOM"
 excerpt: "모의해킹 취업반 스터디 7기 4주차"
 
 date: 2024-11-10

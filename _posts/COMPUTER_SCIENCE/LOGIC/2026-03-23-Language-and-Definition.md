@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 언어와 정의"
+title: "언어와 정의: 내포와 외연의 차이"
 excerpt: "언어와 정의"
 
 date: 2026-03-23

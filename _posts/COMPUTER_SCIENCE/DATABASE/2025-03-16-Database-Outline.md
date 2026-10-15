@@ -2,7 +2,7 @@
 layout: post
 comments: true
 sitemap:
-title: "[DATABASE] Database란?"
+title: "데이터베이스의 개념, 특성과 구성 요소"
 excerpt: ""
 date: 2025-03-16
 last_modified_at: 2026-09-01

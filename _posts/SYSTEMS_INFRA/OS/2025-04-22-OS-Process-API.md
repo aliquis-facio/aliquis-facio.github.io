@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[OS] Process API"
+title: "프로세스 API: 생성, 종료와 시그널"
 excerpt: "Operating System: Three Easy Pieces 정리"
 
 date: 2025-04-22

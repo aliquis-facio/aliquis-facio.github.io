@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] CTF 문제 풀이: SQL Injection w. UNION"
+title: "UNION SQL Injection CTF 풀이: 컬럼 확인과 데이터 추출"
 excerpt: "모의해킹 취업반 스터디 7기 6주차"
 
 date: 2024-11-25

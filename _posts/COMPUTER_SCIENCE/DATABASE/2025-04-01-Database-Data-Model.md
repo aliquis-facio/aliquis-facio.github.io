@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[DATABASE] Data Model이란?"
+title: "관계 데이터 모델과 데이터 구조"
 excerpt: "Data Model이란?"
 
 date: 2025-04-01

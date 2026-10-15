@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[DISCRETE MATHEMATICS] 이산수학 논리"
+title: "이산수학 논리: 명제, 논리 연산과 한정자"
 excerpt: ""
 
 date: 2022-10-07

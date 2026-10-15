@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[OS] Process"
+title: "프로세스의 구성, 생성 과정과 상태 전이"
 excerpt: "Operating System: Three Easy Pieces 정리"
 
 date: 2025-04-22

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[COMPUTER VISION] 컴퓨터 비전"
+title: "컴퓨터 비전의 개념, 목표와 주요 과제"
 excerpt: 컴퓨터 비전 개요
 
 date: 2025-10-01

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LINUX] 파일관련 복사, 이동, 삭제 명령 설명 및 실습"
+title: "리눅스 파일 복사, 이동, 삭제 명령어"
 excerpt: "파일관련 명령어 1: 파일 복사, 이동, 삭제 관련 명령어"
 
 date: 2022-03-05

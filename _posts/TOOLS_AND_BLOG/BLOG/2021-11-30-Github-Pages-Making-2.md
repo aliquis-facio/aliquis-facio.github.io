@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[GITHUB PAGES] github.io 만들기 2"
+title: "GitHub Pages 블로그 만들기 2: 테마 설정과 오류 해결"
 excerpt: "오류 멈춰!"
 
 date: 2021-11-30

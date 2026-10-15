@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[NETWORK] 콘텐츠 전송 네트워크(CDN)"
+title: "CDN의 원리와 콘텐츠 전송 구조"
 excerpt: CDN(Content Delivery Network)
 
 date: 2025-11-19

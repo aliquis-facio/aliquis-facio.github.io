@@ -3,7 +3,11 @@ layout: post
 comments: true
 sitemap:
 
-title: "[COMPUTER VISION] 영상 처리 연산 2"
+title: "영상 처리 연산 2: 기하 변환과 동차좌표"
+permalink: /image-processing-operations-2/
+redirect_from:
+  - /Image-Processing-Operatios-2/
+guid: https://s3mper.github.io/Image-Processing-Operatios-2/
 excerpt: 기하 연산, 모폴로지
 
 date: 2025-10-06

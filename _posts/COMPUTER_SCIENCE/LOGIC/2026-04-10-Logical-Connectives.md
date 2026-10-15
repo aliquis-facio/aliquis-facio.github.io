@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 논리적 연결사"
+title: "명제 논리의 연결사와 논리식 구성"
 excerpt: "논리적 연결사와 일상 언어의 기호화"
 
 date: 2026-04-10

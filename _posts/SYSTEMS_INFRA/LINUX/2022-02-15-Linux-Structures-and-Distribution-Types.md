@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LINUX] 리눅스 구조 및 배포판의 종류"
+title: "리눅스 구조와 배포판, 주요 디렉토리"
 excerpt: "리눅스 배포판 정의와 종류, 리눅스의 디렉토리 구조"
 
 date: 2022-02-15

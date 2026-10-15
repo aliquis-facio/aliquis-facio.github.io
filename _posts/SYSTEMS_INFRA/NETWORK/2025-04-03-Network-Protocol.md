@@ -4,7 +4,7 @@ comments: true
 published: true
 sitemap:
 
-title: "[NETWORK] Protocol이란?"
+title: "네트워크 프로토콜과 OSI·TCP/IP 계층 모델"
 excerpt: "Protocol의 의미와 인터넷 모델"
 
 date: 2025-04-02

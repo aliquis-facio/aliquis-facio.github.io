@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[COD] COD 정리"
+title: "컴퓨터 구조 기초: CPU와 MIPS 명령어"
 excerpt: "COD 개요"
 
 date: 2022-09-30

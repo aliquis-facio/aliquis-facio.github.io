@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[COMPUTER VISION] Voting Schemes"
+title: "허프 변환과 RANSAC을 이용한 선분 검출"
 excerpt: Hough Transform, RANSAC
 
 date: 2025-10-08

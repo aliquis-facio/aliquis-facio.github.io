@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[PHP] MySQL 연결하기"
+title: "PHP에서 MySQL 연결하기: MySQLi와 PDO"
 excerpt: "모의해킹 취업반 스터디 7기 2주차"
 
 date: 2024-10-23

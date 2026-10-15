@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] Union SQL Injection"
+title: "UNION 기반 SQL Injection의 원리와 데이터 추출 과정"
 excerpt: "모의해킹 취업반 스터디 7기 6주차"
 
 date: 2024-11-20

@@ -3,7 +3,11 @@ layout: post
 comments: true
 sitemap:
 
-title: "[COMPUTER VISION] 영상 처리 연산 1"
+title: "영상 처리 연산 1: 점 연산, 컨볼루션과 필터링"
+permalink: /image-processing-operations-1/
+redirect_from:
+  - /Image-Processing-Operatios-1/
+guid: https://s3mper.github.io/Image-Processing-Operatios-1/
 excerpt: 점 연산, 영역 연산
 
 date: 2025-10-05

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] Dreamhack 문제 풀이: DreamDocs"
+title: "Dreamhack DreamDocs 풀이"
 excerpt: "불충분한 인증"
 
 date: 2026-09-14

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[GITHUB PAGES] 구글 애널리틱스 적용하기"
+title: "GitHub Pages에 Google Analytics 적용하기"
 excerpt: "구글 애널리틱스 적용"
 
 date: 2021-12-09

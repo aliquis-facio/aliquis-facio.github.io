@@ -2,7 +2,7 @@
 layout: post
 comments: true
 sitemap:
-title: "[OBSIDIAN] Clear Unused Images"
+title: "Obsidian Clear Unused Images로 미사용 이미지 정리하기"
 excerpt: Community Plugins - Clear Unused Images
 date: 2026-04-14
 last_modified_at: 2026-04-15

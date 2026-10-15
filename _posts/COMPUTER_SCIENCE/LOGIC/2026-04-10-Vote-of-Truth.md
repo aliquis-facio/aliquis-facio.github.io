@@ -3,7 +3,11 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 진리표"
+title: "진리표 작성법과 논리 연결사의 진릿값"
+permalink: /truth-tables/
+redirect_from:
+  - /Vote-of-Truth/
+guid: https://s3mper.github.io/Vote-of-Truth/
 excerpt: "진리표"
 
 date: 2026-04-10

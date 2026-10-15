@@ -6,6 +6,7 @@ gem "jekyll-sitemap"
 gem "jekyll-last-modified-at"
 gem "jekyll-feed", "~> 0.17"
 gem "jekyll-seo-tag"
+gem "jekyll-redirect-from", "~> 0.16"
 gem "jekyll-paginate-v2", "~> 3.0"
 
 # Gist

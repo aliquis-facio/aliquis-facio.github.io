@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] OTP란?"
+title: "일회용 비밀번호 OTP의 원리"
 excerpt: "OTP, One Time Password"
 
 date: 2026-01-05

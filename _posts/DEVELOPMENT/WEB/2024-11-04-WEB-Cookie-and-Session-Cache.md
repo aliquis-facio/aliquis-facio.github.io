@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[WEB] 쿠키와 세션 (ft. 캐시)"
+title: "쿠키, 세션과 캐시의 역할과 차이"
 excerpt: "모의해킹 취업반 스터디 7기 3주차"
 
 date: 2024-11-04

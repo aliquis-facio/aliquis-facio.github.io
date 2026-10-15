@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[GITHUB PAGES] github.io 만들면서 느낀 점"
+title: "GitHub Pages 블로그 제작 회고와 자주 쓴 명령어"
 excerpt: "항상 느낍니다. 왜 안되는거냐?"
 
 date: 2021-11-30

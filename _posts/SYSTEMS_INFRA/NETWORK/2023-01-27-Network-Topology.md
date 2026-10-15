@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[NETWORK] 네트워크 통신망(Network Topology)"
+title: "네트워크 토폴로지의 종류와 특징"
 excerpt: "네트워크 통신망이란?"
 
 date: 2023-01-25

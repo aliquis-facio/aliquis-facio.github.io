@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 논증의 분류와 평가"
+title: "연역·귀납 논증의 분류와 평가 기준"
 excerpt: "논증의 분류와 평가"
 
 date: 2026-03-23

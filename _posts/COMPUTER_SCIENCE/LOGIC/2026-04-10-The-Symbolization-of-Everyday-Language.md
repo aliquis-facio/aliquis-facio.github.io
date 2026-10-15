@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 논리적 연결사 2"
+title: "일상 언어의 기호화와 명제 논리의 차이"
 excerpt: "명제 논리와 일상 언어의 차이"
 
 date: 2026-04-10

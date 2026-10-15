@@ -3,7 +3,11 @@ layout: post
 comments: true
 sitemap:
 
-title: "[DISCRETE MATHEMATICS] 이산수학 집합"
+title: "이산수학 집합: 개념, 종류와 포함 관계"
+permalink: /discrete-mathematics-set/
+redirect_from:
+  - /Discrete-Mathmatics-Set/
+guid: https://s3mper.github.io/Discrete-Mathmatics-Set/
 excerpt: "집합"
 
 date: 2022-10-08

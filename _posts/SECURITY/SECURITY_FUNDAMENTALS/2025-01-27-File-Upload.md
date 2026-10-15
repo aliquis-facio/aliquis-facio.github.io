@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] File Upload 취약점"
+title: "파일 업로드 취약점의 원인과 공격 시나리오"
 excerpt: "모의해킹 취업반 스터디 7기 14주차"
 
 date: 2025-01-27

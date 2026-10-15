@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LOGIC] 진리표 증명"
+title: "직접·간접 진리표로 논증의 타당성 증명하기"
 excerpt: "직접 진리표와 간접 진리표"
 
 date: 2026-05-05

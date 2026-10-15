@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[GITHUB PAGES] Date Format 변경하기"
+title: "Jekyll 글 날짜 형식과 마지막 수정일 표시 바꾸기"
 excerpt: ""
 
 date: 2024-10-26

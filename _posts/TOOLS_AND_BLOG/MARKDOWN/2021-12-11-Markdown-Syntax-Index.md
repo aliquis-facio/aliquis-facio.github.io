@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[Markdown] 마크다운 문법 총 정리"
+title: "마크다운 문법 총정리: 기본 문법부터 확장 문법까지"
 excerpt: "Index 페이지"
 
 date: 2021-12-11

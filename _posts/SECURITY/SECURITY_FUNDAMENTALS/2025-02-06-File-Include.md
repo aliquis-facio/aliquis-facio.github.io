@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] File Include 취약점"
+title: "파일 인클루드 취약점의 원인과 동작 방식"
 excerpt: "모의해킹 취업반 스터디 7기 15주차"
 
 date: 2025-02-06

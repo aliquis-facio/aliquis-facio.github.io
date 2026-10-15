@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LINUX] 리눅스 마스터 2급 기출 문제"
+title: "리눅스마스터 2급 기출 풀이: 2017년 6월 10일"
 excerpt: "오답노트 1"
 
 date: 2022-06-24

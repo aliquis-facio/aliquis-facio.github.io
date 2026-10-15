@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] Dreamhack 문제 풀이: username:password@"
+title: "Dreamhack username:password@ 풀이: SSRF와 인증 우회"
 excerpt: "JS Prototype, SSRF"
 
 date: 2026-03-21

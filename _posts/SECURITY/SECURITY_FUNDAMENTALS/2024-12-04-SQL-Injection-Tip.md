@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] SQL Injection Tip"
+title: "SQL Injection 진단과 문제 풀이 팁"
 excerpt: "모의해킹 취업반 스터디 7기 8주차"
 
 date: 2024-12-04

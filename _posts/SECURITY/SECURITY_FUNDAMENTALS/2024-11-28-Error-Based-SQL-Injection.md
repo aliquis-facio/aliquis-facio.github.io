@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] Error-Based SQL Injection (MySQL)"
+title: "MySQL Error-Based SQL Injection의 원리와 오류 활용"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
 
 date: 2024-11-28

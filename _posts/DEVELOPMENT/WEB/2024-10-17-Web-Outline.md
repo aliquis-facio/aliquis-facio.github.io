@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[WEB] 웹 개요"
+title: "웹의 동작 원리와 웹 서버 구성"
 excerpt: "모의해킹 취업반 스터디 7기 1주차"
 
 date: 2024-10-17

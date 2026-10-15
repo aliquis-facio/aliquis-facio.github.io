@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[GITHUB PAGES] github.io 만들기 1"
+title: "GitHub Pages 블로그 만들기 1: Ruby와 Jekyll 설치"
 excerpt: "항상 느낍니다. 왜 안되는거냐?"
 
 date: 2021-11-02

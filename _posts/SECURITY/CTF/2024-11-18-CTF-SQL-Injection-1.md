@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] CTF 풀이: Cookie, SQL Injection"
+title: "쿠키 변조와 SQL Injection을 이용한 인증 우회 CTF 풀이"
 excerpt: "모의해킹 취업반 스터디 7기 5주차"
 
 date: 2024-11-18

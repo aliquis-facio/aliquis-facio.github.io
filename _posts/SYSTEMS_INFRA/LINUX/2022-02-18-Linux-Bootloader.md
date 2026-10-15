@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LINUX] 부트로더 grub에 대한 설명과 실행레벨 설명"
+title: "리눅스 GRUB 부트로더와 실행 레벨"
 excerpt: "리눅스 부트로더 - 부트로더인 LILO, GRUB"
 
 date: 2022-02-18

@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LINUX] OS 정의 및 분류"
+title: "운영체제의 정의와 분류, 리눅스의 특징"
 excerpt: "리눅스 개요 - 리눅스 정의, 역사, 용어 및 특징"
 
 date: 2022-02-15

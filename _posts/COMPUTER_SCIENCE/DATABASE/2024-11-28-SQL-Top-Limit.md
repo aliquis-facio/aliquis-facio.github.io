@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[MySQL] 특정 개수의 값 출력"
+title: "SQL TOP과 LIMIT으로 조회 결과 개수 제한하기"
 excerpt: "모의해킹 취업반 스터디 7기 7주차"
 
 date: 2024-11-28

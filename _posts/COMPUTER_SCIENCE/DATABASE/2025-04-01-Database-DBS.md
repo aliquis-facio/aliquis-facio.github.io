@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[DATABASE] DBS(DataBase System)란?"
+title: "데이터베이스 시스템 DBS의 구성 요소"
 excerpt: "DBS(DataBase System)"
 
 date: 2025-04-01

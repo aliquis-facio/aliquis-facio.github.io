@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[BAEKJOON] 백준 12789 도키도키 간식드리미 문제 풀이"
+title: "백준 12789 도키도키 간식드리미 풀이 (Python)"
 excerpt: "w. Python"
 
 date: 2025-03-05

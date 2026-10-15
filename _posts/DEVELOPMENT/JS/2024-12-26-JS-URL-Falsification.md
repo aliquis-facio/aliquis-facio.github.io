@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[JS] JS로 페이지 갱신 없이 URL 변경하기"
+title: "자바스크립트로 페이지 갱신 없이 URL 변경하기"
 excerpt: "모의해킹 취업반 스터디 7기 11주차"
 
 date: 2024-12-26

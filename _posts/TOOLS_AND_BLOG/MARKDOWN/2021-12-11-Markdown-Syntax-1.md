@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[Markdown] 마크다운 문법 총 정리 1"
+title: "마크다운 문법 1: 제목, 강조, 목록과 링크"
 excerpt: "Part 1: 제목, 강조, 정렬, 수평선, 인용, 목록, 링크"
 
 date: 2021-12-11

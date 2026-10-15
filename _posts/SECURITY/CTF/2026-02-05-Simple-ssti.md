@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] Dreamhack 문제 풀이: Simple-ssti"
+title: "Dreamhack Simple-ssti 풀이: Jinja2 템플릿 인젝션"
 excerpt: "SSTI(Server-side Template Injection)"
 
 date: 2026-02-05

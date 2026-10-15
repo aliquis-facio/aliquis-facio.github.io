@@ -1,11 +1,13 @@
 ---
 layout: post
 comments: true
-sitemap:
-title: "[AI] Softmax 함수"
+
+title: "Softmax 함수의 원리와 Sigmoid 비교"
 excerpt: Softmax 함수의 정의 및 성질과 Sigmoid 함수와의 비교 (w. Python)
+
 date: 2026-08-03
 last_modified_at: 2026-08-03
+
 categories:
   - AI
 tags:

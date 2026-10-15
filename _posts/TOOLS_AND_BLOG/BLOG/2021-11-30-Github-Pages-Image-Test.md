@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[GITHUB PAGES] Image Test"
+title: "GitHub Pages 블로그 이미지와 파비콘 적용 기록"
 excerpt: Image Test
 
 date: 2021-11-30

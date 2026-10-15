@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[LINUX] 디렉토리 조작명령어 설명 및 실습"
+title: "리눅스 디렉토리 명령어 정리와 실습"
 excerpt: "디렉토리 조작명령어 설명 및 실습"
 
 date: 2022-02-27

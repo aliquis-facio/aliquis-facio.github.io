@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[CTF] Dreamhack 문제 풀이: Image Uploader"
+title: "Dreamhack Image Uploader 풀이: 파일 업로드와 RCE"
 excerpt: "RCE 취약점"
 
 date: 2026-02-24

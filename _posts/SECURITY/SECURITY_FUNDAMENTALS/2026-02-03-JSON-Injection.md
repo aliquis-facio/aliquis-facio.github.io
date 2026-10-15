@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[SECURITY] JSON Injection이란"
+title: "JSON Injection의 원리와 파서 불일치"
 excerpt: "JSON Injection"
 
 date: 2026-02-03

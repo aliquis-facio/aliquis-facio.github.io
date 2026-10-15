@@ -3,7 +3,7 @@ layout: post
 comments: true
 sitemap:
 
-title: "[NETWORK] MAC Protocol"
+title: "MAC 프로토콜 1: ALOHA와 경쟁 기반 접근"
 excerpt: "Random Access Protocol"
 
 date: 2025-04-30
